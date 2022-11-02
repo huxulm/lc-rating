@@ -9,7 +9,6 @@ import "./app.scss";
 // import 'bootstrap/dist/css/bootstrap.min.css'
 
 import {
-  ColumnDef,
   Column,
   Table as TTable,
   SortingState,
