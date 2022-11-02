@@ -2,6 +2,7 @@
   "name": "front",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://huxulm.github.io/lc-rating",
   "dependencies": {
     "@faker-js/faker": "^7.6.0",
     "@tanstack/match-sorter-utils": "^8.5.14",
