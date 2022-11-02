@@ -1,0 +1,35 @@
+$link-decoration: none;
+@import "~bootstrap/scss/bootstrap";
+
+.contest-table {
+    border: 1px solid $accordion-border-color;
+    border-radius: $border-radius;
+    padding: 1rem 2rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+    text-align: center;
+}
+.th-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 80px;
+}
+
+.backtop {
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 3.5rem;
+    height: 3.5rem;
+    text-align: center;
+    display: block;
+}
