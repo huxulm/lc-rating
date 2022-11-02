@@ -29,12 +29,11 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    
     - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./build
-    
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: ./build
+  
   # Deployment job
   deploy:
     environment:
