@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "LC Rating",
+  "name": "Leetcode Contest Problems Rating",
   "icons": [
     {
       "src": "favicon.ico",
