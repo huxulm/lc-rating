@@ -222,15 +222,10 @@ function App() {
       </Button>
       <div className="h-4" />
       <Table
-        // striped
+        striped
         bordered
         hover
         className="overflow-x-auto"
-        {...{
-          style: {
-            width: table.getCenterTotalSize(),
-          },
-        }}
       >
         <thead style={{ cursor: "pointer", background: "white" }}>
           {table.getHeaderGroups().map((headerGroup) => (
