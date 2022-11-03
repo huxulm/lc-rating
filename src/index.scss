@@ -19,13 +19,14 @@ a:hover {
 }
 
 .topcoder-like-circle {
+  cursor: pointer;
   display: inline-block;
   border-radius: 50%;
   border-style: solid;
   border-width: 1px;
   margin-right: 5px;
-  height: 12px;
-  width: 12px;
+  height: 16px;
+  width: 16px;
 }
 
 :root {

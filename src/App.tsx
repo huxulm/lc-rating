@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
 import RatingCircle, { COLORS } from "./components/RatingCircle";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Popover from "react-bootstrap/Popover";
 
 import "./app.scss";
 // import 'bootstrap/dist/css/bootstrap.min.css'
@@ -26,9 +28,7 @@ import {
   ColumnFiltersState,
 } from "@tanstack/react-table";
 
-import {
-  rankItem,
-} from "@tanstack/match-sorter-utils";
+import { rankItem } from "@tanstack/match-sorter-utils";
 
 import { Contest, makeContests } from "./makeData";
 
@@ -66,7 +66,7 @@ const fuzzyFilter: FilterFn<any> = (row, columnId, value, addMeta) => {
   return itemRank.passed;
 };
 
-const  problemColDef = (id: string) => {
+const problemColDef = (id: string) => {
   return columnHelper.accessor((row: any) => row[id][3], {
     header: id,
     enableColumnFilter: true,
@@ -78,12 +78,27 @@ const  problemColDef = (id: string) => {
         e.preventDefault();
         openUrl(link);
       };
-      let difficulty = val[3];
+      let difficulty: number = val[3];
       let c = COLORS.find((v) => difficulty >= v.l && difficulty <= v.r);
       let color = (c && c.c) || "#000000";
+      let placement = `${difficulty}`;
       return (
         <>
-          <RatingCircle difficulty={val[3]} />
+          <OverlayTrigger
+            trigger={["hover", "focus"]}
+            key={placement}
+            placement={"bottom"}
+            overlay={
+              <Popover id={`popover-positioned-${placement}`}>
+                {/* <Popover.Header as="h3">{`Popover ${placement}`}</Popover.Header> */}
+                <Popover.Body style={{color, fontSize: '1.2rem'}}>
+                  <strong>难度: </strong> {difficulty.toFixed(2)}
+                </Popover.Body>
+              </Popover>
+            }
+          >
+            <RatingCircle difficulty={val[3]} />
+          </OverlayTrigger>
           <a href={link} onClick={onClick} style={{ color }}>
             {val[2]}.{val[0]}
           </a>
@@ -91,8 +106,8 @@ const  problemColDef = (id: string) => {
       );
     },
     footer: (info) => info.column.id,
-  })
-}
+  });
+};
 
 const columns = [
   columnHelper.accessor("Contest", {
@@ -284,7 +299,14 @@ function Filter({
   console.log(sortedUniqueValues);
 
   return typeof firstValue === "number" ? (
-    <div style={{ marginTop: 10, display: "flex", justifyContent: "center", alignItems: "center" }}>
+    <div
+      style={{
+        marginTop: 10,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <InputGroup className="mb-3" style={{ height: "1.2rem" }}>
         <DebouncedInput
           type="number"

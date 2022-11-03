@@ -9,13 +9,23 @@ export const COLORS = [
   { l: 2100, r: 2399, c: `#F09235` },
   { l: 2400, r: 3600, c: `#EA3323` },
 ];
-function RatingCircle(props: any) {
+const RatingCircle = React.forwardRef<any, any>(({
+  as,
+  bsPrefix,
+  variant,
+  size,
+  active,
+  className,
+  ...props
+}, ref) => {
     const { difficulty = 0 } = props;
   let c = COLORS.find((v) => difficulty >= v.l && difficulty <= v.r);
   let color = c && c.c;
   let rating = c && ((difficulty-c.l) * 100) / (c.r - c.l + 1);
   return (
     <span
+      ref={ref}
+      {...props}
       className="topcoder-like-circle"
       style={{
         borderColor: `${color}`,
@@ -23,5 +33,6 @@ function RatingCircle(props: any) {
       }}
     ></span>
   );
-}
+})
+
 export default RatingCircle;
