@@ -15,6 +15,7 @@ import {
   Table as TTable,
   SortingState,
   ColumnOrderState,
+  ColumnResizeMode,
   flexRender,
   getCoreRowModel,
   getSortedRowModel,
@@ -70,6 +71,7 @@ const problemColDef = (id: string) => {
   return columnHelper.accessor((row: any) => row[id][3], {
     header: id,
     enableColumnFilter: true,
+    size: 365,
     cell: (info) => {
       // @ts-ignore
       let val: any = info.row.original[id];
@@ -83,7 +85,7 @@ const problemColDef = (id: string) => {
       let color = (c && c.c) || "#000000";
       let placement = `${difficulty}`;
       return (
-        <>
+        <div style={{ overflow: "hidden" }}>
           <OverlayTrigger
             trigger={["hover", "focus"]}
             key={placement}
@@ -91,7 +93,7 @@ const problemColDef = (id: string) => {
             overlay={
               <Popover id={`popover-positioned-${placement}`}>
                 {/* <Popover.Header as="h3">{`Popover ${placement}`}</Popover.Header> */}
-                <Popover.Body style={{color, fontSize: '1.2rem'}}>
+                <Popover.Body style={{ color, fontSize: "1.2rem" }}>
                   <strong>难度: </strong> {difficulty.toFixed(2)}
                 </Popover.Body>
               </Popover>
@@ -102,7 +104,7 @@ const problemColDef = (id: string) => {
           <a href={link} onClick={onClick} style={{ color }}>
             {val[2]}.{val[0]}
           </a>
-        </>
+        </div>
       );
     },
     footer: (info) => info.column.id,
@@ -114,7 +116,9 @@ const columns = [
     sortingFn: (a, b, id) => {
       return a.original.ID - b.original.ID;
     },
+    enableResizing: false,
     enableSorting: true,
+    size: 150,
     // filterFn: ratingFilter,
     enableColumnFilter: false,
     cell: (info) => {
@@ -155,6 +159,8 @@ function App() {
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   );
+  const [columnResizeMode, setColumnResizeMode] =
+    React.useState<ColumnResizeMode>("onChange");
   const [globalFilter, setGlobalFilter] = React.useState("");
   const [columnVisibility, setColumnVisibility] = React.useState({});
   const [columnOrder, setColumnOrder] = React.useState<ColumnOrderState>([]);
@@ -162,6 +168,8 @@ function App() {
   const table = useReactTable({
     data,
     columns,
+    enableColumnResizing: true,
+    columnResizeMode: 'onChange',
     state: {
       columnVisibility,
       columnOrder,
@@ -213,13 +221,32 @@ function App() {
         Top
       </Button>
       <div className="h-4" />
-      <Table striped bordered hover>
+      <Table
+        // striped
+        bordered
+        hover
+        className="overflow-x-auto"
+        {...{
+          style: {
+            width: table.getCenterTotalSize(),
+          },
+        }}
+      >
         <thead style={{ cursor: "pointer", background: "white" }}>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
               {headerGroup.headers.map((header) => {
                 return (
-                  <th key={header.id} colSpan={header.colSpan}>
+                  <th
+                    {...{
+                      key: header.id,
+                      colSpan: header.colSpan,
+                      style: {
+                        width: header.getSize(),
+                        overflow: "hidden"
+                      },
+                    }}
+                  >
                     {header.isPlaceholder ? null : (
                       <div className="th-center">
                         <div
@@ -246,6 +273,24 @@ function App() {
                         ) : null}
                       </div>
                     )}
+                    <div
+                      {...{
+                        onMouseDown: header.getResizeHandler(),
+                        onTouchStart: header.getResizeHandler(),
+                        className: `resizer ${
+                          header.column.getIsResizing() ? "isResizing" : ""
+                        }`,
+                        style: {
+                          transform:
+                            columnResizeMode === "onEnd" &&
+                            header.column.getIsResizing()
+                              ? `translateX(${
+                                  table.getState().columnSizingInfo.deltaOffset
+                                }px)`
+                              : "",
+                        },
+                      }}
+                    />
                   </th>
                 );
               })}
@@ -258,7 +303,17 @@ function App() {
               <tr key={row.id}>
                 {row.getVisibleCells().map((cell) => {
                   return (
-                    <td key={cell.id}>
+                    <td
+                      {...{
+                        key: cell.id,
+                        style: {
+                          width: cell.column.getSize(),
+                          overflow: "hidden",
+                          // whiteSpace: "nowrap",
+                          // textOverflow: "ellipsis",
+                        },
+                      }}
+                    >
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()
