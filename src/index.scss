@@ -28,6 +28,15 @@ a:hover {
   height: 16px;
   width: 16px;
 }
+.contest {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.row-selected {
+  background: rgba(156, 238, 161, 0.5);
+  font-weight: 900;
+}
 
 :root {
   --bs-link-decoration: none;

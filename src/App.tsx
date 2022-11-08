@@ -31,8 +31,9 @@ import {
 
 import { rankItem } from "@tanstack/match-sorter-utils";
 
-import { Contest, makeContests } from "./makeData";
+import { getMark, setMark } from "./store"
 
+import { Contest, makeContests } from "./makeData";
 const host = `https://leetcode.cn`;
 
 const columnHelper = createColumnHelper<Contest>();
@@ -127,10 +128,26 @@ const columns = [
         e.preventDefault();
         openUrl(link);
       };
+      let mk = getMark();
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      const [ck, setCk] = React.useState<boolean>(mk === info.row.original.TitleSlug)
+      console.log(ck && mk)
       return (
-        <a href={link} onClick={onClick}>
-          {info.getValue()}
-        </a>
+        <div className={ ck? "contest row-selected": "contest" }>
+          <a href={link} onClick={onClick}>
+            {info.getValue()}
+          </a>
+          <Form.Group controlId="formBasicCheckbox">
+            <Form.Check type="checkbox"
+              onChange={(e) => {
+                setCk(e.target.checked);
+                setMark(e.target.checked? info.row.original.TitleSlug : "");
+              }}
+              defaultChecked={ck}
+              checked={ck}
+            />
+          </Form.Group>
+        </div>
       );
     },
     footer: (info) => info.column.id,
@@ -159,6 +176,7 @@ function App() {
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   );
+  const [selectedRow, setSelectedRow ] = React.useState<string>(getMark())
   const [columnResizeMode, setColumnResizeMode] =
     React.useState<ColumnResizeMode>("onChange");
   const [globalFilter, setGlobalFilter] = React.useState("");
@@ -295,7 +313,7 @@ function App() {
         <tbody>
           {table.getRowModel().rows.map((row) => {
             return (
-              <tr key={row.id}>
+              <tr key={row.id} className={selectedRow === row.original.TitleSlug ? "row-selected" : ""} >
                 {row.getVisibleCells().map((cell) => {
                   return (
                     <td
