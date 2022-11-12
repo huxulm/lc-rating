@@ -3,32 +3,31 @@ $link-decoration: none;
 @import "~bootstrap/scss/utilities";
 
 .contest-table {
-    border: 1px solid $accordion-border-color;
-    border-radius: $border-radius;
-    padding: 1rem 2rem;
+  padding: 1rem 2rem;
 }
 
 .cursor-pointer {
-    cursor: pointer;
-    text-align: center;
+  cursor: pointer;
+  text-align: center;
 }
+
 .th-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 80px;
 }
 
 .backtop {
-    border-radius: 50%;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 3.5rem;
-    height: 3.5rem;
-    text-align: center;
-    display: block;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 3.5rem;
+  height: 3.5rem;
+  text-align: center;
+  display: block;
 }
 
 table,
@@ -91,7 +90,7 @@ td,
     opacity: 0;
   }
 
-  *:hover > .resizer {
+  *:hover>.resizer {
     opacity: 1;
   }
 }
