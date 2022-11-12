@@ -9,8 +9,6 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
 
 import "./app.scss";
-import 'bootstrap/dist/css/bootstrap.min.css'
-
 import {
   Column,
   Table as TTable,
