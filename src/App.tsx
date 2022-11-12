@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
+import Pagination from "react-bootstrap/Pagination";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import RatingCircle, { COLORS } from "./components/RatingCircle";
@@ -8,7 +9,7 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
 
 import "./app.scss";
-// import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import {
   Column,
@@ -27,13 +28,16 @@ import {
   createColumnHelper,
   FilterFn,
   ColumnFiltersState,
+  PaginationState,
 } from "@tanstack/react-table";
 
 import { rankItem } from "@tanstack/match-sorter-utils";
 
-import { getMark, setMark } from "./store"
+import { getMark, setMark } from "./store";
 
-import { Contest, makeContests } from "./makeData";
+import { useQuery } from "react-query";
+import { Contest, fetchData } from "./makeData";
+
 const host = `https://leetcode.cn`;
 
 const columnHelper = createColumnHelper<Contest>();
@@ -130,18 +134,21 @@ const columns = [
       };
       let mk = getMark();
       // eslint-disable-next-line react-hooks/rules-of-hooks
-      const [ck, setCk] = React.useState<boolean>(mk === info.row.original.TitleSlug)
-      console.log(ck && mk)
+      const [ck, setCk] = React.useState<boolean>(
+        mk === info.row.original.TitleSlug
+      );
+      console.log(ck && mk);
       return (
-        <div className={ ck? "contest row-selected": "contest" }>
+        <div className={ck ? "contest row-selected" : "contest"}>
           <a href={link} onClick={onClick}>
             {info.getValue()}
           </a>
           <Form.Group controlId="formBasicCheckbox">
-            <Form.Check type="checkbox"
+            <Form.Check
+              type="checkbox"
               onChange={(e) => {
                 setCk(e.target.checked);
-                setMark(e.target.checked? info.row.original.TitleSlug : "");
+                setMark(e.target.checked ? info.row.original.TitleSlug : "");
               }}
               defaultChecked={ck}
               checked={ck}
@@ -172,11 +179,35 @@ function backToTop() {
 }
 
 function App() {
-  const [data, setData] = React.useState(() => makeContests());
+  const [{ pageIndex, pageSize }, setPagination] =
+    React.useState<PaginationState>({
+      pageIndex: 0,
+      pageSize: 15,
+    });
+  const pagination = React.useMemo(
+    () => ({
+      pageIndex,
+      pageSize,
+    }),
+    [pageIndex, pageSize]
+  );
+  const fetchDataOptions = {
+    pageIndex,
+    pageSize,
+  };
+
+  const dataQuery = useQuery(
+    ["data", fetchDataOptions],
+    () => fetchData(fetchDataOptions),
+    { keepPreviousData: true }
+  );
+
+  const defaultData = React.useMemo(() => [], []);
+
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   );
-  const [selectedRow, setSelectedRow ] = React.useState<string>(getMark())
+  const [selectedRow, setSelectedRow] = React.useState<string>(getMark());
   const [columnResizeMode, setColumnResizeMode] =
     React.useState<ColumnResizeMode>("onChange");
   const [globalFilter, setGlobalFilter] = React.useState("");
@@ -184,17 +215,20 @@ function App() {
   const [columnOrder, setColumnOrder] = React.useState<ColumnOrderState>([]);
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const table = useReactTable({
-    data,
+    data: dataQuery.data?.rows ?? defaultData,
     columns,
+    pageCount: dataQuery.data?.pageCount ?? -1,
     enableColumnResizing: true,
-    columnResizeMode: 'onChange',
+    columnResizeMode: "onChange",
     state: {
       columnVisibility,
       columnOrder,
       sorting,
       columnFilters,
       globalFilter,
+      pagination,
     },
+    // pageCount: 20,
     filterFns: {
       rating: ratingFilter,
       fuzzy: fuzzyFilter,
@@ -204,11 +238,13 @@ function App() {
     globalFilterFn: fuzzyFilter,
     onColumnVisibilityChange: setColumnVisibility,
     onColumnOrderChange: setColumnOrder,
+    onPaginationChange: setPagination,
     getCoreRowModel: getCoreRowModel(),
     onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
     getFacetedRowModel: getFacetedRowModel(),
+    manualPagination: true,
     getFacetedUniqueValues: getFacetedUniqueValues(),
     getFacetedMinMaxValues: getFacetedMinMaxValues(),
     debugTable: false,
@@ -231,6 +267,7 @@ function App() {
           right: "20px",
           width: "3.5rem",
           height: "3.5rem",
+          visibility: "hidden",
         }}
         onClick={() => {
           backToTop();
@@ -239,12 +276,7 @@ function App() {
         Top
       </Button>
       <div className="h-4" />
-      <Table
-        striped
-        bordered
-        hover
-        className="overflow-x-auto"
-      >
+      <Table striped bordered hover className="overflow-x-auto">
         <thead style={{ cursor: "pointer", background: "white" }}>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
@@ -256,7 +288,7 @@ function App() {
                       colSpan: header.colSpan,
                       style: {
                         width: header.getSize(),
-                        overflow: "hidden"
+                        overflow: "hidden",
                       },
                     }}
                   >
@@ -313,7 +345,12 @@ function App() {
         <tbody>
           {table.getRowModel().rows.map((row) => {
             return (
-              <tr key={row.id} className={selectedRow === row.original.TitleSlug ? "row-selected" : ""} >
+              <tr
+                key={row.id}
+                className={
+                  selectedRow === row.original.TitleSlug ? "row-selected" : ""
+                }
+              >
                 {row.getVisibleCells().map((cell) => {
                   return (
                     <td
@@ -339,6 +376,68 @@ function App() {
           })}
         </tbody>
       </Table>
+      <div className="d-flex flex-row justify-content-end w-100">
+        <Pagination className="me-2">
+          <Pagination.First
+            // className="border rounded"
+            onClick={() => table.setPageIndex(0)}
+            disabled={!table.getCanPreviousPage()}
+          />
+          <Pagination.Prev
+            // className="border rounded"
+            onClick={() => table.previousPage()}
+            disabled={!table.getCanPreviousPage()}
+          />
+          <Pagination.Next
+            // className="border rounded"
+            onClick={() => table.nextPage()}
+            disabled={!table.getCanNextPage()}
+          />
+          <Pagination.Last
+            className="rounded"
+            onClick={() => table.setPageIndex(table.getPageCount() - 1)}
+            disabled={!table.getCanNextPage()}
+          />
+        </Pagination>
+        <div className="d-flex flex-row mb-1 me-5" style={{ height: '38px' }}>
+          <span className="d-sm-inline-flex mh-100 ms-2">
+            <strong className="d-inline-flex align-items-center">
+              {table.getState().pagination.pageIndex + 1} {" / "}
+              {table.getPageCount()}
+            </strong>
+          </span>
+          <span className="d-sm-inline-flex mh-100 ms-2">
+            <span className="d-flex align-items-center">Page</span>
+            <input
+              type="number"
+              defaultValue={table.getState().pagination.pageIndex + 1}
+              onChange={(e) => {
+                const page = e.target.value ? Number(e.target.value) - 1 : 0;
+                table.setPageIndex(page);
+              }}
+              className="d-inline-block border rounded align-middle ms-1 p-1"
+              style={{ width: '100px' }}
+              />
+          </span>
+          <span className="d-sm-inline-flex mh-100 ms-2">
+            <span className="d-flex align-items-center">Size</span>
+            <select
+              className="d-inline-block border rounded align-middle p-1 ms-1"
+              style={{ width: '100px' }}
+              value={table.getState().pagination.pageSize}
+              onChange={(e) => {
+                table.setPageSize(Number(e.target.value));
+              }}
+            >
+              {[10, 15, 20, 30, 50, 100, 200].map((pageSize) => (
+                <option key={pageSize} value={pageSize}>
+                  {pageSize}
+                </option>
+              ))}
+            </select>
+          </span>
+        </div>
+      </div>
     </div>
   );
 }

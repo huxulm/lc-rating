@@ -36,3 +36,21 @@ export function makeContests() {
     };
   });
 }
+
+const arr = makeContests();
+
+export async function fetchData(options: {
+  pageIndex: number
+  pageSize: number
+}) {
+  // Simulate some network latency
+  // await new Promise(r => setTimeout(r, 500))
+
+  return {
+    rows: arr.slice(
+      options.pageIndex * options.pageSize,
+      (options.pageIndex + 1) * options.pageSize
+    ),
+    pageCount: Math.ceil(data.length / options.pageSize),
+  }
+}
