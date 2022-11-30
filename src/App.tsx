@@ -355,7 +355,6 @@ function App() {
                       {...{
                         key: cell.id,
                         style: {
-                          width: cell.column.getSize(),
                           overflow: "hidden",
                           whiteSpace: "nowrap",
                           textOverflow: "ellipsis",
