@@ -88,7 +88,7 @@ const problemColDef = (id: string) => {
       let color = (c && c.c) || "#000000";
       let placement = `${difficulty}`;
       return (
-        <div style={{ overflow: "hidden" }}>
+        <>
           <OverlayTrigger
             trigger={["hover", "focus"]}
             key={placement}
@@ -107,7 +107,7 @@ const problemColDef = (id: string) => {
           <a href={link} onClick={onClick} style={{ color }}>
             {val[2]}.{val[0]}
           </a>
-        </div>
+        </>
       );
     },
     footer: (info) => info.column.id,
@@ -357,8 +357,8 @@ function App() {
                         style: {
                           width: cell.column.getSize(),
                           overflow: "hidden",
-                          // whiteSpace: "nowrap",
-                          // textOverflow: "ellipsis",
+                          whiteSpace: "nowrap",
+                          textOverflow: "ellipsis",
                         },
                       }}
                     >
