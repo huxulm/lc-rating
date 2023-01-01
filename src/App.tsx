@@ -180,7 +180,7 @@ function App() {
   const [{ pageIndex, pageSize }, setPagination] =
     React.useState<PaginationState>({
       pageIndex: 0,
-      pageSize: 15,
+      pageSize: 20,
     });
   const pagination = React.useMemo(
     () => ({
@@ -226,7 +226,6 @@ function App() {
       globalFilter,
       pagination,
     },
-    // pageCount: 20,
     filterFns: {
       rating: ratingFilter,
       fuzzy: fuzzyFilter,
@@ -254,6 +253,15 @@ function App() {
       scrollFunction(btn);
     };
   }, []);
+
+  React.useEffect(() => {
+    if (table.getState().columnFilters[0]?.id === 'Contest') {
+      if (table.getState().sorting[0]?.id !== 'Contest') {
+        table.setSorting([{ id: 'Contest', desc: false }])
+      }
+    }
+  }, [table.getState().columnFilters[0]?.id])
+
   return (
     <div className="contest-table">
       <Button
@@ -299,6 +307,7 @@ function App() {
                               : "",
                             onClick: header.column.getToggleSortingHandler(),
                           }}
+                          style={{ margin: '0 .5rem' }}
                         >
                           {flexRender(
                             header.column.columnDef.header,
@@ -354,11 +363,7 @@ function App() {
                     <td
                       {...{
                         key: cell.id,
-                        style: {
-                          overflow: "hidden",
-                          whiteSpace: "nowrap",
-                          textOverflow: "ellipsis",
-                        },
+                        className: "tb-overflow"
                       }}
                     >
                       {flexRender(
@@ -459,8 +464,6 @@ function Filter({
         : Array.from(column.getFacetedUniqueValues().keys()).sort(),
     [column.getFacetedUniqueValues()]
   );
-
-  console.log(sortedUniqueValues);
 
   return typeof firstValue === "number" ? (
     <div
