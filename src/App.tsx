@@ -351,6 +351,7 @@ function App() {
                         className={pageSize === v ? "me-1 active" : "me-1"}
                         onClick={(e) => {
                           table.setPageSize(Number(v));
+                          setSize(`${v}`);
                         }}
                         variant="secondary"
                       >
