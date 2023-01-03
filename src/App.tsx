@@ -73,7 +73,7 @@ const fuzzyFilter: FilterFn<any> = (row, columnId, value, addMeta) => {
 
 const problemColDef = (id: string) => {
   return columnHelper.accessor((row: any) => row[id][3], {
-    header: "<" + id + ">",
+    header: id,
     enableColumnFilter: true,
     size: 365,
     cell: (info) => {
