@@ -182,7 +182,7 @@ function App() {
   const [{ pageIndex, pageSize }, setPagination] =
     React.useState<PaginationState>({
       pageIndex: 0,
-      pageSize:  parseInt(sz),
+      pageSize: parseInt(sz),
     });
   const pagination = React.useMemo(
     () => ({
@@ -284,97 +284,106 @@ function App() {
         Top
       </Button>
       <div className="h-4" />
+      <div
+        className=""
+        style={{
+          cursor: "pointer",
+          background: "white",
+          position: "sticky",
+          top: 0,
+        }}
+      >
+        <div className="th-center pt-2 pb-1">
+          <div className="d-flex justify-content-center">
+            <Pagination className="me-2 mb-0">
+              <Pagination.First
+                // className="border rounded"
+                onClick={() => table.setPageIndex(0)}
+                disabled={!table.getCanPreviousPage()}
+              />
+              <Pagination.Prev
+                // className="border rounded"
+                onClick={() => table.previousPage()}
+                disabled={!table.getCanPreviousPage()}
+              />
+              <Pagination.Next
+                // className="border rounded"
+                onClick={() => table.nextPage()}
+                disabled={!table.getCanNextPage()}
+              />
+              <Pagination.Last
+                className="rounded"
+                onClick={() => table.setPageIndex(table.getPageCount() - 1)}
+                disabled={!table.getCanNextPage()}
+              />
+            </Pagination>
+            <div
+              className="d-flex flex-row mb-1 me-5"
+              style={{ height: "38px" }}
+            >
+              <span className="d-sm-inline-flex mh-100 ms-2">
+                <strong className="d-inline-flex align-items-center">
+                  {table.getState().pagination.pageIndex + 1} {" / "}
+                  {table.getPageCount()}
+                </strong>
+              </span>
+              <span className="d-sm-inline-flex mh-100 ms-2">
+                <span className="d-flex align-items-center">Page</span>
+                <input
+                  type="number"
+                  defaultValue={table.getState().pagination.pageIndex + 1}
+                  onChange={(e) => {
+                    const page = e.target.value
+                      ? Number(e.target.value) - 1
+                      : 0;
+                    table.setPageIndex(page);
+                  }}
+                  className="d-inline-block border rounded align-middle ms-1 p-1"
+                  style={{ width: "100px" }}
+                />
+              </span>
+              <span className="d-sm-inline-flex mh-100 ms-2">
+                <span className="d-flex align-items-center me-2">Size</span>
+                <ButtonGroup aria-label="Basic example">
+                  {[20, 50, 100, 200, 500].map((v) => {
+                    return (
+                      <Button
+                        className={pageSize === v ? "me-1 active" : "me-1"}
+                        onClick={(e) => {
+                          table.setPageSize(Number(v));
+                        }}
+                        variant="secondary"
+                      >
+                        {v}
+                      </Button>
+                    );
+                  })}
+                </ButtonGroup>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
       <Table striped bordered hover className="overflow-x-auto">
         <thead
           style={{
             cursor: "pointer",
             background: "white",
             position: "sticky",
-            top: 0,
+            top: 53,
           }}
         >
-          <tr className="">
-            <td colSpan={5}>
-              <div className="d-flex justify-content-center">
-                <Pagination className="me-2 mb-0">
-                  <Pagination.First
-                    // className="border rounded"
-                    onClick={() => table.setPageIndex(0)}
-                    disabled={!table.getCanPreviousPage()}
-                  />
-                  <Pagination.Prev
-                    // className="border rounded"
-                    onClick={() => table.previousPage()}
-                    disabled={!table.getCanPreviousPage()}
-                  />
-                  <Pagination.Next
-                    // className="border rounded"
-                    onClick={() => table.nextPage()}
-                    disabled={!table.getCanNextPage()}
-                  />
-                  <Pagination.Last
-                    className="rounded"
-                    onClick={() => table.setPageIndex(table.getPageCount() - 1)}
-                    disabled={!table.getCanNextPage()}
-                  />
-                </Pagination>
-                <div
-                  className="d-flex flex-row mb-1 me-5"
-                  style={{ height: "38px" }}
-                >
-                  <span className="d-sm-inline-flex mh-100 ms-2">
-                    <strong className="d-inline-flex align-items-center">
-                      {table.getState().pagination.pageIndex + 1} {" / "}
-                      {table.getPageCount()}
-                    </strong>
-                  </span>
-                  <span className="d-sm-inline-flex mh-100 ms-2">
-                    <span className="d-flex align-items-center">Page</span>
-                    <input
-                      type="number"
-                      defaultValue={table.getState().pagination.pageIndex + 1}
-                      onChange={(e) => {
-                        const page = e.target.value
-                          ? Number(e.target.value) - 1
-                          : 0;
-                        table.setPageIndex(page);
-                      }}
-                      className="d-inline-block border rounded align-middle ms-1 p-1"
-                      style={{ width: "100px" }}
-                    />
-                  </span>
-                  <span className="d-sm-inline-flex mh-100 ms-2">
-                    <span className="d-flex align-items-center me-2">Size</span>
-                    <ButtonGroup aria-label="Basic example">
-                      {[20, 50, 100, 200, 500].map((v) => {
-                        return (
-                          <Button
-                            className={ pageSize === v?  "me-1 active" : "me-1"}
-                            onClick={(e) => {
-                              table.setPageSize(Number(v));
-                            }}
-                            variant="secondary"
-                          >
-                            {v}
-                          </Button>
-                        );
-                      })}
-                    </ButtonGroup>
-                  </span>
-                </div>
-              </div>
-            </td>
-          </tr>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
               {headerGroup.headers.map((header) => {
+                let hsz = header.getSize();
                 return (
                   <th
                     {...{
                       key: header.id,
                       colSpan: header.colSpan,
                       style: {
-                        width: header.getSize(),
+                        width: hsz,
                         overflow: "hidden",
                       },
                     }}
