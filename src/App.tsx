@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Pagination from "react-bootstrap/Pagination";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
@@ -31,7 +32,7 @@ import {
 
 import { rankItem } from "@tanstack/match-sorter-utils";
 
-import { getMark, setMark } from "./store";
+import { getMark, setMark, getSize, setSize } from "./store";
 
 import { useQuery } from "react-query";
 import { Contest, fetchData } from "./makeData";
@@ -72,7 +73,7 @@ const fuzzyFilter: FilterFn<any> = (row, columnId, value, addMeta) => {
 
 const problemColDef = (id: string) => {
   return columnHelper.accessor((row: any) => row[id][3], {
-    header: id,
+    header: "<<" + id + ">>",
     enableColumnFilter: true,
     size: 365,
     cell: (info) => {
@@ -177,10 +178,11 @@ function backToTop() {
 }
 
 function App() {
+  const sz = getSize() || "100";
   const [{ pageIndex, pageSize }, setPagination] =
     React.useState<PaginationState>({
       pageIndex: 0,
-      pageSize: 20,
+      pageSize:  parseInt(sz),
     });
   const pagination = React.useMemo(
     () => ({
@@ -255,12 +257,12 @@ function App() {
   }, []);
 
   React.useEffect(() => {
-    if (table.getState().columnFilters[0]?.id === 'Contest') {
-      if (table.getState().sorting[0]?.id !== 'Contest') {
-        table.setSorting([{ id: 'Contest', desc: false }])
+    if (table.getState().columnFilters[0]?.id === "Contest") {
+      if (table.getState().sorting[0]?.id !== "Contest") {
+        table.setSorting([{ id: "Contest", desc: false }]);
       }
     }
-  }, [table.getState().columnFilters[0]?.id])
+  }, [table.getState().columnFilters[0]?.id]);
 
   return (
     <div className="contest-table">
@@ -283,7 +285,86 @@ function App() {
       </Button>
       <div className="h-4" />
       <Table striped bordered hover className="overflow-x-auto">
-        <thead style={{ cursor: "pointer", background: "white" }}>
+        <thead
+          style={{
+            cursor: "pointer",
+            background: "white",
+            position: "sticky",
+            top: 0,
+          }}
+        >
+          <tr className="">
+            <td colSpan={5}>
+              <div className="d-flex justify-content-center">
+                <Pagination className="me-2 mb-0">
+                  <Pagination.First
+                    // className="border rounded"
+                    onClick={() => table.setPageIndex(0)}
+                    disabled={!table.getCanPreviousPage()}
+                  />
+                  <Pagination.Prev
+                    // className="border rounded"
+                    onClick={() => table.previousPage()}
+                    disabled={!table.getCanPreviousPage()}
+                  />
+                  <Pagination.Next
+                    // className="border rounded"
+                    onClick={() => table.nextPage()}
+                    disabled={!table.getCanNextPage()}
+                  />
+                  <Pagination.Last
+                    className="rounded"
+                    onClick={() => table.setPageIndex(table.getPageCount() - 1)}
+                    disabled={!table.getCanNextPage()}
+                  />
+                </Pagination>
+                <div
+                  className="d-flex flex-row mb-1 me-5"
+                  style={{ height: "38px" }}
+                >
+                  <span className="d-sm-inline-flex mh-100 ms-2">
+                    <strong className="d-inline-flex align-items-center">
+                      {table.getState().pagination.pageIndex + 1} {" / "}
+                      {table.getPageCount()}
+                    </strong>
+                  </span>
+                  <span className="d-sm-inline-flex mh-100 ms-2">
+                    <span className="d-flex align-items-center">Page</span>
+                    <input
+                      type="number"
+                      defaultValue={table.getState().pagination.pageIndex + 1}
+                      onChange={(e) => {
+                        const page = e.target.value
+                          ? Number(e.target.value) - 1
+                          : 0;
+                        table.setPageIndex(page);
+                      }}
+                      className="d-inline-block border rounded align-middle ms-1 p-1"
+                      style={{ width: "100px" }}
+                    />
+                  </span>
+                  <span className="d-sm-inline-flex mh-100 ms-2">
+                    <span className="d-flex align-items-center me-2">Size</span>
+                    <ButtonGroup aria-label="Basic example">
+                      {[20, 50, 100, 200, 500].map((v) => {
+                        return (
+                          <Button
+                            className={ pageSize === v?  "me-1 active" : "me-1"}
+                            onClick={(e) => {
+                              table.setPageSize(Number(v));
+                            }}
+                            variant="secondary"
+                          >
+                            {v}
+                          </Button>
+                        );
+                      })}
+                    </ButtonGroup>
+                  </span>
+                </div>
+              </div>
+            </td>
+          </tr>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
               {headerGroup.headers.map((header) => {
@@ -299,15 +380,15 @@ function App() {
                     }}
                   >
                     {header.isPlaceholder ? null : (
-                      <div className="th-center">
-                        <div
+                      <div className="d-flex flex-row align-items-center justify-content-center">
+                        <Button
+                          variant="light"
                           {...{
                             className: header.column.getCanSort()
                               ? "cursor-pointer select-none"
                               : "",
                             onClick: header.column.getToggleSortingHandler(),
                           }}
-                          style={{ margin: '0 .5rem' }}
                         >
                           {flexRender(
                             header.column.columnDef.header,
@@ -317,9 +398,9 @@ function App() {
                             asc: " 🔼",
                             desc: " 🔽",
                           }[header.column.getIsSorted() as string] ?? null}
-                        </div>
+                        </Button>
                         {header.column.getCanFilter() ? (
-                          <div>
+                          <div className="ms-1">
                             <Filter column={header.column} table={table} />
                           </div>
                         ) : null}
@@ -363,7 +444,7 @@ function App() {
                     <td
                       {...{
                         key: cell.id,
-                        className: "tb-overflow"
+                        className: "tb-overflow",
                       }}
                     >
                       {flexRender(
@@ -378,68 +459,6 @@ function App() {
           })}
         </tbody>
       </Table>
-      <div className="d-flex flex-row justify-content-end w-100">
-        <Pagination className="me-2">
-          <Pagination.First
-            // className="border rounded"
-            onClick={() => table.setPageIndex(0)}
-            disabled={!table.getCanPreviousPage()}
-          />
-          <Pagination.Prev
-            // className="border rounded"
-            onClick={() => table.previousPage()}
-            disabled={!table.getCanPreviousPage()}
-          />
-          <Pagination.Next
-            // className="border rounded"
-            onClick={() => table.nextPage()}
-            disabled={!table.getCanNextPage()}
-          />
-          <Pagination.Last
-            className="rounded"
-            onClick={() => table.setPageIndex(table.getPageCount() - 1)}
-            disabled={!table.getCanNextPage()}
-          />
-        </Pagination>
-        <div className="d-flex flex-row mb-1 me-5" style={{ height: '38px' }}>
-          <span className="d-sm-inline-flex mh-100 ms-2">
-            <strong className="d-inline-flex align-items-center">
-              {table.getState().pagination.pageIndex + 1} {" / "}
-              {table.getPageCount()}
-            </strong>
-          </span>
-          <span className="d-sm-inline-flex mh-100 ms-2">
-            <span className="d-flex align-items-center">Page</span>
-            <input
-              type="number"
-              defaultValue={table.getState().pagination.pageIndex + 1}
-              onChange={(e) => {
-                const page = e.target.value ? Number(e.target.value) - 1 : 0;
-                table.setPageIndex(page);
-              }}
-              className="d-inline-block border rounded align-middle ms-1 p-1"
-              style={{ width: '100px' }}
-              />
-          </span>
-          <span className="d-sm-inline-flex mh-100 ms-2">
-            <span className="d-flex align-items-center">Size</span>
-            <select
-              className="d-inline-block border rounded align-middle p-1 ms-1"
-              style={{ width: '100px' }}
-              value={table.getState().pagination.pageSize}
-              onChange={(e) => {
-                table.setPageSize(Number(e.target.value));
-              }}
-            >
-              {[10, 15, 20, 30, 50, 100, 200].map((pageSize) => (
-                <option key={pageSize} value={pageSize}>
-                  {pageSize}
-                </option>
-              ))}
-            </select>
-          </span>
-        </div>
-      </div>
     </div>
   );
 }
@@ -468,13 +487,18 @@ function Filter({
   return typeof firstValue === "number" ? (
     <div
       style={{
-        marginTop: 10,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <InputGroup className="mb-3" style={{ height: "1.2rem" }}>
+      <InputGroup
+        style={
+          {
+            /* height: "1.2rem" */
+          }
+        }
+      >
         <DebouncedInput
           type="number"
           min={Number(column.getFacetedMinMaxValues()?.[0] ?? "")}
