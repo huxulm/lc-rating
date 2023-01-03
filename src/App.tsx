@@ -394,6 +394,7 @@ function App() {
                         <Button
                           variant="light"
                           {...{
+                            style: { fontWeight: 700 },
                             className: header.column.getCanSort()
                               ? "cursor-pointer select-none"
                               : "",
