@@ -1,10 +1,15 @@
 $link-decoration: none;
+$pagination-disabled-bg: #e0e1e1;
+$pagination-bg: #d3e8fc;
+
 @import "~bootstrap/scss/bootstrap";
 @import "~bootstrap/scss/utilities";
 
+
 .btn-secondary {
-  --bs-btn-active-bg: #d9d9d9;
+  --bs-btn-active-bg: #e0e1e1;
   --bs-btn-color: $primary;
+  --bs-btn-bg: #d3e8fc;
 }
 
 .contest-table {
@@ -14,6 +19,22 @@ $link-decoration: none;
 .cursor-pointer {
   cursor: pointer;
   text-align: center;
+}
+
+.right-side {
+  position: fixed;
+  left: calc(100vw - 10px);
+  background: rgba(0, 0, 0, 0.01);
+  width: 100vh;
+  height: 2.5rem;
+  top: 0;
+  z-index: 1000;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.right-side::after {
+  right: 0;
 }
 
 .th-center {
@@ -26,7 +47,7 @@ $link-decoration: none;
   border-radius: 50%;
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 5px;
   width: 3.5rem;
   height: 3.5rem;
   text-align: center;

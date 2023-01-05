@@ -172,6 +172,53 @@ function scrollFunction(btn: any) {
   }
 }
 
+// Element or Position to move + Time in ms (milliseconds)
+function scrollTo(element: any, duration: any) {
+  var e = document.documentElement;
+  if(e.scrollTop===0){
+      var t = e.scrollTop;
+      ++e.scrollTop;
+      e = t+1===e.scrollTop--?e:document.body;
+  }
+  scrollToC(e, e.scrollTop, element, duration);
+}
+
+// Element to move, element or px from, element or px to, time in ms to animate
+function scrollToC(element: any, from: any, to: any, duration: any) {
+  if (duration <= 0) return;
+  if(typeof from === "object")from=from.offsetTop;
+  if(typeof to === "object")to=to.offsetTop;
+  // Choose one effect like easeInQuart
+  scrollToX(element, from, to, 0, 1/duration, 20, easeInCuaic);
+}
+
+
+function scrollToX(element: any, xFrom: any, xTo: any, t01: any, speed: any, step: any, motion: any) {
+  if (t01 < 0 || t01 > 1 || speed<= 0) {
+     element.scrollTop = xTo;
+      return;
+  }
+  element.scrollTop = xFrom - (xFrom - xTo) * motion(t01);
+  t01 += speed * step;
+  
+  setTimeout(function() {
+      scrollToX(element, xFrom, xTo, t01, speed, step, motion);
+  }, step);
+}
+
+/* Effects List */
+function linearTween(t: any){
+  return t;
+}
+
+function easeInQuad(t: any){
+  return t*t;
+}
+
+function easeInCuaic(t: any){
+  return t*t*t;
+}
+
 function backToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
@@ -271,11 +318,11 @@ function App() {
         style={{
           borderRadius: "50%",
           position: "fixed",
+          zIndex: 10000,
           bottom: "20px",
           right: "20px",
           width: "3.5rem",
           height: "3.5rem",
-          visibility: "hidden",
         }}
         onClick={() => {
           backToTop();
@@ -283,86 +330,68 @@ function App() {
       >
         Top
       </Button>
-      <div className="h-4" />
-      <div
-        className=""
-        style={{
-          cursor: "pointer",
-          background: "white",
-          position: "sticky",
-          top: 0,
-        }}
-      >
-        <div className="th-center pt-2 pb-1">
-          <div className="d-flex justify-content-center">
-            <Pagination className="me-2 mb-0">
-              <Pagination.First
-                // className="border rounded"
-                onClick={() => table.setPageIndex(0)}
-                disabled={!table.getCanPreviousPage()}
-              />
-              <Pagination.Prev
-                // className="border rounded"
-                onClick={() => table.previousPage()}
-                disabled={!table.getCanPreviousPage()}
-              />
-              <Pagination.Next
-                // className="border rounded"
-                onClick={() => table.nextPage()}
-                disabled={!table.getCanNextPage()}
-              />
-              <Pagination.Last
-                className="rounded"
-                onClick={() => table.setPageIndex(table.getPageCount() - 1)}
-                disabled={!table.getCanNextPage()}
-              />
-            </Pagination>
-            <div
-              className="d-flex flex-row mb-1 me-5"
-              style={{ height: "38px" }}
-            >
-              <span className="d-sm-inline-flex mh-100 ms-2">
-                <strong className="d-inline-flex align-items-center">
-                  {table.getState().pagination.pageIndex + 1} {" / "}
-                  {table.getPageCount()}
-                </strong>
-              </span>
-              <span className="d-sm-inline-flex mh-100 ms-2">
-                <span className="d-flex align-items-center">Page</span>
-                <input
-                  type="number"
-                  defaultValue={table.getState().pagination.pageIndex + 1}
-                  onChange={(e) => {
-                    const page = e.target.value
-                      ? Number(e.target.value) - 1
-                      : 0;
-                    table.setPageIndex(page);
-                  }}
-                  className="d-inline-block border rounded align-middle ms-1 p-1"
-                  style={{ width: "100px" }}
-                />
-              </span>
-              <span className="d-sm-inline-flex mh-100 ms-2">
-                <span className="d-flex align-items-center me-2">Size</span>
-                <ButtonGroup aria-label="Basic example">
-                  {[20, 50, 100, 200, 500].map((v) => {
-                    return (
-                      <Button
-                        className={pageSize === v ? "me-1 active" : "me-1"}
-                        onClick={(e) => {
-                          table.setPageSize(Number(v));
-                          setSize(`${v}`);
-                        }}
-                        variant="secondary"
-                      >
-                        {v}
-                      </Button>
-                    );
-                  })}
-                </ButtonGroup>
-              </span>
-            </div>
-          </div>
+      <div className="d-flex flex-row justify-content-center right-side">
+        <Pagination className="me-2 mb-0" >
+          <Pagination.First
+            // className="border rounded"
+            onClick={() => table.setPageIndex(0)}
+            disabled={!table.getCanPreviousPage()}
+          />
+          <Pagination.Prev
+            // className="border rounded"
+            onClick={() => table.previousPage()}
+            disabled={!table.getCanPreviousPage()}
+          />
+          <Pagination.Next
+            // className="border rounded"
+            onClick={() => table.nextPage()}
+            disabled={!table.getCanNextPage()}
+          />
+          <Pagination.Last
+            className="rounded"
+            onClick={() => table.setPageIndex(table.getPageCount() - 1)}
+            disabled={!table.getCanNextPage()}
+          />
+        </Pagination>
+        <div className="d-flex flex-row mb-1 me-5" style={{ height: "38px" }}>
+          <span className="d-sm-inline-flex mh-100 ms-2">
+            <strong className="d-inline-flex align-items-center">
+              {table.getState().pagination.pageIndex + 1} {" / "}
+              {table.getPageCount()}
+            </strong>
+          </span>
+          <span className="d-sm-inline-flex mh-100 ms-2">
+            <span className="d-flex align-items-center">Page</span>
+            <input
+              type="number"
+              defaultValue={table.getState().pagination.pageIndex + 1}
+              onChange={(e) => {
+                const page = e.target.value ? Number(e.target.value) - 1 : 0;
+                table.setPageIndex(page);
+              }}
+              className="d-inline-block border rounded align-middle ms-1 p-1"
+              style={{ width: "60px" }}
+            />
+          </span>
+          <span className="d-sm-inline-flex mh-100 ms-2">
+            <span className="d-flex align-items-center me-2">Size</span>
+            <ButtonGroup aria-label="Basic example">
+              {[20, 50, 100, 200, 500].map((v) => {
+                return (
+                  <Button
+                    className={pageSize === v ? "me-1 active" : "me-1"}
+                    onClick={(e) => {
+                      table.setPageSize(Number(v));
+                      setSize(`${v}`);
+                    }}
+                    variant="secondary"
+                  >
+                    {v}
+                  </Button>
+                );
+              })}
+            </ButtonGroup>
+          </span>
         </div>
       </div>
       <Table striped bordered hover className="overflow-x-auto">
@@ -371,7 +400,7 @@ function App() {
             cursor: "pointer",
             background: "white",
             position: "sticky",
-            top: 53,
+            top: 0,
           }}
         >
           {table.getHeaderGroups().map((headerGroup) => (
