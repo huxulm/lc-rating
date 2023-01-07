@@ -1,6 +1,6 @@
 $link-decoration: none;
-$pagination-disabled-bg: #e0e1e1;
-$pagination-bg: #d3e8fc;
+// $pagination-disabled-bg: #e0e1e1;
+// $pagination-bg: #d3e8fc;
 
 @import "~bootstrap/scss/bootstrap";
 @import "~bootstrap/scss/utilities";
@@ -8,8 +8,8 @@ $pagination-bg: #d3e8fc;
 
 .btn-secondary {
   --bs-btn-active-bg: #e0e1e1;
-  --bs-btn-color: $primary;
-  --bs-btn-bg: #d3e8fc;
+  // --bs-btn-color: $primary;
+  // --bs-btn-bg: #d3e8fc;
 }
 
 .contest-table {

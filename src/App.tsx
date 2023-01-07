@@ -120,6 +120,7 @@ const columns = [
     sortingFn: (a, b, id) => {
       return a.original.ID - b.original.ID;
     },
+    header: "Contest",
     enableResizing: false,
     enableSorting: true,
     size: 150,
@@ -379,12 +380,12 @@ function App() {
               {[20, 50, 100, 200, 500].map((v) => {
                 return (
                   <Button
-                    className={pageSize === v ? "me-1 active" : "me-1"}
+                    className={pageSize === v ? "active" : ""}
                     onClick={(e) => {
                       table.setPageSize(Number(v));
                       setSize(`${v}`);
                     }}
-                    variant="secondary"
+                    variant="outline-secondary"
                   >
                     {v}
                   </Button>
@@ -423,21 +424,24 @@ function App() {
                         <Button
                           variant="light"
                           {...{
-                            style: { fontWeight: 700 },
+                            style: { fontWeight: 700, minWidth: 65 },
                             className: header.column.getCanSort()
                               ? "cursor-pointer select-none"
                               : "",
                             onClick: header.column.getToggleSortingHandler(),
                           }}
                         >
-                          {flexRender(
+                          {/* {flexRender(
                             header.column.columnDef.header,
                             header.getContext()
-                          )}
+                          )} */}
+                          <>
                           {{
-                            asc: " 🔼",
-                            desc: " 🔽",
+                            asc: header.column.columnDef.header + " 🔼",
+                            desc: header.column.columnDef.header + " 🔽",
+                            'false': header.column.columnDef.header
                           }[header.column.getIsSorted() as string] ?? null}
+                          </>
                         </Button>
                         {header.column.getCanFilter() ? (
                           <div className="ms-1">
