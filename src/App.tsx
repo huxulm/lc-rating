@@ -118,7 +118,7 @@ const problemColDef = (id: string) => {
 const columns = [
   columnHelper.accessor("Contest", {
     sortingFn: (a, b, id) => {
-      return a.original.ID - b.original.ID;
+      return a.original.StartTime - b.original.StartTime;
     },
     header: "Contest",
     enableResizing: false,
