@@ -6,6 +6,7 @@ export type Question = {
 };
 export type Contest = {
   ID: number;
+  StartTime: number;
   Contest: string;
   TitleSlug: string;
   A: any[];
@@ -23,6 +24,7 @@ export function makeContests() {
     let questions: any[] = d.questions && d.questions.length === 4? d.questions : new Array(4).fill({title: ""})
     return {
       ID: d.contest.id,
+      StartTime: d.contest.start_time,
       Contest: d.contest.title || "",
       TitleSlug: d.contest.title_slug,
       A: [ questions[0].title, questions[0].title_slug, questions[0].question_id, questions[0].rating ],
