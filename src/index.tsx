@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import ThemeProvider from 'react-bootstrap/ThemeProvider'
 import './index.scss';
 import App from './App';
 import { QueryClient, QueryClientProvider } from 'react-query'
