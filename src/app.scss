@@ -22,7 +22,7 @@ $table-striped-bg: white;
 
 .right-side {
   position: fixed;
-  left: calc(100vw - 10px);
+  left: calc(100vw - 1.2rem);
   background: rgba(0, 0, 0, 0.01);
   width: 100vh;
   height: 2.5rem;
@@ -47,8 +47,8 @@ $table-striped-bg: white;
   position: fixed;
   bottom: 20px;
   right: 5px;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   text-align: center;
   display: block;
 }

@@ -176,10 +176,10 @@ function scrollFunction(btn: any) {
 // Element or Position to move + Time in ms (milliseconds)
 function scrollTo(element: any, duration: any) {
   var e = document.documentElement;
-  if(e.scrollTop===0){
-      var t = e.scrollTop;
-      ++e.scrollTop;
-      e = t+1===e.scrollTop--?e:document.body;
+  if (e.scrollTop === 0) {
+    var t = e.scrollTop;
+    ++e.scrollTop;
+    e = t + 1 === e.scrollTop-- ? e : document.body;
   }
   scrollToC(e, e.scrollTop, element, duration);
 }
@@ -187,37 +187,44 @@ function scrollTo(element: any, duration: any) {
 // Element to move, element or px from, element or px to, time in ms to animate
 function scrollToC(element: any, from: any, to: any, duration: any) {
   if (duration <= 0) return;
-  if(typeof from === "object")from=from.offsetTop;
-  if(typeof to === "object")to=to.offsetTop;
+  if (typeof from === "object") from = from.offsetTop;
+  if (typeof to === "object") to = to.offsetTop;
   // Choose one effect like easeInQuart
-  scrollToX(element, from, to, 0, 1/duration, 20, easeInCuaic);
+  scrollToX(element, from, to, 0, 1 / duration, 20, easeInCuaic);
 }
 
-
-function scrollToX(element: any, xFrom: any, xTo: any, t01: any, speed: any, step: any, motion: any) {
-  if (t01 < 0 || t01 > 1 || speed<= 0) {
-     element.scrollTop = xTo;
-      return;
+function scrollToX(
+  element: any,
+  xFrom: any,
+  xTo: any,
+  t01: any,
+  speed: any,
+  step: any,
+  motion: any
+) {
+  if (t01 < 0 || t01 > 1 || speed <= 0) {
+    element.scrollTop = xTo;
+    return;
   }
   element.scrollTop = xFrom - (xFrom - xTo) * motion(t01);
   t01 += speed * step;
-  
-  setTimeout(function() {
-      scrollToX(element, xFrom, xTo, t01, speed, step, motion);
+
+  setTimeout(function () {
+    scrollToX(element, xFrom, xTo, t01, speed, step, motion);
   }, step);
 }
 
 /* Effects List */
-function linearTween(t: any){
+function linearTween(t: any) {
   return t;
 }
 
-function easeInQuad(t: any){
-  return t*t;
+function easeInQuad(t: any) {
+  return t * t;
 }
 
-function easeInCuaic(t: any){
-  return t*t*t;
+function easeInCuaic(t: any) {
+  return t * t * t;
 }
 
 function backToTop() {
@@ -313,26 +320,140 @@ function App() {
   }, [table.getState().columnFilters[0]?.id]);
 
   return (
-    <div className="contest-table">
-      <Button
-        id="btn-back-to-top"
-        style={{
-          borderRadius: "50%",
-          position: "fixed",
-          zIndex: 10000,
-          bottom: "20px",
-          right: "20px",
-          width: "3.5rem",
-          height: "3.5rem",
-        }}
-        onClick={() => {
-          backToTop();
-        }}
-      >
-        Top
-      </Button>
+    <>
+      <div className="contest-table">
+        <Button
+          variant="primary"
+          id="btn-back-to-top"
+          style={{
+            borderRadius: "50%",
+            position: "fixed",
+            zIndex: 10000,
+            bottom: "50px",
+            right: "5px",
+            width: "2.5rem",
+            height: "2.5rem",
+            fontSize: "1.5rem",
+            padding: "0",
+          }}
+          onClick={() => {
+            backToTop();
+          }}
+        >
+          ↑
+        </Button>
+        <Table striped bordered hover className="overflow-x-auto">
+          <thead
+            style={{
+              cursor: "pointer",
+              background: "white",
+              position: "sticky",
+              top: 0,
+            }}
+          >
+            {table.getHeaderGroups().map((headerGroup) => (
+              <tr key={headerGroup.id}>
+                {headerGroup.headers.map((header) => {
+                  let hsz = header.getSize();
+                  return (
+                    <th
+                      {...{
+                        key: header.id,
+                        colSpan: header.colSpan,
+                        style: {
+                          width: hsz,
+                          overflow: "hidden",
+                        },
+                      }}
+                    >
+                      {header.isPlaceholder ? null : (
+                        <div className="d-flex flex-row align-items-center justify-content-center">
+                          <Button
+                            variant="light"
+                            {...{
+                              style: { fontWeight: 700, minWidth: 65 },
+                              className: header.column.getCanSort()
+                                ? "cursor-pointer select-none"
+                                : "",
+                              onClick: header.column.getToggleSortingHandler(),
+                            }}
+                          >
+                            {/* {flexRender(
+                            header.column.columnDef.header,
+                            header.getContext()
+                          )} */}
+                            <>
+                              {{
+                                asc: header.column.columnDef.header + " 🔼",
+                                desc: header.column.columnDef.header + " 🔽",
+                                false: header.column.columnDef.header,
+                              }[header.column.getIsSorted() as string] ?? null}
+                            </>
+                          </Button>
+                          {header.column.getCanFilter() ? (
+                            <div className="ms-1">
+                              <Filter column={header.column} table={table} />
+                            </div>
+                          ) : null}
+                        </div>
+                      )}
+                      <div
+                        {...{
+                          onMouseDown: header.getResizeHandler(),
+                          onTouchStart: header.getResizeHandler(),
+                          className: `resizer ${
+                            header.column.getIsResizing() ? "isResizing" : ""
+                          }`,
+                          style: {
+                            transform:
+                              columnResizeMode === "onEnd" &&
+                              header.column.getIsResizing()
+                                ? `translateX(${
+                                    table.getState().columnSizingInfo
+                                      .deltaOffset
+                                  }px)`
+                                : "",
+                          },
+                        }}
+                      />
+                    </th>
+                  );
+                })}
+              </tr>
+            ))}
+          </thead>
+          <tbody>
+            {table.getRowModel().rows.map((row) => {
+              return (
+                <tr
+                  key={row.id}
+                  className={
+                    selectedRow === row.original.TitleSlug ? "row-selected" : ""
+                  }
+                >
+                  {row.getVisibleCells().map((cell) => {
+                    return (
+                      <td
+                        {...{
+                          key: cell.id,
+                          className: "tb-overflow",
+                        }}
+                      >
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext()
+                        )}
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </Table>
+      </div>
       <div className="d-flex flex-row justify-content-center right-side">
-        <Pagination className="me-2 mb-0" >
+        <Pagination className="me-2 mb-0">
           <Pagination.First
             // className="border rounded"
             onClick={() => table.setPageIndex(0)}
@@ -395,115 +516,7 @@ function App() {
           </span>
         </div>
       </div>
-      <Table striped bordered hover className="overflow-x-auto">
-        <thead
-          style={{
-            cursor: "pointer",
-            background: "white",
-            position: "sticky",
-            top: 0,
-          }}
-        >
-          {table.getHeaderGroups().map((headerGroup) => (
-            <tr key={headerGroup.id}>
-              {headerGroup.headers.map((header) => {
-                let hsz = header.getSize();
-                return (
-                  <th
-                    {...{
-                      key: header.id,
-                      colSpan: header.colSpan,
-                      style: {
-                        width: hsz,
-                        overflow: "hidden",
-                      },
-                    }}
-                  >
-                    {header.isPlaceholder ? null : (
-                      <div className="d-flex flex-row align-items-center justify-content-center">
-                        <Button
-                          variant="light"
-                          {...{
-                            style: { fontWeight: 700, minWidth: 65 },
-                            className: header.column.getCanSort()
-                              ? "cursor-pointer select-none"
-                              : "",
-                            onClick: header.column.getToggleSortingHandler(),
-                          }}
-                        >
-                          {/* {flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )} */}
-                          <>
-                          {{
-                            asc: header.column.columnDef.header + " 🔼",
-                            desc: header.column.columnDef.header + " 🔽",
-                            'false': header.column.columnDef.header
-                          }[header.column.getIsSorted() as string] ?? null}
-                          </>
-                        </Button>
-                        {header.column.getCanFilter() ? (
-                          <div className="ms-1">
-                            <Filter column={header.column} table={table} />
-                          </div>
-                        ) : null}
-                      </div>
-                    )}
-                    <div
-                      {...{
-                        onMouseDown: header.getResizeHandler(),
-                        onTouchStart: header.getResizeHandler(),
-                        className: `resizer ${
-                          header.column.getIsResizing() ? "isResizing" : ""
-                        }`,
-                        style: {
-                          transform:
-                            columnResizeMode === "onEnd" &&
-                            header.column.getIsResizing()
-                              ? `translateX(${
-                                  table.getState().columnSizingInfo.deltaOffset
-                                }px)`
-                              : "",
-                        },
-                      }}
-                    />
-                  </th>
-                );
-              })}
-            </tr>
-          ))}
-        </thead>
-        <tbody>
-          {table.getRowModel().rows.map((row) => {
-            return (
-              <tr
-                key={row.id}
-                className={
-                  selectedRow === row.original.TitleSlug ? "row-selected" : ""
-                }
-              >
-                {row.getVisibleCells().map((cell) => {
-                  return (
-                    <td
-                      {...{
-                        key: cell.id,
-                        className: "tb-overflow",
-                      }}
-                    >
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
-                      )}
-                    </td>
-                  );
-                })}
-              </tr>
-            );
-          })}
-        </tbody>
-      </Table>
-    </div>
+    </>
   );
 }
 
