@@ -4,8 +4,10 @@ import { Routes, Route, Outlet, Link } from "react-router-dom";
 import Navbar from "react-bootstrap/esm/Navbar";
 import Container from "react-bootstrap/esm/Container";
 import Nav from "react-bootstrap/esm/Nav";
+import GithubProfile from "./components/gh";
 
 const ContestList = React.lazy(() => import("./ContestList"));
+const Zen = React.lazy(() => import("./Zen"));
 
 export default function App() {
   return (
@@ -21,21 +23,34 @@ export default function App() {
   );
 }
 
-function Zen() {
-  return <Container>Zen mode</Container>
-}
+// function Zen() {
+//   return <Container>Zen mode</Container>;
+// }
 
 function Layout() {
   return (
     <div>
-      <Navbar bg="light" expand="lg" className="p-0">
-        <Container>
-          <Navbar.Collapse className="justify-content-center">
-            <Nav>
-              <Link className="nav-link" to="/"><span className="btn btn-info nav-link fs-6">Contest List</span></Link>
-              
-              <Link className="nav-link" to="/zen"><span className="btn btn-secondary nav-link fs-6">Zen Mode Traning</span></Link>
-            </Nav>
+      <Navbar expand="lg" className="p-0 text-bg-light">
+        <Container className="navbar fw-bold">
+          <Navbar.Brand className="navbar-brand nav-link">
+            力扣竞赛题目
+          </Navbar.Brand>
+          <Link className="nav-link px-lg-3" to="/">
+            <button className="btn btn-primary fw-bold fs-6 p-1">竞赛列表</button>
+          </Link>
+          <Link className="nav-link px-lg-3" to="/">
+            <button className="btn btn-secondary fw-bold fs-6 p-1">
+              难度练习
+            </button>
+          </Link>
+          <Navbar.Collapse className="justify-content-end">
+            <Nav.Link
+              href="https://github.com/huxulm/lc-rating/"
+              className="btn btn-outline-secondary p-1"
+            >
+              <span className="me-1">Github</span>
+              <GithubProfile classname="" />
+            </Nav.Link>
           </Navbar.Collapse>
         </Container>
       </Navbar>
