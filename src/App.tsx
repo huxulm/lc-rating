@@ -13,7 +13,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<ContestList />} />
-          <Route path="zenk" element={<Zenk />} />
+          <Route path="zen" element={<Zen />} />
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
@@ -21,8 +21,8 @@ export default function App() {
   );
 }
 
-function Zenk() {
-  return <>Zenk mode</>
+function Zen() {
+  return <Container>Zen mode</Container>
 }
 
 function Layout() {
@@ -34,7 +34,7 @@ function Layout() {
             <Nav>
               <Link className="nav-link" to="/"><span className="btn btn-info nav-link fs-6">Contest List</span></Link>
               
-              <Link className="nav-link" to="/zenk"><span className="btn btn-secondary nav-link fs-6">Zenk Mode Traning</span></Link>
+              <Link className="nav-link" to="/zen"><span className="btn btn-secondary nav-link fs-6">Zen Mode Traning</span></Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
