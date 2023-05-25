@@ -11,7 +11,7 @@ const host = `https://leetcode.cn`;
 const filters = [
   {
     label: "<=1200",
-    fn: function (r: any) { return r.rating && r.rating <= 1199.999 }
+    fn: function (r: any) { return r.rating && r.rating < 1200.0 }
   },
   {
     label: "1200 - 1400",
@@ -68,7 +68,7 @@ function Zenk() {
         {filters.map((f: any) => {
           return <li className="nav-link"><button onClick={() => {
             changeFilter(f.fn)
-          }} className="btn btn-info">{f.label}</button></li>
+          }} className="btn btn-outline-secondary">{f.label}</button></li>
         })}
       </nav>
       <Table bordered hover variant="light">
@@ -87,7 +87,7 @@ function Zenk() {
                 <td className="text-center" style={{ width: "100px" }}>{id + 1}</td>
                 <td><a href={`${host}/contest/${item.cont_title_slug}`}>{item.cont_title}</a></td>
                 <td style={{ width: "auto" }}><a href={`${host}/problems/${item.title_slug}`} >{item.question_id}.{item.title}</a></td>
-                <td style={{ width: "100px" }}><RatingText className="text-center text-body-secondary fw-bold" difficulty={item.rating}>{Number(item.rating).toFixed(0)}</RatingText></td>
+                <td style={{ width: "100px" }}><RatingText id={`rating-${item.question_id}`} className="text-center text-body-secondary fw-bold" difficulty={item.rating}>{Number(item.rating).toFixed(0)}</RatingText></td>
               </tr>
             );
           })}
