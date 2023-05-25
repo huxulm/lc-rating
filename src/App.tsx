@@ -38,7 +38,7 @@ function Layout() {
           <Link className="nav-link px-lg-3" to="/">
             <button className="btn btn-primary fw-bold fs-6 p-1">竞赛列表</button>
           </Link>
-          <Link className="nav-link px-lg-3" to="/">
+          <Link className="nav-link px-lg-3" to="/zen">
             <button className="btn btn-secondary fw-bold fs-6 p-1">
               难度练习
             </button>
