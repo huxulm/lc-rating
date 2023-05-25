@@ -13,7 +13,7 @@ export default function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="" element={<Layout />}>
           <Route index element={<ContestList />} />
           <Route path="zen" index element={<Zen />} />
           <Route path="*" element={<NoMatch />} />
