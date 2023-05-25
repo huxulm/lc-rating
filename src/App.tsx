@@ -15,17 +15,13 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<ContestList />} />
-          <Route path="zen" element={<Zen />} />
+          <Route path="zen" index element={<Zen />} />
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
     </div>
   );
 }
-
-// function Zen() {
-//   return <Container>Zen mode</Container>;
-// }
 
 function Layout() {
   return (
