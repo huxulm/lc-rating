@@ -5,9 +5,9 @@ import Navbar from "react-bootstrap/esm/Navbar";
 import Container from "react-bootstrap/esm/Container";
 import Nav from "react-bootstrap/esm/Nav";
 import GithubProfile from "./components/gh";
+import Zen from"./Zen";
 
 const ContestList = React.lazy(() => import("./ContestList"));
-const Zen = React.lazy(() => import("./Zen"));
 
 export default function App() {
   return (
@@ -36,7 +36,7 @@ function Layout() {
             力扣竞赛题目
           </Navbar.Brand>
           <Link className="nav-link px-lg-3" to="/">
-            <button className="btn btn-primary fw-bold fs-6 p-1">竞赛列表</button>
+            <button className="btn btn-secondary fw-bold fs-6 p-1">竞赛列表</button>
           </Link>
           <Link className="nav-link px-lg-3" to="/zen">
             <button className="btn btn-secondary fw-bold fs-6 p-1">
@@ -45,7 +45,7 @@ function Layout() {
           </Link>
           <Navbar.Collapse className="justify-content-end">
             <Nav.Link
-              href="https://github.com/huxulm/lc-rating/"
+              href="https://github.com/huxulm/lc-rating"
               className="btn btn-outline-secondary p-1"
             >
               <span className="me-1">Github</span>

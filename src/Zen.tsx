@@ -1,17 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
-import Button from "react-bootstrap/Button";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
-import Pagination from "react-bootstrap/Pagination";
-import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
-import RatingCircle, { COLORS } from "./components/RatingCircle";
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-import Popover from "react-bootstrap/Popover";
 import Container from "react-bootstrap/Container";
 
 import "./app.scss";
-import { Contest, Question } from "./makeData";
 import RatingText from "./components/RatingText";
 
 const host = `https://leetcode.cn`;
@@ -73,15 +64,15 @@ function Zenk() {
   const changeFilter = (fn: any) => setFilteredData(data.filter(fn))
   return (
     <Container fluid="md" className="" style={{ width: "60%" }}>
-      <nav className="nav navbar">
+      <nav className="nav navbar bg-white z-3" style={{ position: "sticky", top: 0, zIndex: 1000 }}>
         {filters.map((f: any) => {
           return <li className="nav-link"><button onClick={() => {
             changeFilter(f.fn)
-          }} className="btn btn-secondary">{f.label}</button></li>
+          }} className="btn btn-info">{f.label}</button></li>
         })}
       </nav>
       <Table bordered hover variant="light">
-        <thead className="table-dark">
+        <thead className="">
           <tr>
             <th style={{ width: "100px" }}>#</th>
             <th>Contest</th>
@@ -90,13 +81,13 @@ function Zenk() {
           </tr>
         </thead>
         <tbody>
-          {filteredData.map((item) => {
+          {filteredData.map((item, id) => {
             return (
               <tr>
-                <td style={{ width: "100px" }}></td>
+                <td className="text-center" style={{ width: "100px" }}>{id + 1}</td>
                 <td><a href={`${host}/contest/${item.cont_title_slug}`}>{item.cont_title}</a></td>
                 <td style={{ width: "auto" }}><a href={`${host}/problems/${item.title_slug}`} >{item.question_id}.{item.title}</a></td>
-                <td style={{ width: "100px" }}><RatingText className="text-center" difficulty={item.rating}>{Number(item.rating).toFixed(0)}</RatingText></td>
+                <td style={{ width: "100px" }}><RatingText className="text-center text-body-secondary fw-bold" difficulty={item.rating}>{Number(item.rating).toFixed(0)}</RatingText></td>
               </tr>
             );
           })}
