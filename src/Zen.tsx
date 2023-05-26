@@ -37,6 +37,10 @@ const filters = [
     label: ">=2400",
     fn: function (r: any) { return r.rating && r.rating >= 2400.0 }
   },
+  {
+    label: "< ALL >",
+    fn: function (r: any) { return true }
+  },
 ]
 
 type ConstQuestion = {
@@ -60,15 +64,19 @@ function Zenk() {
         (error) => { }
       );
   }, []);
+  const [ active, setActive ] = useState(7)
   const [filteredData, setFilteredData] = useState<ConstQuestion[]>([]);
-  const changeFilter = (fn: any) => setFilteredData(data.filter(fn))
+  const changeFilter = (fn: any, id: any) => {
+    setFilteredData(data.filter(fn))
+    setActive(id)
+  }
   return (
     <Container fluid="md" className="" style={{ width: "60%" }}>
       <nav className="nav navbar bg-white z-3" style={{ position: "sticky", top: 0, zIndex: 1000 }}>
-        {filters.map((f: any) => {
+        {filters.map((f: any, id: any) => {
           return <li className="nav-link"><button onClick={() => {
-            changeFilter(f.fn)
-          }} className="btn btn-outline-secondary">{f.label}</button></li>
+            changeFilter(f.fn, id)
+          }} className={`btn ${id == active? "btn-secondary selected": "btn-outline-secondary"}`}>{f.label}</button></li>
         })}
       </nav>
       <Table bordered hover variant="light">
