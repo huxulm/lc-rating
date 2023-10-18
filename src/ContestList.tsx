@@ -348,7 +348,7 @@ function ContestList() {
               cursor: "pointer",
               background: "white",
               position: "sticky",
-              top: 0,
+              top: -1,
             }}
           >
             {table.getHeaderGroups().map((headerGroup) => (
