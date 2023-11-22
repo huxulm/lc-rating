@@ -18,7 +18,7 @@ import './zen.scss';
 const LC_HOST = `https://leetcode.cn`;
 const canUseLocalStorage = typeof Storage !== 'undefined' && Boolean(window?.localStorage);
 const LC_RATING_PROGRESS_KEY = (questionID: string) => `lc-rating-zen-progress-${questionID}`;
-
+const LC_RATING_ZEN_LAST_USED_FILTER_KEY = `lc-rating-zen-last-used-filter`;
 
 // Question Data Type
 type ConstQuestion = {
@@ -37,6 +37,7 @@ type Filter = {
 };
 const createRatingFilter = (min: number, max?: number) => (r: ConstQuestion) =>
   max === undefined ? r.rating >= min : r.rating >= min && r.rating < max;
+const ALL_FILTER_LABEL = "< ALL >";
 const filters: Filter[] = [
   {label: "<=1200", fn: createRatingFilter(0, 1200)},
   {label: "1200 - 1400", fn: createRatingFilter(1200, 1400)},
@@ -45,11 +46,11 @@ const filters: Filter[] = [
   {label: "1900 - 2100", fn: createRatingFilter(1900, 2100)},
   {label: "2100 - 2400", fn: createRatingFilter(2100, 2400)},
   {label: ">=2400", fn: createRatingFilter(2400)},
-  {label: "< ALL >", fn: (_: ConstQuestion) => true},
+  {label: ALL_FILTER_LABEL, fn: (_: ConstQuestion) => true},
 ];
-
 // Progress Related
 type ProgressData = Record<string, string>;
+
 enum Progress {
   TODO = "TODO",
   WORKING = "WORKING",
@@ -57,6 +58,7 @@ enum Progress {
   REVIEW_NEEDED = "REVIEW_NEEDED",
   AC = "AC",
 }
+
 const progressTranslations = {
   [Progress.TODO]: "下次一定",
   [Progress.WORKING]: "攻略中",
@@ -105,11 +107,11 @@ const TableRow = React.memo(({rowId, item, progress, handleProgressSelectChange}
     <td className="text-center">{rowId + 1}</td>
 
     <td>
-      <a href={`${LC_HOST}/contest/${item.cont_title_slug}`}>{item.cont_title}</a>
+      <a href={`${LC_HOST}/contest/${item.cont_title_slug}`} target="_blank">{item.cont_title}</a>
     </td>
 
     <td>
-      <a href={`${LC_HOST}/problems/${item.title_slug}`}>{item.question_id}. {item.title}</a>
+      <a href={`${LC_HOST}/problems/${item.title_slug}`} target="_blank">{item.question_id}. {item.title}</a>
     </td>
 
     <td>
@@ -154,7 +156,13 @@ export default function Zenk() {
   const [data, setData] = useState<ConstQuestion[]>([]);
   const [localStorageProgressData, setLocalStorageProgressData] = useState<ProgressData>({});
 
-  const [currentFilter, setCurrentFilter] = useState(filters[filters.length - 1]);
+  const [currentFilter, setCurrentFilter] = useState(() => {
+    const lastUsedFilterKey = canUseLocalStorage
+      ? localStorage.getItem(LC_RATING_ZEN_LAST_USED_FILTER_KEY) || ALL_FILTER_LABEL
+      : ALL_FILTER_LABEL;
+    return filters.find(filter => filter.label === lastUsedFilterKey) || filters.find(filter => filter.label === ALL_FILTER_LABEL) as Filter;
+  });
+
   const filteredData = useMemo(() => data.filter(currentFilter.fn), [data, currentFilter]);
 
   useEffect(() => {
@@ -183,6 +191,7 @@ export default function Zenk() {
   }, []);
 
   const handleFilterChange = useCallback((newFilter: Filter) => {
+    canUseLocalStorage && localStorage.setItem(LC_RATING_ZEN_LAST_USED_FILTER_KEY, newFilter.label);
     startTransition(() => {
       setCurrentFilter(newFilter);
     });
