@@ -1,0 +1,50 @@
+.zen-option-TODO {
+  color: #343a40; /* Soft black */
+}
+.zen-option-WORKING {
+  color: dodgerblue; /* Soft blue */
+}
+.zen-option-TOO_HARD {
+  color: #dc3545; /* Soft red */
+}
+.zen-option-REVIEW_NEEDED {
+  color: #fd7e14; /* Soft orange */
+}
+.zen-option-AC {
+  color: #28a745; /* Soft green */
+}
+
+
+.zen-container {
+  min-width: 60%;
+}
+
+.zen-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.zen-table-row {
+  td {
+    vertical-align: middle;
+  }
+
+  .zen-spinner-td {
+    text-align: center;
+  }
+}
+
+.zen-table-header {
+  .zen-table-header-no {
+    width: 100px;
+  }
+
+  .zen-table-header-question {
+    width: 400px;
+  }
+
+  .zen-table-header-progress {
+    width: 250px;
+  }
+}
