@@ -256,7 +256,7 @@ function ContestList() {
   const [solutions, setSolutions] = React.useState<Record<string, Solution>>({});
 
   React.useEffect(() => {
-    fetch("/lc-rating/solutions.json")
+    fetch("/lc-rating/solutions.json?t=" + (new Date().getTime()/100000).toFixed(0))
       .then((res) => res.json())
       .then((result: Solution[]) => {
         console.log(result);
