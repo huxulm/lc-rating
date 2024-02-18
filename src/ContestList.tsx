@@ -88,8 +88,9 @@ const problemColDef = (id: string) => {
       let c = COLORS.find((v) => difficulty >= v.l && difficulty <= v.r);
       let color = (c && c.c) || "#000000";
       let placement = `${difficulty}`;
+      let sol = info.row.original.QuerySolution?.(val[2]);
       return (
-        <>
+        <div>
           <OverlayTrigger
             trigger={["hover", "focus"]}
             key={placement}
@@ -108,7 +109,21 @@ const problemColDef = (id: string) => {
           <a href={link} onClick={onClick} style={{ color }}>
             {val[2]}.{val[0]}
           </a>
-        </>
+          {sol && <div className="fr-wrapper"><OverlayTrigger
+            trigger={["hover", "focus"]}
+            key={placement}
+            placement={"bottom"}
+            overlay={
+              <Popover id={`popover-positioned-${placement}`}>
+                <Popover.Body style={{ color, fontSize: "1.2rem" }}>
+                  {sol[0]}
+                </Popover.Body>
+              </Popover>
+            }
+          >
+            <a className="fr text-body" href={host + "/problems/" + sol[5] + "/solution/" + sol[1]}>题解</a>
+          </OverlayTrigger></div>}
+        </div>
       );
     },
     footer: (info) => info.column.id,
@@ -137,7 +152,6 @@ const columns = [
       const [ck, setCk] = React.useState<boolean>(
         mk === info.row.original.TitleSlug
       );
-      console.log(ck && mk);
       return (
         <div className={ck ? "contest row-selected" : "contest"}>
           <a href={link} onClick={onClick}>
@@ -232,7 +246,42 @@ function backToTop() {
   document.documentElement.scrollTop = 0;
 }
 
+// Solution Data Type
+type Solution = any[];
+
 function ContestList() {
+
+  // solutions
+  const [isPending, startTransition] = React.useTransition();
+  const [solutions, setSolutions] = React.useState<Record<string, Solution>>({});
+
+  React.useEffect(() => {
+    fetch("/lc-rating/solutions.json")
+      .then((res) => res.json())
+      .then((result: Solution[]) => {
+        console.log(result);
+        startTransition(() => {
+          let _solutions: any = {};
+          result.forEach(v => {
+            let key: string = v[3];
+            _solutions[key] = v; // question_id => question
+          });
+          setSolutions(_solutions);
+        });
+      });
+  }, []);
+
+  const querySolution = (id: any): any => {
+    return solutions[id];
+  }
+
+  const injectSolutionQuery = (data: Contest[]) => {
+    data.forEach(v => {
+      v.QuerySolution = querySolution;
+    });
+    return data;
+  }
+
   const sz = getSize() || "100";
   const [{ pageIndex, pageSize }, setPagination] =
     React.useState<PaginationState>({
@@ -270,7 +319,7 @@ function ContestList() {
   const [columnOrder, setColumnOrder] = React.useState<ColumnOrderState>([]);
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const table = useReactTable({
-    data: dataQuery.data?.rows ?? defaultData,
+    data: injectSolutionQuery(dataQuery.data?.rows ?? defaultData),
     columns,
     pageCount: dataQuery.data?.pageCount ?? -1,
     enableColumnResizing: true,
@@ -401,17 +450,15 @@ function ContestList() {
                         {...{
                           onMouseDown: header.getResizeHandler(),
                           onTouchStart: header.getResizeHandler(),
-                          className: `resizer ${
-                            header.column.getIsResizing() ? "isResizing" : ""
-                          }`,
+                          className: `resizer ${header.column.getIsResizing() ? "isResizing" : ""
+                            }`,
                           style: {
                             transform:
                               columnResizeMode === "onEnd" &&
-                              header.column.getIsResizing()
-                                ? `translateX(${
-                                    table.getState().columnSizingInfo
-                                      .deltaOffset
-                                  }px)`
+                                header.column.getIsResizing()
+                                ? `translateX(${table.getState().columnSizingInfo
+                                  .deltaOffset
+                                }px)`
                                 : "",
                           },
                         }}
@@ -564,11 +611,10 @@ function Filter({
           onChange={(value) =>
             column.setFilterValue((old: [number, number]) => [value, old?.[1]])
           }
-          placeholder={`Min ${
-            column.getFacetedMinMaxValues()?.[0]
+          placeholder={`Min ${column.getFacetedMinMaxValues()?.[0]
               ? `(${column.getFacetedMinMaxValues()?.[0]})`
               : ""
-          }`}
+            }`}
         />
         <DebouncedInput
           type="number"
@@ -578,11 +624,10 @@ function Filter({
           onChange={(value) =>
             column.setFilterValue((old: [number, number]) => [old?.[0], value])
           }
-          placeholder={`Max ${
-            column.getFacetedMinMaxValues()?.[1]
+          placeholder={`Max ${column.getFacetedMinMaxValues()?.[1]
               ? `(${column.getFacetedMinMaxValues()?.[1]})`
               : ""
-          }`}
+            }`}
         />
       </InputGroup>
     </div>

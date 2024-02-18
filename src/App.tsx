@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/esm/Navbar";
 import Container from "react-bootstrap/esm/Container";
 import Nav from "react-bootstrap/esm/Nav";
 import GithubProfile from "./components/gh";
-import Zen from"./Zen";
+import Zen from "./Zen";
 
 const ContestList = React.lazy(() => import("./ContestList"));
 
@@ -28,9 +28,12 @@ function Layout() {
     <div>
       <Navbar expand="lg" className="p-0 text-bg-light">
         <Container className="navbar fw-bold">
-          <Navbar.Brand className="navbar-brand nav-link">
+          <Nav.Link
+            href="/"
+            className="navbar-brand nav-link"
+          >
             力扣竞赛题目
-          </Navbar.Brand>
+          </Nav.Link>
           <Link className="nav-link px-lg-3" to="/">
             <button className="btn btn-secondary fw-bold fs-6 p-1">竞赛列表</button>
           </Link>
@@ -39,12 +42,13 @@ function Layout() {
               难度练习
             </button>
           </Link>
+          <span className="navbar-brand fs-6 fw-semibold">本页面所有题解来自 <a href="https://space.bilibili.com/206214/" className="fw-bold text-danger">bilibili@灵茶山艾府</a> 感谢！</span>
           <Navbar.Collapse className="justify-content-end">
             <Nav.Link
               href="https://github.com/huxulm/lc-rating"
               className="btn btn-outline-secondary p-1"
             >
-              <span className="me-1">Github</span>
+              <span className="me-1">&nbsp;问题反馈&nbsp;</span>
               <GithubProfile classname="" />
             </Nav.Link>
           </Navbar.Collapse>

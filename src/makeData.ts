@@ -17,6 +17,7 @@ export type Contest = {
   B_Rating: number;
   C_Rating: number;
   D_Rating: number;
+  QuerySolution?: (id: any) => any;
 };
 
 export function makeContests() {

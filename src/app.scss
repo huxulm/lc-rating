@@ -4,6 +4,10 @@ $table-striped-bg: white;
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap/scss/utilities";
 
+a {
+  color: black;
+  text-decoration: underline;
+}
 
 .btn-secondary {
   --bs-btn-active-bg: #e0e1e1;
@@ -12,13 +16,14 @@ $table-striped-bg: white;
 }
 
 .contest-table {
-  padding: 0;
+  padding: 0 3rem;
 }
 
 .cursor-pointer {
   cursor: pointer;
   text-align: center;
 }
+
 
 .right-side {
   position: fixed;
@@ -30,6 +35,17 @@ $table-striped-bg: white;
   z-index: 1000;
   transform: rotate(90deg);
   transform-origin: top left;
+}
+
+@include media-breakpoint-down(sm) {
+  .right-side {
+    position: inherit;
+    background: rgba(0, 0, 0, 0.01);
+    width: 100vw;
+    height: 2.5rem;
+    transform: rotate(0);
+    transform-origin: top left;    
+  }
 }
 
 .right-side::after {
@@ -76,6 +92,7 @@ td,
 .td {
   box-shadow: inset 0 0 0 1px lightgray;
   padding: 0.2rem;
+  overflow: hidden;
 }
 
 th,
@@ -96,6 +113,20 @@ td,
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  position: relative;
+  .fr-wrapper {
+    top: .5rem;
+    right: 0;
+    position: absolute;
+  }
+  .fr {
+    position: relative;
+    right: 0;
+    color: rgb(49, 200, 49);
+    font-weight: 900;
+    font-size: .5rem;
+    font-family: 'Courier New', Courier, monospace;
+  }
 }
 
 .resizer {
