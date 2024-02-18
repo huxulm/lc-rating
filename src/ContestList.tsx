@@ -88,7 +88,7 @@ const problemColDef = (id: string) => {
       let c = COLORS.find((v) => difficulty >= v.l && difficulty <= v.r);
       let color = (c && c.c) || "#000000";
       let placement = `${difficulty}`;
-      let sol = info.row.original.QuerySolution?.(val[2]);
+      let sol = info.row.original.QuerySolution?.(val[4]);
       return (
         <div>
           <OverlayTrigger
@@ -115,7 +115,7 @@ const problemColDef = (id: string) => {
             placement={"bottom"}
             overlay={
               <Popover id={`popover-positioned-${placement}`}>
-                <Popover.Body style={{ color, fontSize: "1.2rem" }}>
+                <Popover.Body style={{ color, fontSize: ".8rem" }}>
                   {sol[0]}
                 </Popover.Body>
               </Popover>
@@ -263,8 +263,8 @@ function ContestList() {
         startTransition(() => {
           let _solutions: any = {};
           result.forEach(v => {
-            let key: string = v[3];
-            _solutions[key] = v; // question_id => question
+            let key: string = v[6];
+            _solutions[key] = v; // title_slug_hash => question
           });
           setSolutions(_solutions);
         });

@@ -69,6 +69,10 @@ a {
   display: block;
 }
 
+table > thead {
+  z-index: 10;
+}
+
 table,
 .divTable {
   border: 1px solid lightgray;
@@ -116,7 +120,7 @@ td,
   position: relative;
   .fr-wrapper {
     top: .5rem;
-    right: 0;
+    right: 0.5rem;
     position: absolute;
   }
   .fr {
