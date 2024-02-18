@@ -115,7 +115,7 @@ const problemColDef = (id: string) => {
             placement={"bottom"}
             overlay={
               <Popover id={`popover-positioned-${placement}`}>
-                <Popover.Body style={{ color, fontSize: ".8rem" }}>
+                <Popover.Body style={{ color, fontSize: "1rem" }}>
                   {sol[0]}
                 </Popover.Body>
               </Popover>
