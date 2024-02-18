@@ -43,7 +43,7 @@ a {
     width: 100vw;
     height: 2.5rem;
     transform: rotate(0);
-    transform-origin: top left;    
+    transform-origin: top left;
   }
 }
 
@@ -68,7 +68,7 @@ a {
   display: block;
 }
 
-table > thead {
+table>thead {
   z-index: 10;
 }
 
@@ -117,11 +117,13 @@ td,
   white-space: nowrap;
   text-overflow: ellipsis;
   position: relative;
+
   .fr-wrapper {
     top: .5rem;
     right: 0.5rem;
     position: absolute;
   }
+
   .fr {
     position: relative;
     right: 0;
@@ -155,5 +157,48 @@ td,
 
   *:hover>.resizer {
     opacity: 1;
+  }
+}
+
+.search {
+  max-width: 50%;
+  margin: 1rem auto;
+  padding: 0 2rem;
+  li[class='search-input'] {
+    position: sticky;
+    top: 1rem;
+    background: white;
+    margin-bottom: 1rem;
+    input {
+      height: 100%;
+      width: 100%;
+      line-height: 100%;
+      font-size: 1.5rem;
+      padding: .5rem;
+      border-radius: 5px;
+      border-width: 1px;
+      &:focus,&:active {
+        border-width: 2px;
+        border-color: white;
+      }
+      &::before,&::after {
+        border: none;
+      }
+    }
+    .qtot {
+      position: absolute;
+      margin: 1rem 1rem 0.2rem 0;
+      right: 0;
+      top: 0;
+    }
+  }
+  li {
+    list-style: none;
+    padding: .2rem 0;
+    a {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 }
