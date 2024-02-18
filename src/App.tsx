@@ -33,7 +33,7 @@ function Layout() {
       <Navbar expand="lg" className="p-0 text-bg-light">
         <Container className="navbar fw-bold">
           <Nav.Link
-            href="/"
+            href="/lc-rating"
             className="navbar-brand nav-link"
           >
             力扣竞赛题目
