@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
@@ -8,6 +8,7 @@ import InputGroup from "react-bootstrap/InputGroup";
 import RatingCircle, { COLORS } from "./components/RatingCircle";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
+import Spinner from 'react-bootstrap/Spinner';
 
 import "./app.scss";
 import {
@@ -36,6 +37,7 @@ import { getMark, setMark, getSize, setSize } from "./store";
 
 import { useQuery } from "react-query";
 import { Contest, fetchData } from "./makeData";
+import { useSolutions } from "./hooks/useSolutions";
 
 const host = `https://leetcode.cn`;
 
@@ -89,6 +91,10 @@ const problemColDef = (id: string) => {
       let color = (c && c.c) || "#000000";
       let placement = `${difficulty}`;
       let sol = info.row.original.QuerySolution?.(val[4]);
+      const [display, setDisplay] = useState(true);
+      useEffect(() => {
+        setTimeout(() => setDisplay(false), 5000);
+      });
       return (
         <div>
           <OverlayTrigger
@@ -123,6 +129,7 @@ const problemColDef = (id: string) => {
           >
             <a className="fr text-body" href={host + "/problems/" + sol[5] + "/solution/" + sol[1]}>题解</a>
           </OverlayTrigger></div>}
+          {!sol && display && <div className="fr-wrapper zen-spinner-td"><Spinner animation="border" size="sm" role="status"/></div>}
         </div>
       );
     },
@@ -252,24 +259,7 @@ type Solution = any[];
 function ContestList() {
 
   // solutions
-  const [isPending, startTransition] = React.useTransition();
-  const [solutions, setSolutions] = React.useState<Record<string, Solution>>({});
-
-  React.useEffect(() => {
-    fetch("/lc-rating/solutions.json?t=" + (new Date().getTime()/100000).toFixed(0))
-      .then((res) => res.json())
-      .then((result: Solution[]) => {
-        // console.log(result);
-        startTransition(() => {
-          let _solutions: any = {};
-          result.forEach(v => {
-            let key: string = v[6];
-            _solutions[key] = v; // title_slug_hash => question
-          });
-          setSolutions(_solutions);
-        });
-      });
-  }, []);
+  const { solutions, isPending } = useSolutions("");
 
   const querySolution = (id: any): any => {
     return solutions[id];
