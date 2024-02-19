@@ -259,7 +259,7 @@ function ContestList() {
     fetch("/lc-rating/solutions.json?t=" + (new Date().getTime()/100000).toFixed(0))
       .then((res) => res.json())
       .then((result: Solution[]) => {
-        console.log(result);
+        // console.log(result);
         startTransition(() => {
           let _solutions: any = {};
           result.forEach(v => {

@@ -11,7 +11,6 @@ export function useSolutions(filter: any) {
         fetch("/lc-rating/solutions.json?t=" + (new Date().getTime() / 100000).toFixed(0))
             .then((res) => res.json())
             .then((result: Solution[]) => {
-                console.log(result);
                 startTransition(() => {
                     let _solutions: any = {};
                     result.forEach(v => {
