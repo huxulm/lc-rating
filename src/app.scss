@@ -204,8 +204,14 @@ td,
   .tag {
     cursor: pointer;
     background: $gray-100;
+    user-select: none;
     &:hover {
+      background: var(--bs-btn-active-bg)!important;
+    }
+    &.active {
       background: $orange-200!important;
+      transition: all ease-in-out 100ms;
+      font-weight: 600;
     }
   }
 
