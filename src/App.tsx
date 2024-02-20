@@ -48,7 +48,7 @@ function Layout() {
           </Link>
           <Link className="nav-link px-lg-3" to="/search">
             <button className="btn btn-secondary fw-bold fs-6 p-1">
-              搜索
+              灵神题解
             </button>
           </Link>
           <span className="navbar-brand fs-6 fw-semibold">本页面所有题解来自 <a href="https://space.bilibili.com/206214/" className="fw-bold text-danger">bilibili@灵茶山艾府</a> 感谢！</span>

@@ -1,7 +1,7 @@
 import { useSolutions } from "./hooks/useSolutions";
 import { useQuestionTags } from "./hooks/useQuestionTags";
 import { useTags } from "./hooks/useTags";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, ButtonGroup, Col, Container, Form, InputGroup, Row, Spinner } from "react-bootstrap";
 import "./app.scss";
 
@@ -32,32 +32,73 @@ export default function Search() {
 
     const renderTags = (tags: any[]) => {
         if (!tags) return
-        return <div className="d-flex flex-wrap" style={{ columnGap: ".5rem" }}>
+        return <div className="d-flex flex-wrap" style={{ gap: ".3rem" }}>
             {tags[1].map((t: any) => {
-                return <span className={`rounded p-1 fw-medium tag`}>{t}</span>
+                return <span className={`rounded fw-medium tag text-info active1 sm`}>{t}</span>
             })}
         </div>
     }
 
-    const filteredSolutions = Object.keys(solutions).filter((id) =>{
-        const tags = qtags[id]? (qtags[id][0] || []) : [];
+    const filteredSolutions = Object.keys(solutions).filter((id) => {
+        const tags = qtags[id] ? (qtags[id][0] || []) : [];
         if (Object.keys(selectedTags).filter(id => !!selectedTags[id]).length == 0 && tags.length == 0) { return true; }
         if (Object.keys(selectedTags).filter(id => !!selectedTags[id]).length == 0 || tags.filter((id: string) => true === selectedTags[id]).length > 0) { return true; }
         return false;
         // return true;
     })
+
+    function backToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    function scrollFunction(btn: any) {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    }
+
+    useEffect(() => {
+        window.onscroll = function () {
+            let btn = document.getElementById("btn-back-to-top");
+            scrollFunction(btn);
+        };
+    }, []);
+
     return (
         <Container className="search" data-bs-theme="dark">
-            <Row as="div" className="justify-content-center p-3">
-                <Row md={12} sm={12} lg={12} className="justify-content-center">
+            <Button
+                variant="primary"
+                id="btn-back-to-top"
+                style={{
+                    borderRadius: "50%",
+                    position: "fixed",
+                    zIndex: 10000,
+                    bottom: "50px",
+                    right: "5rem",
+                    width: "2.5rem",
+                    height: "2.5rem",
+                    fontSize: "1.5rem",
+                    padding: "0",
+                }}
+                onClick={() => {
+                    backToTop();
+                }}
+            >
+                ↑
+            </Button>
+            <Row as="div" className="justify-content-center p-3 position-sticky top-0 z-3 bg-white" style={{ zIndex: 1000 }}>
+                <Row md={12} sm={12} lg={12} className="justify-content-center" style={{gap: '.5rem'}}>
                     <Col md={5} sm={12} lg={5} className="position-relative">
                         <input className="form-control fw-light" placeholder="题目 或 题解标题（模糊匹配）" onChange={onSearchTextChange}></input>
-                        <span className="qtot">总数：{Object.keys(solutions).length}</span>
+                        <span className="qtot">总数：{filteredSolutions.length}</span>
                     </Col>
                     <Col md={2} sm={12} lg={2}>
                         <ButtonGroup className="w-100">
-                            <Button variant="outline-secondary" size="sm" onClick={onChangeLang}>{`${lang === 'en' ? "中文" : "英文"}标签`}</Button>
-                            <Button variant="outline-secondary" onClick={onResetTags}>重置</Button>
+                            <Button className="fw-medium" variant="outline-secondary" size="sm" onClick={onChangeLang}>{`${lang === 'en' ? "中文" : "英文"}标签`}</Button>
+                            <Button className="fw-medium" variant="outline-secondary" onClick={onResetTags}>重置</Button>
                         </ButtonGroup>
                     </Col>
                 </Row>
@@ -77,14 +118,16 @@ export default function Search() {
             </Row>
             <Row className="justify-content-center">
                 <Col as="ul" md={8} sm={12} lg={10}>
-                    {solLoading && <Spinner animation="border"></Spinner>}
+                    {solLoading && <Row className="justify-content-center">
+                        <Spinner animation="border"></Spinner>
+                    </Row>}
                     <table className="search-table">
-                        <thead>
+                        <thead className="table-head">
                             <tr className="table-row">
-                                <th>编号</th>
-                                <th className="text-left">题目</th>
-                                <th>标签</th>
-                                <th>题解</th>
+                                <th className="d-flex align-items-center">编号</th>
+                                <th className="d-flex align-items-center text-left">题目</th>
+                                <th className="d-flex align-items-center">标签</th>
+                                <th className="d-flex align-items-center text-center">题解</th>
                             </tr>
                         </thead>
                         <tbody className="table-body">
@@ -92,16 +135,7 @@ export default function Search() {
                                 let a = solutions[ia]
                                 let b = solutions[ib]
                                 return a[2] < b[2] ? 1 : (a[2] == b[2] ? 0 : -1);
-                            })/* .filter((id) =>{
-                                const tags = qtags[id]? (qtags[id][0] || []) : [];
-                                if (tags.length == 0 || Object.keys(selectedTags).filter(id => !!selectedTags[id]).length == 0) { return true; }
-                                for (let i = 0; i < tags.length; i++) {
-                                    if(!selectedTags[tags[i]]) {
-                                        return false;
-                                    }
-                                }
-                                return true;
-                            }) */.map((id, i) => {
+                            }).map((id, i) => {
                                 const sol = solutions[id];
                                 let link = "";
                                 let link1 = "";
@@ -112,12 +146,12 @@ export default function Search() {
                                 let _tags = qtags["" + sol[6]];
                                 return (
                                     <tr className="table-row bg-color">
-                                        <td>{i + 1}</td>
-                                        <td className="fw-bold text-left">
+                                        <td className="d-flex align-items-center">{i + 1}</td>
+                                        <td className="fw-medium text-left d-flex align-items-center">
                                             <a href={link1}>{`${sol[3]}. ${sol[4]}`}</a>
                                         </td>
-                                        <td>{_tags && renderTags([sol[6], _tags[lang === "en" ? 0 : 1] || []])}</td>
-                                        <td>
+                                        <td className="d-flex align-items-center">{_tags && renderTags([sol[6], _tags[lang === "en" ? 0 : 1] || []])}</td>
+                                        <td className="d-flex align-items-center">
                                             <a href={link}>
                                                 <span className="text-primary">{sol[0]}</span>
                                             </a>
