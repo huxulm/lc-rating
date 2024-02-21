@@ -1,5 +1,3 @@
-import data from "./contest.json";
-
 export type Question = {
   title: string;
   slug: string;
@@ -20,7 +18,7 @@ export type Contest = {
   QuerySolution?: (id: any) => any;
 };
 
-export function makeContests() {
+export function mapContests(data: any[]) {
   return data.map((d: any): Contest => {
     let questions: any[] = d.questions && d.questions.length === 4? d.questions : new Array(4).fill({title: ""})
     return {
@@ -38,22 +36,4 @@ export function makeContests() {
       D_Rating: questions[3].rating,
     };
   });
-}
-
-const arr = makeContests();
-
-export async function fetchData(options: {
-  pageIndex: number
-  pageSize: number
-}) {
-  // Simulate some network latency
-  // await new Promise(r => setTimeout(r, 500))
-
-  return {
-    rows: arr.slice(
-      options.pageIndex * options.pageSize,
-      (options.pageIndex + 1) * options.pageSize
-    ),
-    pageCount: Math.ceil(data.length / options.pageSize),
-  }
 }

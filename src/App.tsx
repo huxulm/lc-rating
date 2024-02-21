@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 // import ContestList from "./ContestList";
 import Navbar from "react-bootstrap/esm/Navbar";
@@ -9,7 +8,7 @@ import GithubProfile from "./components/gh";
 import Zen from "./Zen";
 import Search from "./Search";
 
-const ContestList = React.lazy(() => import("./ContestList"));
+import ContestList from "./ContestList";
 
 export default function App() {
   return (
@@ -17,7 +16,7 @@ export default function App() {
       <Routes>
         <Route path="" element={<Layout />}>
           <Route index element={<ContestList />} />
-          <Route path="/'" index element={<ContestList />} />
+          <Route path="/" index element={<ContestList />} />
           <Route path="zen" index element={<Zen />} />
           <Route path="search" index element={<Search />} />
           <Route path="*" element={<NoMatch />} />

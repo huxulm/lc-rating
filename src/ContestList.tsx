@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
@@ -36,8 +36,9 @@ import { rankItem } from "@tanstack/match-sorter-utils";
 import { getMark, setMark, getSize, setSize } from "./store";
 
 import { useQuery } from "react-query";
-import { Contest, fetchData } from "./makeData";
+import { Contest } from "./makeData";
 import { useSolutions } from "./hooks/useSolutions";
+import { useContests } from "./hooks/useContests";
 
 const host = `https://leetcode.cn`;
 
@@ -129,7 +130,7 @@ const problemColDef = (id: string) => {
           >
             <a className="fr text-body" href={host + "/problems/" + sol[5] + "/solution/" + sol[1]}>题解</a>
           </OverlayTrigger></div>}
-          {!sol && display && <div className="fr-wrapper zen-spinner-td"><Spinner animation="border" size="sm" role="status"/></div>}
+          {!sol && display && <div className="fr-wrapper zen-spinner-td"><Spinner animation="border" size="sm" role="status" /></div>}
         </div>
       );
     },
@@ -261,6 +262,9 @@ function ContestList() {
   // solutions
   const { solutions, isPending } = useSolutions("");
 
+  // contests
+  const { contests, isPending: loading } = useContests();
+
   const querySolution = (id: any): any => {
     return solutions[id];
   }
@@ -292,9 +296,24 @@ function ContestList() {
 
   const dataQuery = useQuery(
     ["data", fetchDataOptions],
-    () => fetchData(fetchDataOptions),
+    () => {
+      return {
+        rows: contests.slice(
+          pageIndex * pageSize,
+          (pageIndex + 1) * pageSize
+        ),
+        pageCount: Math.ceil(contests.length / pageSize),
+      }
+    },
     { keepPreviousData: true }
   );
+
+  const [rows, pageCount] = useMemo(() => {
+    return [contests.slice(
+      pageIndex * pageSize,
+      (pageIndex + 1) * pageSize
+    ), Math.ceil(contests.length / pageSize)]
+  }, [pageIndex, pageSize, contests])
 
   const defaultData = React.useMemo(() => [], []);
 
@@ -309,9 +328,10 @@ function ContestList() {
   const [columnOrder, setColumnOrder] = React.useState<ColumnOrderState>([]);
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const table = useReactTable({
-    data: injectSolutionQuery(dataQuery.data?.rows ?? defaultData),
+    // data: injectSolutionQuery(dataQuery.data?.rows ?? defaultData),
+    data: injectSolutionQuery(rows),
     columns,
-    pageCount: dataQuery.data?.pageCount ?? -1,
+    pageCount: pageCount,
     enableColumnResizing: true,
     columnResizeMode: "onChange",
     state: {
@@ -460,7 +480,7 @@ function ContestList() {
             ))}
           </thead>
           <tbody>
-            {table.getRowModel().rows.map((row) => {
+            {!(isPending || loading) && table.getRowModel().rows.map((row) => {
               return (
                 <tr
                   key={row.id}
@@ -488,6 +508,10 @@ function ContestList() {
             })}
           </tbody>
         </Table>
+        {(isPending || loading) &&
+          <div className="w-100 p-3 border-0 text-center">
+              <Spinner />
+          </div>}
       </div>
       <div className="d-flex flex-row justify-content-center right-side">
         <Pagination className="me-2 mb-0">
@@ -602,8 +626,8 @@ function Filter({
             column.setFilterValue((old: [number, number]) => [value, old?.[1]])
           }
           placeholder={`Min ${column.getFacetedMinMaxValues()?.[0]
-              ? `(${column.getFacetedMinMaxValues()?.[0]})`
-              : ""
+            ? `(${column.getFacetedMinMaxValues()?.[0]})`
+            : ""
             }`}
         />
         <DebouncedInput
@@ -615,8 +639,8 @@ function Filter({
             column.setFilterValue((old: [number, number]) => [old?.[0], value])
           }
           placeholder={`Max ${column.getFacetedMinMaxValues()?.[1]
-              ? `(${column.getFacetedMinMaxValues()?.[1]})`
-              : ""
+            ? `(${column.getFacetedMinMaxValues()?.[1]})`
+            : ""
             }`}
         />
       </InputGroup>

@@ -2,7 +2,12 @@ import { useSolutions } from "./hooks/useSolutions";
 import { useQuestionTags } from "./hooks/useQuestionTags";
 import { useTags } from "./hooks/useTags";
 import { useEffect, useState } from "react";
-import { Button, ButtonGroup, Col, Container, Form, InputGroup, Row, Spinner } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Spinner from "react-bootstrap/Spinner";
 import "./app.scss";
 
 const LC_HOST = `https://leetcode.cn`;
