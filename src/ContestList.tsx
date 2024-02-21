@@ -480,7 +480,7 @@ function ContestList() {
             ))}
           </thead>
           <tbody>
-            {!(isPending || loading) && table.getRowModel().rows.map((row) => {
+            {!loading && table.getRowModel().rows.map((row) => {
               return (
                 <tr
                   key={row.id}
@@ -508,7 +508,7 @@ function ContestList() {
             })}
           </tbody>
         </Table>
-        {(isPending || loading) &&
+        {loading &&
           <div className="w-100 p-3 border-0 text-center">
               <Spinner />
           </div>}
