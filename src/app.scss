@@ -159,6 +159,21 @@ td,
   }
 }
 
+.ans {
+  color: black!important;
+  font-size: 1rem!important;
+  font-weight: normal;
+  text-decoration: underline;
+  text-decoration-color: green;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+.link {
+  text-decoration: underline!important;
+  text-underline-offset: 3px;
+}
+
 .search {
   margin: 1rem auto;
   padding: 0 2rem;

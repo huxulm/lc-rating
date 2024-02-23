@@ -50,7 +50,7 @@ function Layout() {
               灵神题解
             </button>
           </Link>
-          <span className="navbar-brand fs-6 fw-semibold">本页面所有题解来自 <a href="https://space.bilibili.com/206214/" className="fw-bold text-danger">bilibili@灵茶山艾府</a> 感谢！</span>
+          <span className="navbar-brand fs-6 fw-semibold">本页面所有题解来自 <a href="https://space.bilibili.com/206214/" className="link fw-bold text-danger">bilibili@灵茶山艾府</a> 感谢！</span>
           <Navbar.Collapse className="justify-content-end">
             <Nav.Link
               href="https://github.com/huxulm/lc-rating"
