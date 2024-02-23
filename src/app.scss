@@ -165,8 +165,11 @@ td,
   font-weight: normal;
   text-decoration: underline;
   text-decoration-color: green;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+  &:hover {
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+  }
 }
 
 .link {
