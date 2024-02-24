@@ -128,7 +128,7 @@ const problemColDef = (id: string) => {
               </Popover>
             }
           >
-            <a className="fr text-body" href={host + "/problems/" + sol[5] + "/solution/" + sol[1]}>题解</a>
+            <a className="fr ans" href={host + "/problems/" + sol[5] + "/solution/" + sol[1]}>题解</a>
           </OverlayTrigger></div>}
           {!sol && display && <div className="fr-wrapper zen-spinner-td"><Spinner animation="border" size="sm" role="status" /></div>}
         </div>

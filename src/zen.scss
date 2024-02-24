@@ -1,17 +1,26 @@
 .zen-option-TODO {
-  color: #343a40; /* Soft black */
+  color: #343a40;
+  /* Soft black */
 }
+
 .zen-option-WORKING {
-  color: dodgerblue; /* Soft blue */
+  color: dodgerblue;
+  /* Soft blue */
 }
+
 .zen-option-TOO_HARD {
-  color: #dc3545; /* Soft red */
+  color: #dc3545;
+  /* Soft red */
 }
+
 .zen-option-REVIEW_NEEDED {
-  color: #fd7e14; /* Soft orange */
+  color: #fd7e14;
+  /* Soft orange */
 }
+
 .zen-option-AC {
-  color: #28a745; /* Soft green */
+  color: #28a745;
+  /* Soft green */
 }
 
 
@@ -32,6 +41,23 @@
 
   .zen-spinner-td {
     text-align: center;
+  }
+
+  .zen-ans {
+    float: right;
+
+    a {
+      color: black!important;
+      font-size: 1rem!important;
+      font-weight: normal;
+      text-decoration: underline;
+      text-decoration-color: green;
+      text-decoration-thickness: 1px;
+      &:hover {
+        text-underline-offset: 5px;
+        text-decoration-thickness: 2px;
+      }
+    }
   }
 }
 
