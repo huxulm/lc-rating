@@ -12,18 +12,10 @@ export function useSolutions(filter: any) {
             .then((res) => res.json())
             .then((result: Solutions) => {
                 startTransition(() => {
-                    let _solutions: any = {};
-                    Object.keys(result).forEach(id => {
-                        let v = result[id];
-                        let key: string = v[6];
-                        if (filter === "" || v[0].indexOf(filter) != -1 || v[4].indexOf(filter) != -1) {
-                            _solutions[key] = v; // title_slug_hash => question
-                        }
-                    });
-                    setSolutions(_solutions);
+                    setSolutions(result);
                 });
             });
     }, [filter]);
 
-    return {solutions, isPending};
+    return { solutions, isPending };
 }
