@@ -12,7 +12,9 @@ export function useTags() {
             .then((res) => res.json())
             .then((result: Tags) => {
                 startTransition(() => {
-                    setTags(result);
+                    setTags(result.sort(function(t1, t2) {
+                        return t1[2].localeCompare(t2[2]);
+                    }));
                 });
             });
     }, []);

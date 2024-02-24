@@ -1,7 +1,7 @@
 import { useSolutions } from "./hooks/useSolutions";
 import { useQuestionTags } from "./hooks/useQuestionTags";
 import { useTags } from "./hooks/useTags";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Col from "react-bootstrap/Col";
@@ -44,13 +44,13 @@ export default function Search() {
         </div>
     }
 
-    const filteredSolutions = Object.keys(solutions).filter((id) => {
+    const filteredSolutions = useMemo(() => Object.keys(solutions).filter((id) => {
         const tags = qtags[id] ? (qtags[id][0] || []) : [];
         if (Object.keys(selectedTags).filter(id => !!selectedTags[id]).length == 0 && tags.length == 0) { return true; }
         if (Object.keys(selectedTags).filter(id => !!selectedTags[id]).length == 0 || tags.filter((id: string) => true === selectedTags[id]).length > 0) { return true; }
         return false;
         // return true;
-    })
+    }), [selectedTags, solLoading]);
 
     function backToTop() {
         document.body.scrollTop = 0;
@@ -95,7 +95,7 @@ export default function Search() {
                 ↑
             </Button>
             <Row as="div" className="justify-content-center p-3 position-sticky top-0 z-3 bg-white" style={{ zIndex: 1000 }}>
-                <Row md={12} sm={12} lg={12} className="justify-content-center" style={{gap: '.5rem'}}>
+                <Row md={12} sm={12} lg={12} className="justify-content-center" style={{ gap: '.5rem' }}>
                     <Col md={5} sm={12} lg={5} className="position-relative">
                         <input className="form-control fw-light" placeholder="题目 或 题解标题（模糊匹配）" onChange={onSearchTextChange}></input>
                         <span className="qtot">总数：{filteredSolutions.length}</span>
