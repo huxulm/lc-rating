@@ -32,7 +32,7 @@ export default function Search() {
             }
         });
         return result;
-    }, [filter]);
+    }, [filter, _solutions]);
 
     const [lang, setLang] = useState("zh");
     const onChangeLang = () => {
@@ -63,7 +63,7 @@ export default function Search() {
         if (Object.keys(selectedTags).filter(id => !!selectedTags[id]).length == 0 || tags.filter((id: string) => true === selectedTags[id]).length > 0) { return true; }
         return false;
         // return true;
-    }), [selectedTags, solLoading, solutions]);
+    }), [selectedTags, solutions, solLoading]);
 
     function backToTop() {
         document.body.scrollTop = 0;
