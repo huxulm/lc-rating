@@ -5,4 +5,9 @@
   <img alt="GitHub package.json version (branch)" src="https://img.shields.io/github/package-json/v/huxulm/lc-rating/main?label=version&labelColor=blue">
   <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/huxulm/lc-rating/workflow.yml">
 </p>
-Building with: [vitejs](https://vitejs.dev/)
+ 
+Building with: **[ViteJS](https://vitejs.dev/)**
+
+## 数据来源
+- 基础 - 【[leetcode.cn](https://leetcode.cn/)】
+- 题目难度 - 【[leetcode_problem_rating](https://raw.githubusercontent.com/zerotrac/leetcode_problem_rating/main/data.json)】
