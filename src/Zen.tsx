@@ -49,7 +49,7 @@ const createRatingFilter = (min: number, max?: number) => (r: ConstQuestion) =>
   max === undefined ? r.rating >= min : r.rating >= min && r.rating < max;
 const ALL_FILTER_LABEL = "< ALL >";
 const filters: Filter[] = [
-  { label: "<=1200", fn: createRatingFilter(0, 1200) },
+  { label: "<=1200", fn: createRatingFilter(1, 1200) }, // starting from 1 to exclude unrated questions
   { label: "1200 - 1400", fn: createRatingFilter(1200, 1400) },
   { label: "1400 - 1600", fn: createRatingFilter(1400, 1600) },
   { label: "1600 - 1900", fn: createRatingFilter(1600, 1900) },
