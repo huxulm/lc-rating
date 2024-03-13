@@ -56,7 +56,7 @@ function Layout() {
               href="https://github.com/huxulm/lc-rating"
               className="btn btn-outline-secondary p-1"
             >
-              <span className="me-1">&nbsp;问题反馈&nbsp;</span>
+              <span className="me-1">&nbsp;源码&nbsp;</span>
               <GithubProfile classname="" />
             </Nav.Link>
           </Navbar.Collapse>

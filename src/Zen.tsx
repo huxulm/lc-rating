@@ -56,7 +56,7 @@ const filters: Filter[] = [
   { label: "1900 - 2100", fn: createRatingFilter(1900, 2100) },
   { label: "2100 - 2400", fn: createRatingFilter(2100, 2400) },
   { label: ">=2400", fn: createRatingFilter(2400) },
-  { label: ALL_FILTER_LABEL, fn: (_: ConstQuestion) => true },
+  { label: ALL_FILTER_LABEL, fn: createRatingFilter(1) },
 ];
 // Progress Related
 type ProgressData = Record<string, string>;
