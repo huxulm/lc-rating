@@ -1,0 +1,26 @@
+$link-decoration: none;
+$table-striped-bg: white;
+
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/utilities";
+
+@include media-breakpoint-down(md) {
+    .list {
+    }
+}
+.tabs {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    list-style: none;
+    padding-inline: 0;
+
+    .tab {
+        border-bottom: 2px solid lightcoral;
+        border-radius: 0;
+    }
+
+    .tab.selected {
+        background: lightcoral;
+    }
+}
