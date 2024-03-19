@@ -146,7 +146,7 @@ const TableRow = React.memo(
           </a>
           {link && (
             <span className="zen-ans">
-              <a href={link}>题解</a>
+              <a href={link}>🎈</a>
             </span>
           )}
         </td>
