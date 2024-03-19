@@ -48,14 +48,11 @@
 
     a {
       color: black!important;
-      font-size: 1rem!important;
+      font-size: 1.5rem!important;
       font-weight: normal;
-      text-decoration: underline;
-      text-decoration-color: green;
-      text-decoration-thickness: 1px;
+      text-decoration: none;
       &:hover {
-        text-underline-offset: 5px;
-        text-decoration-thickness: 2px;
+        transform: scale(1.2);
       }
     }
   }
