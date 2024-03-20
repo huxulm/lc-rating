@@ -36,6 +36,7 @@ type ConstQuestion = {
   title: string;
   title_slug: string;
   question_id: string;
+  paid_only: boolean;
   rating: number;
   _hash: number;
 };
@@ -141,6 +142,7 @@ const TableRow = React.memo(
         </td>
 
         <td>
+          {!!item.paid_only && <span>👑</span>}
           <a href={`${LC_HOST}/problems/${item.title_slug}`} target="_blank">
             {item.question_id}. {item.title}
           </a>
