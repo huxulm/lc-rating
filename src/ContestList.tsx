@@ -315,8 +315,6 @@ function ContestList() {
     ), Math.ceil(contests.length / pageSize)]
   }, [pageIndex, pageSize, contests])
 
-  const defaultData = React.useMemo(() => [], []);
-
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   );

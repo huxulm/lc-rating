@@ -9,6 +9,17 @@ export const COLORS = [
   { l: 2100, r: 2400, c: `#F09235` },
   { l: 2400, r: 3600, c: `#EA3323` },
 ];
+
+export const ColorRating = React.memo(({rating, ...props}: {rating: number, children: any}) => {
+  const { children } = props;
+  let c = COLORS.find((v) => rating >= v.l && rating < v.r);
+  const color = c && c.c;
+  return <span {...props} style={{
+    color: `${color}`}}>
+      {children}
+  </span>
+})
+
 const RatingCircle = React.forwardRef<any, any>(
   ({ as, bsPrefix, variant, size, active, className, ...props }, ref) => {
     const { difficulty = 0 } = props;
