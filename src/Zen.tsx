@@ -429,14 +429,14 @@ const ZenTableComp = React.memo(
           cell: (info) => {
             const item = info.row.original;
             return (
-              <>
+              <div className="d-flex justify-content-between align-items-center p-1">
                 <a
                   href={`${LC_HOST}/contest/${item.cont_title_slug}`}
                   target="_blank"
                 >
                   {item.cont_title}
                 </a>
-              </>
+              </div>
             );
           },
         },
@@ -581,7 +581,7 @@ const ZenTable = React.memo(
     const table = useReactTable({
       columns,
       data,
-      debugTable: true,
+      debugTable: false,
       columnResizeDirection,
       columnResizeMode,
       getCoreRowModel: getCoreRowModel(),
@@ -650,12 +650,12 @@ const ZenTable = React.memo(
               table.setPageSize(Number(e));
             }}
           >
-            <Dropdown.Toggle id="dropdown">
+            <Dropdown.Toggle key="dropdown">
               Page size {table.getState().pagination.pageSize}
             </Dropdown.Toggle>
-            <Dropdown.Menu className="super-colors">
-              {[10, 20, 30, 50, 100].map((pageSize) => (
-                <Dropdown.Item eventKey={pageSize}>{pageSize}</Dropdown.Item>
+            <Dropdown.Menu key="menu" className="super-colors">
+              {[10, 20, 30, 50, 100].map((pageSize, idx) => (
+                <Dropdown.Item key={`opt-${idx}`} eventKey={pageSize}>{pageSize}</Dropdown.Item>
               ))}
             </Dropdown.Menu>
           </Dropdown>
@@ -677,8 +677,8 @@ const ZenTable = React.memo(
           }}
         >
           <thead>
-            {table.getHeaderGroups().map((headerGroup) => (
-              <tr key={headerGroup.id}>
+            {table.getHeaderGroups().map((headerGroup, idx) => (
+              <tr key={headerGroup.id + idx}>
                 {headerGroup.headers.map((header) => {
                   return (
                     <th
@@ -792,12 +792,12 @@ const ZenTable = React.memo(
               table.setPageSize(Number(e));
             }}
           >
-            <Dropdown.Toggle id="dropdown">
+            <Dropdown.Toggle key="dropdown">
               Page size {table.getState().pagination.pageSize}
             </Dropdown.Toggle>
-            <Dropdown.Menu className="super-colors">
-              {[10, 20, 30, 50, 100].map((pageSize) => (
-                <Dropdown.Item eventKey={pageSize}>{pageSize}</Dropdown.Item>
+            <Dropdown.Menu key={"menu"} className="super-colors">
+              {[10, 20, 30, 50, 100].map((pageSize, idx) => (
+                <Dropdown.Item key={`opt-${idx}`} eventKey={pageSize}>{pageSize}</Dropdown.Item>
               ))}
             </Dropdown.Menu>
           </Dropdown>

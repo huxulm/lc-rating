@@ -36,8 +36,13 @@
 }
 
 .zen-table-row {
+  :hover {
+    cursor: pointer;
+  }
   td {
     vertical-align: middle;
+    text-align: center;
+    padding: 0.25rem!important;
   }
 
   .zen-spinner-td {
