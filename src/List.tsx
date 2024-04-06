@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import List from "./components/List";
 import "./list.scss";
 import { Container, Row } from "react-bootstrap";
+import ProblemCategory, { DP } from "./components/ProblemCatetory";
 
 const tabs = ['😀滑动窗口', '😆二分算法', , "😊单调栈", "😉网格图", '😚位运算', "😜图论算法", "动态规划"]
 const contents = [
@@ -1254,17 +1255,18 @@ const contents = [
 </div></div>`
 ]
 export default function () {
-    const [selected, setSelected] = useState(0)
+    const [selected, setSelected] = useState(7)
     return <Container className="list">
         <div className="justify-content-center p-3 bg-white">
-            <ul className="tabs">
+            <ProblemCategory title="DP" data={DP}/>
+{/*             <ul className="tabs">
                 {tabs.map((v, i) => {
                     return <li className={`btn tab ${selected === i ? "selected" : ""}`} onClick={() => {
                         setSelected(i);
                     }}>{v}</li>
                 })}
             </ul>
-            <List className="w-100" content={contents[selected]}></List>
+            <List className="w-100" content={contents[selected]}></List> */}
         </div>
     </Container >
 }

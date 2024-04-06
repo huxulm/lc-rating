@@ -1,0 +1,39 @@
+.pb-container {
+    background: rgb(58, 58, 59);
+    gap: 2rem;
+    .summary {
+        background: white;
+    }
+    .level-2,.level-4 {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .leaf {
+        background: rgb(90, 88, 88);
+        .list {
+            background: rgb(255, 229, 184);
+            list-style: none;
+            gap: 1rem;
+            &.col2 {
+                columns: 2;
+                column-rule-width: 5px;
+                column-rule-color: rgb(107, 107, 107);
+                column-gap: 1cm;
+                column-rule-style: solid;
+            }
+        }
+        a {
+            color: rgb(0, 0, 0);
+            text-decoration: underline;
+            text-underline-offset: 0.25rem;
+        }
+        li {
+            width: 100%;
+        }
+
+    }
+    border-radius: 15px;
+    .title {
+        color: aliceblue;
+    }
+}
