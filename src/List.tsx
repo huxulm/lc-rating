@@ -1257,7 +1257,7 @@ const contents = [
 export default function () {
     const [selected, setSelected] = useState(7)
     return <Container className="list">
-        <div className="justify-content-center p-3 bg-white">
+        <div className="justify-content-center bg-white">
             <ProblemCategory title="DP" data={DP}/>
 {/*             <ul className="tabs">
                 {tabs.map((v, i) => {

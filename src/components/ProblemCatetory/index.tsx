@@ -26,7 +26,7 @@ export const DP = [
         sort: 0,
         child: [
             {
-                title: "1 入门",
+                title: "一、入门",
                 sort: 0,
                 child: [
                     {
@@ -117,7 +117,7 @@ export const DP = [
                 ],
             },
             {
-                title: "2 网格图",
+                title: "二、网格图",
                 sort: 1,
                 child: [
                     {
@@ -155,7 +155,7 @@ export const DP = [
                 ]
             },
             {
-                title: "3 背包",
+                title: "三、 背包",
                 sort: 2,
                 child: [
                     {
@@ -214,7 +214,7 @@ export const DP = [
                 ]
             },
             {
-                title: "4. 经典线性 DP",
+                title: "四、经典线性 DP",
                 sort: 3,
                 child: [
                     {
@@ -257,7 +257,7 @@ export const DP = [
                 ]
             },
             {
-                title: "5. 状态机 DP",
+                title: "五. 状态机 DP",
                 sort: 3,
                 isLeaf: false,
                 child: [
@@ -301,7 +301,7 @@ export const DP = [
                 ]
             },
             {
-                title: "6. 划分型 DP",
+                title: "六. 划分型 DP",
                 child: [
                     {
                         title: "6.1 判定能否划分",
@@ -335,7 +335,7 @@ export const DP = [
                     },
                     {
                         title: "6.3 约束划分个数",
-                        summary: `<p>将数组分成（恰好/至多）k 个连续子数组，计算与这些子数组有关的最优值。一般定义 f[i][j] 表示将长为 j 的前缀 a[:j] 分成 i 个连续子数组所得到的最优解。枚举最后一个子数组的左端点 L, 从 f[i−1][L] 转移到 f[i][j]，并考虑 a[L:j] 对最优解的影响。`,
+                        summary: `<p>将数组分成（恰好/至多）k 个连续子数组，计算与这些子数组有关的最优值。</p><p>一般定义 f[i][j] 表示将长为 j 的前缀 a[:j] 分成 i 个连续子数组所得到的最优解。</p><p>枚举最后一个子数组的左端点 L, 从 f[i−1][L] 转移到 f[i][j]，并考虑 a[L:j] 对最优解的影响。</p>`,
                         isLeaf: true,
                         child: [
                             { title: "410. 分割数组的最大值", src: "https://leetcode.cn/problems/split-array-largest-sum/" },
@@ -530,7 +530,7 @@ export const DP = [
 
 function ProblemCategory({ title, summary, data, className = "", level = 0 }: ProblemCategoryProps) {
     return <div className={`pb-container p-2 level-${level}` + className}>
-        {<h3 className="title">{title}</h3>}
+        {<h3 className="title p-2">{title}</h3>}
         {summary && <p className="p-2 rounded summary" dangerouslySetInnerHTML={{__html: summary}}></p>}
         <div className={`level-${level + 1}`}>
             {data && data.map((item) => {

@@ -2,11 +2,21 @@
     background: rgb(58, 58, 59);
     gap: 2rem;
     .summary {
-        background: white;
+        background: rgb(198, 225, 248);
+        font-weight: 800;
+    }
+    &.level-0 {
+        border-radius: 0;
+        background: transparent;
+        & > .title {
+            color: black!important;
+        }
     }
     .level-2,.level-4 {
         display: flex;
         flex-flow: row wrap;
+        gap: 1rem;
+        background: transparent;
     }
     .leaf {
         background: rgb(90, 88, 88);
@@ -14,6 +24,7 @@
             background: rgb(255, 229, 184);
             list-style: none;
             gap: 1rem;
+            max-width: 800px;
             &.col2 {
                 columns: 2;
                 column-rule-width: 5px;
