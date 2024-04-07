@@ -8,7 +8,6 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Spinner from "react-bootstrap/Spinner";
-import "./app.scss";
 
 const LC_HOST = `https://leetcode.cn`;
 

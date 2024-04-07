@@ -1,0 +1,22 @@
+// app styles
+@import "./common";
+@import "./search";
+@import "./zen";
+@import "./search";
+@import "./list";
+
+// components
+@import "../components/ProblemCatetory/_index";
+
+// color mode
+@include color-mode(dark, false) {
+    .app {
+      background: black;
+    }
+}
+  
+@include color-mode(light, false) {
+    .app {
+        background: white;
+    }
+}

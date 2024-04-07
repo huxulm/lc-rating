@@ -1,21 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.scss';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
 import { HashRouter } from "react-router-dom";
-import { QueryClient, QueryClientProvider } from 'react-query'
-import reportWebVitals from './reportWebVitals';
+import { QueryClient, QueryClientProvider } from "react-query";
+
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { ThemeProvider } from "./hooks/useTheme";
 
 const client = new QueryClient();
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <QueryClientProvider client={client}>
       <HashRouter>
-        <App />
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
       </HashRouter>
     </QueryClientProvider>
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
 
 reportWebVitals();

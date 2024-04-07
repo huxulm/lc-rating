@@ -1,0 +1,10 @@
+// variable overrides
+$primary: rgb(160, 201, 255);
+$link-decoration: none;
+$color-mode-type: data;
+
+@import "bootstrap/scss/bootstrap";
+// customize
+.btn-secondary {
+    --bs-btn-active-bg: #e0e1e1;
+}

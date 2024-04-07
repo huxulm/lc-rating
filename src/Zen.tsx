@@ -1,7 +1,6 @@
 // React imports
 import React, {
   useCallback,
-  useEffect,
   useMemo,
   useState,
   useTransition,
@@ -42,10 +41,6 @@ import { useQuestionTags } from "./hooks/useQuestionTags";
 import { useZen } from "./hooks/useZen";
 import { useTags } from "./hooks/useTags";
 import { FilterIcon } from "./components/icons";
-
-// Styles
-import "./app.scss";
-import "./zen.scss";
 
 // Constants and Enums
 const LC_HOST = `https://leetcode.cn`;
@@ -352,7 +347,7 @@ export default function Zenk() {
 
   return (
     <Container fluid="lg" className="zen-container">
-      <nav className="nav navbar bg-white z-3 zen-nav justify-content-start postion-sticky">
+      <nav className="nav navbar z-3 zen-nav justify-content-start postion-sticky">
         <ButtonGroup>
           {filters.map((filter: Filter) => (
             <FilterButton
@@ -666,7 +661,6 @@ const ZenTable = React.memo(
         <div className="h-2" />
         <Table
           hover
-          variant="light"
           striped
           bordered
           className="overflow-x-auto"

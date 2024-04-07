@@ -10,7 +10,6 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
 import Spinner from 'react-bootstrap/Spinner';
 
-import "./app.scss";
 import {
   Column,
   Table as TTable,
@@ -39,6 +38,7 @@ import { useQuery } from "react-query";
 import { Contest } from "./makeData";
 import { useSolutions } from "./hooks/useSolutions";
 import { useContests } from "./hooks/useContests";
+import Container from "react-bootstrap/esm/Container";
 
 const host = `https://leetcode.cn`;
 
@@ -377,7 +377,7 @@ function ContestList() {
   }, [table.getState().columnFilters[0]?.id]);
 
   return (
-    <>
+    <Container fluid>
       <div className="contest-table">
         <Button
           variant="primary"
@@ -399,7 +399,7 @@ function ContestList() {
         >
           ↑
         </Button>
-        <Table striped bordered hover className="overflow-x-auto">
+        <Table striped bordered hover className="table table-striped overflow-x-auto">
           <thead
             style={{
               cursor: "pointer",
@@ -575,7 +575,7 @@ function ContestList() {
           </span>
         </div>
       </div>
-    </>
+    </Container>
   );
 }
 

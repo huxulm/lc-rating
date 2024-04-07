@@ -1,6 +1,3 @@
-import React from "react"
-import "./index.scss"
-
 type ProblemCategory = {
     sort: Number;
     title: string;
