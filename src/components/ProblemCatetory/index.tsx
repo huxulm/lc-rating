@@ -90,16 +90,6 @@ export const DP = [
                 sort: 0,
                 src: "https://leetcode.cn/problems/house-robber-ii/",
               },
-              {
-                title: "2597. 美丽子集的数目",
-                src: "https://leetcode.cn/problems/the-number-of-beautiful-subsets/",
-                sort: 0,
-              },
-              {
-                title: "2638. 统计 K-Free 子集的总数",
-                src: "https://leetcode.cn/problems/count-the-number-of-k-free-subsets/",
-                sort: 0,
-              },
             ],
           },
           {
