@@ -102,25 +102,9 @@ function Layout() {
           <Link className="nav-link px-lg-3" to="/search">
             <Button className="fw-bold fs-6 p-1">0x3F 题解</Button>
           </Link>
-          {/* <Link className="nav-link px-lg-3" to="/list"> */}
-          <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
-              0x3F 题单
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item>
-                <Link className="nav-link px-lg-3" to="/list?p=dp">
-                  动态规划
-                </Link>
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-          {/* </Link>           */}
-          {/* <Link className="nav-link px-lg-3" to="/list">
-            <Button className="fw-bold fs-6 p-1">
-              0x3F 题单
-            </Button>
-          </Link> */}
+          <Link className="nav-link px-lg-3" to="/list">
+            <Button className="fw-bold fs-6 p-1">动态规划</Button>
+          </Link>
           <span className="navbar-brand fs-6 fw-semibold">
             本页面所有题解来自{" "}
             <a
