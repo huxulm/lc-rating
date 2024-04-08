@@ -23,13 +23,16 @@
             background: rgb(255, 229, 184);
             list-style: none;
             gap: 1rem;
-            max-width: 800px;
-            &.col2 {
+            max-width: 1200px;
+            &.col2, &.col3 {
                 columns: 2;
                 column-rule-width: 5px;
                 column-rule-color: rgb(107, 107, 107);
                 column-gap: 1cm;
                 column-rule-style: solid;
+            }
+            &.col3 {
+                columns: 3;
             }
         }
         a {
@@ -60,12 +63,27 @@
 @include color-mode(dark, false) {
     .pb-container {
         background: rgb(36, 36, 36);
+        .summary {
+            a {
+                color: $blue;
+            }
+        }
         &.level-0 {
             border-radius: 0;
             & > .title {
                 color: white!important;
             }
         }
+        .leaf {
+            background: rgb(30, 29, 29);
+            a {
+                color: white;
+            }
+            .list {
+                background: rgb(43, 43, 43);
+                color: white;
+            }
+        }        
     }
     .title {
         color: white;
