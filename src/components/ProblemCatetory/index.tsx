@@ -1719,6 +1719,12 @@ export const DP = [
           {
             title: "11.3 单调队列优化 DP",
             isLeaf: true,
+            summary: `<p>一般用来维护一段转移来源的最值。</p><ol>
+            <li>前提：区间右端点变大时，左端点也在变大（同滑动窗口）。</li>
+            <li>转移前，去掉队首无用数据。</li>
+            <li>计算转移（直接从队首转移）。</li>
+            <li>把数据（一般是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">f[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span></span></span></span>）插入队尾前，去掉队尾无用数据。</li>
+            </ol>`,
             child: [
               {
                 title:
@@ -1825,6 +1831,7 @@ export const DP = [
             {
                 title: "12.2 树上最大独立集",
                 isLeaf: true,
+                summary: `<p>讲解：<a href="https://www.bilibili.com/video/BV1vu4y1f7dn/" target="_blank">树形 DP：打家劫舍III</a></p>`,
                 child: [
                     {title: "337. 打家劫舍 III（没有上司的舞会）", src: "https://leetcode.cn/problems/house-robber-iii/"},
                     {title: "2646. 最小化旅行的价格总和", score: 2238,src: "https://leetcode.cn/problems/minimize-the-total-price-of-the-trips/"},
@@ -1834,6 +1841,7 @@ export const DP = [
             {
                 title: "12.3 树上最小支配集",
                 isLeaf: true,
+                summary: `<p>讲解：<a href="https://www.bilibili.com/video/BV1oF411U7qL/" target="_blank">树形 DP：监控二叉树</a>，包含 968 的变形题。</p>`,
                 child: [
                     {
                         title: "968. 监控二叉树",
@@ -1845,6 +1853,7 @@ export const DP = [
             {
                 title: "12.4 换根 DP",
                 isLeaf: true,
+                summary: `<p>也叫二次扫描法。<br><a href="https://leetcode.cn/problems/sum-of-distances-in-tree/solution/tu-jie-yi-zhang-tu-miao-dong-huan-gen-dp-6bgb/" target="_blank">【图解】一张图秒懂换根 DP！</a></p>`,
                 child: [
                     {title: "834. 树中距离之和",score: 2197, src: "https://leetcode.cn/problems/sum-of-distances-in-tree/"},
                     {title: "2581. 统计可能的树根数目", score: 2228, src: "https://leetcode.cn/problems/count-number-of-possible-root-nodes/"},
