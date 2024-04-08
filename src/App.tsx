@@ -2,6 +2,7 @@ import React, { lazy, Suspense, useState } from "react";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import Navbar from "react-bootstrap/esm/Navbar";
 import Spinner from "react-bootstrap/Spinner";
+import Dropdown from "react-bootstrap/Dropdown";
 import Container from "react-bootstrap/esm/Container";
 import Button from "react-bootstrap/esm/Button";
 import Nav from "react-bootstrap/esm/Nav";
@@ -19,7 +20,11 @@ import ThemeSwitchButton from "./components/ThemeSwitchButton";
 import "./scss/styles.scss";
 
 function WithLoading({ children }: React.PropsWithChildren<{}>) {
-  return <Suspense fallback={<Spinner size="sm" className="loader" />}>{children}</Suspense>;
+  return (
+    <Suspense fallback={<Spinner size="sm" className="loader" />}>
+      {children}
+    </Suspense>
+  );
 }
 
 export default function App() {
@@ -97,9 +102,20 @@ function Layout() {
           <Link className="nav-link px-lg-3" to="/search">
             <Button className="fw-bold fs-6 p-1">0x3F 题解</Button>
           </Link>
-          <Link className="nav-link px-lg-3" to="/list">
-            <Button className="fw-bold fs-6 p-1">DP</Button>
-          </Link>          
+          {/* <Link className="nav-link px-lg-3" to="/list"> */}
+          <Dropdown>
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+              0x3F 题单
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item>
+                <Link className="nav-link px-lg-3" to="/list?p=dp">
+                  动态规划
+                </Link>
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+          {/* </Link>           */}
           {/* <Link className="nav-link px-lg-3" to="/list">
             <Button className="fw-bold fs-6 p-1">
               0x3F 题单

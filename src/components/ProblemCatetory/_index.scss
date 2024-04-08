@@ -1,8 +1,8 @@
 .pb-container {
-    gap: 2rem;
+    gap: 1rem;
     .summary {
         background: rgb(198, 225, 248);
-        font-weight: 800;
+        font-weight: 600;
     }
     &.level-0 {
         border-radius: 0;
@@ -23,7 +23,7 @@
             background: rgb(255, 229, 184);
             list-style: none;
             gap: 1rem;
-            max-width: 1200px;
+            max-width: 100%;
             &.col2, &.col3 {
                 columns: 2;
                 column-rule-width: 5px;
@@ -49,6 +49,19 @@
     .title {
         color: aliceblue;
     }
+}
+
+@include media-breakpoint-down(md) {
+    .pb-container {
+        min-width: 100%;
+        .leaf {
+            .list {
+                &.col2, &.col3 {
+                    columns: unset;
+                }
+            }
+        }
+    }    
 }
 
 @include color-mode(light, false) {
