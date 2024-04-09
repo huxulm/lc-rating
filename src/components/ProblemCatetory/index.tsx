@@ -409,7 +409,7 @@ export const DP = [
               },
               {
                 title: "2902. 和带限制的子多重集合的数目",
-                src: "",
+                src: "/count-of-sub-multisets-with-bounded-sum",
                 sort: 0,
                 score: 2759,
               },
@@ -422,19 +422,19 @@ export const DP = [
             child: [
               {
                 title: "1155. 掷骰子等于目标和的方法数",
-                src: "/number-of-ways-to-earn-points/",
+                src: "/number-of-dice-rolls-with-target-sum/description/",
                 sort: 0,
                 score: 1654,
               },
               {
                 title: "1981. 最小化目标值与所选元素的差",
-                src: "",
+                src: "/minimize-the-difference-between-target-and-chosen-elements",
                 sort: "",
                 score: 2010,
               },
               {
                 title: "2218. 从栈中取出 K 个硬币的最大面值和",
-                src: "",
+                src: "/maximum-value-of-k-coins-from-piles",
                 sort: "",
                 score: 2158,
               },
