@@ -106,7 +106,7 @@ export default function Search() {
             >
                 ↑
             </Button>
-            <Row as="div" className="justify-content-center p-3 position-sticky top-0 z-3 bg-white" style={{ zIndex: 1000 }}>
+            <Row as="div" className="justify-content-center p-3 position-sticky top-0 z-3" style={{ zIndex: 1000 }}>
                 <Row md={12} sm={12} lg={12} className="justify-content-center" style={{ gap: '.5rem' }}>
                     <Col md={5} sm={12} lg={5} className="position-relative">
                         <input className="form-control fw-light" placeholder="题号、标目、题解标题（模糊匹配）" onChange={onSearchTextChange}></input>

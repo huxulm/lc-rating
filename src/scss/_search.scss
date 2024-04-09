@@ -154,3 +154,22 @@
         }
     }
 }
+
+@include color-mode(dark, false) {
+    .search {
+        td {
+            color: $gray-100;
+        }
+        .tag {
+            background: black;
+            color: white;
+        }
+        .bg-color {
+            background: $gray-800;
+            &:hover {
+                background: $gray-300;
+                transition: all ease-in-out 100ms;
+            }
+        }        
+    }
+}
