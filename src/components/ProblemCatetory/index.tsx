@@ -403,7 +403,7 @@ export const DP = [
             child: [
               {
                 title: "2585. 获得分数的方法数",
-                src: "/count-of-sub-multisets-with-bounded-sum/",
+                src: "/number-of-ways-to-earn-points/description/",
                 sort: 0,
                 score: 1910,
               },
