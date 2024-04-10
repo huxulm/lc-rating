@@ -1808,7 +1808,6 @@ export const DP = [
               },
               {
                 title: "2263. 数组变为有序的最小操作次数（会员题）",
-                score: 1271,
                 src: "/make-array-non-decreasing-or-non-increasing/",
               },
             ],
