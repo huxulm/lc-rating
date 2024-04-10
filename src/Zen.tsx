@@ -489,7 +489,10 @@ const ZenTableComp = React.memo(
           ),
         },
         {
-          accessorFn: (row) => queryTags(row._hash)[1],
+          accessorFn: (row) => {
+            let tags = queryTags(row._hash);
+            return tags ? tags[1] : "-";
+          },
           header: "算法标签",
           id: "tags",
           footer: (props) => props.column.id,
