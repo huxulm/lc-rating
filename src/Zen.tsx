@@ -132,7 +132,7 @@ function buildTagFilterFn(selectedTags: Record<string, boolean>, q: any) {
     : (v: ConstQuestion) => {
         const tags = q(v._hash);
         if (!tags || !tags[0]) {
-          return true;
+          return false;
         }
         if (tags[0].length == 0) {
           return false;
