@@ -341,7 +341,7 @@ export default function Zenk() {
   const [settings, setSettings] = useState(defaultSettings);
 
   const filteredData = useMemo(
-    () => data.filter(currentFilter.fn).filter(settings.tagFilterFn),
+    () => data.filter(currentFilter.fn).filter(buildTagFilterFn(settings.selectedTags, queryTags)),
     [data, currentFilter, settings]
   );
 
