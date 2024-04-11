@@ -5,7 +5,7 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Pagination from "react-bootstrap/Pagination";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import RatingCircle, { COLORS } from "./components/RatingCircle";
+import RatingCircle, { COLORS } from "../../../components/RatingCircle";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
 import Spinner from 'react-bootstrap/Spinner';
@@ -32,12 +32,12 @@ import {
 
 import { rankItem } from "@tanstack/match-sorter-utils";
 
-import { getMark, setMark, getSize, setSize } from "./store";
+import { getMark, setMark, getSize, setSize } from "../../../util/store";
 
 import { useQuery } from "react-query";
-import { Contest } from "./makeData";
-import { useSolutions } from "./hooks/useSolutions";
-import { useContests } from "./hooks/useContests";
+import { Contest } from "../../../util/makeData";
+import { useSolutions } from "../../../hooks/useSolutions";
+import { useContests } from "../../../hooks/useContests";
 import Container from "react-bootstrap/esm/Container";
 
 const host = `https://leetcode.cn`;
