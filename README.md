@@ -6,7 +6,7 @@
   <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/huxulm/lc-rating/workflow.yml">
 </p>
  
-本项目使用 **[React](https://react.dev/)** + **[ViteJS](https://vitejs.dev/)** 构建
+本项目使用 **[React](https://react.dev/)** + **[NextJS](https://nextjs.org/)** 构建
 
 ## 特性
 1. 力扣中文竞赛题目列表，含分数展示，题解链接（来源：[@灵茶山艾府](https://space.bilibili.com/206214)）

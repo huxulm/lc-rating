@@ -3,17 +3,17 @@
   "private": true,
   "homepage": "https://huxulm.github.io/lc-rating",
   "version": "0.0.1",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@tanstack/match-sorter-utils": "^8.8.4",
     "@tanstack/react-table": "^8.15.3",
     "bootstrap": "^5.3.0",
+    "next": "^14.1.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
@@ -22,17 +22,10 @@
     "web-vitals": "^3.3.1"
   },
   "devDependencies": {
-    "@faker-js/faker": "^8.4.1",
+    "@types/node": "20.12.7",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "@typescript-eslint/eslint-plugin": "^5.57.1",
-    "@typescript-eslint/parser": "^5.57.1",
-    "@vitejs/plugin-react": "^4.0.0",
-    "eslint": "^8.38.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.3.4",
     "sass": "^1.62.1",
-    "typescript": "^5.0.2",
-    "vite": "^4.3.2"
+    "typescript": "^5.0.2"
   }
 }

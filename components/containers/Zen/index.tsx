@@ -1,3 +1,4 @@
+"use client";
 // React imports
 import React, {
   useCallback,
@@ -34,13 +35,14 @@ import FormSelect from "react-bootstrap/FormSelect";
 import Modal from "react-bootstrap/Modal";
 
 // Custom components
-import RatingText from "./components/RatingText";
-import RatingCircle, { ColorRating } from "./components/RatingCircle";
-import { useSolutions } from "./hooks/useSolutions";
-import { useQuestionTags } from "./hooks/useQuestionTags";
-import { useZen } from "./hooks/useZen";
-import { useTags } from "./hooks/useTags";
-import { FilterIcon } from "./components/icons";
+import RatingCircle, { ColorRating } from "../../../components/RatingCircle";
+import { FilterIcon } from "../../../components/icons";
+
+// hooks
+import { useSolutions } from "../../../hooks/useSolutions";
+import { useQuestionTags } from "../../../hooks/useQuestionTags";
+import { useZen } from "../../../hooks/useZen";
+import { useTags } from "../../../hooks/useTags";
 
 // Constants and Enums
 const LC_HOST = `https://leetcode.cn`;
