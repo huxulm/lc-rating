@@ -12,6 +12,9 @@
 }
 
 @include media-breakpoint-down(md) {
+    .pb-content {
+        margin: 0!important;
+    }
     .problem-list {
         display: block;
     }

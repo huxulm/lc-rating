@@ -27,7 +27,7 @@ export default function () {
       <div className="toc" id="toc">
         <TableOfContent toc={mapCategory2TOC(DP[0], 0)} />
       </div>
-      <div className="pb-content ms-2 p-2" data-bs-spy="scroll" data-bs-target="#toc">
+      <div className="pb-content ms-5 p-2" data-bs-spy="scroll" data-bs-target="#toc">
         <ProblemCategory
           title={`<span>DP</span><p class="fs-6">整理自 &nbsp;&nbsp;<a target="_blank" class="fs-6 link" href="https://leetcode.cn/circle/discuss/tXLS3i/">https://leetcode.cn/circle/discuss/tXLS3i/</a></p>`}
           data={DP}
