@@ -1,103 +1,162 @@
+.toc {
+    display: grid;
+    position: sticky;
+    top: 5rem;
+    grid-area: toc;
+    overflow-y: auto;
+    height: calc(100vh - 5rem);
+}
+.toc-list,
+.toc-list ul {
+    list-style-type: none;
+    li {
+        a {
+            display: flex;
+            width: 100%;
+            text-decoration: underline;
+            &:hover {
+                background: rgb(253, 238, 216);
+            }
+        }
+    }
+}
+
+.toc-list {
+    padding: 0;
+}
+
+.toc-list ul {
+    padding-inline-start: 2ch;
+}
+
 .pb-container {
     gap: 1rem;
+
     .summary {
         background: rgb(251, 251, 251);
         font-weight: 600;
     }
+
     &.level-0 {
         border-radius: 0;
         background: transparent;
-        & > .title {
-            color: black!important;
+
+        &>.title {
+            color: $gray-900!important;
         }
     }
-    .level-2,.level-4 {
+
+    .level-2,
+    .level-4 {
         display: flex;
         flex-flow: row wrap;
         gap: 1rem;
         background: transparent;
     }
+
     .leaf {
         background: rgb(244, 242, 242);
+
         .list {
             background: rgb(255, 229, 184);
             list-style: none;
             gap: 1rem;
             max-width: 100%;
-            &.col2, &.col3 {
+
+            &.col2,
+            &.col3 {
                 columns: 2;
                 column-rule-width: 2px;
                 column-rule-color: rgb(107, 107, 107);
                 column-gap: 1cm;
                 column-rule-style: dashed;
             }
+
             &.col3 {
                 columns: 3;
             }
         }
+
         a {
             color: rgb(0, 0, 0);
             text-decoration: underline;
             text-underline-offset: 0.25rem;
         }
+
         li {
             width: 100%;
         }
 
     }
+
     border-radius: 15px;
+
     .title {
         color: aliceblue;
     }
 }
 
 @include media-breakpoint-down(md) {
+    .toc {
+        display: none;
+    }
     .pb-container {
         min-width: 100%;
+
         .leaf {
             .list {
-                &.col2, &.col3 {
+
+                &.col2,
+                &.col3 {
                     columns: unset;
                 }
             }
         }
-    }    
+    }
 }
 
 @include color-mode(light, false) {
     .pb-container {
         background: white;
     }
+
     .title {
-        color: black;
+        color: $gray-900;
     }
 }
 
 @include color-mode(dark, false) {
     .pb-container {
         background: rgb(36, 36, 36);
+
         .summary {
             a {
                 color: $blue;
             }
         }
+
         &.level-0 {
             border-radius: 0;
-            & > .title {
-                color: white!important;
+
+            &>.title {
+                color: white !important;
             }
         }
+
         .leaf {
             background: rgb(30, 29, 29);
+
             a {
                 color: white;
             }
+
             .list {
                 background: rgb(43, 43, 43);
                 color: white;
             }
-        }        
+        }
     }
+
     .title {
         color: white;
     }

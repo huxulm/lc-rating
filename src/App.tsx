@@ -87,8 +87,8 @@ export default function App() {
 function Layout() {
   const { theme, toggleTheme } = useTheme();
   return (
-    <div className="app">
-      <Navbar expand="lg" className="p-0 text-bg">
+    <div className="app bg-body">
+      <Navbar expand="lg" className="position-sticky top-0 p-0">
         <Container className="navbar fw-bold">
           <Nav.Link href="/lc-rating" className="navbar-brand nav-link">
             力扣竞赛题目

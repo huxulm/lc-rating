@@ -8,15 +8,18 @@
 // components
 @import "../components/ProblemCatetory/_index";
 
+nav {
+    z-index: 1000;
+}
 // color mode
 @include color-mode(dark, false) {
-    .app {
-      background: black;
+    nav {
+        background: $gray-900;
     }
 }
   
 @include color-mode(light, false) {
-    .app {
-        background: white;
+    nav {
+        background: $gray-100;
     }
 }

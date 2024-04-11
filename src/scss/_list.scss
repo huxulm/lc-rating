@@ -1,16 +1,21 @@
-.tabs {
-    display: flex;
-    flex-direction: row;
-    gap: .5rem;
-    list-style: none;
-    padding-inline: 0;
+.problem-list {
+    display: grid;
+    grid-template-areas: "toc content";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 4fr;
+    z-index: -1;
+}
 
-    .tab {
-        border-bottom: 2px solid lightcoral;
-        border-radius: 0;
+.pb-content {
+    display: grid;
+    grid-area: content;
+}
+
+@include media-breakpoint-down(md) {
+    .problem-list {
+        display: block;
     }
-
-    .tab.selected {
-        background: lightcoral;
+    .toc {
+        display: none;
     }
 }

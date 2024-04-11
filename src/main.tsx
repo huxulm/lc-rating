@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { HashRouter } from "react-router-dom";
+import { HashRouter, BrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 import App from "./App";
@@ -9,14 +9,14 @@ import { ThemeProvider } from "./hooks/useTheme";
 
 const client = new QueryClient();
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+ReactDOM.createRoot(document.body as HTMLElement).render(
   <React.StrictMode>
     <QueryClientProvider client={client}>
-      <HashRouter>
+      <BrowserRouter basename="/lc-rating">
         <ThemeProvider>
           <App />
         </ThemeProvider>
-      </HashRouter>
+      </BrowserRouter>
     </QueryClientProvider>
   </React.StrictMode>
 );
