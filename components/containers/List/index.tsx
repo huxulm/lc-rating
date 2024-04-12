@@ -27,7 +27,7 @@ const mapCategory2TOC = (
 
 export default function () {
   return (
-    <Container className="p-2 problem-list order-1">
+    <Container fluid className="p-2 problem-list order-1">
       <div className="toc" id="toc">
         <TableOfContent toc={mapCategory2TOC(DP[0], 0)} />
       </div>

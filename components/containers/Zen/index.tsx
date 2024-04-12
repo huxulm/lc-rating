@@ -1,11 +1,6 @@
 "use client";
 // React imports
-import React, {
-  useCallback,
-  useMemo,
-  useState,
-  useTransition,
-} from "react";
+import React, { useCallback, useMemo, useState, useTransition } from "react";
 
 import {
   Column,
@@ -343,7 +338,10 @@ export default function Zenk() {
   const [settings, setSettings] = useState(defaultSettings);
 
   const filteredData = useMemo(
-    () => data.filter(currentFilter.fn).filter(buildTagFilterFn(settings.selectedTags, queryTags)),
+    () =>
+      data
+        .filter(currentFilter.fn)
+        .filter(buildTagFilterFn(settings.selectedTags, queryTags)),
     [data, currentFilter, settings]
   );
 
@@ -479,7 +477,7 @@ const ZenTableComp = React.memo(
           accessorKey: "rating",
           id: "ratings",
           header: () => "难度分",
-          size: 60,
+          size: 80,
           enableColumnFilter: false,
           cell: (info) => (
             <>
@@ -505,6 +503,7 @@ const ZenTableComp = React.memo(
           accessorKey: "progress",
           header: "进度",
           enableColumnFilter: false,
+          enableSorting: false,
           cell: (info) => {
             const item = info.row.original;
             return (
@@ -655,7 +654,9 @@ const ZenTable = React.memo(
             </Dropdown.Toggle>
             <Dropdown.Menu key="menu" className="super-colors">
               {[10, 20, 30, 50, 100].map((pageSize, idx) => (
-                <Dropdown.Item key={`opt-${idx}`} eventKey={pageSize}>{pageSize}</Dropdown.Item>
+                <Dropdown.Item key={`opt-${idx}`} eventKey={pageSize}>
+                  {pageSize}
+                </Dropdown.Item>
               ))}
             </Dropdown.Menu>
           </Dropdown>
@@ -692,11 +693,8 @@ const ZenTable = React.memo(
                         {...{
                           className: header.column.getCanSort()
                             ? "cursor-pointer select-none"
-                            : "",
+                            : "select-none",
                           onClick: header.column.getToggleSortingHandler(),
-                          style: {
-                            width: header.getSize(),
-                          },
                         }}
                       >
                         {flexRender(
@@ -706,7 +704,8 @@ const ZenTable = React.memo(
                         {{
                           asc: " 🔼",
                           desc: " 🔽",
-                        }[header.column.getIsSorted() as string] ?? null}
+                        }[header.column.getIsSorted() as string] ??
+                          (header.column.getCanSort() ? "↕️" : null)}
                         {header.column.getCanFilter() ? (
                           <div>
                             <Filter column={header.column} table={table} />
@@ -796,7 +795,9 @@ const ZenTable = React.memo(
             </Dropdown.Toggle>
             <Dropdown.Menu key={"menu"} className="super-colors">
               {[10, 20, 30, 50, 100].map((pageSize, idx) => (
-                <Dropdown.Item key={`opt-${idx}`} eventKey={pageSize}>{pageSize}</Dropdown.Item>
+                <Dropdown.Item key={`opt-${idx}`} eventKey={pageSize}>
+                  {pageSize}
+                </Dropdown.Item>
               ))}
             </Dropdown.Menu>
           </Dropdown>

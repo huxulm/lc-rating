@@ -9,10 +9,12 @@
 .toc-list,
 .toc-list ul {
     list-style-type: none;
+    padding: 0 5rem;
     li {
         a {
             display: flex;
             width: 100%;
+            font-size: 1.2rem;
             text-decoration: underline;
             &:hover {
                 background: rgb(253, 238, 216);
@@ -21,12 +23,8 @@
     }
 }
 
-.toc-list {
-    padding: 0;
-}
-
 .toc-list ul {
-    padding-inline-start: 2ch;
+    padding-inline-start: 3ch;
 }
 
 .pb-container {
@@ -35,6 +33,7 @@
     .summary {
         background: rgb(251, 251, 251);
         font-weight: 600;
+        max-width: 1200px;
     }
 
     &.level-0 {
@@ -58,7 +57,7 @@
         background: rgb(244, 242, 242);
 
         .list {
-            background: rgb(255, 229, 184);
+            background: rgb(254, 234, 200);
             list-style: none;
             gap: 1rem;
             max-width: 100%;

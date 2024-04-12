@@ -66,6 +66,10 @@ a:hover {
   transform-origin: top left;
 }
 
+.select-none {
+  user-select: none;
+}
+
 @include media-breakpoint-down(sm) {
   .right-side {
     position: inherit;
