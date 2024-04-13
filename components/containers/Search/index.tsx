@@ -116,7 +116,7 @@ export default function Search() {
   }, []);
 
   return (
-    <Container className="search" data-bs-theme="dark">
+    <Container className="search">
       <Button
         variant="primary"
         id="btn-back-to-top"
@@ -151,7 +151,7 @@ export default function Search() {
         >
           <Col md={5} sm={12} lg={5} className="position-relative">
             <input
-              className="form-control fw-light"
+              className="form-control"
               placeholder="题号、标目、题解标题（模糊匹配）"
               onChange={onSearchTextChange}
             ></input>
