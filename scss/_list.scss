@@ -9,6 +9,7 @@
 .pb-content {
     display: grid;
     grid-area: content;
+    font-family: '宋体';
 }
 
 @include media-breakpoint-down(md) {
