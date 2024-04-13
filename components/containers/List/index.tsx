@@ -8,6 +8,7 @@ import {
   TableOfContent,
   TOC,
 } from "../../../components/ProblemCatetory/TableOfContent";
+import { useEffect } from "react";
 
 const mapCategory2TOC = (
   { title, child, isLeaf }: ProblemCategory,
@@ -26,6 +27,18 @@ const mapCategory2TOC = (
 };
 
 export default function () {
+  const scrollToComponent = () => {
+    if (window.location.hash) {
+      let id = window.location.hash.replace("#", "");
+      const ele = document.getElementById(id);
+      if (ele) {
+        ele.scrollIntoView({behavior: "instant"});
+        ele.focus();
+      }
+    }
+  }
+
+  useEffect(() => scrollToComponent(), []);
   return (
     <Container fluid className="p-2 problem-list order-1">
       <div className="toc" id="toc">

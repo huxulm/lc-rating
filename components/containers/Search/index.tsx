@@ -242,8 +242,8 @@ export default function Search() {
                           ])}
                       </td>
                       <td className="d-flex align-items-center">
-                        <a href={link}>
-                          <span className="text-primary">{sol[0]}</span>
+                        <a className="nav-link fw-medium" href={link}>
+                          {sol[0]}
                         </a>
                       </td>
                     </tr>
