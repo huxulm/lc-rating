@@ -9,18 +9,21 @@
 .toc-list,
 .toc-list ul {
     list-style-type: none;
-    padding: 0 5rem;
     li {
         a {
             display: flex;
             width: 100%;
             font-size: 1.2rem;
-            text-decoration: underline;
+            text-decoration: none;
             &:hover {
                 background: rgb(253, 238, 216);
             }
         }
     }
+}
+
+.toc-list {
+    padding: 0 2rem 0 3rem;
 }
 
 .toc-list ul {

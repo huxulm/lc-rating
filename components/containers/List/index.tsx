@@ -37,7 +37,7 @@ export default function () {
         data-bs-target="#toc"
       >
         <ProblemCategory
-          title={`<span>DP</span><p class="fs-6">整理自 &nbsp;&nbsp;<a target="_blank" class="fs-6 link" href="https://leetcode.cn/circle/discuss/tXLS3i/">https://leetcode.cn/circle/discuss/tXLS3i/</a></p>`}
+          title={`<p class="fs-6">整理自 &nbsp;&nbsp;<a target="_blank" class="fs-6 link" href="https://leetcode.cn/circle/discuss/tXLS3i/">https://leetcode.cn/circle/discuss/tXLS3i/</a></p>`}
           data={DP}
           summary={DP[0].summary}
         />

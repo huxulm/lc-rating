@@ -44,7 +44,7 @@ export default function () {
         </span>
         <Navbar.Collapse className="justify-content-end">
           <span
-            className="btn d-flex rounded-circle shadow p-1"
+            className="btn d-flex rounded-circle p-1"
             onClick={() => {
               toggleTheme(theme == "dark" ? "light" : "dark");
             }}
@@ -53,10 +53,9 @@ export default function () {
           </span>
           <Nav.Link
             href="https://github.com/huxulm/lc-rating"
-            className="btn btn-outline-secondary p-1"
+            className="btn d-flex p-1 ms-2 rounded-circle"
           >
-            <span className="me-1">&nbsp;源码&nbsp;</span>
-            <GithubProfile classname="" />
+            <GithubProfile width={24} height={24} classname="p-1" />
           </Nav.Link>
         </Navbar.Collapse>
       </Container>
