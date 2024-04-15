@@ -48,6 +48,12 @@
         }
     }
 
+    .level-3 {
+        h3 > p {
+            font-weight: 900;
+        }
+    }
+
     .level-2,
     .level-4 {
         display: flex;
@@ -58,7 +64,9 @@
 
     .leaf {
         background: rgb(244, 242, 242);
-
+        h3 {
+            font-weight: 800;
+        }
         .list {
             background: rgb(254, 234, 200);
             list-style: none;
@@ -81,6 +89,7 @@
 
         a {
             color: rgb(0, 0, 0);
+            font-weight: bolder;
             text-decoration: underline;
             text-underline-offset: 0.25rem;
         }

@@ -2559,7 +2559,7 @@ function ProblemCategory({
   return (
     <div className={`pb-container level-${level}` + className}>
       {
-        <h3 className="title p-2" id={`${hashCode(title || "")}`}>
+        <h3 className="title p-2 text-danger" id={`${hashCode(title || "")}`}>
           <p dangerouslySetInnerHTML={{__html: title || ""}}></p>
         </h3>
       }
