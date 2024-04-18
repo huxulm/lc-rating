@@ -1337,9 +1337,14 @@ export const DP = [
       },
       {
         title: "九、状态压缩 DP（状压 DP）",
+        summary: `推荐先阅读：<a target="_blank" href="https://leetcode.cn/circle/discuss/CaOJ45/">从集合论到位运算，常见位运算技巧分类总结！</a>`,
         child: [
           {
             title: "9.1 排列型 ① 相邻无关",
+            summary: `暴力做法是枚举数组 a 的所有排列，对每个排列计算和题目有关的值，时间复杂度（通常来说）是 O(n•n!)。可以解决 n≤10 的问题。<br>
+            状压 DP 可以把时间复杂度（通常来说）优化至 O(n•2<sup>n</sup>)。可以解决 n≤20 的问题。<br>
+            一般定义 f[S] 表示已经排列好的元素（下标）集合为 S 时，和题目有关的最优值。通过枚举当前位置要填的元素来转移。
+            <blockquote>注意不需要额外的状态表示当前要填第几个位置，因为集合 S 的大小就是当前要填的位置。</blockquote>`,
             isLeaf: true,
             child: [
               {
@@ -1387,6 +1392,7 @@ export const DP = [
           },
           {
             title: "9.2 排列型 ② 相邻相关",
+            summary: `一般定义 f[S][i] 表示已经排列好的元素（下标）集合为 S，且上一个填的元素（下标）为 i 时，<br>和题目有关的最优值。通过枚举当前位置要填的元素来转移。`,
             isLeaf: true,
             child: [
               {
@@ -1408,6 +1414,7 @@ export const DP = [
           },
           {
             title: "9.3 旅行商问题（TSP）",
+            summary: `本质上就是排列型 ②。`,
             isLeaf: true,
             child: [
               {
