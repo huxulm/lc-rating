@@ -16,7 +16,7 @@ export default function () {
     toggleTheme(theme);
   }, []);
   return (
-    <Navbar expand="lg" className="position-sticky top-0">
+    <Navbar expand="lg" className="position-sticky top-0 p-0">
       <Container className="navbar fw-bold ps-2 pe-2">
         <Navbar.Brand href="/lc-rating" className="navbar-brand nav-link">
           力扣竞赛题目
