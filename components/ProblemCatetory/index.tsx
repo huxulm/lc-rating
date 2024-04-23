@@ -21,17 +21,18 @@ interface ProblemCategoryProps {
   level?: number;
 }
 
-export const hashCode = function(s: string) {
+export const hashCode = function (s: string) {
   var hash = 0,
-    i, chr;
+    i,
+    chr;
   if (s.length === 0) return hash;
   for (i = 0; i < s.length; i++) {
     chr = s.charCodeAt(i);
-    hash = ((hash << 5) - hash) + chr;
+    hash = (hash << 5) - hash + chr;
     hash |= 0; // Convert to 32bit integer
   }
   return hash;
-}
+};
 
 export const DP = [
   {
@@ -2568,7 +2569,7 @@ function ProblemCategory({
     <div className={`pb-container level-${level}` + className}>
       {
         <h3 className="title p-2 text-danger" id={`${hashCode(title || "")}`}>
-          <p dangerouslySetInnerHTML={{__html: title || ""}}></p>
+          <p dangerouslySetInnerHTML={{ __html: title || "" }}></p>
         </h3>
       }
       {summary && (
@@ -2621,7 +2622,9 @@ function ProblemCategoryList({
   };
   return (
     <div className="shadow rounded p-2 leaf">
-      <h3 className="title" id={`${hashCode(data.title||"")}`}>{data.title}</h3>
+      <h3 className="title" id={`${hashCode(data.title || "")}`}>
+        {data.title}
+      </h3>
       {data.summary && (
         <p
           className="p-2 rounded summary bg-secondary-subtle text-warning-emphasis"
@@ -2632,7 +2635,10 @@ function ProblemCategoryList({
         {data.child &&
           data.child.map((item) => (
             <li className="d-flex justify-content-between">
-              <a href={"https://leetcode.cn/problems" + item.src} target="_blank">
+              <a
+                href={"https://leetcode.cn/problems" + item.src}
+                target="_blank"
+              >
                 {item.title}
               </a>
               {item.score && (
