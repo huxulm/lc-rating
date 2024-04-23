@@ -52,8 +52,11 @@ export default function () {
             <Link className="nav-link px-lg-3" href="/search">
               <Button className="fw-bold fs-6 p-1">0x3F 题解</Button>
             </Link>
-            <Link className="nav-link px-lg-3" href="/list">
+            <Link className="nav-link px-lg-3" href="/list/dp">
               <Button className="fw-bold fs-6 p-1">动态规划</Button>
+            </Link>
+            <Link className="nav-link px-lg-3" href="/list/ds">
+              <Button className="fw-bold fs-6 p-1">数据结构</Button>
             </Link>
           </Nav>
           <span className="navbar-brand fs-6 fw-semibold">

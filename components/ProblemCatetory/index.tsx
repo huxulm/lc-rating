@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 import RatingCircle, { ColorRating } from "../RatingCircle";
 
 type ProblemCategory = {
-  sort: Number;
   title: string;
   summary?: string;
   src?: string;
+  original_src?: string;
+  sort?: Number;
   isLeaf?: boolean;
   solution?: string;
   score?: Number;

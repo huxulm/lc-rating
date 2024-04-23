@@ -1,13 +1,10 @@
 "use client";
 import Container from "react-bootstrap/Container";
-import ProblemCategory, {
-  DP,
-  hashCode,
-} from "../../../components/ProblemCatetory";
+import ProblemCategory, { DP, hashCode } from "@components/ProblemCatetory";
 import {
   TableOfContent,
   TOC,
-} from "../../../components/ProblemCatetory/TableOfContent";
+} from "@components/ProblemCatetory/TableOfContent";
 import { useEffect } from "react";
 
 const mapCategory2TOC = (
@@ -32,11 +29,11 @@ export default function () {
       let id = window.location.hash.replace("#", "");
       const ele = document.getElementById(id);
       if (ele) {
-        ele.scrollIntoView({behavior: "instant"});
+        ele.scrollIntoView({ behavior: "instant" });
         ele.focus();
       }
     }
-  }
+  };
 
   useEffect(() => scrollToComponent(), []);
   return (
@@ -50,7 +47,7 @@ export default function () {
         data-bs-target="#toc"
       >
         <ProblemCategory
-          title={`<p class="fs-6">整理自 &nbsp;&nbsp;<a target="_blank" class="fs-6 link" href="https://leetcode.cn/circle/discuss/tXLS3i/">https://leetcode.cn/circle/discuss/tXLS3i/</a></p>`}
+          title={`<p class="fs-6">来源 &nbsp;<a target="_blank" class="fs-6 link" href="https://leetcode.cn/circle/discuss/tXLS3i/">https://leetcode.cn/circle/discuss/tXLS3i/</a></p>`}
           data={DP}
           summary={DP[0].summary}
         />
