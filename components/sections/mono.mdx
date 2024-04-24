@@ -1,0 +1,53 @@
+[视频讲解](https://www.bilibili.com/video/BV1VN411J7S7/)
+
+## 模板一
+找到每个元素的下一个更大元素（Next Greater Element）
+> 例题  [739. 每日温度](https://leetcode.cn/problems/daily-temperatures/)
+```python
+def next_greater_element(nums):
+    stack = []
+    result = [-1] * len(nums)
+    for i in range(len(nums)):
+        while stack and nums[i] > nums[stack[-1]]:
+            result[stack.pop()] = nums[i] # 这里存的是元素，也可以直接存下标 i
+        stack.append(i)
+    return result
+``` 
+##  模板二
+找到每个元素的下一个更小元素（Next Smaller Element）
+```python
+def next_smaller_element(a: List[int]) -> List[int]:
+    stack = []
+    result = [-1] * len(nums)
+    for i in range(len(nums)):
+        while stack and nums[i] < nums[stack[-1]]:
+            result[stack.pop()] = nums[i] # 这里存的是元素，也可以直接存下标 i
+        stack.append(i)
+    return result
+```
+
+## 模板三
+找到每个元素的前一个更大元素（Previous Greater Element）
+```python
+def previous_greater_element(nums):
+    stack = []
+    result = [-1] * len(nums)
+    for i in range(len(nums)-1, -1, -1):
+        while stack and nums[i] > nums[stack[-1]]:
+            result[stack.pop()] = nums[i]
+        stack.append(i)
+    return result
+```
+
+## 模板四
+找到每个元素的前一个更小元素（Previous Smaller Element）
+```python
+def previous_smaller_element(nums):
+    stack = []
+    result = [-1] * len(nums)
+    for i in range(len(nums)-1, -1, -1):
+        while stack and nums[i] < nums[stack[-1]]:
+            result[stack.pop()] = nums[i]
+        stack.append(i)
+    return result
+```

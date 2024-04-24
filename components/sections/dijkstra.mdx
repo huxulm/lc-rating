@@ -1,0 +1,31 @@
+# Dijkstra
+## 模板一
+求最短路
+> 例题  [3123. 最短路径中的边](https://leetcode.cn/problems/find-edges-in-shortest-paths/description/)
+```python
+class Dijkstra:
+
+    def __init__(self, n: int, edges: List[List[int]]):
+        self.n = n
+        self.g = [[] for _ in range(n)]
+        for u, v, w in edges:
+            self.g[u].append((v, w))
+            self.g[v].append((u, w))
+
+    def getDistance(self, start: int, end: int) -> List[int]:
+        h = [(0, start)]
+        vis = [False] * self.n
+        dist = [inf] * self.n
+        dist[start] = 0
+        minD = inf
+        while h:
+            d, u = heappop(h)
+            if vis[u]: continue
+            vis[u] = True
+            for v, d0 in self.g[u]:
+                if vis[v]: continue
+                if dist[v] > d + d0:
+                    dist[v] = d + d0
+                heappush(h, (d + d0, v))
+        return dist
+```

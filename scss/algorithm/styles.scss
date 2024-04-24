@@ -1,0 +1,80 @@
+@import "katex/dist/katex.css";
+
+code {
+    padding: 1rem;
+}
+
+blockquote {
+    border-left: 5px solid rgb(255, 225, 0);
+    background: rgb(240, 240, 240);
+}
+
+*[data-rehype-pretty-code-figure] {
+    margin-block: 0;
+    margin-inline: 0;
+}
+
+.debug * {
+    // outline: 1px dashed gold;
+}
+
+.mdx-layout {
+    display: grid;
+    grid-template-areas: "top-nav top-nav" "side-nav content";
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 48px 10fr;
+    height: 100vh;
+
+    .side-nav {
+        grid-area: side-nav;
+        background: rgb(170, 170, 170);
+
+        ul {
+            margin-inline: 0;
+            padding-inline: 0;
+            margin-block: 0;
+            gap: .5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        li {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        .menu-item {
+            text-align: center;
+            padding: .5rem;
+            background: rgb(43, 40, 64);
+            transition: all ease-in-out 200ms;
+
+            &:hover {
+                opacity: .8;
+            }
+
+            font-size: 1.5rem;
+            text-decoration: none;
+            user-select: none;
+            color: white;
+
+            &.active {
+                background: rgb(244, 244, 250);
+                color: rgb(222, 84, 84);
+            }
+        }
+    }
+
+    .top-nav {
+        grid-area: top-nav;
+        background: rgb(235, 235, 235);
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .content {
+        grid-area: content;
+        padding: 1rem;
+        font-size: 24px;
+    }
+}

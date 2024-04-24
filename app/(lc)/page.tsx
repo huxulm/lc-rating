@@ -2,7 +2,7 @@
 import dynamic from "next/dynamic";
 
 const ContestList = dynamic(
-  () => import("../components/containers/ContestList"),
+  () => import("@components/containers/ContestList"),
   {
     ssr: false,
   }
