@@ -1,3 +1,4 @@
+# 单调栈 (MonotoneStack)
 [视频讲解](https://www.bilibili.com/video/BV1VN411J7S7/)
 
 ## 模板一
@@ -51,3 +52,35 @@ def previous_smaller_element(nums):
         stack.append(i)
     return result
 ```
+## 模板五
+找到每个元素的右侧最小的大于等于当前元素的索引
+> 例题  [975. 奇偶跳](https://leetcode.cn/problems/odd-even-jump/description/)
+```python
+def next_min_larger_element(nums):
+    n = len(nums)
+    a = sorted(range(n), key=lambda i: nums[i]) # 下标按元素值升序
+    result = [None] * n
+    st = []
+    for i in a:
+        while st and st[-1] < i: # i 是 st "最小的更大"
+            result[st.pop()] = i
+        st.append(i)
+    return result
+```
+
+## 模板六
+找到每个元素的右侧最大的小于等于当前元素的索引
+> 例题  [975. 奇偶跳](https://leetcode.cn/problems/odd-even-jump/description/)
+```python
+def next_max_smaller_element(nums):
+    n = len(nums)
+    a = sorted(range(n), key=lambda i: -nums[i]) # 下标按元素值降序
+    result = [None] * n
+    st = []
+    for i in a:
+        while st and st[-1] < i: # i 是 st "最大的更小"
+            result[st.pop()] = i
+        st.append(i)
+    return result
+```
+

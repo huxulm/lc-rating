@@ -2,9 +2,15 @@ import type { Metadata } from "next";
 import MdxLayout from "@components/layouts/MdxLayout";
 import MonotoneStack from "@components/sections/mono.mdx";
 import Dijkstra from "@components/sections/dijkstra.mdx";
+import String from "@components/sections/string.mdx";
 import "../../../scss/algorithm/styles.scss";
 
 const routes = [
+  {
+    path: "/algorithm-templates#String",
+    display: "字符串 (String)",
+    mdx: <String />,
+  },  
   {
     path: "/algorithm-templates#Monotone-Stack",
     display: "单调栈 (Monotone Stack)",
@@ -18,7 +24,7 @@ const routes = [
 ];
 
 export const metadata: Metadata = {
-  title: "算法模板",
+  title: "My Code Templates",
   icons: "/lc-rating/favico.svg",
 };
 

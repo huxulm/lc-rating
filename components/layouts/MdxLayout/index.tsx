@@ -18,7 +18,7 @@ export default function MdxLayout({
   return (
     <div className="debug mdx-layout">
       <nav className="top-nav">
-        <Link href="/code">算法模板</Link>
+        <Link href="/code">My Code Templates</Link>
       </nav>
       <aside className="side-nav">
         <ul>
