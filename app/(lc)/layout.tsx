@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   icons: "/lc-rating/favico.svg",
 }
 
-const MainLayout = dynamic(() => import("../components/layouts/MainLayout"), {
+const MainLayout = dynamic(() => import("@components/layouts/MainLayout"), {
   ssr: false,
 });
 

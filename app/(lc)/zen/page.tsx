@@ -1,10 +1,10 @@
 "use client"
 import dynamic from 'next/dynamic'
  
-const Search = dynamic(() => import('../../components/containers/Search'), {
+const Zen = dynamic(() => import('@components/containers/Zen'), {
   ssr: false,
 })
 
 export default function Page() {
-  return <Search />
+  return <Zen />
 }

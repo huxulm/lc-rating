@@ -7,6 +7,10 @@
 </p>
  
 本项目使用 **[React](https://react.dev/)** + **[NextJS](https://nextjs.org/)** 构建
+<div style="text-align: center;dispaly: grid;gap: 2rem;">
+  <img style="max-width: 400px;" src="./screenshot0.png"></img>
+  <img style="max-width: 400px;" src="./screenshot1.png"></img>
+</div>
 
 ## 特性
 1. 力扣中文竞赛题目列表，含分数展示，题解链接（来源：[@灵茶山艾府](https://space.bilibili.com/206214)）
@@ -16,3 +20,4 @@
 ## 数据来源
 - 基础 - 【[leetcode.cn](https://leetcode.cn/)】
 - 题目难度 - 【[leetcode_problem_rating](https://raw.githubusercontent.com/zerotrac/leetcode_problem_rating/main/data.json)】
+
