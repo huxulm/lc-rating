@@ -2,7 +2,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 
 export default {
   title: "DP",
-  original_src: 'https://leetcode.cn/circle/discuss/tXLS3i/',
+  original_src: "https://leetcode.cn/circle/discuss/tXLS3i/",
   sort: 0,
   child: [
     {
@@ -22,19 +22,24 @@ export default {
               sort: 0,
               src: "/climbing-stairs/",
               solution:
-                "https://leetcode.cn/problems/climbing-stairs/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-7zm1/",
+                "/climbing-stairs/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-7zm1/",
             },
             {
               title: "746. 使用最小花费爬楼梯",
               sort: 1,
               src: "/min-cost-climbing-stairs/",
               solution:
-                "https://leetcode.cn/problems/min-cost-climbing-stairs/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-j99e/",
+                "/min-cost-climbing-stairs/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-j99e/",
             },
             {
               title: "377. 组合总和 Ⅳ",
               sort: 2,
               src: "/combination-sum-iv/",
+            },
+            {
+              title: "2266. 统计打字方案数",
+              src: "/count-number-of-texts/",
+              score: 1857,
             },
             {
               title: "2466. 统计构造好字符串的方案数",
@@ -115,11 +120,6 @@ export default {
               sort: 0,
               score: 1791,
             },
-            {
-              title: "363. 矩形区域不超过 K 的最大数值和",
-              src: "/max-sum-of-rectangle-no-larger-than-k/",
-              sort: 0,
-            },
           ],
         },
       ],
@@ -158,9 +158,10 @@ export default {
               sort: 0,
             },
             {
-              title: "931. 下降路径最小和 1573",
+              title: "931. 下降路径最小和",
               src: "/minimum-falling-path-sum/",
               sort: 0,
+              score: 1573,
             },
             {
               title: "2684. 矩阵中移动的最大次数",
@@ -254,6 +255,7 @@ export default {
     },
     {
       title: "三、 背包",
+      summary: `视频讲解 <a href="https://www.bilibili.com/video/BV16Y411v7Y6/" target="_blank">0-背包 完全背包</a>`,
       sort: 2,
       child: [
         {
@@ -557,6 +559,10 @@ export default {
               title: "1713. 得到子序列的最少操作次数",
               src: "/minimum-operations-to-make-a-subsequence/",
               score: 2351,
+            },
+            {
+              title: "368. 最大整除子集",
+              src: "/largest-divisible-subset/",
             },
           ],
         },
@@ -892,11 +898,17 @@ export default {
             {
               title: "3077. K 个不相交子数组的最大能量值",
               src: "/maximum-strength-of-k-disjoint-subarrays/",
+              score: 2557,
             },
             {
               title: "2911. 得到 K 个半回文串的最少修改次数",
               src: "/minimum-changes-to-make-k-semi-palindromes/",
               score: 2608,
+            },
+            {
+              title: "3117. 划分数组得到最小的值之和",
+              src: "/minimum-sum-of-values-by-dividing-array/",
+              score: 2735,
             },
           ],
         },
@@ -958,6 +970,11 @@ export default {
               score: 1899,
             },
             {
+              title: "871. 最低加油次数",
+              src: "/minimum-number-of-refueling-stops/",
+              score: 2074,
+            },
+            {
               title: "2896. 执行操作使两个字符串相等",
               src: "/apply-operations-to-make-two-strings-equal/",
               score: 2172,
@@ -1010,6 +1027,11 @@ export default {
               title: "1048. 最长字符串链",
               src: "/longest-string-chain/",
             },
+            {
+              title: "3098. 求出所有子序列的能量和",
+              src: "/find-the-sum-of-subsequence-powers/",
+              score: 2553,
+            },
           ],
         },
         {
@@ -1046,6 +1068,10 @@ export default {
               src: "/string-transformation/",
               score: 2858,
             },
+            {
+              title: "2912. 在网格上移动到目的地的方法数（会员题）",
+              src: "/number-of-ways-to-reach-destination-in-the-grid/",
+            },
           ],
         },
         {
@@ -1066,6 +1092,11 @@ export default {
               title: "1269. 停在原地的方案数",
               src: "/number-of-ways-to-stay-in-the-same-place-after-some-steps/",
               score: 1854,
+            },
+            {
+              title: "3122. 使矩阵满足条件的最少操作次数",
+              src: "/minimum-number-of-operations-to-satisfy-conditions/",
+              score: 1905,
             },
             {
               title: "576. 出界的路径数",
@@ -1686,6 +1717,10 @@ export default {
               src: "/k-inverse-pairs-array/",
             },
             {
+              title: "3130. 找出所有稳定的二进制数组 II",
+              src: "/find-all-possible-stable-binary-arrays-ii/",
+            },
+            {
               title: "1977. 划分数字的方案数",
               src: "/number-of-ways-to-separate-numbers/",
               score: 2817,
@@ -1737,6 +1772,11 @@ export default {
               src: "/guess-number-higher-or-lower-ii/",
             },
             {
+              title: "3117. 划分数组得到最小的值之和",
+              src: "/minimum-sum-of-values-by-dividing-array/",
+              score: 2735,
+            },
+            {
               title: "2945. 找到最大非递减数组的长度",
               score: 2943,
               src: "/find-maximum-non-decreasing-array-length/",
@@ -1775,6 +1815,29 @@ export default {
               title: "2916. 子数组不同元素数目的平方和 II",
               score: 2816,
               src: "/subarrays-distinct-element-sum-of-squares-ii/",
+            },
+          ],
+        },
+        {
+          title: "11.5 字典树优化 DP",
+          isLeaf: true,
+          child: [
+            {
+              title: "139. 单词拆分",
+              src: "/word-break/",
+            },
+            {
+              title: "140. 单词拆分 II",
+              src: "/word-break-ii/",
+            },
+            {
+              title: "472. 连接词",
+              src: "/concatenated-words/",
+            },
+            {
+              title: "2977. 转换字符串的最小成本 II",
+              src: "/minimum-cost-to-convert-string-ii/",
+              score: 2696,
             },
           ],
         },
@@ -1875,7 +1938,7 @@ export default {
         {
           title: "12.4 换根 DP",
           isLeaf: true,
-          summary: `<p>也叫二次扫描法。<br><a href="https://leetcode.cn/problems/sum-of-distances-in-tree/solution/tu-jie-yi-zhang-tu-miao-dong-huan-gen-dp-6bgb/" target="_blank">【图解】一张图秒懂换根 DP！</a></p>`,
+          summary: `<p>也叫二次扫描法。<br><a href="/sum-of-distances-in-tree/solution/tu-jie-yi-zhang-tu-miao-dong-huan-gen-dp-6bgb/" target="_blank">【图解】一张图秒懂换根 DP！</a></p>`,
           child: [
             {
               title: "834. 树中距离之和",
@@ -2120,6 +2183,11 @@ export default {
               src: "/best-time-to-buy-and-sell-stock-iii/",
             },
             {
+              title: "1422. 分割字符串的最大得分",
+              src: "/maximum-score-after-splitting-a-string/",
+              score: 1238,
+            },
+            {
               title: "2256. 最小平均差",
               score: 1395,
               src: "/minimum-average-difference/",
@@ -2362,17 +2430,14 @@ export default {
           child: [
             {
               title: "1526. 形成目标数组的子数组最少增加次数",
-              score: 1872,
               src: "/minimum-number-of-increments-on-subarrays-to-form-a-target-array/",
             },
             {
               title: "823. 带因子的二叉树",
-              score: 1900,
               src: "/binary-trees-with-factors/",
             },
             {
               title: "940. 不同的子序列 II",
-              score: 1985,
               src: "/distinct-subsequences-ii/",
             },
             {
@@ -2397,10 +2462,6 @@ export default {
               title: "2746. 字符串连接删减字母",
               score: 2126,
               src: "/decremental-string-concatenation/",
-            },
-            {
-              title: "472. 连接词",
-              src: "/concatenated-words/",
             },
             {
               title: "2930. 重新排列后包含指定子字符串的字符串数目",
@@ -2498,15 +2559,11 @@ export default {
               src: "/3aqs1c/",
             },
             {
-              title: "2189. 建造纸牌屋的方法数（会员题）",
+              title: "2189. 建造纸牌屋的方法数",
               src: "/number-of-ways-to-build-house-of-cards/",
             },
             {
-              title: "2912. 在网格上移动到目的地的方法数（会员题）",
-              src: "/number-of-ways-to-reach-destination-in-the-grid/",
-            },
-            {
-              title: "2597. 美丽子集的数目 *用 DP 解决",
+              title: "2597. 美丽子集的数目",
               score: 2023,
               src: "/the-number-of-beautiful-subsets/",
             },
