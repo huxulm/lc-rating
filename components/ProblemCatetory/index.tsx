@@ -75,7 +75,6 @@ export const DP = [
                 src: "/count-ways-to-build-good-strings/",
                 score: 1857,
               },
-
               {
                 title: "2533. 好二进制字符串的数量",
                 src: "/number-of-good-binary-strings/",
