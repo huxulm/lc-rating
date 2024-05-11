@@ -39,7 +39,7 @@ export default {
             {
               title: "2266. 统计打字方案数",
               src: "/count-number-of-texts/",
-              score: 1857,
+              score: 1694,
             },
             {
               title: "2466. 统计构造好字符串的方案数",
