@@ -2572,10 +2572,10 @@ function ProblemCategory({
         </h3>
       }
       {summary && (
-        <p
-          className="rounded summary bg-secondary-subtle text-warning-emphasis"
+        <span
+          className="d-inline-block p-2 mb-2 rounded summary bg-secondary-subtle text-warning-emphasis"
           dangerouslySetInnerHTML={{ __html: summary }}
-        ></p>
+        ></span>
       )}
       <div className={`level-${level + 1}`}>
         {data &&

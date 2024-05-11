@@ -47,7 +47,9 @@
     .summary {
         background: rgb(251, 251, 251);
         font-weight: 600;
-        max-width: 1200px;
+        a {
+            text-decoration: underline!important;
+        }
     }
 
     &.level-0 {
@@ -81,9 +83,16 @@
         .list {
             background: rgb(251, 236, 209);
             list-style: none;
-            gap: .2rem;
-            display: grid;
             max-width: 100%;
+            margin-block-end: 0;
+
+            li:nth-child(n) {
+                margin-bottom: .2rem;
+            }
+
+            li:last-child {
+                margin-bottom: 0;
+            }
 
             &.col2,
             &.col3 {
