@@ -38,9 +38,10 @@
         border-radius: 16px;
         padding: 0 2px 0 2px;        
         .rating-text {
-            font-family: '微软雅黑';
+            font-family: '黑体', '微软雅黑';
             font-weight: 900;
-            margin-left: -5px;
+            font-size: .75rem;
+            margin-left: -3px;
         }
     }
     .summary {
@@ -163,7 +164,6 @@
         background: rgb(36, 36, 36);
         .pb-rating-bg {
             background: rgb(255, 255, 255);
-            opacity: .8;
         }
         .summary {
             a {
