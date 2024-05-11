@@ -18,10 +18,17 @@ const mapCategory2TOC = (
     id: `#${hashCode(title)}`,
     title: title,
     level: level,
+    count: 0,
   } as TOC;
   // console.log(toc.title, toc.id);
   if (child && !isLeaf) {
     toc.children = child.map((c) => mapCategory2TOC(c, level + 1));
+    toc.children.forEach(t => {
+      toc.count += t.count;
+    })
+  }
+  if (isLeaf) {
+    toc.count = child.length;
   }
   return toc;
 };

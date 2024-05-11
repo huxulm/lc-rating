@@ -34,6 +34,18 @@ export const hashCode = function (s: string) {
   return hash;
 };
 
+function count(data: ProblemCategory[]) {
+  let tot = 0;
+  for (let i = 0; i < data.length; i++) {
+    if (!data[i].isLeaf) {
+      tot += count(data[i].child)
+    } else {
+      tot += data[i].child? data[i].child.length:0;
+    }
+  }
+  return tot;
+}
+
 function ProblemCategory({
   title,
   summary,

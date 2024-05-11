@@ -4,6 +4,7 @@ export interface TOC {
   children?: TOC[];
   className?: string;
   level: number;
+  count: number;
 }
 export const TableOfContent: React.FC<{ toc: TOC }> = ({ toc }) => {
   const { className = "toc-list", children = [], id = "", title = "", level = 0 } = toc;
@@ -13,7 +14,7 @@ export const TableOfContent: React.FC<{ toc: TOC }> = ({ toc }) => {
         children.map((item) => {
           return (
             <li>
-              <a className="text-danger fw-medium lh-2" href={item.id}>{item.title}</a>
+              <a className="text-danger fw-medium lh-2" href={item.id}>{`${item.title} [${item.count}]`}</a>
               {item.children && (
                 <ul>
                   {item.children.map((sub) => (
