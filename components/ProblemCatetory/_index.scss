@@ -16,7 +16,8 @@
             font-size: 1.2rem;
             text-decoration: none;
             &:hover {
-                background: rgb(253, 238, 216);
+                background: rgb(235, 238, 240);
+                padding-left: .2rem;
             }
         }
     }
@@ -33,6 +34,15 @@
 .pb-container {
     gap: 1rem;
 
+    .pb-rating-bg {
+        border-radius: 16px;
+        padding: 0 2px 0 2px;        
+        .rating-text {
+            font-family: '微软雅黑';
+            font-weight: 900;
+            margin-left: -5px;
+        }
+    }
     .summary {
         background: rgb(251, 251, 251);
         font-weight: 600;
@@ -70,7 +80,8 @@
         .list {
             background: rgb(254, 234, 200);
             list-style: none;
-            gap: 1rem;
+            gap: .2rem;
+            display: grid;
             max-width: 100%;
 
             &.col2,
@@ -137,9 +148,23 @@
 }
 
 @include color-mode(dark, false) {
+    .toc-list,
+    .toc-list ul {
+        li {
+            a {
+                &:hover {
+                    background: white;
+                    padding-left: .2rem;
+                }
+            }
+        }
+    }    
     .pb-container {
         background: rgb(36, 36, 36);
-
+        .pb-rating-bg {
+            background: rgb(255, 255, 255);
+            opacity: .8;
+        }
         .summary {
             a {
                 color: $blue;

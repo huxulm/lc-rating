@@ -1,10 +1,13 @@
 "use client";
 import Container from "react-bootstrap/Container";
-import ProblemCategory, { DP, hashCode } from "@components/ProblemCatetory";
+import ProblemCategory, {
+  hashCode,
+} from "@components/ProblemCatetory";
 import {
   TableOfContent,
   TOC,
 } from "@components/ProblemCatetory/TableOfContent";
+import Data from "@components/containers/List/data/dynamicprogramming";
 import { useEffect } from "react";
 
 const mapCategory2TOC = (
@@ -29,17 +32,17 @@ export default function () {
       let id = window.location.hash.replace("#", "");
       const ele = document.getElementById(id);
       if (ele) {
-        ele.scrollIntoView({ behavior: "instant" });
+        ele.scrollIntoView({behavior: "instant"});
         ele.focus();
       }
     }
-  };
+  }
 
   useEffect(() => scrollToComponent(), []);
   return (
     <Container fluid className="p-2 problem-list order-1">
       <div className="toc" id="toc">
-        <TableOfContent toc={mapCategory2TOC(DP[0], 0)} />
+        <TableOfContent toc={mapCategory2TOC(Data, 0)} />
       </div>
       <div
         className="pb-content ms-5 p-2"
@@ -47,9 +50,9 @@ export default function () {
         data-bs-target="#toc"
       >
         <ProblemCategory
-          title={`<p class="fs-6">来源 &nbsp;<a target="_blank" class="fs-6 link" href="https://leetcode.cn/circle/discuss/tXLS3i/">https://leetcode.cn/circle/discuss/tXLS3i/</a></p>`}
-          data={DP}
-          summary={DP[0].summary}
+          title={`<p class="fs-6 p-0">来源 &nbsp;<a target="_blank" class="fs-6 link" href="${Data.original_src}">${Data.original_src}</a></p>`}
+          data={[Data]}
+          summary={Data.summary}
         />
       </div>
     </Container>

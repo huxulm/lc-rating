@@ -10,7 +10,7 @@ export const COLORS = [
   { l: 2400, r: 3600, c: `#EA3323` },
 ];
 
-export const ColorRating = React.memo(({rating, ...props}: {rating: number, children: any}) => {
+export const ColorRating = React.memo(({rating, ...props}: {rating: number, className?: string, children: any}) => {
   const { children } = props;
   let c = COLORS.find((v) => rating >= v.l && rating < v.r);
   const color = c && c.c;
