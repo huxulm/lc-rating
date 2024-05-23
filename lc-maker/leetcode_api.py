@@ -3,6 +3,15 @@ from gql import Client, gql
 from gql.transport.aiohttp import AIOHTTPTransport
 from requests import delete
 
+def load_headers():
+    hds = {}
+    with open("hds.txt", 'r', encoding="utf-8") as r:
+        for line in r.readlines():
+            sep = line.find(":")
+            if sep != -1:
+                hds[line[:sep]] = line[sep+1:].strip()
+    return hds
+
 class LeetCodeApi:
     def __init__(self, headers) -> None:
         self.baseURL = "https://leetcode.cn"
