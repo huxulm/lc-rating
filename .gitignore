@@ -26,3 +26,5 @@ yarn-error.log*
 .idea
 .yarn
 .yarnrc.yml
+
+lc-maker/.venv
