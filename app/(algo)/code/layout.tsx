@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import MdxLayout from "@components/layouts/MdxLayout";
 import MonotoneStack from "@components/sections/mono.mdx";
 import Dijkstra from "@components/sections/dijkstra.mdx";
+import SparseTable from "@components/sections/sparestable.mdx";
+import SegmentTree from "@components/sections/segment_tree.mdx";
 import String from "@components/sections/string.mdx";
 import "../../../scss/algorithm/styles.scss";
 
@@ -20,6 +22,16 @@ const routes = [
     path: "/algorithm-templates#Dijkstra",
     display: "Dijkstra",
     mdx: <Dijkstra />,
+  },
+  {
+    path: "/algorithm-templates#SparseTable",
+    display: "SparseTable",
+    mdx: <SparseTable />,
+  },
+  {
+    path: "/algorithm-templates#SegmentTree",
+    display: "SegmentTree",
+    mdx: <SegmentTree />,
   },
 ];
 
