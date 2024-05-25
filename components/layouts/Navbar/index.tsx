@@ -79,6 +79,7 @@ export default function () {
           </span>
           <Link
             href="https://github.com/huxulm/lc-rating"
+            target="_blank"
             className="btn d-flex p-1 ms-2 rounded-circle d-none d-lg-block d-xl-block d-sm-none"
           >
             <GithubProfile width={24} height={24} classname="p-1" />
