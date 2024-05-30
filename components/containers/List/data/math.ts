@@ -2,7 +2,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 
 export default {
   title: "数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）",
-  original_src: '/circle/discuss/IYT3ss/',
+  original_src: 'https://leetcode.cn/circle/discuss/IYT3ss/',
   sort: 0,
   child: [
     {
@@ -14,23 +14,23 @@ export default {
           child: [
             {
               title: "3115. 质数的最大距离",
-              src: "/problems/maximum-prime-difference/",
+              src: "/maximum-prime-difference/",
             },
             {
               title: "2614. 对角线上的质数",
-              src: "/problems/prime-in-diagonal/",
+              src: "/prime-in-diagonal/",
             },
             {
               title: "762. 二进制表示中质数个计算置位",
-              src: "/problems/prime-number-of-set-bits-in-binary-representation/",
+              src: "/prime-number-of-set-bits-in-binary-representation/",
             },
             {
               title: "3044. 出现频率最高的质数",
-              src: "/problems/most-frequent-prime/",
+              src: "/most-frequent-prime/",
             },
             {
               title: "866. 回文质数",
-              src: "/problems/prime-palindrome/",
+              src: "/prime-palindrome/",
             },
           ],
         },
@@ -40,19 +40,19 @@ export default {
           child: [
             {
               title: "204. 计数质数",
-              src: "/problems/count-primes/",
+              src: "/count-primes/",
             },
             {
               title: "2761. 和等于目标值的质数对",
-              src: "/problems/prime-pairs-with-target-sum/",
+              src: "/prime-pairs-with-target-sum/",
             },
             {
               title: "2523. 范围内最接近的两个质数",
-              src: "/problems/closest-prime-numbers-in-range/",
+              src: "/closest-prime-numbers-in-range/",
             },
             {
               title: "2601. 质数减法运算",
-              src: "/problems/prime-subtraction-operation/",
+              src: "/prime-subtraction-operation/",
             },
           ],
         },
@@ -62,39 +62,39 @@ export default {
           child: [
             {
               title: "2521. 数组乘积中的不同质因数数目",
-              src: "/problems/distinct-prime-factors-of-product-of-array/",
+              src: "/distinct-prime-factors-of-product-of-array/",
             },
             {
               title: "2507. 使用质因数之和替换后可以取到的最小值",
-              src: "/problems/smallest-value-after-replacing-with-sum-of-prime-factors/",
+              src: "/smallest-value-after-replacing-with-sum-of-prime-factors/",
             },
             {
               title: "2584. 分割数组使乘积互质",
-              src: "/problems/split-the-array-to-make-coprime-products/",
+              src: "/split-the-array-to-make-coprime-products/",
             },
             {
               title: "2709. 最大公约数遍历",
-              src: "/problems/greatest-common-divisor-traversal/",
+              src: "/greatest-common-divisor-traversal/",
             },
             {
               title: "2862. 完全子集的最大元素和",
-              src: "/problems/maximum-element-sum-of-a-complete-subset-of-indices/",
+              src: "/maximum-element-sum-of-a-complete-subset-of-indices/",
             },
             {
               title: "2818. 操作使得分最大",
-              src: "/problems/apply-operations-to-maximize-score/",
+              src: "/apply-operations-to-maximize-score/",
             },
             {
               title: "1998. 数组的最大公因数排序",
-              src: "/problems/gcd-sort-of-an-array/",
+              src: "/gcd-sort-of-an-array/",
             },
             {
               title: "1735. 生成乘积数组的方案数",
-              src: "/problems/count-ways-to-make-array-with-product/",
+              src: "/count-ways-to-make-array-with-product/",
             },
             {
               title: "2338. 统计理想数组的数目",
-              src: "/problems/count-the-number-of-ideal-arrays/",
+              src: "/count-the-number-of-ideal-arrays/",
             },
           ],
         },
@@ -104,11 +104,11 @@ export default {
           child: [
             {
               title: "172. 阶乘后的零",
-              src: "/problems/factorial-trailing-zeroes/",
+              src: "/factorial-trailing-zeroes/",
             },
             {
               title: "793. 阶乘函数后 K 个零",
-              src: "/problems/preimage-size-of-factorial-zeroes-function/",
+              src: "/preimage-size-of-factorial-zeroes-function/",
             },
           ],
         },
@@ -118,55 +118,55 @@ export default {
           child: [
             {
               title: "2427. 公因子的数目",
-              src: "/problems/number-of-common-factors/",
+              src: "/number-of-common-factors/",
             },
             {
               title: "1952. 三除数",
-              src: "/problems/three-divisors/",
+              src: "/three-divisors/",
             },
             {
               title: "1492. n 的第 k 个因子",
-              src: "/problems/the-kth-factor-of-n/",
+              src: "/the-kth-factor-of-n/",
             },
             {
               title: "507. 完美数",
-              src: "/problems/perfect-number/",
+              src: "/perfect-number/",
             },
             {
               title: "1390. 四因数",
-              src: "/problems/four-divisors/",
+              src: "/four-divisors/",
             },
             {
               title: "1362. 最接近的因数",
-              src: "/problems/closest-divisors/",
+              src: "/closest-divisors/",
             },
             {
               title: "829. 连续整数求和",
-              src: "/problems/consecutive-numbers-sum/",
+              src: "/consecutive-numbers-sum/",
             },
             {
               title: "952. 按公因数计算最大组件大小",
-              src: "/problems/largest-component-size-by-common-factor/",
+              src: "/largest-component-size-by-common-factor/",
             },
             {
               title: "1627. 带阈值的图连通性",
-              src: "/problems/graph-connectivity-with-threshold/",
+              src: "/graph-connectivity-with-threshold/",
             },
             {
               title: "2183. 统计可以被 K 整除的下标对数目",
-              src: "/problems/count-array-pairs-divisible-by-k/",
+              src: "/count-array-pairs-divisible-by-k/",
             },
             {
               title: "2198. 单因数三元组",
-              src: "/problems/number-of-single-divisor-triplets/",
+              src: "/number-of-single-divisor-triplets/",
             },
             {
               title: "625. 最小因式分解",
-              src: "/problems/minimum-factorization/",
+              src: "/minimum-factorization/",
             },
             {
               title: "2847. 给定数字乘积的最小数字",
-              src: "/problems/smallest-number-with-given-digit-product/",
+              src: "/smallest-number-with-given-digit-product/",
             },
           ],
         },
@@ -176,55 +176,55 @@ export default {
           child: [
             {
               title: "1979. 找出数组的最大公约数",
-              src: "/problems/find-greatest-common-divisor-of-array/",
+              src: "/find-greatest-common-divisor-of-array/",
             },
             {
               title: "2807. 在链表中插入最大公约数",
-              src: "/problems/insert-greatest-common-divisors-in-linked-list/",
+              src: "/insert-greatest-common-divisors-in-linked-list/",
             },
             {
               title: "914. 卡牌分组",
-              src: "/problems/x-of-a-kind-in-a-deck-of-cards/",
+              src: "/x-of-a-kind-in-a-deck-of-cards/",
             },
             {
               title: "1071. 字符串的最大公因子",
-              src: "/problems/greatest-common-divisor-of-strings/",
+              src: "/greatest-common-divisor-of-strings/",
             },
             {
               title: "2001. 可互换矩形的组数",
-              src: "/problems/number-of-pairs-of-interchangeable-rectangles/",
+              src: "/number-of-pairs-of-interchangeable-rectangles/",
             },
             {
               title: "2344. 使数组可以被整除的最少删除次数",
-              src: "/problems/minimum-deletions-to-make-array-divisible/",
+              src: "/minimum-deletions-to-make-array-divisible/",
             },
             {
               title: "365. 水壶问题",
-              src: "/problems/water-and-jug-problem/",
+              src: "/water-and-jug-problem/",
             },
             {
               title: "858. 镜面反射",
-              src: "/problems/mirror-reflection/",
+              src: "/mirror-reflection/",
             },
             {
               title: "1250. 检查「好数组」",
-              src: "/problems/check-if-it-is-a-good-array/",
+              src: "/check-if-it-is-a-good-array/",
             },
             {
               title: "149. 直线上最多的点数",
-              src: "/problems/max-points-on-a-line/",
+              src: "/max-points-on-a-line/",
             },
             {
               title: "2607. 使子数组元素和相等",
-              src: "/problems/make-k-subarray-sums-equal/",
+              src: "/make-k-subarray-sums-equal/",
             },
             {
               title: "2543. 判断一个点是否可以到达",
-              src: "/problems/check-if-point-is-reachable/",
+              src: "/check-if-point-is-reachable/",
             },
             {
               title: "2436. 使子数组最大公约数大于一的最小分割数",
-              src: "/problems/minimum-split-into-subarrays-with-gcd-greater-than-one/",
+              src: "/minimum-split-into-subarrays-with-gcd-greater-than-one/",
             },
           ],
         },
@@ -234,15 +234,15 @@ export default {
           child: [
             {
               title: "2447. 最大公因数等于 K 的子数组数目",
-              src: "/problems/number-of-subarrays-with-gcd-equal-to-k/",
+              src: "/number-of-subarrays-with-gcd-equal-to-k/",
             },
             {
               title: "2654. 使数组所有元素变成 1 的最少操作次数",
-              src: "/problems/minimum-number-of-operations-to-make-all-array-elements-equal-to-1/",
+              src: "/minimum-number-of-operations-to-make-all-array-elements-equal-to-1/",
             },
             {
               title: "2941. 子数组的最大 GCD-Sum",
-              src: "/problems/maximum-gcd-sum-of-a-subarray/",
+              src: "/maximum-gcd-sum-of-a-subarray/",
             },
           ],
         },
@@ -252,15 +252,15 @@ export default {
           child: [
             {
               title: "1819. 序列中不同最大公约数的数目",
-              src: "/problems/number-of-different-subsequences-gcds/",
+              src: "/number-of-different-subsequences-gcds/",
             },
             {
               title: "LCP 14. 切分数组",
-              src: "/problems/qie-fen-shu-zu/",
+              src: "/qie-fen-shu-zu/",
             },
             {
               title: "2464. 有效分割中的最少子数组数目",
-              src: "/problems/minimum-subarrays-in-a-valid-split/",
+              src: "/minimum-subarrays-in-a-valid-split/",
             },
           ],
         },
@@ -270,15 +270,15 @@ export default {
           child: [
             {
               title: "2413. 最小偶倍数",
-              src: "/problems/smallest-even-multiple/",
+              src: "/smallest-even-multiple/",
             },
             {
               title: "2470. 最小公倍数为 K 的子数组数目",
-              src: "/problems/number-of-subarrays-with-lcm-equal-to-k/",
+              src: "/number-of-subarrays-with-lcm-equal-to-k/",
             },
             {
               title: "2197. 替换数组中的非互质数",
-              src: "/problems/replace-non-coprime-numbers-in-array/",
+              src: "/replace-non-coprime-numbers-in-array/",
             },
           ],
         },
@@ -288,15 +288,15 @@ export default {
           child: [
             {
               title: "2748. 美丽下标对的数目",
-              src: "/problems/number-of-beautiful-pairs/",
+              src: "/number-of-beautiful-pairs/",
             },
             {
               title: "1447. 最简分数",
-              src: "/problems/simplified-fractions/",
+              src: "/simplified-fractions/",
             },
             {
               title: "1766. 互质树",
-              src: "/problems/tree-of-coprimes/",
+              src: "/tree-of-coprimes/",
             },
           ],
         },
@@ -306,15 +306,15 @@ export default {
           child: [
             {
               title: "2453. 摧毁一系列目标",
-              src: "/problems/destroy-sequential-targets/",
+              src: "/destroy-sequential-targets/",
             },
             {
               title: "2598. 执行操作后的最大 MEX",
-              src: "/problems/smallest-missing-non-negative-integer-after-operations/",
+              src: "/smallest-missing-non-negative-integer-after-operations/",
             },
             {
               title: "1590. 使数组和能被 P 整除",
-              src: "/problems/make-sum-divisible-by-p/",
+              src: "/make-sum-divisible-by-p/",
             },
           ],
         },
@@ -324,27 +324,27 @@ export default {
           child: [
             {
               title: "326. 3 的幂",
-              src: "/problems/power-of-three/",
+              src: "/power-of-three/",
             },
             {
               title: "633. 平方数之和",
-              src: "/problems/sum-of-square-numbers/",
+              src: "/sum-of-square-numbers/",
             },
             {
               title: "279. 完全平方数",
-              src: "/problems/perfect-squares/",
+              src: "/perfect-squares/",
             },
             {
               title: "1015. 可被 K 整除的最小整数",
-              src: "/problems/smallest-integer-divisible-by-k/",
+              src: "/smallest-integer-divisible-by-k/",
             },
             {
               title: "2240. 买钢笔和铅笔的方案数",
-              src: "/problems/number-of-ways-to-buy-pens-and-pencils/",
+              src: "/number-of-ways-to-buy-pens-and-pencils/",
             },
             {
               title: "2221. 数组的三角和",
-              src: "/problems/find-triangular-sum-of-an-array/",
+              src: "/find-triangular-sum-of-an-array/",
             },
           ],
         },
@@ -359,43 +359,43 @@ export default {
           child: [
             {
               title: "2125. 银行中的激光束数量",
-              src: "/problems/number-of-laser-beams-in-a-bank/",
+              src: "/number-of-laser-beams-in-a-bank/",
             },
             {
               title: "3128. 直角三角形",
-              src: "/problems/right-triangles/",
+              src: "/right-triangles/",
             },
             {
               title: "1573. 分割字符串的方案数",
-              src: "/problems/number-of-ways-to-split-a-string/",
+              src: "/number-of-ways-to-split-a-string/",
             },
             {
               title: "2750. 将数组划分成若干好子数组的方式",
-              src: "/problems/ways-to-split-array-into-good-subarrays/",
+              src: "/ways-to-split-array-into-good-subarrays/",
             },
             {
               title: "2063. 所有子字符串中的元音",
-              src: "/problems/vowels-of-all-substrings/",
+              src: "/vowels-of-all-substrings/",
             },
             {
               title: "1922. 统计好数字的数目",
-              src: "/problems/count-good-numbers/",
+              src: "/count-good-numbers/",
             },
             {
               title: "2147. 分隔长廊的方案数",
-              src: "/problems/number-of-ways-to-divide-a-long-corridor/",
+              src: "/number-of-ways-to-divide-a-long-corridor/",
             },
             {
               title: "2963. 统计好分割方案的数目",
-              src: "/problems/count-the-number-of-good-partitions/",
+              src: "/count-the-number-of-good-partitions/",
             },
             {
               title: "2867. 统计树中的合法路径数目",
-              src: "/problems/count-valid-paths-in-a-tree/",
+              src: "/count-valid-paths-in-a-tree/",
             },
             {
               title: "2450. 应用操作后不同二进制字符串的数量",
-              src: "/problems/number-of-distinct-binary-strings-after-applying-operations/",
+              src: "/number-of-distinct-binary-strings-after-applying-operations/",
             },
           ],
         },
@@ -405,75 +405,75 @@ export default {
           child: [
             {
               title: "62. 不同路径",
-              src: "/problems/unique-paths/",
+              src: "/unique-paths/",
             },
             {
               title: "1175. 质数排列",
-              src: "/problems/prime-arrangements/",
+              src: "/prime-arrangements/",
             },
             {
               title: "1359. 有效的快递序列数目",
-              src: "/problems/count-all-valid-pickup-and-delivery-options/",
+              src: "/count-all-valid-pickup-and-delivery-options/",
             },
             {
               title: "2400. 恰好移动 k 步到达某一位置的方法数目",
-              src: "/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/",
+              src: "/number-of-ways-to-reach-a-position-after-exactly-k-steps/",
             },
             {
               title: "2514. 统计同位异构字符串数目",
-              src: "/problems/count-anagrams/",
+              src: "/count-anagrams/",
             },
             {
               title: "1643. 第 K 条最小指令",
-              src: "/problems/kth-smallest-instructions/",
+              src: "/kth-smallest-instructions/",
             },
             {
               title: "2842. 统计一个字符串的 k 子序列美丽值最大的数目",
-              src: "/problems/count-k-subsequences-of-a-string-with-maximum-beauty/",
+              src: "/count-k-subsequences-of-a-string-with-maximum-beauty/",
             },
             {
               title: "3154. 到达第 K 级台阶的方案数",
-              src: "/problems/find-number-of-ways-to-reach-the-k-th-stair/",
+              src: "/find-number-of-ways-to-reach-the-k-th-stair/",
             },
             {
               title: "1569. 将子数组重新排序得到同一个二叉搜索树的方案数",
-              src: "/problems/number-of-ways-to-reorder-array-to-get-same-bst/",
+              src: "/number-of-ways-to-reorder-array-to-get-same-bst/",
             },
             {
               title: "1866. 恰有 K 根木棍可以看到的排列数目",
-              src: "/problems/number-of-ways-to-rearrange-sticks-with-k-sticks-visible/",
+              src: "/number-of-ways-to-rearrange-sticks-with-k-sticks-visible/",
             },
             {
               title: "1467. 两个盒子中球的颜色数相同的概率",
-              src: "/problems/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls/",
+              src: "/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls/",
             },
             {
               title: "1916. 统计为蚁群构筑房间的不同顺序",
-              src: "/problems/count-ways-to-build-rooms-in-an-ant-colony/",
+              src: "/count-ways-to-build-rooms-in-an-ant-colony/",
             },
             {
               title: "1830. 使字符串有序的最少操作次数",
-              src: "/problems/minimum-number-of-operations-to-make-string-sorted/",
+              src: "/minimum-number-of-operations-to-make-string-sorted/",
             },
             {
               title: "2954. 统计感冒序列的数目",
-              src: "/problems/count-the-number-of-infection-sequences/",
+              src: "/count-the-number-of-infection-sequences/",
             },
             {
               title: "1575. 统计所有可行路径",
-              src: "/problems/count-all-possible-routes/",
+              src: "/count-all-possible-routes/",
             },
             {
               title: "LCP 25. 古董键盘",
-              src: "/problems/Uh984O/",
+              src: "/Uh984O/",
             },
             {
               title: "2539. 好子序列的个数",
-              src: "/problems/count-the-number-of-good-subsequences/",
+              src: "/count-the-number-of-good-subsequences/",
             },
             {
               title: "634. 寻找数组的错位排列",
-              src: "/problems/find-the-derangement-of-an-array/",
+              src: "/find-the-derangement-of-an-array/",
             },
           ],
         },
@@ -483,23 +483,23 @@ export default {
           child: [
             {
               title: "1641. 统计字典序元音字符串的数目",
-              src: "/problems/count-sorted-vowel-strings/",
+              src: "/count-sorted-vowel-strings/",
             },
             {
               title: "1621. 大小为 K 的不重叠线段的数目",
-              src: "/problems/number-of-sets-of-k-non-overlapping-line-segments/",
+              src: "/number-of-sets-of-k-non-overlapping-line-segments/",
             },
             {
               title: "920. 播放列表的数量",
-              src: "/problems/number-of-music-playlists/",
+              src: "/number-of-music-playlists/",
             },
             {
               title: "1735. 生成乘积数组的方案数",
-              src: "/problems/count-ways-to-make-array-with-product/",
+              src: "/count-ways-to-make-array-with-product/",
             },
             {
               title: "2338. 统计理想数组的数目",
-              src: "/problems/count-the-number-of-ideal-arrays/",
+              src: "/count-the-number-of-ideal-arrays/",
             },
           ],
         },
@@ -509,39 +509,39 @@ export default {
           child: [
             {
               title: "2652. 倍数求和",
-              src: "/problems/sum-multiples/",
+              src: "/sum-multiples/",
             },
             {
               title: "878. 第 N 个神奇数字",
-              src: "/problems/nth-magical-number/",
+              src: "/nth-magical-number/",
             },
             {
               title: "1201. 丑数 III",
-              src: "/problems/ugly-number-iii/",
+              src: "/ugly-number-iii/",
             },
             {
               title: "2929. 给小朋友们分糖果 II",
-              src: "/problems/distribute-candies-among-child-ii/",
+              src: "/distribute-candies-among-child-ii/",
             },
             {
               title: "2930. 重新排列后包含指定子字符串的字符串数目",
-              src: "/problems/number-of-strings-which-can-be-rearranged-to-contain-substring/",
+              src: "/number-of-strings-which-can-be-rearranged-to-contain-substring/",
             },
             {
               title: "2513. 最小化两个数组中的最大值",
-              src: "/problems/minimize-the-maximum-of-two-arrays/",
+              src: "/minimize-the-maximum-of-two-arrays/",
             },
             {
               title: "3116. 单面值组合的第 K 小金额",
-              src: "/problems/kth-smallest-amount-with-single-denomination-combination/",
+              src: "/kth-smallest-amount-with-single-denomination-combination/",
             },
             {
               title: "3130. 找出所有稳定的二进制数组 II",
-              src: "/problems/find-all-possible-stable-binary-arrays-ii/",
+              src: "/find-all-possible-stable-binary-arrays-ii/",
             },
             {
               title: "2927. 给小朋友们分糖果 III",
-              src: "/problems/distribute-candies-among-child-iii/",
+              src: "/distribute-candies-among-child-iii/",
             },
           ],
         },
@@ -556,39 +556,39 @@ export default {
           child: [
             {
               title: "1227. 飞机座位分配概率",
-              src: "/problems/airplane-seat-assignment-probability/",
+              src: "/airplane-seat-assignment-probability/",
             },
             {
               title: "688. 骑士在棋盘上的概率",
-              src: "/problems/knight-probability-in-chessboard/",
+              src: "/knight-probability-in-chessboard/",
             },
             {
               title: "837. 新 21 点",
-              src: "/problems/new-21-game/",
+              src: "/new-21-game/",
             },
             {
               title: "1467. 两个盒子中球的颜色数相同的概率",
-              src: "/problems/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls/",
+              src: "/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls/",
             },
             {
               title: "808. 分汤",
-              src: "/problems/soup-servings/",
+              src: "/soup-servings/",
             },
             {
               title: "LCR 185. 统计结果概率",
-              src: "/problems/nge-tou-zi-de-dian-shu-lcof/",
+              src: "/nge-tou-zi-de-dian-shu-lcof/",
             },
             {
               title: "LCP 11. 期望个数统计",
-              src: "/problems/qi-wang-ge-shu-tong-ji/",
+              src: "/qi-wang-ge-shu-tong-ji/",
             },
             {
               title: "九坤-04. 筹码游戏",
-              src: "/contest/ubiquant2022/problems/I3Gm2h/",
+              src: "https://leetcode.cn/contest/ubiquant2022/problems/I3Gm2h/",
             },
             {
               title: "1230. 抛掷硬币",
-              src: "/problems/toss-strange-coins/",
+              src: "/toss-strange-coins/",
             },
           ],
         },
@@ -603,95 +603,95 @@ export default {
           child: [
             {
               title: "292. Nim 游戏",
-              src: "/problems/nim-game/",
+              src: "/nim-game/",
             },
             {
               title: "1561. 你可以获得的最大硬币数目",
-              src: "/problems/maximum-number-of-coins-you-can-get/",
+              src: "/maximum-number-of-coins-you-can-get/",
             },
             {
               title: "1025. 除数博弈",
-              src: "/problems/divisor-game/",
+              src: "/divisor-game/",
             },
             {
               title: "2038. 如果相邻两个颜色均相同则删除当前颜色",
-              src: "/problems/remove-colored-pieces-if-both-neighbors-are-the-same-color/",
+              src: "/remove-colored-pieces-if-both-neighbors-are-the-same-color/",
             },
             {
               title: "877. 石子游戏",
-              src: "/problems/stone-game/",
+              src: "/stone-game/",
             },
             {
               title: "1510. 石子游戏 IV",
-              src: "/problems/stone-game-iv/",
+              src: "/stone-game-iv/",
             },
             {
               title: "486. 预测赢家",
-              src: "/problems/predict-the-winner/",
+              src: "/predict-the-winner/",
             },
             {
               title: "1690. 石子游戏 VII",
-              src: "/problems/stone-game-vii/",
+              src: "/stone-game-vii/",
             },
             {
               title: "1686. 石子游戏 VI",
-              src: "/problems/stone-game-vi/",
+              src: "/stone-game-vi/",
             },
             {
               title: "1927. 求和游戏",
-              src: "/problems/sum-game/",
+              src: "/sum-game/",
             },
             {
               title: "1406. 石子游戏 III",
-              src: "/problems/stone-game-iii/",
+              src: "/stone-game-iii/",
             },
             {
               title: "1140. 石子游戏 II",
-              src: "/problems/stone-game-ii/",
+              src: "/stone-game-ii/",
             },
             {
               title: "1563. 石子游戏 V",
-              src: "/problems/stone-game-v/",
+              src: "/stone-game-v/",
             },
             {
               title: "464. 我能赢吗",
-              src: "/problems/can-i-win/",
+              src: "/can-i-win/",
             },
             {
               title: "2029. 石子游戏 IX",
-              src: "/problems/stone-game-ix/",
+              src: "/stone-game-ix/",
             },
             {
               title: "810. 黑板异或游戏",
-              src: "/problems/chalkboard-xor-game/",
+              src: "/chalkboard-xor-game/",
             },
             {
               title: "1872. 石子游戏 VIII",
-              src: "/problems/stone-game-viii/",
+              src: "/stone-game-viii/",
             },
             {
               title: "913. 猫和老鼠",
-              src: "/problems/cat-and-mouse/",
+              src: "/cat-and-mouse/",
             },
             {
               title: "1728. 猫和老鼠 II",
-              src: "/problems/cat-and-mouse-ii/",
+              src: "/cat-and-mouse-ii/",
             },
             {
               title: "294. 翻转游戏 II",
-              src: "/problems/flip-game-ii/",
+              src: "/flip-game-ii/",
             },
             {
               title: "1908. Nim 游戏 II",
-              src: "/problems/game-of-nim/",
+              src: "/game-of-nim/",
             },
             {
               title: "2005. 斐波那契树的移除子树游戏",
-              src: "/problems/subtree-removal-game-with-fibonacci-tree/",
+              src: "/subtree-removal-game-with-fibonacci-tree/",
             },
             {
               title: "2868. 单词游戏",
-              src: "/problems/the-wording-game/",
+              src: "/the-wording-game/",
             },
           ],
         },
@@ -706,35 +706,35 @@ export default {
           child: [
             {
               title: "1232. 缀点成线",
-              src: "/problems/check-if-it-is-a-straight-line/",
+              src: "/check-if-it-is-a-straight-line/",
             },
             {
               title: "2280. 表示一个折线图的最少线段数",
-              src: "/problems/minimum-lines-to-represent-a-line-chart/",
+              src: "/minimum-lines-to-represent-a-line-chart/",
             },
             {
               title: "1610. 可见点的最大数目",
-              src: "/problems/maximum-number-of-visible-points/",
+              src: "/maximum-number-of-visible-points/",
             },
             {
               title: "面试题 16.03. 交点",
-              src: "/problems/intersection-lcci/",
+              src: "/intersection-lcci/",
             },
             {
               title: "面试题 16.13. 平分正方形",
-              src: "/problems/bisect-squares-lcci/",
+              src: "/bisect-squares-lcci/",
             },
             {
               title: "面试题 16.14. 最佳直线",
-              src: "/problems/best-line-lcci/",
+              src: "/best-line-lcci/",
             },
             {
               title: "LCP 37. 最小矩形面积",
-              src: "/problems/zui-xiao-ju-xing-mian-ji/",
+              src: "/zui-xiao-ju-xing-mian-ji/",
             },
             {
               title: "2152. 穿过所有点的所需最少直线数量",
-              src: "/problems/minimum-number-of-lines-to-cover-points/",
+              src: "/minimum-number-of-lines-to-cover-points/",
             },
           ],
         },
@@ -744,19 +744,19 @@ export default {
           child: [
             {
               title: "1401. 圆和矩形是否有重叠",
-              src: "/problems/circle-and-rectangle-overlapping/",
+              src: "/circle-and-rectangle-overlapping/",
             },
             {
               title: "1453. 圆形靶内的最大飞镖数量",
-              src: "/problems/maximum-number-of-darts-inside-of-a-circular-dartboard/",
+              src: "/maximum-number-of-darts-inside-of-a-circular-dartboard/",
             },
             {
               title: "LCP 42. 玩具套圈",
-              src: "/problems/vFjcfV/",
+              src: "/vFjcfV/",
             },
             {
               title: "1924. 安装栅栏 II",
-              src: "/problems/erect-the-fence-ii/",
+              src: "/erect-the-fence-ii/",
             },
           ],
         },
@@ -766,27 +766,27 @@ export default {
           child: [
             {
               title: "836. 矩形重叠",
-              src: "/problems/rectangle-overlap/",
+              src: "/rectangle-overlap/",
             },
             {
               title: "223. 矩形面积",
-              src: "/problems/rectangle-area/",
+              src: "/rectangle-area/",
             },
             {
               title: "593. 有效的正方形",
-              src: "/problems/valid-square/",
+              src: "/valid-square/",
             },
             {
               title: "939. 最小面积矩形",
-              src: "/problems/minimum-area-rectangle/",
+              src: "/minimum-area-rectangle/",
             },
             {
               title: "963. 最小面积矩形 II",
-              src: "/problems/minimum-area-rectangle-ii/",
+              src: "/minimum-area-rectangle-ii/",
             },
             {
               title: "469. 凸多边形",
-              src: "/problems/convex-polygon/",
+              src: "/convex-polygon/",
             },
           ],
         },
@@ -796,11 +796,11 @@ export default {
           child: [
             {
               title: "587. 安装栅栏",
-              src: "/problems/erect-the-fence/",
+              src: "/erect-the-fence/",
             },
             {
               title: "LCP 15. 游乐园的迷宫",
-              src: "/problems/you-le-yuan-de-mi-gong/",
+              src: "/you-le-yuan-de-mi-gong/",
             },
           ],
         },
@@ -815,51 +815,51 @@ export default {
           child: [
             {
               title: "398. 随机数索引",
-              src: "/problems/random-pick-index/",
+              src: "/random-pick-index/",
             },
             {
               title: "382. 链表随机节点",
-              src: "/problems/linked-list-random-node/",
+              src: "/linked-list-random-node/",
             },
             {
               title: "384. 打乱数组",
-              src: "/problems/shuffle-an-array/",
+              src: "/shuffle-an-array/",
             },
             {
               title: "470. 用 Rand7() 实现 Rand10()",
-              src: "/problems/implement-rand10-using-rand7/",
+              src: "/implement-rand10-using-rand7/",
             },
             {
               title: "528. 按权重随机选择",
-              src: "/problems/random-pick-with-weight/",
+              src: "/random-pick-with-weight/",
             },
             {
               title: "710. 黑名单中的随机数",
-              src: "/problems/random-pick-with-blacklist/",
+              src: "/random-pick-with-blacklist/",
             },
             {
               title: "478. 在圆内随机生成点",
-              src: "/problems/generate-random-point-in-a-circle/",
+              src: "/generate-random-point-in-a-circle/",
             },
             {
               title: "497. 非重叠矩形中的随机点",
-              src: "/problems/random-point-in-non-overlapping-rectangles/",
+              src: "/random-point-in-non-overlapping-rectangles/",
             },
             {
               title: "519. 随机翻转矩阵",
-              src: "/problems/random-flip-matrix/",
+              src: "/random-flip-matrix/",
             },
             {
               title: "380. O(1) 时间插入、删除和获取随机元素",
-              src: "/problems/insert-delete-getrandom-o1/",
+              src: "/insert-delete-getrandom-o1/",
             },
             {
               title: "381. O(1) 时间插入、删除和获取随机元素 - 允许重复",
-              src: "/problems/insert-delete-getrandom-o1-duplicates-allowed/",
+              src: "/insert-delete-getrandom-o1-duplicates-allowed/",
             },
             {
               title: "1515. 服务中心的最佳位置",
-              src: "/problems/best-position-for-a-service-centre/",
+              src: "/best-position-for-a-service-centre/",
             },
           ],
         },
@@ -874,39 +874,39 @@ export default {
           child: [
             {
               title: "9. 回文数",
-              src: "/problems/palindrome-number/",
+              src: "/palindrome-number/",
             },
             {
               title: "2396. 严格回文的数字",
-              src: "/problems/strictly-palindromic-number/",
+              src: "/strictly-palindromic-number/",
             },
             {
               title: "2217. 找到指定长度的回文数",
-              src: "/problems/find-palindrome-with-fixed-length/",
+              src: "/find-palindrome-with-fixed-length/",
             },
             {
               title: "866. 回文质数",
-              src: "/problems/prime-palindrome/",
+              src: "/prime-palindrome/",
             },
             {
               title: "2967. 使数组成为等数数组的最小代价",
-              src: "/problems/minimum-cost-to-make-array-equalindromic/",
+              src: "/minimum-cost-to-make-array-equalindromic/",
             },
             {
               title: "906. 超级回文数",
-              src: "/problems/super-palindromes/",
+              src: "/super-palindromes/",
             },
             {
               title: "2081. k 镜像数字的和",
-              src: "/problems/sum-of-k-mirror-numbers/",
+              src: "/sum-of-k-mirror-numbers/",
             },
             {
               title: "564. 寻找最近的回文数",
-              src: "/problems/find-the-closest-palindrome/",
+              src: "/find-the-closest-palindrome/",
             },
             {
               title: "479. 最大回文数乘积",
-              src: "/problems/largest-palindrome-product/",
+              src: "/largest-palindrome-product/",
             },
           ],
         },
@@ -916,11 +916,11 @@ export default {
           child: [
             {
               title: "343. 整数拆分",
-              src: "/problems/integer-break/",
+              src: "/integer-break/",
             },
             {
               title: "1808. 好因子的最大数目",
-              src: "/problems/maximize-number-of-nice-divisors/",
+              src: "/maximize-number-of-nice-divisors/",
             },
           ],
         },
@@ -930,23 +930,23 @@ export default {
           child: [
             {
               title: "1131. 绝对值表达式的最大值",
-              src: "/problems/maximum-of-absolute-value-expression/",
+              src: "/maximum-of-absolute-value-expression/",
             },
             {
               title: "3102. 最小化曼哈顿距离",
-              src: "/problems/minimize-manhattan-distances/",
+              src: "/minimize-manhattan-distances/",
             },
             {
               title: "1330. 翻转子数组得到最大的数组值",
-              src: "/problems/reverse-subarray-to-maximize-array-value/",
+              src: "/reverse-subarray-to-maximize-array-value/",
             },
             {
               title: "1956. 感染 K 种病毒所需的最短时间",
-              src: "/problems/minimum-time-for-k-virus-variants-to-spread/",
+              src: "/minimum-time-for-k-virus-variants-to-spread/",
             },
             {
               title: "2613. 美数对",
-              src: "/problems/beautiful-pairs/",
+              src: "/beautiful-pairs/",
             },
           ],
         },
@@ -956,119 +956,119 @@ export default {
           child: [
             {
               title: "2579. 统计染色格子数",
-              src: "/problems/count-total-number-of-colored-cells/",
+              src: "/count-total-number-of-colored-cells/",
             },
             {
               title: "2834. 找出美丽数组的最小和",
-              src: "/problems/find-the-minimum-possible-sum-of-a-beautiful-array/",
+              src: "/find-the-minimum-possible-sum-of-a-beautiful-array/",
             },
             {
               title: "1414. 和为 K 的最少斐波那契数字数目",
-              src: "/problems/find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k/",
+              src: "/find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k/",
             },
             {
               title: "1780. 判断一个数字是否可以表示成三的幂的和",
-              src: "/problems/check-if-number-is-a-sum-of-powers-of-three/",
+              src: "/check-if-number-is-a-sum-of-powers-of-three/",
             },
             {
               title: "3091. 执行操作使数据元素之和大于等于 K",
-              src: "/problems/apply-operations-to-make-sum-of-array-greater-than-or-equal-to-k/",
+              src: "/apply-operations-to-make-sum-of-array-greater-than-or-equal-to-k/",
             },
             {
               title: "2541. 使数组中所有元素相等的最小操作数 II",
-              src: "/problems/minimum-operations-to-make-array-equal-ii/",
+              src: "/minimum-operations-to-make-array-equal-ii/",
             },
             {
               title: "2195. 向数组中追加 K 个整数",
-              src: "/problems/append-k-integers-with-minimal-sum/",
+              src: "/append-k-integers-with-minimal-sum/",
             },
             {
               title: "2457. 美丽整数的最小增量",
-              src: "/problems/minimum-addition-to-make-integer-beautiful/",
+              src: "/minimum-addition-to-make-integer-beautiful/",
             },
             {
               title: "1017. 负二进制转换",
-              src: "/problems/convert-to-base-2/",
+              src: "/convert-to-base-2/",
             },
             {
               title: "1954. 收集足够苹果的最小花园周长",
-              src: "/problems/minimum-garden-perimeter-to-collect-enough-apples/",
+              src: "/minimum-garden-perimeter-to-collect-enough-apples/",
             },
             {
               title: "1073. 负二进制数相加",
-              src: "/problems/adding-two-negabinary-numbers/",
+              src: "/adding-two-negabinary-numbers/",
             },
             {
               title: "1823. 找出游戏的获胜者",
-              src: "/problems/find-the-winner-of-the-circular-game/",
+              src: "/find-the-winner-of-the-circular-game/",
             },
             {
               title: "166. 分数到小数",
-              src: "/problems/fraction-to-recurring-decimal/",
+              src: "/fraction-to-recurring-decimal/",
             },
             {
               title: "3012. 通过操作使数组长度最小",
-              src: "/problems/minimize-length-of-array-using-operations/",
+              src: "/minimize-length-of-array-using-operations/",
             },
             {
               title: "483. 最小好进制",
-              src: "/problems/smallest-good-base/",
+              src: "/smallest-good-base/",
             },
             {
               title: "972. 相等的有理数",
-              src: "/problems/equal-rational-numbers/",
+              src: "/equal-rational-numbers/",
             },
             {
               title: "1862. 向下取整数对和",
-              src: "/problems/sum-of-floored-pairs/",
+              src: "/sum-of-floored-pairs/",
             },
             {
               title: "1739. 放置盒子",
-              src: "/problems/building-boxes/",
+              src: "/building-boxes/",
             },
             {
               title: "2443. 反转之后的数字和",
-              src: "/problems/sum-of-number-and-its-reverse/",
+              src: "/sum-of-number-and-its-reverse/",
             },
             {
               title: "1806. 还原排列的最少操作步数",
-              src: "/problems/minimum-number-of-operations-to-reinitialize-a-permutation/",
+              src: "/minimum-number-of-operations-to-reinitialize-a-permutation/",
             },
             {
               title: "458. 可怜的小猪",
-              src: "/problems/poor-pigs/",
+              src: "/poor-pigs/",
             },
             {
               title: "60. 排列序列",
-              src: "/problems/permutation-sequence/",
+              src: "/permutation-sequence/",
             },
             {
               title: "2117. 一个区间内所有数乘积的缩写",
-              src: "/problems/abbreviating-the-product-of-a-range/",
+              src: "/abbreviating-the-product-of-a-range/",
             },
             {
               title: "LCP 02. 分式化简",
-              src: "/problems/deep-dark-fraction/",
+              src: "/deep-dark-fraction/",
             },
             {
               title: "LCP 29. 乐团站位",
-              src: "/problems/SNJvJP/",
+              src: "/SNJvJP/",
             },
             {
               title: "LCP 70. 沙地治理",
-              src: "/problems/XxZZjK/",
+              src: "/XxZZjK/",
             },
             {
               title: "660. 移除 9",
-              src: "/problems/remove-9/",
+              src: "/remove-9/",
             },
             {
               title: "2979. 最贵的无法购买的商品",
-              src: "/problems/most-expensive-item-that-can-not-be-bought/",
+              src: "/most-expensive-item-that-can-not-be-bought/",
             },
             {
               title: "2647. 把三角形染成红色",
-              src: "/problems/color-the-triangle-red/",
+              src: "/color-the-triangle-red/",
             },
           ],
         },
