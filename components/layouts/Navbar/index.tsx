@@ -50,13 +50,16 @@ export default function () {
               <Button className="fw-bold fs-6 p-1">难度练习</Button>
             </Link>
             <Link className="nav-link px-lg-3" href="/search">
-              <Button className="fw-bold fs-6 p-1">0x3F 题解</Button>
+              <Button className="fw-bold fs-6 p-1">💡0x3F</Button>
             </Link>
             <Link className="nav-link px-lg-3" href="/list/dp">
-              <Button className="fw-bold fs-6 p-1">动态规划</Button>
+              <Button className="fw-bold fs-6 p-1">📑动态规划</Button>
             </Link>
             <Link className="nav-link px-lg-3" href="/list/ds">
-              <Button className="fw-bold fs-6 p-1">数据结构</Button>
+              <Button className="fw-bold fs-6 p-1">📑数据结构</Button>
+            </Link>
+            <Link className="nav-link px-lg-3" href="/list/math">
+              <Button className="fw-bold fs-6 p-1">📑数学</Button>
             </Link>
           </Nav>
           <span className="navbar-brand fs-6 fw-semibold">
