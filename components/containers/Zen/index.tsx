@@ -38,9 +38,9 @@ import { useSolutions } from "../../../hooks/useSolutions";
 import { useQuestionTags } from "../../../hooks/useQuestionTags";
 import { useZen } from "../../../hooks/useZen";
 import { useTags } from "../../../hooks/useTags";
+import { useSite } from "../../../hooks/useSite";
 
 // Constants and Enums
-const LC_HOST = `https://leetcode.cn`;
 const canUseLocalStorage =
   typeof Storage !== "undefined" && Boolean(window?.localStorage);
 const LC_RATING_PROGRESS_KEY = (questionID: string) =>
@@ -423,10 +423,11 @@ const ZenTableComp = React.memo(
           enableColumnFilter: false,
           cell: (info) => {
             const item = info.row.original;
+            const { site } = useSite();
             return (
               <div className="d-flex justify-content-between align-items-center p-1">
                 <a
-                  href={`${LC_HOST}/contest/${item.cont_title_slug}`}
+                  href={`${site}/contest/${item.cont_title_slug}`}
                   target="_blank"
                 >
                   {item.cont_title}
@@ -449,6 +450,8 @@ const ZenTableComp = React.memo(
           cell: (info) => {
             const item = info.row.original;
             const sol = querySolution(`${item._hash}`);
+            const LC_HOST = "https://leetcode.cn";
+            const { site } = useSite();
             let link = sol
               ? LC_HOST + "/problems/" + sol[5] + "/solution/" + sol[1]
               : null;
@@ -456,7 +459,7 @@ const ZenTableComp = React.memo(
               <div className="d-flex justify-content-between align-items-center">
                 {!!item.paid_only && <span>👑</span>}
                 <a
-                  href={`${LC_HOST}/problems/${item.title_slug}`}
+                  href={`${site}/problems/${item.title_slug}`}
                   target="_blank"
                 >
                   {item.question_id}. {item.title}

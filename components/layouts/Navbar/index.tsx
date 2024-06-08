@@ -6,12 +6,16 @@ import Container from "react-bootstrap/esm/Container";
 import Link from "next/dist/client/link";
 import Button from "react-bootstrap/esm/Button";
 import ThemeSwitchButton from "../../ThemeSwitchButton";
+import SiteSwitchButton from "../../SiteSwitchButton";
 import { useTheme } from "../../../hooks/useTheme";
+import { useSite } from "../../../hooks/useSite";
 import GithubProfile from "../../gh";
 import { useEffect } from "react";
 
+
 export default function () {
   const { theme, toggleTheme } = useTheme();
+  const { lang, toggleSite } = useSite();
   useEffect(() => {
     toggleTheme(theme);
   }, []);
@@ -29,6 +33,14 @@ export default function () {
             }}
           >
             <ThemeSwitchButton height={24} width={24} theme={theme} />
+          </span>
+          <span
+            className="btn d-flex p-1 ms-2 rounded-circle"
+            onClick={() => {
+              toggleSite(lang == "zh" ? "en" : "zh");
+            }}
+          >
+            <SiteSwitchButton lang={lang} />
           </span>
           <Link
             href="https://github.com/huxulm/lc-rating"
@@ -79,6 +91,14 @@ export default function () {
             }}
           >
             <ThemeSwitchButton height={24} width={24} theme={theme} />
+          </span>
+          <span
+            className="btn d-flex p-1 ms-2 rounded-circle d-none d-lg-block d-xl-block d-sm-none"
+            onClick={() => {
+                toggleSite(lang == "zh" ? "en" : "zh");
+              }}
+          >
+            <SiteSwitchButton lang={lang} />
           </span>
           <Link
             href="https://github.com/huxulm/lc-rating"
