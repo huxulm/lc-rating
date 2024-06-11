@@ -229,7 +229,7 @@ export default {
           ],
         },
         {
-          title: "1.7 数论 GCD 性质",
+          title: "1.7 GCD 性质",
           isLeaf: true,
           child: [
             {
