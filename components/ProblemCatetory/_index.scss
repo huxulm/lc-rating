@@ -35,8 +35,8 @@
     gap: 1rem;
 
     .pb-rating-bg {
-        border-radius: 16px;
-        padding: 0 2px 0 2px;        
+        // border-radius: 16px;
+        // padding: 0 2px 0 2px;        
         .rating-text {
             font-family: '黑体', '微软雅黑';
             font-weight: 900;
@@ -171,9 +171,6 @@
     }    
     .pb-container {
         background: rgb(36, 36, 36);
-        .pb-rating-bg {
-            background: rgb(255, 255, 255);
-        }
         .summary {
             a {
                 color: $blue;

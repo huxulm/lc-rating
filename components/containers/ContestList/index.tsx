@@ -39,6 +39,7 @@ import { Contest } from "../../../util/makeData";
 import { useSolutions } from "../../../hooks/useSolutions";
 import { useContests } from "../../../hooks/useContests";
 import Container from "react-bootstrap/esm/Container";
+import clsx from "clsx";
 
 const host = `https://leetcode.cn`;
 
@@ -88,8 +89,7 @@ const problemColDef = (id: string) => {
         openUrl(link);
       };
       let difficulty: number = val[3];
-      let c = COLORS.find((v) => difficulty >= v.l && difficulty <= v.r);
-      let color = (c && c.c) || "#000000";
+      let idx = COLORS.findIndex((v) => difficulty >= v.l && difficulty <= v.r);
       let placement = `${difficulty}`;
       let sol = info.row.original.QuerySolution?.(val[4]);
       const [display, setDisplay] = useState(true);
@@ -105,7 +105,7 @@ const problemColDef = (id: string) => {
             overlay={
               <Popover id={`popover-positioned-${placement}`}>
                 {/* <Popover.Header as="h3">{`Popover ${placement}`}</Popover.Header> */}
-                <Popover.Body style={{ color, fontSize: "1.2rem" }}>
+                <Popover.Body className={clsx(`rating-color-${idx}`, "ff-st")} style={{ fontSize: "1.2rem" }}>
                   <strong>难度: </strong> {difficulty.toFixed(2)}
                 </Popover.Body>
               </Popover>
@@ -113,7 +113,7 @@ const problemColDef = (id: string) => {
           >
             <RatingCircle difficulty={val[3]} />
           </OverlayTrigger>
-          <a href={link} onClick={onClick} style={{ color }}>
+          <a href={link} onClick={onClick} className={clsx(`rating-color-${idx}`, "ff-st")} /* style={{color: `var(--rating-color-${idx})`}} */>
             {val[2]}.{val[0]}
           </a>
           {sol && <div className="fr-wrapper"><OverlayTrigger
@@ -122,7 +122,7 @@ const problemColDef = (id: string) => {
             placement={"bottom"}
             overlay={
               <Popover id={`popover-positioned-${placement}`}>
-                <Popover.Body style={{ color, fontSize: "1rem" }}>
+                <Popover.Body className={clsx(`rating-color-${idx}`, "ff-st")} style={{ fontSize: "1rem" }}>
                   {sol[0]}
                 </Popover.Body>
               </Popover>

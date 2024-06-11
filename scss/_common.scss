@@ -252,3 +252,56 @@ td,
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #a6a6a6;
 }
+
+[data-bs-theme] {
+  --rating-color-0: #848484;
+  --rating-color-1: #595959;
+  --rating-color-2: #4BA59E;
+  --rating-color-3: #1B01F5;
+  --rating-color-4: #9B1EA4;
+  --rating-color-5: #F09235;
+  --rating-color-6: #EA3323;
+}
+
+[data-bs-theme=dark] {
+  color-scheme: dark;
+  --rating-color-0: #c5c4c4;
+  --rating-color-1: #ffffff;
+  --rating-color-2: #4BA59E;
+  --rating-color-3: #6857ff;
+  --rating-color-4: #ec60f6;
+  --rating-color-5: #f8a95b;
+  --rating-color-6: #f35041;
+}
+
+.ff-st {
+  font-family: '宋体';
+}
+.ff-ht {
+  font-family: '黑体', '微软雅黑';
+}
+.rating-color-0,.rating-color-1,.rating-color-2,.rating-color-3,.rating-color-4,.rating-color-5,.rating-color-6 {
+  font-weight: bold;
+}
+
+.rating-color-0 {
+  color: var(--rating-color-0)
+}
+.rating-color-1 {
+  color: var(--rating-color-1)
+}
+.rating-color-2 {
+  color: var(--rating-color-2)
+}
+.rating-color-3 {
+  color: var(--rating-color-3)
+}
+.rating-color-4 {
+  color: var(--rating-color-4)
+}
+.rating-color-5 {
+  color: var(--rating-color-5)
+}
+.rating-color-6 {
+  color: var(--rating-color-6)
+}

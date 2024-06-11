@@ -1,7 +1,9 @@
 import React from "react";
+import clsx from "clsx";
 
 // [1200, 1399] [1400, 1599] [1600, 1899] [1900, 2099] [2100, 2399] [2400, ]
 export const COLORS = [
+  { l: 0, r: 1200, c: "#ffffff" },
   { l: 1200, r: 1400, c: `#828282` },
   { l: 1400, r: 1600, c: `#4BA59E` },
   { l: 1600, r: 1900, c: `#1B01F5` },
@@ -12,10 +14,9 @@ export const COLORS = [
 
 export const ColorRating = React.memo(({rating, ...props}: {rating: number, className?: string, children: any}) => {
   const { children } = props;
-  let c = COLORS.find((v) => rating >= v.l && rating < v.r);
-  const color = c && c.c;
-  return <span {...props} style={{
-    color: `${color}`}}>
+  let c = COLORS.findIndex((v) => rating >= v.l && rating < v.r);
+  const color = c >= 0? c : "-1";
+  return <span {...props} className={clsx('ff-ht', `rating-color-${color}`)}>
       {children}
   </span>
 })
@@ -23,17 +24,17 @@ export const ColorRating = React.memo(({rating, ...props}: {rating: number, clas
 const RatingCircle = React.forwardRef<any, any>(
   ({ as, bsPrefix, variant, size, active, className, ...props }, ref) => {
     const { difficulty = 0 } = props;
-    let c = COLORS.find((v) => difficulty >= v.l && difficulty < v.r);
-    let color = c && c.c;
-    let rating = c && ((difficulty - c.l) * 100) / (c.r - c.l + 1);
+    let idx = COLORS.findIndex((v) => difficulty >= v.l && difficulty < v.r);
+    let c = COLORS[idx]
+    let rating = (difficulty - c.l) * 100 / (c.r - c.l + 1);
     return (
       <span
         ref={ref}
         {...props}
         className="topcoder-like-circle"
         style={{
-          borderColor: `${color}`,
-          background: `linear-gradient(to top, ${color} ${rating}%, rgba(0, 0, 0, 0) ${rating}%) border-box border-box`,
+          borderColor: `var(--rating-color-${idx})`,
+          background: `linear-gradient(to top, var(--rating-color-${idx}) ${rating}%, rgba(0, 0, 0, 0) ${rating}%) border-box border-box`,
         }}
       ></span>
     );

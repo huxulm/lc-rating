@@ -1,5 +1,5 @@
 import React from "react";
-
+import clsx from "clsx";
 // [1200, 1399] [1400, 1599] [1600, 1899] [1900, 2099] [2100, 2399] [2400, ]
 export const COLORS = [
   { l: 0, r: 1200, c: "#ffffff" },
@@ -13,17 +13,17 @@ export const COLORS = [
 const RatingText = React.forwardRef<any, any>(
   ({ as, bsPrefix, variant, size, active, className, ...props }, ref) => {
     const { difficulty = 0 } = props;
-    let c = COLORS.find((v) => difficulty >= v.l && difficulty < v.r);
-    let color = c && c.c;
+    let idx = COLORS.findIndex((v) => difficulty >= v.l && difficulty < v.r);
+    let c = COLORS[idx]
     let rating = c && ((difficulty - c.l) * 100) / (c.r - c.l + 1);
     return (
       <div
         ref={ref}
-        className={className}
+        className={clsx(className, 'ff-ht')}
         {...props}
         style={{
           color: `black`,
-          background: `linear-gradient(to right, ${color} ${rating}%, rgba(0, 0, 0, 0) ${rating}%) border-box border-box`,
+          background: `linear-gradient(to right, var(--rating-color-${idx}) ${rating}%, rgba(0, 0, 0, 0) ${rating}%) border-box border-box`,
         }}
       ></div>
     );
