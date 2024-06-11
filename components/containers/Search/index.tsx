@@ -2,6 +2,7 @@
 import { useSolutions } from "../../../hooks/useSolutions";
 import { useQuestionTags } from "../../../hooks/useQuestionTags";
 import { useTags } from "../../../hooks/useTags";
+import { useSite } from "../../../hooks/useSite";
 import { useEffect, useMemo, useState } from "react";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
@@ -14,6 +15,7 @@ const LC_HOST = `https://leetcode.cn`;
 
 export default function Search() {
   const [filter, setFilter] = useState("");
+  const { site } = useSite();
   const { solutions: _solutions, isPending: solLoading } = useSolutions(filter);
   const { tags: qtags, isPending: tgLoading } = useQuestionTags(filter);
   const { tags } = useTags();
@@ -74,14 +76,14 @@ export default function Search() {
         const tags = qtags[id] ? qtags[id][0] || [] : [];
         if (
           Object.keys(selectedTags).filter((id) => !!selectedTags[id]).length ==
-            0 &&
+          0 &&
           tags.length == 0
         ) {
           return true;
         }
         if (
           Object.keys(selectedTags).filter((id) => !!selectedTags[id]).length ==
-            0 ||
+          0 ||
           tags.filter((id: string) => true === selectedTags[id]).length > 0
         ) {
           return true;
@@ -183,9 +185,8 @@ export default function Search() {
               return (
                 <span onClick={() => onSelectTags(tag[1])} className="p-1">
                   <span
-                    className={`rounded p-1 fw-medium tag ${
-                      !!selectedTags[`${tag[1]}`] ? "active" : ""
-                    }`}
+                    className={`rounded p-1 fw-medium tag ${!!selectedTags[`${tag[1]}`] ? "active" : ""
+                      }`}
                   >
                     {lang === "en" ? tag[1] : tag[2]}
                   </span>
@@ -225,7 +226,7 @@ export default function Search() {
                   if (sol) {
                     link =
                       LC_HOST + "/problems/" + sol[5] + "/solution/" + sol[1];
-                    link1 = LC_HOST + "/problems/" + sol[5];
+                    link1 = site + "/problems/" + sol[5];
                   }
                   let _tags = qtags["" + sol[6]];
                   return (

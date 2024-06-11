@@ -1,5 +1,5 @@
 import RatingCircle, { ColorRating } from "../RatingCircle";
-
+import { useSite } from "hooks/useSite";
 type ProblemCategory = {
   title: string;
   summary?: string;
@@ -98,6 +98,7 @@ function ProblemCategoryList({
   data: ProblemCategory;
   className?: string;
 }) {
+  const { site } = useSite();
   const getCols = (l: number) => {
     if (l < 12) {
       return "";
@@ -123,7 +124,7 @@ function ProblemCategoryList({
           data.child.map((item) => (
             <li className="d-flex justify-content-between">
               <a
-                href={"https://leetcode.cn/problems" + item.src}
+                href={site + "/problems" + item.src}
                 target="_blank"
               >
                 {item.title}

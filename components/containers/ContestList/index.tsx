@@ -38,6 +38,7 @@ import { useQuery } from "react-query";
 import { Contest } from "../../../util/makeData";
 import { useSolutions } from "../../../hooks/useSolutions";
 import { useContests } from "../../../hooks/useContests";
+import { useSite } from "../../../hooks/useSite";
 import Container from "react-bootstrap/esm/Container";
 
 const host = `https://leetcode.cn`;
@@ -80,9 +81,10 @@ const problemColDef = (id: string) => {
     enableColumnFilter: true,
     size: 365,
     cell: (info) => {
+      const { site } = useSite();
       // @ts-ignore
       let val: any = info.row.original[id];
-      let link = `${host}/problems/${val[1]}`;
+      let link = `${site}/problems/${val[1]}`;
       const onClick = (e: any) => {
         e.preventDefault();
         openUrl(link);
@@ -150,7 +152,8 @@ const columns = [
     // filterFn: ratingFilter,
     enableColumnFilter: false,
     cell: (info) => {
-      let link = `${host}/contest/${info.row.original.TitleSlug}`;
+      const { site } = useSite();
+      let link = `${site}/contest/${info.row.original.TitleSlug}`;
       const onClick = (e: any) => {
         e.preventDefault();
         openUrl(link);

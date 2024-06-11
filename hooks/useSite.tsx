@@ -1,5 +1,13 @@
 import React, { createContext, useContext, useReducer } from "react";
 
+const getStoredLang = () => localStorage.getItem('lang')
+const setStoredLang = (lang: string) => localStorage.setItem('lang', lang)
+
+const siteMap = {
+"zh": "https://leetcode.cn",
+"en": "https://leetcode.com",
+};
+
 type SiteStateType = {
   lang: "zh" | "en";
   site: "https://leetcode.cn" | "https://leetcode.com";
@@ -7,8 +15,8 @@ type SiteStateType = {
 
 const initialState: SiteStateType = {
   // @ts-ignore
-  lang: 'zh',
-  site: "https://leetcode.cn",
+  lang: getStoredLang() || 'zh',
+  site: siteMap[getStoredLang() || 'zh'],
 };
 
 const SiteContext = createContext<SiteStateType>(initialState);
@@ -34,7 +42,7 @@ type Action = {
 const ACTIONS: Record<string, (state: SiteStateType, action: Action) => any> =
 {
   [ActionTypes.TOGGLE_SITE]: (state, action) => {
-    const newSite = action.payload === "zh" ? "https://leetcode.cn" : "https://leetcode.com";
+    const newSite = siteMap[action.payload];
     return { ...state, lang: action.payload, site: newSite };
   },
 };
@@ -48,6 +56,7 @@ const SiteProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
   const [state, dispath] = useReducer(reducer, initialState);
   const toggleSite = (lang: "zh" | "en") => {
     dispath({ type: ActionTypes.TOGGLE_SITE, payload: lang });
+    setStoredLang(lang);
   };
 
   return (
