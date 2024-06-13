@@ -40,7 +40,7 @@ import { useZen } from "../../../hooks/useZen";
 import { useTags } from "../../../hooks/useTags";
 
 // Constants and Enums
-const LC_HOST = `https://leetcode.cn`;
+const LC_HOST = `https://leetcode.com`;
 const canUseLocalStorage =
   typeof Storage !== "undefined" && Boolean(window?.localStorage);
 const LC_RATING_PROGRESS_KEY = (questionID: string) =>
