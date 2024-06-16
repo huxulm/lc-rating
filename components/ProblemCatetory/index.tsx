@@ -123,13 +123,14 @@ function ProblemCategoryList({
           data.child.map((item) => (
             <li className="d-flex justify-content-between">
               <a
-                href={"https://leetcode.com/problems" + item.src}
+                href={"https://leetcode.cn/problems" + item.src}
                 target="_blank"
               >
                 {item.title}
               </a>
-              {item.score && (
+              {item.score ? (
                 <div className="ms-2 text-nowrap d-flex justify-content-center align-items-center pb-rating-bg">
+                  <a href={"https://leetcode.com/problems" + item.src} target="_blank"> 🇺🇸 </a>
                   <RatingCircle difficulty={Number(item.score)} />
                   <ColorRating
                     className="rating-text"
@@ -138,6 +139,8 @@ function ProblemCategoryList({
                     {Number(item.score).toFixed(0)}
                   </ColorRating>
                 </div>
+              ) : (
+                <a href={"https://leetcode.com/problems" + item.src } target="_blank"> 🇺🇸 </a>
               )}
             </li>
           ))}
