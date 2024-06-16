@@ -123,7 +123,7 @@ function ProblemCategoryList({
           data.child.map((item) => (
             <li className="d-flex justify-content-between">
               <a
-                href={"https://leetcode.cn/problems" + item.src}
+                href={"https://leetcode.com/problems" + item.src}
                 target="_blank"
               >
                 {item.title}

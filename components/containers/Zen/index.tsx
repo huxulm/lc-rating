@@ -41,6 +41,7 @@ import { useTags } from "../../../hooks/useTags";
 
 // Constants and Enums
 const LC_HOST = `https://leetcode.cn`;
+const LC_HOST_EN = `https://leetcode.com`;
 const canUseLocalStorage =
   typeof Storage !== "undefined" && Boolean(window?.localStorage);
 const LC_RATING_PROGRESS_KEY = (questionID: string) =>
@@ -453,21 +454,29 @@ const ZenTableComp = React.memo(
               ? LC_HOST + "/problems/" + sol[5] + "/solution/" + sol[1]
               : null;
             return (
-              <div className="d-flex justify-content-between align-items-center">
+            <div className="d-flex justify-content-between align-items-center">
                 {!!item.paid_only && <span>👑</span>}
                 <a
-                  href={`${LC_HOST}/problems/${item.title_slug}`}
-                  target="_blank"
+                    href={`${LC_HOST}/problems/${item.title_slug}`}
+                    target="_blank"
                 >
-                  {item.question_id}. {item.title}
+                    {item.question_id}. {item.title}
                 </a>
-                {link && (
-                  <span className="zen-ans">
-                    <a href={link}>🎈</a>
-                  </span>
-                )}
-              </div>
-            );
+                <div>
+                    {link && (
+                        <span className="zen-ans">
+                            <a href={link}>🎈</a>
+                        </span>
+                    )}
+                    <a
+                        href={`${LC_HOST_EN}/problems/${item.title_slug}`}
+                        target="_blank"
+                    >
+                        🇺🇸
+                    </a>
+                </div>
+            </div>            
+              );
           },
           enableColumnFilter: false,
           header: () => <span>标题</span>,
