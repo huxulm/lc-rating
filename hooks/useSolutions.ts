@@ -1,4 +1,5 @@
 import { useEffect, useState, useTransition } from "react"
+import { useSuspenseQuery } from "@tanstack/react-query"
 
 type Solutions = Record<string, any>;
 

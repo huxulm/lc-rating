@@ -34,7 +34,7 @@ import { rankItem } from "@tanstack/match-sorter-utils";
 
 import { getMark, setMark, getSize, setSize } from "../../../util/store";
 
-import { useQuery } from "react-query";
+import { useQuery } from "@tanstack/react-query";
 import { Contest } from "../../../util/makeData";
 import { useSolutions } from "../../../hooks/useSolutions";
 import { useContests } from "../../../hooks/useContests";
@@ -289,14 +289,11 @@ function ContestList() {
     }),
     [pageIndex, pageSize]
   );
-  const fetchDataOptions = {
-    pageIndex,
-    pageSize,
-  };
 
   const dataQuery = useQuery(
-    ["data", fetchDataOptions],
-    () => {
+    {
+      queryKey: ["data"],
+    queryFn: () => {
       return {
         rows: contests.slice(
           pageIndex * pageSize,
@@ -304,8 +301,7 @@ function ContestList() {
         ),
         pageCount: Math.ceil(contests.length / pageSize),
       }
-    },
-    { keepPreviousData: true }
+    },}
   );
 
   const [rows, pageCount] = useMemo(() => {

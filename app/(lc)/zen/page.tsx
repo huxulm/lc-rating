@@ -1,9 +1,7 @@
 "use client"
-import dynamic from 'next/dynamic'
+import {lazy} from 'react'
  
-const Zen = dynamic(() => import('@components/containers/Zen'), {
-  ssr: false,
-})
+const Zen = lazy(() => import('@components/containers/Zen'))
 
 export default function Page() {
   return <Zen />

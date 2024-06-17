@@ -1,4 +1,5 @@
 import { useEffect, useState, useTransition } from "react"
+import { useSuspenseQuery } from "@tanstack/react-query";
 
 // Question Data Type
 type ConstQuestion = {
@@ -28,10 +29,9 @@ enum Progress {
 }
 
 export function useZen(setLocalStorageProgressData: any) {
-    const [isPending, startTransition] = useTransition();
-    const [zen, setZen] = useState<ConstQuestion[]>([]);
-    useEffect(() => {
-        fetch("/lc-rating/zenk.json")
+    const {data, isFetching} = useSuspenseQuery({
+      queryKey: [],
+      queryFn: () => fetch("/lc-rating/zenk.json")
       .then((res) => res.json())
       .then((result: ConstQuestion[]) => {
         const loadedLocalStorageData: ProgressData = {};
@@ -41,13 +41,12 @@ export function useZen(setLocalStorageProgressData: any) {
             Progress.TODO;
         });
 
-        startTransition(() => {
           if (setLocalStorageProgressData) {
             setLocalStorageProgressData(loadedLocalStorageData);
           }
-          setZen(result);
-        });
-      });
-    }, []);
-    return { zen, isPending };
+          return result;
+      })
+    })
+    
+    return { zen: data, isPending: isFetching };
 }

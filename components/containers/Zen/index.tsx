@@ -38,6 +38,7 @@ import { useSolutions } from "../../../hooks/useSolutions";
 import { useQuestionTags } from "../../../hooks/useQuestionTags";
 import { useZen } from "../../../hooks/useZen";
 import { useTags } from "../../../hooks/useTags";
+import Loading from "@components/Loading";
 
 // Constants and Enums
 const LC_HOST = `https://leetcode.cn`;
@@ -268,11 +269,14 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
 
 export default function Zenk() {
   // State and hooks
-  const [isPending, startTransition] = useTransition();
+  const [_, startTransition] = useTransition();
   const [localStorageProgressData, setLocalStorageProgressData] =
     useState<ProgressData>({});
 
   const { zen: data, isPending: loading } = useZen(setLocalStorageProgressData);
+  if (loading) {
+    return <Loading />
+  }
 
   const [currentFilter, setCurrentFilter] = useState(() => {
     const lastUsedFilterKey = canUseLocalStorage
@@ -479,7 +483,7 @@ const ZenTableComp = React.memo(
               );
           },
           enableColumnFilter: false,
-          header: () => <span>标题</span>,
+          header: () => <span>题号</span>,
           // footer: (props) => props.column.id,
         },
         {
