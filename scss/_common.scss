@@ -45,8 +45,11 @@ a:hover {
   --bs-link-decoration: none;
 }
 
+.contest {
+  padding: 0 3.5rem;
+}
 .contest-table {
-  padding: 0 3rem;
+  padding: 0;
 }
 
 .cursor-pointer {
@@ -56,7 +59,7 @@ a:hover {
 
 .right-side {
   position: fixed;
-  left: calc(100vw - 1.2rem);
+  left: calc(100vw - .9rem);
   background: rgba(0, 0, 0, 0.01);
   width: 100vh;
   height: 2.5rem;

@@ -8,7 +8,7 @@ import InputGroup from "react-bootstrap/InputGroup";
 import RatingCircle, { COLORS } from "../../../components/RatingCircle";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
-import Spinner from 'react-bootstrap/Spinner';
+import Spinner from "react-bootstrap/Spinner";
 
 import {
   Column,
@@ -34,7 +34,7 @@ import { rankItem } from "@tanstack/match-sorter-utils";
 
 import { getMark, setMark, getSize, setSize } from "../../../util/store";
 
-import { useQuery } from "@tanstack/react-query";
+import { useSuspenseQuery } from "@tanstack/react-query";
 import { Contest } from "../../../util/makeData";
 import { useSolutions } from "../../../hooks/useSolutions";
 import { useContests } from "../../../hooks/useContests";
@@ -105,7 +105,10 @@ const problemColDef = (id: string) => {
             overlay={
               <Popover id={`popover-positioned-${placement}`}>
                 {/* <Popover.Header as="h3">{`Popover ${placement}`}</Popover.Header> */}
-                <Popover.Body className={clsx(`rating-color-${idx}`, "ff-st")} style={{ fontSize: "1.2rem" }}>
+                <Popover.Body
+                  className={clsx(`rating-color-${idx}`, "ff-st")}
+                  style={{ fontSize: "1.2rem" }}
+                >
                   <strong>难度: </strong> {difficulty.toFixed(2)}
                 </Popover.Body>
               </Popover>
@@ -113,24 +116,47 @@ const problemColDef = (id: string) => {
           >
             <RatingCircle difficulty={val[3]} />
           </OverlayTrigger>
-          <a href={link} onClick={onClick} className={clsx(`rating-color-${idx}`, "ff-st")} /* style={{color: `var(--rating-color-${idx})`}} */>
+          <a
+            href={link}
+            onClick={onClick}
+            className={clsx(
+              `rating-color-${idx}`,
+              "ff-st"
+            )} /* style={{color: `var(--rating-color-${idx})`}} */
+          >
             {val[2]}.{val[0]}
           </a>
-          {sol && <div className="fr-wrapper"><OverlayTrigger
-            trigger={["hover", "focus"]}
-            key={placement}
-            placement={"bottom"}
-            overlay={
-              <Popover id={`popover-positioned-${placement}`}>
-                <Popover.Body className={clsx(`rating-color-${idx}`, "ff-st")} style={{ fontSize: "1rem" }}>
-                  {sol[0]}
-                </Popover.Body>
-              </Popover>
-            }
-          >
-            <a className="fr ans" href={host + "/problems/" + sol[5] + "/solution/" + sol[1]}>🎈</a>
-          </OverlayTrigger></div>}
-          {!sol && display && <div className="fr-wrapper zen-spinner-td"><Spinner animation="border" size="sm" role="status" /></div>}
+          {sol && (
+            <div className="fr-wrapper">
+              <OverlayTrigger
+                trigger={["hover", "focus"]}
+                key={placement}
+                placement={"bottom"}
+                overlay={
+                  <Popover id={`popover-positioned-${placement}`}>
+                    <Popover.Body
+                      className={clsx(`rating-color-${idx}`, "ff-st")}
+                      style={{ fontSize: "1rem" }}
+                    >
+                      {sol[0]}
+                    </Popover.Body>
+                  </Popover>
+                }
+              >
+                <a
+                  className="fr ans"
+                  href={host + "/problems/" + sol[5] + "/solution/" + sol[1]}
+                >
+                  🎈
+                </a>
+              </OverlayTrigger>
+            </div>
+          )}
+          {!sol && display && (
+            <div className="fr-wrapper zen-spinner-td">
+              <Spinner animation="border" size="sm" role="status" />
+            </div>
+          )}
         </div>
       );
     },
@@ -258,7 +284,6 @@ function backToTop() {
 type Solution = any[];
 
 function ContestList() {
-
   // solutions
   const { solutions, isPending } = useSolutions("");
 
@@ -267,14 +292,14 @@ function ContestList() {
 
   const querySolution = (id: any): any => {
     return solutions[id];
-  }
+  };
 
   const injectSolutionQuery = (data: Contest[]) => {
-    data.forEach(v => {
+    data.forEach((v) => {
       v.QuerySolution = querySolution;
     });
     return data;
-  }
+  };
 
   const sz = getSize() || "100";
   const [{ pageIndex, pageSize }, setPagination] =
@@ -290,26 +315,22 @@ function ContestList() {
     [pageIndex, pageSize]
   );
 
-  const dataQuery = useQuery(
-    {
-      queryKey: ["data"],
+  const dataQuery = useSuspenseQuery({
+    queryKey: ["data"],
     queryFn: () => {
       return {
-        rows: contests.slice(
-          pageIndex * pageSize,
-          (pageIndex + 1) * pageSize
-        ),
+        rows: contests.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize),
         pageCount: Math.ceil(contests.length / pageSize),
-      }
-    },}
-  );
+      };
+    },
+  });
 
   const [rows, pageCount] = useMemo(() => {
-    return [contests.slice(
-      pageIndex * pageSize,
-      (pageIndex + 1) * pageSize
-    ), Math.ceil(contests.length / pageSize)]
-  }, [pageIndex, pageSize, contests])
+    return [
+      contests.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize),
+      Math.ceil(contests.length / pageSize),
+    ];
+  }, [pageIndex, pageSize, contests]);
 
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
@@ -373,7 +394,7 @@ function ContestList() {
   }, [table.getState().columnFilters[0]?.id]);
 
   return (
-    <Container fluid>
+    <Container fluid className="contest">
       <div className="contest-table">
         <Button
           variant="primary"
@@ -395,7 +416,12 @@ function ContestList() {
         >
           ↑
         </Button>
-        <Table striped bordered hover className="table table-striped overflow-x-auto">
+        <Table
+          striped
+          bordered
+          hover
+          className="table table-striped overflow-x-auto"
+        >
           <thead
             style={{
               cursor: "pointer",
@@ -454,15 +480,17 @@ function ContestList() {
                         {...{
                           onMouseDown: header.getResizeHandler(),
                           onTouchStart: header.getResizeHandler(),
-                          className: `resizer ${header.column.getIsResizing() ? "isResizing" : ""
-                            }`,
+                          className: `resizer ${
+                            header.column.getIsResizing() ? "isResizing" : ""
+                          }`,
                           style: {
                             transform:
                               columnResizeMode === "onEnd" &&
-                                header.column.getIsResizing()
-                                ? `translateX(${table.getState().columnSizingInfo
-                                  .deltaOffset
-                                }px)`
+                              header.column.getIsResizing()
+                                ? `translateX(${
+                                    table.getState().columnSizingInfo
+                                      .deltaOffset
+                                  }px)`
                                 : "",
                           },
                         }}
@@ -474,38 +502,42 @@ function ContestList() {
             ))}
           </thead>
           <tbody>
-            {!loading && table.getRowModel().rows.map((row) => {
-              return (
-                <tr
-                  key={row.id}
-                  className={
-                    selectedRow === row.original.TitleSlug ? "row-selected" : ""
-                  }
-                >
-                  {row.getVisibleCells().map((cell) => {
-                    return (
-                      <td
-                        {...{
-                          key: cell.id,
-                          className: "tb-overflow",
-                        }}
-                      >
-                        {flexRender(
-                          cell.column.columnDef.cell,
-                          cell.getContext()
-                        )}
-                      </td>
-                    );
-                  })}
-                </tr>
-              );
-            })}
+            {!loading &&
+              table.getRowModel().rows.map((row) => {
+                return (
+                  <tr
+                    key={row.id}
+                    className={
+                      selectedRow === row.original.TitleSlug
+                        ? "row-selected"
+                        : ""
+                    }
+                  >
+                    {row.getVisibleCells().map((cell) => {
+                      return (
+                        <td
+                          {...{
+                            key: cell.id,
+                            className: "tb-overflow",
+                          }}
+                        >
+                          {flexRender(
+                            cell.column.columnDef.cell,
+                            cell.getContext()
+                          )}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                );
+              })}
           </tbody>
         </Table>
-        {loading &&
+        {loading && (
           <div className="w-100 p-3 border-0 text-center">
-              <Spinner />
-          </div>}
+            <Spinner />
+          </div>
+        )}
       </div>
       <div className="d-flex flex-row justify-content-center right-side">
         <Pagination className="me-2 mb-0">
@@ -619,10 +651,11 @@ function Filter({
           onChange={(value) =>
             column.setFilterValue((old: [number, number]) => [value, old?.[1]])
           }
-          placeholder={`Min ${column.getFacetedMinMaxValues()?.[0]
-            ? `(${column.getFacetedMinMaxValues()?.[0]})`
-            : ""
-            }`}
+          placeholder={`Min ${
+            column.getFacetedMinMaxValues()?.[0]
+              ? `(${column.getFacetedMinMaxValues()?.[0]})`
+              : ""
+          }`}
         />
         <DebouncedInput
           type="number"
@@ -632,10 +665,11 @@ function Filter({
           onChange={(value) =>
             column.setFilterValue((old: [number, number]) => [old?.[0], value])
           }
-          placeholder={`Max ${column.getFacetedMinMaxValues()?.[1]
-            ? `(${column.getFacetedMinMaxValues()?.[1]})`
-            : ""
-            }`}
+          placeholder={`Max ${
+            column.getFacetedMinMaxValues()?.[1]
+              ? `(${column.getFacetedMinMaxValues()?.[1]})`
+              : ""
+          }`}
         />
       </InputGroup>
     </div>
