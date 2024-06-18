@@ -28,14 +28,14 @@ import Dropdown from "react-bootstrap/Dropdown";
 import Modal from "react-bootstrap/Modal";
 
 // Custom components
-import RatingCircle, { ColorRating } from "../../../components/RatingCircle";
-import { FilterIcon } from "../../../components/icons";
+import RatingCircle, { ColorRating } from "@components/RatingCircle";
+import { FilterIcon } from "@components/icons";
 
 // hooks
-import { useSolutions } from "../../../hooks/useSolutions";
-import { useQuestionTags } from "../../../hooks/useQuestionTags";
-import { useZen } from "../../../hooks/useZen";
-import { useTags } from "../../../hooks/useTags";
+import { useSolutions } from "@hooks/useSolutions";
+import { useQuestionTags } from "@hooks/useQuestionTags";
+import { useZen } from "@hooks/useZen";
+import { useTags } from "@hooks/useTags";
 import Loading from "@components/Loading";
 
 // Constants and Enums
