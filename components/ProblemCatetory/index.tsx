@@ -1,4 +1,7 @@
+import { ShareIcon } from "@components/icons";
 import RatingCircle, { ColorRating } from "../RatingCircle";
+import ButtonGroup from "react-bootstrap/esm/ButtonGroup";
+import Form from "react-bootstrap/esm/Form";
 
 type ProblemCategory = {
   title: string;
@@ -18,6 +21,8 @@ interface ProblemCategoryProps {
   data?: ProblemCategory[];
   className?: string;
   level?: number;
+  rating?: boolean;
+  en?: boolean;
 }
 
 export const hashCode = function (s: string) {
@@ -51,6 +56,8 @@ function ProblemCategory({
   data,
   className = "",
   level = 0,
+  rating,
+  en,
 }: ProblemCategoryProps) {
   return (
     <div className={`pb-container level-${level}` + className}>
@@ -71,11 +78,13 @@ function ProblemCategory({
             return (
               <div className={`pb-container level-${level + 2}`}>
                 {item.isLeaf ? (
-                  <ProblemCategoryList data={item} className={`leaf`} />
+                  <ProblemCategoryList rating={rating} en={en} data={item} className={`leaf`} />
                 ) : (
                   item.child &&
                   item.child?.map((item) => (
                     <ProblemCategory
+                      rating={rating}
+                      en={en}
                       level={level + 3}
                       title={item.title}
                       data={item.child}
@@ -94,9 +103,13 @@ function ProblemCategory({
 function ProblemCategoryList({
   data,
   className = "",
+  en,
+  rating,
 }: {
   data: ProblemCategory;
   className?: string;
+  en?: boolean;
+  rating?: boolean;
 }) {
   const getCols = (l: number) => {
     if (l < 12) {
@@ -127,10 +140,12 @@ function ProblemCategoryList({
                 target="_blank"
               >
                 {item.title}
+                {en && <a className="ms-2" href={"https://leetcode.com/problems" + item.src} target="_blank">
+                  <ShareIcon height={16} width={16}/>
+                </a>}
               </a>
-              {item.score ? (
+              {item.score && rating ? (
                 <div className="ms-2 text-nowrap d-flex justify-content-center align-items-center pb-rating-bg">
-                  <a href={"https://leetcode.com/problems" + item.src} target="_blank"> 🇺🇸 </a>
                   <RatingCircle difficulty={Number(item.score)} />
                   <ColorRating
                     className="rating-text"
@@ -139,9 +154,7 @@ function ProblemCategoryList({
                     {Number(item.score).toFixed(0)}
                   </ColorRating>
                 </div>
-              ) : (
-                <a href={"https://leetcode.com/problems" + item.src } target="_blank"> 🇺🇸 </a>
-              )}
+              ) : null}
             </li>
           ))}
       </ul>
