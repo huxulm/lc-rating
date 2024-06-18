@@ -272,9 +272,6 @@ export default function Zenk() {
     useState<ProgressData>({});
 
   const { zen: data, isPending: loading } = useZen(setLocalStorageProgressData);
-  if (loading) {
-    return <Loading />
-  }
 
   const [currentFilter, setCurrentFilter] = useState(() => {
     const lastUsedFilterKey = canUseLocalStorage
@@ -347,6 +344,11 @@ export default function Zenk() {
         .filter(buildTagFilterFn(settings.selectedTags, queryTags)),
     [data, currentFilter, settings]
   );
+
+
+  if (loading) {
+    return <Loading />
+  }
 
   return (
     <Container fluid="lg" className="zen-container">
