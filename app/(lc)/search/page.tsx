@@ -1,9 +1,7 @@
 "use client"
-import dynamic from 'next/dynamic'
+import { lazy } from 'react'
  
-const Search = dynamic(() => import('@components/containers/Search'), {
-  ssr: false,
-})
+const Search = lazy(() => import('@components/containers/Search'))
 
 export default function Page() {
   return <Search />
