@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState, useTransition } from "react"
 import { useSuspenseQuery } from "@tanstack/react-query";
 

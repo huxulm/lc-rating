@@ -1,5 +1,9 @@
-import MainLayout from "@components/layouts/MainLayout";
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
+
+const MainLayout = dynamic(() => import("@components/layouts/MainLayout"), {
+  ssr: false,
+});
 
 export const metadata: Metadata = {
   title: "LC-Rating & Training",

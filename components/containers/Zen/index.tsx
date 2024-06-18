@@ -1,5 +1,4 @@
 "use client";
-// React imports
 import React, { useCallback, useMemo, useState, useTransition } from "react";
 
 import {
@@ -16,7 +15,7 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-// Bootstrap components
+
 import Table from "react-bootstrap/Table";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
@@ -26,7 +25,6 @@ import FormLabel from "react-bootstrap/FormLabel";
 import Spinner from "react-bootstrap/Spinner";
 import Pagination from "react-bootstrap/Pagination";
 import Dropdown from "react-bootstrap/Dropdown";
-import FormSelect from "react-bootstrap/FormSelect";
 import Modal from "react-bootstrap/Modal";
 
 // Custom components
