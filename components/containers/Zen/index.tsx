@@ -29,7 +29,7 @@ import Modal from "react-bootstrap/Modal";
 
 // Custom components
 import RatingCircle, { ColorRating } from "@components/RatingCircle";
-import { FilterIcon } from "@components/icons";
+import { FilterIcon, ShareIcon } from "@components/icons";
 
 // hooks
 import { useSolutions } from "@hooks/useSolutions";
@@ -228,6 +228,13 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
                 id="toggle-tags"
               />
               <Form.Check
+                checked={Boolean(settings.columnVisibility.en)}
+                onChange={() => toggleVisibility("en")}
+                type="switch"
+                label="英文链接"
+                id="toggle-en"
+              />
+              <Form.Check
                 checked={Boolean(settings.columnVisibility.ratings)}
                 onChange={() => toggleVisibility("ratings")}
                 type="switch"
@@ -319,7 +326,7 @@ export default function Zenk() {
     let defaultSettings = {
       tagFilterFn: () => true,
       selectedTags: {},
-      columnVisibility: { tags: true, ratings: true },
+      columnVisibility: { tags: true, ratings: true, en: true },
     };
     if (!raw || raw === "") {
       return defaultSettings;
@@ -465,6 +472,13 @@ const ZenTableComp = React.memo(
                     target="_blank"
                 >
                     {item.question_id}. {item.title}
+                    {columnVisibility['en'] && <a
+                        href={`${LC_HOST_EN}/problems/${item.title_slug}`}
+                        target="_blank"
+                        className="ms-2"
+                    >
+                        <ShareIcon height={16} width={16}/>
+                    </a>}                    
                 </a>
                 <div>
                     {link && (
@@ -472,12 +486,6 @@ const ZenTableComp = React.memo(
                             <a href={link}>🎈</a>
                         </span>
                     )}
-                    <a
-                        href={`${LC_HOST_EN}/problems/${item.title_slug}`}
-                        target="_blank"
-                    >
-                        🇺🇸
-                    </a>
                 </div>
             </div>            
               );
