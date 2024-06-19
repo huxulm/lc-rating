@@ -3,6 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default {
   title: "DP",
   original_src: "https://leetcode.cn/circle/discuss/tXLS3i/",
+  last_update: "2024-06-19 11:15:20",
   sort: 0,
   child: [
     {
@@ -1937,7 +1938,7 @@ export default {
       ],
     },
     {
-      title: "专题：前后缀分解",
+      title: "*专题：前后缀分解",
       child: [
         {
           title: "",
@@ -2086,43 +2087,49 @@ export default {
       ],
     },
     {
-      title: "*专题：输出具体方案（打印方案）",
+      title: "*专题：输出具体方案",
       child: [
-        { title: "368. 最大整除子集", src: "/largest-divisible-subset/" },
         {
-          title: "1449. 数位成本和为目标值的最大数字",
-          src: "/form-largest-integer-with-digits-that-add-up-to-target/",
-          score: 1928,
-        },
-        {
-          title: "1092. 最短公共超序列",
-          src: "/shortest-common-supersequence/",
-          score: 1977,
-        },
-        {
-          title: "943. 最短超级串",
-          src: "/find-the-shortest-superstring/",
-          score: 2186,
-        },
-        {
-          title: "1125. 最小的必要团队",
-          src: "/smallest-sufficient-team/",
-          score: 2251,
-        },
-        {
-          title: "3149. 找出分数最低的排列",
-          src: "/find-the-minimum-cost-array-permutation/",
-          score: 2642,
-        },
-        { title: "656. 金币路径", src: "/coin-path/" },
-        {
-          title: "471. 编码最短长度的字符串",
-          src: "/encode-string-with-shortest-length/",
+          title: "",
+          isLeaf: true,
+          child: [
+            { title: "368. 最大整除子集", src: "/largest-divisible-subset/" },
+            {
+              title: "1449. 数位成本和为目标值的最大数字",
+              src: "/form-largest-integer-with-digits-that-add-up-to-target/",
+              score: 1928,
+            },
+            {
+              title: "1092. 最短公共超序列",
+              src: "/shortest-common-supersequence/",
+              score: 1977,
+            },
+            {
+              title: "943. 最短超级串",
+              src: "/find-the-shortest-superstring/",
+              score: 2186,
+            },
+            {
+              title: "1125. 最小的必要团队",
+              src: "/smallest-sufficient-team/",
+              score: 2251,
+            },
+            {
+              title: "3149. 找出分数最低的排列",
+              src: "/find-the-minimum-cost-array-permutation/",
+              score: 2642,
+            },
+            { title: "656. 金币路径", src: "/coin-path/" },
+            {
+              title: "471. 编码最短长度的字符串",
+              src: "/encode-string-with-shortest-length/",
+            },
+          ],
         },
       ],
     },
     {
-      title: "专题：把 X 变成 Y",
+      title: "*专题：把 X 变成 Y",
       child: [
         {
           title: "",
@@ -2155,7 +2162,7 @@ export default {
       ],
     },
     {
-      title: "专题：跳跃游戏",
+      title: "*专题：跳跃游戏",
       summary: "",
       child: [
         {
@@ -2209,7 +2216,7 @@ export default {
       ],
     },
     {
-      title: "其它 DP",
+      title: "*其它 DP",
       child: [
         {
           title: "",

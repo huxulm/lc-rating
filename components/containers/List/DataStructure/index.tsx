@@ -81,7 +81,7 @@ export default function () {
           />
         </Form>
         <ProblemCategory
-          title={`<p class="fs-6 p-0">来源 &nbsp;<a target="_blank" class="fs-6 link" href="${Data.original_src}">${Data.original_src}</a></p>`}
+          title={`<p class="fs-6 fw-bold fst-italic">来源:<a target="_blank" class="ms-2 fs-6 link" href="${Data.original_src}">${Data.original_src}</a> <span class="ms-3 fw-semibold fst-italic">最近更新: ${Data["last_update"]}</span></p>`}
           data={[Data]}
           en={showEn}
           rating={showRating}
