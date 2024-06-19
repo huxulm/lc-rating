@@ -1,17 +1,17 @@
 "use client";
-import { useEffect, useState, useTransition } from "react"
+import { useEffect, useState, useTransition } from "react";
 import { useSuspenseQuery } from "@tanstack/react-query";
 
 // Question Data Type
 type ConstQuestion = {
-    cont_title: string;
-    cont_title_slug: string;
-    title: string;
-    title_slug: string;
-    question_id: string;
-    paid_only: boolean;
-    rating: number;
-    _hash: number;
+  cont_title: string;
+  cont_title_slug: string;
+  title: string;
+  title_slug: string;
+  question_id: string;
+  paid_only: boolean;
+  rating: number;
+  _hash: number;
 };
 
 const LC_RATING_PROGRESS_KEY = (questionID: string) =>
@@ -30,24 +30,25 @@ enum Progress {
 }
 
 export function useZen(setLocalStorageProgressData: any) {
-    const {data, isFetching} = useSuspenseQuery({
-      queryKey: [],
-      queryFn: () => fetch("/lc-rating/zenk.json")
-      .then((res) => res.json())
-      .then((result: ConstQuestion[]) => {
-        const loadedLocalStorageData: ProgressData = {};
-        result.forEach((item) => {
-          loadedLocalStorageData[item.question_id] =
-            localStorage.getItem(LC_RATING_PROGRESS_KEY(item.question_id)) ||
-            Progress.TODO;
-        });
-
-          if (setLocalStorageProgressData) {
-            setLocalStorageProgressData(loadedLocalStorageData);
-          }
+  const { data, isFetching } = useSuspenseQuery({
+    queryKey: [],
+    queryFn: () =>
+      fetch("/lc-rating/zenk.json")
+        .then((res) => res.json())
+        .then((result: ConstQuestion[]) => {
           return result;
-      })
-    })
-    
-    return { zen: data, isPending: isFetching };
+        }),
+  });
+  useEffect(() => {
+    const loadedLocalStorageData: ProgressData = {};
+    data.forEach((item) => {
+      loadedLocalStorageData[item.question_id] =
+        localStorage.getItem(LC_RATING_PROGRESS_KEY(item.question_id)) ||
+        Progress.TODO;
+    });
+    if (setLocalStorageProgressData) {
+      setLocalStorageProgressData(loadedLocalStorageData);
+    }
+  }, [data]);
+  return { zen: data, isPending: isFetching };
 }
