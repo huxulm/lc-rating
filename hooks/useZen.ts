@@ -38,6 +38,7 @@ export function useZen(setLocalStorageProgressData: any) {
         .then((result: ConstQuestion[]) => {
           return result;
         }),
+    refetchOnWindowFocus: false,
   });
   useEffect(() => {
     const loadedLocalStorageData: ProgressData = {};

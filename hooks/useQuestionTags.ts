@@ -13,6 +13,7 @@ export function useQuestionTags(filter: any) {
           return result;
         });
     },
+    refetchOnWindowFocus: false,
   });
 
   return { tags: data, isPending: isFetching };
