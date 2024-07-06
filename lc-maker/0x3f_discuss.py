@@ -87,7 +87,7 @@ def refactor_summary(summary: str):
     return re.sub(pattern, repl, summary)
 
 def refactor_discussion_with_sub(content: str):# 有x.x的时候用这个
-    contents = content.split("\r\n")
+    contents = content.split("\n")
     # split content in section by "##"
     sub_node_list = []
     leaf_node_list = []
@@ -116,28 +116,27 @@ def refactor_discussion_with_sub(content: str):# 有x.x的时候用这个
             curr_sub = DiscussionSubNode(title, len(sub_node_list), "", [])
             sub_node_list.append(curr_sub)
             leaf_node_list = curr_sub.child
-        elif cont.startswith("-"):
+        elif cont.startswith("- ["):
             # use regex get []() content
-            parts = cont[2:].split("（")
-            part1 = parts[0]
+            pidx = cont.find(")")
+            part1 = cont[2:pidx+1]
+            remain_parts = cont[pidx+2:] # 会员题和题解会在括号之后
             markdown_match = re.match(r"\[(.*)\]\((.*)\)", part1)
             title = markdown_match.group(1)
             src = markdown_match.group(2)
             scores = None
-            remain = part1.split(f"[{title}]({src})")
-            if len(remain) > 1:
-                remain = remain[1].strip()
-                if remain.isnumeric():
-                    scores = int(remain)
+            remain = re.findall(r"\d+", remain_parts)
+            if len(remain) > 0:
+                remain = remain[0].strip()
+                scores = int(remain)
             # 有些题目只有国服有不一定有split_url 前缀
             if split_url in src:
                 src = src.split(split_url)[1]
             solution = None
             isPremium = False
-            if len(parts) > 1:
-                part2 = parts[1]
-                isPremium = part2.startswith("会员题")
-                second_markdown_match = re.match(r"\[(.*)\]\((.*)\)", part2)
+            if len(remain_parts) > 1:
+                isPremium = "会员题" in remain_parts
+                second_markdown_match = re.match(r"\[(.*)\]\((.*)\)", remain_parts)
                 if second_markdown_match:
                     solution = second_markdown_match.group(2)
                     if split_url in solution:
@@ -145,23 +144,25 @@ def refactor_discussion_with_sub(content: str):# 有x.x的时候用这个
             curr_node = DiscussionNode(title, len(node_list), src, scores, solution, isPremium)
             node_list.append(curr_node)
         else:
+            if cont.strip() == "":
+                continue
             summary += cont + "<br>"
     return sub_node_list
 
 def refactor_discussion(content: str):# 没有x.x的时候用这个
-    contents = content.split("\r\n")
+    contents = content.split("\n")
     # split content in section by "##"
     sub_node_list = []
     leaf_node_list = []
     node_list = []
     summary = ""
     for cont in contents:
-        if cont.startswith("###"):
+        if cont.startswith("##"):
             summary = refactor_summary(summary)
             if len(leaf_node_list) > 0:
                 leaf_node_list[-1].summary = summary
             summary = ""
-            title = cont.split("### ")[1]
+            title = cont.split("## ")[1]
             sub_node = DiscussionSubNode(title, len(sub_node_list), "", [])
             leaf_node_list = sub_node.child
             sub_node_list.append(sub_node)
@@ -170,26 +171,26 @@ def refactor_discussion(content: str):# 没有x.x的时候用这个
             node_list = curr_leaf.child
         elif cont.startswith("- ["):
             # use regex get []() content
-            parts = cont[2:].split("（")
-            part1 = parts[0]
+            # find the index of first )
+            pidx = cont.find(")")
+            part1 = cont[2:pidx+1]
+            remain_parts = cont[pidx+2:] # 会员题和题解会在括号之后
             markdown_match = re.match(r"\[(.*)\]\((.*)\)", part1)
             title = markdown_match.group(1)
             src = markdown_match.group(2)
             scores = None
-            remain = part1.split(f"[{title}]({src})")
-            if len(remain) > 1:
-                remain = remain[1].strip()
-                if remain.isnumeric():
-                    scores = int(remain)
+            remain = re.findall(r"\d+", remain_parts)
+            if len(remain) > 0:
+                remain = remain[0].strip()
+                scores = int(remain)
             # 有些题目只有国服有不一定有split_url 前缀
             if split_url in src:
                 src = src.split(split_url)[1]
             solution = None
             isPremium = False
-            if len(parts) > 1:
-                part2 = parts[1]
-                isPremium = part2.startswith("会员题")
-                second_markdown_match = re.match(r"\[(.*)\]\((.*)\)", part2)
+            if len(remain_parts) > 1:
+                isPremium = "会员题" in remain_parts
+                second_markdown_match = re.match(r"\[(.*)\]\((.*)\)", remain_parts)
                 if second_markdown_match:
                     solution = second_markdown_match.group(2)
                     if split_url in solution:
@@ -197,6 +198,8 @@ def refactor_discussion(content: str):# 没有x.x的时候用这个
             curr_node = DiscussionNode(title, len(node_list), src, scores, solution, isPremium)
             node_list.append(curr_node)
         else:
+            if cont.strip() == "":
+                continue
             summary += cont + "<br>"
     return sub_node_list
 
@@ -212,9 +215,10 @@ if __name__ == "__main__":
         exit(1)
     uuid = args.uuid
     title, content, last_update = get_discussion(uuid, lc)
+    content = content.replace("\r\n", "\n")
     original_src = "https://leetcode.cn/circle/discuss/" + uuid
     child_list = None
-    if re.search(r'\n## [^\n]*\n', content): # 一般来说 二级标题前会有换行符不对的话可以检查这里
+    if re.search(r'\n## [^\n]*\n', content) and re.search(r'\n### [^\n]*\n', content): # 有二级标题和三级标题
         child_list = refactor_discussion_with_sub(content)
     else:
         child_list = refactor_discussion(content)

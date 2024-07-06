@@ -5,7 +5,7 @@ import {
   TableOfContent,
   TOC,
 } from "@components/ProblemCatetory/TableOfContent";
-import Data from "@components/containers/List/data/binarysearch";
+import Data from "@components/containers/List/data/slidewindow";
 import { useEffect, useState } from "react";
 import Form from "react-bootstrap/esm/Form";
 
@@ -27,7 +27,7 @@ const mapCategory2TOC = (
     });
   }
   if (isLeaf) {
-    toc.count = child.length;
+    toc.count = child ? child.length : 0;
   }
   return toc;
 };
@@ -59,7 +59,7 @@ export default function () {
       >
         <Form
           className="position-absolute d-flex justify-content-end gap-3 fw-bold"
-          style={{ top: "80px", right: "10px" }}
+          style={{ top: "80px", right: '10px' }}
         >
           <Form.Check
             checked={showEn}
