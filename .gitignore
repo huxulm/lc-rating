@@ -30,3 +30,5 @@ yarn-error.log*
 lc-maker/.venv
 lc-maker/__pycache__
 lc-maker/hds.txt
+
+.venv
