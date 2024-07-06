@@ -61,6 +61,7 @@ class LeetCodeApi:
         variables = {"limit": "100", "skip": "0"}
         op = "favoriteMyFavorites"
         return self.client.execute(query, variable_values=variables, operation_name=op)
+    
     def getMyFav_0(self):
         query = gql("\n    query myFavoriteList {\n  myCreatedFavoriteList {\n    favorites {\n      coverUrl\n      coverEmoji\n      coverBackgroundColor\n      hasCurrentQuestion\n      isPublicFavorite\n      lastQuestionAddedAt\n      name\n      slug\n    }\n    hasMore\n    totalLength\n  }\n  myCollectedFavoriteList {\n    hasMore\n    totalLength\n    favorites {\n      coverUrl\n      coverEmoji\n      coverBackgroundColor\n      hasCurrentQuestion\n      isPublicFavorite\n      name\n      slug\n      lastQuestionAddedAt\n    }\n  }\n}\n    ")
         return self.client.execute(query, variable_values={}, operation_name="myFavoriteList")
@@ -124,3 +125,7 @@ class LeetCodeApi:
             }
     """)
         return self.client.execute(query, variable_values={"titleSlug": titleSlug}, operation_name="questionTitle")
+    
+    def qaQuestionDetail(self, uuid):
+        query = gql("""query qaQuestionDetail($uuid: ID!) {\n  qaQuestion(uuid: $uuid) {\n    ...qaQuestion\n    myAnswerId\n    __typename\n  }\n}\n\nfragment qaQuestion on QAQuestionNode {\n  ipRegion\n  uuid\n  slug\n  title\n  thumbnail\n  summary\n  content\n  slateValue\n  sunk\n  pinned\n  pinnedGlobally\n  byLeetcode\n  isRecommended\n  isRecommendedGlobally\n  subscribed\n  hitCount\n  numAnswers\n  numPeopleInvolved\n  numSubscribed\n  createdAt\n  updatedAt\n  status\n  identifier\n  resourceType\n  articleType\n  alwaysShow\n  alwaysExpand\n  score\n  favoriteCount\n  isMyFavorite\n  isAnonymous\n  canEdit\n  reactionType\n  atQuestionTitleSlug\n  blockComments\n  reactionsV2 {\n    count\n    reactionType\n    __typename\n  }\n  tags {\n    name\n    nameTranslated\n    slug\n    imgUrl\n    tagType\n    __typename\n  }\n  subject {\n    slug\n    title\n    __typename\n  }\n  contentAuthor {\n    ...contentAuthor\n    __typename\n  }\n  realAuthor {\n    ...realAuthor\n    __typename\n  }\n  __typename\n}\n\nfragment contentAuthor on ArticleAuthor {\n  username\n  userSlug\n  realName\n  avatar\n  __typename\n}\n\nfragment realAuthor on UserNode {\n  username\n  profile {\n    userSlug\n    realName\n    userAvatar\n    __typename\n  }\n  __typename\n}\n""")
+        return self.client.execute(query, variable_values={"uuid": uuid}, operation_name="qaQuestionDetail")

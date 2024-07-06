@@ -52,6 +52,24 @@ export default function () {
             <Link className="nav-link px-lg-3" href="/search">
               <Button className="fw-bold fs-6 p-1">💡0x3F</Button>
             </Link>
+            <Link className="nav-link px-lg-3" href="/list/sw">
+              <Button className="fw-bold fs-6 p-1">📑滑动窗口</Button>
+            </Link>
+            <Link className="nav-link px-lg-3" href="/list/bs">
+              <Button className="fw-bold fs-6 p-1">📑二分查找</Button>
+            </Link>
+            <Link className="nav-link px-lg-3" href="/list/ms">
+              <Button className="fw-bold fs-6 p-1">📑单调栈</Button>
+            </Link>
+            <Link className="nav-link px-lg-3" href="/list/grid">
+              <Button className="fw-bold fs-6 p-1">📑网格图</Button>
+            </Link>
+            <Link className="nav-link px-lg-3" href="/list/bit">
+              <Button className="fw-bold fs-6 p-1">📑位运算</Button>
+            </Link>
+            <Link className="nav-link px-lg-3" href="/list/graph">
+              <Button className="fw-bold fs-6 p-1">📑图论算法</Button>
+            </Link>
             <Link className="nav-link px-lg-3" href="/list/dp">
               <Button className="fw-bold fs-6 p-1">📑动态规划</Button>
             </Link>
@@ -60,6 +78,9 @@ export default function () {
             </Link>
             <Link className="nav-link px-lg-3" href="/list/math">
               <Button className="fw-bold fs-6 p-1">📑数学</Button>
+            </Link>
+            <Link className="nav-link px-lg-3" href="/list/greedy">
+              <Button className="fw-bold fs-6 p-1">📑贪心</Button>
             </Link>
           </Nav>
           <span className="navbar-brand fs-6 fw-semibold">

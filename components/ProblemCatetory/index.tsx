@@ -13,6 +13,7 @@ type ProblemCategory = {
   solution?: string;
   score?: Number;
   child?: ProblemCategory[];
+  isPremium?: boolean;
 };
 
 interface ProblemCategoryProps {
@@ -139,7 +140,7 @@ function ProblemCategoryList({
                 href={"https://leetcode.cn/problems" + item.src}
                 target="_blank"
               >
-                {item.title}
+                {item.title + (item.isPremium ? " (会员题)" : "")}
                 {en && <a className="ms-2" href={"https://leetcode.com/problems" + item.src} target="_blank">
                   <ShareIcon height={16} width={16}/>
                 </a>}
