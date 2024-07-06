@@ -1,7 +1,7 @@
 "use client";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
 import Container from "react-bootstrap/esm/Container";
 import Link from "next/dist/client/link";
 import Button from "react-bootstrap/esm/Button";
@@ -43,45 +43,47 @@ export default function () {
           className="justify-content-end"
         >
           <Nav className="me-auto">
-            <Link className="nav-link px-lg-3" href="/">
+            <Link className="nav-link d-flex" href="/">
               <Button className="fw-bold fs-6 p-1">竞赛列表</Button>
             </Link>
-            <Link className="nav-link px-lg-3" href="/zen">
+            <Link className="nav-link d-flex" href="/zen">
               <Button className="fw-bold fs-6 p-1">难度练习</Button>
             </Link>
-            <Link className="nav-link px-lg-3" href="/search">
+            <Link className="nav-link d-flex" href="/search">
               <Button className="fw-bold fs-6 p-1">💡0x3F</Button>
             </Link>
-            <Link className="nav-link px-lg-3" href="/list/sw">
-              <Button className="fw-bold fs-6 p-1">📑滑动窗口</Button>
-            </Link>
-            <Link className="nav-link px-lg-3" href="/list/bs">
-              <Button className="fw-bold fs-6 p-1">📑二分查找</Button>
-            </Link>
-            <Link className="nav-link px-lg-3" href="/list/ms">
-              <Button className="fw-bold fs-6 p-1">📑单调栈</Button>
-            </Link>
-            <Link className="nav-link px-lg-3" href="/list/grid">
-              <Button className="fw-bold fs-6 p-1">📑网格图</Button>
-            </Link>
-            <Link className="nav-link px-lg-3" href="/list/bit">
-              <Button className="fw-bold fs-6 p-1">📑位运算</Button>
-            </Link>
-            <Link className="nav-link px-lg-3" href="/list/graph">
-              <Button className="fw-bold fs-6 p-1">📑图论算法</Button>
-            </Link>
-            <Link className="nav-link px-lg-3" href="/list/dp">
-              <Button className="fw-bold fs-6 p-1">📑动态规划</Button>
-            </Link>
-            <Link className="nav-link px-lg-3" href="/list/ds">
-              <Button className="fw-bold fs-6 p-1">📑数据结构</Button>
-            </Link>
-            <Link className="nav-link px-lg-3" href="/list/math">
-              <Button className="fw-bold fs-6 p-1">📑数学</Button>
-            </Link>
-            <Link className="nav-link px-lg-3" href="/list/greedy">
-              <Button className="fw-bold fs-6 p-1">📑贪心</Button>
-            </Link>
+            <DropdownButton color="primary" title="📑题单" className="nav-link d-flex">
+              <Link className="nav-link px-lg-3" href="/list/sw">
+                <Button className="fw-bold fs-6 p-1">📑滑动窗口</Button>
+              </Link>
+              <Link className="nav-link px-lg-3" href="/list/bs">
+                <Button className="fw-bold fs-6 p-1">📑二分查找</Button>
+              </Link>
+              <Link className="nav-link px-lg-3" href="/list/ms">
+                <Button className="fw-bold fs-6 p-1">📑单调栈</Button>
+              </Link>
+              <Link className="nav-link px-lg-3" href="/list/grid">
+                <Button className="fw-bold fs-6 p-1">📑网格图</Button>
+              </Link>
+              <Link className="nav-link px-lg-3" href="/list/bit">
+                <Button className="fw-bold fs-6 p-1">📑位运算</Button>
+              </Link>
+              <Link className="nav-link px-lg-3" href="/list/graph">
+                <Button className="fw-bold fs-6 p-1">📑图论算法</Button>
+              </Link>
+              <Link className="nav-link px-lg-3" href="/list/dp">
+                <Button className="fw-bold fs-6 p-1">📑动态规划</Button>
+              </Link>
+              <Link className="nav-link px-lg-3" href="/list/ds">
+                <Button className="fw-bold fs-6 p-1">📑数据结构</Button>
+              </Link>
+              <Link className="nav-link px-lg-3" href="/list/math">
+                <Button className="fw-bold fs-6 p-1">📑数学</Button>
+              </Link>
+              <Link className="nav-link px-lg-3" href="/list/greedy">
+                <Button className="fw-bold fs-6 p-1">📑贪心</Button>
+              </Link>
+            </DropdownButton>
           </Nav>
           <span className="navbar-brand fs-6 fw-semibold">
             本页面所有题解来自{" "}
