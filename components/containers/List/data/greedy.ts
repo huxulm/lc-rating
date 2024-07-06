@@ -267,7 +267,7 @@ export default{
                             "title": "2098. 长度为 K 的最大偶数和子序列",
                             "sort": 30,
                             "src": "/subsequence-of-size-k-with-the-largest-even-sum/",
-                            "score": 40,
+                            "score": null,
                             "solution": null,
                             "isPremium": true
                         },
