@@ -13,6 +13,7 @@ type ProblemCategory = {
   solution?: string;
   score?: Number;
   child?: ProblemCategory[];
+  isPremium?: boolean;
 };
 
 interface ProblemCategoryProps {
