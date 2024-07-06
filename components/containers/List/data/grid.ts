@@ -338,20 +338,6 @@ export default{
                     ]
                 }
             ]
-        },
-        {
-            "title": "思考题",
-            "sort": 3,
-            "summary": "",
-            "child": [
-                {
-                    "title": "",
-                    "sort": 0,
-                    "isLeaf": true,
-                    "summary": "",
-                    "child": []
-                }
-            ]
         }
     ]
 } as ProblemCategory;

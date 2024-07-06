@@ -15,7 +15,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br><br>",
+                    "summary": "",
                     "child": [
                         {
                             "title": "1486. 数组异或操作",
@@ -134,7 +134,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br>AND 的数越多，结果越小。OR 的数越多，结果越大。<br><br><br>",
+                    "summary": "AND 的数越多，结果越小。OR 的数越多，结果越大。<br>",
                     "child": [
                         {
                             "title": "2980. 检查按位或是否存在尾随零",
@@ -195,8 +195,8 @@ export default{
                         {
                             "title": "2680. 最大或值",
                             "sort": 7,
-                            "src": "/maximum-or/) 1912 可以做到 $\\mathcal{O}(1",
-                            "score": null,
+                            "src": "/maximum-or/",
+                            "score": 1912,
                             "solution": null,
                             "isPremium": false
                         },
@@ -236,7 +236,7 @@ export default{
                             "title": "3171. 找到按位或最接近 K 的子数组",
                             "sort": 12,
                             "src": "/find-subarray-with-bitwise-or-closest-to-k/",
-                            "score": null,
+                            "score": 1521,
                             "solution": null,
                             "isPremium": false
                         },
@@ -269,7 +269,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br><br>另见 <a href=\"https://leetcode.cn/circle/discuss/mOr1u6/\">数据结构题单</a> 中的「0-1 字典树（异或字典树）」。<br><br>",
+                    "summary": "另见 <a href=\"https://leetcode.cn/circle/discuss/mOr1u6/\">数据结构题单</a> 中的「0-1 字典树（异或字典树）」。<br>",
                     "child": [
                         {
                             "title": "1720. 解码异或后的数组",
@@ -404,7 +404,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br><br>十进制拆位：<br><br><br>",
+                    "summary": "十进制拆位：<br>",
                     "child": [
                         {
                             "title": "477. 汉明距离总和",
@@ -417,7 +417,7 @@ export default{
                         {
                             "title": "1863. 找出所有子集的异或总和再求和",
                             "sort": 1,
-                            "src": "/sum-of-all-subset-xor-totals/) 可以做到 $\\mathcal{O}(n",
+                            "src": "/sum-of-all-subset-xor-totals/",
                             "score": null,
                             "solution": null,
                             "isPremium": false
@@ -425,8 +425,8 @@ export default{
                         {
                             "title": "2425. 所有数对的异或和",
                             "sort": 2,
-                            "src": "/bitwise-xor-of-all-pairings/) 1622 可以做到 $\\mathcal{O}(n+m",
-                            "score": null,
+                            "src": "/bitwise-xor-of-all-pairings/",
+                            "score": 1622,
                             "solution": null,
                             "isPremium": false
                         },
@@ -442,7 +442,7 @@ export default{
                             "title": "1835. 所有数对按位与结果的异或和",
                             "sort": 4,
                             "src": "/find-xor-sum-of-all-pairs-bitwise-and/",
-                            "score": null,
+                            "score": 1825,
                             "solution": null,
                             "isPremium": false
                         },
@@ -475,7 +475,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br><br>",
+                    "summary": "",
                     "child": [
                         {
                             "title": "3007. 价值和小于等于 K 的最大数字",
@@ -486,11 +486,11 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "421. 数组中两个数的最大异或值](https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array/)，[试填法题解",
+                            "title": "421. 数组中两个数的最大异或值",
                             "sort": 1,
-                            "src": "/maximum-xor-of-two-numbers-in-an-array/solution/tu-jie-jian-ji-gao-xiao-yi-tu-miao-dong-1427d/",
-                            "score": null,
-                            "solution": null,
+                            "src": "/maximum-xor-of-two-numbers-in-an-array/",
+                            "score": 1427,
+                            "solution": "/maximum-xor-of-two-numbers-in-an-array/solution/tu-jie-jian-ji-gao-xiao-yi-tu-miao-dong-1427d/",
                             "isPremium": false
                         },
                         {
@@ -530,7 +530,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br><br>",
+                    "summary": "",
                     "child": [
                         {
                             "title": "1835. 所有数对按位与结果的异或和",
@@ -561,7 +561,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br><br>",
+                    "summary": "",
                     "child": [
                         {
                             "title": "2546. 执行逐位运算使字符串相等",
@@ -583,7 +583,7 @@ export default{
                             "title": "2571. 将整数减少到零需要的最少操作数",
                             "sort": 2,
                             "src": "/minimum-operations-to-reduce-an-integer-to-0/",
-                            "score": null,
+                            "score": 1649,
                             "solution": null,
                             "isPremium": false
                         },
@@ -656,7 +656,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br><br>",
+                    "summary": "",
                     "child": [
                         {
                             "title": "136. 只出现一次的数字",
@@ -733,7 +733,7 @@ export default{
                         {
                             "title": "2154. 将找到的值乘以 2",
                             "sort": 9,
-                            "src": "/keep-multiplying-found-values-by-two/) 可以做到 $\\mathcal{O}(n",
+                            "src": "/keep-multiplying-found-values-by-two/",
                             "score": null,
                             "solution": null,
                             "isPremium": false
@@ -765,8 +765,8 @@ export default{
                         {
                             "title": "1261. 在受污染的二叉树中查找元素",
                             "sort": 13,
-                            "src": "/find-elements-in-a-contaminated-binary-tree/) 做到 $\\mathcal{O}(1",
-                            "score": null,
+                            "src": "/find-elements-in-a-contaminated-binary-tree/",
+                            "score": 1,
                             "solution": null,
                             "isPremium": false
                         },

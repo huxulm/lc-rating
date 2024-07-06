@@ -15,7 +15,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br><br>",
+                    "summary": "",
                     "child": [
                         {
                             "title": "1456. 定长子串中元音的最大数目",
@@ -36,7 +36,7 @@ export default{
                         {
                             "title": "1984. 学生分数的最小差值",
                             "sort": 2,
-                            "src": "/minimum-difference-between-highest-and-lowest-of-k-score/",
+                            "src": "/minimum-difference-between-highest-and-lowest-of-k-scores/",
                             "score": 1306,
                             "solution": null,
                             "isPremium": false
@@ -206,7 +206,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br><br>",
+                    "summary": "",
                     "child": [
                         {
                             "title": "3. 无重复字符的最长子串",
@@ -397,7 +397,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br><br>",
+                    "summary": "",
                     "child": [
                         {
                             "title": "209. 长度最小的子数组",
@@ -452,7 +452,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br><br>",
+                    "summary": "",
                     "child": [
                         {
                             "title": "2799. 统计完全子数组的数目",

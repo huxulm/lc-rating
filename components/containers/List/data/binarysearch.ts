@@ -15,7 +15,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br>请先学习：<a href=\"https://www.bilibili.com/video/BV1AP41137w7/\">二分查找 红蓝染色法【基础算法精讲 04】</a><br><br><br>",
+                    "summary": "请先学习：<a href=\"https://www.bilibili.com/video/BV1AP41137w7/\">二分查找 红蓝染色法【基础算法精讲 04】</a><br>",
                     "child": [
                         {
                             "title": "34. 在排序数组中查找元素的第一个和最后一个位置",
@@ -214,7 +214,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br><br>",
+                    "summary": "",
                     "child": [
                         {
                             "title": "1283. 使结果不超过阈值的最小除数",
@@ -325,7 +325,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br><a href=\"https://leetcode.cn/problems/h-index-ii/solution/tu-jie-yi-tu-zhang-wo-er-fen-da-an-si-ch-d15k/\">一图掌握二分答案！四种写法！</a><br><br>在练习时，请注意「求最小」和「求最大」的二分写法上的区别。<br><br>前面的「求最小」和二分查找求「排序数组中某元素的第一个位置」是类似的，按照红蓝染色法，左边是不满足要求的（红色），右边则是满足要求的（蓝色）。<br><br>「求最大」的题目则相反，左边是满足要求的（蓝色），右边是不满足要求的（红色）。这会导致二分写法和上面的「求最小」有一些区别。<br><br>以开区间二分为例：<br><br>- 求最小：`check(mid) == true` 时更新 `right = mid`，反之更新 `left = mid`，最后返回 `right`。<br>- 求最大：`check(mid) == true` 时更新 `left = mid`，反之更新 `right = mid`，最后返回 `left`。<br><br>对于开区间写法，简单来说 `check(mid) == true` 时更新的是谁，最后就返回谁。相比其他二分写法，开区间写法不需要思考加一减一等细节，个人推荐使用开区间写二分。<br><br><br>",
+                    "summary": "<a href=\"https://leetcode.cn/problems/h-index-ii/solution/tu-jie-yi-tu-zhang-wo-er-fen-da-an-si-ch-d15k/\">一图掌握二分答案！四种写法！</a><br>在练习时，请注意「求最小」和「求最大」的二分写法上的区别。<br>前面的「求最小」和二分查找求「排序数组中某元素的第一个位置」是类似的，按照红蓝染色法，左边是不满足要求的（红色），右边则是满足要求的（蓝色）。<br>「求最大」的题目则相反，左边是满足要求的（蓝色），右边是不满足要求的（红色）。这会导致二分写法和上面的「求最小」有一些区别。<br>以开区间二分为例：<br>- 求最小：`check(mid) == true` 时更新 `right = mid`，反之更新 `left = mid`，最后返回 `right`。<br>- 求最大：`check(mid) == true` 时更新 `left = mid`，反之更新 `right = mid`，最后返回 `left`。<br>对于开区间写法，简单来说 `check(mid) == true` 时更新的是谁，最后就返回谁。相比其他二分写法，开区间写法不需要思考加一减一等细节，个人推荐使用开区间写二分。<br>",
                     "child": [
                         {
                             "title": "275. H 指数 II",
@@ -468,7 +468,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br>二分的不是答案，而是一个和答案有关的值（间接值）。<br><br><br>",
+                    "summary": "二分的不是答案，而是一个和答案有关的值（间接值）。<br>",
                     "child": [
                         {
                             "title": "3143. 正方形中的最多点数",
@@ -499,7 +499,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br>本质是二分答案求最小。<br><br><br>",
+                    "summary": "本质是二分答案求最小。<br>",
                     "child": [
                         {
                             "title": "410. 分割数组的最大值",
@@ -553,7 +553,7 @@ export default{
                             "title": "778. 水位上升的泳池中游泳",
                             "sort": 6,
                             "src": "/swim-in-rising-water/",
-                            "score": null,
+                            "score": 2097,
                             "solution": null,
                             "isPremium": false
                         },
@@ -594,7 +594,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br>本质是二分答案求最大。<br><br><br>",
+                    "summary": "本质是二分答案求最大。<br>",
                     "child": [
                         {
                             "title": "2517. 礼盒的最大甜蜜度",
@@ -665,7 +665,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br>部分题目也可以用堆解决。<br><br><br>",
+                    "summary": "部分题目也可以用堆解决。<br>",
                     "child": [
                         {
                             "title": "378. 有序矩阵中第 K 小的元素",
@@ -800,7 +800,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<br><br>",
+                    "summary": "",
                     "child": [
                         {
                             "title": "2476. 二叉搜索树最近节点查询",

@@ -9,14 +9,14 @@ class DiscussionNode:
     title: str
     sort: int
     src: str
-    scores: int
+    score: int
     solution: str
     isPremium: bool
-    def __init__(self, title: str, sort: int, src: str, scores: int, solution: str, isPremium: bool):
+    def __init__(self, title: str, sort: int, src: str, score: int, solution: str, isPremium: bool):
         self.title = title
         self.sort = sort
         self.src = src
-        self.scores = scores
+        self.score = score
         self.solution = solution
         self.isPremium = isPremium
 
@@ -25,7 +25,7 @@ class DiscussionNode:
             "title": self.title,
             "sort": self.sort,
             "src": self.src,
-            "scores": self.scores,
+            "score": self.score,
             "solution": self.solution,
             "isPremium": self.isPremium
         }
@@ -124,11 +124,11 @@ def refactor_discussion_with_sub(content: str):# 有x.x的时候用这个
             markdown_match = re.match(r"\[(.*)\]\((.*)\)", part1)
             title = markdown_match.group(1)
             src = markdown_match.group(2)
-            scores = None
+            score = None
             remain = re.findall(r"\d+", remain_parts)
             if len(remain) > 0:
                 remain = remain[0].strip()
-                scores = int(remain)
+                score = int(remain)
             # 有些题目只有国服有不一定有split_url 前缀
             if split_url in src:
                 src = src.split(split_url)[1]
@@ -141,7 +141,7 @@ def refactor_discussion_with_sub(content: str):# 有x.x的时候用这个
                     solution = second_markdown_match.group(2)
                     if split_url in solution:
                         solution = solution.split(split_url)[1]
-            curr_node = DiscussionNode(title, len(node_list), src, scores, solution, isPremium)
+            curr_node = DiscussionNode(title, len(node_list), src, score, solution, isPremium)
             node_list.append(curr_node)
         else:
             if cont.strip() == "":
@@ -178,11 +178,11 @@ def refactor_discussion(content: str):# 没有x.x的时候用这个
             markdown_match = re.match(r"\[(.*)\]\((.*)\)", part1)
             title = markdown_match.group(1)
             src = markdown_match.group(2)
-            scores = None
+            score = None
             remain = re.findall(r"\d+", remain_parts)
             if len(remain) > 0:
                 remain = remain[0].strip()
-                scores = int(remain)
+                score = int(remain)
             # 有些题目只有国服有不一定有split_url 前缀
             if split_url in src:
                 src = src.split(split_url)[1]
@@ -195,7 +195,7 @@ def refactor_discussion(content: str):# 没有x.x的时候用这个
                     solution = second_markdown_match.group(2)
                     if split_url in solution:
                         solution = solution.split(split_url)[1]
-            curr_node = DiscussionNode(title, len(node_list), src, scores, solution, isPremium)
+            curr_node = DiscussionNode(title, len(node_list), src, score, solution, isPremium)
             node_list.append(curr_node)
         else:
             if cont.strip() == "":
@@ -227,6 +227,6 @@ if __name__ == "__main__":
         "original_src": original_src,
         "last_update": last_update,
         "sort": 0,
-        "child": [child.to_dict() for child in child_list if child.title != "分类题单"]
+        "child": [child.to_dict() for child in child_list if child.title != "分类题单" and child.title != "关联题单"]
     }
     print("import ProblemCategory from \"@components/ProblemCatetory\";\n\nexport default" + json.dumps(parent, indent=4, ensure_ascii=False) + " as ProblemCategory;")
