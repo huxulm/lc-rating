@@ -782,11 +782,6 @@ export default {
             },
           ],
         },
-        {
-          title: "3.7 单调栈",
-          isLeaf: true,
-          summary: `<a href="https://leetcode.cn/circle/discuss/9oZFK9/" target="_blank">单调栈题单</a>`,
-        },
       ],
     },
     {
