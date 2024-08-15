@@ -121,7 +121,7 @@ def refactor_discussion_with_sub(content: str):# 有x.x的时候用这个
             pidx = cont.find(")")
             part1 = cont[2:pidx+1]
             remain_parts = cont[pidx+2:] # 会员题和题解会在括号之后
-            markdown_match = re.match(r"\[(.*)\]\((.*)\)", part1)
+            markdown_match = re.match(r"-\s*\[(.*?)\]\((.*?)\)(?:\((.*?)\))?", cont)
             title = markdown_match.group(1)
             src = markdown_match.group(2)
             score = None
@@ -147,6 +147,7 @@ def refactor_discussion_with_sub(content: str):# 有x.x的时候用这个
             if cont.strip() == "":
                 continue
             summary += cont + "<br>"
+
     return sub_node_list
 
 def refactor_discussion(content: str):# 没有x.x的时候用这个
