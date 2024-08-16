@@ -1,8 +1,8 @@
 {
-  "name": "front-vite",
-  "private": true,
+  "name": "lc-rating",
+  "private": false,
   "homepage": "https://huxulm.github.io/lc-rating",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
