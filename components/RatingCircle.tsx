@@ -9,7 +9,7 @@ export const COLORS = [
   { l: 1600, r: 1900, c: `#1B01F5` },
   { l: 1900, r: 2100, c: `#9B1EA4` },
   { l: 2100, r: 2400, c: `#F09235` },
-  { l: 2400, r: 3600, c: `#EA3323` },
+  { l: 2400, r: 4000, c: `#EA3323` },
 ];
 
 export const ColorRating = React.memo(({rating, ...props}: {rating: number, className?: string, children: any}) => {

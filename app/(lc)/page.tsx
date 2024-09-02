@@ -2,7 +2,7 @@
 
 import { lazy } from "react";
 
-const ContestList = lazy(() => delay(import("@components/containers/ContestList"), 30))
+const ContestList = lazy(() => import("@components/containers/ContestList"))
 
 function delay(fn: Promise<any>, timeout: number) {
   return new Promise<any>(resolve => {
