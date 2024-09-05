@@ -1,4 +1,6 @@
 "use client";
+import { useEffect } from "react";
+import { GithubBasicBadge as GithubBadge  } from "../../gh"
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import DropdownButton from "react-bootstrap/DropdownButton";
@@ -7,8 +9,7 @@ import Link from "next/dist/client/link";
 import Button from "react-bootstrap/esm/Button";
 import ThemeSwitchButton from "../../ThemeSwitchButton";
 import { useTheme } from "../../../hooks/useTheme";
-import GithubProfile from "../../gh";
-import { useEffect } from "react";
+// import GithubProfile from "../../gh";
 
 export default function () {
   const { theme, toggleTheme } = useTheme();
@@ -34,7 +35,7 @@ export default function () {
             href="https://github.com/huxulm/lc-rating"
             className="btn d-flex p-1 ms-2 rounded-circle"
           >
-            <GithubProfile width={24} height={24} classname="p-1" />
+            {/* <GithubProfile width={24} height={24} classname="p-1" /> */}
           </Link>
         </div>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -52,7 +53,11 @@ export default function () {
             <Link className="nav-link d-flex" href="/search">
               <Button className="fw-bold fs-6 p-1">💡0x3F</Button>
             </Link>
-            <DropdownButton color="primary" title="📑题单" className="nav-link d-flex">
+            <DropdownButton
+              color="primary"
+              title="📑题单"
+              className="nav-link d-flex"
+            >
               <Link className="nav-link px-lg-3" href="/list/sw">
                 <Button className="fw-bold fs-6 p-1">📑滑动窗口</Button>
               </Link>
@@ -109,9 +114,10 @@ export default function () {
           <Link
             href="https://github.com/huxulm/lc-rating"
             target="_blank"
-            className="btn d-flex p-1 ms-2 rounded-circle d-none d-lg-block d-xl-block d-sm-none"
+            className="d-flex p-1 ms-2 d-none d-lg-block d-xl-block d-sm-none"
           >
-            <GithubProfile width={24} height={24} classname="p-1" />
+            {/* @ts-ignore */}
+            <GithubBadge url="https://github.com/huxulm/lc-rating" theme="system" text="" icon="octocat" />
           </Link>
         </Navbar.Collapse>
       </Container>
