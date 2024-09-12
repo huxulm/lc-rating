@@ -1,5 +1,4 @@
 "use client";
-import { useEffect } from "react";
 import { GithubBasicBadge as GithubBadge  } from "../../gh"
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -10,7 +9,6 @@ import Button from "react-bootstrap/esm/Button";
 import ThemeSwitchButton from "../../ThemeSwitchButton";
 import { useTheme } from "../../../hooks/useTheme";
 // import GithubProfile from "../../gh";
-import GithubProfile from "../../gh";
 import { useEffect, useState, useCallback } from "react";
 import SyncProgressModal from "@components/SyncProgressModal";
 
