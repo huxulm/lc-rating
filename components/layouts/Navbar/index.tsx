@@ -10,9 +10,25 @@ import Button from "react-bootstrap/esm/Button";
 import ThemeSwitchButton from "../../ThemeSwitchButton";
 import { useTheme } from "../../../hooks/useTheme";
 // import GithubProfile from "../../gh";
+import GithubProfile from "../../gh";
+import { useEffect, useState, useCallback } from "react";
+import SyncProgressModal from "@components/SyncProgressModal";
 
 export default function () {
   const { theme, toggleTheme } = useTheme();
+  const [showModal, setShowModal] = useState(false);
+
+  const handleModalState = useCallback((state: boolean) => {
+    setShowModal(state);
+    if (!state) {  // When closing the modal
+      // Perform side effects here
+      window.location.reload();
+    }
+  }, []);
+
+  const handleOpenModal = () => handleModalState(true);
+  const handleCloseModal = () => handleModalState(false);
+  
   useEffect(() => {
     toggleTheme(theme);
   }, []);
@@ -53,11 +69,13 @@ export default function () {
             <Link className="nav-link d-flex" href="/search">
               <Button className="fw-bold fs-6 p-1">💡0x3F</Button>
             </Link>
-            <DropdownButton
-              color="primary"
-              title="📑题单"
-              className="nav-link d-flex"
-            >
+
+            <div className="nav-link d-flex">
+              <Button className="fw-bold fs-6 p-1" onClick={handleOpenModal}>同步进度</Button>
+            </div>
+            <SyncProgressModal show={showModal} onHide={handleCloseModal}/>
+
+            <DropdownButton color="primary" title="📑题单" className="nav-link d-flex">
               <Link className="nav-link px-lg-3" href="/list/sw">
                 <Button className="fw-bold fs-6 p-1">📑滑动窗口</Button>
               </Link>
