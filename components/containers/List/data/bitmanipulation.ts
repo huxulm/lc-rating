@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】位运算（基础/性质/拆位/试填/恒等式/思维）",
     "original_src": "https://leetcode.cn/circle/discuss/dHn9Vk",
-    "last_update": "2024-07-06T01:38:21.527264+00:00",
+    "last_update": "2024-08-26T02:08:52.581399+00:00",
     "sort": 0,
     "child": [
         {
@@ -74,8 +74,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1356. 根据数字二进制下 1 的数目排序",
+                            "title": "3226. 使两个整数相等的位更改次数",
                             "sort": 7,
+                            "src": "/number-of-bit-changes-to-make-two-integers-equal/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1356. 根据数字二进制下 1 的数目排序",
+                            "sort": 8,
                             "src": "/sort-integers-by-the-number-of-1-bits/",
                             "score": 1258,
                             "solution": null,
@@ -83,7 +91,7 @@ export default{
                         },
                         {
                             "title": "461. 汉明距离",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/hamming-distance/",
                             "score": null,
                             "solution": null,
@@ -91,7 +99,7 @@ export default{
                         },
                         {
                             "title": "2220. 转换数字的最少位翻转次数",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/minimum-bit-flips-to-convert-number/",
                             "score": 1282,
                             "solution": null,
@@ -99,15 +107,23 @@ export default{
                         },
                         {
                             "title": "868. 二进制间距",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/binary-gap/",
                             "score": 1307,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "3211. 生成不含相邻零的二进制字符串",
+                            "sort": 12,
+                            "src": "/generate-binary-strings-without-adjacent-zeros/",
+                            "score": 1353,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "2917. 找出数组中的 K-or 值",
-                            "sort": 11,
+                            "sort": 13,
                             "src": "/find-the-k-or-of-an-array/",
                             "score": 1389,
                             "solution": null,
@@ -115,7 +131,7 @@ export default{
                         },
                         {
                             "title": "693. 交替位二进制数",
-                            "sort": 12,
+                            "sort": 14,
                             "src": "/binary-number-with-alternating-bits/",
                             "score": null,
                             "solution": null,
@@ -177,16 +193,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3097. 或值至少为 K 的最短子数组 II",
-                            "sort": 5,
-                            "src": "/shortest-subarray-with-or-at-least-k-ii/",
-                            "score": 1891,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "3133. 数组最后一个元素的最小值",
-                            "sort": 6,
+                            "sort": 5,
                             "src": "/minimum-array-end/",
                             "score": 1935,
                             "solution": null,
@@ -194,55 +202,23 @@ export default{
                         },
                         {
                             "title": "2680. 最大或值",
-                            "sort": 7,
+                            "sort": 6,
                             "src": "/maximum-or/",
                             "score": 1912,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "2411. 按位或最大的最小子数组长度",
-                            "sort": 8,
-                            "src": "/smallest-subarrays-with-maximum-bitwise-or/",
-                            "score": 1938,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "3108. 带权图里旅途的最小代价",
-                            "sort": 9,
+                            "sort": 7,
                             "src": "/minimum-cost-walk-in-weighted-graph/",
                             "score": 2109,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "898. 子数组按位或操作",
-                            "sort": 10,
-                            "src": "/bitwise-ors-of-subarrays/",
-                            "score": 2133,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1521. 找到最接近目标值的函数值",
-                            "sort": 11,
-                            "src": "/find-a-value-of-a-mysterious-function-closest-to-target/",
-                            "score": 2384,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "3171. 找到按位或最接近 K 的子数组",
-                            "sort": 12,
-                            "src": "/find-subarray-with-bitwise-or-closest-to-k/",
-                            "score": 1521,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "3117. 划分数组得到最小的值之和",
-                            "sort": 13,
+                            "sort": 8,
                             "src": "/minimum-sum-of-values-by-dividing-array/",
                             "score": 2735,
                             "solution": null,
@@ -250,7 +226,7 @@ export default{
                         },
                         {
                             "title": "3125. 使得按位与结果为 0 的最大数字",
-                            "sort": 14,
+                            "sort": 9,
                             "src": "/maximum-number-that-makes-result-of-bitwise-and-zero/",
                             "score": null,
                             "solution": null,
@@ -261,8 +237,71 @@ export default{
             ]
         },
         {
-            "title": "三、异或（XOR）的性质",
+            "title": "LogTrick",
             "sort": 2,
+            "summary": "",
+            "child": [
+                {
+                    "title": "",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "summary": "原地写法：<a href=\"https://leetcode.cn/problems/number-of-subarrays-with-and-value-of-k/solution/jian-ji-xie-fa-o1-kong-jian-pythonjavacg-u7fv/\">讲解</a><br>额外维护一个数组：<a href=\"https://leetcode.cn/problems/smallest-subarrays-with-maximum-bitwise-or/solution/by-endlesscheng-zai1/\">讲解（方法二）</a><br>",
+                    "child": [
+                        {
+                            "title": "3097. 或值至少为 K 的最短子数组 II",
+                            "sort": 0,
+                            "src": "/shortest-subarray-with-or-at-least-k-ii/",
+                            "score": 1891,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2411. 按位或最大的最小子数组长度",
+                            "sort": 1,
+                            "src": "/smallest-subarrays-with-maximum-bitwise-or/",
+                            "score": 1938,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3209. 子数组按位与值为 K 的数目",
+                            "sort": 2,
+                            "src": "/number-of-subarrays-with-and-value-of-k/",
+                            "score": 2050,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3171. 找到按位或最接近 K 的子数组",
+                            "sort": 3,
+                            "src": "/find-subarray-with-bitwise-or-closest-to-k/",
+                            "score": 2163,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1521. 找到最接近目标值的函数值",
+                            "sort": 4,
+                            "src": "/find-a-value-of-a-mysterious-function-closest-to-target/",
+                            "score": 3171,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "898. 子数组按位或操作",
+                            "sort": 5,
+                            "src": "/bitwise-ors-of-subarrays/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "三、异或（XOR）的性质",
+            "sort": 3,
             "summary": "",
             "child": [
                 {
@@ -390,6 +429,14 @@ export default{
                             "score": 2479,
                             "solution": null,
                             "isPremium": false
+                        },
+                        {
+                            "title": "3215. 用偶数异或设置位计数三元组 II",
+                            "sort": 15,
+                            "src": "/count-triplets-with-even-xor-set-bits-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
                         }
                     ]
                 }
@@ -397,7 +444,7 @@ export default{
         },
         {
             "title": "四、拆位 / 贡献法",
-            "sort": 3,
+            "sort": 4,
             "summary": "",
             "child": [
                 {
@@ -468,7 +515,7 @@ export default{
         },
         {
             "title": "五、试填法",
-            "sort": 4,
+            "sort": 5,
             "summary": "",
             "child": [
                 {
@@ -523,7 +570,7 @@ export default{
         },
         {
             "title": "六、恒等式",
-            "sort": 5,
+            "sort": 6,
             "summary": "",
             "child": [
                 {
@@ -554,7 +601,7 @@ export default{
         },
         {
             "title": "七、思维题（贪心、脑筋急转弯等）",
-            "sort": 6,
+            "sort": 7,
             "summary": "",
             "child": [
                 {
@@ -649,7 +696,7 @@ export default{
         },
         {
             "title": "八、其他",
-            "sort": 7,
+            "sort": 8,
             "summary": "",
             "child": [
                 {
@@ -766,7 +813,7 @@ export default{
                             "title": "1261. 在受污染的二叉树中查找元素",
                             "sort": 13,
                             "src": "/find-elements-in-a-contaminated-binary-tree/",
-                            "score": 1,
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },

@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】链表、二叉树与一般树（前后指针/快慢指针/DFS/BFS/直径/LCA）",
     "original_src": "https://leetcode.cn/circle/discuss/K0n2gO",
-    "last_update": "2024-08-12T01:10:21.809576+00:00",
+    "last_update": "2024-08-23T04:05:24.026177+00:00",
     "sort": 0,
     "child": [
         {
@@ -988,7 +988,7 @@ export default{
                             "title": "1530. 好叶子节点对的数量",
                             "sort": 20,
                             "src": "/number-of-good-leaf-nodes-pairs/",
-                            "score": 2,
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1132,7 +1132,7 @@ export default{
                             "title": "1038. 从二叉搜索树到更大和树",
                             "sort": 1,
                             "src": "/binary-search-tree-to-greater-sum-tree/",
-                            "score": 538,
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1364,7 +1364,7 @@ export default{
                             "title": "783. 二叉搜索树节点最小距离",
                             "sort": 6,
                             "src": "/minimum-distance-between-bst-nodes/",
-                            "score": 530,
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1932,7 +1932,7 @@ export default{
                             "title": "116. 填充每个节点的下一个右侧节点指针",
                             "sort": 3,
                             "src": "/populating-next-right-pointers-in-each-node/",
-                            "score": 1,
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1940,7 +1940,7 @@ export default{
                             "title": "117. 填充每个节点的下一个右侧节点指针 II",
                             "sort": 4,
                             "src": "/populating-next-right-pointers-in-each-node-ii/",
-                            "score": 1,
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },
