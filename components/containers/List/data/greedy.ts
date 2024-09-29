@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】贪心算法（基本贪心策略/反悔/区间/字典序/数学/思维/构造）",
     "original_src": "https://leetcode.cn/circle/discuss/g6KTKL",
-    "last_update": "2024-07-02T00:09:46.245243+00:00",
+    "last_update": "2024-08-28T01:04:16.311351+00:00",
     "sort": 0,
     "child": [
         {
@@ -15,13 +15,13 @@ export default{
         {
             "title": "一、贪心策略",
             "sort": 1,
-            "summary": "有两种**基本贪心策略**：<br>1. 从**最小/最大**开始贪心，优先考虑最小/最大的数。在此基础上，衍生出了**反悔贪心**。<br>2. 从**最左/最右**开始贪心，思考第一个数/最后一个数的贪心策略，把 $n$ 个数的原问题转换成 $n-1$ 个数（或更少）的子问题。<br>",
+            "summary": "有两种**基本贪心策略**：<br>1. 从**最小/最大**开始贪心，优先考虑最小/最大的数，从小到大/从大到小贪心。在此基础上，衍生出了**反悔贪心**。<br>2. 从**最左/最右**开始贪心，思考第一个数/最后一个数的贪心策略，把 $n$ 个数的原问题转换成 $n-1$ 个数（或更少）的子问题。<br>",
             "child": [
                 {
                     "title": "§1.1 从最小/最大开始贪心",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "优先考虑最小/最大的数，如何选择？如何修改？<br>如果答案与数组元素顺序无关，一般需要**排序**。排序后，可以遍历计算。<br>",
+                    "summary": "优先考虑最小/最大的数，从小到大/从大到小贪心。<br>如果答案与数组元素顺序无关，一般需要**排序**。排序后，可以遍历计算。<br>",
                     "child": [
                         {
                             "title": "1833. 雪糕的最大数量",
@@ -72,8 +72,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1338. 数组大小减半",
+                            "title": "3010. 将数组分成最小总代价的子数组 I",
                             "sort": 6,
+                            "src": "/divide-an-array-into-subarrays-with-minimum-cost-i/",
+                            "score": 1292,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1338. 数组大小减半",
+                            "sort": 7,
                             "src": "/reduce-array-size-to-the-half/",
                             "score": 1303,
                             "solution": null,
@@ -81,7 +89,7 @@ export default{
                         },
                         {
                             "title": "1710. 卡车上的最大单元数",
-                            "sort": 7,
+                            "sort": 8,
                             "src": "/maximum-units-on-a-truck/",
                             "score": 1310,
                             "solution": null,
@@ -89,7 +97,7 @@ export default{
                         },
                         {
                             "title": "3075. 幸福值最大化的选择方案",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/maximize-happiness-of-selected-children/",
                             "score": 1326,
                             "solution": null,
@@ -97,7 +105,7 @@ export default{
                         },
                         {
                             "title": "2554. 从一个范围内选择最多整数 I",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/maximum-number-of-integers-to-choose-from-a-range-i/",
                             "score": 1333,
                             "solution": null,
@@ -105,7 +113,7 @@ export default{
                         },
                         {
                             "title": "2126. 摧毁小行星",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/destroying-asteroids/",
                             "score": 1335,
                             "solution": null,
@@ -113,7 +121,7 @@ export default{
                         },
                         {
                             "title": "2587. 重排数组以得到最大前缀分数",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/rearrange-array-to-maximize-prefix-score/",
                             "score": 1337,
                             "solution": null,
@@ -121,7 +129,7 @@ export default{
                         },
                         {
                             "title": "976. 三角形的最大周长",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/largest-perimeter-triangle/",
                             "score": 1341,
                             "solution": null,
@@ -129,7 +137,7 @@ export default{
                         },
                         {
                             "title": "1846. 减小和重新排列数组后的最大元素",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/maximum-element-after-decreasing-and-rearranging/",
                             "score": 1454,
                             "solution": null,
@@ -137,7 +145,7 @@ export default{
                         },
                         {
                             "title": "945. 使数组唯一的最小增量",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/minimum-increment-to-make-array-unique/",
                             "score": 1448,
                             "solution": null,
@@ -145,7 +153,7 @@ export default{
                         },
                         {
                             "title": "1647. 字符频次唯一的最小删除次数",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/minimum-deletions-to-make-character-frequencies-unique/",
                             "score": 1510,
                             "solution": null,
@@ -153,7 +161,7 @@ export default{
                         },
                         {
                             "title": "2971. 找到最大周长的多边形",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/find-polygon-with-the-largest-perimeter/",
                             "score": 1521,
                             "solution": null,
@@ -161,7 +169,7 @@ export default{
                         },
                         {
                             "title": "2178. 拆分成最多数目的正偶数之和",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/maximum-split-of-positive-even-integers/",
                             "score": 1538,
                             "solution": null,
@@ -169,7 +177,7 @@ export default{
                         },
                         {
                             "title": "2567. 修改两个元素的最小分数",
-                            "sort": 18,
+                            "sort": 19,
                             "src": "/minimum-score-by-changing-two-elements/",
                             "score": 1609,
                             "solution": null,
@@ -177,7 +185,7 @@ export default{
                         },
                         {
                             "title": "1509. 三次操作后最大值与最小值的最小差",
-                            "sort": 19,
+                            "sort": 20,
                             "src": "/minimum-difference-between-largest-and-smallest-value-in-three-moves/",
                             "score": 1653,
                             "solution": null,
@@ -185,7 +193,7 @@ export default{
                         },
                         {
                             "title": "LCP 40. 心算挑战",
-                            "sort": 20,
+                            "sort": 21,
                             "src": "/uOAnQW/",
                             "score": null,
                             "solution": null,
@@ -193,7 +201,7 @@ export default{
                         },
                         {
                             "title": "1262. 可被三整除的最大和",
-                            "sort": 21,
+                            "sort": 22,
                             "src": "/greatest-sum-divisible-by-three/",
                             "score": 1762,
                             "solution": null,
@@ -201,7 +209,7 @@ export default{
                         },
                         {
                             "title": "948. 令牌放置",
-                            "sort": 22,
+                            "sort": 23,
                             "src": "/bag-of-tokens/",
                             "score": 1762,
                             "solution": null,
@@ -209,7 +217,7 @@ export default{
                         },
                         {
                             "title": "1775. 通过最少操作次数使数组的和相等",
-                            "sort": 23,
+                            "sort": 24,
                             "src": "/equal-sum-arrays-with-minimum-number-of-operations/",
                             "score": 1850,
                             "solution": null,
@@ -217,7 +225,7 @@ export default{
                         },
                         {
                             "title": "2333. 最小差值平方和",
-                            "sort": 24,
+                            "sort": 25,
                             "src": "/minimum-sum-of-squared-difference/",
                             "score": 2011,
                             "solution": null,
@@ -225,7 +233,7 @@ export default{
                         },
                         {
                             "title": "2412. 完成所有交易的初始最少钱数",
-                            "sort": 25,
+                            "sort": 26,
                             "src": "/minimum-money-required-before-transactions/",
                             "score": 2092,
                             "solution": null,
@@ -233,7 +241,7 @@ export default{
                         },
                         {
                             "title": "910. 最小差值 II",
-                            "sort": 26,
+                            "sort": 27,
                             "src": "/smallest-range-ii/",
                             "score": 2135,
                             "solution": null,
@@ -241,7 +249,7 @@ export default{
                         },
                         {
                             "title": "2835. 使子序列的和等于目标的最少操作次数",
-                            "sort": 27,
+                            "sort": 28,
                             "src": "/minimum-operations-to-form-subsequence-with-target-sum/",
                             "score": 2207,
                             "solution": null,
@@ -249,7 +257,7 @@ export default{
                         },
                         {
                             "title": "1196. 最多可以买到的苹果数量",
-                            "sort": 28,
+                            "sort": 29,
                             "src": "/how-many-apples-can-you-put-into-the-basket/",
                             "score": null,
                             "solution": null,
@@ -257,7 +265,7 @@ export default{
                         },
                         {
                             "title": "2214. 通关游戏所需的最低生命值",
-                            "sort": 29,
+                            "sort": 30,
                             "src": "/minimum-health-to-beat-game/",
                             "score": null,
                             "solution": null,
@@ -265,7 +273,7 @@ export default{
                         },
                         {
                             "title": "2098. 长度为 K 的最大偶数和子序列",
-                            "sort": 30,
+                            "sort": 31,
                             "src": "/subsequence-of-size-k-with-the-largest-even-sum/",
                             "score": null,
                             "solution": null,
@@ -273,7 +281,7 @@ export default{
                         },
                         {
                             "title": "2548. 填满背包的最大价格",
-                            "sort": 31,
+                            "sort": 32,
                             "src": "/maximum-price-to-fill-a-bag/",
                             "score": null,
                             "solution": null,
@@ -281,7 +289,7 @@ export default{
                         },
                         {
                             "title": "3119. 最大数量的可修复坑洼",
-                            "sort": 32,
+                            "sort": 33,
                             "src": "/maximum-number-of-potholes-that-can-be-fixed/",
                             "score": null,
                             "solution": null,
@@ -289,7 +297,7 @@ export default{
                         },
                         {
                             "title": "2557. 从一个范围内选择最多整数 II",
-                            "sort": 33,
+                            "sort": 34,
                             "src": "/maximum-number-of-integers-to-choose-from-a-range-ii/",
                             "score": null,
                             "solution": null,
@@ -400,8 +408,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2449. 使数组相似的最少操作次数",
+                            "title": "826. 安排工作以达到最大收益",
                             "sort": 5,
+                            "src": "/most-profit-assigning-work/",
+                            "score": 1709,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2449. 使数组相似的最少操作次数",
+                            "sort": 6,
                             "src": "/minimum-number-of-operations-to-make-arrays-similar/",
                             "score": 2076,
                             "solution": null,
@@ -409,7 +425,7 @@ export default{
                         },
                         {
                             "title": "1889. 装包裹的最小浪费空间",
-                            "sort": 6,
+                            "sort": 7,
                             "src": "/minimum-space-wasted-from-packaging/",
                             "score": 2214,
                             "solution": null,
@@ -417,7 +433,7 @@ export default{
                         },
                         {
                             "title": "2561. 重排水果",
-                            "sort": 7,
+                            "sort": 8,
                             "src": "/rearranging-fruits/",
                             "score": 2222,
                             "solution": null,
@@ -425,7 +441,7 @@ export default{
                         },
                         {
                             "title": "2323. 完成所有工作的最短时间 II",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/find-minimum-time-to-finish-all-jobs-ii/",
                             "score": null,
                             "solution": null,
@@ -440,8 +456,16 @@ export default{
                     "summary": "对于无法排序的题目，尝试从左到右/从右到左贪心。思考第一个数/最后一个数的贪心策略，把 $n$ 个数的原问题转换成 $n-1$ 个数（或更少）的子问题。<br>读者可以对比下面的题目和 <a href=\"https://leetcode.cn/circle/discuss/tXLS3i/\">动态规划题单</a> 中的线性 DP、状态机 DP 的区别，思考什么情况下只能 DP 不能贪心，从而加深对「局部最优」和「全局最优」的理解。<br>",
                     "child": [
                         {
-                            "title": "1827. 最少操作使数组递增",
+                            "title": "3191. 使二进制数组全部等于 1 的最少操作次数 I",
                             "sort": 0,
+                            "src": "/minimum-operations-to-make-binary-array-elements-equal-to-one-i/",
+                            "score": 1312,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1827. 最少操作使数组递增",
+                            "sort": 1,
                             "src": "/minimum-operations-to-make-the-array-increasing/",
                             "score": 1315,
                             "solution": null,
@@ -449,17 +473,9 @@ export default{
                         },
                         {
                             "title": "2027. 转换字符串的最少操作次数",
-                            "sort": 1,
+                            "sort": 2,
                             "src": "/minimum-moves-to-convert-string/",
                             "score": 1346,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "3191. 使二进制数组全部等于 1 的最少操作次数 I",
-                            "sort": 2,
-                            "src": "/minimum-operations-to-make-binary-array-elements-equal-to-one-i/",
-                            "score": 1350,
                             "solution": null,
                             "isPremium": false
                         },
@@ -488,18 +504,18 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2789. 合并后数组中的最大元素",
+                            "title": "3192. 使二进制数组全部等于 1 的最少操作次数 II",
                             "sort": 6,
-                            "src": "/largest-element-in-an-array-after-merge-operations/",
-                            "score": 1485,
+                            "src": "/minimum-operations-to-make-binary-array-elements-equal-to-one-ii/",
+                            "score": 1433,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "3192. 使二进制数组全部等于 1 的最少操作次数 II",
+                            "title": "2789. 合并后数组中的最大元素",
                             "sort": 7,
-                            "src": "/minimum-operations-to-make-binary-array-elements-equal-to-one-ii/",
-                            "score": 1550,
+                            "src": "/largest-element-in-an-array-after-merge-operations/",
+                            "score": 1485,
                             "solution": null,
                             "isPremium": false
                         },
@@ -536,8 +552,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2712. 使所有字符相等的最小成本",
+                            "title": "3228. 将 1 移动到末尾的最大操作次数",
                             "sort": 12,
+                            "src": "/maximum-number-of-operations-to-move-ones-to-the-end/",
+                            "score": 1650,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2712. 使所有字符相等的最小成本",
+                            "sort": 13,
                             "src": "/minimum-cost-to-make-all-characters-equal/",
                             "score": 1791,
                             "solution": null,
@@ -545,7 +569,7 @@ export default{
                         },
                         {
                             "title": "1536. 排布二进制网格的最少交换次数",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/minimum-swaps-to-arrange-a-binary-grid/",
                             "score": 1881,
                             "solution": null,
@@ -553,7 +577,7 @@ export default{
                         },
                         {
                             "title": "2673. 使二叉树所有路径值相等的最小代价",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/make-costs-of-paths-equal-in-a-binary-tree/",
                             "score": 1917,
                             "solution": null,
@@ -561,7 +585,7 @@ export default{
                         },
                         {
                             "title": "861. 翻转矩阵后的得分",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/score-after-flipping-matrix/",
                             "score": 2000,
                             "solution": null,
@@ -569,7 +593,7 @@ export default{
                         },
                         {
                             "title": "955. 删列造序 II",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/delete-columns-to-make-sorted-ii/",
                             "score": 2000,
                             "solution": null,
@@ -577,7 +601,7 @@ export default{
                         },
                         {
                             "title": "2366. 将数组排序的最少替换次数",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/minimum-replacements-to-sort-the-array/",
                             "score": 2060,
                             "solution": null,
@@ -585,7 +609,7 @@ export default{
                         },
                         {
                             "title": "2193. 得到回文串的最少操作次数",
-                            "sort": 18,
+                            "sort": 19,
                             "src": "/minimum-number-of-moves-to-make-palindrome/",
                             "score": 2091,
                             "solution": null,
@@ -593,7 +617,7 @@ export default{
                         },
                         {
                             "title": "2528. 最大化城市的最小电量",
-                            "sort": 19,
+                            "sort": 20,
                             "src": "/maximize-the-minimum-powered-city/",
                             "score": 2236,
                             "solution": null,
@@ -601,7 +625,7 @@ export default{
                         },
                         {
                             "title": "2422. 使用合并操作将数组转换为回文序列",
-                            "sort": 20,
+                            "sort": 21,
                             "src": "/merge-operations-to-turn-array-into-a-palindrome/",
                             "score": null,
                             "solution": null,
@@ -760,8 +784,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1665. 完成所有任务的最少初始能量",
+                            "title": "3219. 切蛋糕的最小总开销 II",
                             "sort": 1,
+                            "src": "/minimum-cost-for-cutting-cake-ii/",
+                            "score": 1789,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1665. 完成所有任务的最少初始能量",
+                            "sort": 2,
                             "src": "/minimum-initial-energy-to-finish-tasks/",
                             "score": 1901,
                             "solution": null,
@@ -769,7 +801,7 @@ export default{
                         },
                         {
                             "title": "2136. 全部开花的最早一天",
-                            "sort": 2,
+                            "sort": 3,
                             "src": "/earliest-possible-day-of-full-bloom/",
                             "score": 2033,
                             "solution": null,
@@ -1238,8 +1270,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2697. 字典序最小回文串",
+                            "title": "3216. 交换后字典序最小的字符串",
                             "sort": 1,
+                            "src": "/lexicographically-smallest-string-after-a-swap/",
+                            "score": 1243,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2697. 字典序最小回文串",
+                            "sort": 2,
                             "src": "/lexicographically-smallest-palindrome/",
                             "score": 1304,
                             "solution": null,
@@ -1247,7 +1287,7 @@ export default{
                         },
                         {
                             "title": "1881. 插入后的最大值",
-                            "sort": 2,
+                            "sort": 3,
                             "src": "/maximum-value-after-insertion/",
                             "score": 1381,
                             "solution": null,
@@ -1255,7 +1295,7 @@ export default{
                         },
                         {
                             "title": "2734. 执行子串操作后的字典序最小字符串",
-                            "sort": 3,
+                            "sort": 4,
                             "src": "/lexicographically-smallest-string-after-substring-operation/",
                             "score": 1405,
                             "solution": null,
@@ -1263,7 +1303,7 @@ export default{
                         },
                         {
                             "title": "1946. 子字符串突变后可能得到的最大整数",
-                            "sort": 4,
+                            "sort": 5,
                             "src": "/largest-number-after-mutating-substring/",
                             "score": 1445,
                             "solution": null,
@@ -1271,7 +1311,7 @@ export default{
                         },
                         {
                             "title": "1663. 具有给定数值的最小字符串",
-                            "sort": 5,
+                            "sort": 6,
                             "src": "/smallest-string-with-a-given-numeric-value/",
                             "score": 1461,
                             "solution": null,
@@ -1279,7 +1319,7 @@ export default{
                         },
                         {
                             "title": "1328. 破坏回文串",
-                            "sort": 6,
+                            "sort": 7,
                             "src": "/break-a-palindrome/",
                             "score": 1474,
                             "solution": null,
@@ -1287,7 +1327,7 @@ export default{
                         },
                         {
                             "title": "2259. 移除指定数字得到的最大结果",
-                            "sort": 7,
+                            "sort": 8,
                             "src": "/remove-digit-from-number-to-maximize-result/",
                             "score": null,
                             "solution": null,
@@ -1295,7 +1335,7 @@ export default{
                         },
                         {
                             "title": "2566. 替换一个数字后的最大差值",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/maximum-difference-by-remapping-a-digit/",
                             "score": null,
                             "solution": null,
@@ -1303,7 +1343,7 @@ export default{
                         },
                         {
                             "title": "670. 最大交换",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/maximum-swap/",
                             "score": null,
                             "solution": null,
@@ -1311,7 +1351,7 @@ export default{
                         },
                         {
                             "title": "3106. 满足距离约束且字典序最小的字符串",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/lexicographically-smallest-string-after-operations-with-constraint/",
                             "score": 1515,
                             "solution": null,
@@ -1319,7 +1359,7 @@ export default{
                         },
                         {
                             "title": "1053. 交换一次的先前排列",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/previous-permutation-with-one-swap/",
                             "score": 1633,
                             "solution": null,
@@ -1327,7 +1367,7 @@ export default{
                         },
                         {
                             "title": "2375. 根据模式串构造最小数字",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/construct-smallest-number-from-di-string/",
                             "score": 1642,
                             "solution": null,
@@ -1335,7 +1375,7 @@ export default{
                         },
                         {
                             "title": "2182. 构造限制重复的字符串",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/construct-string-with-repeat-limit/",
                             "score": 1680,
                             "solution": null,
@@ -1343,7 +1383,7 @@ export default{
                         },
                         {
                             "title": "738. 单调递增的数字",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/monotone-increasing-digits/",
                             "score": 1700,
                             "solution": null,
@@ -1351,7 +1391,7 @@ export default{
                         },
                         {
                             "title": "3170. 删除星号以后字典序最小的字符串",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/lexicographically-minimum-string-after-removing-stars/",
                             "score": 1772,
                             "solution": null,
@@ -1359,7 +1399,7 @@ export default{
                         },
                         {
                             "title": "1363. 形成三的最大倍数",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/largest-multiple-of-three/",
                             "score": 1823,
                             "solution": null,
@@ -1367,7 +1407,7 @@ export default{
                         },
                         {
                             "title": "1754. 构造字典序最大的合并字符串",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/largest-merge-of-two-strings/",
                             "score": 1829,
                             "solution": null,
@@ -1375,7 +1415,7 @@ export default{
                         },
                         {
                             "title": "1202. 交换字符串中的元素",
-                            "sort": 18,
+                            "sort": 19,
                             "src": "/smallest-string-with-swaps/",
                             "score": 1855,
                             "solution": null,
@@ -1383,7 +1423,7 @@ export default{
                         },
                         {
                             "title": "2434. 使用机器人打印字典序最小的字符串",
-                            "sort": 19,
+                            "sort": 20,
                             "src": "/using-a-robot-to-print-the-lexicographically-smallest-string/",
                             "score": 1953,
                             "solution": null,
@@ -1391,7 +1431,7 @@ export default{
                         },
                         {
                             "title": "2948. 交换得到字典序最小的数组",
-                            "sort": 20,
+                            "sort": 21,
                             "src": "/make-lexicographically-smallest-array-by-swapping-elements/",
                             "score": 2047,
                             "solution": null,
@@ -1399,7 +1439,7 @@ export default{
                         },
                         {
                             "title": "564. 寻找最近的回文数",
-                            "sort": 21,
+                            "sort": 22,
                             "src": "/find-the-closest-palindrome/",
                             "score": null,
                             "solution": null,
@@ -1407,7 +1447,7 @@ export default{
                         },
                         {
                             "title": "1505. 最多 K 次交换相邻数位后得到的最小整数",
-                            "sort": 22,
+                            "sort": 23,
                             "src": "/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits/",
                             "score": 2337,
                             "solution": null,
@@ -1415,7 +1455,7 @@ export default{
                         },
                         {
                             "title": "2663. 字典序最小的美丽字符串",
-                            "sort": 23,
+                            "sort": 24,
                             "src": "/lexicographically-smallest-beautiful-string/",
                             "score": 2416,
                             "solution": null,
@@ -1423,7 +1463,7 @@ export default{
                         },
                         {
                             "title": "555. 分割连接字符串",
-                            "sort": 24,
+                            "sort": 25,
                             "src": "/split-concatenated-strings/",
                             "score": null,
                             "solution": null,
@@ -1431,7 +1471,7 @@ export default{
                         },
                         {
                             "title": "3088. 使字符串反回文",
-                            "sort": 25,
+                            "sort": 26,
                             "src": "/make-string-anti-palindrome/",
                             "score": null,
                             "solution": null,
@@ -1462,8 +1502,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1328. 破坏回文串",
+                            "title": "680. 验证回文串 II",
                             "sort": 2,
+                            "src": "/valid-palindrome-ii/",
+                            "score": 1400,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1328. 破坏回文串",
+                            "sort": 3,
                             "src": "/break-a-palindrome/",
                             "score": 1474,
                             "solution": null,
@@ -1471,7 +1519,7 @@ export default{
                         },
                         {
                             "title": "1400. 构造 K 个回文字符串",
-                            "sort": 3,
+                            "sort": 4,
                             "src": "/construct-k-palindrome-strings/",
                             "score": 1530,
                             "solution": null,
@@ -1479,7 +1527,7 @@ export default{
                         },
                         {
                             "title": "2131. 连接两字母单词得到的最长回文串",
-                            "sort": 4,
+                            "sort": 5,
                             "src": "/longest-palindrome-by-concatenating-two-letter-words/",
                             "score": 1557,
                             "solution": null,
@@ -1487,7 +1535,7 @@ export default{
                         },
                         {
                             "title": "2384. 最大回文数字",
-                            "sort": 5,
+                            "sort": 6,
                             "src": "/largest-palindromic-number/",
                             "score": 1636,
                             "solution": null,
@@ -1495,7 +1543,7 @@ export default{
                         },
                         {
                             "title": "3035. 回文字符串的最大数量",
-                            "sort": 6,
+                            "sort": 7,
                             "src": "/maximum-palindromes-after-operations/",
                             "score": 1857,
                             "solution": null,
@@ -1503,7 +1551,7 @@ export default{
                         },
                         {
                             "title": "1616. 分割两个字符串得到回文串",
-                            "sort": 7,
+                            "sort": 8,
                             "src": "/split-two-strings-to-make-palindrome/",
                             "score": 1868,
                             "solution": null,
@@ -1511,7 +1559,7 @@ export default{
                         },
                         {
                             "title": "1147. 段式回文",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/longest-chunked-palindrome-decomposition/",
                             "score": 1912,
                             "solution": null,
@@ -1519,7 +1567,7 @@ export default{
                         },
                         {
                             "title": "2193. 得到回文串的最少操作次数",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/minimum-number-of-moves-to-make-palindrome/",
                             "score": 2091,
                             "solution": null,
@@ -1527,7 +1575,7 @@ export default{
                         },
                         {
                             "title": "564. 寻找最近的回文数",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/find-the-closest-palindrome/",
                             "score": null,
                             "solution": null,
@@ -1535,7 +1583,7 @@ export default{
                         },
                         {
                             "title": "266. 回文排列",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/palindrome-permutation/",
                             "score": null,
                             "solution": null,
@@ -1543,15 +1591,23 @@ export default{
                         },
                         {
                             "title": "2422. 使用合并操作将数组转换为回文序列",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/merge-operations-to-turn-array-into-a-palindrome/",
                             "score": null,
                             "solution": null,
                             "isPremium": true
                         },
                         {
+                            "title": "1842. 下个由相同数字构成的回文串",
+                            "sort": 14,
+                            "src": "/next-palindrome-using-same-digits/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
                             "title": "3088. 使字符串反回文",
-                            "sort": 13,
+                            "sort": 15,
                             "src": "/make-string-anti-palindrome/",
                             "score": null,
                             "solution": null,
@@ -2084,8 +2140,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2419. 按位与最大的最长子数组",
+                            "title": "3227. 字符串元音游戏",
                             "sort": 4,
+                            "src": "/vowels-game-in-a-string/",
+                            "score": 1450,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2419. 按位与最大的最长子数组",
+                            "sort": 5,
                             "src": "/longest-subarray-with-maximum-bitwise-and/",
                             "score": 1496,
                             "solution": null,
@@ -2093,7 +2157,7 @@ export default{
                         },
                         {
                             "title": "2811. 判断是否能拆分数组",
-                            "sort": 5,
+                            "sort": 6,
                             "src": "/check-if-it-is-possible-to-split-array/",
                             "score": 1543,
                             "solution": null,
@@ -2101,15 +2165,23 @@ export default{
                         },
                         {
                             "title": "2211. 统计道路上的碰撞次数",
-                            "sort": 6,
+                            "sort": 7,
                             "src": "/count-collisions-on-a-road/",
                             "score": 1581,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "3207. 与敌人战斗后的最大分数",
+                            "sort": 8,
+                            "src": "/maximum-points-after-enemy-battles/",
+                            "score": 1591,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "2546. 执行逐位运算使字符串相等",
-                            "sort": 7,
+                            "sort": 9,
                             "src": "/apply-bitwise-operations-to-make-strings-equal/",
                             "score": 1605,
                             "solution": null,
@@ -2117,15 +2189,23 @@ export default{
                         },
                         {
                             "title": "1503. 所有蚂蚁掉下来前的最后一刻",
-                            "sort": 8,
+                            "sort": 10,
                             "src": "/last-moment-before-all-ants-fall-out-of-a-plank/",
                             "score": 1619,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "1332. 删除回文子序列",
+                            "sort": 11,
+                            "src": "/remove-palindromic-subsequences/",
+                            "score": 1629,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "1975. 最大方阵和",
-                            "sort": 9,
+                            "sort": 12,
                             "src": "/maximum-matrix-sum/",
                             "score": 1648,
                             "solution": null,
@@ -2133,15 +2213,23 @@ export default{
                         },
                         {
                             "title": "1145. 二叉树着色游戏",
-                            "sort": 10,
+                            "sort": 13,
                             "src": "/binary-tree-coloring-game/",
                             "score": 1741,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "2332. 坐上公交的最晚时间",
+                            "sort": 14,
+                            "src": "/the-latest-time-to-catch-a-bus/",
+                            "score": 1841,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "2680. 最大或值",
-                            "sort": 11,
+                            "sort": 15,
                             "src": "/maximum-or/",
                             "score": 1912,
                             "solution": null,
@@ -2149,15 +2237,23 @@ export default{
                         },
                         {
                             "title": "2731. 移动机器人",
-                            "sort": 12,
+                            "sort": 16,
                             "src": "/movement-of-robots/",
                             "score": 1923,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "3125. 使得按位与结果为 0 的最大数字",
+                            "sort": 17,
+                            "src": "/maximum-number-that-makes-result-of-bitwise-and-zero/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
                             "title": "1794. 统计距离最小的子串对个数",
-                            "sort": 13,
+                            "sort": 18,
                             "src": "/count-pairs-of-equal-substrings-with-minimum-difference/",
                             "score": null,
                             "solution": null,
@@ -2274,262 +2370,6 @@ export default{
                             "score": null,
                             "solution": null,
                             "isPremium": true
-                        },
-                        {
-                            "title": "942. 增减字符串匹配",
-                            "sort": 6,
-                            "src": "/di-string-match/",
-                            "score": 1444,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1968. 构造元素不等于两相邻元素平均值的数组",
-                            "sort": 7,
-                            "src": "/array-with-elements-not-equal-to-average-of-neighbors/",
-                            "score": 1499,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1253. 重构 2 行二进制矩阵",
-                            "sort": 8,
-                            "src": "/reconstruct-a-2-row-binary-matrix/",
-                            "score": 1506,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "2182. 构造限制重复的字符串",
-                            "sort": 9,
-                            "src": "/construct-string-with-repeat-limit/",
-                            "score": 1680,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "969. 煎饼排序",
-                            "sort": 10,
-                            "src": "/pancake-sorting/",
-                            "score": 1800,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1605. 给定行和列的和求可行矩阵",
-                            "sort": 11,
-                            "src": "/find-valid-matrix-given-row-and-column-sums/",
-                            "score": 1868,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "2375. 根据模式串构造最小数字",
-                            "sort": 12,
-                            "src": "/construct-smallest-number-from-di-string/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "324. 摆动排序 II",
-                            "sort": 13,
-                            "src": "/wiggle-sort-ii/",
-                            "score": 2000,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "667. 优美的排列 II",
-                            "sort": 14,
-                            "src": "/beautiful-arrangement-ii/",
-                            "score": 2100,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "2122. 还原原数组",
-                            "sort": 15,
-                            "src": "/recover-the-original-array/",
-                            "score": 2159,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "932. 漂亮数组",
-                            "sort": 16,
-                            "src": "/beautiful-array/",
-                            "score": 2500,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "2573. 找出对应 LCP 矩阵的字符串",
-                            "sort": 17,
-                            "src": "/find-the-string-with-lcp/",
-                            "score": 2682,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1982. 从子集的和还原数组",
-                            "sort": 18,
-                            "src": "/find-array-given-subset-sums/",
-                            "score": 2872,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "280. 摆动排序",
-                            "sort": 19,
-                            "src": "/wiggle-sort/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
-                            "title": "484. 寻找排列",
-                            "sort": 20,
-                            "src": "/find-permutation/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
-                            "title": "1033. 移动石子直到连续",
-                            "sort": 21,
-                            "src": "/moving-stones-until-consecutive/",
-                            "score": 1421,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1864. 构成交替字符串需要的最小交换次数",
-                            "sort": 22,
-                            "src": "/minimum-number-of-swaps-to-make-the-binary-string-alternating/",
-                            "score": 1601,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1899. 合并若干三元组以形成目标三元组",
-                            "sort": 23,
-                            "src": "/merge-triplets-to-form-target-triplet/",
-                            "score": 1636,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "2498. 青蛙过河 II",
-                            "sort": 24,
-                            "src": "/frog-jump-ii/",
-                            "score": 1759,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "2311. 小于等于 K 的最长二进制子序列",
-                            "sort": 25,
-                            "src": "/longest-binary-subsequence-less-than-or-equal-to-k/",
-                            "score": 1840,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "3002. 移除后集合的最多元素数",
-                            "sort": 26,
-                            "src": "/maximum-size-of-a-set-after-removals/",
-                            "score": 1917,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "659. 分割数组为连续子序列",
-                            "sort": 27,
-                            "src": "/split-array-into-consecutive-subsequences/",
-                            "score": 2100,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "2732. 找到矩阵中的好子集",
-                            "sort": 28,
-                            "src": "/find-a-good-subset-of-the-matrix/",
-                            "score": 2240,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "2790. 长度递增组的最大数目",
-                            "sort": 29,
-                            "src": "/maximum-number-of-groups-with-increasing-length/",
-                            "score": 2620,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "782. 变为棋盘",
-                            "sort": 30,
-                            "src": "/transform-to-chessboard/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "420. 强密码检验器",
-                            "sort": 31,
-                            "src": "/strong-password-checker/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "LCP 26. 导航装置",
-                            "sort": 32,
-                            "src": "/hSRGyL/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "LCP 70. 沙地治理",
-                            "sort": 33,
-                            "src": "/XxZZjK/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "2753. 计算一个环形街道上的房屋数量 II",
-                            "sort": 34,
-                            "src": "/count-houses-in-a-circular-street-ii/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
-                            "title": "数学题单",
-                            "sort": 35,
-                            "src": "https://leetcode.cn/circle/discuss/IYT3ss/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "数据结构题单",
-                            "sort": 36,
-                            "src": "https://leetcode.cn/circle/discuss/mOr1u6/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "图论题单",
-                            "sort": 37,
-                            "src": "https://leetcode.cn/circle/discuss/01LUak/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
                         }
                     ]
                 }
@@ -2538,19 +2378,277 @@ export default{
         {
             "title": "六、构造题",
             "sort": 6,
-            "summary": "**构造题**会给定一些约束，我们要构造一个**满足这些约束**的数组/字符串等。<br>思考方式和第五章的「思考清单」是一样的，在特殊情况中寻找灵感。<br>> 如果想做更多思维题和构造题，可以去 Codeforces 看看。<br>",
-            "child": []
+            "summary": "",
+            "child": [
+                {
+                    "title": "",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "summary": "**构造题**会给定一些约束，我们要构造一个**满足这些约束**的数组/字符串等。<br>思考方式和第五章的「思考清单」是一样的，在特殊情况中寻找灵感。<br>> 如果想做更多思维题和构造题，可以去 Codeforces 看看。<br>",
+                    "child": [
+                        {
+                            "title": "942. 增减字符串匹配",
+                            "sort": 0,
+                            "src": "/di-string-match/",
+                            "score": 1444,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1968. 构造元素不等于两相邻元素平均值的数组",
+                            "sort": 1,
+                            "src": "/array-with-elements-not-equal-to-average-of-neighbors/",
+                            "score": 1499,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1253. 重构 2 行二进制矩阵",
+                            "sort": 2,
+                            "src": "/reconstruct-a-2-row-binary-matrix/",
+                            "score": 1506,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2182. 构造限制重复的字符串",
+                            "sort": 3,
+                            "src": "/construct-string-with-repeat-limit/",
+                            "score": 1680,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "969. 煎饼排序",
+                            "sort": 4,
+                            "src": "/pancake-sorting/",
+                            "score": 1800,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1605. 给定行和列的和求可行矩阵",
+                            "sort": 5,
+                            "src": "/find-valid-matrix-given-row-and-column-sums/",
+                            "score": 1868,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2375. 根据模式串构造最小数字",
+                            "sort": 6,
+                            "src": "/construct-smallest-number-from-di-string/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "324. 摆动排序 II",
+                            "sort": 7,
+                            "src": "/wiggle-sort-ii/",
+                            "score": 2000,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "667. 优美的排列 II",
+                            "sort": 8,
+                            "src": "/beautiful-arrangement-ii/",
+                            "score": 2100,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2122. 还原原数组",
+                            "sort": 9,
+                            "src": "/recover-the-original-array/",
+                            "score": 2159,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "932. 漂亮数组",
+                            "sort": 10,
+                            "src": "/beautiful-array/",
+                            "score": 2500,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2573. 找出对应 LCP 矩阵的字符串",
+                            "sort": 11,
+                            "src": "/find-the-string-with-lcp/",
+                            "score": 2682,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1982. 从子集的和还原数组",
+                            "sort": 12,
+                            "src": "/find-array-given-subset-sums/",
+                            "score": 2872,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "280. 摆动排序",
+                            "sort": 13,
+                            "src": "/wiggle-sort/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "484. 寻找排列",
+                            "sort": 14,
+                            "src": "/find-permutation/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        }
+                    ]
+                }
+            ]
         },
         {
             "title": "七、其他",
             "sort": 7,
             "summary": "",
-            "child": []
+            "child": [
+                {
+                    "title": "",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "summary": "",
+                    "child": [
+                        {
+                            "title": "2740. 找出分区值",
+                            "sort": 0,
+                            "src": "/find-the-value-of-the-partition/",
+                            "score": 1302,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1033. 移动石子直到连续",
+                            "sort": 1,
+                            "src": "/moving-stones-until-consecutive/",
+                            "score": 1421,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1864. 构成交替字符串需要的最小交换次数",
+                            "sort": 2,
+                            "src": "/minimum-number-of-swaps-to-make-the-binary-string-alternating/",
+                            "score": 1601,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1899. 合并若干三元组以形成目标三元组",
+                            "sort": 3,
+                            "src": "/merge-triplets-to-form-target-triplet/",
+                            "score": 1636,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2498. 青蛙过河 II",
+                            "sort": 4,
+                            "src": "/frog-jump-ii/",
+                            "score": 1759,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2311. 小于等于 K 的最长二进制子序列",
+                            "sort": 5,
+                            "src": "/longest-binary-subsequence-less-than-or-equal-to-k/",
+                            "score": 1840,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3002. 移除后集合的最多元素数",
+                            "sort": 6,
+                            "src": "/maximum-size-of-a-set-after-removals/",
+                            "score": 1917,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "659. 分割数组为连续子序列",
+                            "sort": 7,
+                            "src": "/split-array-into-consecutive-subsequences/",
+                            "score": 2100,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2732. 找到矩阵中的好子集",
+                            "sort": 8,
+                            "src": "/find-a-good-subset-of-the-matrix/",
+                            "score": 2240,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2790. 长度递增组的最大数目",
+                            "sort": 9,
+                            "src": "/maximum-number-of-groups-with-increasing-length/",
+                            "score": 2620,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "782. 变为棋盘",
+                            "sort": 10,
+                            "src": "/transform-to-chessboard/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "420. 强密码检验器",
+                            "sort": 11,
+                            "src": "/strong-password-checker/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "LCP 26. 导航装置",
+                            "sort": 12,
+                            "src": "/hSRGyL/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "LCP 70. 沙地治理",
+                            "sort": 13,
+                            "src": "/XxZZjK/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2753. 计算一个环形街道上的房屋数量 II",
+                            "sort": 14,
+                            "src": "/count-houses-in-a-circular-street-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        }
+                    ]
+                }
+            ]
         },
         {
             "title": "答疑",
             "sort": 8,
-            "summary": "**问**：有没有万能方法，判断一道题是贪心还是 DP？<br>**答**：很难。如果不知道题目类型，把 DP 想成贪心的大有人在。我的建议是**先思考 DP 能不能做，再思考贪心**。<br>此外，这也说明按照题单刷题的缺点：提前知道题目类型，跳过了一些思考步骤。为了弥补这个缺点，也可以按照 <a href=\"https://huxulm.github.io/lc-rating/zen\">难度分</a> 刷题，锻炼自己的「实战能力」。<br>",
+            "summary": "**问**：贪心和 DP 的区别是什么？<br>**答**：DP 可以视为带记忆化的暴力搜索，只要不遗漏任何分支，答案一定是对的。贪心可以视为带剪枝的搜索，如果贪心策略不对，就容易贪过头，把正确的分支给剪掉。<br>**问**：有没有万能方法，判断一道题是贪心还是 DP？<br>**答**：很难。如果不知道题目类型，把 DP 想成贪心的大有人在。我的建议是**先思考 DP 能不能做，再思考贪心**。如果 DP 的时间复杂度足以通过题目，就不用思考贪心策略了。<br>此外，这也说明按照题单刷题的缺点：提前知道题目类型，跳过了一些思考步骤。如何弥补这个缺点？请看 <a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题</a>。<br>",
             "child": []
         }
     ]
