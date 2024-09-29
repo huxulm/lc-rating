@@ -117,6 +117,12 @@ def refactor_discussion_with_sub(content: str):# 有x.x的时候用这个
             sub_node_list.append(curr_sub)
             leaf_node_list = curr_sub.child
         elif cont.startswith("- ["):
+            # check if there exists a node to use
+            if len(leaf_node_list) == 0:
+                title = ""
+                curr_leaf = DiscussionLeafNode(title, len(leaf_node_list), True, "", [])
+                leaf_node_list.append(curr_leaf)
+                node_list = curr_leaf.child
             # use regex get []() content
             pidx = cont.find(")")
             part1 = cont[2:pidx+1]
@@ -129,6 +135,11 @@ def refactor_discussion_with_sub(content: str):# 有x.x的时候用这个
             if len(remain) > 0:
                 remain = remain[0].strip()
                 score = int(remain)
+                # score 如果不是[1000, 5000]的区间，可能读错
+                # ps: 目前最高分的题目3773, 第二高的3112
+                # 最低分 1084, 第二低的 1100
+                if score < 1000 or score > 5000:
+                    score = None
             # 有些题目只有国服有不一定有split_url 前缀
             if split_url in src:
                 src = src.split(split_url)[1]
@@ -184,6 +195,8 @@ def refactor_discussion(content: str):# 没有x.x的时候用这个
             if len(remain) > 0:
                 remain = remain[0].strip()
                 score = int(remain)
+                if score < 1000 or score > 5000:
+                    score = None
             # 有些题目只有国服有不一定有split_url 前缀
             if split_url in src:
                 src = src.split(split_url)[1]
