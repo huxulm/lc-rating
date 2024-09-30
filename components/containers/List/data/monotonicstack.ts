@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享｜【题单】单调栈（矩形面积/贡献法/最小字典序）",
     "original_src": "https://leetcode.cn/circle/discuss/9oZFK9",
-    "last_update": "2024-06-30T23:44:57.532368+00:00",
+    "last_update": "2024-08-26T02:13:34.549443+00:00",
     "sort": 0,
     "child": [
         {
@@ -66,8 +66,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "901. 股票价格跨度",
+                            "title": "853. 车队",
                             "sort": 6,
+                            "src": "/car-fleet/",
+                            "score": 1678,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "901. 股票价格跨度",
+                            "sort": 7,
                             "src": "/online-stock-span/",
                             "score": 1709,
                             "solution": null,
@@ -75,7 +83,7 @@ export default{
                         },
                         {
                             "title": "1124. 表现良好的最长时间段",
-                            "sort": 7,
+                            "sort": 8,
                             "src": "/longest-well-performing-interval/",
                             "score": 1908,
                             "solution": null,
@@ -83,7 +91,7 @@ export default{
                         },
                         {
                             "title": "1793. 好子数组的最大分数",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/maximum-score-of-a-good-subarray/",
                             "score": 1946,
                             "solution": null,
@@ -91,7 +99,7 @@ export default{
                         },
                         {
                             "title": "456. 132 模式",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/132-pattern/",
                             "score": 2000,
                             "solution": null,
@@ -99,7 +107,7 @@ export default{
                         },
                         {
                             "title": "3113. 边界元素是最大值的子数组数目",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/find-the-number-of-subarrays-where-boundary-elements-are-maximum/",
                             "score": 2046,
                             "solution": null,
@@ -107,7 +115,7 @@ export default{
                         },
                         {
                             "title": "2866. 美丽塔 II",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/beautiful-towers-ii/",
                             "score": 2072,
                             "solution": null,
@@ -115,7 +123,7 @@ export default{
                         },
                         {
                             "title": "1944. 队列中可以看到的人数",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/number-of-visible-people-in-a-queue/",
                             "score": 2105,
                             "solution": null,
@@ -123,7 +131,7 @@ export default{
                         },
                         {
                             "title": "2454. 下一个更大元素 IV",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/next-greater-element-iv/",
                             "score": 2175,
                             "solution": null,
@@ -131,7 +139,7 @@ export default{
                         },
                         {
                             "title": "1130. 叶值的最小代价生成树",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/minimum-cost-tree-from-leaf-values/",
                             "score": null,
                             "solution": null,
@@ -139,7 +147,7 @@ export default{
                         },
                         {
                             "title": "2289. 使数组按非递减顺序排列",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/steps-to-make-array-non-decreasing/",
                             "score": 2482,
                             "solution": null,
@@ -147,15 +155,23 @@ export default{
                         },
                         {
                             "title": "1776. 车队 II",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/car-fleet-ii/",
                             "score": 2531,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "3221. 最大数组跳跃得分 II",
+                            "sort": 18,
+                            "src": "/maximum-array-hopping-score-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
                             "title": "1966. 未排序数组中的可被二分搜索的数",
-                            "sort": 17,
+                            "sort": 19,
                             "src": "/binary-searchable-numbers-in-an-unsorted-array/",
                             "score": null,
                             "solution": null,
@@ -163,7 +179,7 @@ export default{
                         },
                         {
                             "title": "2832. 每个元素为最大值的最大范围",
-                            "sort": 18,
+                            "sort": 20,
                             "src": "/maximal-range-that-each-element-is-maximum-in-it/",
                             "score": null,
                             "solution": null,
@@ -185,16 +201,8 @@ export default{
                     "summary": "",
                     "child": [
                         {
-                            "title": "42. 接雨水",
-                            "sort": 0,
-                            "src": "/trapping-rain-water/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "84. 柱状图中最大的矩形",
-                            "sort": 1,
+                            "sort": 0,
                             "src": "/largest-rectangle-in-histogram/",
                             "score": null,
                             "solution": null,
@@ -202,7 +210,7 @@ export default{
                         },
                         {
                             "title": "1793. 好子数组的最大分数",
-                            "sort": 2,
+                            "sort": 1,
                             "src": "/maximum-score-of-a-good-subarray/",
                             "score": 1946,
                             "solution": null,
@@ -210,7 +218,7 @@ export default{
                         },
                         {
                             "title": "85. 最大矩形",
-                            "sort": 3,
+                            "sort": 2,
                             "src": "/maximal-rectangle/",
                             "score": null,
                             "solution": null,
@@ -218,11 +226,27 @@ export default{
                         },
                         {
                             "title": "1504. 统计全 1 子矩形",
-                            "sort": 4,
+                            "sort": 3,
                             "src": "/count-submatrices-with-all-ones/",
-                            "score": 1845,
+                            "score": null,
                             "solution": null,
                             "isPremium": false
+                        },
+                        {
+                            "title": "42. 接雨水",
+                            "sort": 4,
+                            "src": "/trapping-rain-water/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "755. 倒水",
+                            "sort": 5,
+                            "src": "/pour-water/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
                         }
                     ]
                 }
@@ -319,7 +343,7 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "316 扩展：重复个数不超过 limit",
+                            "title": "316 扩展：重复个数不超过 limit (打开页面后需手动删除前缀)",
                             "sort": 3,
                             "src": "https://leetcode.cn/contest/tianchi2022/problems/ev2bru/",
                             "score": null,
@@ -330,7 +354,7 @@ export default{
                             "title": "1081. 不同字符的最小子序列",
                             "sort": 4,
                             "src": "/smallest-subsequence-of-distinct-characters/",
-                            "score": 316,
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },

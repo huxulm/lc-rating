@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】二分算法（二分答案/最小化最大值/最大化最小值/第K小）",
     "original_src": "https://leetcode.cn/circle/discuss/SqopEo",
-    "last_update": "2024-06-20T11:19:33.330361+00:00",
+    "last_update": "2024-09-08T09:29:02.869280+00:00",
     "sort": 0,
     "child": [
         {
@@ -130,8 +130,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1818. 绝对差值和",
+                            "title": "658. 找到 K 个最接近的元素",
                             "sort": 14,
+                            "src": "/find-k-closest-elements/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1818. 绝对差值和",
+                            "sort": 15,
                             "src": "/minimum-absolute-sum-difference/",
                             "score": 1934,
                             "solution": null,
@@ -139,7 +147,7 @@ export default{
                         },
                         {
                             "title": "911. 在线选举",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/online-election/",
                             "score": 2001,
                             "solution": null,
@@ -147,7 +155,7 @@ export default{
                         },
                         {
                             "title": "LCP 08. 剧情触发时间",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/ju-qing-hong-fa-shi-jian/",
                             "score": null,
                             "solution": null,
@@ -155,7 +163,7 @@ export default{
                         },
                         {
                             "title": "1150. 检查一个数是否在数组中占绝大多数",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/check-if-a-number-is-majority-element-in-a-sorted-array/",
                             "score": null,
                             "solution": null,
@@ -163,7 +171,7 @@ export default{
                         },
                         {
                             "title": "1064. 不动点",
-                            "sort": 18,
+                            "sort": 19,
                             "src": "/fixed-point/",
                             "score": null,
                             "solution": null,
@@ -171,7 +179,7 @@ export default{
                         },
                         {
                             "title": "702. 搜索长度未知的有序数组",
-                            "sort": 19,
+                            "sort": 20,
                             "src": "/search-in-a-sorted-array-of-unknown-size/",
                             "score": null,
                             "solution": null,
@@ -179,7 +187,7 @@ export default{
                         },
                         {
                             "title": "1182. 与目标颜色间的最短距离",
-                            "sort": 20,
+                            "sort": 21,
                             "src": "/shortest-distance-to-target-color/",
                             "score": null,
                             "solution": null,
@@ -187,7 +195,7 @@ export default{
                         },
                         {
                             "title": "2819. 购买巧克力后的最小相对损失",
-                            "sort": 21,
+                            "sort": 22,
                             "src": "/minimum-relative-loss-after-buying-chocolates/",
                             "score": null,
                             "solution": null,
@@ -195,7 +203,7 @@ export default{
                         },
                         {
                             "title": "2936. 包含相等值数字块的数量",
-                            "sort": 22,
+                            "sort": 23,
                             "src": "/number-of-equal-numbers-blocks/",
                             "score": null,
                             "solution": null,
@@ -574,8 +582,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "774. 最小化去加油站的最大距离",
+                            "title": "LCP 12. 小张刷题计划",
                             "sort": 9,
+                            "src": "/xiao-zhang-shua-ti-ji-hua/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "774. 最小化去加油站的最大距离",
+                            "sort": 10,
                             "src": "/minimize-max-distance-to-gas-station/",
                             "score": null,
                             "solution": null,
@@ -597,8 +613,16 @@ export default{
                     "summary": "本质是二分答案求最大。<br>",
                     "child": [
                         {
-                            "title": "2517. 礼盒的最大甜蜜度",
+                            "title": "3281. 范围内整数的最大得分",
                             "sort": 0,
+                            "src": "/maximize-score-of-numbers-in-ranges/",
+                            "score": 1800,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2517. 礼盒的最大甜蜜度",
+                            "sort": 1,
                             "src": "/maximum-tastiness-of-candy-basket/",
                             "score": 2021,
                             "solution": null,
@@ -606,15 +630,15 @@ export default{
                         },
                         {
                             "title": "1552. 两球之间的磁力",
-                            "sort": 1,
+                            "sort": 2,
                             "src": "/magnetic-force-between-two-balls/",
-                            "score": null,
+                            "score": 2517,
                             "solution": null,
                             "isPremium": false
                         },
                         {
                             "title": "2812. 找出最安全路径",
-                            "sort": 2,
+                            "sort": 3,
                             "src": "/find-the-safest-path-in-a-grid/",
                             "score": 2154,
                             "solution": null,
@@ -622,17 +646,9 @@ export default{
                         },
                         {
                             "title": "2528. 最大化城市的最小供电站数目",
-                            "sort": 3,
+                            "sort": 4,
                             "src": "/maximize-the-minimum-powered-city/",
                             "score": 2236,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "LCP 12. 小张刷题计划",
-                            "sort": 4,
-                            "src": "/xiao-zhang-shua-ti-ji-hua/",
-                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },
@@ -684,16 +700,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "373. 查找和最小的 K 对数字",
-                            "sort": 2,
-                            "src": "/find-k-pairs-with-smallest-sums/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "719. 找出第 K 小的数对距离",
-                            "sort": 3,
+                            "sort": 2,
                             "src": "/find-k-th-smallest-pair-distance/",
                             "score": null,
                             "solution": null,
@@ -701,7 +709,7 @@ export default{
                         },
                         {
                             "title": "878. 第 N 个神奇数字",
-                            "sort": 4,
+                            "sort": 3,
                             "src": "/nth-magical-number/",
                             "score": 1897,
                             "solution": null,
@@ -709,7 +717,7 @@ export default{
                         },
                         {
                             "title": "1201. 丑数 III",
-                            "sort": 5,
+                            "sort": 4,
                             "src": "/ugly-number-iii/",
                             "score": 2039,
                             "solution": null,
@@ -717,9 +725,17 @@ export default{
                         },
                         {
                             "title": "793. 阶乘函数后 K 个零",
-                            "sort": 6,
+                            "sort": 5,
                             "src": "/preimage-size-of-factorial-zeroes-function/",
                             "score": 2100,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "373. 查找和最小的 K 对数字",
+                            "sort": 6,
+                            "src": "/find-k-pairs-with-smallest-sums/",
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },
@@ -732,7 +748,7 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "786. 第 K 个最小的素数分数",
+                            "title": "786. 第 K 个最小的质数分数",
                             "sort": 8,
                             "src": "/k-th-smallest-prime-fraction/",
                             "score": 2169,
@@ -891,8 +907,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1539. 第 k 个缺失的正整数",
+                            "title": "222. 完全二叉树的节点个数",
                             "sort": 11,
+                            "src": "/count-complete-tree-nodes/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1539. 第 k 个缺失的正整数",
+                            "sort": 12,
                             "src": "/kth-missing-positive-number/",
                             "score": null,
                             "solution": null,
@@ -900,7 +924,7 @@ export default{
                         },
                         {
                             "title": "540. 有序数组中的单一元素",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/single-element-in-a-sorted-array/",
                             "score": null,
                             "solution": null,
@@ -908,7 +932,7 @@ export default{
                         },
                         {
                             "title": "4. 寻找两个正序数组的中位数",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/median-of-two-sorted-arrays/",
                             "score": null,
                             "solution": null,
@@ -916,7 +940,7 @@ export default{
                         },
                         {
                             "title": "1060. 有序数组中的缺失元素",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/missing-element-in-sorted-array/",
                             "score": null,
                             "solution": null,
@@ -924,7 +948,7 @@ export default{
                         },
                         {
                             "title": "1198. 找出所有行中最小公共元素",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/find-smallest-common-element-in-all-rows/",
                             "score": null,
                             "solution": null,
@@ -932,7 +956,7 @@ export default{
                         },
                         {
                             "title": "1428. 至少有一个 1 的最左端列",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/leftmost-column-with-at-least-a-one/",
                             "score": null,
                             "solution": null,
@@ -940,7 +964,7 @@ export default{
                         },
                         {
                             "title": "1533. 找到最大整数的索引",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/find-the-index-of-the-large-integer/",
                             "score": null,
                             "solution": null,
@@ -948,8 +972,16 @@ export default{
                         },
                         {
                             "title": "2387. 行排序矩阵的中位数",
-                            "sort": 18,
+                            "sort": 19,
                             "src": "/median-of-a-row-wise-sorted-matrix/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "302. 包含全部黑色像素的最小矩形",
+                            "sort": 20,
+                            "src": "/smallest-rectangle-enclosing-black-pixels/",
                             "score": null,
                             "solution": null,
                             "isPremium": true
