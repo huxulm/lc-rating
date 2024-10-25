@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】网格图（DFS/BFS/综合应用）",
     "original_src": "https://leetcode.cn/circle/discuss/YiXPXW",
-    "last_update": "2024-09-17T02:25:32.004244+00:00",
+    "last_update": "2024-09-17 02:25:32",
     "sort": 0,
     "child": [
         {
@@ -61,7 +61,7 @@ export default{
                             "title": "2658. 网格图中鱼的最大数目",
                             "sort": 5,
                             "src": "/maximum-number-of-fish-in-a-grid/",
-                            "score": 1490,
+                            "score": 1489.7210915287,
                             "solution": null,
                             "isPremium": false
                         },
@@ -69,7 +69,7 @@ export default{
                             "title": "1034. 边界着色",
                             "sort": 6,
                             "src": "/coloring-a-border/",
-                            "score": 1579,
+                            "score": 1578.8503818621,
                             "solution": null,
                             "isPremium": false
                         },
@@ -77,7 +77,7 @@ export default{
                             "title": "1020. 飞地的数量",
                             "sort": 7,
                             "src": "/number-of-enclaves/",
-                            "score": 1615,
+                            "score": 1615.4767730477,
                             "solution": null,
                             "isPremium": false
                         },
@@ -85,7 +85,7 @@ export default{
                             "title": "2684. 矩阵中移动的最大次数",
                             "sort": 8,
                             "src": "/maximum-number-of-moves-in-a-grid/",
-                            "score": 1626,
+                            "score": 1625.9636825798,
                             "solution": null,
                             "isPremium": false
                         },
@@ -93,7 +93,7 @@ export default{
                             "title": "1254. 统计封闭岛屿的数目",
                             "sort": 9,
                             "src": "/number-of-closed-islands/",
-                            "score": 1659,
+                            "score": 1658.7495899767,
                             "solution": null,
                             "isPremium": false
                         },
@@ -109,7 +109,7 @@ export default{
                             "title": "1905. 统计子岛屿",
                             "sort": 11,
                             "src": "/count-sub-islands/",
-                            "score": 1679,
+                            "score": 1678.7231378948,
                             "solution": null,
                             "isPremium": false
                         },
@@ -117,7 +117,7 @@ export default{
                             "title": "1391. 检查网格中是否存在有效路径",
                             "sort": 12,
                             "src": "/check-if-there-is-a-valid-path-in-a-grid/",
-                            "score": 1746,
+                            "score": 1745.6490739887,
                             "solution": null,
                             "isPremium": false
                         },
@@ -141,7 +141,7 @@ export default{
                             "title": "1559. 二维网格图中探测环",
                             "sort": 15,
                             "src": "/detect-cycles-in-2d-grid/",
-                            "score": 1838,
+                            "score": 1837.8252904904,
                             "solution": null,
                             "isPremium": false
                         },
@@ -149,7 +149,7 @@ export default{
                             "title": "827. 最大人工岛",
                             "sort": 16,
                             "src": "/making-a-large-island/",
-                            "score": 1934,
+                            "score": 1933.9571917853,
                             "solution": null,
                             "isPremium": false
                         },
@@ -204,7 +204,7 @@ export default{
                             "title": "1926. 迷宫中离入口最近的出口",
                             "sort": 0,
                             "src": "/nearest-exit-from-entrance-in-maze/",
-                            "score": 1638,
+                            "score": 1638.3134093066,
                             "solution": null,
                             "isPremium": false
                         },
@@ -212,7 +212,7 @@ export default{
                             "title": "1091. 二进制矩阵中的最短路径",
                             "sort": 1,
                             "src": "/shortest-path-in-binary-matrix/",
-                            "score": 1658,
+                            "score": 1658.3474650806,
                             "solution": null,
                             "isPremium": false
                         },
@@ -220,7 +220,7 @@ export default{
                             "title": "1162. 地图分析",
                             "sort": 2,
                             "src": "/as-far-from-land-as-possible/",
-                            "score": 1666,
+                            "score": 1666.346990979,
                             "solution": null,
                             "isPremium": false
                         },
@@ -236,7 +236,7 @@ export default{
                             "title": "994. 腐烂的橘子",
                             "sort": 4,
                             "src": "/rotting-oranges/",
-                            "score": null,
+                            "score": 1432.9051050881,
                             "solution": null,
                             "isPremium": false
                         },
@@ -244,7 +244,7 @@ export default{
                             "title": "1765. 地图中的最高点",
                             "sort": 5,
                             "src": "/map-of-highest-peak/",
-                            "score": 1783,
+                            "score": 1782.9801784101,
                             "solution": null,
                             "isPremium": false
                         },
@@ -252,7 +252,7 @@ export default{
                             "title": "934. 最短的桥",
                             "sort": 6,
                             "src": "/shortest-bridge/",
-                            "score": 1826,
+                            "score": 1825.770486008,
                             "solution": null,
                             "isPremium": false
                         },
@@ -260,7 +260,7 @@ export default{
                             "title": "2146. 价格范围内最高排名的 K 样物品",
                             "sort": 7,
                             "src": "/k-highest-ranked-items-within-a-price-range/",
-                            "score": 1837,
+                            "score": 1836.5345744332,
                             "solution": null,
                             "isPremium": false
                         },
@@ -268,7 +268,7 @@ export default{
                             "title": "1293. 网格中的最短路径",
                             "sort": 8,
                             "src": "/shortest-path-in-a-grid-with-obstacles-elimination/",
-                            "score": 1967,
+                            "score": 1967.3284576938,
                             "solution": null,
                             "isPremium": false
                         },
@@ -276,7 +276,7 @@ export default{
                             "title": "909. 蛇梯棋",
                             "sort": 9,
                             "src": "/snakes-and-ladders/",
-                            "score": 2020,
+                            "score": 2019.5399647546,
                             "solution": null,
                             "isPremium": false
                         },
@@ -284,7 +284,7 @@ export default{
                             "title": "1210. 穿过迷宫的最少移动次数",
                             "sort": 10,
                             "src": "/minimum-moves-to-reach-target-with-rotations/",
-                            "score": 2022,
+                            "score": 2022.4752963768,
                             "solution": null,
                             "isPremium": false
                         },
@@ -300,7 +300,7 @@ export default{
                             "title": "749. 隔离病毒",
                             "sort": 12,
                             "src": "/contain-virus/",
-                            "score": 2277,
+                            "score": 2277.0238076464,
                             "solution": null,
                             "isPremium": false
                         },
@@ -379,7 +379,7 @@ export default{
                             "title": "1368. 使网格图至少有一条有效路径的最小代价",
                             "sort": 0,
                             "src": "/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/",
-                            "score": 2069,
+                            "score": 2068.806637566,
                             "solution": null,
                             "isPremium": false
                         },
@@ -387,7 +387,7 @@ export default{
                             "title": "2290. 到达角落需要移除障碍物的最小数目",
                             "sort": 1,
                             "src": "/minimum-obstacle-removal-to-reach-corner/",
-                            "score": 2138,
+                            "score": 2137.5633267453,
                             "solution": null,
                             "isPremium": false
                         },
@@ -395,7 +395,7 @@ export default{
                             "title": "3286. 穿越网格图的安全路径",
                             "sort": 2,
                             "src": "/find-a-safe-walk-through-a-grid/",
-                            "score": 2290,
+                            "score": 1607.8207466026,
                             "solution": null,
                             "isPremium": false
                         },
@@ -403,7 +403,7 @@ export default{
                             "title": "1824. 最少侧跳次数",
                             "sort": 3,
                             "src": "/minimum-sideway-jumps/",
-                            "score": null,
+                            "score": 1778.4880620629,
                             "solution": null,
                             "isPremium": false
                         },
@@ -434,7 +434,7 @@ export default{
                             "title": "1631. 最小体力消耗路径",
                             "sort": 0,
                             "src": "/path-with-minimum-effort/",
-                            "score": 1948,
+                            "score": 1947.5013967785,
                             "solution": null,
                             "isPremium": false
                         },
@@ -442,7 +442,7 @@ export default{
                             "title": "778. 水位上升的泳池中游泳",
                             "sort": 1,
                             "src": "/swim-in-rising-water/",
-                            "score": 2097,
+                            "score": 2096.6201393558,
                             "solution": null,
                             "isPremium": false
                         },
@@ -458,7 +458,7 @@ export default{
                             "title": "1036. 逃离大迷宫",
                             "sort": 3,
                             "src": "/escape-a-large-maze/",
-                            "score": 2165,
+                            "score": 2164.8287157213,
                             "solution": null,
                             "isPremium": false
                         },
@@ -466,7 +466,7 @@ export default{
                             "title": "864. 获取所有钥匙的最短路径",
                             "sort": 4,
                             "src": "/shortest-path-to-get-all-keys/",
-                            "score": 2259,
+                            "score": 2258.6371797452,
                             "solution": null,
                             "isPremium": false
                         },
@@ -474,7 +474,7 @@ export default{
                             "title": "1263. 推箱子",
                             "sort": 5,
                             "src": "/minimum-moves-to-move-a-box-to-their-target-location/",
-                            "score": 2297,
+                            "score": 2297.105362516,
                             "solution": null,
                             "isPremium": false
                         },
@@ -482,7 +482,7 @@ export default{
                             "title": "2258. 逃离火灾",
                             "sort": 6,
                             "src": "/escape-the-spreading-fire/",
-                            "score": 2347,
+                            "score": 2346.5717839654,
                             "solution": null,
                             "isPremium": false
                         },
@@ -490,7 +490,7 @@ export default{
                             "title": "2556. 二进制矩阵中翻转最多一次使路径不连通",
                             "sort": 7,
                             "src": "/disconnect-path-in-a-binary-matrix-by-at-most-one-flip/",
-                            "score": 2369,
+                            "score": 2368.6674771307,
                             "solution": null,
                             "isPremium": false
                         },
@@ -498,7 +498,7 @@ export default{
                             "title": "2577. 在网格图中访问一个格子的最少时间",
                             "sort": 8,
                             "src": "/minimum-time-to-visit-a-cell-in-a-grid/",
-                            "score": 2382,
+                            "score": 2381.625583289,
                             "solution": null,
                             "isPremium": false
                         },
@@ -506,7 +506,7 @@ export default{
                             "title": "2617. 网格图中最少访问的格子数",
                             "sort": 9,
                             "src": "/minimum-number-of-visited-cells-in-a-grid/",
-                            "score": 2582,
+                            "score": 2581.9961985753,
                             "solution": null,
                             "isPremium": false
                         },
@@ -546,7 +546,7 @@ export default{
                             "title": "1728. 猫和老鼠 II",
                             "sort": 14,
                             "src": "/cat-and-mouse-ii/",
-                            "score": 2849,
+                            "score": 2849.4841858619,
                             "solution": null,
                             "isPremium": false
                         },
@@ -570,7 +570,7 @@ export default{
                             "title": "1102. 得分最高的路径",
                             "sort": 17,
                             "src": "/path-with-maximum-minimum-value/",
-                            "score": null,
+                            "score": 2011.3542735398,
                             "solution": null,
                             "isPremium": true
                         }

@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】二分算法（二分答案/最小化最大值/最大化最小值/第K小）",
     "original_src": "https://leetcode.cn/circle/discuss/SqopEo",
-    "last_update": "2024-09-08T09:29:02.869280+00:00",
+    "last_update": "2024-10-24 07:06:05",
     "sort": 0,
     "child": [
         {
@@ -53,7 +53,7 @@ export default{
                             "title": "2529. 正整数和负整数的最大计数",
                             "sort": 4,
                             "src": "/maximum-count-of-positive-integer-and-negative-integer/",
-                            "score": null,
+                            "score": 1195.9731842298,
                             "solution": null,
                             "isPremium": false
                         },
@@ -61,7 +61,7 @@ export default{
                             "title": "1385. 两个数组间的距离值",
                             "sort": 5,
                             "src": "/find-the-distance-value-between-two-arrays/",
-                            "score": null,
+                            "score": 1234.8049089605,
                             "solution": null,
                             "isPremium": false
                         },
@@ -69,7 +69,7 @@ export default{
                             "title": "2300. 咒语和药水的成功对数",
                             "sort": 6,
                             "src": "/successful-pairs-of-spells-and-potions/",
-                            "score": 1477,
+                            "score": 1476.9062320302,
                             "solution": null,
                             "isPremium": false
                         },
@@ -77,7 +77,7 @@ export default{
                             "title": "2389. 和有限的最长子序列",
                             "sort": 7,
                             "src": "/longest-subsequence-with-limited-sum/",
-                            "score": null,
+                            "score": 1387.7347071166,
                             "solution": null,
                             "isPremium": false
                         },
@@ -85,7 +85,7 @@ export default{
                             "title": "1170. 比较字符串最小字母出现频次",
                             "sort": 8,
                             "src": "/compare-strings-by-frequency-of-the-smallest-character/",
-                            "score": null,
+                            "score": 1431.6864980883,
                             "solution": null,
                             "isPremium": false
                         },
@@ -93,7 +93,7 @@ export default{
                             "title": "2080. 区间内查询数字的频率",
                             "sort": 9,
                             "src": "/range-frequency-queries/",
-                            "score": 1702,
+                            "score": 1702.4387527636,
                             "solution": null,
                             "isPremium": false
                         },
@@ -101,7 +101,7 @@ export default{
                             "title": "2563. 统计公平数对的数目",
                             "sort": 10,
                             "src": "/count-the-number-of-fair-pairs/",
-                            "score": 1721,
+                            "score": 1720.7470612766,
                             "solution": null,
                             "isPremium": false
                         },
@@ -109,7 +109,7 @@ export default{
                             "title": "2856. 删除数对后的最小数组长度",
                             "sort": 11,
                             "src": "/minimum-array-length-after-pair-removals/",
-                            "score": 1750,
+                            "score": 1749.9743684275,
                             "solution": null,
                             "isPremium": false
                         },
@@ -117,7 +117,7 @@ export default{
                             "title": "981. 基于时间的键值存储",
                             "sort": 12,
                             "src": "/time-based-key-value-store/",
-                            "score": null,
+                            "score": 1574.7542247682,
                             "solution": null,
                             "isPremium": false
                         },
@@ -125,7 +125,7 @@ export default{
                             "title": "1146. 快照数组",
                             "sort": 13,
                             "src": "/snapshot-array/",
-                            "score": 1771,
+                            "score": 1770.8924569497,
                             "solution": null,
                             "isPremium": false
                         },
@@ -141,7 +141,7 @@ export default{
                             "title": "1818. 绝对差值和",
                             "sort": 15,
                             "src": "/minimum-absolute-sum-difference/",
-                            "score": 1934,
+                            "score": 1934.3556201811,
                             "solution": null,
                             "isPremium": false
                         },
@@ -149,7 +149,7 @@ export default{
                             "title": "911. 在线选举",
                             "sort": 16,
                             "src": "/online-election/",
-                            "score": 2001,
+                            "score": 2000.8021428612,
                             "solution": null,
                             "isPremium": false
                         },
@@ -165,7 +165,7 @@ export default{
                             "title": "1150. 检查一个数是否在数组中占绝大多数",
                             "sort": 18,
                             "src": "/check-if-a-number-is-majority-element-in-a-sorted-array/",
-                            "score": null,
+                            "score": 1249.9947800752,
                             "solution": null,
                             "isPremium": true
                         },
@@ -173,7 +173,7 @@ export default{
                             "title": "1064. 不动点",
                             "sort": 19,
                             "src": "/fixed-point/",
-                            "score": null,
+                            "score": 1307.9800903088,
                             "solution": null,
                             "isPremium": true
                         },
@@ -189,7 +189,7 @@ export default{
                             "title": "1182. 与目标颜色间的最短距离",
                             "sort": 21,
                             "src": "/shortest-distance-to-target-color/",
-                            "score": null,
+                            "score": 1626.6740430119,
                             "solution": null,
                             "isPremium": true
                         },
@@ -228,7 +228,7 @@ export default{
                             "title": "1283. 使结果不超过阈值的最小除数",
                             "sort": 0,
                             "src": "/find-the-smallest-divisor-given-a-threshold/",
-                            "score": 1542,
+                            "score": 1541.7840320661,
                             "solution": null,
                             "isPremium": false
                         },
@@ -236,7 +236,7 @@ export default{
                             "title": "2187. 完成旅途的最少时间",
                             "sort": 1,
                             "src": "/minimum-time-to-complete-trips/",
-                            "score": 1641,
+                            "score": 1640.9591585343,
                             "solution": null,
                             "isPremium": false
                         },
@@ -244,7 +244,7 @@ export default{
                             "title": "1870. 准时到达的列车最小时速",
                             "sort": 2,
                             "src": "/minimum-speed-to-arrive-on-time/",
-                            "score": 1676,
+                            "score": 1675.761234741,
                             "solution": null,
                             "isPremium": false
                         },
@@ -252,7 +252,7 @@ export default{
                             "title": "1011. 在 D 天内送达包裹的能力",
                             "sort": 3,
                             "src": "/capacity-to-ship-packages-within-d-days/",
-                            "score": 1725,
+                            "score": 1725.4481937307,
                             "solution": null,
                             "isPremium": false
                         },
@@ -260,13 +260,21 @@ export default{
                             "title": "875. 爱吃香蕉的珂珂",
                             "sort": 4,
                             "src": "/koko-eating-bananas/",
-                            "score": 1766,
+                            "score": 1765.5654059263,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3296. 移山所需的最少秒数",
+                            "sort": 5,
+                            "src": "/minimum-number-of-seconds-to-make-mountain-height-zero/",
+                            "score": 1694.7320914942,
                             "solution": null,
                             "isPremium": false
                         },
                         {
                             "title": "475. 供暖器",
-                            "sort": 5,
+                            "sort": 6,
                             "src": "/heaters/",
                             "score": null,
                             "solution": null,
@@ -274,39 +282,39 @@ export default{
                         },
                         {
                             "title": "2594. 修车的最少时间",
-                            "sort": 6,
+                            "sort": 7,
                             "src": "/minimum-time-to-repair-cars/",
-                            "score": 1915,
+                            "score": 1915.2628132733,
                             "solution": null,
                             "isPremium": false
                         },
                         {
                             "title": "1482. 制作 m 束花所需的最少天数",
-                            "sort": 7,
+                            "sort": 8,
                             "src": "/minimum-number-of-days-to-make-m-bouquets/",
-                            "score": 1946,
+                            "score": 1945.5095833982,
                             "solution": null,
                             "isPremium": false
                         },
                         {
                             "title": "3048. 标记所有下标的最早秒数 I",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/earliest-second-to-mark-indices-i/",
-                            "score": 2263,
+                            "score": 2262.5641910108,
                             "solution": null,
                             "isPremium": false
                         },
                         {
                             "title": "3049. 标记所有下标的最早秒数 II",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/earliest-second-to-mark-indices-ii/",
-                            "score": 3111,
+                            "score": 3111.1274320356,
                             "solution": null,
                             "isPremium": false
                         },
                         {
                             "title": "2604. 吃掉所有谷子的最短时间",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/minimum-time-to-eat-all-grains/",
                             "score": null,
                             "solution": null,
@@ -314,7 +322,7 @@ export default{
                         },
                         {
                             "title": "2702. 使数字变为非正数的最小操作次数",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/minimum-operations-to-make-numbers-non-positive/",
                             "score": null,
                             "solution": null,
@@ -347,7 +355,7 @@ export default{
                             "title": "2226. 每个小孩最多能分到多少糖果",
                             "sort": 1,
                             "src": "/maximum-candies-allocated-to-k-children/",
-                            "score": 1646,
+                            "score": 1646.1765343383,
                             "solution": null,
                             "isPremium": false
                         },
@@ -355,7 +363,7 @@ export default{
                             "title": "2982. 找出出现至少三次的最长特殊子字符串 II",
                             "sort": 2,
                             "src": "/find-longest-special-substring-that-occurs-thrice-ii/",
-                            "score": 1773,
+                            "score": 1772.9528456848,
                             "solution": null,
                             "isPremium": false
                         },
@@ -363,7 +371,7 @@ export default{
                             "title": "2576. 求出最多标记下标",
                             "sort": 3,
                             "src": "/find-the-maximum-number-of-marked-indices/",
-                            "score": 1843,
+                            "score": 1843.2383664194,
                             "solution": null,
                             "isPremium": false
                         },
@@ -371,7 +379,7 @@ export default{
                             "title": "1898. 可移除字符的最大数目",
                             "sort": 4,
                             "src": "/maximum-number-of-removable-characters/",
-                            "score": 1913,
+                            "score": 1912.8440554296,
                             "solution": null,
                             "isPremium": false
                         },
@@ -379,7 +387,7 @@ export default{
                             "title": "1802. 有界数组中指定下标处的最大值",
                             "sort": 5,
                             "src": "/maximum-value-at-a-given-index-in-a-bounded-array/",
-                            "score": 1929,
+                            "score": 1929.3184180196,
                             "solution": null,
                             "isPremium": false
                         },
@@ -387,7 +395,7 @@ export default{
                             "title": "1642. 可以到达的最远建筑",
                             "sort": 6,
                             "src": "/furthest-building-you-can-reach/",
-                            "score": 1962,
+                            "score": 1962.2005269503,
                             "solution": null,
                             "isPremium": false
                         },
@@ -395,7 +403,7 @@ export default{
                             "title": "2861. 最大合金数",
                             "sort": 7,
                             "src": "/maximum-number-of-alloys/",
-                            "score": 1981,
+                            "score": 1981.3072959787,
                             "solution": null,
                             "isPremium": false
                         },
@@ -403,7 +411,7 @@ export default{
                             "title": "3007. 价值和小于等于 K 的最大数字",
                             "sort": 8,
                             "src": "/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/",
-                            "score": 2258,
+                            "score": 2258.0069047781,
                             "solution": null,
                             "isPremium": false
                         },
@@ -411,7 +419,7 @@ export default{
                             "title": "2141. 同时运行 N 台电脑的最长时间",
                             "sort": 9,
                             "src": "/maximum-running-time-of-n-computers/",
-                            "score": 2265,
+                            "score": 2265.2118886972,
                             "solution": null,
                             "isPremium": false
                         },
@@ -419,7 +427,7 @@ export default{
                             "title": "2258. 逃离火灾",
                             "sort": 10,
                             "src": "/escape-the-spreading-fire/",
-                            "score": 2347,
+                            "score": 2346.5717839654,
                             "solution": null,
                             "isPremium": false
                         },
@@ -427,7 +435,7 @@ export default{
                             "title": "2071. 你可以安排的最多任务数目",
                             "sort": 11,
                             "src": "/maximum-number-of-tasks-you-can-assign/",
-                            "score": 2648,
+                            "score": 2648.1748409542,
                             "solution": null,
                             "isPremium": false
                         },
@@ -482,7 +490,7 @@ export default{
                             "title": "3143. 正方形中的最多点数",
                             "sort": 0,
                             "src": "/maximum-points-inside-the-square/",
-                            "score": 1697,
+                            "score": 1696.9464414997,
                             "solution": null,
                             "isPremium": false
                         },
@@ -490,7 +498,7 @@ export default{
                             "title": "1648. 销售价值减少的颜色球",
                             "sort": 1,
                             "src": "/sell-diminishing-valued-colored-balls/",
-                            "score": 2050,
+                            "score": 2050.2553211463,
                             "solution": null,
                             "isPremium": false
                         }
@@ -521,7 +529,7 @@ export default{
                             "title": "2064. 分配给商店的最多商品的最小值",
                             "sort": 1,
                             "src": "/minimized-maximum-of-products-distributed-to-any-store/",
-                            "score": 1886,
+                            "score": 1885.9015646531,
                             "solution": null,
                             "isPremium": false
                         },
@@ -529,7 +537,7 @@ export default{
                             "title": "1760. 袋子里最少数目的球",
                             "sort": 2,
                             "src": "/minimum-limit-of-balls-in-a-bag/",
-                            "score": 1940,
+                            "score": 1939.9323330472,
                             "solution": null,
                             "isPremium": false
                         },
@@ -537,7 +545,7 @@ export default{
                             "title": "1631. 最小体力消耗路径",
                             "sort": 3,
                             "src": "/path-with-minimum-effort/",
-                            "score": 1948,
+                            "score": 1947.5013967785,
                             "solution": null,
                             "isPremium": false
                         },
@@ -545,7 +553,7 @@ export default{
                             "title": "2439. 最小化数组中的最大值",
                             "sort": 4,
                             "src": "/minimize-maximum-of-array/",
-                            "score": 1965,
+                            "score": 1965.1266122355,
                             "solution": null,
                             "isPremium": false
                         },
@@ -553,7 +561,7 @@ export default{
                             "title": "2560. 打家劫舍 IV",
                             "sort": 5,
                             "src": "/house-robber-iv/",
-                            "score": 2081,
+                            "score": 2081.1880297942,
                             "solution": null,
                             "isPremium": false
                         },
@@ -561,7 +569,7 @@ export default{
                             "title": "778. 水位上升的泳池中游泳",
                             "sort": 6,
                             "src": "/swim-in-rising-water/",
-                            "score": 2097,
+                            "score": 2096.6201393558,
                             "solution": null,
                             "isPremium": false
                         },
@@ -569,7 +577,7 @@ export default{
                             "title": "2616. 最小化数对的最大差值",
                             "sort": 7,
                             "src": "/minimize-the-maximum-difference-of-pairs/",
-                            "score": 2155,
+                            "score": 2155.3424932408,
                             "solution": null,
                             "isPremium": false
                         },
@@ -577,7 +585,7 @@ export default{
                             "title": "2513. 最小化两个数组中的最大值",
                             "sort": 8,
                             "src": "/minimize-the-maximum-of-two-arrays/",
-                            "score": 2302,
+                            "score": 2302.4005640818,
                             "solution": null,
                             "isPremium": false
                         },
@@ -593,7 +601,7 @@ export default{
                             "title": "774. 最小化去加油站的最大距离",
                             "sort": 10,
                             "src": "/minimize-max-distance-to-gas-station/",
-                            "score": null,
+                            "score": 2084.2010769193,
                             "solution": null,
                             "isPremium": true
                         }
@@ -616,7 +624,7 @@ export default{
                             "title": "3281. 范围内整数的最大得分",
                             "sort": 0,
                             "src": "/maximize-score-of-numbers-in-ranges/",
-                            "score": 1800,
+                            "score": 1768.0010478389,
                             "solution": null,
                             "isPremium": false
                         },
@@ -624,7 +632,7 @@ export default{
                             "title": "2517. 礼盒的最大甜蜜度",
                             "sort": 1,
                             "src": "/maximum-tastiness-of-candy-basket/",
-                            "score": 2021,
+                            "score": 2020.6775180586,
                             "solution": null,
                             "isPremium": false
                         },
@@ -632,7 +640,7 @@ export default{
                             "title": "1552. 两球之间的磁力",
                             "sort": 2,
                             "src": "/magnetic-force-between-two-balls/",
-                            "score": 2517,
+                            "score": 1919.7433862082,
                             "solution": null,
                             "isPremium": false
                         },
@@ -640,7 +648,7 @@ export default{
                             "title": "2812. 找出最安全路径",
                             "sort": 3,
                             "src": "/find-the-safest-path-in-a-grid/",
-                            "score": 2154,
+                            "score": 2153.5854429139,
                             "solution": null,
                             "isPremium": false
                         },
@@ -648,7 +656,7 @@ export default{
                             "title": "2528. 最大化城市的最小供电站数目",
                             "sort": 4,
                             "src": "/maximize-the-minimum-powered-city/",
-                            "score": 2236,
+                            "score": 2235.5784618885,
                             "solution": null,
                             "isPremium": false
                         },
@@ -656,7 +664,7 @@ export default{
                             "title": "1102. 得分最高的路径",
                             "sort": 5,
                             "src": "/path-with-maximum-minimum-value/",
-                            "score": null,
+                            "score": 2011.3542735398,
                             "solution": null,
                             "isPremium": true
                         },
@@ -664,7 +672,7 @@ export default{
                             "title": "1231. 分享巧克力",
                             "sort": 6,
                             "src": "/divide-chocolate/",
-                            "score": null,
+                            "score": 2029.1301557536,
                             "solution": null,
                             "isPremium": true
                         }
@@ -681,7 +689,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "部分题目也可以用堆解决。<br>",
+                    "summary": "- 第 $k$ 小等价于：求最小的 $x$，满足 $\\le x$ 的数至少有 $k$ 个。<br>- 第 $k$ 大等价于：求最大的 $x$，满足 $\\ge x$ 的数至少有 $k$ 个。<br>⚠**注意**：一般来说，题目规定 $k$ 从 $1$ 开始，而不是像下标那样从 $0$ 开始。<br>⚠**注意**：一般来说，题目规定不能去重。例如数组 $[1,1,1,2,2]$，其中第 $1$ 小、第 $2$ 小和第 $3$ 小的数都是 $1$，第 $4$ 小和第 $5$ 小的数是 $2$。<br>部分题目也可以用堆解决。<br>",
                     "child": [
                         {
                             "title": "378. 有序矩阵中第 K 小的元素",
@@ -711,7 +719,7 @@ export default{
                             "title": "878. 第 N 个神奇数字",
                             "sort": 3,
                             "src": "/nth-magical-number/",
-                            "score": 1897,
+                            "score": 1896.7975214446,
                             "solution": null,
                             "isPremium": false
                         },
@@ -719,7 +727,7 @@ export default{
                             "title": "1201. 丑数 III",
                             "sort": 4,
                             "src": "/ugly-number-iii/",
-                            "score": 2039,
+                            "score": 2039.110874689,
                             "solution": null,
                             "isPremium": false
                         },
@@ -727,7 +735,7 @@ export default{
                             "title": "793. 阶乘函数后 K 个零",
                             "sort": 5,
                             "src": "/preimage-size-of-factorial-zeroes-function/",
-                            "score": 2100,
+                            "score": 2100.3248877105,
                             "solution": null,
                             "isPremium": false
                         },
@@ -743,7 +751,7 @@ export default{
                             "title": "1439. 有序矩阵中的第 k 个最小数组和",
                             "sort": 7,
                             "src": "/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/",
-                            "score": 2134,
+                            "score": 2133.9592509012,
                             "solution": null,
                             "isPremium": false
                         },
@@ -751,7 +759,7 @@ export default{
                             "title": "786. 第 K 个最小的质数分数",
                             "sort": 8,
                             "src": "/k-th-smallest-prime-fraction/",
-                            "score": 2169,
+                            "score": 2168.7531235448,
                             "solution": null,
                             "isPremium": false
                         },
@@ -759,7 +767,7 @@ export default{
                             "title": "3116. 单面值组合的第 K 小金额",
                             "sort": 9,
                             "src": "/kth-smallest-amount-with-single-denomination-combination/",
-                            "score": 2387,
+                            "score": 2387.9289198649,
                             "solution": null,
                             "isPremium": false
                         },
@@ -767,7 +775,7 @@ export default{
                             "title": "3134. 找出唯一性数组的中位数",
                             "sort": 10,
                             "src": "/find-the-median-of-the-uniqueness-array/",
-                            "score": 2451,
+                            "score": 2451.1558771446,
                             "solution": null,
                             "isPremium": false
                         },
@@ -775,7 +783,7 @@ export default{
                             "title": "2040. 两个有序数组的第 K 小乘积",
                             "sort": 11,
                             "src": "/kth-smallest-product-of-two-sorted-arrays/",
-                            "score": 2518,
+                            "score": 2517.6829964848,
                             "solution": null,
                             "isPremium": false
                         },
@@ -783,7 +791,7 @@ export default{
                             "title": "2386. 找出数组的第 K 大和",
                             "sort": 12,
                             "src": "/find-the-k-sum-of-an-array/",
-                            "score": 2648,
+                            "score": 2647.8258771458,
                             "solution": null,
                             "isPremium": false
                         },
@@ -791,7 +799,7 @@ export default{
                             "title": "1508. 子数组和排序后的区间和",
                             "sort": 13,
                             "src": "/range-sum-of-sorted-subarray-sums/",
-                            "score": null,
+                            "score": 1402.0863615706,
                             "solution": null,
                             "isPremium": false
                         },
@@ -819,9 +827,9 @@ export default{
                     "summary": "",
                     "child": [
                         {
-                            "title": "2476. 二叉搜索树最近节点查询",
+                            "title": "69. x 的平方根",
                             "sort": 0,
-                            "src": "/closest-nodes-queries-in-a-binary-search-tree/",
+                            "src": "/sqrtx/",
                             "score": null,
                             "solution": null,
                             "isPremium": false
@@ -843,8 +851,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "278. 第一个错误的版本",
+                            "title": "2476. 二叉搜索树最近节点查询",
                             "sort": 3,
+                            "src": "/closest-nodes-queries-in-a-binary-search-tree/",
+                            "score": 1596.9852244916,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "278. 第一个错误的版本",
+                            "sort": 4,
                             "src": "/first-bad-version/",
                             "score": null,
                             "solution": null,
@@ -852,7 +868,7 @@ export default{
                         },
                         {
                             "title": "374. 猜数字大小",
-                            "sort": 4,
+                            "sort": 5,
                             "src": "/guess-number-higher-or-lower/",
                             "score": null,
                             "solution": null,
@@ -860,7 +876,7 @@ export default{
                         },
                         {
                             "title": "162. 寻找峰值",
-                            "sort": 5,
+                            "sort": 6,
                             "src": "/find-peak-element/",
                             "score": null,
                             "solution": null,
@@ -868,7 +884,7 @@ export default{
                         },
                         {
                             "title": "1901. 寻找峰值 II",
-                            "sort": 6,
+                            "sort": 7,
                             "src": "/find-a-peak-element-ii/",
                             "score": null,
                             "solution": null,
@@ -876,23 +892,23 @@ export default{
                         },
                         {
                             "title": "852. 山脉数组的峰顶索引",
-                            "sort": 7,
+                            "sort": 8,
                             "src": "/peak-index-in-a-mountain-array/",
-                            "score": null,
+                            "score": 1181.5839867359,
                             "solution": null,
                             "isPremium": false
                         },
                         {
                             "title": "1095. 山脉数组中查找目标值",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/find-in-mountain-array/",
-                            "score": 1827,
+                            "score": 1827.090740222,
                             "solution": null,
                             "isPremium": false
                         },
                         {
                             "title": "153. 寻找旋转排序数组中的最小值",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/find-minimum-in-rotated-sorted-array/",
                             "score": null,
                             "solution": null,
@@ -900,7 +916,7 @@ export default{
                         },
                         {
                             "title": "33. 搜索旋转排序数组",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/search-in-rotated-sorted-array/",
                             "score": null,
                             "solution": null,
@@ -908,7 +924,7 @@ export default{
                         },
                         {
                             "title": "222. 完全二叉树的节点个数",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/count-complete-tree-nodes/",
                             "score": null,
                             "solution": null,
@@ -916,15 +932,15 @@ export default{
                         },
                         {
                             "title": "1539. 第 k 个缺失的正整数",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/kth-missing-positive-number/",
-                            "score": null,
+                            "score": 1295.4970938463,
                             "solution": null,
                             "isPremium": false
                         },
                         {
                             "title": "540. 有序数组中的单一元素",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/single-element-in-a-sorted-array/",
                             "score": null,
                             "solution": null,
@@ -932,7 +948,7 @@ export default{
                         },
                         {
                             "title": "4. 寻找两个正序数组的中位数",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/median-of-two-sorted-arrays/",
                             "score": null,
                             "solution": null,
@@ -940,7 +956,7 @@ export default{
                         },
                         {
                             "title": "1060. 有序数组中的缺失元素",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/missing-element-in-sorted-array/",
                             "score": null,
                             "solution": null,
@@ -948,15 +964,15 @@ export default{
                         },
                         {
                             "title": "1198. 找出所有行中最小公共元素",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/find-smallest-common-element-in-all-rows/",
-                            "score": null,
+                            "score": 1401.2246983038,
                             "solution": null,
                             "isPremium": true
                         },
                         {
                             "title": "1428. 至少有一个 1 的最左端列",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/leftmost-column-with-at-least-a-one/",
                             "score": null,
                             "solution": null,
@@ -964,7 +980,7 @@ export default{
                         },
                         {
                             "title": "1533. 找到最大整数的索引",
-                            "sort": 18,
+                            "sort": 19,
                             "src": "/find-the-index-of-the-large-integer/",
                             "score": null,
                             "solution": null,
@@ -972,7 +988,7 @@ export default{
                         },
                         {
                             "title": "2387. 行排序矩阵的中位数",
-                            "sort": 19,
+                            "sort": 20,
                             "src": "/median-of-a-row-wise-sorted-matrix/",
                             "score": null,
                             "solution": null,
@@ -980,7 +996,7 @@ export default{
                         },
                         {
                             "title": "302. 包含全部黑色像素的最小矩形",
-                            "sort": 20,
+                            "sort": 21,
                             "src": "/smallest-rectangle-enclosing-black-pixels/",
                             "score": null,
                             "solution": null,
