@@ -1,9 +1,12 @@
 import re
 import json
 import argparse
+import sys
 from leetcode_api import load_headers, LeetCodeApi
 
 split_url = "https://leetcode.cn/problems"
+
+rating_url = "https://raw.githubusercontent.com/zerotrac/leetcode_problem_rating/main/data.json"
 
 class DiscussionNode:
     title: str
@@ -86,7 +89,7 @@ def refactor_summary(summary: str):
     repl = r'<a href="\2">\1</a>'
     return re.sub(pattern, repl, summary)
 
-def refactor_discussion_with_sub(content: str):# 有x.x的时候用这个
+def refactor_discussion_with_sub(content: str, rating: dict):# 有x.x的时候用这个
     contents = content.split("\n")
     # split content in section by "##"
     sub_node_list = []
@@ -123,35 +126,26 @@ def refactor_discussion_with_sub(content: str):# 有x.x的时候用这个
                 curr_leaf = DiscussionLeafNode(title, len(leaf_node_list), True, "", [])
                 leaf_node_list.append(curr_leaf)
                 node_list = curr_leaf.child
-            # use regex get []() content
-            pidx = cont.find(")")
-            part1 = cont[2:pidx+1]
-            remain_parts = cont[pidx+2:] # 会员题和题解会在括号之后
-            markdown_match = re.match(r"-\s*\[(.*?)\]\((.*?)\)(?:\((.*?)\))?", cont)
+            # use regex get []()（） content
+            markdown_match = re.match(r"-\s*\[(.*?)\]\((.*?)\)\s*(?:（(.*?)）)?", cont)
             title = markdown_match.group(1)
             src = markdown_match.group(2)
-            score = None
-            remain = re.findall(r"\d+", remain_parts)
-            if len(remain) > 0:
-                remain = remain[0].strip()
-                score = int(remain)
-                # score 如果不是[1000, 5000]的区间，可能读错
-                # ps: 目前最高分的题目3773, 第二高的3112
-                # 最低分 1084, 第二低的 1100
-                if score < 1000 or score > 5000:
-                    score = None
-            # 有些题目只有国服有不一定有split_url 前缀
+            additional = markdown_match.group(3)
+            title_id = title.split(".")[0]
+            if title_id.isdigit():
+                title_id = int(title_id)
+            score = rating[title_id] if title_id in rating else None
+            # 将slug从src中根据split_url前缀提取出来(ps: 有些题目不一定有split_url前缀)
             if split_url in src:
                 src = src.split(split_url)[1]
             solution = None
-            isPremium = False
-            if len(remain_parts) > 1:
-                isPremium = "会员题" in remain_parts
-                second_markdown_match = re.match(r"\[(.*)\]\((.*)\)", remain_parts)
-                if second_markdown_match:
-                    solution = second_markdown_match.group(2)
-                    if split_url in solution:
-                        solution = solution.split(split_url)[1]
+            isPremium = additional != None and "会员题" in additional
+            # 判断是否还有hyperlink, 一般来说即题解
+            second_markdown_match = re.match(r"\[(.*)\]\((.*)\)", cont[cont.find(")")+2:])
+            if second_markdown_match:
+                solution = second_markdown_match.group(2)
+                if split_url in solution:
+                    solution = solution.split(split_url)[1]
             curr_node = DiscussionNode(title, len(node_list), src, score, solution, isPremium)
             node_list.append(curr_node)
         else:
@@ -161,7 +155,7 @@ def refactor_discussion_with_sub(content: str):# 有x.x的时候用这个
 
     return sub_node_list
 
-def refactor_discussion(content: str):# 没有x.x的时候用这个
+def refactor_discussion(content: str, rating: dict):# 没有x.x的时候用这个
     contents = content.split("\n")
     # split content in section by "##"
     sub_node_list = []
@@ -182,33 +176,26 @@ def refactor_discussion(content: str):# 没有x.x的时候用这个
             leaf_node_list.append(curr_leaf)
             node_list = curr_leaf.child
         elif cont.startswith("- ["):
-            # use regex get []() content
-            # find the index of first )
-            pidx = cont.find(")")
-            part1 = cont[2:pidx+1]
-            remain_parts = cont[pidx+2:] # 会员题和题解会在括号之后
-            markdown_match = re.match(r"\[(.*)\]\((.*)\)", part1)
+            # use regex get []()（） content
+            markdown_match = re.match(r"-\s*\[(.*?)\]\((.*?)\)\s*(?:（(.*?)）)?", cont)
             title = markdown_match.group(1)
             src = markdown_match.group(2)
-            score = None
-            remain = re.findall(r"\d+", remain_parts)
-            if len(remain) > 0:
-                remain = remain[0].strip()
-                score = int(remain)
-                if score < 1000 or score > 5000:
-                    score = None
-            # 有些题目只有国服有不一定有split_url 前缀
+            additional = markdown_match.group(3)
+            title_id = title.split(".")[0]
+            if title_id.isdigit():
+                title_id = int(title_id)
+            score = rating[title_id] if title_id in rating else None
+            # # 将slug从src中根据split_url前缀提取出来(ps: 有些题目不一定有split_url前缀)
             if split_url in src:
                 src = src.split(split_url)[1]
             solution = None
-            isPremium = False
-            if len(remain_parts) > 1:
-                isPremium = "会员题" in remain_parts
-                second_markdown_match = re.match(r"\[(.*)\]\((.*)\)", remain_parts)
-                if second_markdown_match:
-                    solution = second_markdown_match.group(2)
-                    if split_url in solution:
-                        solution = solution.split(split_url)[1]
+            isPremium = additional != None and "会员题" in additional
+            # 判断是否还有hyperlink, 一般来说即题解
+            second_markdown_match = re.match(r"\[(.*)\]\((.*)\)", cont[cont.find(")")+2:])
+            if second_markdown_match:
+                solution = second_markdown_match.group(2)
+                if split_url in solution:
+                    solution = solution.split(split_url)[1]
             curr_node = DiscussionNode(title, len(node_list), src, score, solution, isPremium)
             node_list.append(curr_node)
         else:
@@ -217,30 +204,65 @@ def refactor_discussion(content: str):# 没有x.x的时候用这个
             summary += cont + "<br>"
     return sub_node_list
 
+def get_rating():
+    import requests
+    from collections import defaultdict
+    res = requests.get(rating_url).json()
+    dic = defaultdict(int)
+    for item in res:
+        dic[item["ID"]] = item["Rating"]
+    return dic
+
 if __name__ == "__main__":
-    hds = load_headers()
-    lc = LeetCodeApi(headers=hds)
     # read from args
     parser = argparse.ArgumentParser()
     parser.add_argument("--uuid", help="uuid of discussion")
+    parser.add_argument("--o", help="title of discussion, default it as uuid")
+    parser.add_argument("--f", help="uuids and title of discussion from a file")
     args = parser.parse_args()
-    if not args.uuid:
-        print("usage: python 0x3f_discuss.py --uuid <uuid>")
-        exit(1)
+    if len(sys.argv) == 1:
+        parser.print_help()
+        sys.exit(1)
     uuid = args.uuid
-    title, content, last_update = get_discussion(uuid, lc)
-    content = content.replace("\r\n", "\n")
-    original_src = "https://leetcode.cn/circle/discuss/" + uuid
-    child_list = None
-    if re.search(r'\n## [^\n]*\n', content) and re.search(r'\n### [^\n]*\n', content): # 有二级标题和三级标题
-        child_list = refactor_discussion_with_sub(content)
-    else:
-        child_list = refactor_discussion(content)
-    parent = {
-        "title": title,
-        "original_src": original_src,
-        "last_update": last_update,
-        "sort": 0,
-        "child": [child.to_dict() for child in child_list if child.title != "分类题单" and child.title != "关联题单"]
-    }
-    print("import ProblemCategory from \"@components/ProblemCatetory\";\n\nexport default" + json.dumps(parent, indent=4, ensure_ascii=False) + " as ProblemCategory;")
+    path = args.f
+    output_file = args.o
+    # initialize
+    hds = load_headers()
+    lc = LeetCodeApi(headers=hds)
+    rating = get_rating()
+    uuids_title = []
+    if path:
+        with open(path, "r") as f:
+            temp = f.readlines()
+        for line in temp:
+            uuids_title.append(line.strip().split(" "))
+    if uuid:
+        if not output_file:
+            uuids_title.append([uuid, "./output/" + uuid + ".ts"])
+        else:
+            uuids_title.append([uuid, output_file])
+    # get and analysis discussion content according to uuid
+    for uuid, file_path in uuids_title:
+        title, content, last_update = get_discussion(uuid, lc)
+        # format last_update into yyyy-mm-dd hh:mm:ss
+        temp_split = last_update.split("T")
+        last_update = temp_split[0] + " " + temp_split[1].split(".")[0]
+        content = content.replace("\r\n", "\n")
+        original_src = "https://leetcode.cn/circle/discuss/" + uuid
+        child_list = None
+        if re.search(r'\n## [^\n]*\n', content) and re.search(r'\n### [^\n]*\n', content): # 有二级标题和三级标题
+            child_list = refactor_discussion_with_sub(content, rating)
+        else:
+            child_list = refactor_discussion(content, rating)
+        parent = {
+            "title": title,
+            "original_src": original_src,
+            "last_update": last_update,
+            "sort": 0,
+            "child": [child.to_dict() for child in child_list if child.title != "分类题单" and child.title != "关联题单"]
+        }
+        with open(file_path, "w") as f:
+            f.write("import ProblemCategory from \"@components/ProblemCatetory\";\n\nexport default" + json.dumps(parent, indent=4, ensure_ascii=False) + " as ProblemCategory;")
+        # make a waiting for 1s
+        import time
+        time.sleep(1)
