@@ -107,6 +107,9 @@ export default function () {
               <Link className="nav-link px-lg-3" href="/list/trees">
                 <Button className="fw-bold fs-6 p-1">📑树和二叉树</Button>
               </Link>
+              <Link className="nav-link px-lg-3" href="/list/string">
+                <Button className="fw-bold fs-6 p-1">📑字符串</Button>
+              </Link>
             </DropdownButton>
           </Nav>
           <span className="navbar-brand fs-6 fw-semibold">
