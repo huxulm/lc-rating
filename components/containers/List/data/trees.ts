@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】链表、二叉树与一般树（前后指针/快慢指针/DFS/BFS/直径/LCA）",
     "original_src": "https://leetcode.cn/circle/discuss/K0n2gO",
-    "last_update": "2024-08-23T04:05:24.026177+00:00",
+    "last_update": "2024-08-23 04:05:24",
     "sort": 0,
     "child": [
         {
@@ -21,7 +21,7 @@ export default{
                             "title": "1290. 二进制链表转整数",
                             "sort": 0,
                             "src": "/convert-binary-number-in-a-linked-list-to-integer/",
-                            "score": null,
+                            "score": 1151.3534799042,
                             "solution": null,
                             "isPremium": false
                         },
@@ -29,7 +29,7 @@ export default{
                             "title": "2058. 找出临界点之间的最小和最大距离",
                             "sort": 1,
                             "src": "/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/",
-                            "score": null,
+                            "score": 1310.9129840277,
                             "solution": null,
                             "isPremium": false
                         },
@@ -37,7 +37,7 @@ export default{
                             "title": "2181. 合并零之间的节点",
                             "sort": 2,
                             "src": "/merge-nodes-in-between-zeros/",
-                            "score": null,
+                            "score": 1333.192050397,
                             "solution": null,
                             "isPremium": false
                         },
@@ -53,7 +53,7 @@ export default{
                             "title": "817. 链表组件",
                             "sort": 4,
                             "src": "/linked-list-components/",
-                            "score": null,
+                            "score": 1428.712905903,
                             "solution": null,
                             "isPremium": false
                         },
@@ -93,7 +93,7 @@ export default{
                             "title": "3217. 从链表中移除在数组中存在的节点",
                             "sort": 1,
                             "src": "/delete-nodes-from-linked-list-present-in-array/",
-                            "score": null,
+                            "score": 1341.7231008143,
                             "solution": null,
                             "isPremium": false
                         },
@@ -125,7 +125,7 @@ export default{
                             "title": "1669. 合并两个链表",
                             "sort": 5,
                             "src": "/merge-in-between-linked-lists/",
-                            "score": null,
+                            "score": 1428.1443796872,
                             "solution": null,
                             "isPremium": false
                         },
@@ -133,7 +133,7 @@ export default{
                             "title": "2487. 从链表中移除节点",
                             "sort": 6,
                             "src": "/remove-nodes-from-linked-list/",
-                            "score": null,
+                            "score": 1454.5942017003,
                             "solution": null,
                             "isPremium": false
                         },
@@ -157,7 +157,7 @@ export default{
                             "title": "2807. 在链表中插入最大公约数",
                             "sort": 0,
                             "src": "/insert-greatest-common-divisors-in-linked-list/",
-                            "score": null,
+                            "score": 1279.0301521682,
                             "solution": null,
                             "isPremium": false
                         },
@@ -237,7 +237,7 @@ export default{
                             "title": "2074. 反转偶数长度组的节点",
                             "sort": 4,
                             "src": "/reverse-nodes-in-even-length-groups/",
-                            "score": null,
+                            "score": 1685.3599641299,
                             "solution": null,
                             "isPremium": false
                         }
@@ -269,7 +269,7 @@ export default{
                             "title": "1721. 交换链表中的节点",
                             "sort": 2,
                             "src": "/swapping-nodes-in-a-linked-list/",
-                            "score": null,
+                            "score": 1386.9203620297,
                             "solution": null,
                             "isPremium": false
                         },
@@ -293,7 +293,7 @@ export default{
                             "title": "876. 链表的中间结点",
                             "sort": 0,
                             "src": "/middle-of-the-linked-list/",
-                            "score": null,
+                            "score": 1231.6157956848,
                             "solution": null,
                             "isPremium": false
                         },
@@ -301,7 +301,7 @@ export default{
                             "title": "2095. 删除链表的中间节点",
                             "sort": 1,
                             "src": "/delete-the-middle-node-of-a-linked-list/",
-                            "score": null,
+                            "score": 1324.3520304377,
                             "solution": null,
                             "isPremium": false
                         },
@@ -317,7 +317,7 @@ export default{
                             "title": "2130. 链表最大孪生和",
                             "sort": 3,
                             "src": "/maximum-twin-sum-of-a-linked-list/",
-                            "score": null,
+                            "score": 1317.9207508583,
                             "solution": null,
                             "isPremium": false
                         },
@@ -421,7 +421,7 @@ export default{
                             "title": "2816. 翻倍以链表形式表示的数字",
                             "sort": 2,
                             "src": "/double-a-number-represented-as-a-linked-list/",
-                            "score": null,
+                            "score": 1393.7857353048,
                             "solution": null,
                             "isPremium": false
                         },
@@ -485,7 +485,7 @@ export default{
                             "title": "1019. 链表中的下一个更大节点",
                             "sort": 0,
                             "src": "/next-greater-node-in-linked-list/",
-                            "score": null,
+                            "score": 1570.8347522104,
                             "solution": null,
                             "isPremium": false
                         },
@@ -493,7 +493,7 @@ export default{
                             "title": "1171. 从链表中删去总和值为零的连续节点",
                             "sort": 1,
                             "src": "/remove-zero-sum-consecutive-nodes-from-linked-list/",
-                            "score": null,
+                            "score": 1782.3312212058,
                             "solution": null,
                             "isPremium": false
                         },
@@ -620,7 +620,7 @@ export default{
                             "title": "872. 叶子相似的树",
                             "sort": 3,
                             "src": "/leaf-similar-trees/",
-                            "score": 1288,
+                            "score": 1287.8970301681,
                             "solution": null,
                             "isPremium": false
                         },
@@ -660,7 +660,7 @@ export default{
                             "title": "1214. 查找两棵二叉搜索树之和",
                             "sort": 8,
                             "src": "/two-sum-bsts/",
-                            "score": null,
+                            "score": 1389.0328392117,
                             "solution": null,
                             "isPremium": true
                         }
@@ -716,7 +716,7 @@ export default{
                             "title": "1448. 统计二叉树中好节点的数目",
                             "sort": 5,
                             "src": "/count-good-nodes-in-binary-tree/",
-                            "score": 1360,
+                            "score": 1360.2184128413,
                             "solution": null,
                             "isPremium": false
                         },
@@ -724,7 +724,7 @@ export default{
                             "title": "1457. 二叉树中的伪回文路径",
                             "sort": 6,
                             "src": "/pseudo-palindromic-paths-in-a-binary-tree/",
-                            "score": 1405,
+                            "score": 1405.0021415178,
                             "solution": null,
                             "isPremium": false
                         },
@@ -732,7 +732,7 @@ export default{
                             "title": "1315. 祖父节点值为偶数的节点和",
                             "sort": 7,
                             "src": "/sum-of-nodes-with-even-valued-grandparent/",
-                            "score": 1427,
+                            "score": 1426.948379305,
                             "solution": null,
                             "isPremium": false
                         },
@@ -740,7 +740,7 @@ export default{
                             "title": "988. 从叶结点开始的最小字符串",
                             "sort": 8,
                             "src": "/smallest-string-starting-from-leaf/",
-                            "score": 1429,
+                            "score": 1429.1878389249,
                             "solution": null,
                             "isPremium": false
                         },
@@ -748,7 +748,7 @@ export default{
                             "title": "1026. 节点与其祖先之间的最大差值",
                             "sort": 9,
                             "src": "/maximum-difference-between-node-and-ancestor/",
-                            "score": 1446,
+                            "score": 1446.4280778775,
                             "solution": null,
                             "isPremium": false
                         },
@@ -756,7 +756,7 @@ export default{
                             "title": "1022. 从根到叶的二进制数之和",
                             "sort": 10,
                             "src": "/sum-of-root-to-leaf-binary-numbers/",
-                            "score": 1462,
+                            "score": 1462.4423844498,
                             "solution": null,
                             "isPremium": false
                         },
@@ -772,7 +772,7 @@ export default{
                             "title": "1372. 二叉树中的最长交错路径",
                             "sort": 12,
                             "src": "/longest-zigzag-path-in-a-binary-tree/",
-                            "score": 1713,
+                            "score": 1713.2768268466,
                             "solution": null,
                             "isPremium": false
                         },
@@ -780,7 +780,7 @@ export default{
                             "title": "971. 翻转二叉树以匹配先序遍历",
                             "sort": 13,
                             "src": "/flip-binary-tree-to-match-preorder-traversal/",
-                            "score": 1787,
+                            "score": 1786.5491561897,
                             "solution": null,
                             "isPremium": false
                         },
@@ -844,7 +844,7 @@ export default{
                             "title": "965. 单值二叉树",
                             "sort": 2,
                             "src": "/univalued-binary-tree/",
-                            "score": 1178,
+                            "score": 1177.5660617941,
                             "solution": null,
                             "isPremium": false
                         },
@@ -868,7 +868,7 @@ export default{
                             "title": "951. 翻转等价二叉树",
                             "sort": 5,
                             "src": "/flip-equivalent-binary-trees/",
-                            "score": null,
+                            "score": 1477.4844514104,
                             "solution": null,
                             "isPremium": false
                         },
@@ -908,7 +908,7 @@ export default{
                             "title": "2331. 计算布尔二叉树的值",
                             "sort": 10,
                             "src": "/evaluate-boolean-binary-tree/",
-                            "score": 1304,
+                            "score": 1303.5594588137,
                             "solution": null,
                             "isPremium": false
                         },
@@ -940,7 +940,7 @@ export default{
                             "title": "2265. 统计值等于子树平均值的节点数",
                             "sort": 14,
                             "src": "/count-nodes-equal-to-average-of-subtree/",
-                            "score": 1473,
+                            "score": 1472.7864965062,
                             "solution": null,
                             "isPremium": false
                         },
@@ -948,7 +948,7 @@ export default{
                             "title": "1026. 节点与其祖先之间的最大差值",
                             "sort": 15,
                             "src": "/maximum-difference-between-node-and-ancestor/",
-                            "score": null,
+                            "score": 1446.4280778775,
                             "solution": null,
                             "isPremium": false
                         },
@@ -956,7 +956,7 @@ export default{
                             "title": "1339. 分裂二叉树的最大乘积",
                             "sort": 16,
                             "src": "/maximum-product-of-splitted-binary-tree/",
-                            "score": 1675,
+                            "score": 1674.9985842835,
                             "solution": null,
                             "isPremium": false
                         },
@@ -964,7 +964,7 @@ export default{
                             "title": "1372. 二叉树中的最长交错路径",
                             "sort": 17,
                             "src": "/longest-zigzag-path-in-a-binary-tree/",
-                            "score": 1713,
+                            "score": 1713.2768268466,
                             "solution": null,
                             "isPremium": false
                         },
@@ -972,7 +972,7 @@ export default{
                             "title": "1145. 二叉树着色游戏",
                             "sort": 18,
                             "src": "/binary-tree-coloring-game/",
-                            "score": 1741,
+                            "score": 1741.4527995252,
                             "solution": null,
                             "isPremium": false
                         },
@@ -988,7 +988,7 @@ export default{
                             "title": "1530. 好叶子节点对的数量",
                             "sort": 20,
                             "src": "/number-of-good-leaf-nodes-pairs/",
-                            "score": null,
+                            "score": 1745.6580748712,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1036,7 +1036,7 @@ export default{
                             "title": "1120. 子树的最大平均值",
                             "sort": 26,
                             "src": "/maximum-average-subtree/",
-                            "score": null,
+                            "score": 1361.8801013336,
                             "solution": null,
                             "isPremium": true
                         },
@@ -1092,7 +1092,7 @@ export default{
                             "title": "814. 二叉树剪枝",
                             "sort": 0,
                             "src": "/binary-tree-pruning/",
-                            "score": 1380,
+                            "score": 1380.1541980647,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1100,7 +1100,7 @@ export default{
                             "title": "1325. 删除给定值的叶子节点",
                             "sort": 1,
                             "src": "/delete-leaves-with-a-given-value/",
-                            "score": 1407,
+                            "score": 1407.1322366299,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1108,7 +1108,7 @@ export default{
                             "title": "1110. 删点成林",
                             "sort": 2,
                             "src": "/delete-nodes-and-return-forest/",
-                            "score": 1511,
+                            "score": 1511.3725353467,
                             "solution": null,
                             "isPremium": false
                         }
@@ -1124,7 +1124,7 @@ export default{
                             "title": "538. 把二叉搜索树转换为累加树",
                             "sort": 0,
                             "src": "/convert-bst-to-greater-tree/",
-                            "score": 1375,
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1132,7 +1132,7 @@ export default{
                             "title": "1038. 从二叉搜索树到更大和树",
                             "sort": 1,
                             "src": "/binary-search-tree-to-greater-sum-tree/",
-                            "score": null,
+                            "score": 1374.6755455786,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1140,7 +1140,7 @@ export default{
                             "title": "865. 具有所有最深节点的最小子树",
                             "sort": 2,
                             "src": "/smallest-subtree-with-all-the-deepest-nodes/",
-                            "score": 1534,
+                            "score": 1534.325005151,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1148,7 +1148,7 @@ export default{
                             "title": "1080. 根到叶路径上的不足节点",
                             "sort": 3,
                             "src": "/insufficient-nodes-in-root-to-leaf-paths/",
-                            "score": 1805,
+                            "score": 1804.5783242151,
                             "solution": null,
                             "isPremium": false
                         }
@@ -1188,7 +1188,7 @@ export default{
                             "title": "2385. 感染二叉树需要的总时间",
                             "sort": 3,
                             "src": "/amount-of-time-for-binary-tree-to-be-infected/",
-                            "score": 1711,
+                            "score": 1711.4873176824,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1260,7 +1260,7 @@ export default{
                             "title": "1123. 最深叶节点的最近公共祖先",
                             "sort": 2,
                             "src": "/lowest-common-ancestor-of-deepest-leaves/",
-                            "score": 1607,
+                            "score": 1607.0005715974,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1268,7 +1268,7 @@ export default{
                             "title": "2096. 从二叉树一个节点到另一个节点每一步的方向",
                             "sort": 3,
                             "src": "/step-by-step-directions-from-a-binary-tree-node-to-another/",
-                            "score": 1805,
+                            "score": 1804.5283324227,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1356,7 +1356,7 @@ export default{
                             "title": "530. 二叉搜索树的最小绝对差",
                             "sort": 5,
                             "src": "/minimum-absolute-difference-in-bst/",
-                            "score": 1303,
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1364,7 +1364,7 @@ export default{
                             "title": "783. 二叉搜索树节点最小距离",
                             "sort": 6,
                             "src": "/minimum-distance-between-bst-nodes/",
-                            "score": null,
+                            "score": 1303.3201984827,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1372,7 +1372,7 @@ export default{
                             "title": "1305. 两棵二叉搜索树中的所有元素",
                             "sort": 7,
                             "src": "/all-elements-in-two-binary-search-trees/",
-                            "score": null,
+                            "score": 1260.1755576607,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1380,7 +1380,7 @@ export default{
                             "title": "938. 二叉搜索树的范围和",
                             "sort": 8,
                             "src": "/range-sum-of-bst/",
-                            "score": 1335,
+                            "score": 1335.0295688697,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1388,7 +1388,7 @@ export default{
                             "title": "897. 递增顺序搜索树",
                             "sort": 9,
                             "src": "/increasing-order-search-tree/",
-                            "score": 1473,
+                            "score": 1473.2523136772,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1396,7 +1396,7 @@ export default{
                             "title": "2476. 二叉搜索树最近节点查询",
                             "sort": 10,
                             "src": "/closest-nodes-queries-in-a-binary-search-tree/",
-                            "score": 1597,
+                            "score": 1596.9852244916,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1412,7 +1412,7 @@ export default{
                             "title": "1373. 二叉搜索子树的最大键值和",
                             "sort": 12,
                             "src": "/maximum-sum-bst-in-binary-tree/",
-                            "score": 1914,
+                            "score": 1913.6704728453,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1420,7 +1420,7 @@ export default{
                             "title": "1932. 合并多棵二叉搜索树",
                             "sort": 13,
                             "src": "/merge-bsts-to-create-single-bst/",
-                            "score": 2484,
+                            "score": 2483.9435767299,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1500,7 +1500,7 @@ export default{
                             "title": "998. 最大二叉树 II",
                             "sort": 2,
                             "src": "/maximum-binary-tree-ii/",
-                            "score": 1498,
+                            "score": 1497.8880991093,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1508,7 +1508,7 @@ export default{
                             "title": "1008. 前序遍历构造二叉搜索树",
                             "sort": 3,
                             "src": "/construct-binary-search-tree-from-preorder-traversal/",
-                            "score": 1563,
+                            "score": 1562.9802666517,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1516,7 +1516,7 @@ export default{
                             "title": "1382. 将二叉搜索树变平衡",
                             "sort": 4,
                             "src": "/balance-a-binary-search-tree/",
-                            "score": null,
+                            "score": 1540.5750839091,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1524,7 +1524,7 @@ export default{
                             "title": "2196. 根据描述创建二叉树",
                             "sort": 5,
                             "src": "/create-binary-tree-from-descriptions/",
-                            "score": 1644,
+                            "score": 1643.5283095007,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1548,7 +1548,7 @@ export default{
                             "title": "889. 根据前序和后序遍历构造二叉树",
                             "sort": 8,
                             "src": "/construct-binary-tree-from-preorder-and-postorder-traversal/",
-                            "score": 1732,
+                            "score": 1731.5555445321,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1556,7 +1556,7 @@ export default{
                             "title": "1028. 从先序遍历还原二叉树",
                             "sort": 9,
                             "src": "/recover-a-tree-from-preorder-traversal/",
-                            "score": 1797,
+                            "score": 1797.4917663632,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1620,7 +1620,7 @@ export default{
                             "title": "776. 拆分二叉搜索树",
                             "sort": 3,
                             "src": "/split-bst/",
-                            "score": null,
+                            "score": 1809.5579156134,
                             "solution": null,
                             "isPremium": true
                         },
@@ -1652,7 +1652,7 @@ export default{
                             "title": "968. 监控二叉树",
                             "sort": 1,
                             "src": "/binary-tree-cameras/",
-                            "score": null,
+                            "score": 2124.1329592058,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1756,7 +1756,7 @@ export default{
                             "title": "1161. 最大层内元素和",
                             "sort": 7,
                             "src": "/maximum-level-sum-of-a-binary-tree/",
-                            "score": 1250,
+                            "score": 1249.9086403595,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1764,7 +1764,7 @@ export default{
                             "title": "993. 二叉树的堂兄弟节点",
                             "sort": 8,
                             "src": "/cousins-in-binary-tree/",
-                            "score": 1288,
+                            "score": 1287.9002757199,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1772,7 +1772,7 @@ export default{
                             "title": "2583. 二叉树中的第 K 大层和",
                             "sort": 9,
                             "src": "/kth-largest-sum-in-a-binary-tree/",
-                            "score": 1374,
+                            "score": 1374.3527967199,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1780,7 +1780,7 @@ export default{
                             "title": "1302. 层数最深叶子节点的和",
                             "sort": 10,
                             "src": "/deepest-leaves-sum/",
-                            "score": 1388,
+                            "score": 1387.9431104106,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1788,7 +1788,7 @@ export default{
                             "title": "2415. 反转二叉树的奇数层",
                             "sort": 11,
                             "src": "/reverse-odd-levels-of-binary-tree/",
-                            "score": 1431,
+                            "score": 1431.0523656241,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1796,7 +1796,7 @@ export default{
                             "title": "1609. 奇偶树",
                             "sort": 12,
                             "src": "/even-odd-tree/",
-                            "score": 1438,
+                            "score": 1438.223135905,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1812,7 +1812,7 @@ export default{
                             "title": "2471. 逐层排序二叉树所需的最少操作数目",
                             "sort": 14,
                             "src": "/minimum-number-of-operations-to-sort-a-binary-tree-by-level/",
-                            "score": 1635,
+                            "score": 1635.1520858279,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1820,7 +1820,7 @@ export default{
                             "title": "863. 二叉树中所有距离为 K 的结点",
                             "sort": 15,
                             "src": "/all-nodes-distance-k-in-binary-tree/",
-                            "score": 1663,
+                            "score": 1663.1853149056,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1828,7 +1828,7 @@ export default{
                             "title": "2641. 二叉树的堂兄弟节点 II",
                             "sort": 16,
                             "src": "/cousins-in-binary-tree-ii/",
-                            "score": 1677,
+                            "score": 1676.5007365375,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1836,7 +1836,7 @@ export default{
                             "title": "919. 完全二叉树插入器",
                             "sort": 17,
                             "src": "/complete-binary-tree-inserter/",
-                            "score": 1691,
+                            "score": 1690.9043557462,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1852,7 +1852,7 @@ export default{
                             "title": "958. 二叉树的完全性检验",
                             "sort": 19,
                             "src": "/check-completeness-of-a-binary-tree/",
-                            "score": 1703,
+                            "score": 1702.8035923458,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1916,7 +1916,7 @@ export default{
                             "title": "1367. 二叉树中的链表",
                             "sort": 1,
                             "src": "/linked-list-in-binary-tree/",
-                            "score": 1650,
+                            "score": 1649.9728054796,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2092,7 +2092,7 @@ export default{
                             "title": "1261. 在受污染的二叉树中查找元素",
                             "sort": 4,
                             "src": "/find-elements-in-a-contaminated-binary-tree/",
-                            "score": 1440,
+                            "score": 1439.5656079032,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2100,7 +2100,7 @@ export default{
                             "title": "1104. 二叉树寻路",
                             "sort": 5,
                             "src": "/path-in-zigzag-labelled-binary-tree/",
-                            "score": 1545,
+                            "score": 1544.8391626032,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2108,7 +2108,7 @@ export default{
                             "title": "987. 二叉树的垂序遍历",
                             "sort": 6,
                             "src": "/vertical-order-traversal-of-a-binary-tree/",
-                            "score": 1676,
+                            "score": 1675.9610355975,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2124,7 +2124,7 @@ export default{
                             "title": "979. 在二叉树中分配硬币",
                             "sort": 8,
                             "src": "/distribute-coins-in-binary-tree/",
-                            "score": 1709,
+                            "score": 1709.1461451873,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2140,7 +2140,7 @@ export default{
                             "title": "2049. 统计最高分的节点数目",
                             "sort": 10,
                             "src": "/count-nodes-with-the-highest-score/",
-                            "score": 1912,
+                            "score": 1911.7063530593,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2148,7 +2148,7 @@ export default{
                             "title": "2673. 使二叉树所有路径值相等的最小代价",
                             "sort": 11,
                             "src": "/make-costs-of-paths-equal-in-a-binary-tree/",
-                            "score": 1917,
+                            "score": 1917.1049672432,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2156,7 +2156,7 @@ export default{
                             "title": "2509. 查询树中环的长度",
                             "sort": 12,
                             "src": "/cycle-length-queries-in-a-tree/",
-                            "score": 1948,
+                            "score": 1948.489500779,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2164,7 +2164,7 @@ export default{
                             "title": "2458. 移除子树后的二叉树高度",
                             "sort": 13,
                             "src": "/height-of-binary-tree-after-subtree-removal-queries/",
-                            "score": 2299,
+                            "score": 2298.6242048519,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2275,7 +2275,7 @@ export default{
                             "title": "2368. 受限条件下可到达节点的数目",
                             "sort": 0,
                             "src": "/reachable-nodes-with-restrictions/",
-                            "score": 1477,
+                            "score": 1476.9118898539,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2299,7 +2299,7 @@ export default{
                             "title": "1376. 通知所有员工所需的时间",
                             "sort": 0,
                             "src": "/time-needed-to-inform-all-employees/",
-                            "score": 1561,
+                            "score": 1561.0553908973,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2307,7 +2307,7 @@ export default{
                             "title": "1443. 收集树上所有苹果的最少时间",
                             "sort": 1,
                             "src": "/minimum-time-to-collect-all-apples-in-a-tree/",
-                            "score": 1683,
+                            "score": 1682.8882177724,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2315,7 +2315,7 @@ export default{
                             "title": "1377. T 秒后青蛙的位置",
                             "sort": 2,
                             "src": "/frog-position-after-t-seconds/",
-                            "score": 1824,
+                            "score": 1823.8779711373,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2323,7 +2323,7 @@ export default{
                             "title": "3067. 在带权树网络中统计可连接服务器对数目",
                             "sort": 3,
                             "src": "/count-pairs-of-connectable-servers-in-a-weighted-tree-network/",
-                            "score": 1909,
+                            "score": 1908.9411092109,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2331,7 +2331,7 @@ export default{
                             "title": "2467. 树上最大得分和路径",
                             "sort": 4,
                             "src": "/most-profitable-path-in-a-tree/",
-                            "score": 2053,
+                            "score": 2053.354609292,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2339,7 +2339,7 @@ export default{
                             "title": "1766. 互质树",
                             "sort": 5,
                             "src": "/tree-of-coprimes/",
-                            "score": 2232,
+                            "score": 2231.8099102949,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2347,7 +2347,7 @@ export default{
                             "title": "2791. 树中可以形成回文的路径数",
                             "sort": 6,
                             "src": "/count-paths-that-can-form-a-palindrome-in-a-tree/",
-                            "score": 2677,
+                            "score": 2677.1682592316,
                             "solution": null,
                             "isPremium": false
                         }
@@ -2363,7 +2363,7 @@ export default{
                             "title": "3249. 统计好节点的数目",
                             "sort": 0,
                             "src": "/count-the-number-of-good-nodes/",
-                            "score": 1600,
+                            "score": 1565.8040286471,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2371,7 +2371,7 @@ export default{
                             "title": "1519. 子树中标签相同的节点数",
                             "sort": 1,
                             "src": "/number-of-nodes-in-the-sub-tree-with-the-same-label/",
-                            "score": 1809,
+                            "score": 1808.787108831,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2379,7 +2379,7 @@ export default{
                             "title": "2872. 可以被 K 整除连通块的最大数目",
                             "sort": 2,
                             "src": "/maximum-number-of-k-divisible-components/",
-                            "score": 1968,
+                            "score": 1967.5589835406,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2387,7 +2387,7 @@ export default{
                             "title": "2477. 到达首都的最少油耗",
                             "sort": 3,
                             "src": "/minimum-fuel-cost-to-report-to-the-capital/",
-                            "score": 2012,
+                            "score": 2011.9703133514,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2395,7 +2395,7 @@ export default{
                             "title": "2973. 树中每个节点放置的金币数目",
                             "sort": 4,
                             "src": "/find-number-of-coins-to-place-in-tree-nodes/",
-                            "score": 2277,
+                            "score": 2276.9256951751,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2403,7 +2403,7 @@ export default{
                             "title": "2440. 创建价值相同的连通块",
                             "sort": 5,
                             "src": "/create-components-with-same-value/",
-                            "score": 2460,
+                            "score": 2460.3152437576,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2411,7 +2411,7 @@ export default{
                             "title": "1273. 删除树节点",
                             "sort": 6,
                             "src": "/delete-tree-nodes/",
-                            "score": null,
+                            "score": 1732.7813534239,
                             "solution": null,
                             "isPremium": true
                         },
@@ -2435,7 +2435,7 @@ export default{
                             "title": "2246. 相邻字符不同的最长路径",
                             "sort": 0,
                             "src": "/longest-path-with-different-adjacent-characters/",
-                            "score": 2126,
+                            "score": 2126.3922279277,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2443,7 +2443,7 @@ export default{
                             "title": "3203. 合并两棵树后的最小直径",
                             "sort": 1,
                             "src": "/find-minimum-diameter-after-merging-two-trees/",
-                            "score": 2150,
+                            "score": 2266.0997671519,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2451,7 +2451,7 @@ export default{
                             "title": "1617. 统计子树中城市之间最大距离",
                             "sort": 2,
                             "src": "/count-subtrees-with-max-distance-between-cities/",
-                            "score": 2309,
+                            "score": 2308.6545905335,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2459,7 +2459,7 @@ export default{
                             "title": "2538. 最大价值和与最小价值和的差值",
                             "sort": 3,
                             "src": "/difference-between-maximum-and-minimum-price-sum/",
-                            "score": 2398,
+                            "score": 2397.9722495587,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2467,7 +2467,7 @@ export default{
                             "title": "1245. 树的直径",
                             "sort": 4,
                             "src": "/tree-diameter/",
-                            "score": null,
+                            "score": 1792.076794537,
                             "solution": null,
                             "isPremium": true
                         }
@@ -2483,7 +2483,7 @@ export default{
                             "title": "2322. 从树中删除边的最小分数",
                             "sort": 0,
                             "src": "/minimum-score-after-removals-on-a-tree/",
-                            "score": 2392,
+                            "score": 2391.657270733,
                             "solution": null,
                             "isPremium": false
                         }
@@ -2507,7 +2507,7 @@ export default{
                             "title": "2603. 收集树中金币",
                             "sort": 1,
                             "src": "/collect-coins-in-a-tree/",
-                            "score": 2712,
+                            "score": 2711.8717381409,
                             "solution": null,
                             "isPremium": false
                         }
@@ -2523,7 +2523,7 @@ export default{
                             "title": "1483. 树节点的第 K 个祖先",
                             "sort": 0,
                             "src": "/kth-ancestor-of-a-tree-node/",
-                            "score": 2115,
+                            "score": 2115.0911494487,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2531,7 +2531,7 @@ export default{
                             "title": "2846. 边权重均等查询",
                             "sort": 1,
                             "src": "/minimum-edge-weight-equilibrium-queries-in-a-tree/",
-                            "score": 2508,
+                            "score": 2507.9960044659,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2555,7 +2555,7 @@ export default{
                             "title": "2003. 每棵子树内缺失的最小基因值",
                             "sort": 0,
                             "src": "/smallest-missing-genetic-value-in-each-subtree/",
-                            "score": 2415,
+                            "score": 2415.0089731911,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2563,7 +2563,7 @@ export default{
                             "title": "2867. 统计树中的合法路径数目",
                             "sort": 1,
                             "src": "/count-valid-paths-in-a-tree/",
-                            "score": 2428,
+                            "score": 2428.3242593838,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2571,7 +2571,7 @@ export default{
                             "title": "2421. 好路径的数目",
                             "sort": 2,
                             "src": "/number-of-good-paths/",
-                            "score": 2445,
+                            "score": 2444.6660756903,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2579,7 +2579,7 @@ export default{
                             "title": "1719. 重构一棵树的方案数",
                             "sort": 3,
                             "src": "/number-of-ways-to-reconstruct-a-tree/",
-                            "score": 3018,
+                            "score": 3018.4940165727,
                             "solution": null,
                             "isPremium": false
                         },
