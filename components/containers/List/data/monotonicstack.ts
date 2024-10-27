@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享｜【题单】单调栈（矩形面积/贡献法/最小字典序）",
     "original_src": "https://leetcode.cn/circle/discuss/9oZFK9",
-    "last_update": "2024-08-26T02:13:34.549443+00:00",
+    "last_update": "2024-08-26 02:13:34",
     "sort": 0,
     "child": [
         {
@@ -29,7 +29,7 @@ export default{
                             "title": "1475. 商品折扣后的最终价格",
                             "sort": 1,
                             "src": "/final-prices-with-a-special-discount-in-a-shop/",
-                            "score": 1212,
+                            "score": 1212.2606422181,
                             "solution": null,
                             "isPremium": false
                         },
@@ -53,7 +53,7 @@ export default{
                             "title": "1019. 链表中的下一个更大节点",
                             "sort": 4,
                             "src": "/next-greater-node-in-linked-list/",
-                            "score": 1571,
+                            "score": 1570.8347522104,
                             "solution": null,
                             "isPremium": false
                         },
@@ -61,7 +61,7 @@ export default{
                             "title": "962. 最大宽度坡",
                             "sort": 5,
                             "src": "/maximum-width-ramp/",
-                            "score": 1608,
+                            "score": 1607.80608595,
                             "solution": null,
                             "isPremium": false
                         },
@@ -69,7 +69,7 @@ export default{
                             "title": "853. 车队",
                             "sort": 6,
                             "src": "/car-fleet/",
-                            "score": 1678,
+                            "score": 1678.1133886034,
                             "solution": null,
                             "isPremium": false
                         },
@@ -77,7 +77,7 @@ export default{
                             "title": "901. 股票价格跨度",
                             "sort": 7,
                             "src": "/online-stock-span/",
-                            "score": 1709,
+                            "score": 1708.8735585776,
                             "solution": null,
                             "isPremium": false
                         },
@@ -85,7 +85,7 @@ export default{
                             "title": "1124. 表现良好的最长时间段",
                             "sort": 8,
                             "src": "/longest-well-performing-interval/",
-                            "score": 1908,
+                            "score": 1908.3866125757,
                             "solution": null,
                             "isPremium": false
                         },
@@ -93,7 +93,7 @@ export default{
                             "title": "1793. 好子数组的最大分数",
                             "sort": 9,
                             "src": "/maximum-score-of-a-good-subarray/",
-                            "score": 1946,
+                            "score": 1945.7515607928,
                             "solution": null,
                             "isPremium": false
                         },
@@ -101,7 +101,7 @@ export default{
                             "title": "456. 132 模式",
                             "sort": 10,
                             "src": "/132-pattern/",
-                            "score": 2000,
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },
@@ -109,7 +109,7 @@ export default{
                             "title": "3113. 边界元素是最大值的子数组数目",
                             "sort": 11,
                             "src": "/find-the-number-of-subarrays-where-boundary-elements-are-maximum/",
-                            "score": 2046,
+                            "score": 2046.2618466463,
                             "solution": null,
                             "isPremium": false
                         },
@@ -117,7 +117,7 @@ export default{
                             "title": "2866. 美丽塔 II",
                             "sort": 12,
                             "src": "/beautiful-towers-ii/",
-                            "score": 2072,
+                            "score": 2071.6322841217,
                             "solution": null,
                             "isPremium": false
                         },
@@ -125,7 +125,7 @@ export default{
                             "title": "1944. 队列中可以看到的人数",
                             "sort": 13,
                             "src": "/number-of-visible-people-in-a-queue/",
-                            "score": 2105,
+                            "score": 2104.9526046945,
                             "solution": null,
                             "isPremium": false
                         },
@@ -133,7 +133,7 @@ export default{
                             "title": "2454. 下一个更大元素 IV",
                             "sort": 14,
                             "src": "/next-greater-element-iv/",
-                            "score": 2175,
+                            "score": 2175.1190473433,
                             "solution": null,
                             "isPremium": false
                         },
@@ -141,7 +141,7 @@ export default{
                             "title": "1130. 叶值的最小代价生成树",
                             "sort": 15,
                             "src": "/minimum-cost-tree-from-leaf-values/",
-                            "score": null,
+                            "score": 1919.1749818083,
                             "solution": null,
                             "isPremium": false
                         },
@@ -149,7 +149,7 @@ export default{
                             "title": "2289. 使数组按非递减顺序排列",
                             "sort": 16,
                             "src": "/steps-to-make-array-non-decreasing/",
-                            "score": 2482,
+                            "score": 2481.8722909195,
                             "solution": null,
                             "isPremium": false
                         },
@@ -157,7 +157,7 @@ export default{
                             "title": "1776. 车队 II",
                             "sort": 17,
                             "src": "/car-fleet-ii/",
-                            "score": 2531,
+                            "score": 2530.6905139914,
                             "solution": null,
                             "isPremium": false
                         },
@@ -212,7 +212,7 @@ export default{
                             "title": "1793. 好子数组的最大分数",
                             "sort": 1,
                             "src": "/maximum-score-of-a-good-subarray/",
-                            "score": 1946,
+                            "score": 1945.7515607928,
                             "solution": null,
                             "isPremium": false
                         },
@@ -228,7 +228,7 @@ export default{
                             "title": "1504. 统计全 1 子矩形",
                             "sort": 3,
                             "src": "/count-submatrices-with-all-ones/",
-                            "score": null,
+                            "score": 1845.0428731248,
                             "solution": null,
                             "isPremium": false
                         },
@@ -244,7 +244,7 @@ export default{
                             "title": "755. 倒水",
                             "sort": 5,
                             "src": "/pour-water/",
-                            "score": null,
+                            "score": 1832.2280384591,
                             "solution": null,
                             "isPremium": true
                         }
@@ -267,7 +267,7 @@ export default{
                             "title": "907. 子数组的最小值之和",
                             "sort": 0,
                             "src": "/sum-of-subarray-minimums/",
-                            "score": 1976,
+                            "score": 1975.5726300727,
                             "solution": null,
                             "isPremium": false
                         },
@@ -275,7 +275,7 @@ export default{
                             "title": "2104. 子数组范围和（最大值-最小值）",
                             "sort": 1,
                             "src": "/sum-of-subarray-ranges/",
-                            "score": 2000,
+                            "score": 1504.2133321504,
                             "solution": null,
                             "isPremium": false
                         },
@@ -283,7 +283,7 @@ export default{
                             "title": "1856. 子数组最小乘积的最大值",
                             "sort": 2,
                             "src": "/maximum-subarray-min-product/",
-                            "score": 2051,
+                            "score": 2051.0879431258,
                             "solution": null,
                             "isPremium": false
                         },
@@ -291,7 +291,7 @@ export default{
                             "title": "2818. 操作使得分最大",
                             "sort": 3,
                             "src": "/apply-operations-to-maximize-score/",
-                            "score": 2397,
+                            "score": 2396.6770372863,
                             "solution": null,
                             "isPremium": false
                         },
@@ -299,7 +299,7 @@ export default{
                             "title": "2281. 巫师的总力量和（最小值×和）",
                             "sort": 4,
                             "src": "/sum-of-total-strength-of-wizards/",
-                            "score": 2621,
+                            "score": 2621.1208072273,
                             "solution": null,
                             "isPremium": false
                         }
@@ -322,7 +322,7 @@ export default{
                             "title": "402. 移掉 K 位数字",
                             "sort": 0,
                             "src": "/remove-k-digits/",
-                            "score": 1800,
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },
@@ -330,7 +330,7 @@ export default{
                             "title": "1673. 找出最具竞争力的子序列",
                             "sort": 1,
                             "src": "/find-the-most-competitive-subsequence/",
-                            "score": 1802,
+                            "score": 1802.2256875356,
                             "solution": null,
                             "isPremium": false
                         },
@@ -338,12 +338,12 @@ export default{
                             "title": "316. 去除重复字母",
                             "sort": 2,
                             "src": "/remove-duplicate-letters/",
-                            "score": 2185,
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "316 扩展：重复个数不超过 limit (打开页面后需手动删除前缀)",
+                            "title": "316 扩展：重复个数不超过 limit",
                             "sort": 3,
                             "src": "https://leetcode.cn/contest/tianchi2022/problems/ev2bru/",
                             "score": null,
@@ -354,7 +354,7 @@ export default{
                             "title": "1081. 不同字符的最小子序列",
                             "sort": 4,
                             "src": "/smallest-subsequence-of-distinct-characters/",
-                            "score": null,
+                            "score": 2184.5241011615,
                             "solution": null,
                             "isPremium": false
                         },
@@ -370,7 +370,7 @@ export default{
                             "title": "2030. 含特定字母的最小子序列",
                             "sort": 6,
                             "src": "/smallest-k-length-subsequence-with-occurrences-of-a-letter/",
-                            "score": 2562,
+                            "score": 2561.7794931859,
                             "solution": null,
                             "isPremium": false
                         }
