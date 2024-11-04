@@ -5,7 +5,7 @@ import {
   TableOfContent,
   TOC,
 } from "@components/ProblemCatetory/TableOfContent";
-import Data from "@components/containers/List/data/monotonicstack";
+import Data from "@components/containers/List/data/monotonic_stack";
 import { useEffect, useState } from "react";
 import Form from "react-bootstrap/esm/Form";
 

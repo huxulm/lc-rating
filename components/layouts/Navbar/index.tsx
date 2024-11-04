@@ -74,28 +74,28 @@ export default function () {
             <SyncProgressModal show={showModal} onHide={handleCloseModal}/>
 
             <DropdownButton color="primary" title="📑题单" className="nav-link d-flex">
-              <Link className="nav-link px-lg-3" href="/list/sw">
+              <Link className="nav-link px-lg-3" href="/list/slide_window">
                 <Button className="fw-bold fs-6 p-1">📑滑动窗口</Button>
               </Link>
-              <Link className="nav-link px-lg-3" href="/list/bs">
+              <Link className="nav-link px-lg-3" href="/list/binary_search">
                 <Button className="fw-bold fs-6 p-1">📑二分查找</Button>
               </Link>
-              <Link className="nav-link px-lg-3" href="/list/ms">
+              <Link className="nav-link px-lg-3" href="/list/monotonic_stack">
                 <Button className="fw-bold fs-6 p-1">📑单调栈</Button>
               </Link>
               <Link className="nav-link px-lg-3" href="/list/grid">
                 <Button className="fw-bold fs-6 p-1">📑网格图</Button>
               </Link>
-              <Link className="nav-link px-lg-3" href="/list/bit">
+              <Link className="nav-link px-lg-3" href="/list/bitwise_operations">
                 <Button className="fw-bold fs-6 p-1">📑位运算</Button>
               </Link>
               <Link className="nav-link px-lg-3" href="/list/graph">
                 <Button className="fw-bold fs-6 p-1">📑图论算法</Button>
               </Link>
-              <Link className="nav-link px-lg-3" href="/list/dp">
+              <Link className="nav-link px-lg-3" href="/list/dynamic_programming">
                 <Button className="fw-bold fs-6 p-1">📑动态规划</Button>
               </Link>
-              <Link className="nav-link px-lg-3" href="/list/ds">
+              <Link className="nav-link px-lg-3" href="/list/data_structure">
                 <Button className="fw-bold fs-6 p-1">📑数据结构</Button>
               </Link>
               <Link className="nav-link px-lg-3" href="/list/math">

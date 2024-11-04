@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）",
     "original_src": "https://leetcode.cn/circle/discuss/IYT3ss",
-    "last_update": "2024-10-20 10:59:39",
+    "last_update": "2024-10-30 02:37:03",
     "sort": 0,
     "child": [
         {
@@ -69,7 +69,7 @@ export default{
                     "title": "§1.2 预处理质数（筛质数）",
                     "sort": 1,
                     "isLeaf": true,
-                    "summary": "<a href=\"https://www.bilibili.com/video/BV1H8411E7hn/\">埃氏筛和欧拉筛的讲解</a><br>",
+                    "summary": "",
                     "child": [
                         {
                             "title": "204. 计数质数",
@@ -528,8 +528,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2197. 替换数组中的非互质数",
+                            "title": "3334. 数组的最大因子得分",
                             "sort": 1,
+                            "src": "/find-the-maximum-factor-score-of-array/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2197. 替换数组中的非互质数",
+                            "sort": 2,
                             "src": "/replace-non-coprime-numbers-in-array/",
                             "score": 2057.4788263111,
                             "solution": null,
@@ -537,7 +545,7 @@ export default{
                         },
                         {
                             "title": "2470. 最小公倍数为 K 的子数组数目",
-                            "sort": 2,
+                            "sort": 3,
                             "src": "/number-of-subarrays-with-lcm-equal-to-k/",
                             "score": 1559.9709348417,
                             "solution": null,
@@ -1012,7 +1020,7 @@ export default{
                     "title": "§2.4 容斥原理",
                     "sort": 3,
                     "isLeaf": true,
-                    "summary": "",
+                    "summary": "由于部分题目有其他做法，难度分仅供参考。<br>",
                     "child": [
                         {
                             "title": "2652. 倍数求和",
@@ -1079,8 +1087,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2927. 给小朋友们分糖果 III",
+                            "title": "3336. 最大公约数相等的子序列数量",
                             "sort": 8,
+                            "src": "/find-the-number-of-subsequences-with-equal-gcd/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2927. 给小朋友们分糖果 III",
+                            "sort": 9,
                             "src": "/distribute-candies-among-children-iii/",
                             "score": null,
                             "solution": null,

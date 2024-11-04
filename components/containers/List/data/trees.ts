@@ -1638,7 +1638,7 @@ export default{
                     "title": "§2.12 树形 DP",
                     "sort": 11,
                     "isLeaf": true,
-                    "summary": "更多树形 DP，见 <a href=\"https://leetcode.cn/circle/discuss/tXLS3i/\">动态规划题单</a> 中的「树形 DP」。<br>",
+                    "summary": "更多树形 DP，见 <a href=\"/list/dynamic_programming\">动态规划题单</a> 中的「树形 DP」。<br>",
                     "child": [
                         {
                             "title": "337. 打家劫舍 III",
@@ -2549,7 +2549,7 @@ export default{
                     "title": "§3.8 其他",
                     "sort": 7,
                     "isLeaf": true,
-                    "summary": "另见 <a href=\"https://leetcode.cn/circle/discuss/tXLS3i/\">动态规划题单</a> 中的「树形 DP」。<br>",
+                    "summary": "另见 <a href=\"/list/dynamic_programming\">动态规划题单</a> 中的「树形 DP」。<br>",
                     "child": [
                         {
                             "title": "2003. 每棵子树内缺失的最小基因值",

@@ -5,7 +5,7 @@ import {
   TableOfContent,
   TOC,
 } from "@components/ProblemCatetory/TableOfContent";
-import Data from "@components/containers/List/data/binarysearch";
+import Data from "@components/containers/List/data/binary_search";
 import { useEffect, useState } from "react";
 import Form from "react-bootstrap/esm/Form";
 

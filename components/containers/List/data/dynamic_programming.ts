@@ -125,7 +125,7 @@ export default{
                     "title": "§1.3 最大子数组和（最大子段和）",
                     "sort": 2,
                     "isLeaf": true,
-                    "summary": "有两种做法：<br>1. 定义状态 $f<a href=\"https://leetcode.cn/problems/maximum-subarray/solution/qian-zhui-he-zuo-fa-ben-zhi-shi-mai-mai-abu71/\">i]$ 表示以 $a[i]$ 结尾的最大子数组和，不和 $i$ 左边拼起来就是 $f[i]=a[i]$，和 $i$ 左边拼起来就是 $f[i]=f[i-1]+a[i]$，取最大值就得到了状态转移方程 $f[i]=\\max(f[i−1],0)+a[i]$，答案为 $\\max(f)$。这个做法也叫做 Kadane 算法。<br>2. 用前缀和解决。<br>具体见 [我的题解</a>。<br>**思维扩展**：<br>",
+                    "summary": "有两种做法：<br>1. 定义状态 $f[i]$ 表示以 $a[i]$ 结尾的最大子数组和，不和 $i$ 左边拼起来就是 $f[i]=a[i]$，和 $i$ 左边拼起来就是 $f[i]=f[i-1]+a[i]$，取最大值就得到了状态转移方程 $f[i]=\\max(f[i−1],0)+a[i]$，答案为 $\\max(f)$。这个做法也叫做 Kadane 算法。<br>2. 用前缀和解决。<br>具体见 <a href=\"https://leetcode.cn/problems/maximum-subarray/solution/qian-zhui-he-zuo-fa-ben-zhi-shi-mai-mai-abu71/\">我的题解</a>。<br>**思维扩展**：<br>",
                     "child": [
                         {
                             "title": "53. 最大子数组和",
@@ -634,7 +634,7 @@ export default{
                     "title": "§4.1 最长公共子序列（LCS）",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV1TM4y1o7ug/\">最长公共子序列 编辑距离</a><br>一般定义 $f<a href=\"https://leetcode.cn/problems/maximize-number-of-subsequences-in-a-string/solutions/1352039/by-endlesscheng-yfyf/comments/2389140\">i][j]$ 表示对 $(s[:i],t[:j])$ 的求解结果。<br>**思考题**<br>115 题的扩展。给定字符串 $s$ 和 $t$，你可以在 $s$ 的任意位置插入一个字母，插入后，$s$ 最多有多少个子序列等于 $t$？<br>思路和代码见 [评论</a>。<br>",
+                    "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV1TM4y1o7ug/\">最长公共子序列 编辑距离</a><br>一般定义 $f[i][j]$ 表示对 $(s[:i],t[:j])$ 的求解结果。<br>**思考题**<br>115 题的扩展。给定字符串 $s$ 和 $t$，你可以在 $s$ 的任意位置插入一个字母，插入后，$s$ 最多有多少个子序列等于 $t$？<br>思路和代码见 <a href=\"https://leetcode.cn/problems/maximize-number-of-subsequences-in-a-string/solutions/1352039/by-endlesscheng-yfyf/comments/2389140\">评论</a>。<br>",
                     "child": [
                         {
                             "title": "1143. 最长公共子序列",
@@ -875,13 +875,13 @@ export default{
         {
             "title": "五、状态机 DP",
             "sort": 5,
-            "summary": "",
+            "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV1ho4y1W7QK/\">状态机 DP</a><br>一般定义 $f[i][j]$ 表示前缀 $a[:i]$ 在状态 $j$ 下的最优值。一般 $j$ 都很小。代表题目是「买卖股票」系列。<br>注：某些题目做法不止一种，除了状态机 DP 以外，也有前后缀分解的做法。<br>",
             "child": [
                 {
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV1ho4y1W7QK/\">状态机 DP</a><br>一般定义 $f[i][j]$ 表示前缀 $a[:i]$ 在状态 $j$ 下的最优值。一般 $j$ 都很小。代表题目是「买卖股票」系列。<br>注：某些题目做法不止一种，除了状态机 DP 以外，也有前后缀分解的做法。<br>",
+                    "summary": "",
                     "child": [
                         {
                             "title": "121. 买卖股票的最佳时机",
@@ -2317,7 +2317,7 @@ export default{
                     "title": "§9.1 排列型 ① 相邻无关",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "学习指南：<br>暴力做法是枚举所有排列，对每个排列计算和题目有关的值，时间复杂度（通常来说）是 $\\mathcal{O}(n\\cdot n!)$。可以解决 $n\\le 10$ 的问题。 <br>状压 DP 可以把时间复杂度（通常来说）优化至 $\\mathcal{O}(n\\cdot 2^n)$。可以解决 $n\\le 20$ 的问题。<br>一般有两种定义方式：<br>1. 定义 $f[S]$ 表示已经排列好的元素（下标）集合为 $S$ 时，和题目有关的最优值。通过枚举当前位置要填的元素（下标）来转移。<br>2. 定义 $f[S]$ 表示可以选的元素（下标）集合为 $S$ 时，和题目有关的最优值。通过枚举当前位置要填的元素（下标）来转移。<br>> 注：部分题目由于爆搜+剪枝也能过，难度分仅供参考。<br>",
+                    "summary": "学习指南：<br>暴力做法是枚举所有排列，对每个排列计算和题目有关的值，时间复杂度（通常来说）是 $\\mathcal{O}(n\\cdot n!)$。可以解决 $n\\le 10$ 的问题。<br>状压 DP 可以把时间复杂度（通常来说）优化至 $\\mathcal{O}(n\\cdot 2^n)$。可以解决 $n\\le 20$ 的问题。<br>一般有两种定义方式：<br>1. 定义 $f[S]$ 表示已经排列好的元素（下标）集合为 $S$ 时，和题目有关的最优值。通过枚举当前位置要填的元素（下标）来转移。<br>2. 定义 $f[S]$ 表示可以选的元素（下标）集合为 $S$ 时，和题目有关的最优值。通过枚举当前位置要填的元素（下标）来转移。<br>> 注：部分题目由于爆搜+剪枝也能过，难度分仅供参考。<br>",
                     "child": [
                         {
                             "title": "教你一步步思考状压 DP：从记忆化搜索到递推",
@@ -2413,7 +2413,7 @@ export default{
                     "title": "§9.2 排列型 ② 相邻相关",
                     "sort": 1,
                     "isLeaf": true,
-                    "summary": "一般定义 $f<a href=\"https://leetcode.cn/problems/find-the-minimum-cost-array-permutation/solution/zhuang-ya-dpcong-ji-yi-hua-sou-suo-dao-d-s9t5/\">S][i]$ 表示未选（或者已选）的集合为 $S$，且上一个填的元素（下标）为 $i$ 时，和题目有关的最优值。通过枚举当前位置要填的元素（下标）来转移。<br>时间复杂度（通常来说）是 $\\mathcal{O}(n^2\\cdot 2^n)$。<br>[讲解：从全排列到状压 DP</a><br>",
+                    "summary": "一般定义 $f[S][i]$ 表示未选（或者已选）的集合为 $S$，且上一个填的元素（下标）为 $i$ 时，和题目有关的最优值。通过枚举当前位置要填的元素（下标）来转移。<br>时间复杂度（通常来说）是 $\\mathcal{O}(n^2\\cdot 2^n)$。<br><a href=\"https://leetcode.cn/problems/find-the-minimum-cost-array-permutation/solution/zhuang-ya-dpcong-ji-yi-hua-sou-suo-dao-d-s9t5/\">讲解：从全排列到状压 DP</a><br>",
                     "child": [
                         {
                             "title": "996. 正方形数组的数目",
@@ -2501,7 +2501,7 @@ export default{
                     "title": "§9.4 枚举子集的子集",
                     "sort": 3,
                     "isLeaf": true,
-                    "summary": "一般定义 $f<a href=\"https://leetcode.cn/problems/parallel-courses-ii/solution/zi-ji-zhuang-ya-dpcong-ji-yi-hua-sou-suo-oxwd/\">S]$ 表示未选（或者已选）的集合为 $S$ 时，和题目有关的最优值。通过枚举 $S$（或者 $S$ 的补集 $\\complement_US$）的子集来转移。<br>时间复杂度（通常来说）是 $\\mathcal{O}(3^n)$，证明见 [题解</a>。<br>值得注意的是，枚举子集的子集还可以用「选或不选」来做，对于存在无效状态的情况，可以做到更优的时间复杂度。具体见 <a href=\"https://leetcode.cn/problems/maximum-students-taking-exam/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-9y5k/\">1349 题解</a> 最后的写法。<br>",
+                    "summary": "一般定义 $f[S]$ 表示未选（或者已选）的集合为 $S$ 时，和题目有关的最优值。通过枚举 $S$（或者 $S$ 的补集 $\\complement_US$）的子集来转移。<br>时间复杂度（通常来说）是 $\\mathcal{O}(3^n)$，证明见 <a href=\"https://leetcode.cn/problems/parallel-courses-ii/solution/zi-ji-zhuang-ya-dpcong-ji-yi-hua-sou-suo-oxwd/\">题解</a>。<br>值得注意的是，枚举子集的子集还可以用「选或不选」来做，对于存在无效状态的情况，可以做到更优的时间复杂度。具体见 <a href=\"https://leetcode.cn/problems/maximum-students-taking-exam/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-9y5k/\">1349 题解</a> 最后的写法。<br>",
                     "child": [
                         {
                             "title": "2305. 公平分发饼干",
@@ -2766,13 +2766,13 @@ export default{
         {
             "title": "十、数位 DP",
             "sort": 10,
-            "summary": "",
+            "summary": "<a href=\"https://www.bilibili.com/video/BV1rS4y1s721/?t=19m36s\">v1.0 模板讲解</a><br><a href=\"https://www.bilibili.com/video/BV1Fg4y1Q7wv/?t=31m28s\">v2.0 模板讲解</a><br>",
             "child": [
                 {
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<a href=\"https://www.bilibili.com/video/BV1rS4y1s721/?t=19m36s\">v1.0 模板讲解</a><br><a href=\"https://www.bilibili.com/video/BV1Fg4y1Q7wv/?t=31m28s\">v2.0 模板讲解</a><br>",
+                    "summary": "",
                     "child": [
                         {
                             "title": "2719. 统计整数数目",
@@ -3027,7 +3027,7 @@ export default{
                     "title": "§11.2 单调栈优化 DP",
                     "sort": 1,
                     "isLeaf": true,
-                    "summary": "前置题单：<a href=\"https://leetcode.cn/circle/discuss/9oZFK9/\">单调栈（矩形系列/字典序最小/贡献法）</a><br>",
+                    "summary": "前置题单：<a href=\"/list/monotonic_stack\">单调栈（矩形系列/字典序最小/贡献法）</a><br>",
                     "child": [
                         {
                             "title": "1335. 工作计划的最低难度",
@@ -3577,7 +3577,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "另见<a href=\"https://leetcode.cn/circle/discuss/01LUak/\">【题单】图论算法</a> 中的「全源最短路：Floyd」，本质是多维 DP。<br>",
+                    "summary": "另见<a href=\"/list/graph\">【题单】图论算法</a> 中的「全源最短路：Floyd」，本质是多维 DP。<br>",
                     "child": [
                         {
                             "title": "3243. 新增道路查询后的最短距离 I",
@@ -3840,13 +3840,13 @@ export default{
         {
             "title": "专题：输出具体方案（打印方案）",
             "sort": 16,
-            "summary": "",
+            "summary": "注意这些题目和回溯的区别，某些回溯题目要求输出**所有**方案，这里只要求输出**一个**。<br><a href=\"https://leetcode.cn/problems/shortest-common-supersequence/solution/cong-di-gui-dao-di-tui-jiao-ni-yi-bu-bu-auy8z/\">讲解</a><br>",
             "child": [
                 {
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "注意这些题目和回溯的区别，某些回溯题目要求输出**所有**方案，这里只要求输出**一个**。<br><a href=\"https://leetcode.cn/problems/shortest-common-supersequence/solution/cong-di-gui-dao-di-tui-jiao-ni-yi-bu-bu-auy8z/\">讲解</a><br>",
+                    "summary": "",
                     "child": [
                         {
                             "title": "368. 最大整除子集",
@@ -3927,13 +3927,13 @@ export default{
         {
             "title": "专题：前后缀分解",
             "sort": 17,
-            "summary": "",
+            "summary": "部分题目也可以用状态机 DP 解决。<br>",
             "child": [
                 {
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "部分题目也可以用状态机 DP 解决。<br>补充题目：<br>- 输入一个长为 $n$ 的 $\\textit{prices}$ 数组，你需要返回一个长为 $n$ 的 $\\textit{answer}$ 数组，其中 $\\textit{answer}<a href=\"https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/\">i]$ 表示删除 $\\textit{prices}[i]$，也就是禁止在第 $i$ 天买卖股票，在此约束下 [121. 买卖股票的最佳时机</a> 的答案。<br>",
+                    "summary": "补充题目：<br>- 输入一个长为 $n$ 的 $\\textit{prices}$ 数组，你需要返回一个长为 $n$ 的 $\\textit{answer}$ 数组，其中 $\\textit{answer}[i]$ 表示删除 $\\textit{prices}[i]$，也就是禁止在第 $i$ 天买卖股票，在此约束下 <a href=\"https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/\">121. 买卖股票的最佳时机</a> 的答案。<br>",
                     "child": [
                         {
                             "title": "42. 接雨水",
@@ -4238,13 +4238,13 @@ export default{
         {
             "title": "专题：把 X 变成 Y",
             "sort": 18,
-            "summary": "",
+            "summary": "部分题目也可以用 BFS 解决。<br>",
             "child": [
                 {
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "部分题目也可以用 BFS 解决。<br>",
+                    "summary": "",
                     "child": [
                         {
                             "title": "397. 整数替换",

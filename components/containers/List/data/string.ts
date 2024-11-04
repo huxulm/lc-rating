@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）",
     "original_src": "https://leetcode.cn/circle/discuss/SJFwQI",
-    "last_update": "2024-10-25 00:09:26",
+    "last_update": "2024-11-04 06:50:22",
     "sort": 0,
     "child": [
         {
@@ -15,7 +15,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "定义 $s$ 的真前缀为不等于 $s$ 的前缀，$s$ 的真后缀为不等于 $s$ 的后缀。<br>定义 $s$ 的 $\\text{border}$ 为既是 $s$ 的真前缀又是 $s$ 的真后缀的字符串。例如在 $s=\\texttt{aabcaa}$ 中，$\\texttt{a}$ 和 $\\texttt{aa}$ 都是 $s$ 的 $\\text{border}$。<br>对于模式串 $p$ 的每个前缀 $p<a href=\"https://leetcode.cn/problems/find-beautiful-indices-in-the-given-array-ii/solutions/2603695/kmper-fen-cha-zhao-by-endlesscheng-7bjm/\">:i]$，计算这个前缀的最长 $\\text{border}$ 长度，记在 $\\pi$ 数组中。<br>利用 $\\pi$ 数组，可以快速计算模式串 $p$ 出现在文本串 $t$ 的哪些位置上。代码模板见 [我的题解</a>。<br>> 注：$\\pi$ 数组的定义参考《算法导论》，国内数据结构教材通常定义为 $\\textit{next}$ 数组。以严蔚敏那本为例，二者的关系是 $\\textit{next}[i+1] = \\pi[i]+1$，即 $\\pi$ 数组整体右移一位，元素值加一。<br>",
+                    "summary": "定义 $s$ 的真前缀为不等于 $s$ 的前缀，$s$ 的真后缀为不等于 $s$ 的后缀。<br>定义 $s$ 的 $\\text{border}$ 为既是 $s$ 的真前缀又是 $s$ 的真后缀的字符串。例如在 $s=\\texttt{aabcaa}$ 中，$\\texttt{a}$ 和 $\\texttt{aa}$ 都是 $s$ 的 $\\text{border}$。<br>对于模式串 $p$ 的每个前缀 $p[:i]$，计算这个前缀的最长 $\\text{border}$ 长度，记在 $\\pi$ 数组中。<br>利用 $\\pi$ 数组，可以快速计算模式串 $p$ 出现在文本串 $t$ 的哪些位置上。代码模板见 <a href=\"https://leetcode.cn/problems/find-beautiful-indices-in-the-given-array-ii/solutions/2603695/kmper-fen-cha-zhao-by-endlesscheng-7bjm/\">我的题解</a>。<br>> 注：$\\pi$ 数组的定义参考《算法导论》，国内数据结构教材通常定义为 $\\textit{next}$ 数组。以严蔚敏那本为例，二者的关系是 $\\textit{next}[i+1] = \\pi[i]+1$，即 $\\pi$ 数组整体右移一位，元素值加一。<br>",
                     "child": [
                         {
                             "title": "28. 找出字符串中第一个匹配项的下标",
@@ -126,7 +126,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "定义 $z<a href=\"https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/\">i]$ 表示 $s[i:]$ 与 $s$ 的 LCP（最长公共前缀）的长度，其中 $s[i:]$ 表示从 $s[i]$ 到 $s[n-1]$ 的子串（后缀）。<br>常用技巧是构造字符串 $\\textit{pattern}+\\textit{s}$，如果发现 $z[m+i]\\ge m$（$m$ 是 $\\textit{pattern}$ 的长度），则说明从 $s[i]$ 开始的子串与 $\\textit{pattern}$ 匹配。<br>所以上面的一些 KMP 题目（子串匹配相关的），也可以用 Z 函数解决。读者可以尝试用 Z 函数解决 [28. 找出字符串中第一个匹配项的下标</a>。<br>下面只列出用 Z 函数做更方便的题目。<br>",
+                    "summary": "定义 $z[i]$ 表示 $s[i:]$ 与 $s$ 的 LCP（最长公共前缀）的长度，其中 $s[i:]$ 表示从 $s[i]$ 到 $s[n-1]$ 的子串（后缀）。<br>常用技巧是构造字符串 $\\textit{pattern}+\\textit{s}$，如果发现 $z[m+i]\\ge m$（$m$ 是 $\\textit{pattern}$ 的长度），则说明从 $s[i]$ 开始的子串与 $\\textit{pattern}$ 匹配。<br>所以上面的一些 KMP 题目（子串匹配相关的），也可以用 Z 函数解决。读者可以尝试用 Z 函数解决 <a href=\"https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/\">28. 找出字符串中第一个匹配项的下标</a>。<br>下面只列出用 Z 函数做更方便的题目。<br>",
                     "child": [
                         {
                             "title": "2223. 构造字符串的总得分和",
@@ -236,7 +236,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "本题单的大多数题目都可以用字符串哈希解决。<br>模板代码见 <a href=\"https://leetcode.cn/problems/construct-string-with-minimum-cost/solutions/2833949/hou-zhui-shu-zu-by-endlesscheng-32h9/\">我的题解</a>，包含单模哈希和双模哈希。<br>",
+                    "summary": "本题单的大多数题目都可以用字符串哈希解决。<br>推荐先把 <a href=\"https://leetcode.cn/problems/find-substring-with-given-hash-value/\">2156. 查找给定哈希值的子串</a> 做了，对理解**多项式哈希**的计算方法有帮助。<br>模板代码见 <a href=\"https://leetcode.cn/problems/construct-string-with-minimum-cost/solutions/2833949/hou-zhui-shu-zu-by-endlesscheng-32h9/\">我的题解</a>，包含单模哈希和双模哈希。<br>",
                     "child": [
                         {
                             "title": "28. 找出字符串中第一个匹配项的下标",
@@ -355,7 +355,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "定义**循环左移**操作：把字符串 $s$ 的第一个字符 $s<a href=\"https://leetcode.cn/problems/last-substring-in-lexicographical-order/\">0]$ 移除，添加到 $s$ 的末尾。例如 $\\texttt{abcd}$ 操作一次后得到 $\\texttt{bcda}$。<br>问题：你可以执行任意次循环左移操作，计算你能得到的字典序最小的字符串。<br>推荐先完成 [1163. 按字典序排在最后的子串</a>，再做下面这题。<br>",
+                    "summary": "定义**循环左移**操作：把字符串 $s$ 的第一个字符 $s[0]$ 移除，添加到 $s$ 的末尾。例如 $\\texttt{abcd}$ 操作一次后得到 $\\texttt{bcda}$。<br>问题：你可以执行任意次循环左移操作，计算你能得到的字典序最小的字符串。<br>推荐先完成 <a href=\"https://leetcode.cn/problems/last-substring-in-lexicographical-order/\">1163. 按字典序排在最后的子串</a>，再做下面这题。<br>",
                     "child": [
                         {
                             "title": "899. 有序队列",
@@ -378,7 +378,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "- 见 <a href=\"https://leetcode.cn/circle/discuss/mOr1u6/\">数据结构题单</a> 第六章。<br>",
+                    "summary": "- 见 <a href=\"/list/data_structure\">数据结构题单</a> 第六章。<br>",
                     "child": []
                 }
             ]

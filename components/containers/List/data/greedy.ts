@@ -461,7 +461,7 @@ export default{
                     "title": "§1.4 从最左/最右开始贪心",
                     "sort": 3,
                     "isLeaf": true,
-                    "summary": "对于无法排序的题目，尝试从左到右/从右到左贪心。思考第一个数/最后一个数的贪心策略，把 $n$ 个数的原问题转换成 $n-1$ 个数（或更少）的子问题。<br>读者可以对比下面的题目和 <a href=\"https://leetcode.cn/circle/discuss/tXLS3i/\">动态规划题单</a> 中的线性 DP、状态机 DP 的区别，思考什么情况下只能 DP 不能贪心，从而加深对「局部最优」和「全局最优」的理解。<br>",
+                    "summary": "对于无法排序的题目，尝试从左到右/从右到左贪心。思考第一个数/最后一个数的贪心策略，把 $n$ 个数的原问题转换成 $n-1$ 个数（或更少）的子问题。<br>读者可以对比下面的题目和 <a href=\"/list/dynamic_programming\">动态规划题单</a> 中的线性 DP、状态机 DP 的区别，思考什么情况下只能 DP 不能贪心，从而加深对「局部最优」和「全局最优」的理解。<br>",
                     "child": [
                         {
                             "title": "3191. 使二进制数组全部等于 1 的最少操作次数 I",
@@ -645,7 +645,7 @@ export default{
                     "title": "§1.5 划分型贪心",
                     "sort": 4,
                     "isLeaf": true,
-                    "summary": "把数组/字符串划分成满足要求的若干段，最小化/最大化划分的段数。<br>思考方法同上，尝试从左到右/从右到左贪心。<br>读者可以对比下面的题目和 <a href=\"https://leetcode.cn/circle/discuss/tXLS3i/\">动态规划题单</a> 中的划分型 DP 的区别，思考什么情况下只能 DP 不能贪心，从而加深对「局部最优」和「全局最优」的理解。<br>",
+                    "summary": "把数组/字符串划分成满足要求的若干段，最小化/最大化划分的段数。<br>思考方法同上，尝试从左到右/从右到左贪心。<br>读者可以对比下面的题目和 <a href=\"/list/dynamic_programming\">动态规划题单</a> 中的划分型 DP 的区别，思考什么情况下只能 DP 不能贪心，从而加深对「局部最优」和「全局最优」的理解。<br>",
                     "child": [
                         {
                             "title": "1221. 分割平衡字符串",
@@ -845,7 +845,7 @@ export default{
                     "title": "§1.8 相邻不同",
                     "sort": 7,
                     "isLeaf": true,
-                    "summary": "给定正整数数组，每次操作，把数组中的两个数各减少一，并去掉变成 $0$ 的数。目标：使最后剩下的数最小，或者最大化操作次数。<br>由于每次操作的都是两个下标不同的数，把这些下标按顺序拼接，可以构造出一个相邻元素不同的序列。例如 $(1,2),(2,3),(3,4)$ 这三个操作，可以拼接成 $<a href=\"https://leetcode.cn/problems/reorganize-string/solution/tan-xin-gou-zao-pai-xu-bu-pai-xu-liang-c-h9jg/\">1,2,3,2,3,4]$。<br>[证明/构造方案</a><br>**扩展**：<br>",
+                    "summary": "给定正整数数组，每次操作，把数组中的两个数各减少一，并去掉变成 $0$ 的数。目标：使最后剩下的数最小，或者最大化操作次数。<br>由于每次操作的都是两个下标不同的数，把这些下标按顺序拼接，可以构造出一个相邻元素不同的序列。例如 $(1,2),(2,3),(3,4)$ 这三个操作，可以拼接成 $[1,2,3,2,3,4]$。<br><a href=\"https://leetcode.cn/problems/reorganize-string/solution/tan-xin-gou-zao-pai-xu-bu-pai-xu-liang-c-h9jg/\">证明/构造方案</a><br>**扩展**：<br>",
                     "child": [
                         {
                             "title": "2335. 装满杯子需要的最短总时长",
@@ -1020,7 +1020,7 @@ export default{
                     "title": "§2.1 不相交区间",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "**变形**：每个区间有各自的分数，从中选一些两两互不相交的区间，最大化得分之和。详见 <a href=\"https://leetcode.cn/circle/discuss/tXLS3i/\">动态规划题单</a> 中的「§6.4 不相交区间」。<br>",
+                    "summary": "**变形**：每个区间有各自的分数，从中选一些两两互不相交的区间，最大化得分之和。详见 <a href=\"/list/dynamic_programming\">动态规划题单</a> 中的「§6.4 不相交区间」。<br>",
                     "child": [
                         {
                             "title": "646. 最长数对链",
@@ -2450,13 +2450,13 @@ export default{
         {
             "title": "六、构造题",
             "sort": 6,
-            "summary": "",
+            "summary": "**构造题**会给定一些约束，我们要构造一个**满足这些约束**的数组/字符串等。<br>思考方式和第五章的「思考清单」是一样的，在特殊情况中寻找灵感。<br>",
             "child": [
                 {
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "**构造题**会给定一些约束，我们要构造一个**满足这些约束**的数组/字符串等。<br>思考方式和第五章的「思考清单」是一样的，在特殊情况中寻找灵感。<br>> 如果想做更多思维题和构造题，可以去 Codeforces 看看。<br>",
+                    "summary": "> 如果想做更多思维题和构造题，可以去 Codeforces 看看。<br>",
                     "child": [
                         {
                             "title": "942. 增减字符串匹配",
