@@ -73,7 +73,7 @@ def refactor_summary(summary: str):
         suffix = url.split(prefix_url)
         if len(suffix) > 1 and suffix[1].strip('/') in discussion_url_map:
             suffix = suffix[1].strip('/')
-            return f'<a href="/list/{discussion_url_map[suffix]}">{title}</a>'
+            return f'<a href="/lc-rating/list/{discussion_url_map[suffix]}">{title}</a>'
         return f'<a href="{url}">{title}</a>'
     return re.sub(pattern, replace_link, summary)
 

@@ -158,7 +158,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "另见 <a href=\"/list/data_structure\">数据结构题单</a> 中的「0-1 字典树（异或字典树）」。<br>",
+                    "summary": "另见 <a href=\"/lc-rating/list/data_structure\">数据结构题单</a> 中的「0-1 字典树（异或字典树）」。<br>",
                     "child": [
                         {
                             "title": "1486. 数组异或操作",

@@ -1740,7 +1740,7 @@ export default{
                     "title": "§3.7 单调栈",
                     "sort": 6,
                     "isLeaf": true,
-                    "summary": "见 <a href=\"/list/monotonic_stack\">单调栈题单</a>。<br>",
+                    "summary": "见 <a href=\"/lc-rating/list/monotonic_stack\">单调栈题单</a>。<br>",
                     "child": []
                 }
             ]
@@ -1748,7 +1748,7 @@ export default{
         {
             "title": "四、队列",
             "sort": 4,
-            "summary": "队列常用在 BFS 中，见 <a href=\"/list/grid\">网格图题单</a> 和 <a href=\"/list/graph\">图论题单</a>。与此相比，栈常用在 DFS 中，但无需我们手动维护。<br>",
+            "summary": "队列常用在 BFS 中，见 <a href=\"/lc-rating/list/grid\">网格图题单</a> 和 <a href=\"/lc-rating/list/graph\">图论题单</a>。与此相比，栈常用在 DFS 中，但无需我们手动维护。<br>",
             "child": [
                 {
                     "title": "§4.1 基础",
@@ -2689,7 +2689,7 @@ export default{
                     "title": "§5.7 对顶堆（滑动窗口第 K 小/大）",
                     "sort": 6,
                     "isLeaf": true,
-                    "summary": "也可以用有序集合。<br>另见 <a href=\"/list/graph\">图论题单</a> 中的 Dijkstra 算法。<br>",
+                    "summary": "也可以用有序集合。<br>另见 <a href=\"/lc-rating/list/graph\">图论题单</a> 中的 Dijkstra 算法。<br>",
                     "child": [
                         {
                             "title": "2102. 序列顺序查询",
@@ -3127,7 +3127,7 @@ export default{
                     "title": "§7.1 基础",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "见 <a href=\"/list/grid\">网格图题单</a> 中的 DFS 和 <a href=\"/list/graph\">图论题单</a> 中的 DFS，其中大部分题目也可以用并查集实现。<br>",
+                    "summary": "见 <a href=\"/lc-rating/list/grid\">网格图题单</a> 中的 DFS 和 <a href=\"/lc-rating/list/graph\">图论题单</a> 中的 DFS，其中大部分题目也可以用并查集实现。<br>",
                     "child": [
                         {
                             "title": "990. 等式方程的可满足性",

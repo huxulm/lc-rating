@@ -3027,7 +3027,7 @@ export default{
                     "title": "§11.2 单调栈优化 DP",
                     "sort": 1,
                     "isLeaf": true,
-                    "summary": "前置题单：<a href=\"/list/monotonic_stack\">单调栈（矩形系列/字典序最小/贡献法）</a><br>",
+                    "summary": "前置题单：<a href=\"/lc-rating/list/monotonic_stack\">单调栈（矩形系列/字典序最小/贡献法）</a><br>",
                     "child": [
                         {
                             "title": "1335. 工作计划的最低难度",
@@ -3577,7 +3577,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "另见<a href=\"/list/graph\">【题单】图论算法</a> 中的「全源最短路：Floyd」，本质是多维 DP。<br>",
+                    "summary": "另见<a href=\"/lc-rating/list/graph\">【题单】图论算法</a> 中的「全源最短路：Floyd」，本质是多维 DP。<br>",
                     "child": [
                         {
                             "title": "3243. 新增道路查询后的最短距离 I",

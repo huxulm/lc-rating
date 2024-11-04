@@ -378,7 +378,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "- 见 <a href=\"/list/data_structure\">数据结构题单</a> 第六章。<br>",
+                    "summary": "- 见 <a href=\"/lc-rating/list/data_structure\">数据结构题单</a> 第六章。<br>",
                     "child": []
                 }
             ]

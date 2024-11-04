@@ -428,7 +428,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "见 <a href=\"/list/graph\">图论题单</a> 中的 Dijkstra。<br>",
+                    "summary": "见 <a href=\"/lc-rating/list/graph\">图论题单</a> 中的 Dijkstra。<br>",
                     "child": []
                 }
             ]

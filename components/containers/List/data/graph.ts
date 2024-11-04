@@ -182,7 +182,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "求最短路等。<br>注：关于**网格图**的 DFS 和 BFS，请看 <a href=\"/list/grid\">网格图题单</a>。<br>",
+                    "summary": "求最短路等。<br>注：关于**网格图**的 DFS 和 BFS，请看 <a href=\"/lc-rating/list/grid\">网格图题单</a>。<br>",
                     "child": [
                         {
                             "title": "3243. 新增道路查询后的最短距离 I",
