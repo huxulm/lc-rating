@@ -5,7 +5,7 @@ import {
   TableOfContent,
   TOC,
 } from "@components/ProblemCatetory/TableOfContent";
-import Data from "@components/containers/List/data/slidewindow";
+import Data from "@components/containers/List/data/sliding_window";
 import { useEffect, useState } from "react";
 import Form from "react-bootstrap/esm/Form";
 

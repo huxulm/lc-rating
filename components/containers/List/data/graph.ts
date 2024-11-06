@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】图论算法（DFS/BFS/拓扑排序/最短路/最小生成树/二分图/基环树/欧拉路径）",
     "original_src": "https://leetcode.cn/circle/discuss/01LUak",
-    "last_update": "2024-09-29 10:58:23",
+    "last_update": "2024-11-03 09:24:28",
     "sort": 0,
     "child": [
         {
@@ -74,8 +74,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2685. 统计完全连通分量的数量",
+                            "title": "3310. 移除可疑的方法",
                             "sort": 7,
+                            "src": "/remove-methods-from-project/",
+                            "score": 1710.5210499321,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2685. 统计完全连通分量的数量",
+                            "sort": 8,
                             "src": "/count-the-number-of-complete-components/",
                             "score": 1769.4344566771,
                             "solution": null,
@@ -83,7 +91,7 @@ export default{
                         },
                         {
                             "title": "2192. 有向无环图中一个节点的所有祖先",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/all-ancestors-of-a-node-in-a-directed-acyclic-graph/",
                             "score": 1787.8550568757,
                             "solution": null,
@@ -91,7 +99,7 @@ export default{
                         },
                         {
                             "title": "924. 尽量减少恶意软件的传播",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/minimize-malware-spread/",
                             "score": 1868.9146755896,
                             "solution": null,
@@ -99,7 +107,7 @@ export default{
                         },
                         {
                             "title": "2101. 引爆最多的炸弹",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/detonate-the-maximum-bombs/",
                             "score": 1880.0511044074,
                             "solution": null,
@@ -107,7 +115,7 @@ export default{
                         },
                         {
                             "title": "721. 账户合并",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/accounts-merge/",
                             "score": null,
                             "solution": null,
@@ -115,7 +123,7 @@ export default{
                         },
                         {
                             "title": "802. 找到最终的安全状态",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/find-eventual-safe-states/",
                             "score": 1962.3314335449,
                             "solution": null,
@@ -123,7 +131,7 @@ export default{
                         },
                         {
                             "title": "928. 尽量减少恶意软件的传播 II",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/minimize-malware-spread-ii/",
                             "score": 1985.2504512337,
                             "solution": null,
@@ -131,7 +139,7 @@ export default{
                         },
                         {
                             "title": "2092. 找出知晓秘密的所有专家",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/find-all-people-with-secret/",
                             "score": 2003.5794613668,
                             "solution": null,
@@ -139,7 +147,7 @@ export default{
                         },
                         {
                             "title": "3108. 带权图里旅途的最小代价",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/minimum-cost-walk-in-weighted-graph/",
                             "score": 2108.5054318055,
                             "solution": null,
@@ -147,7 +155,7 @@ export default{
                         },
                         {
                             "title": "261. 以图判树",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/graph-valid-tree/",
                             "score": null,
                             "solution": null,
@@ -155,7 +163,7 @@ export default{
                         },
                         {
                             "title": "323. 无向图中连通分量的数目",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/number-of-connected-components-in-an-undirected-graph/",
                             "score": null,
                             "solution": null,
@@ -174,7 +182,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "求最短路等。<br>注：关于**网格图**的 DFS 和 BFS，请看 <a href=\"https://leetcode.cn/circle/discuss/YiXPXW/\">网格图题单</a>。<br>",
+                    "summary": "求最短路等。<br>注：关于**网格图**的 DFS 和 BFS，请看 <a href=\"/lc-rating/list/grid\">网格图题单</a>。<br>",
                     "child": [
                         {
                             "title": "3243. 新增道路查询后的最短距离 I",
@@ -422,24 +430,8 @@ export default{
                     "summary": "<a href=\"https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/solution/nei-xiang-ji-huan-shu-tuo-bu-pai-xu-fen-c1i1b/\">基环树介绍</a><br>",
                     "child": [
                         {
-                            "title": "684. 冗余连接",
-                            "sort": 0,
-                            "src": "/redundant-connection/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "685. 冗余连接 II",
-                            "sort": 1,
-                            "src": "/redundant-connection-ii/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "2359. 找到离给定两个节点最近的节点",
-                            "sort": 2,
+                            "sort": 0,
                             "src": "/find-closest-node-to-given-two-nodes/",
                             "score": 1714.992763701,
                             "solution": null,
@@ -447,9 +439,25 @@ export default{
                         },
                         {
                             "title": "2360. 图中的最长环",
-                            "sort": 3,
+                            "sort": 1,
                             "src": "/longest-cycle-in-a-graph/",
                             "score": 1897.1863301576,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "684. 冗余连接",
+                            "sort": 2,
+                            "src": "/redundant-connection/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "685. 冗余连接 II",
+                            "sort": 3,
+                            "src": "/redundant-connection-ii/",
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },
@@ -525,8 +533,24 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2642. 设计可以求最短路径的图类",
+                            "title": "3341. 到达最后一个房间的最少时间 I",
                             "sort": 2,
+                            "src": "/find-minimum-time-to-reach-last-room-i/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3341. 到达最后一个房间的最少时间 II",
+                            "sort": 3,
+                            "src": "/find-minimum-time-to-reach-last-room-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2642. 设计可以求最短路径的图类",
+                            "sort": 4,
                             "src": "/design-graph-with-shortest-path-calculator/",
                             "score": 1810.6470004623,
                             "solution": null,
@@ -534,7 +558,7 @@ export default{
                         },
                         {
                             "title": "1514. 概率最大的路径",
-                            "sort": 3,
+                            "sort": 5,
                             "src": "/path-with-maximum-probability/",
                             "score": 1846.4077077642,
                             "solution": null,
@@ -542,7 +566,7 @@ export default{
                         },
                         {
                             "title": "1631. 最小体力消耗路径",
-                            "sort": 4,
+                            "sort": 6,
                             "src": "/path-with-minimum-effort/",
                             "score": 1947.5013967785,
                             "solution": null,
@@ -550,7 +574,7 @@ export default{
                         },
                         {
                             "title": "1786. 从第一个节点出发到最后一个节点的受限路径数",
-                            "sort": 5,
+                            "sort": 7,
                             "src": "/number-of-restricted-paths-from-first-to-last-node/",
                             "score": 2078.5417326415,
                             "solution": null,
@@ -558,7 +582,7 @@ export default{
                         },
                         {
                             "title": "3123. 最短路径中的边",
-                            "sort": 6,
+                            "sort": 8,
                             "src": "/find-edges-in-shortest-paths/",
                             "score": 2093.0316157073,
                             "solution": null,
@@ -566,15 +590,23 @@ export default{
                         },
                         {
                             "title": "1976. 到达目的地的方案数",
-                            "sort": 7,
+                            "sort": 9,
                             "src": "/number-of-ways-to-arrive-at-destination/",
                             "score": 2094.592426537,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "778. 水位上升的泳池中游泳",
+                            "sort": 10,
+                            "src": "/swim-in-rising-water/",
+                            "score": 2096.6201393558,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "2662. 前往目标的最小代价",
-                            "sort": 8,
+                            "sort": 11,
                             "src": "/minimum-cost-of-a-path-with-special-roads/",
                             "score": 2153.8943791656,
                             "solution": null,
@@ -582,7 +614,7 @@ export default{
                         },
                         {
                             "title": "2045. 到达目的地的第二短时间",
-                            "sort": 9,
+                            "sort": 12,
                             "src": "/second-minimum-time-to-reach-destination/",
                             "score": 2201.6219336792,
                             "solution": null,
@@ -590,7 +622,7 @@ export default{
                         },
                         {
                             "title": "882. 细分图中的可到达节点",
-                            "sort": 10,
+                            "sort": 13,
                             "src": "/reachable-nodes-in-subdivided-graph/",
                             "score": 2328.4294689238,
                             "solution": null,
@@ -598,7 +630,7 @@ export default{
                         },
                         {
                             "title": "2203. 得到要求路径的最小带权子图",
-                            "sort": 11,
+                            "sort": 14,
                             "src": "/minimum-weighted-subgraph-with-the-required-paths/",
                             "score": 2364.3455634374,
                             "solution": null,
@@ -606,7 +638,7 @@ export default{
                         },
                         {
                             "title": "2577. 在网格图中访问一个格子的最少时间",
-                            "sort": 12,
+                            "sort": 15,
                             "src": "/minimum-time-to-visit-a-cell-in-a-grid/",
                             "score": 2381.625583289,
                             "solution": null,
@@ -614,7 +646,7 @@ export default{
                         },
                         {
                             "title": "1928. 规定时间内到达终点的最小花费",
-                            "sort": 13,
+                            "sort": 16,
                             "src": "/minimum-cost-to-reach-destination-in-time/",
                             "score": 2413.3969129689,
                             "solution": null,
@@ -622,7 +654,7 @@ export default{
                         },
                         {
                             "title": "787. K 站中转内最便宜的航班",
-                            "sort": 14,
+                            "sort": 17,
                             "src": "/cheapest-flights-within-k-stops/",
                             "score": 1786.4753467293,
                             "solution": null,
@@ -630,7 +662,7 @@ export default{
                         },
                         {
                             "title": "2699. 修改图中的边权",
-                            "sort": 15,
+                            "sort": 18,
                             "src": "/modify-graph-edge-weights/",
                             "score": 2873.9745576413,
                             "solution": null,
@@ -638,7 +670,7 @@ export default{
                         },
                         {
                             "title": "LCP 35. 电动车游城市",
-                            "sort": 16,
+                            "sort": 19,
                             "src": "/DFPeFJ/",
                             "score": null,
                             "solution": null,
@@ -646,7 +678,7 @@ export default{
                         },
                         {
                             "title": "1810. 隐藏网格下的最小消耗路径",
-                            "sort": 17,
+                            "sort": 20,
                             "src": "/minimum-path-cost-in-a-hidden-grid/",
                             "score": null,
                             "solution": null,
@@ -654,7 +686,7 @@ export default{
                         },
                         {
                             "title": "2093. 前往目标城市的最小费用",
-                            "sort": 18,
+                            "sort": 21,
                             "src": "/minimum-cost-to-reach-city-with-discounts/",
                             "score": null,
                             "solution": null,
@@ -662,7 +694,7 @@ export default{
                         },
                         {
                             "title": "2473. 购买苹果的最低成本",
-                            "sort": 19,
+                            "sort": 22,
                             "src": "/minimum-cost-to-buy-apples/",
                             "score": null,
                             "solution": null,
@@ -670,7 +702,7 @@ export default{
                         },
                         {
                             "title": "2714. 找到最短路径的 K 次跨越",
-                            "sort": 20,
+                            "sort": 23,
                             "src": "/find-shortest-path-with-k-hops/",
                             "score": null,
                             "solution": null,
@@ -678,7 +710,7 @@ export default{
                         },
                         {
                             "title": "2737. 找到最近的标记节点",
-                            "sort": 21,
+                            "sort": 24,
                             "src": "/find-the-closest-marked-node/",
                             "score": null,
                             "solution": null,

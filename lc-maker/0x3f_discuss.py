@@ -3,129 +3,135 @@ import json
 import argparse
 import sys
 from leetcode_api import load_headers, LeetCodeApi
+from tqdm import tqdm
+from typing import List, Dict
+from dataclasses import dataclass, asdict
 
 split_url = "https://leetcode.cn/problems"
-
 rating_url = "https://raw.githubusercontent.com/zerotrac/leetcode_problem_rating/main/data.json"
+discussion_url_map = {
+    "0viNMK":"sliding_window",
+    "SqopEo":"binary_search",
+    "9oZFK9":"monotonic_stack",
+    "YiXPXW":"grid",
+    "dHn9Vk":"bitwise_operations",
+    "01LUak":"graph",
+    "tXLS3i":"dynamic_programming",
+    "mOr1u6":"data_structure",
+    "IYT3ss":"math",
+    "g6KTKL":"greedy",
+    "K0n2gO":"trees",
+    "SJFwQI":"string",
+}
 
-class DiscussionNode:
+@dataclass
+class ContentNode:
     title: str
     sort: int
     src: str
     score: int
     solution: str
     isPremium: bool
-    def __init__(self, title: str, sort: int, src: str, score: int, solution: str, isPremium: bool):
-        self.title = title
-        self.sort = sort
-        self.src = src
-        self.score = score
-        self.solution = solution
-        self.isPremium = isPremium
 
-    def to_dict(self):
-        return {
-            "title": self.title,
-            "sort": self.sort,
-            "src": self.src,
-            "score": self.score,
-            "solution": self.solution,
-            "isPremium": self.isPremium
-        }
-
-class DiscussionLeafNode:
+@dataclass
+class SubtitleNode:
     title: str
     sort: int
     isLeaf: bool
     summary: str
-    child: list[DiscussionNode]
+    child: List[Dict] # List[Dict[ContentNode]]
 
-    def __init__(self, title: str, sort: int, isLeaf: bool, summary: str, child: list[DiscussionNode]):
-        self.title = title
-        self.sort = sort
-        self.isLeaf = isLeaf
-        self.summary = summary
-        self.child = child
-
-    def to_dict(self):
-        return {
-            "title": self.title,
-            "sort": self.sort,
-            "isLeaf": self.isLeaf,
-            "summary": self.summary,
-            "child": [child.to_dict() for child in self.child]
-        }
-    
-class DiscussionSubNode:
+@dataclass   
+class TitleNode:
     title: str
     sort: int
     summary: str
-    child: list[DiscussionLeafNode]
+    child: List[Dict] # List[Dict[SubtitleNode]]
 
-    def __init__(self, title: str, sort: int, summary: str, child: list[DiscussionLeafNode]):
-        self.title = title
-        self.sort = sort
-        self.summary = summary
-        self.child = child
-
-    def to_dict(self):
-        return {
-            "title": self.title,
-            "sort": self.sort,
-            "summary": self.summary,
-            "child": [child.to_dict() for child in self.child]
-        }
-
+@dataclass   
+class RootNode:
+    title: str
+    original_src: str
+    last_update: str
+    sort: int
+    child: List[Dict] # List[Dict[TitleNode]]
 
 def get_discussion(uuid: str, lc: LeetCodeApi):
     res = lc.qaQuestionDetail(uuid)
     # we only focus on title, content
     return (res["qaQuestion"]["title"], res["qaQuestion"]["content"], res["qaQuestion"]["updatedAt"])
 
+
 def refactor_summary(summary: str):
     summary = summary.strip()
     # replace all link to html format
-    pattern = r'\[(.*?)\]\((.*?)\)'
-    repl = r'<a href="\2">\1</a>'
-    return re.sub(pattern, repl, summary)
+    pattern = r'\[([^\]]+)\]\((http[s]?:\/\/[^\)]+)\)'
+    def replace_link(match: re.Match):
+        title = match.group(1)
+        url = match.group(2)
+        prefix_url = "https://leetcode.cn/circle/discuss/"
+        suffix = url.split(prefix_url)
+        if len(suffix) > 1 and suffix[1].strip('/') in discussion_url_map:
+            suffix = suffix[1].strip('/')
+            return f'<a href="/lc-rating/list/{discussion_url_map[suffix]}">{title}</a>'
+        return f'<a href="{url}">{title}</a>'
+    return re.sub(pattern, replace_link, summary)
 
-def refactor_discussion_with_sub(content: str, rating: dict):# 有x.x的时候用这个
+def refactor_discussion(root: RootNode, content: str, rating: Dict, isSubExist: bool):
     contents = content.split("\n")
-    # split content in section by "##"
-    sub_node_list = []
-    leaf_node_list = []
-    node_list = []
-    summary = ""
+    curr_title_node = None
+    curr_subtitle_node = None
     for cont in contents:
-        if cont.startswith("###"):
-            summary = refactor_summary(summary)
-            if len(leaf_node_list) > 0:
-                leaf_node_list[-1].summary = summary
+        if isSubExist and cont.startswith("###"): # subtitle init
+            # finish summary adding from subtitle or title
+            if curr_subtitle_node:
+                curr_subtitle_node.summary = refactor_summary(curr_subtitle_node.summary)
+                # add old subtitle node to title node
+                curr_title_node.child.append(asdict(curr_subtitle_node))
+                curr_subtitle_node = None
             else:
-                sub_node_list[-1].summary = summary
-            summary = ""
+                curr_title_node.summary = refactor_summary(curr_title_node.summary)
+            # create new subtitle node
             title = cont.split("### ")[1]
-            curr_leaf = DiscussionLeafNode(title, len(leaf_node_list), True, "", [])
-            leaf_node_list.append(curr_leaf)
-            node_list = curr_leaf.child
-        elif cont.startswith("##"):
-            summary = refactor_summary(summary)
-            if len(leaf_node_list) > 0:
-                leaf_node_list[-1].summary = summary
-            elif len(sub_node_list) > 0:
-                sub_node_list[-1].summary = summary
-            summary = ""
+            curr_subtitle_node = SubtitleNode(title, len(curr_title_node.child), True, "", [])
+
+        elif isSubExist and cont.startswith("##"): # title init
+            # finish summary adding from subtitle or title
+            if curr_subtitle_node:
+                curr_subtitle_node.summary = refactor_summary(curr_subtitle_node.summary)
+                # add old subtitle node to title node
+                curr_title_node.child.append(asdict(curr_subtitle_node))
+                curr_subtitle_node = None
+            if curr_title_node:
+                curr_title_node.summary = refactor_summary(curr_title_node.summary)
+                # add old title node to root node
+                root.child.append(asdict(curr_title_node))
+                curr_title_node = None
+            # create new title node
             title = cont.split("## ")[1]
-            curr_sub = DiscussionSubNode(title, len(sub_node_list), "", [])
-            sub_node_list.append(curr_sub)
-            leaf_node_list = curr_sub.child
-        elif cont.startswith("- ["):
-            # check if there exists a node to use
-            if len(leaf_node_list) == 0:
-                title = ""
-                curr_leaf = DiscussionLeafNode(title, len(leaf_node_list), True, "", [])
-                leaf_node_list.append(curr_leaf)
-                node_list = curr_leaf.child
+            curr_title_node = TitleNode(title, len(root.child), "", [])
+
+        elif not isSubExist and cont.startswith("##"): # title init without subtitle
+            # add old subtitle node to title node, and add title node to root node
+            # finish summary adding from subtitle or title
+            if curr_subtitle_node:
+                curr_subtitle_node.summary = refactor_summary(curr_subtitle_node.summary)
+                curr_title_node.child.append(asdict(curr_subtitle_node))
+                curr_subtitle_node = None
+            if curr_title_node:
+                curr_title_node.summary = refactor_summary(curr_title_node.summary)
+                root.child.append(asdict(curr_title_node))
+                curr_title_node = None
+            # create new title node
+            title = cont.split("## ")[1]
+            curr_title_node = TitleNode(title, len(root.child), "", [])
+            # since no subtitle, create a empty subtitle node
+            curr_subtitle_node = SubtitleNode("", 0, True, "", [])
+        
+        elif cont.startswith("- ["): # content init
+            # in some case, there is no subtitle, so we need to create a empty subtitle node
+            if not curr_subtitle_node:
+                curr_subtitle_node = SubtitleNode("", 0, True, "", [])
             # use regex get []()（） content
             markdown_match = re.match(r"-\s*\[(.*?)\]\((.*?)\)\s*(?:（(.*?)）)?", cont)
             title = markdown_match.group(1)
@@ -146,64 +152,21 @@ def refactor_discussion_with_sub(content: str, rating: dict):# 有x.x的时候�
                 solution = second_markdown_match.group(2)
                 if split_url in solution:
                     solution = solution.split(split_url)[1]
-            curr_node = DiscussionNode(title, len(node_list), src, score, solution, isPremium)
-            node_list.append(curr_node)
+            curr_node = ContentNode(title, len(curr_subtitle_node.child), src, score, solution, isPremium)
+            curr_subtitle_node.child.append(asdict(curr_node))
+
         else:
-            if cont.strip() == "":
+            cont = cont.strip()
+            if cont == "":
                 continue
-            summary += cont + "<br>"
-
-    return sub_node_list
-
-def refactor_discussion(content: str, rating: dict):# 没有x.x的时候用这个
-    contents = content.split("\n")
-    # split content in section by "##"
-    sub_node_list = []
-    leaf_node_list = []
-    node_list = []
-    summary = ""
-    for cont in contents:
-        if cont.startswith("##"):
-            summary = refactor_summary(summary)
-            if len(leaf_node_list) > 0:
-                leaf_node_list[-1].summary = summary
-            summary = ""
-            title = cont.split("## ")[1]
-            sub_node = DiscussionSubNode(title, len(sub_node_list), "", [])
-            leaf_node_list = sub_node.child
-            sub_node_list.append(sub_node)
-            curr_leaf = DiscussionLeafNode("", len(leaf_node_list), True, "", [])
-            leaf_node_list.append(curr_leaf)
-            node_list = curr_leaf.child
-        elif cont.startswith("- ["):
-            # use regex get []()（） content
-            markdown_match = re.match(r"-\s*\[(.*?)\]\((.*?)\)\s*(?:（(.*?)）)?", cont)
-            title = markdown_match.group(1)
-            src = markdown_match.group(2)
-            additional = markdown_match.group(3)
-            title_id = title.split(".")[0]
-            if title_id.isdigit():
-                title_id = int(title_id)
-            score = rating[title_id] if title_id in rating else None
-            # # 将slug从src中根据split_url前缀提取出来(ps: 有些题目不一定有split_url前缀)
-            if split_url in src:
-                src = src.split(split_url)[1]
-            solution = None
-            isPremium = additional != None and "会员题" in additional
-            # 判断是否还有hyperlink, 一般来说即题解
-            second_markdown_match = re.match(r"\[(.*)\]\((.*)\)", cont[cont.find(")")+2:])
-            if second_markdown_match:
-                solution = second_markdown_match.group(2)
-                if split_url in solution:
-                    solution = solution.split(split_url)[1]
-            curr_node = DiscussionNode(title, len(node_list), src, score, solution, isPremium)
-            node_list.append(curr_node)
-        else:
-            if cont.strip() == "":
-                continue
-            summary += cont + "<br>"
-    return sub_node_list
-
+            if curr_subtitle_node:
+                curr_subtitle_node.summary += cont + "<br>"
+            elif curr_title_node:
+                curr_title_node.summary += cont + "<br>"
+    # 最后一个title没有加入，这里检查的是倒数第二个title
+    if root.child[-1]['title'] == "关联题单":
+        root.child.pop()
+  
 def get_rating():
     import requests
     from collections import defaultdict
@@ -238,31 +201,26 @@ if __name__ == "__main__":
             uuids_title.append(line.strip().split(" "))
     if uuid:
         if not output_file:
-            uuids_title.append([uuid, "./output/" + uuid + ".ts"])
+            uuids_title.append([uuid, "./" + uuid + ".ts"])
         else:
             uuids_title.append([uuid, output_file])
     # get and analysis discussion content according to uuid
-    for uuid, file_path in uuids_title:
+    for uuid, file_path in tqdm(uuids_title):
         title, content, last_update = get_discussion(uuid, lc)
         # format last_update into yyyy-mm-dd hh:mm:ss
         temp_split = last_update.split("T")
         last_update = temp_split[0] + " " + temp_split[1].split(".")[0]
         content = content.replace("\r\n", "\n")
         original_src = "https://leetcode.cn/circle/discuss/" + uuid
-        child_list = None
-        if re.search(r'\n## [^\n]*\n', content) and re.search(r'\n### [^\n]*\n', content): # 有二级标题和三级标题
-            child_list = refactor_discussion_with_sub(content, rating)
-        else:
-            child_list = refactor_discussion(content, rating)
-        parent = {
-            "title": title,
-            "original_src": original_src,
-            "last_update": last_update,
-            "sort": 0,
-            "child": [child.to_dict() for child in child_list if child.title != "分类题单" and child.title != "关联题单"]
-        }
-        with open(file_path, "w") as f:
-            f.write("import ProblemCategory from \"@components/ProblemCatetory\";\n\nexport default" + json.dumps(parent, indent=4, ensure_ascii=False) + " as ProblemCategory;")
+        isSubExist = re.search(r'\n## [^\n]*\n', content) and re.search(r'\n### [^\n]*\n', content)
+        parent = RootNode(title, original_src, last_update, 0, [])
+        refactor_discussion(parent, content, rating, isSubExist)
+        try:
+            with open(file_path, "w") as f:
+                f.write("import ProblemCategory from \"@components/ProblemCatetory\";\n\nexport default" + json.dumps(asdict(parent), indent=4, ensure_ascii=False) + " as ProblemCategory;")
+        except:
+            print("Error: ", uuid, file_path)
+
         # make a waiting for 1s
         import time
         time.sleep(1)

@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】位运算（基础/性质/拆位/试填/恒等式/思维）",
     "original_src": "https://leetcode.cn/circle/discuss/dHn9Vk",
-    "last_update": "2024-10-03 11:27:19",
+    "last_update": "2024-10-30 07:52:39",
     "sort": 0,
     "child": [
         {
@@ -18,56 +18,8 @@ export default{
                     "summary": "",
                     "child": [
                         {
-                            "title": "2595. 奇偶位数",
-                            "sort": 0,
-                            "src": "/number-of-even-and-odd-bits/",
-                            "score": 1206.5675296817,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "231. 2 的幂",
-                            "sort": 1,
-                            "src": "/power-of-two/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "342. 4 的幂",
-                            "sort": 2,
-                            "src": "/power-of-four/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "476. 数字的补数",
-                            "sort": 3,
-                            "src": "/number-complement/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "191. 位 1 的个数",
-                            "sort": 4,
-                            "src": "/number-of-1-bits/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "338. 比特位计数",
-                            "sort": 5,
-                            "src": "/counting-bits/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "3226. 使两个整数相等的位更改次数",
-                            "sort": 6,
+                            "sort": 0,
                             "src": "/number-of-bit-changes-to-make-two-integers-equal/",
                             "score": 1247.3575940876,
                             "solution": null,
@@ -75,7 +27,7 @@ export default{
                         },
                         {
                             "title": "1356. 根据数字二进制下 1 的数目排序",
-                            "sort": 7,
+                            "sort": 1,
                             "src": "/sort-integers-by-the-number-of-1-bits/",
                             "score": 1257.7082143289,
                             "solution": null,
@@ -83,7 +35,7 @@ export default{
                         },
                         {
                             "title": "461. 汉明距离",
-                            "sort": 8,
+                            "sort": 2,
                             "src": "/hamming-distance/",
                             "score": null,
                             "solution": null,
@@ -91,15 +43,31 @@ export default{
                         },
                         {
                             "title": "2220. 转换数字的最少位翻转次数",
-                            "sort": 9,
+                            "sort": 3,
                             "src": "/minimum-bit-flips-to-convert-number/",
                             "score": 1282.1502428906,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "476. 数字的补数",
+                            "sort": 4,
+                            "src": "/number-complement/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1009. 十进制整数的反码",
+                            "sort": 5,
+                            "src": "/complement-of-base-10-integer/",
+                            "score": 1234.7084656358,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "868. 二进制间距",
-                            "sort": 10,
+                            "sort": 6,
                             "src": "/binary-gap/",
                             "score": 1307.2991245272,
                             "solution": null,
@@ -107,7 +75,7 @@ export default{
                         },
                         {
                             "title": "3211. 生成不含相邻零的二进制字符串",
-                            "sort": 11,
+                            "sort": 7,
                             "src": "/generate-binary-strings-without-adjacent-zeros/",
                             "score": 1352.5455214631,
                             "solution": null,
@@ -115,7 +83,7 @@ export default{
                         },
                         {
                             "title": "2917. 找出数组中的 K-or 值",
-                            "sort": 12,
+                            "sort": 8,
                             "src": "/find-the-k-or-of-an-array/",
                             "score": 1388.5363323598,
                             "solution": null,
@@ -123,7 +91,7 @@ export default{
                         },
                         {
                             "title": "693. 交替位二进制数",
-                            "sort": 13,
+                            "sort": 9,
                             "src": "/binary-number-with-alternating-bits/",
                             "score": null,
                             "solution": null,
@@ -131,9 +99,49 @@ export default{
                         },
                         {
                             "title": "2657. 找到两个数组的前缀公共数组",
-                            "sort": 14,
+                            "sort": 10,
                             "src": "/find-the-prefix-common-array-of-two-arrays/",
                             "score": 1304.1180812515,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "231. 2 的幂",
+                            "sort": 11,
+                            "src": "/power-of-two/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "342. 4 的幂",
+                            "sort": 12,
+                            "src": "/power-of-four/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "191. 位 1 的个数",
+                            "sort": 13,
+                            "src": "/number-of-1-bits/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2595. 奇偶位数",
+                            "sort": 14,
+                            "src": "/number-of-even-and-odd-bits/",
+                            "score": 1206.5675296817,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "338. 比特位计数",
+                            "sort": 15,
+                            "src": "/counting-bits/",
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         }
@@ -150,7 +158,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "另见 <a href=\"https://leetcode.cn/circle/discuss/mOr1u6/\">数据结构题单</a> 中的「0-1 字典树（异或字典树）」。<br>",
+                    "summary": "另见 <a href=\"/lc-rating/list/data_structure\">数据结构题单</a> 中的「0-1 字典树（异或字典树）」。<br>",
                     "child": [
                         {
                             "title": "1486. 数组异或操作",
@@ -295,13 +303,13 @@ export default{
         {
             "title": "三、与或（AND/OR）的性质",
             "sort": 2,
-            "summary": "",
+            "summary": "AND 的数越多，结果越小。OR 的数越多，结果越大。<br>",
             "child": [
                 {
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "AND 的数越多，结果越小。OR 的数越多，结果越大。<br>",
+                    "summary": "",
                     "child": [
                         {
                             "title": "2980. 检查按位或是否存在尾随零",
@@ -389,7 +397,7 @@ export default{
                     "title": "LogTrick",
                     "sort": 1,
                     "isLeaf": true,
-                    "summary": "原地写法：<a href=\"https://leetcode.cn/problems/number-of-subarrays-with-and-value-of-k/solution/jian-ji-xie-fa-o1-kong-jian-pythonjavacg-u7fv/\">讲解</a><br>额外维护一个数组：<a href=\"https://leetcode.cn/problems/smallest-subarrays-with-maximum-bitwise-or/solution/by-endlesscheng-zai1/\">讲解（方法二）</a><br>",
+                    "summary": "原地写法：<a href=\"https://leetcode.cn/problems/find-subarray-with-bitwise-or-closest-to-k/solutions/2798206/li-yong-and-de-xing-zhi-pythonjavacgo-by-gg4d/\">讲解</a><br>额外维护一个数组：<a href=\"https://leetcode.cn/problems/smallest-subarrays-with-maximum-bitwise-or/solution/by-endlesscheng-zai1/\">讲解（方法二）</a><br>",
                     "child": [
                         {
                             "title": "3097. 或值至少为 K 的最短子数组 II",
@@ -611,17 +619,25 @@ export default{
         {
             "title": "七、思维题",
             "sort": 6,
-            "summary": "",
+            "summary": "贪心、脑筋急转弯等。<br>",
             "child": [
                 {
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "贪心、脑筋急转弯等。<br>",
+                    "summary": "",
                     "child": [
                         {
-                            "title": "2546. 执行逐位运算使字符串相等",
+                            "title": "3315. 构造最小位运算数组 II",
                             "sort": 0,
+                            "src": "/construct-the-minimum-bitwise-array-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2546. 执行逐位运算使字符串相等",
+                            "sort": 1,
                             "src": "/apply-bitwise-operations-to-make-strings-equal/",
                             "score": 1604.6299874552,
                             "solution": null,
@@ -629,7 +645,7 @@ export default{
                         },
                         {
                             "title": "1558. 得到目标数组的最少函数调用次数",
-                            "sort": 1,
+                            "sort": 2,
                             "src": "/minimum-numbers-of-function-calls-to-make-target-array/",
                             "score": 1637.0082208814,
                             "solution": null,
@@ -637,7 +653,7 @@ export default{
                         },
                         {
                             "title": "2571. 将整数减少到零需要的最少操作数",
-                            "sort": 2,
+                            "sort": 3,
                             "src": "/minimum-operations-to-reduce-an-integer-to-0/",
                             "score": 1649.2000410344,
                             "solution": null,
@@ -645,7 +661,7 @@ export default{
                         },
                         {
                             "title": "2568. 最小无法得到的或值",
-                            "sort": 3,
+                            "sort": 4,
                             "src": "/minimum-impossible-or/",
                             "score": 1754.1710323358,
                             "solution": null,
@@ -653,7 +669,7 @@ export default{
                         },
                         {
                             "title": "2509. 查询树中环的长度",
-                            "sort": 4,
+                            "sort": 5,
                             "src": "/cycle-length-queries-in-a-tree/",
                             "score": 1948.489500779,
                             "solution": null,
@@ -661,7 +677,7 @@ export default{
                         },
                         {
                             "title": "2939. 最大异或乘积",
-                            "sort": 5,
+                            "sort": 6,
                             "src": "/maximum-xor-product/",
                             "score": 2127.5100545681,
                             "solution": null,
@@ -669,7 +685,7 @@ export default{
                         },
                         {
                             "title": "2749. 得到整数零需要执行的最少操作数",
-                            "sort": 6,
+                            "sort": 7,
                             "src": "/minimum-operations-to-make-the-integer-zero/",
                             "score": 2132.06233459,
                             "solution": null,
@@ -677,7 +693,7 @@ export default{
                         },
                         {
                             "title": "2835. 使子序列的和等于目标的最少操作次数",
-                            "sort": 7,
+                            "sort": 8,
                             "src": "/minimum-operations-to-form-subsequence-with-target-sum/",
                             "score": 2207.4917475411,
                             "solution": null,
@@ -685,7 +701,7 @@ export default{
                         },
                         {
                             "title": "2897. 对数组执行操作使平方和最大",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/apply-operations-on-array-to-maximize-sum-of-squares/",
                             "score": 2301.4069974024,
                             "solution": null,
@@ -693,11 +709,27 @@ export default{
                         },
                         {
                             "title": "810. 黑板异或游戏",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/chalkboard-xor-game/",
                             "score": 2341.4506355884,
                             "solution": null,
                             "isPremium": false
+                        },
+                        {
+                            "title": "3064. 使用按位查询猜测数字 I",
+                            "sort": 11,
+                            "src": "/guess-the-number-using-bitwise-questions-i/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "3094. 使用按位查询猜测数字 II",
+                            "sort": 12,
+                            "src": "/guess-the-number-using-bitwise-questions-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
                         }
                     ]
                 }
@@ -867,8 +899,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3141. 最大汉明距离",
+                            "title": "LCP 81. 与非的谜题",
                             "sort": 19,
+                            "src": "/ryfUiz/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3141. 最大汉明距离",
+                            "sort": 20,
                             "src": "/maximum-hamming-distances/",
                             "score": null,
                             "solution": null,

@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】网格图（DFS/BFS/综合应用）",
     "original_src": "https://leetcode.cn/circle/discuss/YiXPXW",
-    "last_update": "2024-09-17 02:25:32",
+    "last_update": "2024-11-03 09:29:32",
     "sort": 0,
     "child": [
         {
@@ -15,7 +15,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "判断连通块个数、大小等。<br>部分题目也可以用 BFS 或并查集解决。<br>",
+                    "summary": "适用于需要计算连通块个数、大小的题目。<br>部分题目也可以用 BFS 或并查集解决。<br>",
                     "child": [
                         {
                             "title": "200. 岛屿数量",
@@ -420,8 +420,22 @@ export default{
             ]
         },
         {
-            "title": "综合应用",
+            "title": "网格图 Dijkstra",
             "sort": 3,
+            "summary": "",
+            "child": [
+                {
+                    "title": "",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "summary": "见 <a href=\"/lc-rating/list/graph\">图论题单</a> 中的 Dijkstra。<br>",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "title": "综合应用",
+            "sort": 4,
             "summary": "",
             "child": [
                 {
@@ -580,7 +594,7 @@ export default{
         },
         {
             "title": "思考题",
-            "sort": 4,
+            "sort": 5,
             "summary": "",
             "child": [
                 {

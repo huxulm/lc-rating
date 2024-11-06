@@ -5,7 +5,7 @@ import {
   TableOfContent,
   TOC,
 } from "@components/ProblemCatetory/TableOfContent";
-import Data from "@components/containers/List/data/bitmanipulation";
+import Data from "@components/containers/List/data/bitwise_operations";
 import { useEffect, useState } from "react";
 import Form from "react-bootstrap/esm/Form";
 

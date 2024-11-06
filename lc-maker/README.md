@@ -8,7 +8,7 @@
 1. 安装依赖：`pip install -r requirements.txt` (如抛出异常 "No module named 'pip'", 可先执行 python -m ensurepip)
 2. 执行：`python 0x3f_discuss.py [--uuid xxxx] [--o yourpath/yourfilename] [--f path/to/discussionlist]`
     - 此处xxxx为尾uuid, 例如对于讨论页面https://leetcode-cn.com/circle/discuss/123456/，此处123456是这个讨论页面的uuid
-    - `yourpath/yourfilename`为输出文件路径, 默认输出在当前目录下的`output/uuid.ts`
+    - `yourpath/yourfilename`为输出文件路径, 默认输出在当前目录下
     - `path/to/discussionlist`为讨论列表文件路径，该文件遵守以下格式:
     - ```
         uuid1 output/path/for/uuid1

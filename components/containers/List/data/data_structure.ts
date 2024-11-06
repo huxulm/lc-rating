@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）",
     "original_src": "https://leetcode.cn/circle/discuss/mOr1u6",
-    "last_update": "2024-09-17 08:01:57",
+    "last_update": "2024-10-30 01:43:47",
     "sort": 0,
     "child": [
         {
@@ -361,8 +361,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2438. 二的幂数组中查询范围内的乘积",
+                            "title": "1749. 任意子数组和的绝对值的最大值",
                             "sort": 4,
+                            "src": "/maximum-absolute-sum-of-any-subarray/",
+                            "score": 1541.6176288991,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2438. 二的幂数组中查询范围内的乘积",
+                            "sort": 5,
                             "src": "/range-product-queries-of-powers/",
                             "score": 1609.7858209851,
                             "solution": null,
@@ -370,7 +378,7 @@ export default{
                         },
                         {
                             "title": "2055. 蜡烛之间的盘子",
-                            "sort": 5,
+                            "sort": 6,
                             "src": "/plates-between-candles/",
                             "score": 1819.3068421506,
                             "solution": null,
@@ -378,7 +386,7 @@ export default{
                         },
                         {
                             "title": "1744. 你能在你最喜欢的那天吃到你最喜欢的糖果吗？",
-                            "sort": 6,
+                            "sort": 7,
                             "src": "/can-you-eat-your-favorite-candy-on-your-favorite-day/",
                             "score": 1858.9581916885,
                             "solution": null,
@@ -386,7 +394,7 @@ export default{
                         },
                         {
                             "title": "53. 最大子数组和",
-                            "sort": 7,
+                            "sort": 8,
                             "src": "/maximum-subarray/",
                             "score": null,
                             "solution": "/maximum-subarray/solution/qian-zhui-he-zuo-fa-ben-zhi-shi-mai-mai-abu71/",
@@ -1120,8 +1128,16 @@ export default{
                             "isPremium": true
                         },
                         {
-                            "title": "759. 员工空闲时间",
+                            "title": "1989. 捉迷藏中可捕获的最大人数",
                             "sort": 25,
+                            "src": "/maximum-number-of-people-that-can-be-caught-in-tag/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "759. 员工空闲时间",
+                            "sort": 26,
                             "src": "/employee-free-time/",
                             "score": 1710.1120861153,
                             "solution": null,
@@ -1129,7 +1145,7 @@ export default{
                         },
                         {
                             "title": "2021. 街上最亮的位置",
-                            "sort": 26,
+                            "sort": 27,
                             "src": "/brightest-position-on-street/",
                             "score": null,
                             "solution": null,
@@ -1137,7 +1153,7 @@ export default{
                         },
                         {
                             "title": "2015. 每段建筑物的平均高度",
-                            "sort": 27,
+                            "sort": 28,
                             "src": "/average-height-of-buildings-in-each-segment/",
                             "score": null,
                             "solution": null,
@@ -1145,7 +1161,7 @@ export default{
                         },
                         {
                             "title": "2237. 计算街道上满足所需亮度的位置数量",
-                            "sort": 28,
+                            "sort": 29,
                             "src": "/count-positions-on-street-with-required-brightness/",
                             "score": null,
                             "solution": null,
@@ -1153,15 +1169,15 @@ export default{
                         },
                         {
                             "title": "3009. 折线图上的最大交点数量",
-                            "sort": 29,
+                            "sort": 30,
                             "src": "/maximum-number-of-intersections-on-the-chart/",
                             "score": null,
                             "solution": null,
                             "isPremium": true
                         },
                         {
-                            "title": "3279. Maximum Total Area Occupied by Pistons",
-                            "sort": 30,
+                            "title": "3279. 活塞占据的最大总面积",
+                            "sort": 31,
                             "src": "/maximum-total-area-occupied-by-pistons/",
                             "score": null,
                             "solution": null,
@@ -1724,7 +1740,7 @@ export default{
                     "title": "§3.7 单调栈",
                     "sort": 6,
                     "isLeaf": true,
-                    "summary": "见 <a href=\"https://leetcode.cn/circle/discuss/9oZFK9/\">单调栈题单</a>。<br>",
+                    "summary": "见 <a href=\"/lc-rating/list/monotonic_stack\">单调栈题单</a>。<br>",
                     "child": []
                 }
             ]
@@ -1732,7 +1748,7 @@ export default{
         {
             "title": "四、队列",
             "sort": 4,
-            "summary": "队列常用在 BFS 中，见 <a href=\"https://leetcode.cn/circle/discuss/YiXPXW/\">网格图题单</a> 和 <a href=\"https://leetcode.cn/circle/discuss/01LUak/\">图论题单</a>。与此相比，栈常用在 DFS 中，但无需我们手动维护。<br>",
+            "summary": "队列常用在 BFS 中，见 <a href=\"/lc-rating/list/grid\">网格图题单</a> 和 <a href=\"/lc-rating/list/graph\">图论题单</a>。与此相比，栈常用在 DFS 中，但无需我们手动维护。<br>",
             "child": [
                 {
                     "title": "§4.1 基础",
@@ -1855,8 +1871,24 @@ export default{
                     ]
                 },
                 {
-                    "title": "§4.3 单调队列",
+                    "title": "§4.3 双端队列",
                     "sort": 2,
+                    "isLeaf": true,
+                    "summary": "",
+                    "child": [
+                        {
+                            "title": "2810. 故障键盘",
+                            "sort": 0,
+                            "src": "/faulty-keyboard/",
+                            "score": 1192.9770230345,
+                            "solution": null,
+                            "isPremium": false
+                        }
+                    ]
+                },
+                {
+                    "title": "§4.4 单调队列",
+                    "sort": 3,
                     "isLeaf": true,
                     "summary": "个人觉得叫**单调双端队列**更准确。<br><a href=\"https://www.bilibili.com/video/BV1bM411X72E/\">原理讲解</a><br>",
                     "child": [
@@ -1919,8 +1951,8 @@ export default{
                     ]
                 },
                 {
-                    "title": "§4.4 单调队列优化 DP",
-                    "sort": 3,
+                    "title": "§4.5 单调队列优化 DP",
+                    "sort": 4,
                     "isLeaf": true,
                     "summary": "一般用来维护一段转移来源的最值。<br>1. 前提：区间右端点变大时，左端点也在变大（同滑动窗口）。<br>2. 转移前，去掉队首无用数据。<br>3. 计算转移（直接从队首转移）。<br>4. 把数据（一般是 $f[i]$）插入队尾前，去掉队尾无用数据。<br>",
                     "child": [
@@ -2012,18 +2044,18 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2558. 从数量最多的堆取走礼物",
+                            "title": "3264. K 次乘运算后的最终数组 I",
                             "sort": 1,
-                            "src": "/take-gifts-from-the-richest-pile/",
-                            "score": 1276.7817742915,
+                            "src": "/final-array-state-after-k-multiplication-operations-i/",
+                            "score": 1177.5447304844,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "3264. K 次乘运算后的最终数组 I",
+                            "title": "2558. 从数量最多的堆取走礼物",
                             "sort": 2,
-                            "src": "/final-array-state-after-k-multiplication-operations-i/",
-                            "score": 1177.5447304844,
+                            "src": "/take-gifts-from-the-richest-pile/",
+                            "score": 1276.7817742915,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2060,18 +2092,18 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1845. 座位预约管理系统",
+                            "title": "3275. 第 K 近障碍物查询",
                             "sort": 7,
-                            "src": "/seat-reservation-manager/",
-                            "score": 1428.6729861424,
+                            "src": "/k-th-nearest-obstacle-queries/",
+                            "score": 1419.6326908404,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "3275. 第 K 近障碍物查询",
+                            "title": "1845. 座位预约管理系统",
                             "sort": 8,
-                            "src": "/k-th-nearest-obstacle-queries/",
-                            "score": 1419.6326908404,
+                            "src": "/seat-reservation-manager/",
+                            "score": 1428.6729861424,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2092,8 +2124,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1942. 最小未被占据椅子的编号",
+                            "title": "3296. 移山所需的最少秒数",
                             "sort": 11,
+                            "src": "/minimum-number-of-seconds-to-make-mountain-height-zero/",
+                            "score": 1694.7320914942,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1942. 最小未被占据椅子的编号",
+                            "sort": 12,
                             "src": "/the-number-of-the-smallest-unoccupied-chair/",
                             "score": 1695.2832486322,
                             "solution": null,
@@ -2101,7 +2141,7 @@ export default{
                         },
                         {
                             "title": "1801. 积压订单中的订单总数",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/number-of-orders-in-the-backlog/",
                             "score": 1711.1205064321,
                             "solution": null,
@@ -2109,7 +2149,7 @@ export default{
                         },
                         {
                             "title": "2406. 将区间分为最少组数",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/divide-intervals-into-minimum-number-of-groups/",
                             "score": 1713.3954468582,
                             "solution": null,
@@ -2117,7 +2157,7 @@ export default{
                         },
                         {
                             "title": "2462. 雇佣 K 位工人的总代价",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/total-cost-to-hire-k-workers/",
                             "score": 1763.6404758359,
                             "solution": null,
@@ -2125,7 +2165,7 @@ export default{
                         },
                         {
                             "title": "1834. 单线程 CPU",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/single-threaded-cpu/",
                             "score": 1797.7466000366,
                             "solution": null,
@@ -2133,7 +2173,7 @@ export default{
                         },
                         {
                             "title": "1792. 最大平均通过率",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/maximum-average-pass-ratio/",
                             "score": 1817.9978644712,
                             "solution": null,
@@ -2141,7 +2181,7 @@ export default{
                         },
                         {
                             "title": "2931. 购买物品的最大开销",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/maximum-spending-after-buying-items/",
                             "score": 1822.3170524016,
                             "solution": null,
@@ -2149,7 +2189,7 @@ export default{
                         },
                         {
                             "title": "1882. 使用服务器处理任务",
-                            "sort": 18,
+                            "sort": 19,
                             "src": "/process-tasks-using-servers/",
                             "score": 1979.1112273597,
                             "solution": null,
@@ -2157,7 +2197,7 @@ export default{
                         },
                         {
                             "title": "2402. 会议室 III",
-                            "sort": 19,
+                            "sort": 20,
                             "src": "/meeting-rooms-iii/",
                             "score": 2092.8943149547,
                             "solution": null,
@@ -2165,7 +2205,7 @@ export default{
                         },
                         {
                             "title": "253. 会议室 II",
-                            "sort": 20,
+                            "sort": 21,
                             "src": "/meeting-rooms-ii/",
                             "score": null,
                             "solution": null,
@@ -2173,7 +2213,7 @@ export default{
                         },
                         {
                             "title": "1167. 连接木棍的最低费用",
-                            "sort": 21,
+                            "sort": 22,
                             "src": "/minimum-cost-to-connect-sticks/",
                             "score": 1481.5701319876,
                             "solution": null,
@@ -2356,8 +2396,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1675. 数组的最小偏移量",
+                            "title": "3266. K 次乘运算后的最终数组 II",
                             "sort": 21,
+                            "src": "/final-array-state-after-k-multiplication-operations-ii/",
+                            "score": 2508.6766880695,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1675. 数组的最小偏移量",
+                            "sort": 22,
                             "src": "/minimize-deviation-in-array/",
                             "score": 2533.3027905062,
                             "solution": null,
@@ -2365,7 +2413,7 @@ export default{
                         },
                         {
                             "title": "2617. 网格图中最少访问的格子数",
-                            "sort": 22,
+                            "sort": 23,
                             "src": "/minimum-number-of-visited-cells-in-a-grid/",
                             "score": 2581.9961985753,
                             "solution": null,
@@ -2373,17 +2421,9 @@ export default{
                         },
                         {
                             "title": "2532. 过桥的时间",
-                            "sort": 23,
+                            "sort": 24,
                             "src": "/time-to-cross-a-bridge/",
                             "score": 2588.8752130913,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "3266. K 次乘运算后的最终数组 II",
-                            "sort": 24,
-                            "src": "/final-array-state-after-k-multiplication-operations-ii/",
-                            "score": 2508.6766880695,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2646,10 +2686,10 @@ export default{
                     ]
                 },
                 {
-                    "title": "§5.7 对顶堆",
+                    "title": "§5.7 对顶堆（滑动窗口第 K 小/大）",
                     "sort": 6,
                     "isLeaf": true,
-                    "summary": "另见 <a href=\"https://leetcode.cn/circle/discuss/01LUak/\">图论题单</a> 中的 Dijkstra 算法。<br>",
+                    "summary": "也可以用有序集合。<br>另见 <a href=\"/lc-rating/list/graph\">图论题单</a> 中的 Dijkstra 算法。<br>",
                     "child": [
                         {
                             "title": "2102. 序列顺序查询",
@@ -2684,16 +2724,32 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3013. 将数组分成最小总代价的子数组 II",
+                            "title": "1825. 求出 MK 平均值",
                             "sort": 4,
+                            "src": "/finding-mk-average/",
+                            "score": 2395.8765531206,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3013. 将数组分成最小总代价的子数组 II",
+                            "sort": 5,
                             "src": "/divide-an-array-into-subarrays-with-minimum-cost-ii/",
                             "score": 2540.438150736,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "3321. 计算子数组的 x-sum II",
+                            "sort": 6,
+                            "src": "/find-x-sum-of-all-k-long-subarrays-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "LCP 24. 数字游戏",
-                            "sort": 5,
+                            "sort": 7,
                             "src": "/5TxKeK/",
                             "score": null,
                             "solution": null,
@@ -2795,9 +2851,25 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1804. 实现 Trie （前缀树） II",
+                            "title": "2261. 含最多 K 个可整除元素的子数组",
                             "sort": 10,
+                            "src": "/k-divisible-elements-subarrays/",
+                            "score": 1724.394164934,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1804. 实现 Trie （前缀树） II",
+                            "sort": 11,
                             "src": "/implement-trie-ii-prefix-tree/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "2168. 每个数字的频率都相同的独特子字符串的数量",
+                            "sort": 12,
+                            "src": "/unique-substrings-with-equal-digit-frequency/",
                             "score": null,
                             "solution": null,
                             "isPremium": true
@@ -2963,8 +3035,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "472. 连接词",
+                            "title": "面试题 17.13. 恢复空格",
                             "sort": 2,
+                            "src": "/re-space-lcci/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "472. 连接词",
+                            "sort": 3,
                             "src": "/concatenated-words/",
                             "score": null,
                             "solution": null,
@@ -2972,7 +3052,7 @@ export default{
                         },
                         {
                             "title": "2977. 转换字符串的最小成本 II",
-                            "sort": 3,
+                            "sort": 4,
                             "src": "/minimum-cost-to-convert-string-ii/",
                             "score": 2695.809667046,
                             "solution": null,
@@ -3047,7 +3127,7 @@ export default{
                     "title": "§7.1 基础",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "见 <a href=\"https://leetcode.cn/circle/discuss/YiXPXW/\">网格图题单</a> 中的 DFS 和 <a href=\"https://leetcode.cn/circle/discuss/01LUak/\">图论题单</a> 中的 DFS，其中大部分题目也可以用并查集实现。<br>",
+                    "summary": "见 <a href=\"/lc-rating/list/grid\">网格图题单</a> 中的 DFS 和 <a href=\"/lc-rating/list/graph\">图论题单</a> 中的 DFS，其中大部分题目也可以用并查集实现。<br>",
                     "child": [
                         {
                             "title": "990. 等式方程的可满足性",
@@ -3130,8 +3210,24 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "947. 移除最多的同行或同列石头",
+                            "title": "684. 冗余连接",
                             "sort": 4,
+                            "src": "/redundant-connection/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "685. 冗余连接 II",
+                            "sort": 5,
+                            "src": "/redundant-connection-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "947. 移除最多的同行或同列石头",
+                            "sort": 6,
                             "src": "/most-stones-removed-with-same-row-or-column/",
                             "score": 2034.6759416871,
                             "solution": null,
@@ -3139,7 +3235,7 @@ export default{
                         },
                         {
                             "title": "839. 相似字符串组",
-                            "sort": 5,
+                            "sort": 7,
                             "src": "/similar-string-groups/",
                             "score": 2053.7468090497,
                             "solution": null,
@@ -3147,7 +3243,7 @@ export default{
                         },
                         {
                             "title": "1970. 你能穿过矩阵的最后一天",
-                            "sort": 6,
+                            "sort": 8,
                             "src": "/last-day-where-you-can-still-cross/",
                             "score": 2123.5708982185,
                             "solution": null,
@@ -3155,7 +3251,7 @@ export default{
                         },
                         {
                             "title": "2076. 处理含限制条件的好友请求",
-                            "sort": 7,
+                            "sort": 9,
                             "src": "/process-restricted-friend-requests/",
                             "score": 2130.9348604091,
                             "solution": null,
@@ -3163,7 +3259,7 @@ export default{
                         },
                         {
                             "title": "1579. 保证图可完全遍历",
-                            "sort": 8,
+                            "sort": 10,
                             "src": "/remove-max-number-of-edges-to-keep-graph-fully-traversable/",
                             "score": 2131.7917160422,
                             "solution": null,
@@ -3171,7 +3267,7 @@ export default{
                         },
                         {
                             "title": "959. 由斜杠划分区域",
-                            "sort": 9,
+                            "sort": 11,
                             "src": "/regions-cut-by-slashes/",
                             "score": 2135.5738659086,
                             "solution": null,
@@ -3179,7 +3275,7 @@ export default{
                         },
                         {
                             "title": "2812. 找出最安全路径",
-                            "sort": 10,
+                            "sort": 12,
                             "src": "/find-the-safest-path-in-a-grid/",
                             "score": 2153.5854429139,
                             "solution": null,
@@ -3187,7 +3283,7 @@ export default{
                         },
                         {
                             "title": "2503. 矩阵查询可获得的最大分数",
-                            "sort": 11,
+                            "sort": 13,
                             "src": "/maximum-number-of-points-from-grid-queries/",
                             "score": 2195.6540241654,
                             "solution": null,
@@ -3195,7 +3291,7 @@ export default{
                         },
                         {
                             "title": "2867. 统计树中的合法路径数目",
-                            "sort": 12,
+                            "sort": 14,
                             "src": "/count-valid-paths-in-a-tree/",
                             "score": 2428.3242593838,
                             "solution": null,
@@ -3203,7 +3299,7 @@ export default{
                         },
                         {
                             "title": "2421. 好路径的数目",
-                            "sort": 13,
+                            "sort": 15,
                             "src": "/number-of-good-paths/",
                             "score": 2444.6660756903,
                             "solution": null,
@@ -3211,7 +3307,7 @@ export default{
                         },
                         {
                             "title": "2157. 字符串分组",
-                            "sort": 14,
+                            "sort": 16,
                             "src": "/groups-of-strings/",
                             "score": 2499.3282271507,
                             "solution": null,
@@ -3219,7 +3315,7 @@ export default{
                         },
                         {
                             "title": "1632. 矩阵转换后的秩",
-                            "sort": 15,
+                            "sort": 17,
                             "src": "/rank-transform-of-a-matrix/",
                             "score": 2529.5251086936,
                             "solution": null,
@@ -3227,7 +3323,7 @@ export default{
                         },
                         {
                             "title": "803. 打砖块",
-                            "sort": 16,
+                            "sort": 18,
                             "src": "/bricks-falling-when-hit/",
                             "score": 2765.2533837781,
                             "solution": null,
@@ -3235,7 +3331,7 @@ export default{
                         },
                         {
                             "title": "1569. 将子数组重新排序得到同一个二叉搜索树的方案数",
-                            "sort": 17,
+                            "sort": 19,
                             "src": "/number-of-ways-to-reorder-array-to-get-same-bst/",
                             "score": 2288.2117442123,
                             "solution": null,
@@ -3243,7 +3339,7 @@ export default{
                         },
                         {
                             "title": "3235. 判断矩形的两个角落是否可达",
-                            "sort": 18,
+                            "sort": 20,
                             "src": "/check-if-the-rectangle-corner-is-reachable/",
                             "score": 3773.7596150919,
                             "solution": null,
@@ -3251,7 +3347,7 @@ export default{
                         },
                         {
                             "title": "LCP 71. 集水器",
-                            "sort": 19,
+                            "sort": 21,
                             "src": "/kskhHQ/",
                             "score": null,
                             "solution": null,
@@ -3259,7 +3355,7 @@ export default{
                         },
                         {
                             "title": "2371. 最小化网格中的最大值",
-                            "sort": 20,
+                            "sort": 22,
                             "src": "/minimize-maximum-value-in-a-grid/",
                             "score": null,
                             "solution": null,
@@ -3267,7 +3363,7 @@ export default{
                         },
                         {
                             "title": "2459. 通过移动项目到空白区域来排序数组",
-                            "sort": 21,
+                            "sort": 23,
                             "src": "/sort-array-by-moving-items-to-empty-space/",
                             "score": null,
                             "solution": null,
@@ -3863,13 +3959,13 @@ export default{
         {
             "title": "专题：离线算法",
             "sort": 9,
-            "summary": "",
+            "summary": "对询问**排序**，通过改变回答询问的顺序，使问题更容易处理。<br>> 相应的，**在线算法**就是按照 $\\textit{queries}$ 的顺序一个一个处理。<br>",
             "child": [
                 {
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "对询问**排序**，通过改变回答询问的顺序，使问题更容易处理。<br>> 相应的，**在线算法**就是按照 $\\textit{queries}$ 的顺序一个一个处理。<br>",
+                    "summary": "",
                     "child": [
                         {
                             "title": "2343. 裁剪数字后查询第 K 小的数字",

@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】滑动窗口与双指针（定长/不定长/至多/至少/恰好/单序列/双序列/三指针）",
     "original_src": "https://leetcode.cn/circle/discuss/0viNMK",
-    "last_update": "2024-10-25 00:08:38",
+    "last_update": "2024-11-04 02:19:00",
     "sort": 0,
     "child": [
         {
@@ -597,7 +597,7 @@ export default{
                     "title": "§2.3.1 越长越合法",
                     "sort": 3,
                     "isLeaf": true,
-                    "summary": "一般要写 `ans += left`。<br>滑动窗口的内层循环结束时，右端点**固定**在 $\\textit{right}$，左端点在 $0,1,2,\\cdots,\\textit{left}-1$ 的所有子数组（子串）都是合法的，这一共有 $\\textit{left}$ 个。<br>",
+                    "summary": "一般要写 `ans += left`。<br>滑动窗口的内层循环结束时，右端点**固定**在 $\\textit{right}$，左端点在 $0,1,2,\\ldots,\\textit{left}-1$ 的所有子数组（子串）都是合法的，这一共有 $\\textit{left}$ 个。<br>",
                     "child": [
                         {
                             "title": "1358. 包含所有三种字符的子字符串数目",
@@ -661,7 +661,7 @@ export default{
                     "title": "§2.3.2 越短越合法",
                     "sort": 4,
                     "isLeaf": true,
-                    "summary": "一般要写 `ans += right - left + 1`。<br>滑动窗口的内层循环结束时，右端点**固定**在 $\\textit{right}$，左端点在 $\\textit{left},\\textit{left}+1,\\cdots,\\textit{right}$ 的所有子数组（子串）都是合法的，这一共有 $\\textit{right}-\\textit{left}+1$ 个。<br>",
+                    "summary": "一般要写 `ans += right - left + 1`。<br>滑动窗口的内层循环结束时，右端点**固定**在 $\\textit{right}$，左端点在 $\\textit{left},\\textit{left}+1,\\ldots,\\textit{right}$ 的所有子数组（子串）都是合法的，这一共有 $\\textit{right}-\\textit{left}+1$ 个。<br>",
                     "child": [
                         {
                             "title": "713. 乘积小于 K 的子数组",
@@ -752,18 +752,18 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "992. K 个不同整数的子数组",
+                            "title": "3306. 元音辅音字符串计数 II",
                             "sort": 2,
-                            "src": "/subarrays-with-k-different-integers/",
-                            "score": 2210.3503183571,
+                            "src": "/count-of-substrings-containing-every-vowel-and-k-consonants-ii/",
+                            "score": 2200.2757106638,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "3306. 元音辅音字符串计数 II",
+                            "title": "992. K 个不同整数的子数组",
                             "sort": 3,
-                            "src": "/count-of-substrings-containing-every-vowel-and-k-consonants-ii/",
-                            "score": 2200.2757106638,
+                            "src": "/subarrays-with-k-different-integers/",
+                            "score": 2210.3503183571,
                             "solution": null,
                             "isPremium": false
                         }
@@ -808,8 +808,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1712. 将数组分成三个子数组的方案数",
+                            "title": "438. 找到字符串中所有字母异位词",
                             "sort": 4,
+                            "src": "/find-all-anagrams-in-a-string/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1712. 将数组分成三个子数组的方案数",
+                            "sort": 5,
                             "src": "/ways-to-split-array-into-three-subarrays/",
                             "score": 2078.6986769435,
                             "solution": null,
@@ -817,7 +825,7 @@ export default{
                         },
                         {
                             "title": "1918. 第 K 小的子数组和",
-                            "sort": 5,
+                            "sort": 6,
                             "src": "/kth-smallest-subarray-sum/",
                             "score": null,
                             "solution": null,
@@ -903,8 +911,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2824. 统计和小于目标的下标对数目",
+                            "title": "633. 平方数之和",
                             "sort": 8,
+                            "src": "/sum-of-square-numbers/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2824. 统计和小于目标的下标对数目",
+                            "sort": 9,
                             "src": "/count-pairs-whose-sum-is-less-than-target/",
                             "score": 1165.8838207286,
                             "solution": null,
@@ -912,7 +928,7 @@ export default{
                         },
                         {
                             "title": "LCP 28. 采购方案",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/4xy4Wx/",
                             "score": null,
                             "solution": null,
@@ -920,7 +936,7 @@ export default{
                         },
                         {
                             "title": "15. 三数之和",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/3sum/",
                             "score": null,
                             "solution": null,
@@ -928,7 +944,7 @@ export default{
                         },
                         {
                             "title": "16. 最接近的三数之和",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/3sum-closest/",
                             "score": null,
                             "solution": null,
@@ -936,7 +952,7 @@ export default{
                         },
                         {
                             "title": "18. 四数之和",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/4sum/",
                             "score": null,
                             "solution": null,
@@ -944,7 +960,7 @@ export default{
                         },
                         {
                             "title": "611. 有效三角形的个数",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/valid-triangle-number/",
                             "score": null,
                             "solution": null,
@@ -952,7 +968,7 @@ export default{
                         },
                         {
                             "title": "1577. 数的平方等于两数乘积的方法数",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/number-of-ways-where-square-of-number-is-equal-to-product-of-two-numbers/",
                             "score": 1593.8926580448,
                             "solution": null,
@@ -960,7 +976,7 @@ export default{
                         },
                         {
                             "title": "923. 三数之和的多种可能",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/3sum-with-multiplicity/",
                             "score": 1710.9105378431,
                             "solution": null,
@@ -968,7 +984,7 @@ export default{
                         },
                         {
                             "title": "948. 令牌放置",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/bag-of-tokens/",
                             "score": 1762.3115124143,
                             "solution": null,
@@ -976,7 +992,7 @@ export default{
                         },
                         {
                             "title": "11. 盛最多水的容器",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/container-with-most-water/",
                             "score": null,
                             "solution": null,
@@ -984,7 +1000,7 @@ export default{
                         },
                         {
                             "title": "42. 接雨水",
-                            "sort": 18,
+                            "sort": 19,
                             "src": "/trapping-rain-water/",
                             "score": null,
                             "solution": null,
@@ -992,7 +1008,7 @@ export default{
                         },
                         {
                             "title": "1616. 分割两个字符串得到回文串",
-                            "sort": 19,
+                            "sort": 20,
                             "src": "/split-two-strings-to-make-palindrome/",
                             "score": 1868.1914861381,
                             "solution": null,
@@ -1000,7 +1016,7 @@ export default{
                         },
                         {
                             "title": "1498. 满足条件的子序列数目",
-                            "sort": 20,
+                            "sort": 21,
                             "src": "/number-of-subsequences-that-satisfy-the-given-sum-condition/",
                             "score": 2276.4233585631,
                             "solution": null,
@@ -1008,7 +1024,7 @@ export default{
                         },
                         {
                             "title": "1782. 统计点对的数目",
-                            "sort": 21,
+                            "sort": 22,
                             "src": "/count-pairs-of-nodes/",
                             "score": 2457.115574186,
                             "solution": null,
@@ -1016,7 +1032,7 @@ export default{
                         },
                         {
                             "title": "1099. 小于 K 的两数之和",
-                            "sort": 22,
+                            "sort": 23,
                             "src": "/two-sum-less-than-k/",
                             "score": 1245.2741257148,
                             "solution": null,
@@ -1024,7 +1040,7 @@ export default{
                         },
                         {
                             "title": "360. 有序转化数组",
-                            "sort": 23,
+                            "sort": 24,
                             "src": "/sort-transformed-array/",
                             "score": null,
                             "solution": null,
@@ -1032,7 +1048,7 @@ export default{
                         },
                         {
                             "title": "2422. 使用合并操作将数组转换为回文序列",
-                            "sort": 24,
+                            "sort": 25,
                             "src": "/merge-operations-to-turn-array-into-a-palindrome/",
                             "score": null,
                             "solution": null,
@@ -1040,7 +1056,7 @@ export default{
                         },
                         {
                             "title": "259. 较小的三数之和",
-                            "sort": 25,
+                            "sort": 26,
                             "src": "/3sum-smaller/",
                             "score": null,
                             "solution": null,
@@ -1286,16 +1302,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2070. 每一个查询的最大美丽值",
-                            "sort": 12,
-                            "src": "/most-beautiful-item-for-each-query/",
-                            "score": 1724.1545485476,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "面试题 16.06. 最小差",
-                            "sort": 13,
+                            "sort": 12,
                             "src": "/smallest-difference-lcci/",
                             "score": null,
                             "solution": null,
@@ -1303,7 +1311,7 @@ export default{
                         },
                         {
                             "title": "1537. 最大得分",
-                            "sort": 14,
+                            "sort": 13,
                             "src": "/get-the-maximum-score/",
                             "score": 1961.4987013156,
                             "solution": null,
@@ -1311,7 +1319,7 @@ export default{
                         },
                         {
                             "title": "244. 最短单词距离 II",
-                            "sort": 15,
+                            "sort": 14,
                             "src": "/shortest-word-distance-ii/",
                             "score": null,
                             "solution": null,
@@ -1319,7 +1327,7 @@ export default{
                         },
                         {
                             "title": "2838. 英雄可以获得的最大金币数",
-                            "sort": 16,
+                            "sort": 15,
                             "src": "/maximum-coins-heroes-can-collect/",
                             "score": null,
                             "solution": null,
@@ -1327,7 +1335,7 @@ export default{
                         },
                         {
                             "title": "1229. 安排会议日程",
-                            "sort": 17,
+                            "sort": 16,
                             "src": "/meeting-scheduler/",
                             "score": 1541.2260256298,
                             "solution": null,
@@ -1335,7 +1343,7 @@ export default{
                         },
                         {
                             "title": "1570. 两个稀疏向量的点积",
-                            "sort": 18,
+                            "sort": 17,
                             "src": "/dot-product-of-two-sparse-vectors/",
                             "score": null,
                             "solution": null,
@@ -1343,7 +1351,7 @@ export default{
                         },
                         {
                             "title": "1868. 两个行程编码数组的积",
-                            "sort": 19,
+                            "sort": 18,
                             "src": "/product-of-two-run-length-encoded-arrays/",
                             "score": null,
                             "solution": null,
@@ -1444,13 +1452,13 @@ export default{
         {
             "title": "五、三指针",
             "sort": 4,
-            "summary": "",
+            "summary": "注：部分题目已整理到「§2.3.3 恰好型滑动窗口」中。<br>",
             "child": [
                 {
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "注：部分题目已整理到「§2.3.3 恰好型滑动窗口」中。<br>",
+                    "summary": "",
                     "child": [
                         {
                             "title": "2367. 等差三元组的数目",
