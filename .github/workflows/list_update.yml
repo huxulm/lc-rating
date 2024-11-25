@@ -38,10 +38,10 @@ jobs:
       - name: Commit changes
         run: |
           git add .
-          git commit -m "Update data from script [skip ci]"
-        continue-on-error: true
+          git diff-index --quiet HEAD || git commit -m "Update problem list"
 
       - name: Push changes
+        if: success()
         run: git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
