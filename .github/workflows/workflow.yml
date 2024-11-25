@@ -7,6 +7,10 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
     branches: [ "main" ]
+  workflow_run: 
+    workflows: ["Weekly Problem List Update"] 
+    types: 
+      - completed
 
 permissions:
   contents: read
