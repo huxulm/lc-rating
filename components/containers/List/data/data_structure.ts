@@ -2743,7 +2743,7 @@ export default{
                             "title": "3321. 计算子数组的 x-sum II",
                             "sort": 6,
                             "src": "/find-x-sum-of-all-k-long-subarrays-ii/",
-                            "score": null,
+                            "score": 2598.4563109814,
                             "solution": null,
                             "isPremium": false
                         },

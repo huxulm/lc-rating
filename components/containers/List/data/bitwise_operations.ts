@@ -631,7 +631,7 @@ export default{
                             "title": "3315. 构造最小位运算数组 II",
                             "sort": 0,
                             "src": "/construct-the-minimum-bitwise-array-ii/",
-                            "score": null,
+                            "score": 1714.7182832168,
                             "solution": null,
                             "isPremium": false
                         },
