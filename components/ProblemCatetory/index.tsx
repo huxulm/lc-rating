@@ -152,19 +152,12 @@ function ProblemCategoryList({
     }
     return "col3";
   };
-  const [localStorageProgressData, setLocalStorageProgressData] =
-    useState<ProgressData>({});
 
   // Event handlers
   const handleProgressSelectChange = useCallback(
     (questionId: string, value: string) => {
       const newValue = value || Progress.TODO;
-
       localStorage.setItem(LC_RATING_PROGRESS_KEY(questionId), newValue);
-      setLocalStorageProgressData((prevData) => ({
-        ...prevData,
-        [questionId]: newValue,
-      }));
     },
     []
   );
