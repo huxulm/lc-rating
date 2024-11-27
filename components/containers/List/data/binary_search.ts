@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】二分算法（二分答案/最小化最大值/最大化最小值/第K小）",
     "original_src": "https://leetcode.cn/circle/discuss/SqopEo",
-    "last_update": "2024-10-24 07:06:05",
+    "last_update": "2024-11-25 01:58:23",
     "sort": 0,
     "child": [
         {
@@ -305,16 +305,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3049. 标记所有下标的最早秒数 II",
-                            "sort": 10,
-                            "src": "/earliest-second-to-mark-indices-ii/",
-                            "score": 3111.1274320356,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "2604. 吃掉所有谷子的最短时间",
-                            "sort": 11,
+                            "sort": 10,
                             "src": "/minimum-time-to-eat-all-grains/",
                             "score": null,
                             "solution": null,
@@ -322,7 +314,7 @@ export default{
                         },
                         {
                             "title": "2702. 使数字变为非正数的最小操作次数",
-                            "sort": 12,
+                            "sort": 11,
                             "src": "/minimum-operations-to-make-numbers-non-positive/",
                             "score": null,
                             "solution": null,
@@ -515,7 +507,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "本质是二分答案求最小。<br>",
+                    "summary": "本质是二分答案求最小。二分的 $\\textit{mid}$ 表示上界。<br>",
                     "child": [
                         {
                             "title": "410. 分割数组的最大值",
@@ -618,7 +610,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "本质是二分答案求最大。<br>",
+                    "summary": "本质是二分答案求最大。二分的 $\\textit{mid}$ 表示下界。<br>",
                     "child": [
                         {
                             "title": "3281. 范围内整数的最大得分",
@@ -692,17 +684,17 @@ export default{
                     "summary": "- 第 $k$ 小等价于：求最小的 $x$，满足 $\\le x$ 的数至少有 $k$ 个。<br>- 第 $k$ 大等价于：求最大的 $x$，满足 $\\ge x$ 的数至少有 $k$ 个。<br>⚠**注意**：一般来说，题目规定 $k$ 从 $1$ 开始，而不是像下标那样从 $0$ 开始。<br>⚠**注意**：一般来说，题目规定不能去重。例如数组 $[1,1,1,2,2]$，其中第 $1$ 小、第 $2$ 小和第 $3$ 小的数都是 $1$，第 $4$ 小和第 $5$ 小的数是 $2$。<br>部分题目也可以用堆解决。<br>",
                     "child": [
                         {
-                            "title": "378. 有序矩阵中第 K 小的元素",
+                            "title": "668. 乘法表中第 K 小的数",
                             "sort": 0,
-                            "src": "/kth-smallest-element-in-a-sorted-matrix/",
+                            "src": "/kth-smallest-number-in-multiplication-table/",
                             "score": null,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "668. 乘法表中第 K 小的数",
+                            "title": "378. 有序矩阵中第 K 小的元素",
                             "sort": 1,
-                            "src": "/kth-smallest-number-in-multiplication-table/",
+                            "src": "/kth-smallest-element-in-a-sorted-matrix/",
                             "score": null,
                             "solution": null,
                             "isPremium": false

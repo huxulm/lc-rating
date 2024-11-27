@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】链表、二叉树与一般树（前后指针/快慢指针/DFS/BFS/直径/LCA）",
     "original_src": "https://leetcode.cn/circle/discuss/K0n2gO",
-    "last_update": "2024-08-23 04:05:24",
+    "last_update": "2024-11-16 03:04:25",
     "sort": 0,
     "child": [
         {
@@ -953,8 +953,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1339. 分裂二叉树的最大乘积",
+                            "title": "3319. 第 K 大的完美二叉子树的大小",
                             "sort": 16,
+                            "src": "/k-th-largest-perfect-subtree-size-in-binary-tree/",
+                            "score": 1603.252304506,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1339. 分裂二叉树的最大乘积",
+                            "sort": 17,
                             "src": "/maximum-product-of-splitted-binary-tree/",
                             "score": 1674.9985842835,
                             "solution": null,
@@ -962,7 +970,7 @@ export default{
                         },
                         {
                             "title": "1372. 二叉树中的最长交错路径",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/longest-zigzag-path-in-a-binary-tree/",
                             "score": 1713.2768268466,
                             "solution": null,
@@ -970,7 +978,7 @@ export default{
                         },
                         {
                             "title": "1145. 二叉树着色游戏",
-                            "sort": 18,
+                            "sort": 19,
                             "src": "/binary-tree-coloring-game/",
                             "score": 1741.4527995252,
                             "solution": null,
@@ -978,7 +986,7 @@ export default{
                         },
                         {
                             "title": "572. 另一棵树的子树",
-                            "sort": 19,
+                            "sort": 20,
                             "src": "/subtree-of-another-tree/",
                             "score": null,
                             "solution": null,
@@ -986,7 +994,7 @@ export default{
                         },
                         {
                             "title": "1530. 好叶子节点对的数量",
-                            "sort": 20,
+                            "sort": 21,
                             "src": "/number-of-good-leaf-nodes-pairs/",
                             "score": 1745.6580748712,
                             "solution": null,
@@ -994,7 +1002,7 @@ export default{
                         },
                         {
                             "title": "LCP 67. 装饰树",
-                            "sort": 21,
+                            "sort": 22,
                             "src": "/KnLfVT/",
                             "score": null,
                             "solution": null,
@@ -1002,7 +1010,7 @@ export default{
                         },
                         {
                             "title": "298. 二叉树最长连续序列",
-                            "sort": 22,
+                            "sort": 23,
                             "src": "/binary-tree-longest-consecutive-sequence/",
                             "score": null,
                             "solution": null,
@@ -1010,7 +1018,7 @@ export default{
                         },
                         {
                             "title": "250. 统计同值子树",
-                            "sort": 23,
+                            "sort": 24,
                             "src": "/count-univalue-subtrees/",
                             "score": null,
                             "solution": null,
@@ -1018,7 +1026,7 @@ export default{
                         },
                         {
                             "title": "1973. 值等于子节点值之和的节点数量",
-                            "sort": 24,
+                            "sort": 25,
                             "src": "/count-nodes-equal-to-sum-of-descendants/",
                             "score": null,
                             "solution": null,
@@ -1026,7 +1034,7 @@ export default{
                         },
                         {
                             "title": "663. 均匀树划分",
-                            "sort": 25,
+                            "sort": 26,
                             "src": "/equal-tree-partition/",
                             "score": null,
                             "solution": null,
@@ -1034,7 +1042,7 @@ export default{
                         },
                         {
                             "title": "1120. 子树的最大平均值",
-                            "sort": 26,
+                            "sort": 27,
                             "src": "/maximum-average-subtree/",
                             "score": 1361.8801013336,
                             "solution": null,
@@ -1042,7 +1050,7 @@ export default{
                         },
                         {
                             "title": "2792. 计算足够大的节点数",
-                            "sort": 27,
+                            "sort": 28,
                             "src": "/count-nodes-that-are-great-enough/",
                             "score": null,
                             "solution": null,
@@ -1050,7 +1058,7 @@ export default{
                         },
                         {
                             "title": "333. 最大二叉搜索子树",
-                            "sort": 28,
+                            "sort": 29,
                             "src": "/largest-bst-subtree/",
                             "score": null,
                             "solution": null,
@@ -1058,7 +1066,7 @@ export default{
                         },
                         {
                             "title": "366. 寻找二叉树的叶子节点",
-                            "sort": 29,
+                            "sort": 30,
                             "src": "/find-leaves-of-binary-tree/",
                             "score": null,
                             "solution": null,
@@ -1066,7 +1074,7 @@ export default{
                         },
                         {
                             "title": "156. 上下翻转二叉树",
-                            "sort": 30,
+                            "sort": 31,
                             "src": "/binary-tree-upside-down/",
                             "score": null,
                             "solution": null,
@@ -1074,7 +1082,7 @@ export default{
                         },
                         {
                             "title": "1612. 检查两棵二叉表达式树是否等价",
-                            "sort": 31,
+                            "sort": 32,
                             "src": "/check-if-two-expression-trees-are-equivalent/",
                             "score": null,
                             "solution": null,
@@ -2280,8 +2288,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "582. 杀掉进程",
+                            "title": "1466. 重新规划路线",
                             "sort": 1,
+                            "src": "/reorder-routes-to-make-all-paths-lead-to-the-city-zero/",
+                            "score": 1633.6202302555,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "582. 杀掉进程",
+                            "sort": 2,
                             "src": "/kill-process/",
                             "score": null,
                             "solution": null,
@@ -2426,8 +2442,24 @@ export default{
                     ]
                 },
                 {
-                    "title": "§3.4 直径",
+                    "title": "§3.4 有递有归",
                     "sort": 3,
+                    "isLeaf": true,
+                    "summary": "",
+                    "child": [
+                        {
+                            "title": "3331. 修改后子树的大小",
+                            "sort": 0,
+                            "src": "/find-subtree-sizes-after-changes/",
+                            "score": 2045.9921455749,
+                            "solution": null,
+                            "isPremium": false
+                        }
+                    ]
+                },
+                {
+                    "title": "§3.5 直径",
+                    "sort": 4,
                     "isLeaf": true,
                     "summary": "<a href=\"https://www.bilibili.com/video/BV17o4y187h1/\">视频讲解【基础算法精讲 23】</a><br>",
                     "child": [
@@ -2470,12 +2502,20 @@ export default{
                             "score": 1792.076794537,
                             "solution": null,
                             "isPremium": true
+                        },
+                        {
+                            "title": "3313. 查找树中最后标记的节点",
+                            "sort": 5,
+                            "src": "/find-the-last-marked-nodes-in-tree/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
                         }
                     ]
                 },
                 {
-                    "title": "§3.5 DFS 时间戳",
-                    "sort": 4,
+                    "title": "§3.6 DFS 时间戳",
+                    "sort": 5,
                     "isLeaf": true,
                     "summary": "",
                     "child": [
@@ -2486,12 +2526,20 @@ export default{
                             "score": 2391.657270733,
                             "solution": null,
                             "isPremium": false
+                        },
+                        {
+                            "title": "3327. 判断 DFS 字符串是否是回文串",
+                            "sort": 1,
+                            "src": "/check-if-dfs-strings-are-palindromes/",
+                            "score": 2454.1900261902,
+                            "solution": null,
+                            "isPremium": false
                         }
                     ]
                 },
                 {
-                    "title": "§3.6 拓扑排序",
-                    "sort": 5,
+                    "title": "§3.7 拓扑排序",
+                    "sort": 6,
                     "isLeaf": true,
                     "summary": "",
                     "child": [
@@ -2514,8 +2562,8 @@ export default{
                     ]
                 },
                 {
-                    "title": "§3.7 最近公共祖先（LCA）",
-                    "sort": 6,
+                    "title": "§3.8 最近公共祖先（LCA）",
+                    "sort": 7,
                     "isLeaf": true,
                     "summary": "<a href=\"https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/solution/mo-ban-jiang-jie-shu-shang-bei-zeng-suan-v3rw/\">讲解</a><br>",
                     "child": [
@@ -2546,8 +2594,8 @@ export default{
                     ]
                 },
                 {
-                    "title": "§3.8 其他",
-                    "sort": 7,
+                    "title": "§3.9 其他",
+                    "sort": 8,
                     "isLeaf": true,
                     "summary": "另见 <a href=\"/lc-rating/list/dynamic_programming\">动态规划题单</a> 中的「树形 DP」。<br>",
                     "child": [

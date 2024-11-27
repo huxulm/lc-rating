@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】滑动窗口与双指针（定长/不定长/至多/至少/恰好/单序列/双序列/三指针）",
     "original_src": "https://leetcode.cn/circle/discuss/0viNMK",
-    "last_update": "2024-11-04 02:19:00",
+    "last_update": "2024-11-17 01:26:59",
     "sort": 0,
     "child": [
         {
@@ -226,8 +226,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "683. K 个关闭的灯泡",
+                            "title": "1016. 子串能表示从 1 到 N 数字的二进制串",
                             "sort": 7,
+                            "src": "/binary-string-with-substrings-representing-1-to-n/",
+                            "score": 1779.3931248179,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "683. K 个关闭的灯泡",
+                            "sort": 8,
                             "src": "/k-empty-slots/",
                             "score": null,
                             "solution": null,
@@ -235,7 +243,7 @@ export default{
                         },
                         {
                             "title": "2067. 等计数子串的数量",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/number-of-equal-count-substrings/",
                             "score": null,
                             "solution": null,
@@ -243,7 +251,7 @@ export default{
                         },
                         {
                             "title": "2524. 子数组的最大频率分数",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/maximum-frequency-score-of-a-subarray/",
                             "score": null,
                             "solution": null,
@@ -619,7 +627,7 @@ export default{
                             "title": "3325. 字符至少出现 K 次的子字符串 I",
                             "sort": 2,
                             "src": "/count-substrings-with-k-frequency-characters-i/",
-                            "score": null,
+                            "score": 1454.5936466211,
                             "solution": null,
                             "isPremium": false
                         },
@@ -784,8 +792,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2401. 最长优雅子数组",
+                            "title": "825. 适龄的朋友",
                             "sort": 1,
+                            "src": "/friends-of-appropriate-ages/",
+                            "score": 1697.0187705319,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2401. 最长优雅子数组",
+                            "sort": 2,
                             "src": "/longest-nice-subarray/",
                             "score": 1749.5432375672,
                             "solution": null,
@@ -793,7 +809,7 @@ export default{
                         },
                         {
                             "title": "1156. 单字符重复子串的最大长度",
-                            "sort": 2,
+                            "sort": 3,
                             "src": "/swap-for-longest-repeated-character-substring/",
                             "score": 1787.4514432151,
                             "solution": null,
@@ -801,7 +817,7 @@ export default{
                         },
                         {
                             "title": "424. 替换后的最长重复字符",
-                            "sort": 3,
+                            "sort": 4,
                             "src": "/longest-repeating-character-replacement/",
                             "score": null,
                             "solution": null,
@@ -809,7 +825,7 @@ export default{
                         },
                         {
                             "title": "438. 找到字符串中所有字母异位词",
-                            "sort": 4,
+                            "sort": 5,
                             "src": "/find-all-anagrams-in-a-string/",
                             "score": null,
                             "solution": null,
@@ -817,7 +833,7 @@ export default{
                         },
                         {
                             "title": "1712. 将数组分成三个子数组的方案数",
-                            "sort": 5,
+                            "sort": 6,
                             "src": "/ways-to-split-array-into-three-subarrays/",
                             "score": 2078.6986769435,
                             "solution": null,
@@ -825,7 +841,7 @@ export default{
                         },
                         {
                             "title": "1918. 第 K 小的子数组和",
-                            "sort": 6,
+                            "sort": 7,
                             "src": "/kth-smallest-subarray-sum/",
                             "score": null,
                             "solution": null,
@@ -1469,16 +1485,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "825. 适龄的朋友",
-                            "sort": 1,
-                            "src": "/friends-of-appropriate-ages/",
-                            "score": 1697.0187705319,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "2563. 统计公平数对的数目",
-                            "sort": 2,
+                            "sort": 1,
                             "src": "/count-the-number-of-fair-pairs/",
                             "score": 1720.7470612766,
                             "solution": null,
@@ -1486,7 +1494,7 @@ export default{
                         },
                         {
                             "title": "795. 区间子数组个数",
-                            "sort": 3,
+                            "sort": 2,
                             "src": "/number-of-subarrays-with-bounded-maximum/",
                             "score": 1817.0597073686,
                             "solution": null,
@@ -1494,9 +1502,17 @@ export default{
                         },
                         {
                             "title": "2444. 统计定界子数组的数目",
-                            "sort": 4,
+                            "sort": 3,
                             "src": "/count-subarrays-with-fixed-bounds/",
                             "score": 2092.5366031561,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3347. 执行操作后元素的最高频率 II",
+                            "sort": 4,
+                            "src": "/maximum-frequency-of-an-element-after-performing-operations-ii/",
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },

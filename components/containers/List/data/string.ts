@@ -203,7 +203,7 @@ export default{
                             "title": "3327. 判断 DFS 字符串是否是回文串",
                             "sort": 3,
                             "src": "/check-if-dfs-strings-are-palindromes/",
-                            "score": null,
+                            "score": 2454.1900261902,
                             "solution": null,
                             "isPremium": false
                         },

@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】图论算法（DFS/BFS/拓扑排序/最短路/最小生成树/二分图/基环树/欧拉路径）",
     "original_src": "https://leetcode.cn/circle/discuss/01LUak",
-    "last_update": "2024-11-03 09:24:28",
+    "last_update": "2024-11-18 13:02:12",
     "sort": 0,
     "child": [
         {
@@ -122,8 +122,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "802. 找到最终的安全状态",
+                            "title": "207. 课程表",
                             "sort": 13,
+                            "src": "/course-schedule/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "802. 找到最终的安全状态",
+                            "sort": 14,
                             "src": "/find-eventual-safe-states/",
                             "score": 1962.3314335449,
                             "solution": null,
@@ -131,7 +139,7 @@ export default{
                         },
                         {
                             "title": "928. 尽量减少恶意软件的传播 II",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/minimize-malware-spread-ii/",
                             "score": 1985.2504512337,
                             "solution": null,
@@ -139,7 +147,7 @@ export default{
                         },
                         {
                             "title": "2092. 找出知晓秘密的所有专家",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/find-all-people-with-secret/",
                             "score": 2003.5794613668,
                             "solution": null,
@@ -147,7 +155,7 @@ export default{
                         },
                         {
                             "title": "3108. 带权图里旅途的最小代价",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/minimum-cost-walk-in-weighted-graph/",
                             "score": 2108.5054318055,
                             "solution": null,
@@ -155,7 +163,7 @@ export default{
                         },
                         {
                             "title": "261. 以图判树",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/graph-valid-tree/",
                             "score": null,
                             "solution": null,
@@ -163,7 +171,7 @@ export default{
                         },
                         {
                             "title": "323. 无向图中连通分量的数目",
-                            "sort": 18,
+                            "sort": 19,
                             "src": "/number-of-connected-components-in-an-undirected-graph/",
                             "score": null,
                             "solution": null,
@@ -256,16 +264,8 @@ export default{
                     "summary": "学习拓扑排序前，请先完成 <a href=\"https://leetcode.cn/problems/minimum-number-of-vertices-to-reach-all-nodes/\">1557. 可以到达所有点的最少点数目</a>，有助于理解拓扑排序。<br>",
                     "child": [
                         {
-                            "title": "207. 课程表",
-                            "sort": 0,
-                            "src": "/course-schedule/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "210. 课程表 II",
-                            "sort": 1,
+                            "sort": 0,
                             "src": "/course-schedule-ii/",
                             "score": null,
                             "solution": null,
@@ -273,7 +273,7 @@ export default{
                         },
                         {
                             "title": "1462. 课程表 IV",
-                            "sort": 2,
+                            "sort": 1,
                             "src": "/course-schedule-iv/",
                             "score": 1692.5884631801,
                             "solution": null,
@@ -281,7 +281,7 @@ export default{
                         },
                         {
                             "title": "2115. 从给定原材料中找到所有可以做出的菜",
-                            "sort": 3,
+                            "sort": 2,
                             "src": "/find-all-possible-recipes-from-given-supplies/",
                             "score": 1678.5871762113,
                             "solution": null,
@@ -289,7 +289,7 @@ export default{
                         },
                         {
                             "title": "851. 喧闹和富有",
-                            "sort": 4,
+                            "sort": 3,
                             "src": "/loud-and-rich/",
                             "score": 1783.2337340478,
                             "solution": null,
@@ -297,7 +297,7 @@ export default{
                         },
                         {
                             "title": "310. 最小高度树",
-                            "sort": 5,
+                            "sort": 4,
                             "src": "/minimum-height-trees/",
                             "score": null,
                             "solution": null,
@@ -305,7 +305,7 @@ export default{
                         },
                         {
                             "title": "2392. 给定条件下构造矩阵",
-                            "sort": 6,
+                            "sort": 5,
                             "src": "/build-a-matrix-with-conditions/",
                             "score": 1960.5517123728,
                             "solution": null,
@@ -313,7 +313,7 @@ export default{
                         },
                         {
                             "title": "802. 找到最终的安全状态",
-                            "sort": 7,
+                            "sort": 6,
                             "src": "/find-eventual-safe-states/",
                             "score": 1962.3314335449,
                             "solution": null,
@@ -321,7 +321,7 @@ export default{
                         },
                         {
                             "title": "1591. 奇怪的打印机 II",
-                            "sort": 8,
+                            "sort": 7,
                             "src": "/strange-printer-ii/",
                             "score": 2290.9040038639,
                             "solution": null,
@@ -329,7 +329,7 @@ export default{
                         },
                         {
                             "title": "1203. 项目管理",
-                            "sort": 9,
+                            "sort": 8,
                             "src": "/sort-items-by-groups-respecting-dependencies/",
                             "score": 2418.5742747632,
                             "solution": null,
@@ -337,7 +337,7 @@ export default{
                         },
                         {
                             "title": "2603. 收集树中金币",
-                            "sort": 10,
+                            "sort": 9,
                             "src": "/collect-coins-in-a-tree/",
                             "score": 2711.8717381409,
                             "solution": null,
@@ -345,7 +345,7 @@ export default{
                         },
                         {
                             "title": "LCR 114. 火星词典",
-                            "sort": 11,
+                            "sort": 10,
                             "src": "/Jf1JuT/",
                             "score": null,
                             "solution": null,
@@ -353,7 +353,7 @@ export default{
                         },
                         {
                             "title": "269. 火星词典",
-                            "sort": 12,
+                            "sort": 11,
                             "src": "/alien-dictionary/",
                             "score": null,
                             "solution": null,
@@ -361,7 +361,7 @@ export default{
                         },
                         {
                             "title": "444. 序列重建",
-                            "sort": 13,
+                            "sort": 12,
                             "src": "/sequence-reconstruction/",
                             "score": null,
                             "solution": null,
@@ -369,7 +369,7 @@ export default{
                         },
                         {
                             "title": "1059. 从始点到终点的所有路径",
-                            "sort": 14,
+                            "sort": 13,
                             "src": "/all-paths-from-source-lead-to-destination/",
                             "score": null,
                             "solution": null,
@@ -377,7 +377,7 @@ export default{
                         },
                         {
                             "title": "1136. 并行课程",
-                            "sort": 15,
+                            "sort": 14,
                             "src": "/parallel-courses/",
                             "score": 1710.0787625377,
                             "solution": null,
@@ -525,32 +525,24 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3112. 访问消失节点的最少时间",
+                            "title": "3341. 到达最后一个房间的最少时间 I",
                             "sort": 1,
+                            "src": "/find-minimum-time-to-reach-last-room-i/",
+                            "score": 1721.4793821913,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3112. 访问消失节点的最少时间",
+                            "sort": 2,
                             "src": "/minimum-time-to-visit-disappearing-nodes/",
                             "score": 1756.963553993,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "3341. 到达最后一个房间的最少时间 I",
-                            "sort": 2,
-                            "src": "/find-minimum-time-to-reach-last-room-i/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "3341. 到达最后一个房间的最少时间 II",
-                            "sort": 3,
-                            "src": "/find-minimum-time-to-reach-last-room-ii/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "2642. 设计可以求最短路径的图类",
-                            "sort": 4,
+                            "sort": 3,
                             "src": "/design-graph-with-shortest-path-calculator/",
                             "score": 1810.6470004623,
                             "solution": null,
@@ -558,9 +550,17 @@ export default{
                         },
                         {
                             "title": "1514. 概率最大的路径",
-                            "sort": 5,
+                            "sort": 4,
                             "src": "/path-with-maximum-probability/",
                             "score": 1846.4077077642,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3341. 到达最后一个房间的最少时间 II",
+                            "sort": 5,
+                            "src": "/find-minimum-time-to-reach-last-room-ii/",
+                            "score": 1721.4793821913,
                             "solution": null,
                             "isPremium": false
                         },

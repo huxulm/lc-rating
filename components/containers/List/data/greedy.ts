@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】贪心算法（基本贪心策略/反悔/区间/字典序/数学/思维/构造）",
     "original_src": "https://leetcode.cn/circle/discuss/g6KTKL",
-    "last_update": "2024-10-06 11:42:30",
+    "last_update": "2024-11-16 03:07:39",
     "sort": 0,
     "child": [
         {
@@ -136,10 +136,10 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1846. 减小和重新排列数组后的最大元素",
+                            "title": "3301. 高度互不相同的最大塔高和",
                             "sort": 14,
-                            "src": "/maximum-element-after-decreasing-and-rearranging/",
-                            "score": 1454.3901912166,
+                            "src": "/maximize-the-total-height-of-unique-towers/",
+                            "score": 1448.2251797153,
                             "solution": null,
                             "isPremium": false
                         },
@@ -152,10 +152,10 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3301. 高度互不相同的最大塔高和",
+                            "title": "1846. 减小和重新排列数组后的最大元素",
                             "sort": 16,
-                            "src": "/maximize-the-total-height-of-unique-towers/",
-                            "score": 1448.2251797153,
+                            "src": "/maximum-element-after-decreasing-and-rearranging/",
+                            "score": 1454.3901912166,
                             "solution": null,
                             "isPremium": false
                         },
@@ -576,8 +576,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1536. 排布二进制网格的最少交换次数",
+                            "title": "3326. 使数组非递减的最少除法操作次数",
                             "sort": 14,
+                            "src": "/minimum-division-operations-to-make-array-non-decreasing/",
+                            "score": 1864.4526192193,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1536. 排布二进制网格的最少交换次数",
+                            "sort": 15,
                             "src": "/minimum-swaps-to-arrange-a-binary-grid/",
                             "score": 1880.5909929633,
                             "solution": null,
@@ -585,7 +593,7 @@ export default{
                         },
                         {
                             "title": "2673. 使二叉树所有路径值相等的最小代价",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/make-costs-of-paths-equal-in-a-binary-tree/",
                             "score": 1917.1049672432,
                             "solution": null,
@@ -593,7 +601,7 @@ export default{
                         },
                         {
                             "title": "861. 翻转矩阵后的得分",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/score-after-flipping-matrix/",
                             "score": 1818.0024504436,
                             "solution": null,
@@ -601,7 +609,7 @@ export default{
                         },
                         {
                             "title": "955. 删列造序 II",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/delete-columns-to-make-sorted-ii/",
                             "score": 1876.3854625677,
                             "solution": null,
@@ -609,7 +617,7 @@ export default{
                         },
                         {
                             "title": "2366. 将数组排序的最少替换次数",
-                            "sort": 18,
+                            "sort": 19,
                             "src": "/minimum-replacements-to-sort-the-array/",
                             "score": 2060.379991517,
                             "solution": null,
@@ -617,7 +625,7 @@ export default{
                         },
                         {
                             "title": "2193. 得到回文串的最少操作次数",
-                            "sort": 19,
+                            "sort": 20,
                             "src": "/minimum-number-of-moves-to-make-palindrome/",
                             "score": 2090.6800569319,
                             "solution": null,
@@ -625,7 +633,7 @@ export default{
                         },
                         {
                             "title": "2528. 最大化城市的最小电量",
-                            "sort": 20,
+                            "sort": 21,
                             "src": "/maximize-the-minimum-powered-city/",
                             "score": 2235.5784618885,
                             "solution": null,
@@ -633,7 +641,7 @@ export default{
                         },
                         {
                             "title": "2422. 使用合并操作将数组转换为回文序列",
-                            "sort": 21,
+                            "sort": 22,
                             "src": "/merge-operations-to-turn-array-into-a-palindrome/",
                             "score": null,
                             "solution": null,
@@ -1014,7 +1022,7 @@ export default{
         {
             "title": "二、区间贪心",
             "sort": 2,
-            "summary": "区间贪心有如下经典问题：<br>- **不相交区间**（单机器调度/活动安排）：给定一些区间，从中选出尽量多的两两互不相交的区间。<br>- **区间分组**（任务调度/会议室）：给定一些区间，把这些区间分成最少的组，使得每组内的区间互不相交。<br>- **区间选点**（射气球）：给定一些区间，在数轴上放置最少的点，使得每个区间都包含至少一个点。<br>- **区间覆盖**（灌溉花园）：给定一些区间，从中选出尽量少的区间，覆盖一条指定线段 $[s,t]$。<br>**任务**：总结上述四种区间贪心问题的解法，尤其是排序的规则和理由，什么时候要按照左端点排序？什么时候要按照右端点排序？排序的目的是什么？欢迎在评论区分享你的总结笔记。<br>",
+            "summary": "区间贪心有如下经典问题：<br>- **不相交区间**（单机器调度/活动安排）：给定一些区间，从中选出尽量多的两两互不相交的区间。<br>- **区间分组**（任务调度/会议室）：给定一些区间，把这些区间分成最少的组，使得每组内的区间互不相交。<br>- **区间选点**（射气球）：给定一些区间，在数轴上放置最少的点，使得每个区间都包含至少一个点。最少要放置多少个点？<br>- **区间覆盖**（灌溉花园）：给定一些区间，从中选出尽量少的区间，覆盖一条指定线段 $[s,t]$。<br>**任务**：总结上述四种区间贪心问题的解法，尤其是排序的规则和理由，什么时候要按照左端点排序？什么时候要按照右端点排序？排序的目的是什么？欢迎在评论区分享你的总结笔记。<br>",
             "child": [
                 {
                     "title": "§2.1 不相交区间",
@@ -1215,8 +1223,16 @@ export default{
                             "isPremium": true
                         },
                         {
-                            "title": "759. 员工空闲时间",
+                            "title": "3323. 通过插入区间最小化连通组",
                             "sort": 10,
+                            "src": "/minimize-connected-groups-by-inserting-interval/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "759. 员工空闲时间",
+                            "sort": 11,
                             "src": "/employee-free-time/",
                             "score": 1710.1120861153,
                             "solution": null,
@@ -1224,7 +1240,7 @@ export default{
                         },
                         {
                             "title": "2655. 寻找最大长度的未覆盖区间",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/find-maximal-uncovered-ranges/",
                             "score": null,
                             "solution": null,
@@ -2316,8 +2332,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3125. 使得按位与结果为 0 的最大数字",
+                            "title": "2556. 二进制矩阵中翻转最多一次使路径不连通",
                             "sort": 20,
+                            "src": "/disconnect-path-in-a-binary-matrix-by-at-most-one-flip/",
+                            "score": 2368.6674771307,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3125. 使得按位与结果为 0 的最大数字",
+                            "sort": 21,
                             "src": "/maximum-number-that-makes-result-of-bitwise-and-zero/",
                             "score": null,
                             "solution": null,
@@ -2325,7 +2349,7 @@ export default{
                         },
                         {
                             "title": "1794. 统计距离最小的子串对个数",
-                            "sort": 21,
+                            "sort": 22,
                             "src": "/count-pairs-of-equal-substrings-with-minimum-difference/",
                             "score": null,
                             "solution": null,
@@ -2547,8 +2571,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2573. 找出对应 LCP 矩阵的字符串",
+                            "title": "3311. 构造符合图结构的二维矩阵",
                             "sort": 11,
+                            "src": "/construct-2d-grid-matching-graph-layout/",
+                            "score": 2664.2117701776,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2573. 找出对应 LCP 矩阵的字符串",
+                            "sort": 12,
                             "src": "/find-the-string-with-lcp/",
                             "score": 2681.7054310332,
                             "solution": null,
@@ -2556,7 +2588,7 @@ export default{
                         },
                         {
                             "title": "1982. 从子集的和还原数组",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/find-array-given-subset-sums/",
                             "score": 2872.0290327119,
                             "solution": null,
@@ -2564,7 +2596,7 @@ export default{
                         },
                         {
                             "title": "280. 摆动排序",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/wiggle-sort/",
                             "score": null,
                             "solution": null,
@@ -2572,7 +2604,7 @@ export default{
                         },
                         {
                             "title": "484. 寻找排列",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/find-permutation/",
                             "score": null,
                             "solution": null,

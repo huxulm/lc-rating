@@ -3,10 +3,12 @@ name: Node.js CI
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
   workflow_dispatch:
     branches: [ "main" ]
+  workflow_run: 
+    workflows: ["Weekly Problem List Update"] 
+    types: 
+      - completed
 
 permissions:
   contents: read

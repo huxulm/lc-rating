@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）",
     "original_src": "https://leetcode.cn/circle/discuss/IYT3ss",
-    "last_update": "2024-10-30 02:37:03",
+    "last_update": "2024-11-16 02:55:40",
     "sort": 0,
     "child": [
         {
@@ -139,7 +139,7 @@ export default{
                             "title": "3326. 使数组非递减的最少除法操作次数",
                             "sort": 2,
                             "src": "/minimum-division-operations-to-make-array-non-decreasing/",
-                            "score": null,
+                            "score": 1864.4526192193,
                             "solution": null,
                             "isPremium": false
                         },
@@ -531,7 +531,7 @@ export default{
                             "title": "3334. 数组的最大因子得分",
                             "sort": 1,
                             "src": "/find-the-maximum-factor-score-of-array/",
-                            "score": null,
+                            "score": 1518.7783368146,
                             "solution": null,
                             "isPremium": false
                         },
@@ -871,16 +871,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3317. 安排活动的方案数",
-                            "sort": 10,
-                            "src": "/find-the-number-of-possible-ways-for-an-event/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "1866. 恰有 K 根木棍可以看到的排列数目",
-                            "sort": 11,
+                            "sort": 10,
                             "src": "/number-of-ways-to-rearrange-sticks-with-k-sticks-visible/",
                             "score": 2333.0621537307,
                             "solution": null,
@@ -888,7 +880,7 @@ export default{
                         },
                         {
                             "title": "1467. 两个盒子中球的颜色数相同的概率",
-                            "sort": 12,
+                            "sort": 11,
                             "src": "/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls/",
                             "score": 2356.5811122453,
                             "solution": null,
@@ -896,9 +888,17 @@ export default{
                         },
                         {
                             "title": "3272. 统计好整数的数目",
-                            "sort": 13,
+                            "sort": 12,
                             "src": "/find-the-count-of-good-integers/",
                             "score": 2382.24900347,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3317. 安排活动的方案数",
+                            "sort": 13,
+                            "src": "/find-the-number-of-possible-ways-for-an-event/",
+                            "score": 2413.5302827563,
                             "solution": null,
                             "isPremium": false
                         },
@@ -911,8 +911,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1830. 使字符串有序的最少操作次数",
+                            "title": "3343. 统计平衡排列的数目",
                             "sort": 15,
+                            "src": "/count-number-of-balanced-permutations/",
+                            "score": 2614.911779573,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1830. 使字符串有序的最少操作次数",
+                            "sort": 16,
                             "src": "/minimum-number-of-operations-to-make-string-sorted/",
                             "score": 2620.4181842249,
                             "solution": null,
@@ -920,7 +928,7 @@ export default{
                         },
                         {
                             "title": "2954. 统计感冒序列的数目",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/count-the-number-of-infection-sequences/",
                             "score": 2644.8498152558,
                             "solution": null,
@@ -928,7 +936,7 @@ export default{
                         },
                         {
                             "title": "1575. 统计所有可行路径",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/count-all-possible-routes/",
                             "score": 2055.0970201875,
                             "solution": null,
@@ -936,7 +944,7 @@ export default{
                         },
                         {
                             "title": "3251. 单调数组对的数目 II",
-                            "sort": 18,
+                            "sort": 19,
                             "src": "/find-the-count-of-monotonic-pairs-ii/",
                             "score": 2323.1267940801,
                             "solution": null,
@@ -944,7 +952,7 @@ export default{
                         },
                         {
                             "title": "LCP 25. 古董键盘",
-                            "sort": 19,
+                            "sort": 20,
                             "src": "/Uh984O/",
                             "score": null,
                             "solution": null,
@@ -952,7 +960,7 @@ export default{
                         },
                         {
                             "title": "2539. 好子序列的个数",
-                            "sort": 20,
+                            "sort": 21,
                             "src": "/count-the-number-of-good-subsequences/",
                             "score": null,
                             "solution": null,
@@ -960,8 +968,16 @@ export default{
                         },
                         {
                             "title": "634. 寻找数组的错位排列",
-                            "sort": 21,
+                            "sort": 22,
                             "src": "/find-the-derangement-of-an-array/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "1692. 计算分配糖果的不同方式",
+                            "sort": 23,
+                            "src": "/count-ways-to-distribute-candies/",
                             "score": null,
                             "solution": null,
                             "isPremium": true
@@ -972,7 +988,7 @@ export default{
                     "title": "§2.3 放球问题",
                     "sort": 2,
                     "isLeaf": true,
-                    "summary": "",
+                    "summary": "<a href=\"https://leetcode.cn/problems/count-ways-to-make-array-with-product/solutions/2713481/tu-jie-zhi-yin-zi-fen-jie-fang-qiu-wen-t-fboo/\">图解：多重集组合数</a><br>",
                     "child": [
                         {
                             "title": "1641. 统计字典序元音字符串的数目",
@@ -1090,7 +1106,7 @@ export default{
                             "title": "3336. 最大公约数相等的子序列数量",
                             "sort": 8,
                             "src": "/find-the-number-of-subsequences-with-equal-gcd/",
-                            "score": null,
+                            "score": 2402.5406421988,
                             "solution": null,
                             "isPremium": false
                         },

@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享｜【题单】单调栈（矩形面积/贡献法/最小字典序）",
     "original_src": "https://leetcode.cn/circle/discuss/9oZFK9",
-    "last_update": "2024-08-26 02:13:34",
+    "last_update": "2024-11-16 02:59:23",
     "sort": 0,
     "child": [
         {
@@ -181,6 +181,14 @@ export default{
                             "title": "2832. 每个元素为最大值的最大范围",
                             "sort": 20,
                             "src": "/maximal-range-that-each-element-is-maximum-in-it/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "2282. 在一个网格中可以看到的人数",
+                            "sort": 21,
+                            "src": "/number-of-people-that-can-be-seen-in-a-grid/",
                             "score": null,
                             "solution": null,
                             "isPremium": true

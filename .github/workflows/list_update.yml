@@ -1,0 +1,47 @@
+name: Weekly Problem List Update
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # 每周一次，周日午夜
+  push:
+    branches:
+      - main
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+        working-directory: ./lc-maker
+
+      - name: Run script
+        run: python 0x3f_discuss.py --f ./discussion.txt
+        working-directory: ./lc-maker
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Commit changes
+        run: |
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Update problem list"
+
+      - name: Push changes
+        if: success()
+        run: git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
