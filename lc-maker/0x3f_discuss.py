@@ -79,8 +79,8 @@ def refactor_summary(summary: str):
 
 def refactor_discussion(root: RootNode, content: str, rating: Dict, isSubExist: bool):
     contents = content.split("\n")
-    curr_title_node = None
-    curr_subtitle_node = None
+    curr_title_node = TitleNode("", 0, "", [])
+    curr_subtitle_node = SubtitleNode("", 0, True, "", [])
     for cont in contents:
         if isSubExist and cont.startswith("###"): # subtitle init
             # finish summary adding from subtitle or title
@@ -223,4 +223,4 @@ if __name__ == "__main__":
 
         # make a waiting for 1s
         import time
-        time.sleep(1)
+        time.sleep(2)
