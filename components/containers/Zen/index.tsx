@@ -142,6 +142,16 @@ function buildTagFilterFn(selectedTags: Record<string, boolean>, q: any) {
       };
 }
 
+function buildProgressFilterFn(selectedProgress: string) {
+  if (!selectedProgress) {
+    return () => true;
+  }
+  return (v: ConstQuestion) => {
+    const progress = localStorage.getItem(LC_RATING_PROGRESS_KEY(v.question_id));
+    return progress === selectedProgress;
+  };
+}
+
 type FilterSettingsProps = {
   show: boolean;
   handleClose: any;
@@ -166,9 +176,15 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
   const [selectedTags, setSelectedTags] = useState<Record<string, any>>(
     settings ? settings.selectedTags : {}
   );
+
+  const [selectedProgress, setSelectedProgress] = useState<string>(
+    settings ? settings.selectedProgress : Progress.TODO
+  );
+
   const onSelectTags = (key: string) => {
     setSelectedTags({ ...selectedTags, [key]: !!!selectedTags[key] });
   };
+
   const RenderTags = (tags: any[]) => {
     if (!tags) return;
     return (
@@ -196,6 +212,7 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
     setSelectedTags({});
     onSettingsSaved({ ...settings, selectedTags: {}, tagFilterFn: () => true });
   };
+
   const toggleVisibility = (name: string) => {
     onSettingsSaved({
       ...settings,
@@ -247,6 +264,32 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
             标签 <Button onClick={reset}>重置</Button>
           </h5>
           {RenderTags(tags)}
+          <hr />
+          <h5 className="pt-1 pb-1">进度选择</h5>
+          <Form.Select
+                className={progressOptionClassNames[selectedProgress]}
+                value={selectedProgress}
+                onChange={(e) =>
+                  setSelectedProgress(e.target.value)
+                }
+              >
+                <option value=""></option>
+
+                {[
+                  Progress.WORKING,
+                  Progress.TOO_HARD,
+                  Progress.REVIEW_NEEDED,
+                  Progress.AC,
+                ].map((p) => (
+                  <option
+                    key={p}
+                    value={p}
+                    className={progressOptionClassNames[p] || ""}
+                  >
+                    {progressTranslations[p]}
+                  </option>
+                ))}
+              </Form.Select>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
@@ -258,7 +301,9 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
               onSettingsSaved({
                 ...settings,
                 selectedTags,
+                selectedProgress,
                 tagFilterFn: buildTagFilterFn(selectedTags, queryTags),
+                progressFilterFn: buildProgressFilterFn(selectedProgress),
               });
               handleClose();
             }}
@@ -325,6 +370,8 @@ export default function Zenk() {
     let defaultSettings = {
       tagFilterFn: () => true,
       selectedTags: {},
+      progressFilterFn: () => true,
+      selectProgress: {},
       columnVisibility: { tags: true, ratings: true, en: true },
     };
     if (!raw || raw === "") {
@@ -347,7 +394,8 @@ export default function Zenk() {
     () =>
       data
         .filter(currentFilter.fn)
-        .filter(buildTagFilterFn(settings.selectedTags, queryTags)),
+        .filter(buildTagFilterFn(settings.selectedTags, queryTags))
+        .filter(buildProgressFilterFn(settings.selectedProgress)),
     [data, currentFilter, settings]
   );
 
