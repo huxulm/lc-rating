@@ -75,7 +75,6 @@ export default{
                         },
                         {
                             "title": "3310. 移除可疑的方法",
-                            "title": "3310. 移除可疑的方法",
                             "sort": 7,
                             "src": "/remove-methods-from-project/",
                             "score": 1710.5210499321,
