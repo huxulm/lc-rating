@@ -2,18 +2,18 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch:
-    branches: [ "main" ]
-  workflow_run: 
-    workflows: ["Weekly Problem List Update"] 
-    types: 
+    branches: ["main"]
+  workflow_run:
+    workflows: ["Weekly Problem List Update", "Public Data Updater"]
+    types:
       - completed
 
 permissions:
   contents: read
   pages: write
-  id-token: write  # Ensure this line is included
+  id-token: write # Ensure this line is included
 
 concurrency:
   group: "pages"
@@ -28,13 +28,13 @@ jobs:
     # Specify runner +  build & upload the static files as an artifact
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - run: npm install
-    - run: CI=false npm run build --if-present
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: build/
+      - uses: actions/checkout@v3
+      - run: npm install
+      - run: CI=false npm run build --if-present
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/
 
   deploy:
     # Add a dependency to the build job
@@ -42,8 +42,8 @@ jobs:
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
 
     # Deploy to the github-pages environment
     environment:

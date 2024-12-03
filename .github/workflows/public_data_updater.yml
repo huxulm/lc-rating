@@ -1,0 +1,41 @@
+name: Public Data Updater
+
+on:
+  schedule:
+    - cron: "0 8 * * *" # 每天 UTC 时间 08:00 执行
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: lc-maker
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      MONGO_URI: ${{ secrets.MONGO_URI }}
+      MONGO_DB: ${{ secrets.MONGO_DB }}
+      DB_USER: ${{ secrets.DB_USER }}
+      DB_PASS: ${{ secrets.DB_PASS }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Fetching data
+        run: |
+          # download binary from github release
+          wget https://github.com/huxulm/lc-rating/releases/download/lc-maker/lc-maker
+          chmod +x lc-maker && ./lc-maker --latest --exemask 15 --loglevel 5 --output ./public
+
+      - name: Commit changes
+        run: |
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Update public data🎈"
+
+      - name: Push changes
+        if: success()
+        run: git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
