@@ -7,8 +7,22 @@ export default{
     "sort": 0,
     "child": [
         {
-            "title": "一、基础题",
+            "title": "",
             "sort": 0,
+            "summary": "",
+            "child": [
+                {
+                    "title": "",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "summary": "!<a href=\"https://pic.leetcode.cn/1720229787-pgKZVb-and-005.png\">位运算题单 位运算题目 位运算基础 灵茶山艾府</a><br>推荐先阅读：<a href=\"https://leetcode.cn/circle/discuss/CaOJ45/\">从集合论到位运算，常见位运算技巧分类总结！</a><br>",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "title": "一、基础题",
+            "sort": 1,
             "summary": "",
             "child": [
                 {
@@ -151,7 +165,7 @@ export default{
         },
         {
             "title": "二、异或（XOR）的性质",
-            "sort": 1,
+            "sort": 2,
             "summary": "",
             "child": [
                 {
@@ -302,7 +316,7 @@ export default{
         },
         {
             "title": "三、与或（AND/OR）的性质",
-            "sort": 2,
+            "sort": 3,
             "summary": "AND 的数越多，结果越小。OR 的数越多，结果越大。<br>",
             "child": [
                 {
@@ -453,7 +467,7 @@ export default{
         },
         {
             "title": "四、拆位 / 贡献法",
-            "sort": 3,
+            "sort": 4,
             "summary": "",
             "child": [
                 {
@@ -524,7 +538,7 @@ export default{
         },
         {
             "title": "五、试填法",
-            "sort": 4,
+            "sort": 5,
             "summary": "",
             "child": [
                 {
@@ -587,7 +601,7 @@ export default{
         },
         {
             "title": "六、恒等式",
-            "sort": 5,
+            "sort": 6,
             "summary": "",
             "child": [
                 {
@@ -618,7 +632,7 @@ export default{
         },
         {
             "title": "七、思维题",
-            "sort": 6,
+            "sort": 7,
             "summary": "贪心、脑筋急转弯等。<br>",
             "child": [
                 {
@@ -737,7 +751,7 @@ export default{
         },
         {
             "title": "八、其他",
-            "sort": 7,
+            "sort": 8,
             "summary": "",
             "child": [
                 {

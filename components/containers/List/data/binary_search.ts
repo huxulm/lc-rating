@@ -3,12 +3,26 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】二分算法（二分答案/最小化最大值/最大化最小值/第K小）",
     "original_src": "https://leetcode.cn/circle/discuss/SqopEo",
-    "last_update": "2024-11-25 01:58:23",
+    "last_update": "2024-11-28 07:50:12",
     "sort": 0,
     "child": [
         {
-            "title": "二分查找",
+            "title": "",
             "sort": 0,
+            "summary": "",
+            "child": [
+                {
+                    "title": "",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "summary": "!<a href=\"https://pic.leetcode.cn/1711713491-SoiQWc-t2.png\">二分题单二分查找二分算法二分入门二分题目力扣二分 leetcode 二分</a><br>> 图：闭区间二分循环结束时的左右指针位置（查找第一个 $8$）<br>题目已按照难度分排序，右侧数字为难度分。<br>如果遇到难度很大，题解都看不懂的题目，建议直接收藏，过段时间再来做。<br>",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "title": "二分查找",
+            "sort": 1,
             "summary": "",
             "child": [
                 {
@@ -215,7 +229,7 @@ export default{
         },
         {
             "title": "二分答案：求最小",
-            "sort": 1,
+            "sort": 2,
             "summary": "",
             "child": [
                 {
@@ -326,7 +340,7 @@ export default{
         },
         {
             "title": "二分答案：求最大",
-            "sort": 2,
+            "sort": 3,
             "summary": "",
             "child": [
                 {
@@ -469,7 +483,7 @@ export default{
         },
         {
             "title": "二分间接值",
-            "sort": 3,
+            "sort": 4,
             "summary": "",
             "child": [
                 {
@@ -500,7 +514,7 @@ export default{
         },
         {
             "title": "最小化最大值",
-            "sort": 4,
+            "sort": 5,
             "summary": "",
             "child": [
                 {
@@ -603,7 +617,7 @@ export default{
         },
         {
             "title": "最大化最小值",
-            "sort": 5,
+            "sort": 6,
             "summary": "",
             "child": [
                 {
@@ -674,7 +688,7 @@ export default{
         },
         {
             "title": "第 K 小/大",
-            "sort": 6,
+            "sort": 7,
             "summary": "",
             "child": [
                 {
@@ -809,7 +823,7 @@ export default{
         },
         {
             "title": "其他",
-            "sort": 7,
+            "sort": 8,
             "summary": "",
             "child": [
                 {

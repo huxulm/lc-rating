@@ -7,8 +7,22 @@ export default{
     "sort": 0,
     "child": [
         {
-            "title": "单调栈",
+            "title": "",
             "sort": 0,
+            "summary": "",
+            "child": [
+                {
+                    "title": "",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "summary": "!<a href=\"https://pic.leetcode.cn/1711714526-rMdiIh-t3-c.png\">单调栈题单单调栈入门单调栈题目单调栈教程单调栈视频leetcode单调栈 灵茶山艾府 灵神 灵神题单</a><br>> 他向远方望去，无法看到高山背后的矮山，只能看到一座座更高的山峰。<br>推荐先做做 <a href=\"/lc-rating/list/data_structure\">数据结构题单</a> 中的「枚举右，维护左」再来刷本题单。<br>",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "title": "单调栈",
+            "sort": 1,
             "summary": "",
             "child": [
                 {
@@ -199,7 +213,7 @@ export default{
         },
         {
             "title": "矩形面积",
-            "sort": 1,
+            "sort": 2,
             "summary": "",
             "child": [
                 {
@@ -262,7 +276,7 @@ export default{
         },
         {
             "title": "贡献法",
-            "sort": 2,
+            "sort": 3,
             "summary": "",
             "child": [
                 {
@@ -317,7 +331,7 @@ export default{
         },
         {
             "title": "最小字典序",
-            "sort": 3,
+            "sort": 4,
             "summary": "",
             "child": [
                 {

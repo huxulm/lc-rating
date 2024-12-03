@@ -7,14 +7,28 @@ export default{
     "sort": 0,
     "child": [
         {
-            "title": "前言",
+            "title": "",
             "sort": 0,
+            "summary": "",
+            "child": [
+                {
+                    "title": "",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "summary": "!<a href=\"https://pic.leetcode.cn/1715418671-whQQdB-meme-math-bf-math.png\">数学题单数学题目力扣数学题单leetcode数学数论组合博弈几何随机 灵茶山艾府 灵神</a><br>> 图：暴力？NO！数学做法，降维打击！<br>",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "title": "前言",
+            "sort": 1,
             "summary": "本文整理了力扣上的数学相关题目，主要以数论和组合数学为主。<br>部分题目（尤其是组合数学）会涉及到取模，我写了一篇教程，请看 <a href=\"https://leetcode.cn/circle/discuss/mDfnkW/\">模运算的世界：当加减乘除遇上取模</a>。<br>",
             "child": []
         },
         {
             "title": "一、数论",
-            "sort": 1,
+            "sort": 2,
             "summary": "",
             "child": [
                 {
@@ -677,7 +691,7 @@ export default{
         },
         {
             "title": "二、组合数学",
-            "sort": 2,
+            "sort": 3,
             "summary": "",
             "child": [
                 {
@@ -1124,7 +1138,7 @@ export default{
         },
         {
             "title": "三、概率期望",
-            "sort": 3,
+            "sort": 4,
             "summary": "",
             "child": [
                 {
@@ -1211,7 +1225,7 @@ export default{
         },
         {
             "title": "四、博弈论",
-            "sort": 4,
+            "sort": 5,
             "summary": "",
             "child": [
                 {
@@ -1418,7 +1432,7 @@ export default{
         },
         {
             "title": "五、计算几何",
-            "sort": 5,
+            "sort": 6,
             "summary": "",
             "child": [
                 {
@@ -1625,7 +1639,7 @@ export default{
         },
         {
             "title": "六、随机算法",
-            "sort": 6,
+            "sort": 7,
             "summary": "",
             "child": [
                 {
@@ -1744,7 +1758,7 @@ export default{
         },
         {
             "title": "七、杂项",
-            "sort": 7,
+            "sort": 8,
             "summary": "",
             "child": [
                 {
