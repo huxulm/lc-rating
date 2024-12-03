@@ -12,7 +12,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       MONGO_URI: ${{ secrets.MONGO_URI }}
-      MONGO_DB: ${{ secrets.MONGO_DB }}
+      DB_NAME: ${{ secrets.DB_NAME }}
       DB_USER: ${{ secrets.DB_USER }}
       DB_PASS: ${{ secrets.DB_PASS }}
     steps:
