@@ -70,7 +70,6 @@ export default{
                     "sort": 1,
                     "isLeaf": true,
                     "summary": "",
-                    "summary": "",
                     "child": [
                         {
                             "title": "204. 计数质数",
@@ -530,7 +529,6 @@ export default{
                         },
                         {
                             "title": "3334. 数组的最大因子得分",
-                            "title": "3334. 数组的最大因子得分",
                             "sort": 1,
                             "src": "/find-the-maximum-factor-score-of-array/",
                             "score": 1518.7783368146,
@@ -547,7 +545,6 @@ export default{
                         },
                         {
                             "title": "2470. 最小公倍数为 K 的子数组数目",
-                            "sort": 3,
                             "sort": 3,
                             "src": "/number-of-subarrays-with-lcm-equal-to-k/",
                             "score": 1559.9709348417,
@@ -1040,7 +1037,6 @@ export default{
                     "sort": 3,
                     "isLeaf": true,
                     "summary": "由于部分题目有其他做法，难度分仅供参考。<br>",
-                    "summary": "由于部分题目有其他做法，难度分仅供参考。<br>",
                     "child": [
                         {
                             "title": "2652. 倍数求和",
@@ -1107,7 +1103,6 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3336. 最大公约数相等的子序列数量",
                             "title": "3336. 最大公约数相等的子序列数量",
                             "sort": 8,
                             "src": "/find-the-number-of-subsequences-with-equal-gcd/",
