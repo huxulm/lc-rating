@@ -31,7 +31,12 @@ a:hover {
   height: 16px;
   width: 16px;
 }
+
 .contest {
+  padding: 0 3.5rem;
+}
+
+.col-contest {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -45,9 +50,6 @@ a:hover {
   --bs-link-decoration: none;
 }
 
-.contest {
-  padding: 0 3.5rem;
-}
 .contest-table {
   padding: 0;
 }
@@ -82,6 +84,27 @@ a:hover {
     transform: rotate(0);
     transform-origin: top left;
   }
+}
+// navbar style
+#nav-cl {
+  color: #8ef2e9;
+}
+#nav-tr {
+  color: #513ff7;
+}
+#nav-0x3f {
+  color: #a41eae;
+}
+#nav-pg {
+  color: #ffa246;
+}
+#nav-pl {
+  color:#EA3323;
+}
+
+#nav-cl,#nav-tr,#nav-0x3f,#nav-pg,#nav-pl {
+  font-weight: 700;
+  background: white;
 }
 
 // resizer style
