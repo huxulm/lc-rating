@@ -26,9 +26,12 @@ jobs:
 
       - name: Fetching data
         run: |
+          # echo "Operating system:"
+          uname -a
           # download binary from github release
           wget -O lc https://github.com/huxulm/lc-rating/releases/download/lc-maker/lc-maker
-          chmod +x lc && ./lc --latest --exemask 15 --loglevel 5 --output ./public
+          chmod +x lc
+          lc --latest --exemask 15 --loglevel 5 --output ./public
 
       - name: Commit changes
         run: |
