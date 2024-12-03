@@ -3,6 +3,7 @@ name: Public Data Updater
 on:
   schedule:
     - cron: "0 8 * * *" # 每天 UTC 时间 08:00 执行
+  workflow_dispatch:
 
 jobs:
   build:
