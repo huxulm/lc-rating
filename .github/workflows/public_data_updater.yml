@@ -1,7 +1,8 @@
 name: Public Data Updater
 
 on:
-  - cron: "0 9 * * 1" # 每周一 UTC 时间 09:00 / Beijing 时间 17:00 执行
+  schedule:
+    - cron: "0 9 * * 1" # 每周一 UTC 时间 09:00 / Beijing 时间 17:00 执行
   workflow_dispatch:
 
 jobs:
