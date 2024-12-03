@@ -1,7 +1,7 @@
-name: Public Data Updater
+name: Rating Solution Updater
 
 on:
-  - cron: "0 9 * * 1" # 每周一 UTC 时间 09:00 / Beijing 时间 17:00 执行
+  - cron: "0 10 * * *" # 每天 UTC 时间 10:00 / Beijing 时间 18:00 执行
   workflow_dispatch:
 
 jobs:
@@ -30,12 +30,12 @@ jobs:
           # download binary from github release
           sudo wget -O /usr/bin/lc https://github.com/huxulm/lc-rating/releases/download/lc-maker/lc-maker
           sudo chmod +x /usr/bin/lc
-          lc --latest --exemask 15 --loglevel 5 --out ./public
+          lc --latest --exemask 7 --loglevel 5 --out ./public
 
       - name: Commit changes
         run: |
           git add .
-          git diff-index --quiet HEAD || git commit -m "Update public data🎈"
+          git diff-index --quiet HEAD || git commit -m "Update solutions🎈"
 
       - name: Push changes
         if: success()

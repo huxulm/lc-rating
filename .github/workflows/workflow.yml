@@ -6,7 +6,12 @@ on:
   workflow_dispatch:
     branches: ["main"]
   workflow_run:
-    workflows: ["Weekly Problem List Update", "Public Data Updater"]
+    workflows:
+      [
+        "Weekly Problem List Update",
+        "Public Data Updater",
+        "Rating Solution Updater",
+      ]
     types:
       - completed
 
