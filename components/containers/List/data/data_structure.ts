@@ -7,8 +7,22 @@ export default{
     "sort": 0,
     "child": [
         {
-            "title": "零、常用枚举技巧",
+            "title": "",
             "sort": 0,
+            "summary": "",
+            "child": [
+                {
+                    "title": "",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "summary": "题目已按照难度分排序，右侧数字为难度分。<br>如果遇到难度很大，题解都看不懂的题目，建议直接跳过，二刷的时候再来尝试。<br>!<a href=\"https://pic.leetcode.cn/1713836847-cDYwhf-Programming.jfif\">数据结构题单 数据结构入门 数据结构新手教程 数据结构题目 力扣数据结构 leetcode数据结构 灵茶山艾府 灵神</a><br>",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "title": "零、常用枚举技巧",
+            "sort": 1,
             "summary": "",
             "child": [
                 {
@@ -319,7 +333,7 @@ export default{
         },
         {
             "title": "一、前缀和",
-            "sort": 1,
+            "sort": 2,
             "summary": "",
             "child": [
                 {
@@ -918,7 +932,7 @@ export default{
         },
         {
             "title": "二、差分",
-            "sort": 2,
+            "sort": 3,
             "summary": "",
             "child": [
                 {
@@ -1229,7 +1243,7 @@ export default{
         },
         {
             "title": "三、栈",
-            "sort": 3,
+            "sort": 4,
             "summary": "",
             "child": [
                 {
@@ -1747,7 +1761,7 @@ export default{
         },
         {
             "title": "四、队列",
-            "sort": 4,
+            "sort": 5,
             "summary": "队列常用在 BFS 中，见 <a href=\"/lc-rating/list/grid\">网格图题单</a> 和 <a href=\"/lc-rating/list/graph\">图论题单</a>。与此相比，栈常用在 DFS 中，但无需我们手动维护。<br>",
             "child": [
                 {
@@ -2026,7 +2040,7 @@ export default{
         },
         {
             "title": "五、堆（优先队列）",
-            "sort": 5,
+            "sort": 6,
             "summary": "",
             "child": [
                 {
@@ -2761,7 +2775,7 @@ export default{
         },
         {
             "title": "六、字典树（trie）",
-            "sort": 6,
+            "sort": 7,
             "summary": "",
             "child": [
                 {
@@ -3120,7 +3134,7 @@ export default{
         },
         {
             "title": "七、并查集",
-            "sort": 7,
+            "sort": 8,
             "summary": "",
             "child": [
                 {
@@ -3511,7 +3525,7 @@ export default{
         },
         {
             "title": "八、树状数组和线段树",
-            "sort": 8,
+            "sort": 9,
             "summary": "能用树状数组解决的题目，也能用线段树解决（反过来不一定）。但树状数组实现简单，代码短。<br>为方便大家练习，我把适合用树状数组解决的题目分到树状数组中，其余分到线段树中。<br>",
             "child": [
                 {
@@ -3958,7 +3972,7 @@ export default{
         },
         {
             "title": "专题：离线算法",
-            "sort": 9,
+            "sort": 10,
             "summary": "对询问**排序**，通过改变回答询问的顺序，使问题更容易处理。<br>> 相应的，**在线算法**就是按照 $\\textit{queries}$ 的顺序一个一个处理。<br>",
             "child": [
                 {

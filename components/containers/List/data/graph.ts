@@ -7,8 +7,22 @@ export default{
     "sort": 0,
     "child": [
         {
-            "title": "DFS 基础",
+            "title": "",
             "sort": 0,
+            "summary": "",
+            "child": [
+                {
+                    "title": "",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "summary": "!<a href=\"https://pic.leetcode.cn/1724824379-UOsXIV-dfsbfsnew-c.png\">图论题单 图论算法 图论题目 LeetCode 力扣图论 灵茶山艾府</a><br>> DFS 一路到底，BFS 由近及远。<br>",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "title": "DFS 基础",
+            "sort": 1,
             "summary": "",
             "child": [
                 {
@@ -183,7 +197,7 @@ export default{
         },
         {
             "title": "BFS 基础",
-            "sort": 1,
+            "sort": 2,
             "summary": "",
             "child": [
                 {
@@ -254,7 +268,7 @@ export default{
         },
         {
             "title": "拓扑排序",
-            "sort": 2,
+            "sort": 3,
             "summary": "",
             "child": [
                 {
@@ -389,7 +403,7 @@ export default{
         },
         {
             "title": "在拓扑序上 DP",
-            "sort": 3,
+            "sort": 4,
             "summary": "",
             "child": [
                 {
@@ -420,7 +434,7 @@ export default{
         },
         {
             "title": "基环树",
-            "sort": 4,
+            "sort": 5,
             "summary": "",
             "child": [
                 {
@@ -507,7 +521,7 @@ export default{
         },
         {
             "title": "单源最短路：Dijkstra",
-            "sort": 5,
+            "sort": 6,
             "summary": "",
             "child": [
                 {
@@ -722,7 +736,7 @@ export default{
         },
         {
             "title": "全源最短路：Floyd",
-            "sort": 6,
+            "sort": 7,
             "summary": "",
             "child": [
                 {
@@ -785,7 +799,7 @@ export default{
         },
         {
             "title": "最小生成树：Kruskal/Prim",
-            "sort": 7,
+            "sort": 8,
             "summary": "",
             "child": [
                 {
@@ -832,7 +846,7 @@ export default{
         },
         {
             "title": "欧拉路径/欧拉回路：Hierholzer",
-            "sort": 8,
+            "sort": 9,
             "summary": "",
             "child": [
                 {
@@ -871,7 +885,7 @@ export default{
         },
         {
             "title": "强连通分量/双连通分量：Tarjan",
-            "sort": 9,
+            "sort": 10,
             "summary": "",
             "child": [
                 {
@@ -910,7 +924,7 @@ export default{
         },
         {
             "title": "二分图（染色判定、最大匹配）",
-            "sort": 10,
+            "sort": 11,
             "summary": "",
             "child": [
                 {
@@ -1021,7 +1035,7 @@ export default{
         },
         {
             "title": "网络流",
-            "sort": 11,
+            "sort": 12,
             "summary": "",
             "child": [
                 {
@@ -1092,7 +1106,7 @@ export default{
         },
         {
             "title": "其他",
-            "sort": 12,
+            "sort": 13,
             "summary": "",
             "child": [
                 {

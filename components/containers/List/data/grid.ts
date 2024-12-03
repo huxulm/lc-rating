@@ -7,8 +7,22 @@ export default{
     "sort": 0,
     "child": [
         {
-            "title": "网格图 DFS",
+            "title": "",
             "sort": 0,
+            "summary": "",
+            "child": [
+                {
+                    "title": "",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "summary": "!<a href=\"https://pic.leetcode.cn/1724834645-OYGBxU-grid004.png\">网格图题单 DFS BFS 网格图题目 图论 灵茶山艾府</a><br>> 小小贪吃蛇，移动花样多。<br>平移加旋转，为把迷宫破。<br>代码复代码，bug 何其多。<br>六步化一步，AC 定我夺。<br>—— <a href=\"https://leetcode.cn/problems/minimum-moves-to-reach-target-with-rotations/\">1210. 穿过迷宫的最少移动次数</a><br>",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "title": "网格图 DFS",
+            "sort": 1,
             "summary": "",
             "child": [
                 {
@@ -191,7 +205,7 @@ export default{
         },
         {
             "title": "网格图 BFS",
-            "sort": 1,
+            "sort": 2,
             "summary": "",
             "child": [
                 {
@@ -366,7 +380,7 @@ export default{
         },
         {
             "title": "网格图 0-1 BFS",
-            "sort": 2,
+            "sort": 3,
             "summary": "",
             "child": [
                 {
@@ -421,7 +435,7 @@ export default{
         },
         {
             "title": "网格图 Dijkstra",
-            "sort": 3,
+            "sort": 4,
             "summary": "",
             "child": [
                 {
@@ -435,7 +449,7 @@ export default{
         },
         {
             "title": "综合应用",
-            "sort": 4,
+            "sort": 5,
             "summary": "",
             "child": [
                 {
@@ -594,7 +608,7 @@ export default{
         },
         {
             "title": "思考题",
-            "sort": 5,
+            "sort": 6,
             "summary": "",
             "child": [
                 {

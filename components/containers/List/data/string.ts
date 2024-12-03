@@ -7,8 +7,22 @@ export default{
     "sort": 0,
     "child": [
         {
-            "title": "一、KMP",
+            "title": "",
             "sort": 0,
+            "summary": "",
+            "child": [
+                {
+                    "title": "",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "summary": "!<a href=\"https://pic.leetcode.cn/1728350300-LGjhkL-Knuth-Morris-Pratt.png\">Knuth-Morris-Pratt.png</a><br>",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "title": "一、KMP",
+            "sort": 1,
             "summary": "",
             "child": [
                 {
@@ -119,7 +133,7 @@ export default{
         },
         {
             "title": "二、Z 函数（扩展 KMP）",
-            "sort": 1,
+            "sort": 2,
             "summary": "",
             "child": [
                 {
@@ -166,7 +180,7 @@ export default{
         },
         {
             "title": "三、Manacher 算法",
-            "sort": 2,
+            "sort": 3,
             "summary": "",
             "child": [
                 {
@@ -229,7 +243,7 @@ export default{
         },
         {
             "title": "四、字符串哈希",
-            "sort": 3,
+            "sort": 4,
             "summary": "",
             "child": [
                 {
@@ -348,7 +362,7 @@ export default{
         },
         {
             "title": "五、最小表示法",
-            "sort": 4,
+            "sort": 5,
             "summary": "",
             "child": [
                 {
@@ -371,7 +385,7 @@ export default{
         },
         {
             "title": "六、字典树",
-            "sort": 5,
+            "sort": 6,
             "summary": "",
             "child": [
                 {
@@ -385,7 +399,7 @@ export default{
         },
         {
             "title": "七、AC 自动机",
-            "sort": 6,
+            "sort": 7,
             "summary": "",
             "child": [
                 {
@@ -440,7 +454,7 @@ export default{
         },
         {
             "title": "八、后缀数组/后缀自动机",
-            "sort": 7,
+            "sort": 8,
             "summary": "",
             "child": [
                 {
@@ -567,7 +581,7 @@ export default{
         },
         {
             "title": "九、子序列自动机",
-            "sort": 8,
+            "sort": 9,
             "summary": "",
             "child": [
                 {

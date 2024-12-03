@@ -3,7 +3,7 @@ name: Weekly Problem List Update
 on:
   schedule:
     - cron: '0 0 * * 0' # 每周一次，周日午夜
-
+  workflow_dispatch:
 jobs:
   run-script:
     runs-on: ubuntu-latest

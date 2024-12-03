@@ -1,14 +1,28 @@
 import ProblemCategory from "@components/ProblemCatetory";
 
 export default{
-    "title": "分享丨【题单】链表、二叉树与一般树（前后指针/快慢指针/DFS/BFS/直径/LCA）",
+    "title": "分享丨【题单】链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）",
     "original_src": "https://leetcode.cn/circle/discuss/K0n2gO",
-    "last_update": "2024-11-16 03:04:25",
+    "last_update": "2024-11-26 07:21:22",
     "sort": 0,
     "child": [
         {
-            "title": "一、链表",
+            "title": "",
             "sort": 0,
+            "summary": "",
+            "child": [
+                {
+                    "title": "",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "summary": "!<a href=\"https://pic.leetcode.cn/1723340796-CzPFMU-meme-tree-11.jpg\">链表题单 二叉树题单 链表题目 二叉树题目 回溯题单 回溯题目 灵茶山艾府 灵神</a><br>",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "title": "一、链表",
+            "sort": 1,
             "summary": "> 注：由于周赛中的链表题可以转成数组处理，难度比直接处理链表低，故不标明难度分。<br>带着问题去做下面的题目：<br>1. 在什么情况下，要用到哨兵节点（dummy node）？<br>2. 在什么情况下，循环条件要写 `while (node != null)`？什么情况下要写 `while (node.next != null)`？<br>",
             "child": [
                 {
@@ -583,7 +597,7 @@ export default{
         },
         {
             "title": "二、二叉树",
-            "sort": 1,
+            "sort": 2,
             "summary": "**学习递归，从二叉树开始。**<br>晕递归的同学，请先看视频讲解<a href=\"https://www.bilibili.com/video/BV1UD4y1Y769/\">【基础算法精讲 09】</a>，欢迎点赞~<br>带着问题去做下面的题目：<br>1. 一般来说，DFS 的递归边界是空节点。在什么情况下，要额外把**叶子节点**作为递归边界？<br>2. 在什么情况下，DFS 需要有返回值？什么情况下不需要有返回值？<br>3. 在什么情况下，题目更适合用**自顶向下**的方法解决？什么情况下更适合用**自底向上**的方法解决？<br>",
             "child": [
                 {
@@ -661,6 +675,14 @@ export default{
                             "sort": 8,
                             "src": "/two-sum-bsts/",
                             "score": 1389.0328392117,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "2764. 数组是否表示某二叉树的前序遍历",
+                            "sort": 9,
+                            "src": "/is-array-a-preorder-of-some-binary-tree/",
+                            "score": null,
                             "solution": null,
                             "isPremium": true
                         }
@@ -2270,7 +2292,7 @@ export default{
         },
         {
             "title": "三、一般树",
-            "sort": 2,
+            "sort": 3,
             "summary": "",
             "child": [
                 {
@@ -2638,6 +2660,637 @@ export default{
                             "score": null,
                             "solution": null,
                             "isPremium": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "四、回溯",
+            "sort": 4,
+            "summary": "本质是搜索树上的 DFS。<br>推荐先完成 **§2.7** 节。先理解二叉树上的回溯，再来学习一般情况下的回溯。<br>",
+            "child": [
+                {
+                    "title": "§4.1 入门回溯",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "summary": "<a href=\"https://www.bilibili.com/video/BV1mG4y1A7Gu/\">视频讲解【基础算法精讲 14】</a><br>",
+                    "child": [
+                        {
+                            "title": "17. 电话号码的字母组合",
+                            "sort": 0,
+                            "src": "/letter-combinations-of-a-phone-number/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        }
+                    ]
+                },
+                {
+                    "title": "§4.2 子集型回溯",
+                    "sort": 1,
+                    "isLeaf": true,
+                    "summary": "<a href=\"https://www.bilibili.com/video/BV1mG4y1A7Gu/\">视频讲解【基础算法精讲 14】</a><br>有「**选或不选**」和「**枚举选哪个**」两种写法。<br>也可以用**二进制枚举**做。<br>**思维扩展**：<br>",
+                    "child": [
+                        {
+                            "title": "78. 子集",
+                            "sort": 0,
+                            "src": "/subsets/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "784. 字母大小写全排列",
+                            "sort": 1,
+                            "src": "/letter-case-permutation/",
+                            "score": 1341.5076441361,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1286. 字母组合迭代器",
+                            "sort": 2,
+                            "src": "/iterator-for-combination/",
+                            "score": 1591.4725328821,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "494. 目标和",
+                            "sort": 3,
+                            "src": "/target-sum/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "LCP 51. 烹饪料理",
+                            "sort": 4,
+                            "src": "/UEcfPD/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2397. 被列覆盖的最多行数",
+                            "sort": 5,
+                            "src": "/maximum-rows-covered-by-columns/",
+                            "score": 1718.8256321624,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1239. 串联字符串的最大长度",
+                            "sort": 6,
+                            "src": "/maximum-length-of-a-concatenated-string-with-unique-characters/",
+                            "score": 1719.945199874,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2212. 射箭比赛中的最大得分",
+                            "sort": 7,
+                            "src": "/maximum-points-in-an-archery-competition/",
+                            "score": 1868.9864493463,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1255. 得分最高的单词集合",
+                            "sort": 8,
+                            "src": "/maximum-score-words-formed-by-letters/",
+                            "score": 1881.6810367589,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2151. 基于陈述统计最多好人数",
+                            "sort": 9,
+                            "src": "/maximum-good-people-based-on-statements/",
+                            "score": 1979.9454101467,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2959. 关闭分部的可行集合数目",
+                            "sort": 10,
+                            "src": "/number-of-possible-sets-of-closing-branches/",
+                            "score": 2077.4738459704,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1601. 最多可达成的换楼请求数目",
+                            "sort": 11,
+                            "src": "/maximum-number-of-achievable-transfer-requests/",
+                            "score": 2118.7923652824,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1617. 统计子树中城市之间最大距离",
+                            "sort": 12,
+                            "src": "/count-subtrees-with-max-distance-between-cities/",
+                            "score": 2308.6545905335,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "320. 列举单词的全部缩写",
+                            "sort": 13,
+                            "src": "/generalized-abbreviation/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "254. 因子的组合",
+                            "sort": 14,
+                            "src": "/factor-combinations/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "39. 组合总和",
+                            "sort": 15,
+                            "src": "/combination-sum/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        }
+                    ]
+                },
+                {
+                    "title": "§4.3 划分型回溯",
+                    "sort": 2,
+                    "isLeaf": true,
+                    "summary": "<a href=\"https://www.bilibili.com/video/BV1mG4y1A7Gu/\">视频讲解【基础算法精讲 14】</a><br>把分割线（逗号）看成是可以「选或不选」的东西，本质是子集型回溯。<br>",
+                    "child": [
+                        {
+                            "title": "131. 分割回文串",
+                            "sort": 0,
+                            "src": "/palindrome-partitioning/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2698. 求一个整数的惩罚数",
+                            "sort": 1,
+                            "src": "/find-the-punishment-number-of-an-integer/",
+                            "score": 1678.6245760413,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1593. 拆分字符串使唯一子字符串的数目最大",
+                            "sort": 2,
+                            "src": "/split-a-string-into-the-max-number-of-unique-substrings/",
+                            "score": 1739.5831401172,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1849. 将字符串拆分为递减的连续值",
+                            "sort": 3,
+                            "src": "/splitting-a-string-into-descending-consecutive-values/",
+                            "score": 1746.8757919578,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "306. 累加数",
+                            "sort": 4,
+                            "src": "/additive-number/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "842. 将数组拆分成斐波那契序列",
+                            "sort": 5,
+                            "src": "/split-array-into-fibonacci-sequence/",
+                            "score": 1779.9495819318,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "93. 复原 IP 地址",
+                            "sort": 6,
+                            "src": "/restore-ip-addresses/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "816. 模糊坐标",
+                            "sort": 7,
+                            "src": "/ambiguous-coordinates/",
+                            "score": 1707.8992927609,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "140. 单词拆分 II",
+                            "sort": 8,
+                            "src": "/word-break-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "291. 单词规律 II",
+                            "sort": 9,
+                            "src": "/word-pattern-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        }
+                    ]
+                },
+                {
+                    "title": "§4.4 组合型回溯",
+                    "sort": 3,
+                    "isLeaf": true,
+                    "summary": "<a href=\"https://www.bilibili.com/video/BV1xG4y1F7nC/\">视频讲解【基础算法精讲 15】</a><br>有个数上的约束。也算作子集型回溯。<br>",
+                    "child": [
+                        {
+                            "title": "77. 组合",
+                            "sort": 0,
+                            "src": "/combinations/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "216. 组合总和 III",
+                            "sort": 1,
+                            "src": "/combination-sum-iii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "22. 括号生成",
+                            "sort": 2,
+                            "src": "/generate-parentheses/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "301. 删除无效的括号",
+                            "sort": 3,
+                            "src": "/remove-invalid-parentheses/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        }
+                    ]
+                },
+                {
+                    "title": "§4.5 排列型回溯",
+                    "sort": 4,
+                    "isLeaf": true,
+                    "summary": "<a href=\"https://www.bilibili.com/video/BV1mY411D7f6/\">视频讲解【基础算法精讲 16】</a><br>部分题目也可以用状压 DP 做。<br>",
+                    "child": [
+                        {
+                            "title": "46. 全排列",
+                            "sort": 0,
+                            "src": "/permutations/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "357. 统计各位数字都不同的数字个数",
+                            "sort": 1,
+                            "src": "/count-numbers-with-unique-digits/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "51. N 皇后",
+                            "sort": 2,
+                            "src": "/n-queens/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "52. N 皇后 II",
+                            "sort": 3,
+                            "src": "/n-queens-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2850. 将石头分散到网格图的最少移动次数",
+                            "sort": 4,
+                            "src": "/minimum-moves-to-spread-stones-over-grid/",
+                            "score": 2001.4515854273,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1718. 构建字典序最大的可行序列",
+                            "sort": 5,
+                            "src": "/construct-the-lexicographically-largest-valid-sequence/",
+                            "score": 2080.0425875741,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1307. 口算难题",
+                            "sort": 6,
+                            "src": "/verbal-arithmetic-puzzle/",
+                            "score": 2250.0454791316,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2014. 重复 K 次的最长子序列",
+                            "sort": 7,
+                            "src": "/longest-subsequence-repeated-k-times/",
+                            "score": 2558.3297484354,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "267. 回文排列 II",
+                            "sort": 8,
+                            "src": "/palindrome-permutation-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        }
+                    ]
+                },
+                {
+                    "title": "§4.6 爆搜+剪枝",
+                    "sort": 5,
+                    "isLeaf": true,
+                    "summary": "",
+                    "child": [
+                        {
+                            "title": "3211. 生成不含相邻零的二进制字符串",
+                            "sort": 0,
+                            "src": "/generate-binary-strings-without-adjacent-zeros/",
+                            "score": 1352.5455214631,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "967. 连续差相同的数字",
+                            "sort": 1,
+                            "src": "/numbers-with-same-consecutive-differences/",
+                            "score": 1432.9593207076,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1415. 长度为 n 的开心字符串中字典序第 k 小的字符串",
+                            "sort": 2,
+                            "src": "/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/",
+                            "score": 1575.6324598387,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1219. 黄金矿工",
+                            "sort": 3,
+                            "src": "/path-with-maximum-gold/",
+                            "score": 1663.2612318917,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "79. 单词搜索",
+                            "sort": 4,
+                            "src": "/word-search/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "980. 不同路径 III",
+                            "sort": 5,
+                            "src": "/unique-paths-iii/",
+                            "score": 1830.3165569278,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1255. 得分最高的单词集合",
+                            "sort": 6,
+                            "src": "/maximum-score-words-formed-by-letters/",
+                            "score": 1881.6810367589,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "473. 火柴拼正方形",
+                            "sort": 7,
+                            "src": "/matchsticks-to-square/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "212. 单词搜索 II",
+                            "sort": 8,
+                            "src": "/word-search-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "37. 解数独",
+                            "sort": 9,
+                            "src": "/sudoku-solver/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "638. 大礼包",
+                            "sort": 10,
+                            "src": "/shopping-offers/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1240. 铺瓷砖",
+                            "sort": 11,
+                            "src": "/tiling-a-rectangle-with-the-fewest-squares/",
+                            "score": 2241.5199974312,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "679. 24 点游戏",
+                            "sort": 12,
+                            "src": "/24-game/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "282. 给表达式添加运算符",
+                            "sort": 13,
+                            "src": "/expression-add-operators/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "126. 单词接龙 II",
+                            "sort": 14,
+                            "src": "/word-ladder-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "691. 贴纸拼词",
+                            "sort": 15,
+                            "src": "/stickers-to-spell-word/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2056. 棋盘上有效移动组合的数目",
+                            "sort": 16,
+                            "src": "/number-of-valid-move-combinations-on-chessboard/",
+                            "score": 2610.9906730644,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2386. 找出数组的第 K 大和",
+                            "sort": 17,
+                            "src": "/find-the-k-sum-of-an-array/",
+                            "score": 2647.8258771458,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "488. 祖玛游戏",
+                            "sort": 18,
+                            "src": "/zuma-game/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "LCP 58. 积木拼接",
+                            "sort": 19,
+                            "src": "/De4qBB/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "面试题 17.25. 单词矩阵",
+                            "sort": 20,
+                            "src": "/word-rectangle-lcci/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2664. 巡逻的骑士",
+                            "sort": 21,
+                            "src": "/the-knights-tour/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "247. 中心对称数 II",
+                            "sort": 22,
+                            "src": "/strobogrammatic-number-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "248. 中心对称数 III",
+                            "sort": 23,
+                            "src": "/strobogrammatic-number-iii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "411. 最短独占单词缩写",
+                            "sort": 24,
+                            "src": "/minimum-unique-word-abbreviation/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "1088. 易混淆数 II",
+                            "sort": 25,
+                            "src": "/confusing-number-ii/",
+                            "score": 2076.8975497986,
+                            "solution": null,
+                            "isPremium": true
+                        }
+                    ]
+                },
+                {
+                    "title": "§4.7 有重复元素的回溯",
+                    "sort": 6,
+                    "isLeaf": true,
+                    "summary": "",
+                    "child": [
+                        {
+                            "title": "90. 子集 II",
+                            "sort": 0,
+                            "src": "/subsets-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "40. 组合总和 II",
+                            "sort": 1,
+                            "src": "/combination-sum-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "491. 非递减子序列",
+                            "sort": 2,
+                            "src": "/non-decreasing-subsequences/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "47. 全排列 II",
+                            "sort": 3,
+                            "src": "/permutations-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1079. 活字印刷",
+                            "sort": 4,
+                            "src": "/letter-tile-possibilities/",
+                            "score": 1740.5014205942,
+                            "solution": null,
+                            "isPremium": false
                         }
                     ]
                 }
