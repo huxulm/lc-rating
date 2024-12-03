@@ -34,6 +34,7 @@ a:hover {
 
 .contest {
   padding: 0 3.5rem;
+  width: fit-content;
 }
 
 .col-contest {
@@ -273,11 +274,21 @@ td,
   width: 6px;
   background-color: transparent;
 }
+// horizontal scrollbar width set to 6px
+::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
 
 ::-webkit-scrollbar-thumb {
   border-radius: 6px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #a6a6a6;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(143, 143, 143, 0.3);
+  border-radius: 4px;
+  background-color: #eaeaea;
 }
 
 [data-bs-theme] {
