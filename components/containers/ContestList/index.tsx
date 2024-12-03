@@ -1,45 +1,45 @@
 import React, { useEffect, useMemo, useState } from "react";
-import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
-import Pagination from "react-bootstrap/Pagination";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import RatingCircle, { COLORS } from "../../../components/RatingCircle";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Pagination from "react-bootstrap/Pagination";
 import Popover from "react-bootstrap/Popover";
 import Spinner from "react-bootstrap/Spinner";
+import Table from "react-bootstrap/Table";
+import RatingCircle, { COLORS } from "../../../components/RatingCircle";
 
 import {
   Column,
-  Table as TTable,
-  SortingState,
+  ColumnFiltersState,
   ColumnOrderState,
   ColumnResizeMode,
+  createColumnHelper,
+  FilterFn,
   flexRender,
   getCoreRowModel,
-  getSortedRowModel,
-  getFilteredRowModel,
   getFacetedMinMaxValues,
   getFacetedRowModel,
   getFacetedUniqueValues,
-  useReactTable,
-  createColumnHelper,
-  FilterFn,
-  ColumnFiltersState,
+  getFilteredRowModel,
+  getSortedRowModel,
   PaginationState,
+  SortingState,
+  Table as TTable,
+  useReactTable,
 } from "@tanstack/react-table";
 
 import { rankItem } from "@tanstack/match-sorter-utils";
 
-import { getMark, setMark, getSize, setSize } from "../../../util/store";
+import { getMark, getSize, setMark, setSize } from "../../../util/store";
 
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { Contest } from "../../../util/makeData";
-import { useSolutions } from "../../../hooks/useSolutions";
-import { useContests } from "../../../hooks/useContests";
-import Container from "react-bootstrap/esm/Container";
 import clsx from "clsx";
+import Container from "react-bootstrap/esm/Container";
+import { useContests } from "../../../hooks/useContests";
+import { useSolutions } from "../../../hooks/useSolutions";
+import { Contest } from "../../../util/makeData";
 
 const host = `https://leetcode.cn`;
 
@@ -187,7 +187,7 @@ const columns = [
         mk === info.row.original.TitleSlug
       );
       return (
-        <div className={ck ? "contest row-selected" : "contest"}>
+        <div className={ck ? "col-contest row-selected" : "col-contest"}>
           <a href={link} onClick={onClick}>
             {info.getValue()}
           </a>

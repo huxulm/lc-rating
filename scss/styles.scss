@@ -16,6 +16,10 @@ nav {
     nav {
         background: $gray-900;
     }
+
+    #nav-cl,#nav-tr,#nav-0x3f,#nav-pg,#nav-pl {
+        background: var(--bs-gray-700);
+    }
 }
   
 @include color-mode(light, false) {
