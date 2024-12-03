@@ -29,8 +29,8 @@ jobs:
           # echo "Operating system:"
           uname -a
           # download binary from github release
-          wget -O /usr/bin/lc https://github.com/huxulm/lc-rating/releases/download/lc-maker/lc-maker
-          chmod +x /usr/bin/lc
+          sudo wget -O /usr/bin/lc https://github.com/huxulm/lc-rating/releases/download/lc-maker/lc-maker
+          sudo chmod +x /usr/bin/lc
           lc --latest --exemask 15 --loglevel 5 --output ./public
 
       - name: Commit changes
