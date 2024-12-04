@@ -31,7 +31,7 @@ jobs:
           # download binary from github release
           sudo wget -O /usr/bin/lc https://github.com/huxulm/lc-rating/releases/download/lc-maker/lc-maker
           sudo chmod +x /usr/bin/lc
-          lc --latest --exemask 8 --loglevel 5 --out ./public
+          lc --latest --exemask 12 --loglevel 5 --out ./public
 
       - name: Commit changes
         run: |
