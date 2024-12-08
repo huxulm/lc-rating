@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】滑动窗口与双指针（定长/不定长/至多/至少/恰好/单序列/双序列/三指针）",
     "original_src": "https://leetcode.cn/circle/discuss/0viNMK",
-    "last_update": "2024-12-05 07:30:39",
+    "last_update": "2024-12-05 11:34:18",
     "sort": 0,
     "child": [
         {
@@ -1285,8 +1285,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "925. 长按键入",
+                            "title": "1385. 两个数组间的距离值",
                             "sort": 5,
+                            "src": "/find-the-distance-value-between-two-arrays/",
+                            "score": 1234.8049089605,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "925. 长按键入",
+                            "sort": 6,
                             "src": "/long-pressed-name/",
                             "score": 1271.3313760514,
                             "solution": null,
@@ -1294,7 +1302,7 @@ export default{
                         },
                         {
                             "title": "809. 情感丰富的文字",
-                            "sort": 6,
+                            "sort": 7,
                             "src": "/expressive-words/",
                             "score": 1604.9737380545,
                             "solution": null,
@@ -1302,7 +1310,7 @@ export default{
                         },
                         {
                             "title": "2337. 移动片段得到字符串",
-                            "sort": 7,
+                            "sort": 8,
                             "src": "/move-pieces-to-obtain-a-string/",
                             "score": 1693.4495728383,
                             "solution": null,
@@ -1310,7 +1318,7 @@ export default{
                         },
                         {
                             "title": "777. 在 LR 字符串中交换相邻字符",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/swap-adjacent-in-lr-string/",
                             "score": 1938.6883365596,
                             "solution": null,
@@ -1318,7 +1326,7 @@ export default{
                         },
                         {
                             "title": "844. 比较含退格的字符串",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/backspace-string-compare/",
                             "score": 1227.7906887239,
                             "solution": null,
@@ -1326,7 +1334,7 @@ export default{
                         },
                         {
                             "title": "986. 区间列表的交集",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/interval-list-intersections/",
                             "score": 1541.6944600975,
                             "solution": null,
@@ -1334,7 +1342,7 @@ export default{
                         },
                         {
                             "title": "面试题 16.06. 最小差",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/smallest-difference-lcci/",
                             "score": null,
                             "solution": null,
@@ -1342,7 +1350,7 @@ export default{
                         },
                         {
                             "title": "1537. 最大得分",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/get-the-maximum-score/",
                             "score": 1961.4987013156,
                             "solution": null,
@@ -1350,7 +1358,7 @@ export default{
                         },
                         {
                             "title": "244. 最短单词距离 II",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/shortest-word-distance-ii/",
                             "score": null,
                             "solution": null,
@@ -1358,7 +1366,7 @@ export default{
                         },
                         {
                             "title": "2838. 英雄可以获得的最大金币数",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/maximum-coins-heroes-can-collect/",
                             "score": null,
                             "solution": null,
@@ -1366,7 +1374,7 @@ export default{
                         },
                         {
                             "title": "1229. 安排会议日程",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/meeting-scheduler/",
                             "score": 1541.2260256298,
                             "solution": null,
@@ -1374,7 +1382,7 @@ export default{
                         },
                         {
                             "title": "1570. 两个稀疏向量的点积",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/dot-product-of-two-sparse-vectors/",
                             "score": null,
                             "solution": null,
@@ -1382,7 +1390,7 @@ export default{
                         },
                         {
                             "title": "1868. 两个行程编码数组的积",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/product-of-two-run-length-encoded-arrays/",
                             "score": null,
                             "solution": null,
@@ -1500,16 +1508,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1385. 两个数组间的距离值",
-                            "sort": 1,
-                            "src": "/find-the-distance-value-between-two-arrays/",
-                            "score": 1234.8049089605,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "2563. 统计公平数对的数目",
-                            "sort": 2,
+                            "sort": 1,
                             "src": "/count-the-number-of-fair-pairs/",
                             "score": 1720.7470612766,
                             "solution": null,
@@ -1517,7 +1517,7 @@ export default{
                         },
                         {
                             "title": "795. 区间子数组个数",
-                            "sort": 3,
+                            "sort": 2,
                             "src": "/number-of-subarrays-with-bounded-maximum/",
                             "score": 1817.0597073686,
                             "solution": null,
@@ -1525,7 +1525,7 @@ export default{
                         },
                         {
                             "title": "2444. 统计定界子数组的数目",
-                            "sort": 4,
+                            "sort": 3,
                             "src": "/count-subarrays-with-fixed-bounds/",
                             "score": 2092.5366031561,
                             "solution": null,
@@ -1533,7 +1533,7 @@ export default{
                         },
                         {
                             "title": "3347. 执行操作后元素的最高频率 II",
-                            "sort": 5,
+                            "sort": 4,
                             "src": "/maximum-frequency-of-an-element-after-performing-operations-ii/",
                             "score": null,
                             "solution": null,
@@ -1541,7 +1541,7 @@ export default{
                         },
                         {
                             "title": "1213. 三个有序数组的交集",
-                            "sort": 6,
+                            "sort": 5,
                             "src": "/intersection-of-three-sorted-arrays/",
                             "score": 1259.1979660519,
                             "solution": null,
