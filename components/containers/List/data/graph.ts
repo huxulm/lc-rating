@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】图论算法（DFS/BFS/拓扑排序/最短路/最小生成树/二分图/基环树/欧拉路径）",
     "original_src": "https://leetcode.cn/circle/discuss/01LUak",
-    "last_update": "2024-11-18 13:02:12",
+    "last_update": "2024-12-08 14:50:00",
     "sort": 0,
     "child": [
         {
@@ -923,7 +923,7 @@ export default{
             ]
         },
         {
-            "title": "二分图（染色判定、最大匹配）",
+            "title": "二分图染色",
             "sort": 11,
             "summary": "",
             "child": [
@@ -931,7 +931,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "部分题目做法不止一种。难度分仅供参考。<br>",
+                    "summary": "二分图的最大匹配，见下面网络流的题目。带权二分图的最大匹配，见标有「一对一」的题目。<br>",
                     "child": [
                         {
                             "title": "785. 判断二分图",
@@ -948,12 +948,43 @@ export default{
                             "score": 1794.5827898448,
                             "solution": null,
                             "isPremium": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "网络流",
+            "sort": 12,
+            "summary": "",
+            "child": [
+                {
+                    "title": "",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "summary": "由于有其他做法（比如状压 DP），难度分仅供参考。<br>**模拟费用流**<br>",
+                    "child": [
+                        {
+                            "title": "3376. 破解锁的最少时间 I",
+                            "sort": 0,
+                            "src": "/minimum-time-to-break-locks-i/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
                         },
                         {
                             "title": "1947. 最大兼容性评分和",
-                            "sort": 2,
+                            "sort": 1,
                             "src": "/maximum-compatibility-score-sum/",
                             "score": 1704.360891641,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2850. 将石头分散到网格图的最少移动次数",
+                            "sort": 2,
+                            "src": "/minimum-moves-to-spread-stones-over-grid/",
+                            "score": 2001.4515854273,
                             "solution": null,
                             "isPremium": false
                         },
@@ -982,119 +1013,80 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1595. 连通两组点的最小成本",
-                            "sort": 6,
-                            "src": "/minimum-cost-to-connect-two-groups-of-points/",
-                            "score": 2537.7965575726,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "LCP 04. 覆盖",
-                            "sort": 7,
-                            "src": "/broken-board-dominoes/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1066. 校园自行车分配 II",
-                            "sort": 8,
-                            "src": "/campus-bikes-ii/",
-                            "score": 1885.1051527272,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
-                            "title": "1820. 最多邀请的个数",
-                            "sort": 9,
-                            "src": "/maximum-number-of-accepted-invitations/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
-                            "title": "2123. 使矩阵中的 1 互不相邻的最小操作数",
-                            "sort": 10,
-                            "src": "/minimum-operations-to-remove-adjacent-ones-in-matrix/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
-                            "title": "2403. 杀死所有怪物的最短时间",
-                            "sort": 11,
-                            "src": "/minimum-time-to-kill-all-monsters/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": true
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "网络流",
-            "sort": 12,
-            "summary": "",
-            "child": [
-                {
-                    "title": "",
-                    "sort": 0,
-                    "isLeaf": true,
-                    "summary": "做法不止一种。难度分仅供参考。<br>**模拟费用流**<br>",
-                    "child": [
-                        {
-                            "title": "2850. 将石头分散到网格图的最少移动次数",
-                            "sort": 0,
-                            "src": "/minimum-moves-to-spread-stones-over-grid/",
-                            "score": 2001.4515854273,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1349. 参加考试的最大学生数",
-                            "sort": 1,
-                            "src": "/maximum-students-taking-exam/",
-                            "score": 2385.8072128533,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "2172. 数组的最大与和",
-                            "sort": 2,
-                            "src": "/maximum-and-sum-of-array/",
-                            "score": 2392.0799451298,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "3276. 选择矩阵中单元格的最大得分",
-                            "sort": 3,
+                            "sort": 6,
                             "src": "/select-cells-in-grid-with-maximum-score/",
                             "score": 2402.6213260468,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "1595. 连通两组点的最小成本",
+                            "sort": 7,
+                            "src": "/minimum-cost-to-connect-two-groups-of-points/",
+                            "score": 2537.7965575726,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "3257. 放三个车的价值之和最大 II",
-                            "sort": 4,
+                            "sort": 8,
                             "src": "/maximum-value-sum-by-placing-three-rooks-ii/",
                             "score": 2553.2367142614,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "LCP 04. 覆盖",
+                            "sort": 9,
+                            "src": "/broken-board-dominoes/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "LCP 38. 守卫城堡",
-                            "sort": 5,
+                            "sort": 10,
                             "src": "/7rLGCR/",
                             "score": null,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "1820. 最多邀请的个数",
+                            "sort": 11,
+                            "src": "/maximum-number-of-accepted-invitations/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "2403. 杀死所有怪物的最短时间",
+                            "sort": 12,
+                            "src": "/minimum-time-to-kill-all-monsters/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "1066. 校园自行车分配 II",
+                            "sort": 13,
+                            "src": "/campus-bikes-ii/",
+                            "score": 1885.1051527272,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "2123. 使矩阵中的 1 互不相邻的最小操作数",
+                            "sort": 14,
+                            "src": "/minimum-operations-to-remove-adjacent-ones-in-matrix/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
                             "title": "2463. 最小移动总距离",
-                            "sort": 6,
+                            "sort": 15,
                             "src": "/minimum-total-distance-traveled/",
                             "score": 2453.9054896968,
                             "solution": null,
