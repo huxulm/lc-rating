@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）",
     "original_src": "https://leetcode.cn/circle/discuss/SJFwQI",
-    "last_update": "2024-11-04 06:50:22",
+    "last_update": "2024-12-16 14:46:09",
     "sort": 0,
     "child": [
         {
@@ -140,7 +140,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "定义 $z[i]$ 表示 $s[i:]$ 与 $s$ 的 LCP（最长公共前缀）的长度，其中 $s[i:]$ 表示从 $s[i]$ 到 $s[n-1]$ 的子串（后缀）。<br>常用技巧是构造字符串 $\\textit{pattern}+\\textit{s}$，如果发现 $z[m+i]\\ge m$（$m$ 是 $\\textit{pattern}$ 的长度），则说明从 $s[i]$ 开始的子串与 $\\textit{pattern}$ 匹配。<br>所以上面的一些 KMP 题目（子串匹配相关的），也可以用 Z 函数解决。读者可以尝试用 Z 函数解决 <a href=\"https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/\">28. 找出字符串中第一个匹配项的下标</a>。<br>下面只列出用 Z 函数做更方便的题目。<br>",
+                    "summary": "对于字符串 $s$，定义 $z[i]$ 表示后缀 $s[i:]$ 与 $s$ 的 LCP（最长公共前缀）的长度，其中 $s[i:]$ 表示从 $s[i]$ 到 $s[n-1]$ 的子串。<br>常用技巧是构造字符串 $\\textit{pattern}+\\textit{s}$，如果发现 $z[m+i]\\ge m$（$m$ 是 $\\textit{pattern}$ 的长度），则说明从 $s[i]$ 开始的子串与 $\\textit{pattern}$ 匹配。<br>所以上面的一些 KMP 题目（子串匹配相关的），也可以用 Z 函数解决。读者可以尝试用 Z 函数解决 <a href=\"https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/\">28. 找出字符串中第一个匹配项的下标</a>。<br>**LCP 数组**<br>",
                     "child": [
                         {
                             "title": "2223. 构造字符串的总得分和",
@@ -171,6 +171,38 @@ export default{
                             "sort": 3,
                             "src": "/find-the-occurrence-of-first-almost-equal-substring/",
                             "score": 2509.3686325754,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3292. 形成目标字符串需要的最少字符串数 II",
+                            "sort": 4,
+                            "src": "/minimum-number-of-valid-strings-to-form-target-ii/",
+                            "score": 2661.736901362,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2430. 对字母串可执行的最大删除数",
+                            "sort": 5,
+                            "src": "/maximum-deletions-on-a-string/",
+                            "score": 2101.867342004,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3388. 统计数组中的美丽分割",
+                            "sort": 6,
+                            "src": "/count-beautiful-splits-in-an-array/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1977. 划分数字的方案数",
+                            "sort": 7,
+                            "src": "/number-of-ways-to-separate-numbers/",
+                            "score": 2817.267212602,
                             "solution": null,
                             "isPremium": false
                         }
@@ -544,8 +576,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2564. 子字符串异或查询",
+                            "title": "3388. 统计数组中的美丽分割",
                             "sort": 10,
+                            "src": "/count-beautiful-splits-in-an-array/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2564. 子字符串异或查询",
+                            "sort": 11,
                             "src": "/substring-xor-queries/",
                             "score": 1959.2696201953,
                             "solution": null,
@@ -553,7 +593,7 @@ export default{
                         },
                         {
                             "title": "1698. 字符串的不同子字符串个数",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/number-of-distinct-substrings-in-a-string/",
                             "score": null,
                             "solution": null,
@@ -561,7 +601,7 @@ export default{
                         },
                         {
                             "title": "1062. 最长重复子串",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/longest-repeating-substring/",
                             "score": null,
                             "solution": null,
@@ -569,7 +609,7 @@ export default{
                         },
                         {
                             "title": "3135. 通过添加或删除结尾字符来同化字符串",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/equalize-strings-by-adding-or-removing-characters-at-ends/",
                             "score": null,
                             "solution": null,

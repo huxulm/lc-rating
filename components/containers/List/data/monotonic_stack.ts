@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享｜【题单】单调栈（矩形面积/贡献法/最小字典序）",
     "original_src": "https://leetcode.cn/circle/discuss/9oZFK9",
-    "last_update": "2024-11-16 02:59:23",
+    "last_update": "2024-12-17 11:35:24",
     "sort": 0,
     "child": [
         {
@@ -212,7 +212,7 @@ export default{
             ]
         },
         {
-            "title": "矩形面积",
+            "title": "矩形",
             "sort": 2,
             "summary": "",
             "child": [
@@ -283,7 +283,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "",
+                    "summary": "**思维扩展**：<br>",
                     "child": [
                         {
                             "title": "907. 子数组的最小值之和",
@@ -322,6 +322,22 @@ export default{
                             "sort": 4,
                             "src": "/sum-of-total-strength-of-wizards/",
                             "score": 2621.1208072273,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3359. 查找最大元素不超过 K 的有序子矩阵",
+                            "sort": 5,
+                            "src": "/find-sorted-submatrices-with-maximum-element-at-most-k/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "2334. 元素值大于变化阈值的子数组",
+                            "sort": 6,
+                            "src": "/subarray-with-elements-greater-than-varying-threshold/",
+                            "score": 2381.2160234811,
                             "solution": null,
                             "isPremium": false
                         }

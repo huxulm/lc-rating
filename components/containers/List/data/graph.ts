@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】图论算法（DFS/BFS/拓扑排序/最短路/最小生成树/二分图/基环树/欧拉路径）",
     "original_src": "https://leetcode.cn/circle/discuss/01LUak",
-    "last_update": "2024-12-08 14:50:00",
+    "last_update": "2024-12-21 08:57:19",
     "sort": 0,
     "child": [
         {
@@ -88,8 +88,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3310. 移除可疑的方法",
+                            "title": "3387. 两天自由外汇交易后的最大货币数",
                             "sort": 7,
+                            "src": "/maximize-amount-after-two-days-of-conversions/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3310. 移除可疑的方法",
+                            "sort": 8,
                             "src": "/remove-methods-from-project/",
                             "score": 1710.5210499321,
                             "solution": null,
@@ -97,7 +105,7 @@ export default{
                         },
                         {
                             "title": "2685. 统计完全连通分量的数量",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/count-the-number-of-complete-components/",
                             "score": 1769.4344566771,
                             "solution": null,
@@ -105,7 +113,7 @@ export default{
                         },
                         {
                             "title": "2192. 有向无环图中一个节点的所有祖先",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/all-ancestors-of-a-node-in-a-directed-acyclic-graph/",
                             "score": 1787.8550568757,
                             "solution": null,
@@ -113,7 +121,7 @@ export default{
                         },
                         {
                             "title": "924. 尽量减少恶意软件的传播",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/minimize-malware-spread/",
                             "score": 1868.9146755896,
                             "solution": null,
@@ -121,7 +129,7 @@ export default{
                         },
                         {
                             "title": "2101. 引爆最多的炸弹",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/detonate-the-maximum-bombs/",
                             "score": 1880.0511044074,
                             "solution": null,
@@ -129,7 +137,7 @@ export default{
                         },
                         {
                             "title": "721. 账户合并",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/accounts-merge/",
                             "score": null,
                             "solution": null,
@@ -137,7 +145,7 @@ export default{
                         },
                         {
                             "title": "207. 课程表",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/course-schedule/",
                             "score": null,
                             "solution": null,
@@ -145,7 +153,7 @@ export default{
                         },
                         {
                             "title": "802. 找到最终的安全状态",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/find-eventual-safe-states/",
                             "score": 1962.3314335449,
                             "solution": null,
@@ -153,7 +161,7 @@ export default{
                         },
                         {
                             "title": "928. 尽量减少恶意软件的传播 II",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/minimize-malware-spread-ii/",
                             "score": 1985.2504512337,
                             "solution": null,
@@ -161,7 +169,7 @@ export default{
                         },
                         {
                             "title": "2092. 找出知晓秘密的所有专家",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/find-all-people-with-secret/",
                             "score": 2003.5794613668,
                             "solution": null,
@@ -169,7 +177,7 @@ export default{
                         },
                         {
                             "title": "3108. 带权图里旅途的最小代价",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/minimum-cost-walk-in-weighted-graph/",
                             "score": 2108.5054318055,
                             "solution": null,
@@ -177,7 +185,7 @@ export default{
                         },
                         {
                             "title": "261. 以图判树",
-                            "sort": 18,
+                            "sort": 19,
                             "src": "/graph-valid-tree/",
                             "score": null,
                             "solution": null,
@@ -185,7 +193,7 @@ export default{
                         },
                         {
                             "title": "323. 无向图中连通分量的数目",
-                            "sort": 19,
+                            "sort": 20,
                             "src": "/number-of-connected-components-in-an-undirected-graph/",
                             "score": null,
                             "solution": null,
@@ -627,8 +635,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2045. 到达目的地的第二短时间",
+                            "title": "3377. 使两个整数相等的数位操作",
                             "sort": 12,
+                            "src": "/digit-operations-to-make-two-integers-equal/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2045. 到达目的地的第二短时间",
+                            "sort": 13,
                             "src": "/second-minimum-time-to-reach-destination/",
                             "score": 2201.6219336792,
                             "solution": null,
@@ -636,7 +652,7 @@ export default{
                         },
                         {
                             "title": "882. 细分图中的可到达节点",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/reachable-nodes-in-subdivided-graph/",
                             "score": 2328.4294689238,
                             "solution": null,
@@ -644,7 +660,7 @@ export default{
                         },
                         {
                             "title": "2203. 得到要求路径的最小带权子图",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/minimum-weighted-subgraph-with-the-required-paths/",
                             "score": 2364.3455634374,
                             "solution": null,
@@ -652,7 +668,7 @@ export default{
                         },
                         {
                             "title": "2577. 在网格图中访问一个格子的最少时间",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/minimum-time-to-visit-a-cell-in-a-grid/",
                             "score": 2381.625583289,
                             "solution": null,
@@ -660,7 +676,7 @@ export default{
                         },
                         {
                             "title": "1928. 规定时间内到达终点的最小花费",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/minimum-cost-to-reach-destination-in-time/",
                             "score": 2413.3969129689,
                             "solution": null,
@@ -668,7 +684,7 @@ export default{
                         },
                         {
                             "title": "787. K 站中转内最便宜的航班",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/cheapest-flights-within-k-stops/",
                             "score": 1786.4753467293,
                             "solution": null,
@@ -676,7 +692,7 @@ export default{
                         },
                         {
                             "title": "2699. 修改图中的边权",
-                            "sort": 18,
+                            "sort": 19,
                             "src": "/modify-graph-edge-weights/",
                             "score": 2873.9745576413,
                             "solution": null,
@@ -684,7 +700,7 @@ export default{
                         },
                         {
                             "title": "LCP 35. 电动车游城市",
-                            "sort": 19,
+                            "sort": 20,
                             "src": "/DFPeFJ/",
                             "score": null,
                             "solution": null,
@@ -692,7 +708,7 @@ export default{
                         },
                         {
                             "title": "1810. 隐藏网格下的最小消耗路径",
-                            "sort": 20,
+                            "sort": 21,
                             "src": "/minimum-path-cost-in-a-hidden-grid/",
                             "score": null,
                             "solution": null,
@@ -700,7 +716,7 @@ export default{
                         },
                         {
                             "title": "2093. 前往目标城市的最小费用",
-                            "sort": 21,
+                            "sort": 22,
                             "src": "/minimum-cost-to-reach-city-with-discounts/",
                             "score": null,
                             "solution": null,
@@ -708,7 +724,7 @@ export default{
                         },
                         {
                             "title": "2473. 购买苹果的最低成本",
-                            "sort": 22,
+                            "sort": 23,
                             "src": "/minimum-cost-to-buy-apples/",
                             "score": null,
                             "solution": null,
@@ -716,7 +732,7 @@ export default{
                         },
                         {
                             "title": "2714. 找到最短路径的 K 次跨越",
-                            "sort": 23,
+                            "sort": 24,
                             "src": "/find-shortest-path-with-k-hops/",
                             "score": null,
                             "solution": null,
@@ -724,7 +740,7 @@ export default{
                         },
                         {
                             "title": "2737. 找到最近的标记节点",
-                            "sort": 24,
+                            "sort": 25,
                             "src": "/find-the-closest-marked-node/",
                             "score": null,
                             "solution": null,
@@ -806,7 +822,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "",
+                    "summary": "**思维扩展**：<br>",
                     "child": [
                         {
                             "title": "1584. 连接所有点的最小费用",
@@ -839,6 +855,14 @@ export default{
                             "score": 2069.4030284676,
                             "solution": null,
                             "isPremium": true
+                        },
+                        {
+                            "title": "3219. 切蛋糕的最小总开销 II",
+                            "sort": 4,
+                            "src": "/minimum-cost-for-cutting-cake-ii/",
+                            "score": 1789.3681547685,
+                            "solution": null,
+                            "isPremium": false
                         }
                     ]
                 }
@@ -917,6 +941,14 @@ export default{
                             "score": null,
                             "solution": null,
                             "isPremium": false
+                        },
+                        {
+                            "title": "3383. 施法所需最低符文数量",
+                            "sort": 3,
+                            "src": "/minimum-runes-to-add-to-cast-spell/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
                         }
                     ]
                 }
@@ -1069,8 +1101,16 @@ export default{
                             "isPremium": true
                         },
                         {
-                            "title": "1066. 校园自行车分配 II",
+                            "title": "3385. 破解锁的最少时间 II",
                             "sort": 13,
+                            "src": "/minimum-time-to-break-locks-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "1066. 校园自行车分配 II",
+                            "sort": 14,
                             "src": "/campus-bikes-ii/",
                             "score": 1885.1051527272,
                             "solution": null,
@@ -1078,7 +1118,7 @@ export default{
                         },
                         {
                             "title": "2123. 使矩阵中的 1 互不相邻的最小操作数",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/minimum-operations-to-remove-adjacent-ones-in-matrix/",
                             "score": null,
                             "solution": null,
@@ -1086,7 +1126,7 @@ export default{
                         },
                         {
                             "title": "2463. 最小移动总距离",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/minimum-total-distance-traveled/",
                             "score": 2453.9054896968,
                             "solution": null,
