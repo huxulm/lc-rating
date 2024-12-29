@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）",
     "original_src": "https://leetcode.cn/circle/discuss/mOr1u6",
-    "last_update": "2024-12-08 15:00:39",
+    "last_update": "2024-12-28 01:19:39",
     "sort": 0,
     "child": [
         {
@@ -2186,8 +2186,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3275. 第 K 近障碍物查询",
+                            "title": "703. 数据流中的第 K 大元素",
                             "sort": 7,
+                            "src": "/kth-largest-element-in-a-stream/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3275. 第 K 近障碍物查询",
+                            "sort": 8,
                             "src": "/k-th-nearest-obstacle-queries/",
                             "score": 1419.6326908404,
                             "solution": null,
@@ -2195,7 +2203,7 @@ export default{
                         },
                         {
                             "title": "1845. 座位预约管理系统",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/seat-reservation-manager/",
                             "score": 1428.6729861424,
                             "solution": null,
@@ -2203,7 +2211,7 @@ export default{
                         },
                         {
                             "title": "2208. 将数组和减半的最少操作次数",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/minimum-operations-to-halve-array-sum/",
                             "score": 1550.0978082682,
                             "solution": null,
@@ -2211,7 +2219,7 @@ export default{
                         },
                         {
                             "title": "2233. K 次增加后的最大乘积",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/maximum-product-after-k-increments/",
                             "score": 1685.5389350949,
                             "solution": null,
@@ -2219,7 +2227,7 @@ export default{
                         },
                         {
                             "title": "3296. 移山所需的最少秒数",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/minimum-number-of-seconds-to-make-mountain-height-zero/",
                             "score": 1694.7320914942,
                             "solution": null,
@@ -2227,7 +2235,7 @@ export default{
                         },
                         {
                             "title": "1942. 最小未被占据椅子的编号",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/the-number-of-the-smallest-unoccupied-chair/",
                             "score": 1695.2832486322,
                             "solution": null,
@@ -2235,7 +2243,7 @@ export default{
                         },
                         {
                             "title": "1801. 积压订单中的订单总数",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/number-of-orders-in-the-backlog/",
                             "score": 1711.1205064321,
                             "solution": null,
@@ -2243,7 +2251,7 @@ export default{
                         },
                         {
                             "title": "2406. 将区间分为最少组数",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/divide-intervals-into-minimum-number-of-groups/",
                             "score": 1713.3954468582,
                             "solution": null,
@@ -2251,7 +2259,7 @@ export default{
                         },
                         {
                             "title": "2462. 雇佣 K 位工人的总代价",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/total-cost-to-hire-k-workers/",
                             "score": 1763.6404758359,
                             "solution": null,
@@ -2259,7 +2267,7 @@ export default{
                         },
                         {
                             "title": "1834. 单线程 CPU",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/single-threaded-cpu/",
                             "score": 1797.7466000366,
                             "solution": null,
@@ -2267,7 +2275,7 @@ export default{
                         },
                         {
                             "title": "1792. 最大平均通过率",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/maximum-average-pass-ratio/",
                             "score": 1817.9978644712,
                             "solution": null,
@@ -2275,7 +2283,7 @@ export default{
                         },
                         {
                             "title": "2931. 购买物品的最大开销",
-                            "sort": 18,
+                            "sort": 19,
                             "src": "/maximum-spending-after-buying-items/",
                             "score": 1822.3170524016,
                             "solution": null,
@@ -2283,7 +2291,7 @@ export default{
                         },
                         {
                             "title": "1882. 使用服务器处理任务",
-                            "sort": 19,
+                            "sort": 20,
                             "src": "/process-tasks-using-servers/",
                             "score": 1979.1112273597,
                             "solution": null,
@@ -2291,7 +2299,7 @@ export default{
                         },
                         {
                             "title": "2402. 会议室 III",
-                            "sort": 20,
+                            "sort": 21,
                             "src": "/meeting-rooms-iii/",
                             "score": 2092.8943149547,
                             "solution": null,
@@ -2299,7 +2307,7 @@ export default{
                         },
                         {
                             "title": "253. 会议室 II",
-                            "sort": 21,
+                            "sort": 22,
                             "src": "/meeting-rooms-ii/",
                             "score": null,
                             "solution": null,
@@ -2307,7 +2315,7 @@ export default{
                         },
                         {
                             "title": "1167. 连接木棍的最低费用",
-                            "sort": 22,
+                            "sort": 23,
                             "src": "/minimum-cost-to-connect-sticks/",
                             "score": 1481.5701319876,
                             "solution": null,
@@ -2458,8 +2466,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "218. 天际线问题",
+                            "title": "3399. 字符相同的最短子字符串 II",
                             "sort": 17,
+                            "src": "/smallest-substring-with-identical-characters-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "218. 天际线问题",
+                            "sort": 18,
                             "src": "/the-skyline-problem/",
                             "score": null,
                             "solution": null,
@@ -2467,7 +2483,7 @@ export default{
                         },
                         {
                             "title": "407. 接雨水 II",
-                            "sort": 18,
+                            "sort": 19,
                             "src": "/trapping-rain-water-ii/",
                             "score": null,
                             "solution": null,
@@ -2475,7 +2491,7 @@ export default{
                         },
                         {
                             "title": "2940. 找到 Alice 和 Bob 可以相遇的建筑",
-                            "sort": 19,
+                            "sort": 20,
                             "src": "/find-building-where-alice-and-bob-can-meet/",
                             "score": 2327.4743300299,
                             "solution": null,
@@ -2483,7 +2499,7 @@ export default{
                         },
                         {
                             "title": "2589. 完成所有任务的最少时间",
-                            "sort": 20,
+                            "sort": 21,
                             "src": "/minimum-time-to-complete-all-tasks/",
                             "score": 2380.5983169295,
                             "solution": null,
@@ -2491,7 +2507,7 @@ export default{
                         },
                         {
                             "title": "3266. K 次乘运算后的最终数组 II",
-                            "sort": 21,
+                            "sort": 22,
                             "src": "/final-array-state-after-k-multiplication-operations-ii/",
                             "score": 2508.6766880695,
                             "solution": null,
@@ -2499,7 +2515,7 @@ export default{
                         },
                         {
                             "title": "1675. 数组的最小偏移量",
-                            "sort": 22,
+                            "sort": 23,
                             "src": "/minimize-deviation-in-array/",
                             "score": 2533.3027905062,
                             "solution": null,
@@ -2507,7 +2523,7 @@ export default{
                         },
                         {
                             "title": "2617. 网格图中最少访问的格子数",
-                            "sort": 23,
+                            "sort": 24,
                             "src": "/minimum-number-of-visited-cells-in-a-grid/",
                             "score": 2581.9961985753,
                             "solution": null,
@@ -2515,7 +2531,7 @@ export default{
                         },
                         {
                             "title": "2532. 过桥的时间",
-                            "sort": 24,
+                            "sort": 25,
                             "src": "/time-to-cross-a-bridge/",
                             "score": 2588.8752130913,
                             "solution": null,
@@ -2523,7 +2539,7 @@ export default{
                         },
                         {
                             "title": "LCP 33. 蓄水",
-                            "sort": 25,
+                            "sort": 26,
                             "src": "/o8SXZn/",
                             "score": null,
                             "solution": null,
@@ -2531,7 +2547,7 @@ export default{
                         },
                         {
                             "title": "1199. 建造街区的最短时间",
-                            "sort": 26,
+                            "sort": 27,
                             "src": "/minimum-time-to-build-blocks/",
                             "score": 2250.2578740769,
                             "solution": null,
@@ -2818,16 +2834,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "703. 数据流中的第 K 大元素",
-                            "sort": 3,
-                            "src": "/kth-largest-element-in-a-stream/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "1825. 求出 MK 平均值",
-                            "sort": 4,
+                            "sort": 3,
                             "src": "/finding-mk-average/",
                             "score": 2395.8765531206,
                             "solution": null,
@@ -2835,7 +2843,7 @@ export default{
                         },
                         {
                             "title": "3013. 将数组分成最小总代价的子数组 II",
-                            "sort": 5,
+                            "sort": 4,
                             "src": "/divide-an-array-into-subarrays-with-minimum-cost-ii/",
                             "score": 2540.438150736,
                             "solution": null,
@@ -2843,7 +2851,7 @@ export default{
                         },
                         {
                             "title": "3321. 计算子数组的 x-sum II",
-                            "sort": 6,
+                            "sort": 5,
                             "src": "/find-x-sum-of-all-k-long-subarrays-ii/",
                             "score": 2598.4563109814,
                             "solution": null,
@@ -2851,7 +2859,7 @@ export default{
                         },
                         {
                             "title": "LCP 24. 数字游戏",
-                            "sort": 7,
+                            "sort": 6,
                             "src": "/5TxKeK/",
                             "score": null,
                             "solution": null,
@@ -2859,7 +2867,7 @@ export default{
                         },
                         {
                             "title": "3369. 设计数组统计跟踪器",
-                            "sort": 8,
+                            "sort": 7,
                             "src": "/design-an-array-statistics-tracker/",
                             "score": null,
                             "solution": null,
