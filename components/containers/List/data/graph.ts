@@ -91,7 +91,7 @@ export default{
                             "title": "3387. 两天自由外汇交易后的最大货币数",
                             "sort": 7,
                             "src": "/maximize-amount-after-two-days-of-conversions/",
-                            "score": null,
+                            "score": 1787.5923894417,
                             "solution": null,
                             "isPremium": false
                         },
@@ -638,7 +638,7 @@ export default{
                             "title": "3377. 使两个整数相等的数位操作",
                             "sort": 12,
                             "src": "/digit-operations-to-make-two-integers-equal/",
-                            "score": null,
+                            "score": 2186.3802199168,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1000,7 +1000,7 @@ export default{
                             "title": "3376. 破解锁的最少时间 I",
                             "sort": 0,
                             "src": "/minimum-time-to-break-locks-i/",
-                            "score": null,
+                            "score": 1793.2112436729,
                             "solution": null,
                             "isPremium": false
                         },

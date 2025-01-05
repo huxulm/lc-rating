@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）",
     "original_src": "https://leetcode.cn/circle/discuss/mOr1u6",
-    "last_update": "2024-12-28 01:19:39",
+    "last_update": "2025-01-04 06:05:34",
     "sort": 0,
     "child": [
         {
@@ -48,8 +48,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "219. 存在重复元素 II",
+                            "title": "2001. 可互换矩形的组数",
                             "sort": 2,
+                            "src": "/number-of-pairs-of-interchangeable-rectangles/",
+                            "score": 1435.9559888935,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "219. 存在重复元素 II",
+                            "sort": 3,
                             "src": "/contains-duplicate-ii/",
                             "score": null,
                             "solution": null,
@@ -57,7 +65,7 @@ export default{
                         },
                         {
                             "title": "121. 买卖股票的最佳时机",
-                            "sort": 3,
+                            "sort": 4,
                             "src": "/best-time-to-buy-and-sell-stock/",
                             "score": null,
                             "solution": null,
@@ -65,7 +73,7 @@ export default{
                         },
                         {
                             "title": "2815. 数组中的最大数对和",
-                            "sort": 4,
+                            "sort": 5,
                             "src": "/max-pair-sum-in-an-array/",
                             "score": 1295.0947625986,
                             "solution": null,
@@ -73,7 +81,7 @@ export default{
                         },
                         {
                             "title": "2342. 数位和相等数对的最大和",
-                            "sort": 5,
+                            "sort": 6,
                             "src": "/max-sum-of-a-pair-with-equal-sum-of-digits/",
                             "score": 1308.9617729374,
                             "solution": null,
@@ -81,7 +89,7 @@ export default{
                         },
                         {
                             "title": "1679. K 和数对的最大数目",
-                            "sort": 6,
+                            "sort": 7,
                             "src": "/max-number-of-k-sum-pairs/",
                             "score": 1345.737168609,
                             "solution": null,
@@ -89,7 +97,7 @@ export default{
                         },
                         {
                             "title": "2260. 必须拿起的最小连续卡牌数",
-                            "sort": 7,
+                            "sort": 8,
                             "src": "/minimum-consecutive-cards-to-pick-up/",
                             "score": 1364.6787168645,
                             "solution": null,
@@ -97,7 +105,7 @@ export default{
                         },
                         {
                             "title": "1010. 总持续时间可被 60 整除的歌曲",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/pairs-of-songs-with-total-durations-divisible-by-60/",
                             "score": 1377.1913915125,
                             "solution": null,
@@ -105,7 +113,7 @@ export default{
                         },
                         {
                             "title": "3185. 构成整天的下标对数目 II",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/count-pairs-that-form-a-complete-day-ii/",
                             "score": 1385.2857255388,
                             "solution": null,
@@ -113,7 +121,7 @@ export default{
                         },
                         {
                             "title": "2748. 美丽下标对的数目",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/number-of-beautiful-pairs/",
                             "score": 1301.1576743638,
                             "solution": null,
@@ -121,17 +129,9 @@ export default{
                         },
                         {
                             "title": "2874. 有序三元组中的最大值 II",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/maximum-value-of-an-ordered-triplet-ii/",
                             "score": 1583.212966224,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "454. 四数相加 II",
-                            "sort": 12,
-                            "src": "/4sum-ii/",
-                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },
@@ -176,8 +176,24 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3267. 统计近似相等数对 II",
+                            "title": "1995. 统计特殊四元组",
                             "sort": 18,
+                            "src": "/count-special-quadruplets/",
+                            "score": 1352.1791099256,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3404. 统计特殊子序列的数目",
+                            "sort": 19,
+                            "src": "/count-special-subsequences/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3267. 统计近似相等数对 II",
+                            "sort": 20,
                             "src": "/count-almost-equal-pairs-ii/",
                             "score": 2545.1080433595,
                             "solution": null,
@@ -185,7 +201,7 @@ export default{
                         },
                         {
                             "title": "1214. 查找两棵二叉搜索树之和",
-                            "sort": 19,
+                            "sort": 21,
                             "src": "/two-sum-bsts/",
                             "score": 1389.0328392117,
                             "solution": null,
@@ -193,7 +209,7 @@ export default{
                         },
                         {
                             "title": "2613. 美数对",
-                            "sort": 20,
+                            "sort": 22,
                             "src": "/beautiful-pairs/",
                             "score": null,
                             "solution": null,
@@ -201,7 +217,7 @@ export default{
                         },
                         {
                             "title": "2964. 可被整除的三元组数量",
-                            "sort": 21,
+                            "sort": 23,
                             "src": "/number-of-divisible-triplet-sums/",
                             "score": null,
                             "solution": null,
@@ -209,7 +225,7 @@ export default{
                         },
                         {
                             "title": "2441. 与对应负数同时存在的最大正整数",
-                            "sort": 22,
+                            "sort": 24,
                             "src": "/largest-positive-integer-that-exists-with-its-negative/",
                             "score": 1167.647122501,
                             "solution": null,
@@ -217,25 +233,25 @@ export default{
                         },
                         {
                             "title": "面试题 16.24. 数对和",
-                            "sort": 23,
+                            "sort": 25,
                             "src": "/pairs-with-sum-lcci/",
                             "score": null,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "1995. 统计特殊四元组",
-                            "sort": 24,
-                            "src": "/count-special-quadruplets/",
-                            "score": 1352.1791099256,
+                            "title": "454. 四数相加 II",
+                            "sort": 26,
+                            "src": "/4sum-ii/",
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },
                         {
                             "title": "3371. 识别数组中的最大异常值",
-                            "sort": 25,
+                            "sort": 27,
                             "src": "/identify-the-largest-outlier-in-an-array/",
-                            "score": null,
+                            "score": 1643.7450467383,
                             "solution": null,
                             "isPremium": false
                         }
@@ -410,7 +426,7 @@ export default{
                             "title": "3361. 两个字符串的切换距离",
                             "sort": 6,
                             "src": "/shift-distance-between-two-strings/",
-                            "score": null,
+                            "score": 1553.2232121523,
                             "solution": null,
                             "isPremium": false
                         },
@@ -546,7 +562,7 @@ export default{
                             "title": "3381. 长度可被 K 整除的子数组的最大元素和",
                             "sort": 12,
                             "src": "/maximum-subarray-sum-with-length-divisible-by-k/",
-                            "score": null,
+                            "score": 1943.095489145,
                             "solution": null,
                             "isPremium": false
                         },
@@ -650,7 +666,7 @@ export default{
                             "title": "3364. 最小正和子数组",
                             "sort": 25,
                             "src": "/minimum-positive-sum-subarray/",
-                            "score": null,
+                            "score": 1300.5576941005,
                             "solution": null,
                             "isPremium": false
                         }
@@ -1025,7 +1041,7 @@ export default{
                             "title": "3355. 零数组变换 I",
                             "sort": 5,
                             "src": "/zero-array-transformation-i/",
-                            "score": null,
+                            "score": 1591.445677589,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1081,7 +1097,7 @@ export default{
                             "title": "3355. 零数组变换 II",
                             "sort": 12,
                             "src": "/zero-array-transformation-ii/",
-                            "score": null,
+                            "score": 1591.445677589,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1153,7 +1169,7 @@ export default{
                             "title": "3347. 执行操作后元素的最高频率 II",
                             "sort": 21,
                             "src": "/maximum-frequency-of-an-element-after-performing-operations-ii/",
-                            "score": null,
+                            "score": 2155.599241516,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1185,7 +1201,7 @@ export default{
                             "title": "3362. 零数组变换 III",
                             "sort": 25,
                             "src": "/zero-array-transformation-iii/",
-                            "score": null,
+                            "score": 2423.8553548566,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2469,7 +2485,7 @@ export default{
                             "title": "3399. 字符相同的最短子字符串 II",
                             "sort": 17,
                             "src": "/smallest-substring-with-identical-characters-ii/",
-                            "score": null,
+                            "score": 2375.9062896615,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2725,7 +2741,7 @@ export default{
                             "title": "3362. 零数组变换 III",
                             "sort": 4,
                             "src": "/zero-array-transformation-iii/",
-                            "score": null,
+                            "score": 2423.8553548566,
                             "solution": null,
                             "isPremium": false
                         },
@@ -3523,7 +3539,7 @@ export default{
                             "title": "3378. 统计最小公倍数图中的连通块数目",
                             "sort": 3,
                             "src": "/count-connected-components-in-lcm-graph/",
-                            "score": null,
+                            "score": 2532.0192714689,
                             "solution": null,
                             "isPremium": false
                         },
@@ -3762,7 +3778,7 @@ export default{
                             "title": "3382. 用点构造面积最大的矩形 II",
                             "sort": 14,
                             "src": "/maximum-area-rectangle-with-point-constraints-ii/",
-                            "score": null,
+                            "score": 2722.8634460016,
                             "solution": null,
                             "isPremium": false
                         },
@@ -4185,7 +4201,7 @@ export default{
                             "title": "3382. 用点构造面积最大的矩形 II",
                             "sort": 10,
                             "src": "/maximum-area-rectangle-with-point-constraints-ii/",
-                            "score": null,
+                            "score": 2722.8634460016,
                             "solution": null,
                             "isPremium": false
                         }

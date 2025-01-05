@@ -360,7 +360,7 @@ export default{
                             "title": "3363. 最多可收集的水果数目",
                             "sort": 8,
                             "src": "/find-the-maximum-number-of-fruits-collected/",
-                            "score": null,
+                            "score": 2404.2535453982,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1611,7 +1611,7 @@ export default{
                             "title": "3389. 使字符频率相等的最少操作次数",
                             "sort": 9,
                             "src": "/minimum-operations-to-make-character-frequencies-equal/",
-                            "score": null,
+                            "score": 2940.1641355626,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1691,7 +1691,7 @@ export default{
                             "title": "3351. 好子序列的元素之和",
                             "sort": 6,
                             "src": "/sum-of-good-subsequences/",
-                            "score": null,
+                            "score": 2085.8172663766,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1955,7 +1955,7 @@ export default{
                             "title": "3366. 最小数组和",
                             "sort": 11,
                             "src": "/minimum-array-sum/",
-                            "score": null,
+                            "score": 2040.219381217,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2465,7 +2465,7 @@ export default{
                             "title": "3376. 破解锁的最少时间 I",
                             "sort": 3,
                             "src": "/minimum-time-to-break-locks-i/",
-                            "score": null,
+                            "score": 1793.2112436729,
                             "solution": null,
                             "isPremium": false
                         },
@@ -3008,7 +3008,7 @@ export default{
                             "title": "3352. 统计小于 N 的 K 可约简整数",
                             "sort": 13,
                             "src": "/count-k-reducible-numbers-less-than-n/",
-                            "score": null,
+                            "score": 2450.5982290839,
                             "solution": null,
                             "isPremium": false
                         },
@@ -3024,7 +3024,7 @@ export default{
                             "title": "3348. 最小可整除数位乘积 II",
                             "sort": 15,
                             "src": "/smallest-divisible-digit-product-ii/",
-                            "score": null,
+                            "score": 3101.4829146106,
                             "solution": null,
                             "isPremium": false
                         },
@@ -3694,7 +3694,7 @@ export default{
                             "title": "3367. 移除边之后的权重最大和",
                             "sort": 4,
                             "src": "/maximize-sum-of-weights-after-edge-removals/",
-                            "score": null,
+                            "score": 2601.7404336762,
                             "solution": null,
                             "isPremium": false
                         },
@@ -4074,7 +4074,7 @@ export default{
                             "title": "3348. 最小可整除数位乘积 II",
                             "sort": 7,
                             "src": "/smallest-divisible-digit-product-ii/",
-                            "score": null,
+                            "score": 3101.4829146106,
                             "solution": null,
                             "isPremium": false
                         },
@@ -4185,7 +4185,7 @@ export default{
                             "title": "3354. 使数组元素等于零",
                             "sort": 9,
                             "src": "/make-array-elements-equal-to-zero/",
-                            "score": null,
+                            "score": 1397.2898626243,
                             "solution": null,
                             "isPremium": false
                         },
@@ -4512,7 +4512,7 @@ export default{
                             "title": "3377. 使两个整数相等的数位操作",
                             "sort": 5,
                             "src": "/digit-operations-to-make-two-integers-equal/",
-                            "score": null,
+                            "score": 2186.3802199168,
                             "solution": null,
                             "isPremium": false
                         }

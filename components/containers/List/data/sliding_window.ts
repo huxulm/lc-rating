@@ -1535,7 +1535,7 @@ export default{
                             "title": "3347. 执行操作后元素的最高频率 II",
                             "sort": 4,
                             "src": "/maximum-frequency-of-an-element-after-performing-operations-ii/",
-                            "score": null,
+                            "score": 2155.599241516,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1678,7 +1678,7 @@ export default{
                             "title": "3350. 检测相邻递增子数组 II",
                             "sort": 14,
                             "src": "/adjacent-increasing-subarrays-detection-ii/",
-                            "score": null,
+                            "score": 1600.0334724549,
                             "solution": null,
                             "isPremium": false
                         },

@@ -194,7 +194,7 @@ export default{
                             "title": "3388. 统计数组中的美丽分割",
                             "sort": 6,
                             "src": "/count-beautiful-splits-in-an-array/",
-                            "score": null,
+                            "score": 2364.6818184488,
                             "solution": null,
                             "isPremium": false
                         },
@@ -579,7 +579,7 @@ export default{
                             "title": "3388. 统计数组中的美丽分割",
                             "sort": 10,
                             "src": "/count-beautiful-splits-in-an-array/",
-                            "score": null,
+                            "score": 2364.6818184488,
                             "solution": null,
                             "isPremium": false
                         },
