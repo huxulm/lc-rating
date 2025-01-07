@@ -9,7 +9,7 @@
 .pb-content {
     display: grid;
     grid-area: content;
-    font-family: '宋体';
+    font-family: '宋体', 'SimSun', 'STSong', 'sans-serif';
 }
 
 @include media-breakpoint-down(md) {

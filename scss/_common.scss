@@ -331,7 +331,7 @@ td,
   left: 5px;
 }
 .ff-st {
-  font-family: '宋体';
+  font-family: 'SimSun', 'STSong', '宋体', 'sans-serif';
 }
 .ff-ht {
   font-family: '黑体', '微软雅黑';
@@ -360,4 +360,8 @@ td,
 }
 .rating-color-6 {
   color: var(--rating-color-6)
+}
+.rating-color-7 {
+  color: var(--rating-color-6);
+  font-weight: 900;
 }
