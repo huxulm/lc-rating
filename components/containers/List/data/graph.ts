@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】图论算法（DFS/BFS/拓扑排序/最短路/最小生成树/二分图/基环树/欧拉路径）",
     "original_src": "https://leetcode.cn/circle/discuss/01LUak",
-    "last_update": "2024-12-21 08:57:19",
+    "last_update": "2025-01-07 05:46:44",
     "sort": 0,
     "child": [
         {
@@ -579,10 +579,10 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3341. 到达最后一个房间的最少时间 II",
+                            "title": "3342. 到达最后一个房间的最少时间 II",
                             "sort": 5,
                             "src": "/find-minimum-time-to-reach-last-room-ii/",
-                            "score": 1721.4793821913,
+                            "score": 1861.7421056879,
                             "solution": null,
                             "isPremium": false
                         },

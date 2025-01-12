@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】位运算（基础/性质/拆位/试填/恒等式/思维）",
     "original_src": "https://leetcode.cn/circle/discuss/dHn9Vk",
-    "last_update": "2024-10-30 07:52:39",
+    "last_update": "2025-01-10 12:03:56",
     "sort": 0,
     "child": [
         {
@@ -32,8 +32,16 @@ export default{
                     "summary": "",
                     "child": [
                         {
-                            "title": "3226. 使两个整数相等的位更改次数",
+                            "title": "3370. 仅含置位位的最小整数",
                             "sort": 0,
+                            "src": "/smallest-number-with-all-set-bits/",
+                            "score": 1198.5574489527,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3226. 使两个整数相等的位更改次数",
+                            "sort": 1,
                             "src": "/number-of-bit-changes-to-make-two-integers-equal/",
                             "score": 1247.3575940876,
                             "solution": null,
@@ -41,7 +49,7 @@ export default{
                         },
                         {
                             "title": "1356. 根据数字二进制下 1 的数目排序",
-                            "sort": 1,
+                            "sort": 2,
                             "src": "/sort-integers-by-the-number-of-1-bits/",
                             "score": 1257.7082143289,
                             "solution": null,
@@ -49,7 +57,7 @@ export default{
                         },
                         {
                             "title": "461. 汉明距离",
-                            "sort": 2,
+                            "sort": 3,
                             "src": "/hamming-distance/",
                             "score": null,
                             "solution": null,
@@ -57,7 +65,7 @@ export default{
                         },
                         {
                             "title": "2220. 转换数字的最少位翻转次数",
-                            "sort": 3,
+                            "sort": 4,
                             "src": "/minimum-bit-flips-to-convert-number/",
                             "score": 1282.1502428906,
                             "solution": null,
@@ -65,7 +73,7 @@ export default{
                         },
                         {
                             "title": "476. 数字的补数",
-                            "sort": 4,
+                            "sort": 5,
                             "src": "/number-complement/",
                             "score": null,
                             "solution": null,
@@ -73,7 +81,7 @@ export default{
                         },
                         {
                             "title": "1009. 十进制整数的反码",
-                            "sort": 5,
+                            "sort": 6,
                             "src": "/complement-of-base-10-integer/",
                             "score": 1234.7084656358,
                             "solution": null,
@@ -81,7 +89,7 @@ export default{
                         },
                         {
                             "title": "868. 二进制间距",
-                            "sort": 6,
+                            "sort": 7,
                             "src": "/binary-gap/",
                             "score": 1307.2991245272,
                             "solution": null,
@@ -89,7 +97,7 @@ export default{
                         },
                         {
                             "title": "3211. 生成不含相邻零的二进制字符串",
-                            "sort": 7,
+                            "sort": 8,
                             "src": "/generate-binary-strings-without-adjacent-zeros/",
                             "score": 1352.5455214631,
                             "solution": null,
@@ -97,7 +105,7 @@ export default{
                         },
                         {
                             "title": "2917. 找出数组中的 K-or 值",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/find-the-k-or-of-an-array/",
                             "score": 1388.5363323598,
                             "solution": null,
@@ -105,7 +113,7 @@ export default{
                         },
                         {
                             "title": "693. 交替位二进制数",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/binary-number-with-alternating-bits/",
                             "score": null,
                             "solution": null,
@@ -113,7 +121,7 @@ export default{
                         },
                         {
                             "title": "2657. 找到两个数组的前缀公共数组",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/find-the-prefix-common-array-of-two-arrays/",
                             "score": 1304.1180812515,
                             "solution": null,
@@ -121,7 +129,7 @@ export default{
                         },
                         {
                             "title": "231. 2 的幂",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/power-of-two/",
                             "score": null,
                             "solution": null,
@@ -129,7 +137,7 @@ export default{
                         },
                         {
                             "title": "342. 4 的幂",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/power-of-four/",
                             "score": null,
                             "solution": null,
@@ -137,7 +145,7 @@ export default{
                         },
                         {
                             "title": "191. 位 1 的个数",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/number-of-1-bits/",
                             "score": null,
                             "solution": null,
@@ -145,7 +153,7 @@ export default{
                         },
                         {
                             "title": "2595. 奇偶位数",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/number-of-even-and-odd-bits/",
                             "score": 1206.5675296817,
                             "solution": null,
@@ -153,7 +161,7 @@ export default{
                         },
                         {
                             "title": "338. 比特位计数",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/counting-bits/",
                             "score": null,
                             "solution": null,
@@ -366,18 +374,18 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3133. 数组最后一个元素的最小值",
+                            "title": "2680. 最大或值",
                             "sort": 5,
-                            "src": "/minimum-array-end/",
-                            "score": 1934.7806230835,
+                            "src": "/maximum-or/",
+                            "score": 1912.1926699881,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "2680. 最大或值",
+                            "title": "3133. 数组最后一个元素的最小值",
                             "sort": 6,
-                            "src": "/maximum-or/",
-                            "score": 1912.1926699881,
+                            "src": "/minimum-array-end/",
+                            "score": 1934.7806230835,
                             "solution": null,
                             "isPremium": false
                         },
@@ -642,16 +650,8 @@ export default{
                     "summary": "",
                     "child": [
                         {
-                            "title": "3315. 构造最小位运算数组 II",
-                            "sort": 0,
-                            "src": "/construct-the-minimum-bitwise-array-ii/",
-                            "score": 1714.7182832168,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "2546. 执行逐位运算使字符串相等",
-                            "sort": 1,
+                            "sort": 0,
                             "src": "/apply-bitwise-operations-to-make-strings-equal/",
                             "score": 1604.6299874552,
                             "solution": null,
@@ -659,7 +659,7 @@ export default{
                         },
                         {
                             "title": "1558. 得到目标数组的最少函数调用次数",
-                            "sort": 2,
+                            "sort": 1,
                             "src": "/minimum-numbers-of-function-calls-to-make-target-array/",
                             "score": 1637.0082208814,
                             "solution": null,
@@ -667,9 +667,17 @@ export default{
                         },
                         {
                             "title": "2571. 将整数减少到零需要的最少操作数",
-                            "sort": 3,
+                            "sort": 2,
                             "src": "/minimum-operations-to-reduce-an-integer-to-0/",
                             "score": 1649.2000410344,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3315. 构造最小位运算数组 II",
+                            "sort": 3,
+                            "src": "/construct-the-minimum-bitwise-array-ii/",
+                            "score": 1714.7182832168,
                             "solution": null,
                             "isPremium": false
                         },
@@ -921,8 +929,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3141. 最大汉明距离",
+                            "title": "751. IP 到 CIDR",
                             "sort": 20,
+                            "src": "/ip-to-cidr/",
+                            "score": 2025.0377429311,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "3141. 最大汉明距离",
+                            "sort": 21,
                             "src": "/maximum-hamming-distances/",
                             "score": null,
                             "solution": null,
