@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）",
     "original_src": "https://leetcode.cn/circle/discuss/IYT3ss",
-    "last_update": "2025-01-01 05:49:50",
+    "last_update": "2025-01-20 04:46:38",
     "sort": 0,
     "child": [
         {
@@ -1147,6 +1147,54 @@ export default{
                             "score": null,
                             "solution": null,
                             "isPremium": true
+                        }
+                    ]
+                },
+                {
+                    "title": "§2.5 贡献法",
+                    "sort": 4,
+                    "isLeaf": true,
+                    "summary": "",
+                    "child": [
+                        {
+                            "title": "2063. 所有子字符串中的元音",
+                            "sort": 0,
+                            "src": "/vowels-of-all-substrings/",
+                            "score": 1663.3912882908,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1588. 所有奇数长度子数组的和",
+                            "sort": 1,
+                            "src": "/sum-of-all-odd-length-subarrays/",
+                            "score": 1408.7923640745,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2681. 英雄的力量",
+                            "sort": 2,
+                            "src": "/power-of-heroes/",
+                            "score": 2060.0818824378,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3428. 最多 K 个元素的子序列的最值之和",
+                            "sort": 3,
+                            "src": "/maximum-and-minimum-sums-of-at-most-size-k-subsequences/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3426. 所有安放棋子方案的曼哈顿距离",
+                            "sort": 4,
+                            "src": "/manhattan-distances-of-all-arrangements-of-pieces/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
                         }
                     ]
                 }

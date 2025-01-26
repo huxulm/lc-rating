@@ -1,9 +1,9 @@
 import ProblemCategory from "@components/ProblemCatetory";
 
 export default{
-    "title": "分享丨【题单】滑动窗口与双指针（定长/不定长/至多/至少/恰好/单序列/双序列/三指针）",
+    "title": "分享丨【题单】滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）",
     "original_src": "https://leetcode.cn/circle/discuss/0viNMK",
-    "last_update": "2024-12-16 13:17:46",
+    "last_update": "2025-01-24 05:11:37",
     "sort": 0,
     "child": [
         {
@@ -496,8 +496,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2968. 执行操作使频率分数最大",
+                            "title": "3411. 最长乘积等价子数组",
                             "sort": 21,
+                            "src": "/maximum-subarray-with-equal-products/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2968. 执行操作使频率分数最大",
+                            "sort": 22,
                             "src": "/apply-operations-to-maximize-frequency-score/",
                             "score": 2444.2791027022,
                             "solution": null,
@@ -505,15 +513,23 @@ export default{
                         },
                         {
                             "title": "1040. 移动石子直到连续 II",
-                            "sort": 22,
+                            "sort": 23,
                             "src": "/moving-stones-until-consecutive-ii/",
                             "score": 2455.8244137907,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "3413. 收集连续 K 个袋子可以获得的最多硬币数量",
+                            "sort": 24,
+                            "src": "/maximum-coins-from-k-consecutive-bags/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "395. 至少有 K 个重复字符的最长子串",
-                            "sort": 23,
+                            "sort": 25,
                             "src": "/longest-substring-with-at-least-k-repeating-characters/",
                             "score": null,
                             "solution": null,
@@ -521,7 +537,7 @@ export default{
                         },
                         {
                             "title": "1763. 最长的美好子字符串",
-                            "sort": 24,
+                            "sort": 26,
                             "src": "/longest-nice-substring/",
                             "score": 1521.7133617698,
                             "solution": null,
@@ -529,7 +545,7 @@ export default{
                         },
                         {
                             "title": "487. 最大连续 1 的个数 II",
-                            "sort": 25,
+                            "sort": 27,
                             "src": "/max-consecutive-ones-ii/",
                             "score": null,
                             "solution": null,
@@ -537,7 +553,7 @@ export default{
                         },
                         {
                             "title": "159. 至多包含两个不同字符的最长子串",
-                            "sort": 26,
+                            "sort": 28,
                             "src": "/longest-substring-with-at-most-two-distinct-characters/",
                             "score": null,
                             "solution": null,
@@ -545,7 +561,7 @@ export default{
                         },
                         {
                             "title": "340. 至多包含 K 个不同字符的最长子串",
-                            "sort": 27,
+                            "sort": 29,
                             "src": "/longest-substring-with-at-most-k-distinct-characters/",
                             "score": null,
                             "solution": null,
@@ -592,16 +608,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1574. 删除最短的子数组使剩余数组有序",
-                            "sort": 4,
-                            "src": "/shortest-subarray-to-be-removed-to-make-array-sorted/",
-                            "score": 1931.7335479582,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "76. 最小覆盖子串",
-                            "sort": 5,
+                            "sort": 4,
                             "src": "/minimum-window-substring/",
                             "score": null,
                             "solution": null,
@@ -609,7 +617,7 @@ export default{
                         },
                         {
                             "title": "632. 最小区间",
-                            "sort": 6,
+                            "sort": 5,
                             "src": "/smallest-range-covering-elements-from-k-lists/",
                             "score": null,
                             "solution": null,
@@ -1110,8 +1118,16 @@ export default{
                     "summary": "两个指针的移动方向相同（都向右，或者都向左）。<br>相似题目：<br>",
                     "child": [
                         {
-                            "title": "2972. 统计移除递增子数组的数目 II",
+                            "title": "1574. 删除最短的子数组使剩余数组有序",
                             "sort": 0,
+                            "src": "/shortest-subarray-to-be-removed-to-make-array-sorted/",
+                            "score": 1931.7335479582,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2972. 统计移除递增子数组的数目 II",
+                            "sort": 1,
                             "src": "/count-the-number-of-incremovable-subarrays-ii/",
                             "score": 2152.8032001597,
                             "solution": null,
@@ -1119,7 +1135,7 @@ export default{
                         },
                         {
                             "title": "2122. 还原原数组",
-                            "sort": 1,
+                            "sort": 2,
                             "src": "/recover-the-original-array/",
                             "score": 2158.8988728254,
                             "solution": null,
@@ -1127,7 +1143,7 @@ export default{
                         },
                         {
                             "title": "3323. 通过插入区间最小化连通组",
-                            "sort": 2,
+                            "sort": 3,
                             "src": "/minimize-connected-groups-by-inserting-interval/",
                             "score": null,
                             "solution": null,
@@ -1135,7 +1151,7 @@ export default{
                         },
                         {
                             "title": "581. 最短无序连续子数组",
-                            "sort": 3,
+                            "sort": 4,
                             "src": "/shortest-unsorted-continuous-subarray/",
                             "score": null,
                             "solution": null,
@@ -1675,16 +1691,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3350. 检测相邻递增子数组 II",
-                            "sort": 14,
-                            "src": "/adjacent-increasing-subarrays-detection-ii/",
-                            "score": 1600.0334724549,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "1578. 使绳子变成彩色的最短时间",
-                            "sort": 15,
+                            "sort": 14,
                             "src": "/minimum-time-to-make-rope-colorful/",
                             "score": 1574.0392121288,
                             "solution": null,
@@ -1692,7 +1700,7 @@ export default{
                         },
                         {
                             "title": "1839. 所有元音按顺序排布的最长子字符串",
-                            "sort": 16,
+                            "sort": 15,
                             "src": "/longest-substring-of-all-vowels-in-order/",
                             "score": 1580.3620959714,
                             "solution": null,
@@ -1700,7 +1708,7 @@ export default{
                         },
                         {
                             "title": "2765. 最长交替子序列",
-                            "sort": 17,
+                            "sort": 16,
                             "src": "/longest-alternating-subarray/",
                             "score": 1580.9748095835,
                             "solution": null,
@@ -1708,9 +1716,17 @@ export default{
                         },
                         {
                             "title": "3255. 长度为 K 的子数组的能量值 II",
-                            "sort": 18,
+                            "sort": 17,
                             "src": "/find-the-power-of-k-size-subarrays-ii/",
                             "score": 1595.0583171953,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3350. 检测相邻递增子数组 II",
+                            "sort": 18,
+                            "src": "/adjacent-increasing-subarrays-detection-ii/",
+                            "score": 1600.0334724549,
                             "solution": null,
                             "isPremium": false
                         },
