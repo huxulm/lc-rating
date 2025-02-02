@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）",
     "original_src": "https://leetcode.cn/circle/discuss/mOr1u6",
-    "last_update": "2025-01-18 11:06:28",
+    "last_update": "2025-02-01 05:48:21",
     "sort": 0,
     "child": [
         {
@@ -208,16 +208,8 @@ export default{
                             "isPremium": true
                         },
                         {
-                            "title": "2613. 美数对",
-                            "sort": 22,
-                            "src": "/beautiful-pairs/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
                             "title": "2964. 可被整除的三元组数量",
-                            "sort": 23,
+                            "sort": 22,
                             "src": "/number-of-divisible-triplet-sums/",
                             "score": null,
                             "solution": null,
@@ -225,7 +217,7 @@ export default{
                         },
                         {
                             "title": "2441. 与对应负数同时存在的最大正整数",
-                            "sort": 24,
+                            "sort": 23,
                             "src": "/largest-positive-integer-that-exists-with-its-negative/",
                             "score": 1167.647122501,
                             "solution": null,
@@ -233,7 +225,7 @@ export default{
                         },
                         {
                             "title": "面试题 16.24. 数对和",
-                            "sort": 25,
+                            "sort": 24,
                             "src": "/pairs-with-sum-lcci/",
                             "score": null,
                             "solution": null,
@@ -241,7 +233,7 @@ export default{
                         },
                         {
                             "title": "454. 四数相加 II",
-                            "sort": 26,
+                            "sort": 25,
                             "src": "/4sum-ii/",
                             "score": null,
                             "solution": null,
@@ -249,7 +241,7 @@ export default{
                         },
                         {
                             "title": "3371. 识别数组中的最大异常值",
-                            "sort": 27,
+                            "sort": 26,
                             "src": "/identify-the-largest-outlier-in-an-array/",
                             "score": 1643.7450467383,
                             "solution": null,
@@ -369,7 +361,7 @@ export default{
             "summary": "",
             "child": [
                 {
-                    "title": "§1.1 基础",
+                    "title": "§1.1 前缀和基础",
                     "sort": 0,
                     "isLeaf": true,
                     "summary": "<a href=\"https://leetcode.cn/problems/range-sum-query-immutable/solution/qian-zhui-he-ji-qi-kuo-zhan-fu-ti-dan-py-vaar/\">讲解</a><br>",
@@ -383,8 +375,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2559. 统计范围内的元音字符串数",
+                            "title": "3427. 变长子数组求和",
                             "sort": 1,
+                            "src": "/sum-of-variable-length-subarrays/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2559. 统计范围内的元音字符串数",
+                            "sort": 2,
                             "src": "/count-vowel-strings-in-ranges/",
                             "score": 1435.0179887342,
                             "solution": null,
@@ -392,7 +392,7 @@ export default{
                         },
                         {
                             "title": "2389. 和有限的最长子序列",
-                            "sort": 2,
+                            "sort": 3,
                             "src": "/longest-subsequence-with-limited-sum/",
                             "score": 1387.7347071166,
                             "solution": null,
@@ -400,7 +400,7 @@ export default{
                         },
                         {
                             "title": "3152. 特殊数组 II",
-                            "sort": 3,
+                            "sort": 4,
                             "src": "/special-array-ii/",
                             "score": 1523.2643084719,
                             "solution": null,
@@ -408,7 +408,7 @@ export default{
                         },
                         {
                             "title": "1749. 任意子数组和的绝对值的最大值",
-                            "sort": 4,
+                            "sort": 5,
                             "src": "/maximum-absolute-sum-of-any-subarray/",
                             "score": 1541.6176288991,
                             "solution": null,
@@ -416,7 +416,7 @@ export default{
                         },
                         {
                             "title": "2438. 二的幂数组中查询范围内的乘积",
-                            "sort": 5,
+                            "sort": 6,
                             "src": "/range-product-queries-of-powers/",
                             "score": 1609.7858209851,
                             "solution": null,
@@ -424,7 +424,7 @@ export default{
                         },
                         {
                             "title": "3361. 两个字符串的切换距离",
-                            "sort": 6,
+                            "sort": 7,
                             "src": "/shift-distance-between-two-strings/",
                             "score": 1553.2232121523,
                             "solution": null,
@@ -432,7 +432,7 @@ export default{
                         },
                         {
                             "title": "2055. 蜡烛之间的盘子",
-                            "sort": 7,
+                            "sort": 8,
                             "src": "/plates-between-candles/",
                             "score": 1819.3068421506,
                             "solution": null,
@@ -440,7 +440,7 @@ export default{
                         },
                         {
                             "title": "1744. 你能在你最喜欢的那天吃到你最喜欢的糖果吗？",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/can-you-eat-your-favorite-candy-on-your-favorite-day/",
                             "score": 1858.9581916885,
                             "solution": null,
@@ -448,7 +448,7 @@ export default{
                         },
                         {
                             "title": "53. 最大子数组和",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/maximum-subarray/",
                             "score": null,
                             "solution": "/maximum-subarray/solution/qian-zhui-he-zuo-fa-ben-zhi-shi-mai-mai-abu71/",
@@ -1661,16 +1661,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "32. 最长有效括号",
-                            "sort": 9,
-                            "src": "/longest-valid-parentheses/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "1111. 有效括号的嵌套深度",
-                            "sort": 10,
+                            "sort": 9,
                             "src": "/maximum-nesting-depth-of-two-valid-parentheses-strings/",
                             "score": 1749.4981778209,
                             "solution": null,
@@ -1678,7 +1670,7 @@ export default{
                         },
                         {
                             "title": "1541. 平衡括号字符串的最少插入次数",
-                            "sort": 11,
+                            "sort": 10,
                             "src": "/minimum-insertions-to-balance-a-parentheses-string/",
                             "score": 1759.0197295594,
                             "solution": null,
@@ -1686,9 +1678,17 @@ export default{
                         },
                         {
                             "title": "2116. 判断一个括号字符串是否有效",
-                            "sort": 12,
+                            "sort": 11,
                             "src": "/check-if-a-parentheses-string-can-be-valid/",
                             "score": 2037.6527962599,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "32. 最长有效括号",
+                            "sort": 12,
+                            "src": "/longest-valid-parentheses/",
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         }

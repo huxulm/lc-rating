@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）",
     "original_src": "https://leetcode.cn/circle/discuss/0viNMK",
-    "last_update": "2025-01-24 05:11:37",
+    "last_update": "2025-02-01 09:41:25",
     "sort": 0,
     "child": [
         {
@@ -89,16 +89,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1461. 检查一个字符串是否包含所有长度为 K 的二进制子串",
-                            "sort": 6,
-                            "src": "/check-if-a-string-contains-all-binary-codes-of-size-k/",
-                            "score": 1504.0178888667,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "2841. 几乎唯一子数组的最大和",
-                            "sort": 7,
+                            "sort": 6,
                             "src": "/maximum-sum-of-almost-unique-subarray/",
                             "score": 1545.9654593951,
                             "solution": null,
@@ -106,7 +98,7 @@ export default{
                         },
                         {
                             "title": "2461. 长度为 K 子数组中的最大和",
-                            "sort": 8,
+                            "sort": 7,
                             "src": "/maximum-sum-of-distinct-subarrays-with-length-k/",
                             "score": 1552.8935571247,
                             "solution": null,
@@ -114,7 +106,7 @@ export default{
                         },
                         {
                             "title": "1423. 可获得的最大点数",
-                            "sort": 9,
+                            "sort": 8,
                             "src": "/maximum-points-you-can-obtain-from-cards/",
                             "score": 1573.824807946,
                             "solution": null,
@@ -122,23 +114,15 @@ export default{
                         },
                         {
                             "title": "1652. 拆炸弹",
-                            "sort": 10,
+                            "sort": 9,
                             "src": "/defuse-the-bomb/",
                             "score": 1416.8961009909,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "1297. 子串的最大出现次数",
-                            "sort": 11,
-                            "src": "/maximum-number-of-occurrences-of-a-substring/",
-                            "score": 1748.1523771585,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "1176. 健身计划评估",
-                            "sort": 12,
+                            "sort": 10,
                             "src": "/diet-plan-performance/",
                             "score": 1397.7743198793,
                             "solution": null,
@@ -146,7 +130,7 @@ export default{
                         },
                         {
                             "title": "1100. 长度为 K 的无重复字符子串",
-                            "sort": 13,
+                            "sort": 11,
                             "src": "/find-k-length-substrings-with-no-repeated-characters/",
                             "score": 1348.670191438,
                             "solution": null,
@@ -154,7 +138,7 @@ export default{
                         },
                         {
                             "title": "1852. 每个子数组的数字种类数",
-                            "sort": 14,
+                            "sort": 12,
                             "src": "/distinct-numbers-in-each-subarray/",
                             "score": null,
                             "solution": null,
@@ -162,7 +146,7 @@ export default{
                         },
                         {
                             "title": "1151. 最少交换次数来组合所有的 1",
-                            "sort": 15,
+                            "sort": 13,
                             "src": "/minimum-swaps-to-group-all-1s-together/",
                             "score": 1508.1169489285,
                             "solution": null,
@@ -170,7 +154,7 @@ export default{
                         },
                         {
                             "title": "2107. 分享 K 个糖果后独特口味的数量",
-                            "sort": 16,
+                            "sort": 14,
                             "src": "/number-of-unique-flavors-after-sharing-k-candies/",
                             "score": null,
                             "solution": null,
@@ -185,16 +169,32 @@ export default{
                     "summary": "",
                     "child": [
                         {
-                            "title": "2134. 最少交换次数来组合所有的 1 II",
+                            "title": "1461. 检查一个字符串是否包含所有长度为 K 的二进制子串",
                             "sort": 0,
+                            "src": "/check-if-a-string-contains-all-binary-codes-of-size-k/",
+                            "score": 1504.0178888667,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2134. 最少交换次数来组合所有的 1 II",
+                            "sort": 1,
                             "src": "/minimum-swaps-to-group-all-1s-together-ii/",
                             "score": 1748.4522689101,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "1297. 子串的最大出现次数",
+                            "sort": 2,
+                            "src": "/maximum-number-of-occurrences-of-a-substring/",
+                            "score": 1748.1523771585,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "2653. 滑动子数组的美丽值",
-                            "sort": 1,
+                            "sort": 3,
                             "src": "/sliding-subarray-beauty/",
                             "score": 1785.6006955353,
                             "solution": null,
@@ -202,7 +202,7 @@ export default{
                         },
                         {
                             "title": "1888. 使二进制字符串字符交替的最少反转次数",
-                            "sort": 2,
+                            "sort": 4,
                             "src": "/minimum-number-of-flips-to-make-the-binary-string-alternating/",
                             "score": 2005.5862669078,
                             "solution": null,
@@ -210,7 +210,7 @@ export default{
                         },
                         {
                             "title": "567. 字符串的排列",
-                            "sort": 3,
+                            "sort": 5,
                             "src": "/permutation-in-string/",
                             "score": null,
                             "solution": null,
@@ -218,7 +218,7 @@ export default{
                         },
                         {
                             "title": "438. 找到字符串中所有字母异位词",
-                            "sort": 4,
+                            "sort": 6,
                             "src": "/find-all-anagrams-in-a-string/",
                             "score": null,
                             "solution": null,
@@ -226,7 +226,7 @@ export default{
                         },
                         {
                             "title": "30. 串联所有单词的子串",
-                            "sort": 5,
+                            "sort": 7,
                             "src": "/substring-with-concatenation-of-all-words/",
                             "score": null,
                             "solution": null,
@@ -234,7 +234,7 @@ export default{
                         },
                         {
                             "title": "2156. 查找给定哈希值的子串",
-                            "sort": 6,
+                            "sort": 8,
                             "src": "/find-substring-with-given-hash-value/",
                             "score": 2062.9876807625,
                             "solution": null,
@@ -242,7 +242,7 @@ export default{
                         },
                         {
                             "title": "2953. 统计完全子字符串",
-                            "sort": 7,
+                            "sort": 9,
                             "src": "/count-complete-substrings/",
                             "score": 2449.3352959316,
                             "solution": null,
@@ -250,7 +250,7 @@ export default{
                         },
                         {
                             "title": "1016. 子串能表示从 1 到 N 数字的二进制串",
-                            "sort": 8,
+                            "sort": 10,
                             "src": "/binary-string-with-substrings-representing-1-to-n/",
                             "score": 1779.3931248179,
                             "solution": null,
@@ -258,7 +258,7 @@ export default{
                         },
                         {
                             "title": "683. K 个关闭的灯泡",
-                            "sort": 9,
+                            "sort": 11,
                             "src": "/k-empty-slots/",
                             "score": null,
                             "solution": null,
@@ -266,7 +266,7 @@ export default{
                         },
                         {
                             "title": "2067. 等计数子串的数量",
-                            "sort": 10,
+                            "sort": 12,
                             "src": "/number-of-equal-count-substrings/",
                             "score": null,
                             "solution": null,
@@ -274,7 +274,7 @@ export default{
                         },
                         {
                             "title": "2524. 子数组的最大频率分数",
-                            "sort": 11,
+                            "sort": 13,
                             "src": "/maximum-frequency-score-of-a-subarray/",
                             "score": null,
                             "solution": null,
@@ -812,7 +812,7 @@ export default{
                     "title": "§2.4 其他（选做）",
                     "sort": 6,
                     "isLeaf": true,
-                    "summary": "",
+                    "summary": "**滑窗的内容到这里就结束了，可以去刷下一个题单（二分算法）**。<br>---<br>",
                     "child": [
                         {
                             "title": "1438. 绝对差不超过限制的最长连续子数组",

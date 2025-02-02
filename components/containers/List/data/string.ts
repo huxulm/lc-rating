@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）",
     "original_src": "https://leetcode.cn/circle/discuss/SJFwQI",
-    "last_update": "2024-12-16 14:46:09",
+    "last_update": "2025-01-29 06:29:56",
     "sort": 0,
     "child": [
         {
@@ -333,8 +333,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1044. 最长重复子串",
+                            "title": "1367. 二叉树中的链表",
                             "sort": 6,
+                            "src": "/linked-list-in-binary-tree/",
+                            "score": 1649.9728054796,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1044. 最长重复子串",
+                            "sort": 7,
                             "src": "/longest-duplicate-substring/",
                             "score": 2428.7985254341,
                             "solution": null,
@@ -342,7 +350,7 @@ export default{
                         },
                         {
                             "title": "718. 最长重复子数组",
-                            "sort": 7,
+                            "sort": 8,
                             "src": "/maximum-length-of-repeated-subarray/",
                             "score": null,
                             "solution": null,
@@ -350,7 +358,7 @@ export default{
                         },
                         {
                             "title": "1923. 最长公共子路径",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/longest-common-subpath/",
                             "score": 2661.0670044656,
                             "solution": null,
@@ -358,7 +366,7 @@ export default{
                         },
                         {
                             "title": "3292. 形成目标字符串需要的最少字符串数 II",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/minimum-number-of-valid-strings-to-form-target-ii/",
                             "score": 2661.736901362,
                             "solution": null,
@@ -366,7 +374,7 @@ export default{
                         },
                         {
                             "title": "2168. 每个数字的频率都相同的独特子字符串的数量",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/unique-substrings-with-equal-digit-frequency/",
                             "score": null,
                             "solution": null,
@@ -374,7 +382,7 @@ export default{
                         },
                         {
                             "title": "1554. 只有一个不同字符的字符串",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/strings-differ-by-one-character/",
                             "score": null,
                             "solution": null,
@@ -382,7 +390,7 @@ export default{
                         },
                         {
                             "title": "1062. 最长重复子串",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/longest-repeating-substring/",
                             "score": null,
                             "solution": null,
@@ -401,7 +409,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "定义**循环左移**操作：把字符串 $s$ 的第一个字符 $s[0]$ 移除，添加到 $s$ 的末尾。例如 $\\texttt{abcd}$ 操作一次后得到 $\\texttt{bcda}$。<br>问题：你可以执行任意次循环左移操作，计算你能得到的字典序最小的字符串。<br>推荐先完成 <a href=\"https://leetcode.cn/problems/last-substring-in-lexicographical-order/\">1163. 按字典序排在最后的子串</a>，再做下面这题。<br>",
+                    "summary": "定义**循环左移**操作：把字符串 $s$ 的第一个字符 $s[0]$ 移除，添加到 $s$ 的末尾。例如 $\\texttt{abcd}$ 操作一次后得到 $\\texttt{bcda}$。<br>问题：你可以执行任意次循环左移操作，计算你能得到的字典序最小的字符串。<br>推荐先完成 <a href=\"https://leetcode.cn/problems/last-substring-in-lexicographical-order/\">1163. 按字典序排在最后的子串</a>，再做下面这题。<br>注：和 1163 相似的题目，还有 <a href=\"https://leetcode.cn/problems/find-the-lexicographically-largest-string-from-the-box-i/\">3403. 从盒子中找出字典序最大的字符串 I</a>。<br>",
                     "child": [
                         {
                             "title": "899. 有序队列",

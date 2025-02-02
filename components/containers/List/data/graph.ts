@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】图论算法（DFS/BFS/拓扑排序/最短路/最小生成树/二分图/基环树/欧拉路径）",
     "original_src": "https://leetcode.cn/circle/discuss/01LUak",
-    "last_update": "2025-01-07 05:46:44",
+    "last_update": "2025-01-29 06:26:55",
     "sort": 0,
     "child": [
         {
@@ -15,18 +15,18 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "!<a href=\"https://pic.leetcode.cn/1724824379-UOsXIV-dfsbfsnew-c.png\">图论题单 图论算法 图论题目 LeetCode 力扣图论 灵茶山艾府</a><br>> DFS 一路到底，BFS 由近及远。<br>",
+                    "summary": "",
                     "child": []
                 }
             ]
         },
         {
-            "title": "DFS 基础",
+            "title": "一、基础遍历",
             "sort": 1,
             "summary": "",
             "child": [
                 {
-                    "title": "",
+                    "title": "§1.1 DFS 基础",
                     "sort": 0,
                     "isLeaf": true,
                     "summary": "找连通块、判断是否有环等。部分题目**做法不止一种**。<br>",
@@ -200,17 +200,10 @@ export default{
                             "isPremium": true
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "title": "BFS 基础",
-            "sort": 2,
-            "summary": "",
-            "child": [
+                },
                 {
-                    "title": "",
-                    "sort": 0,
+                    "title": "§1.2 BFS 基础",
+                    "sort": 1,
                     "isLeaf": true,
                     "summary": "求最短路等。<br>注：关于**网格图**的 DFS 和 BFS，请看 <a href=\"/lc-rating/list/grid\">网格图题单</a>。<br>",
                     "child": [
@@ -275,12 +268,12 @@ export default{
             ]
         },
         {
-            "title": "拓扑排序",
-            "sort": 3,
-            "summary": "",
+            "title": "二、拓扑排序",
+            "sort": 2,
+            "summary": "!<a href=\"https://pic.leetcode.cn/1738131168-tWFNGZ-006-toposort.png\">图论题单 图论算法 图论题目 LeetCode 力扣图论 灵茶山艾府</a><br>把拓扑排序想象成一个黑盒，给它一堆杂乱的先修课约束，它会给你一个井井有条的课程学习安排。<br>这一种在图上的「排序」，可以把杂乱的点排列一排。<br>前提条件是图中无环，从而保证每条边是从排在前面的点，指向排在后面的点。<br>",
             "child": [
                 {
-                    "title": "",
+                    "title": "§2.1 拓扑排序",
                     "sort": 0,
                     "isLeaf": true,
                     "summary": "学习拓扑排序前，请先完成 <a href=\"https://leetcode.cn/problems/minimum-number-of-vertices-to-reach-all-nodes/\">1557. 可以到达所有点的最少点数目</a>，有助于理解拓扑排序。<br>",
@@ -406,17 +399,10 @@ export default{
                             "isPremium": true
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "title": "在拓扑序上 DP",
-            "sort": 4,
-            "summary": "",
-            "child": [
+                },
                 {
-                    "title": "",
-                    "sort": 0,
+                    "title": "§2.2 在拓扑序上 DP",
+                    "sort": 1,
                     "isLeaf": true,
                     "summary": "",
                     "child": [
@@ -437,17 +423,10 @@ export default{
                             "isPremium": false
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "title": "基环树",
-            "sort": 5,
-            "summary": "",
-            "child": [
+                },
                 {
-                    "title": "",
-                    "sort": 0,
+                    "title": "§2.3 基环树",
+                    "sort": 2,
                     "isLeaf": true,
                     "summary": "<a href=\"https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/solution/nei-xiang-ji-huan-shu-tuo-bu-pai-xu-fen-c1i1b/\">基环树介绍</a><br>",
                     "child": [
@@ -528,12 +507,12 @@ export default{
             ]
         },
         {
-            "title": "单源最短路：Dijkstra",
-            "sort": 6,
+            "title": "三、最短路",
+            "sort": 3,
             "summary": "",
             "child": [
                 {
-                    "title": "",
+                    "title": "§3.1 单源最短路：Dijkstra 算法",
                     "sort": 0,
                     "isLeaf": true,
                     "summary": "<a href=\"https://leetcode.cn/problems/network-delay-time/solution/liang-chong-dijkstra-xie-fa-fu-ti-dan-py-ooe8/\">Dijkstra 算法介绍</a><br>",
@@ -651,8 +630,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "882. 细分图中的可到达节点",
+                            "title": "3419. 图的最大边权的最小值",
                             "sort": 14,
+                            "src": "/minimize-the-maximum-edge-weight-of-graph/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "882. 细分图中的可到达节点",
+                            "sort": 15,
                             "src": "/reachable-nodes-in-subdivided-graph/",
                             "score": 2328.4294689238,
                             "solution": null,
@@ -660,7 +647,7 @@ export default{
                         },
                         {
                             "title": "2203. 得到要求路径的最小带权子图",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/minimum-weighted-subgraph-with-the-required-paths/",
                             "score": 2364.3455634374,
                             "solution": null,
@@ -668,7 +655,7 @@ export default{
                         },
                         {
                             "title": "2577. 在网格图中访问一个格子的最少时间",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/minimum-time-to-visit-a-cell-in-a-grid/",
                             "score": 2381.625583289,
                             "solution": null,
@@ -676,7 +663,7 @@ export default{
                         },
                         {
                             "title": "1928. 规定时间内到达终点的最小花费",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/minimum-cost-to-reach-destination-in-time/",
                             "score": 2413.3969129689,
                             "solution": null,
@@ -684,7 +671,7 @@ export default{
                         },
                         {
                             "title": "787. K 站中转内最便宜的航班",
-                            "sort": 18,
+                            "sort": 19,
                             "src": "/cheapest-flights-within-k-stops/",
                             "score": 1786.4753467293,
                             "solution": null,
@@ -692,7 +679,7 @@ export default{
                         },
                         {
                             "title": "2699. 修改图中的边权",
-                            "sort": 19,
+                            "sort": 20,
                             "src": "/modify-graph-edge-weights/",
                             "score": 2873.9745576413,
                             "solution": null,
@@ -700,7 +687,7 @@ export default{
                         },
                         {
                             "title": "LCP 35. 电动车游城市",
-                            "sort": 20,
+                            "sort": 21,
                             "src": "/DFPeFJ/",
                             "score": null,
                             "solution": null,
@@ -708,7 +695,7 @@ export default{
                         },
                         {
                             "title": "1810. 隐藏网格下的最小消耗路径",
-                            "sort": 21,
+                            "sort": 22,
                             "src": "/minimum-path-cost-in-a-hidden-grid/",
                             "score": null,
                             "solution": null,
@@ -716,7 +703,7 @@ export default{
                         },
                         {
                             "title": "2093. 前往目标城市的最小费用",
-                            "sort": 22,
+                            "sort": 23,
                             "src": "/minimum-cost-to-reach-city-with-discounts/",
                             "score": null,
                             "solution": null,
@@ -724,7 +711,7 @@ export default{
                         },
                         {
                             "title": "2473. 购买苹果的最低成本",
-                            "sort": 23,
+                            "sort": 24,
                             "src": "/minimum-cost-to-buy-apples/",
                             "score": null,
                             "solution": null,
@@ -732,7 +719,7 @@ export default{
                         },
                         {
                             "title": "2714. 找到最短路径的 K 次跨越",
-                            "sort": 24,
+                            "sort": 25,
                             "src": "/find-shortest-path-with-k-hops/",
                             "score": null,
                             "solution": null,
@@ -740,24 +727,17 @@ export default{
                         },
                         {
                             "title": "2737. 找到最近的标记节点",
-                            "sort": 25,
+                            "sort": 26,
                             "src": "/find-the-closest-marked-node/",
                             "score": null,
                             "solution": null,
                             "isPremium": true
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "title": "全源最短路：Floyd",
-            "sort": 7,
-            "summary": "",
-            "child": [
+                },
                 {
-                    "title": "",
-                    "sort": 0,
+                    "title": "§3.2 全源最短路：Floyd 算法",
+                    "sort": 1,
                     "isLeaf": true,
                     "summary": "<a href=\"https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/solution/dai-ni-fa-ming-floyd-suan-fa-cong-ji-yi-m8s51/\">带你发明 Floyd 算法：从记忆化搜索到递推</a><br>**Bitset 优化 Floyd**<br>",
                     "child": [
@@ -814,15 +794,15 @@ export default{
             ]
         },
         {
-            "title": "最小生成树：Kruskal/Prim",
-            "sort": 8,
-            "summary": "",
+            "title": "四、最小生成树",
+            "sort": 4,
+            "summary": "涉及到 Kruskal 算法和 Prim 算法。前者一般用于稀疏图，后者一般用于稠密图。<br>",
             "child": [
                 {
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "**思维扩展**：<br>",
+                    "summary": "**思维扩展**<br>",
                     "child": [
                         {
                             "title": "1584. 连接所有点的最小费用",
@@ -869,9 +849,9 @@ export default{
             ]
         },
         {
-            "title": "欧拉路径/欧拉回路：Hierholzer",
-            "sort": 9,
-            "summary": "",
+            "title": "五、欧拉路径/欧拉回路",
+            "sort": 5,
+            "summary": "涉及到 Hierholzer 算法。<br>",
             "child": [
                 {
                     "title": "",
@@ -908,9 +888,9 @@ export default{
             ]
         },
         {
-            "title": "强连通分量/双连通分量：Tarjan",
-            "sort": 10,
-            "summary": "",
+            "title": "六、强连通分量/双连通分量",
+            "sort": 6,
+            "summary": "涉及到 Tarjan 算法。<br>",
             "child": [
                 {
                     "title": "",
@@ -955,15 +935,15 @@ export default{
             ]
         },
         {
-            "title": "二分图染色",
-            "sort": 11,
+            "title": "七、二分图染色",
+            "sort": 7,
             "summary": "",
             "child": [
                 {
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "二分图的最大匹配，见下面网络流的题目。带权二分图的最大匹配，见标有「一对一」的题目。<br>",
+                    "summary": "关于二分图的最大匹配，见下面网络流的题目。其中标有「一对一」的题目也可以用带权二分图最大匹配做。<br>",
                     "child": [
                         {
                             "title": "785. 判断二分图",
@@ -986,15 +966,15 @@ export default{
             ]
         },
         {
-            "title": "网络流",
-            "sort": 12,
-            "summary": "",
+            "title": "八、网络流",
+            "sort": 8,
+            "summary": "由于有其他做法（比如状压 DP），难度分仅供参考。<br>",
             "child": [
                 {
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "由于有其他做法（比如状压 DP），难度分仅供参考。<br>**模拟费用流**<br>",
+                    "summary": "**模拟费用流**<br>",
                     "child": [
                         {
                             "title": "3376. 破解锁的最少时间 I",
@@ -1137,8 +1117,8 @@ export default{
             ]
         },
         {
-            "title": "其他",
-            "sort": 13,
+            "title": "九、其他",
+            "sort": 9,
             "summary": "",
             "child": [
                 {
@@ -1220,8 +1200,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "LCP 16. 游乐园的游览计划",
+                            "title": "3435. 最短公共超序列的字母出现频率",
                             "sort": 9,
+                            "src": "/frequencies-of-shortest-supersequences/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "LCP 16. 游乐园的游览计划",
+                            "sort": 10,
                             "src": "/you-le-yuan-de-you-lan-ji-hua/",
                             "score": null,
                             "solution": null,
@@ -1229,7 +1217,7 @@ export default{
                         },
                         {
                             "title": "277. 搜寻名人",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/find-the-celebrity/",
                             "score": null,
                             "solution": null,
@@ -1237,7 +1225,7 @@ export default{
                         },
                         {
                             "title": "1724. 检查边长度限制的路径是否存在 II",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/checking-existence-of-edge-length-limited-paths-ii/",
                             "score": null,
                             "solution": null,
@@ -1245,7 +1233,7 @@ export default{
                         },
                         {
                             "title": "2077. 殊途同归",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/paths-in-maze-that-lead-to-same-room/",
                             "score": null,
                             "solution": null,

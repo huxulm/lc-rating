@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）",
     "original_src": "https://leetcode.cn/circle/discuss/K0n2gO",
-    "last_update": "2024-11-26 07:21:22",
+    "last_update": "2025-01-29 06:24:59",
     "sort": 0,
     "child": [
         {
@@ -598,7 +598,7 @@ export default{
         {
             "title": "二、二叉树",
             "sort": 2,
-            "summary": "**学习递归，从二叉树开始。**<br>晕递归的同学，请先看视频讲解<a href=\"https://www.bilibili.com/video/BV1UD4y1Y769/\">【基础算法精讲 09】</a>，欢迎点赞~<br>带着问题去做下面的题目：<br>1. 一般来说，DFS 的递归边界是空节点。在什么情况下，要额外把**叶子节点**作为递归边界？<br>2. 在什么情况下，DFS 需要有返回值？什么情况下不需要有返回值？<br>3. 在什么情况下，题目更适合用**自顶向下**的方法解决？什么情况下更适合用**自底向上**的方法解决？<br>",
+            "summary": "!<a href=\"https://pic.leetcode.cn/1724824379-UOsXIV-dfsbfsnew-c.png\">DFS BFS</a><br>**学习递归，从二叉树开始。**<br>晕递归的同学，请先看视频讲解<a href=\"https://www.bilibili.com/video/BV1UD4y1Y769/\">【基础算法精讲 09】</a>，欢迎点赞~<br>带着问题去做下面的题目：<br>1. 一般来说，DFS 的递归边界是空节点。在什么情况下，要额外把**叶子节点**作为递归边界？<br>2. 在什么情况下，DFS 需要有返回值？什么情况下不需要有返回值？<br>3. 在什么情况下，题目更适合用**自顶向下**的方法解决？什么情况下更适合用**自底向上**的方法解决？<br>",
             "child": [
                 {
                     "title": "§2.1 遍历二叉树",
@@ -2366,24 +2366,48 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2467. 树上最大得分和路径",
+                            "title": "3372. 连接两棵树后最大目标节点数目 I",
                             "sort": 4,
+                            "src": "/maximize-the-number-of-target-nodes-after-connecting-trees-i/",
+                            "score": 1926.7598451706,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2467. 树上最大得分和路径",
+                            "sort": 5,
                             "src": "/most-profitable-path-in-a-tree/",
                             "score": 2053.354609292,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "3373. 连接两棵树后最大目标节点数目 II",
+                            "sort": 6,
+                            "src": "/maximize-the-number-of-target-nodes-after-connecting-trees-ii/",
+                            "score": 2161.6248796745,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "1766. 互质树",
-                            "sort": 5,
+                            "sort": 7,
                             "src": "/tree-of-coprimes/",
                             "score": 2231.8099102949,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "3425. 最长特殊路径",
+                            "sort": 8,
+                            "src": "/longest-special-path/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "2791. 树中可以形成回文的路径数",
-                            "sort": 6,
+                            "sort": 9,
                             "src": "/count-paths-that-can-form-a-palindrome-in-a-tree/",
                             "score": 2677.1682592316,
                             "solution": null,
@@ -2773,8 +2797,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2959. 关闭分部的可行集合数目",
+                            "title": "2597. 美丽子集的数目",
                             "sort": 10,
+                            "src": "/the-number-of-beautiful-subsets/",
+                            "score": 2023.4303440211,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2959. 关闭分部的可行集合数目",
+                            "sort": 11,
                             "src": "/number-of-possible-sets-of-closing-branches/",
                             "score": 2077.4738459704,
                             "solution": null,
@@ -2782,7 +2814,7 @@ export default{
                         },
                         {
                             "title": "1601. 最多可达成的换楼请求数目",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/maximum-number-of-achievable-transfer-requests/",
                             "score": 2118.7923652824,
                             "solution": null,
@@ -2790,7 +2822,7 @@ export default{
                         },
                         {
                             "title": "1617. 统计子树中城市之间最大距离",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/count-subtrees-with-max-distance-between-cities/",
                             "score": 2308.6545905335,
                             "solution": null,
@@ -2798,7 +2830,7 @@ export default{
                         },
                         {
                             "title": "320. 列举单词的全部缩写",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/generalized-abbreviation/",
                             "score": null,
                             "solution": null,
@@ -2806,7 +2838,7 @@ export default{
                         },
                         {
                             "title": "254. 因子的组合",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/factor-combinations/",
                             "score": null,
                             "solution": null,
@@ -2814,7 +2846,7 @@ export default{
                         },
                         {
                             "title": "39. 组合总和",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/combination-sum/",
                             "score": null,
                             "solution": null,
@@ -2965,10 +2997,10 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "357. 统计各位数字都不同的数字个数",
+                            "title": "3376. 破解锁的最少时间 I",
                             "sort": 1,
-                            "src": "/count-numbers-with-unique-digits/",
-                            "score": null,
+                            "src": "/minimum-time-to-break-locks-i/",
+                            "score": 1793.2112436729,
                             "solution": null,
                             "isPremium": false
                         },

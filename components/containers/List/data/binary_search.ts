@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】二分算法（二分答案/最小化最大值/最大化最小值/第K小）",
     "original_src": "https://leetcode.cn/circle/discuss/SqopEo",
-    "last_update": "2024-11-28 07:50:12",
+    "last_update": "2025-02-01 14:05:05",
     "sort": 0,
     "child": [
         {
@@ -236,7 +236,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "",
+                    "summary": "> “花费一个 $\\log$ 的时间，增加了一个条件。” —— 二分答案<br>",
                     "child": [
                         {
                             "title": "1283. 使结果不超过阈值的最小除数",
@@ -588,16 +588,32 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2513. 最小化两个数组中的最大值",
+                            "title": "3419. 图的最大边权的最小值",
                             "sort": 8,
+                            "src": "/minimize-the-maximum-edge-weight-of-graph/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2513. 最小化两个数组中的最大值",
+                            "sort": 9,
                             "src": "/minimize-the-maximum-of-two-arrays/",
                             "score": 2302.4005640818,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "3399. 字符相同的最短子字符串 II",
+                            "sort": 10,
+                            "src": "/smallest-substring-with-identical-characters-ii/",
+                            "score": 2375.9062896615,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "LCP 12. 小张刷题计划",
-                            "sort": 9,
+                            "sort": 11,
                             "src": "/xiao-zhang-shua-ti-ji-hua/",
                             "score": null,
                             "solution": null,
@@ -605,7 +621,7 @@ export default{
                         },
                         {
                             "title": "774. 最小化去加油站的最大距离",
-                            "sort": 10,
+                            "sort": 12,
                             "src": "/minimize-max-distance-to-gas-station/",
                             "score": 2084.2010769193,
                             "solution": null,
@@ -695,7 +711,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "- 第 $k$ 小等价于：求最小的 $x$，满足 $\\le x$ 的数至少有 $k$ 个。<br>- 第 $k$ 大等价于：求最大的 $x$，满足 $\\ge x$ 的数至少有 $k$ 个。<br>⚠**注意**：一般来说，题目规定 $k$ 从 $1$ 开始，而不是像下标那样从 $0$ 开始。<br>⚠**注意**：一般来说，题目规定不能去重。例如数组 $[1,1,1,2,2]$，其中第 $1$ 小、第 $2$ 小和第 $3$ 小的数都是 $1$，第 $4$ 小和第 $5$ 小的数是 $2$。<br>部分题目也可以用堆解决。<br>",
+                    "summary": "- 第 $k$ 小等价于：求最小的 $x$，满足 $\\le x$ 的数至少有 $k$ 个。<br>- 第 $k$ 大等价于：求最大的 $x$，满足 $\\ge x$ 的数至少有 $k$ 个。<br>⚠**注意**：一般来说，题目规定 $k$ 从 $1$ 开始，而不是像下标那样从 $0$ 开始。<br>⚠**注意**：一般来说，题目规定不能去重。例如数组 $[1,1,1,2,2]$，其中第 $1$ 小、第 $2$ 小和第 $3$ 小的数都是 $1$，第 $4$ 小和第 $5$ 小的数都是 $2$。<br>部分题目也可以用堆解决。<br>",
                     "child": [
                         {
                             "title": "668. 乘法表中第 K 小的数",
@@ -921,16 +937,32 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "33. 搜索旋转排序数组",
+                            "title": "154. 寻找旋转排序数组中的最小值 II",
                             "sort": 11,
+                            "src": "/find-minimum-in-rotated-sorted-array-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "33. 搜索旋转排序数组",
+                            "sort": 12,
                             "src": "/search-in-rotated-sorted-array/",
                             "score": null,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "81. 搜索旋转排序数组 II",
+                            "sort": 13,
+                            "src": "/search-in-rotated-sorted-array-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "222. 完全二叉树的节点个数",
-                            "sort": 12,
+                            "sort": 14,
                             "src": "/count-complete-tree-nodes/",
                             "score": null,
                             "solution": null,
@@ -938,7 +970,7 @@ export default{
                         },
                         {
                             "title": "1539. 第 k 个缺失的正整数",
-                            "sort": 13,
+                            "sort": 15,
                             "src": "/kth-missing-positive-number/",
                             "score": 1295.4970938463,
                             "solution": null,
@@ -946,7 +978,7 @@ export default{
                         },
                         {
                             "title": "540. 有序数组中的单一元素",
-                            "sort": 14,
+                            "sort": 16,
                             "src": "/single-element-in-a-sorted-array/",
                             "score": null,
                             "solution": null,
@@ -954,7 +986,7 @@ export default{
                         },
                         {
                             "title": "4. 寻找两个正序数组的中位数",
-                            "sort": 15,
+                            "sort": 17,
                             "src": "/median-of-two-sorted-arrays/",
                             "score": null,
                             "solution": null,
@@ -962,7 +994,7 @@ export default{
                         },
                         {
                             "title": "1060. 有序数组中的缺失元素",
-                            "sort": 16,
+                            "sort": 18,
                             "src": "/missing-element-in-sorted-array/",
                             "score": null,
                             "solution": null,
@@ -970,7 +1002,7 @@ export default{
                         },
                         {
                             "title": "1198. 找出所有行中最小公共元素",
-                            "sort": 17,
+                            "sort": 19,
                             "src": "/find-smallest-common-element-in-all-rows/",
                             "score": 1401.2246983038,
                             "solution": null,
@@ -978,7 +1010,7 @@ export default{
                         },
                         {
                             "title": "1428. 至少有一个 1 的最左端列",
-                            "sort": 18,
+                            "sort": 20,
                             "src": "/leftmost-column-with-at-least-a-one/",
                             "score": null,
                             "solution": null,
@@ -986,7 +1018,7 @@ export default{
                         },
                         {
                             "title": "1533. 找到最大整数的索引",
-                            "sort": 19,
+                            "sort": 21,
                             "src": "/find-the-index-of-the-large-integer/",
                             "score": null,
                             "solution": null,
@@ -994,7 +1026,7 @@ export default{
                         },
                         {
                             "title": "2387. 行排序矩阵的中位数",
-                            "sort": 20,
+                            "sort": 22,
                             "src": "/median-of-a-row-wise-sorted-matrix/",
                             "score": null,
                             "solution": null,
@@ -1002,7 +1034,7 @@ export default{
                         },
                         {
                             "title": "302. 包含全部黑色像素的最小矩形",
-                            "sort": 21,
+                            "sort": 23,
                             "src": "/smallest-rectangle-enclosing-black-pixels/",
                             "score": null,
                             "solution": null,

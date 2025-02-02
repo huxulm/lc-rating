@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）",
     "original_src": "https://leetcode.cn/circle/discuss/IYT3ss",
-    "last_update": "2025-01-20 04:46:38",
+    "last_update": "2025-02-01 06:52:52",
     "sort": 0,
     "child": [
         {
@@ -588,6 +588,14 @@ export default{
                             "score": 2231.8099102949,
                             "solution": null,
                             "isPremium": false
+                        },
+                        {
+                            "title": "3411. 最长乘积等价子数组",
+                            "sort": 3,
+                            "src": "/maximum-subarray-with-equal-products/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
                         }
                     ]
                 },
@@ -733,16 +741,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2063. 所有子字符串中的元音",
-                            "sort": 5,
-                            "src": "/vowels-of-all-substrings/",
-                            "score": 1663.3912882908,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "1922. 统计好数字的数目",
-                            "sort": 6,
+                            "sort": 5,
                             "src": "/count-good-numbers/",
                             "score": 1674.7986939472,
                             "solution": null,
@@ -750,7 +750,7 @@ export default{
                         },
                         {
                             "title": "2147. 分隔长廊的方案数",
-                            "sort": 7,
+                            "sort": 6,
                             "src": "/number-of-ways-to-divide-a-long-corridor/",
                             "score": 1914.6717285348,
                             "solution": null,
@@ -758,7 +758,7 @@ export default{
                         },
                         {
                             "title": "2963. 统计好分割方案的数目",
-                            "sort": 8,
+                            "sort": 7,
                             "src": "/count-the-number-of-good-partitions/",
                             "score": 1984.9685663849,
                             "solution": null,
@@ -766,7 +766,7 @@ export default{
                         },
                         {
                             "title": "2306. 公司命名",
-                            "sort": 9,
+                            "sort": 8,
                             "src": "/naming-a-company/",
                             "score": 2305.4498281454,
                             "solution": null,
@@ -774,7 +774,7 @@ export default{
                         },
                         {
                             "title": "2867. 统计树中的合法路径数目",
-                            "sort": 10,
+                            "sort": 9,
                             "src": "/count-valid-paths-in-a-tree/",
                             "score": 2428.3242593838,
                             "solution": null,
@@ -782,7 +782,7 @@ export default{
                         },
                         {
                             "title": "2450. 应用操作后不同二进制字符串的数量",
-                            "sort": 11,
+                            "sort": 10,
                             "src": "/number-of-distinct-binary-strings-after-applying-operations/",
                             "score": null,
                             "solution": null,
@@ -1154,7 +1154,7 @@ export default{
                     "title": "§2.5 贡献法",
                     "sort": 4,
                     "isLeaf": true,
-                    "summary": "",
+                    "summary": "**思维扩展**：<br>",
                     "child": [
                         {
                             "title": "2063. 所有子字符串中的元音",
@@ -1181,8 +1181,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3428. 最多 K 个元素的子序列的最值之和",
+                            "title": "891. 子序列宽度之和",
                             "sort": 3,
+                            "src": "/sum-of-subsequence-widths/",
+                            "score": 2182.6180030785,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3428. 最多 K 个元素的子序列的最值之和",
+                            "sort": 4,
                             "src": "/maximum-and-minimum-sums-of-at-most-size-k-subsequences/",
                             "score": null,
                             "solution": null,
@@ -1190,9 +1198,33 @@ export default{
                         },
                         {
                             "title": "3426. 所有安放棋子方案的曼哈顿距离",
-                            "sort": 4,
+                            "sort": 5,
                             "src": "/manhattan-distances-of-all-arrangements-of-pieces/",
                             "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2763. 所有子数组中不平衡数字之和",
+                            "sort": 6,
+                            "src": "/sum-of-imbalance-numbers-of-all-subarrays/",
+                            "score": 2277.7923804151,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "979. 在二叉树中分配硬币",
+                            "sort": 7,
+                            "src": "/distribute-coins-in-binary-tree/",
+                            "score": 1709.1461451873,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2477. 到达首都的最少油耗",
+                            "sort": 8,
+                            "src": "/minimum-fuel-cost-to-report-to-the-capital/",
+                            "score": 2011.9703133514,
                             "solution": null,
                             "isPremium": false
                         }
@@ -1451,8 +1483,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "294. 翻转游戏 II",
+                            "title": "LCP 48. 无限棋局",
                             "sort": 19,
+                            "src": "/fsa7oZ/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "294. 翻转游戏 II",
+                            "sort": 20,
                             "src": "/flip-game-ii/",
                             "score": null,
                             "solution": null,
@@ -1460,7 +1500,7 @@ export default{
                         },
                         {
                             "title": "1908. Nim 游戏 II",
-                            "sort": 20,
+                            "sort": 21,
                             "src": "/game-of-nim/",
                             "score": null,
                             "solution": null,
@@ -1468,7 +1508,7 @@ export default{
                         },
                         {
                             "title": "2005. 斐波那契树的移除子树游戏",
-                            "sort": 21,
+                            "sort": 22,
                             "src": "/subtree-removal-game-with-fibonacci-tree/",
                             "score": null,
                             "solution": null,
@@ -1476,7 +1516,7 @@ export default{
                         },
                         {
                             "title": "2868. 单词游戏",
-                            "sort": 22,
+                            "sort": 23,
                             "src": "/the-wording-game/",
                             "score": null,
                             "solution": null,
