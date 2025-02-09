@@ -633,7 +633,7 @@ export default{
                             "title": "3419. 图的最大边权的最小值",
                             "sort": 14,
                             "src": "/minimize-the-maximum-edge-weight-of-graph/",
-                            "score": null,
+                            "score": 2243.2051062979,
                             "solution": null,
                             "isPremium": false
                         },

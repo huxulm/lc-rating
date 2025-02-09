@@ -499,7 +499,7 @@ export default{
                             "title": "3411. 最长乘积等价子数组",
                             "sort": 21,
                             "src": "/maximum-subarray-with-equal-products/",
-                            "score": null,
+                            "score": 1443.185430222,
                             "solution": null,
                             "isPremium": false
                         },
@@ -523,7 +523,7 @@ export default{
                             "title": "3413. 收集连续 K 个袋子可以获得的最多硬币数量",
                             "sort": 24,
                             "src": "/maximum-coins-from-k-consecutive-bags/",
-                            "score": null,
+                            "score": 2373.8124052261,
                             "solution": null,
                             "isPremium": false
                         },

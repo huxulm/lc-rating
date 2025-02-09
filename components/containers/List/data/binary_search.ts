@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】二分算法（二分答案/最小化最大值/最大化最小值/第K小）",
     "original_src": "https://leetcode.cn/circle/discuss/SqopEo",
-    "last_update": "2025-02-01 14:05:05",
+    "last_update": "2025-02-08 04:11:16",
     "sort": 0,
     "child": [
         {
@@ -29,7 +29,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "请先学习：<a href=\"https://www.bilibili.com/video/BV1AP41137w7/\">二分查找 红蓝染色法【基础算法精讲 04】</a><br>",
+                    "summary": "请先学习：<a href=\"https://www.bilibili.com/video/BV1AP41137w7/\">二分查找 红蓝染色法【基础算法精讲 04】</a><br>**思维扩展**：<br>",
                     "child": [
                         {
                             "title": "34. 在排序数组中查找元素的第一个和最后一个位置",
@@ -222,6 +222,14 @@ export default{
                             "score": null,
                             "solution": null,
                             "isPremium": true
+                        },
+                        {
+                            "title": "1287. 有序数组中出现次数超过 25% 的元素",
+                            "sort": 24,
+                            "src": "/element-appearing-more-than-25-in-sorted-array/",
+                            "score": 1179.1495967491,
+                            "solution": null,
+                            "isPremium": false
                         }
                     ]
                 }
@@ -591,7 +599,7 @@ export default{
                             "title": "3419. 图的最大边权的最小值",
                             "sort": 8,
                             "src": "/minimize-the-maximum-edge-weight-of-graph/",
-                            "score": null,
+                            "score": 2243.2051062979,
                             "solution": null,
                             "isPremium": false
                         },

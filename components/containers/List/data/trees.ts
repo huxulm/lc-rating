@@ -2401,7 +2401,7 @@ export default{
                             "title": "3425. 最长特殊路径",
                             "sort": 8,
                             "src": "/longest-special-path/",
-                            "score": null,
+                            "score": 2434.6549114916,
                             "solution": null,
                             "isPremium": false
                         },

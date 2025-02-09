@@ -593,7 +593,7 @@ export default{
                             "title": "3411. 最长乘积等价子数组",
                             "sort": 3,
                             "src": "/maximum-subarray-with-equal-products/",
-                            "score": null,
+                            "score": 1443.185430222,
                             "solution": null,
                             "isPremium": false
                         }
@@ -880,7 +880,7 @@ export default{
                             "title": "3405. 统计恰好有 K 个相等相邻元素的数组数目",
                             "sort": 10,
                             "src": "/count-the-number-of-arrays-with-k-matching-adjacent-elements/",
-                            "score": null,
+                            "score": 2309.7881448766,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1192,7 +1192,7 @@ export default{
                             "title": "3428. 最多 K 个元素的子序列的最值之和",
                             "sort": 4,
                             "src": "/maximum-and-minimum-sums-of-at-most-size-k-subsequences/",
-                            "score": null,
+                            "score": 2028.4660734851,
                             "solution": null,
                             "isPremium": false
                         },
@@ -1200,7 +1200,7 @@ export default{
                             "title": "3426. 所有安放棋子方案的曼哈顿距离",
                             "sort": 5,
                             "src": "/manhattan-distances-of-all-arrangements-of-pieces/",
-                            "score": null,
+                            "score": 2443.188673632,
                             "solution": null,
                             "isPremium": false
                         },

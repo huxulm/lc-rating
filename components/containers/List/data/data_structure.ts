@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）",
     "original_src": "https://leetcode.cn/circle/discuss/mOr1u6",
-    "last_update": "2025-02-01 05:48:21",
+    "last_update": "2025-02-08 06:17:28",
     "sort": 0,
     "child": [
         {
@@ -72,8 +72,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2815. 数组中的最大数对和",
+                            "title": "624. 数组列表中的最大距离",
                             "sort": 5,
+                            "src": "/maximum-distance-in-arrays/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2815. 数组中的最大数对和",
+                            "sort": 6,
                             "src": "/max-pair-sum-in-an-array/",
                             "score": 1295.0947625986,
                             "solution": null,
@@ -81,7 +89,7 @@ export default{
                         },
                         {
                             "title": "2342. 数位和相等数对的最大和",
-                            "sort": 6,
+                            "sort": 7,
                             "src": "/max-sum-of-a-pair-with-equal-sum-of-digits/",
                             "score": 1308.9617729374,
                             "solution": null,
@@ -89,7 +97,7 @@ export default{
                         },
                         {
                             "title": "1679. K 和数对的最大数目",
-                            "sort": 7,
+                            "sort": 8,
                             "src": "/max-number-of-k-sum-pairs/",
                             "score": 1345.737168609,
                             "solution": null,
@@ -97,7 +105,7 @@ export default{
                         },
                         {
                             "title": "2260. 必须拿起的最小连续卡牌数",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/minimum-consecutive-cards-to-pick-up/",
                             "score": 1364.6787168645,
                             "solution": null,
@@ -105,7 +113,7 @@ export default{
                         },
                         {
                             "title": "1010. 总持续时间可被 60 整除的歌曲",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/pairs-of-songs-with-total-durations-divisible-by-60/",
                             "score": 1377.1913915125,
                             "solution": null,
@@ -113,15 +121,23 @@ export default{
                         },
                         {
                             "title": "3185. 构成整天的下标对数目 II",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/count-pairs-that-form-a-complete-day-ii/",
                             "score": 1385.2857255388,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "2506. 统计相似字符串对的数目",
+                            "sort": 12,
+                            "src": "/count-pairs-of-similar-strings/",
+                            "score": 1335.4613368501,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "2748. 美丽下标对的数目",
-                            "sort": 11,
+                            "sort": 13,
                             "src": "/number-of-beautiful-pairs/",
                             "score": 1301.1576743638,
                             "solution": null,
@@ -129,7 +145,7 @@ export default{
                         },
                         {
                             "title": "2874. 有序三元组中的最大值 II",
-                            "sort": 12,
+                            "sort": 14,
                             "src": "/maximum-value-of-an-ordered-triplet-ii/",
                             "score": 1583.212966224,
                             "solution": null,
@@ -137,7 +153,7 @@ export default{
                         },
                         {
                             "title": "1014. 最佳观光组合",
-                            "sort": 13,
+                            "sort": 15,
                             "src": "/best-sightseeing-pair/",
                             "score": 1730.3052054913,
                             "solution": null,
@@ -145,7 +161,7 @@ export default{
                         },
                         {
                             "title": "1814. 统计一个数组中好对子的数目",
-                            "sort": 14,
+                            "sort": 16,
                             "src": "/count-nice-pairs-in-an-array/",
                             "score": 1737.8431142688,
                             "solution": null,
@@ -153,7 +169,7 @@ export default{
                         },
                         {
                             "title": "2905. 找出满足差值条件的下标 II",
-                            "sort": 15,
+                            "sort": 17,
                             "src": "/find-indices-with-index-and-value-difference-ii/",
                             "score": 1763.787679959,
                             "solution": null,
@@ -161,7 +177,7 @@ export default{
                         },
                         {
                             "title": "1031. 两个非重叠子数组的最大和",
-                            "sort": 16,
+                            "sort": 18,
                             "src": "/maximum-sum-of-two-non-overlapping-subarrays/",
                             "score": 1680.4852623991,
                             "solution": null,
@@ -169,7 +185,7 @@ export default{
                         },
                         {
                             "title": "2555. 两个线段获得的最多奖品",
-                            "sort": 17,
+                            "sort": 19,
                             "src": "/maximize-win-from-two-segments/",
                             "score": 2080.7845644831,
                             "solution": null,
@@ -177,7 +193,7 @@ export default{
                         },
                         {
                             "title": "1995. 统计特殊四元组",
-                            "sort": 18,
+                            "sort": 20,
                             "src": "/count-special-quadruplets/",
                             "score": 1352.1791099256,
                             "solution": null,
@@ -185,15 +201,15 @@ export default{
                         },
                         {
                             "title": "3404. 统计特殊子序列的数目",
-                            "sort": 19,
+                            "sort": 21,
                             "src": "/count-special-subsequences/",
-                            "score": null,
+                            "score": 2445.3859371333,
                             "solution": null,
                             "isPremium": false
                         },
                         {
                             "title": "3267. 统计近似相等数对 II",
-                            "sort": 20,
+                            "sort": 22,
                             "src": "/count-almost-equal-pairs-ii/",
                             "score": 2545.1080433595,
                             "solution": null,
@@ -201,7 +217,7 @@ export default{
                         },
                         {
                             "title": "1214. 查找两棵二叉搜索树之和",
-                            "sort": 21,
+                            "sort": 23,
                             "src": "/two-sum-bsts/",
                             "score": 1389.0328392117,
                             "solution": null,
@@ -209,7 +225,7 @@ export default{
                         },
                         {
                             "title": "2964. 可被整除的三元组数量",
-                            "sort": 22,
+                            "sort": 24,
                             "src": "/number-of-divisible-triplet-sums/",
                             "score": null,
                             "solution": null,
@@ -217,7 +233,7 @@ export default{
                         },
                         {
                             "title": "2441. 与对应负数同时存在的最大正整数",
-                            "sort": 23,
+                            "sort": 25,
                             "src": "/largest-positive-integer-that-exists-with-its-negative/",
                             "score": 1167.647122501,
                             "solution": null,
@@ -225,7 +241,7 @@ export default{
                         },
                         {
                             "title": "面试题 16.24. 数对和",
-                            "sort": 24,
+                            "sort": 26,
                             "src": "/pairs-with-sum-lcci/",
                             "score": null,
                             "solution": null,
@@ -233,7 +249,7 @@ export default{
                         },
                         {
                             "title": "454. 四数相加 II",
-                            "sort": 25,
+                            "sort": 27,
                             "src": "/4sum-ii/",
                             "score": null,
                             "solution": null,
@@ -241,7 +257,7 @@ export default{
                         },
                         {
                             "title": "3371. 识别数组中的最大异常值",
-                            "sort": 26,
+                            "sort": 28,
                             "src": "/identify-the-largest-outlier-in-an-array/",
                             "score": 1643.7450467383,
                             "solution": null,
@@ -364,7 +380,7 @@ export default{
                     "title": "§1.1 前缀和基础",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<a href=\"https://leetcode.cn/problems/range-sum-query-immutable/solution/qian-zhui-he-ji-qi-kuo-zhan-fu-ti-dan-py-vaar/\">讲解</a><br>",
+                    "summary": "<a href=\"https://leetcode.cn/problems/range-sum-query-immutable/solution/qian-zhui-he-ji-qi-kuo-zhan-fu-ti-dan-py-vaar/\">讲解</a><br>**思维扩展**：<br>",
                     "child": [
                         {
                             "title": "303. 区域和检索 - 数组不可变",
@@ -378,7 +394,7 @@ export default{
                             "title": "3427. 变长子数组求和",
                             "sort": 1,
                             "src": "/sum-of-variable-length-subarrays/",
-                            "score": null,
+                            "score": 1215.6806967423,
                             "solution": null,
                             "isPremium": false
                         },
@@ -391,16 +407,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2389. 和有限的最长子序列",
-                            "sort": 3,
-                            "src": "/longest-subsequence-with-limited-sum/",
-                            "score": 1387.7347071166,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "3152. 特殊数组 II",
-                            "sort": 4,
+                            "sort": 3,
                             "src": "/special-array-ii/",
                             "score": 1523.2643084719,
                             "solution": null,
@@ -408,23 +416,23 @@ export default{
                         },
                         {
                             "title": "1749. 任意子数组和的绝对值的最大值",
-                            "sort": 5,
+                            "sort": 4,
                             "src": "/maximum-absolute-sum-of-any-subarray/",
                             "score": 1541.6176288991,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "2438. 二的幂数组中查询范围内的乘积",
-                            "sort": 6,
-                            "src": "/range-product-queries-of-powers/",
-                            "score": 1609.7858209851,
+                            "title": "2389. 和有限的最长子序列",
+                            "sort": 5,
+                            "src": "/longest-subsequence-with-limited-sum/",
+                            "score": 1387.7347071166,
                             "solution": null,
                             "isPremium": false
                         },
                         {
                             "title": "3361. 两个字符串的切换距离",
-                            "sort": 7,
+                            "sort": 6,
                             "src": "/shift-distance-between-two-strings/",
                             "score": 1553.2232121523,
                             "solution": null,
@@ -432,7 +440,7 @@ export default{
                         },
                         {
                             "title": "2055. 蜡烛之间的盘子",
-                            "sort": 8,
+                            "sort": 7,
                             "src": "/plates-between-candles/",
                             "score": 1819.3068421506,
                             "solution": null,
@@ -440,7 +448,7 @@ export default{
                         },
                         {
                             "title": "1744. 你能在你最喜欢的那天吃到你最喜欢的糖果吗？",
-                            "sort": 9,
+                            "sort": 8,
                             "src": "/can-you-eat-your-favorite-candy-on-your-favorite-day/",
                             "score": 1858.9581916885,
                             "solution": null,
@@ -448,10 +456,18 @@ export default{
                         },
                         {
                             "title": "53. 最大子数组和",
-                            "sort": 10,
+                            "sort": 9,
                             "src": "/maximum-subarray/",
                             "score": null,
                             "solution": "/maximum-subarray/solution/qian-zhui-he-zuo-fa-ben-zhi-shi-mai-mai-abu71/",
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1523. 在区间范围内统计奇数数目",
+                            "sort": 10,
+                            "src": "/count-odd-numbers-in-an-interval-range/",
+                            "score": 1209.3722198224,
+                            "solution": null,
                             "isPremium": false
                         }
                     ]
@@ -732,19 +748,11 @@ export default{
                     "title": "§1.4 前缀异或和",
                     "sort": 3,
                     "isLeaf": true,
-                    "summary": "",
+                    "summary": "推荐先阅读：<a href=\"https://leetcode.cn/circle/discuss/CaOJ45/\">从集合论到位运算，常见位运算技巧分类总结！</a><br>",
                     "child": [
                         {
-                            "title": "1310. 子数组异或查询",
-                            "sort": 0,
-                            "src": "/xor-queries-of-a-subarray/",
-                            "score": 1459.8208951847,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "1177. 构建回文串检测",
-                            "sort": 1,
+                            "sort": 0,
                             "src": "/can-make-palindrome-from-substring/",
                             "score": 1848.0912848518,
                             "solution": null,
@@ -752,7 +760,7 @@ export default{
                         },
                         {
                             "title": "1371. 每个元音包含偶数次的最长子字符串",
-                            "sort": 2,
+                            "sort": 1,
                             "src": "/find-the-longest-substring-containing-vowels-in-even-counts/",
                             "score": 2040.539289037,
                             "solution": null,
@@ -760,7 +768,7 @@ export default{
                         },
                         {
                             "title": "1542. 找出最长的超赞子字符串",
-                            "sort": 3,
+                            "sort": 2,
                             "src": "/find-longest-awesome-substring/",
                             "score": 2221.7336557442,
                             "solution": null,
@@ -768,7 +776,7 @@ export default{
                         },
                         {
                             "title": "1915. 最美子字符串的数目",
-                            "sort": 4,
+                            "sort": 3,
                             "src": "/number-of-wonderful-substrings/",
                             "score": 2234.9191877602,
                             "solution": null,
@@ -776,7 +784,7 @@ export default{
                         },
                         {
                             "title": "2791. 树中可以形成回文的路径数",
-                            "sort": 5,
+                            "sort": 4,
                             "src": "/count-paths-that-can-form-a-palindrome-in-a-tree/",
                             "score": 2677.1682592316,
                             "solution": null,
@@ -791,8 +799,24 @@ export default{
                     "summary": "",
                     "child": [
                         {
-                            "title": "1895. 最大的幻方",
+                            "title": "1310. 子数组异或查询",
                             "sort": 0,
+                            "src": "/xor-queries-of-a-subarray/",
+                            "score": 1459.8208951847,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2438. 二的幂数组中查询范围内的乘积",
+                            "sort": 1,
+                            "src": "/range-product-queries-of-powers/",
+                            "score": 1609.7858209851,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1895. 最大的幻方",
+                            "sort": 2,
                             "src": "/largest-magic-square/",
                             "score": 1781.3664141686,
                             "solution": null,
@@ -800,7 +824,7 @@ export default{
                         },
                         {
                             "title": "1878. 矩阵中最大的三个菱形和",
-                            "sort": 1,
+                            "sort": 3,
                             "src": "/get-biggest-three-rhombus-sums-in-a-grid/",
                             "score": 1897.5516652727,
                             "solution": null,
@@ -808,7 +832,7 @@ export default{
                         },
                         {
                             "title": "1031. 两个非重叠子数组的最大和",
-                            "sort": 2,
+                            "sort": 4,
                             "src": "/maximum-sum-of-two-non-overlapping-subarrays/",
                             "score": 1680.4852623991,
                             "solution": null,
@@ -816,7 +840,7 @@ export default{
                         },
                         {
                             "title": "2245. 转角路径的乘积中最多能有几个尾随零",
-                            "sort": 3,
+                            "sort": 5,
                             "src": "/maximum-trailing-zeros-in-a-cornered-path/",
                             "score": 2036.7410194704,
                             "solution": null,
@@ -824,7 +848,7 @@ export default{
                         },
                         {
                             "title": "1712. 将数组分成三个子数组的方案数",
-                            "sort": 4,
+                            "sort": 6,
                             "src": "/ways-to-split-array-into-three-subarrays/",
                             "score": 2078.6986769435,
                             "solution": null,
@@ -832,7 +856,7 @@ export default{
                         },
                         {
                             "title": "1862. 向下取整数对和",
-                            "sort": 5,
+                            "sort": 7,
                             "src": "/sum-of-floored-pairs/",
                             "score": 2170.1079846744,
                             "solution": null,
@@ -840,7 +864,7 @@ export default{
                         },
                         {
                             "title": "363. 矩形区域不超过 K 的最大数值和",
-                            "sort": 6,
+                            "sort": 8,
                             "src": "/max-sum-of-rectangle-no-larger-than-k/",
                             "score": null,
                             "solution": null,
@@ -848,15 +872,23 @@ export default{
                         },
                         {
                             "title": "2281. 巫师的总力量和",
-                            "sort": 7,
+                            "sort": 9,
                             "src": "/sum-of-total-strength-of-wizards/",
                             "score": 2621.1208072273,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "3445. 奇偶频次间的最大差值 II",
+                            "sort": 10,
+                            "src": "/maximum-difference-between-even-and-odd-frequency-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "2983. 回文串重新排列查询",
-                            "sort": 8,
+                            "sort": 11,
                             "src": "/palindrome-rearrangement-queries/",
                             "score": 2779.7855167601,
                             "solution": null,
@@ -864,7 +896,7 @@ export default{
                         },
                         {
                             "title": "2955. 同端子串的数量",
-                            "sort": 9,
+                            "sort": 12,
                             "src": "/number-of-same-end-substrings/",
                             "score": null,
                             "solution": null,
@@ -872,7 +904,7 @@ export default{
                         },
                         {
                             "title": "1788. 最大化花园的美观度",
-                            "sort": 10,
+                            "sort": 13,
                             "src": "/maximize-the-beauty-of-the-garden/",
                             "score": null,
                             "solution": null,
@@ -880,7 +912,7 @@ export default{
                         },
                         {
                             "title": "2819. 购买巧克力后的最小相对损失",
-                            "sort": 11,
+                            "sort": 14,
                             "src": "/minimum-relative-loss-after-buying-chocolates/",
                             "score": null,
                             "solution": null,
@@ -1392,7 +1424,7 @@ export default{
                             "title": "3412. 计算字符串的镜像分数",
                             "sort": 6,
                             "src": "/find-mirror-score-of-a-string/",
-                            "score": null,
+                            "score": 1578.4458037997,
                             "solution": null,
                             "isPremium": false
                         },
@@ -2266,16 +2298,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3408. 设计任务管理器",
-                            "sort": 14,
-                            "src": "/design-task-manager/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "1801. 积压订单中的订单总数",
-                            "sort": 15,
+                            "sort": 14,
                             "src": "/number-of-orders-in-the-backlog/",
                             "score": 1711.1205064321,
                             "solution": null,
@@ -2283,7 +2307,7 @@ export default{
                         },
                         {
                             "title": "2406. 将区间分为最少组数",
-                            "sort": 16,
+                            "sort": 15,
                             "src": "/divide-intervals-into-minimum-number-of-groups/",
                             "score": 1713.3954468582,
                             "solution": null,
@@ -2291,7 +2315,7 @@ export default{
                         },
                         {
                             "title": "2462. 雇佣 K 位工人的总代价",
-                            "sort": 17,
+                            "sort": 16,
                             "src": "/total-cost-to-hire-k-workers/",
                             "score": 1763.6404758359,
                             "solution": null,
@@ -2299,9 +2323,17 @@ export default{
                         },
                         {
                             "title": "1834. 单线程 CPU",
-                            "sort": 18,
+                            "sort": 17,
                             "src": "/single-threaded-cpu/",
                             "score": 1797.7466000366,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3408. 设计任务管理器",
+                            "sort": 18,
+                            "src": "/design-task-manager/",
+                            "score": 1806.5135130091,
                             "solution": null,
                             "isPremium": false
                         },
@@ -3049,10 +3081,10 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "336. 回文对",
+                            "title": "3093. 最长公共后缀查询",
                             "sort": 2,
-                            "src": "/palindrome-pairs/",
-                            "score": null,
+                            "src": "/longest-common-suffix-queries/",
+                            "score": 2118.3732356694,
                             "solution": null,
                             "isPremium": false
                         },
@@ -3065,18 +3097,18 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3093. 最长公共后缀查询",
+                            "title": "3045. 统计前后缀下标对 II",
                             "sort": 4,
-                            "src": "/longest-common-suffix-queries/",
-                            "score": 2118.3732356694,
+                            "src": "/count-prefix-and-suffix-pairs-ii/",
+                            "score": 2327.5726642605,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "3045. 统计前后缀下标对 II",
+                            "title": "336. 回文对",
                             "sort": 5,
-                            "src": "/count-prefix-and-suffix-pairs-ii/",
-                            "score": 2327.5726642605,
+                            "src": "/palindrome-pairs/",
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },
