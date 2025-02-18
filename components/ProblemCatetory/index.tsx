@@ -171,7 +171,7 @@ function ProblemCategoryList({
 
   const title2id = (title: string) => {
     // title: number. title
-    return title.split(".")[0];
+    return title.split(". ")[0];
   }
 
   const progress = (title: string) => {
