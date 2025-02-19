@@ -41,14 +41,14 @@ class SubtitleNode:
     summary: str
     child: List[Dict] # List[Dict[ContentNode]]
 
-@dataclass   
+@dataclass
 class TitleNode:
     title: str
     sort: int
     summary: str
     child: List[Dict] # List[Dict[SubtitleNode]]
 
-@dataclass   
+@dataclass
 class RootNode:
     title: str
     original_src: str
@@ -127,7 +127,7 @@ def refactor_discussion(root: RootNode, content: str, rating: Dict, isSubExist: 
             curr_title_node = TitleNode(title, len(root.child), "", [])
             # since no subtitle, create a empty subtitle node
             curr_subtitle_node = SubtitleNode("", 0, True, "", [])
-        
+
         elif cont.startswith("- ["): # content init
             # in some case, there is no subtitle, so we need to create a empty subtitle node
             if not curr_subtitle_node:
@@ -137,7 +137,7 @@ def refactor_discussion(root: RootNode, content: str, rating: Dict, isSubExist: 
             title = markdown_match.group(1)
             src = markdown_match.group(2)
             additional = markdown_match.group(3)
-            title_id = title.split(".")[0]
+            title_id = title.split(". ")[0]
             if title_id.isdigit():
                 title_id = int(title_id)
             score = rating[title_id] if title_id in rating else None
@@ -166,7 +166,7 @@ def refactor_discussion(root: RootNode, content: str, rating: Dict, isSubExist: 
     # 最后一个title没有加入，这里检查的是倒数第二个title
     if root.child[-1]['title'] == "关联题单":
         root.child.pop()
-  
+
 def get_rating():
     import requests
     from collections import defaultdict
