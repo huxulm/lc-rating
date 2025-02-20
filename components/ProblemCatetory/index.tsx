@@ -203,11 +203,13 @@ function ProblemCategoryList({
                 className="d-flex justify-content-between"
                 key={hashCode(item.title || "")}
               >
-                <a
-                  href={"https://leetcode.cn/problems" + item.src}
-                  target="_blank"
-                >
-                  {item.title + (item.isPremium ? " (会员题)" : "")}
+                <div>
+                  <a
+                    href={"https://leetcode.cn/problems" + item.src}
+                    target="_blank"
+                  >
+                    {item.title + (item.isPremium ? " (会员题)" : "")}
+                  </a>
                   {showEn && (
                     <a
                       className="ms-2"
@@ -217,7 +219,7 @@ function ProblemCategoryList({
                       <ShareIcon height={16} width={16} />
                     </a>
                   )}
-                </a>
+                </div>
                 {item.score && showRating ? (
                   <div className="ms-2 text-nowrap d-flex justify-content-center align-items-center pb-rating-bg">
                     <RatingCircle difficulty={Number(item.score)} />

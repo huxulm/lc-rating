@@ -158,6 +158,7 @@ export default function () {
             href="https://github.com/huxulm/lc-rating"
             target="_blank"
             className="d-flex p-1 ms-2 d-none d-lg-block d-xl-block d-sm-none"
+            rel="noreferrer"
           >
             {/* @ts-ignore */}
             <GithubBadge
