@@ -14,12 +14,26 @@ const LC_HOST = `https://leetcode.cn`;
 
 export default function Search() {
   const [filter, setFilter] = useState("");
-  const { solutions: _solutions, isPending: solLoading } = useSolutions(filter);
-  const { tags: qtags, isPending: tgLoading } = useQuestionTags(filter);
-  const { tags } = useTags();
   const onSearchTextChange = (e: React.ChangeEvent) => {
     // @ts-ignore
     setFilter(e.target.value);
+  };
+
+  const { solutions: _solutions, isPending: solLoading } = useSolutions(filter);
+  const { tags: qtags, isPending: tgLoading } = useQuestionTags(filter);
+  const { tags } = useTags();
+
+  const [lang, setLang] = useState<"zh" | "en">("zh");
+  const onChangeLang = () => {
+    setLang(() => (lang === "en" ? "zh" : "en"));
+  };
+
+  const [selectedTags, setSelectedTags] = useState<Record<string, Boolean>>({});
+  const onSelectTags = (key: string) => {
+    setSelectedTags({ ...selectedTags, [key]: !!!selectedTags[key] });
+  };
+  const onResetTags = () => {
+    setSelectedTags({});
   };
 
   const solutions = useMemo(() => {
@@ -39,19 +53,22 @@ export default function Search() {
     return result;
   }, [filter, _solutions]);
 
-  const [lang, setLang] = useState("zh");
-  const onChangeLang = () => {
-    setLang(() => (lang === "en" ? "zh" : "en"));
-  };
-
-  const [selectedTags, setSelectedTags] = useState<Record<string, Boolean>>({});
-  const onSelectTags = (key: string) => {
-    setSelectedTags({ ...selectedTags, [key]: !!!selectedTags[key] });
-  };
-
-  const onResetTags = () => {
-    setSelectedTags({});
-  };
+  const filteredSolutions = useMemo(() => {
+    const selectedTagIds = Object.keys(selectedTags).filter(
+      (id) => !!selectedTags[id]
+    );
+    return Object.keys(solutions)
+      .filter((id) => {
+        const tags = qtags[id]?.[0] || [];
+        if (selectedTagIds.length == 0) return true;
+        return tags.some((tag) => selectedTags[tag]);
+      })
+      .sort(function (ia, ib) {
+        let a = solutions[ia];
+        let b = solutions[ib];
+        return a[2] < b[2] ? 1 : a[2] == b[2] ? 0 : -1;
+      });
+  }, [selectedTags, solutions, solLoading]);
 
   const renderTags = (tags: [number, string[]]) => {
     return (
@@ -69,30 +86,6 @@ export default function Search() {
       </div>
     );
   };
-
-  const filteredSolutions = useMemo(
-    () =>
-      Object.keys(solutions).filter((id) => {
-        const tags = qtags[id] ? qtags[id][0] || [] : [];
-        if (
-          Object.keys(selectedTags).filter((id) => !!selectedTags[id]).length ==
-            0 &&
-          tags.length == 0
-        ) {
-          return true;
-        }
-        if (
-          Object.keys(selectedTags).filter((id) => !!selectedTags[id]).length ==
-            0 ||
-          tags.filter((id: string) => true === selectedTags[id]).length > 0
-        ) {
-          return true;
-        }
-        return false;
-        // return true;
-      }),
-    [selectedTags, solutions, solLoading]
-  );
 
   function backToTop() {
     document.body.scrollTop = 0;
@@ -221,43 +214,37 @@ export default function Search() {
               </tr>
             </thead>
             <tbody className="table-body">
-              {filteredSolutions
-                .sort(function (ia: any, ib: any) {
-                  let a = solutions[ia];
-                  let b = solutions[ib];
-                  return a[2] < b[2] ? 1 : a[2] == b[2] ? 0 : -1;
-                })
-                .map((id, i) => {
-                  const sol = solutions[id];
-                  let link = "";
-                  let link1 = "";
-                  if (sol) {
-                    link =
-                      LC_HOST + "/problems/" + sol[5] + "/solution/" + sol[1];
-                    link1 = LC_HOST + "/problems/" + sol[5];
-                  }
-                  let _tags = qtags["" + sol[6]];
-                  return (
-                    <tr className="table-row bg-color" key={sol[6]}>
-                      <td className="d-flex align-items-center">{i + 1}</td>
-                      <td className="fw-medium text-left d-flex align-items-center">
-                        <a href={link1}>{`${sol[3]}. ${sol[4]}`}</a>
-                      </td>
-                      <td className="d-flex align-items-center">
-                        {_tags &&
-                          renderTags([
-                            sol[6],
-                            _tags[lang === "en" ? 0 : 1] || [],
-                          ])}
-                      </td>
-                      <td className="d-flex align-items-center">
-                        <a className="nav-link fw-medium" href={link}>
-                          {sol[0]}
-                        </a>
-                      </td>
-                    </tr>
-                  );
-                })}
+              {filteredSolutions.map((id, i) => {
+                const sol = solutions[id];
+                let link = "";
+                let link1 = "";
+                if (sol) {
+                  link =
+                    LC_HOST + "/problems/" + sol[5] + "/solution/" + sol[1];
+                  link1 = LC_HOST + "/problems/" + sol[5];
+                }
+                let _tags = qtags["" + sol[6]];
+                return (
+                  <tr className="table-row bg-color" key={sol[6]}>
+                    <td className="d-flex align-items-center">{i + 1}</td>
+                    <td className="fw-medium text-left d-flex align-items-center">
+                      <a href={link1}>{`${sol[3]}. ${sol[4]}`}</a>
+                    </td>
+                    <td className="d-flex align-items-center">
+                      {_tags &&
+                        renderTags([
+                          sol[6],
+                          _tags[lang === "en" ? 0 : 1] || [],
+                        ])}
+                    </td>
+                    <td className="d-flex align-items-center">
+                      <a className="nav-link fw-medium" href={link}>
+                        {sol[0]}
+                      </a>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </Col>

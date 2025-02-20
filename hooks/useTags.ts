@@ -1,23 +1,27 @@
-import { useEffect, useState, useTransition } from "react"
+import { useEffect, useState, useTransition } from "react";
 
-type Tags = any[];
+type Tags = [number, string, string][];
 
 export function useTags() {
-    // tags
-    const [isPending, startTransition] = useTransition();
-    const [tags, setTags] = useState<Tags>([]);
+  // tags
+  const [isPending, startTransition] = useTransition();
+  const [tags, setTags] = useState<Tags>([]);
 
-    useEffect(() => {
-        fetch("/lc-rating/tags.json?t=" + (new Date().getTime() / 100000).toFixed(0))
-            .then((res) => res.json())
-            .then((result: Tags) => {
-                startTransition(() => {
-                    setTags(result.sort(function(t1, t2) {
-                        return t1[2].localeCompare(t2[2]);
-                    }));
-                });
-            });
-    }, []);
+  useEffect(() => {
+    fetch(
+      "/lc-rating/tags.json?t=" + (new Date().getTime() / 100000).toFixed(0)
+    )
+      .then((res) => res.json())
+      .then((result: Tags) => {
+        startTransition(() => {
+          setTags(
+            result.sort(function (t1, t2) {
+              return t1[2].localeCompare(t2[2]);
+            })
+          );
+        });
+      });
+  }, []);
 
-    return {tags, isPending};
+  return { tags, isPending };
 }
