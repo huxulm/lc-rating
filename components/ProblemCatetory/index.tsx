@@ -96,7 +96,10 @@ function ProblemCategory({
         {data &&
           data.map((item) => {
             return (
-              <div className={`pb-container level-${level + 2}`}>
+              <div
+                className={`pb-container level-${level + 2}`}
+                key={hashCode(item.title || "")}
+              >
                 {item.isLeaf ? (
                   <ProblemCategoryList
                     showEn={showEn}
@@ -116,6 +119,7 @@ function ProblemCategory({
                       title={item.title}
                       data={item.child}
                       summary={item.summary}
+                      key={hashCode(item.title || "")}
                     />
                   ))
                 )}
@@ -195,7 +199,10 @@ function ProblemCategoryList({
           data.child
             .filter((item) => !item.isPremium || showPremium)
             .map((item) => (
-              <li className="d-flex justify-content-between">
+              <li
+                className="d-flex justify-content-between"
+                key={hashCode(item.title || "")}
+              >
                 <a
                   href={"https://leetcode.cn/problems" + item.src}
                   target="_blank"
