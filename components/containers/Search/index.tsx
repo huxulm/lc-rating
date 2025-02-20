@@ -1,4 +1,5 @@
 "use client";
+import BackToTopButton from "@components/BackToTop";
 import { useQuestionTags } from "@hooks/useQuestionTags";
 import { Solutions, useSolutions } from "@hooks/useSolutions";
 import { useTags } from "@hooks/useTags";
@@ -87,54 +88,9 @@ export default function Search() {
     );
   };
 
-  function backToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-
-  function scrollFunction(btn: any) {
-    if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
-    ) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
-    }
-  }
-
-  useEffect(() => {
-    window.onscroll = function () {
-      let btn = document.getElementById("btn-back-to-top");
-      scrollFunction(btn);
-    };
-    return () => {
-      window.onscroll = null;
-    };
-  }, []);
-
   return (
     <Container className="search">
-      <Button
-        variant="primary"
-        id="btn-back-to-top"
-        style={{
-          borderRadius: "50%",
-          position: "fixed",
-          zIndex: 10000,
-          bottom: "50px",
-          right: "5rem",
-          width: "2.5rem",
-          height: "2.5rem",
-          fontSize: "1.5rem",
-          padding: "0",
-        }}
-        onClick={() => {
-          backToTop();
-        }}
-      >
-        ↑
-      </Button>
+      <BackToTopButton />
       <Row
         as="div"
         className="justify-content-center p-3 position-sticky top-0 z-3"

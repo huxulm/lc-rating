@@ -8,6 +8,7 @@ import { hashCode } from "@utils/hash";
 import { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/esm/Form";
+import BackToTopButton from "@components/BackToTop";
 
 const mapCategory2TOC = (
   { title, child, isLeaf }: ProblemCategory,
@@ -54,6 +55,7 @@ export default function ({ data }: { data: ProblemCategory }) {
 
   return (
     <Container fluid className="p-2 problem-list order-1">
+      <BackToTopButton />
       <div className="toc" id="toc">
         <TableOfContent toc={mapCategory2TOC(data, 0)} />
       </div>

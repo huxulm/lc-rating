@@ -37,6 +37,7 @@ import { getMark, getSize, setMark, setSize } from "@/utils/store";
 import { useContests } from "@/hooks/useContests";
 import { useSolutions } from "@/hooks/useSolutions";
 import { Contest } from "@/utils/makeData";
+import BackToTopButton from "@components/BackToTop";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import clsx from "clsx";
 import Container from "react-bootstrap/esm/Container";
@@ -212,14 +213,6 @@ const columns = [
   problemColDef("D"),
 ];
 
-function scrollFunction(btn: any) {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    btn.style.display = "block";
-  } else {
-    btn.style.display = "none";
-  }
-}
-
 // Element or Position to move + Time in ms (milliseconds)
 function scrollTo(element: any, duration: any) {
   var e = document.documentElement;
@@ -378,16 +371,6 @@ function ContestList() {
   });
 
   useEffect(() => {
-    window.onscroll = function () {
-      let btn = document.getElementById("btn-back-to-top");
-      scrollFunction(btn);
-    };
-    return () => {
-      window.onscroll = null;
-    };
-  }, []);
-
-  React.useEffect(() => {
     if (table.getState().columnFilters[0]?.id === "Contest") {
       if (table.getState().sorting[0]?.id !== "Contest") {
         table.setSorting([{ id: "Contest", desc: false }]);
@@ -398,26 +381,7 @@ function ContestList() {
   return (
     <Container fluid className="contest">
       <div className="contest-table">
-        <Button
-          variant="primary"
-          id="btn-back-to-top"
-          style={{
-            borderRadius: "50%",
-            position: "fixed",
-            zIndex: 10000,
-            bottom: "50px",
-            right: "5px",
-            width: "2.5rem",
-            height: "2.5rem",
-            fontSize: "1.5rem",
-            padding: "0",
-          }}
-          onClick={() => {
-            backToTop();
-          }}
-        >
-          ↑
-        </Button>
+        <BackToTopButton />
         <Table
           striped
           bordered
