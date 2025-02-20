@@ -48,6 +48,7 @@ export default function ({ data }: { data: ProblemCategory }) {
   useEffect(() => scrollToComponent(), []);
   const [showEn, setShowEn] = useState<boolean>(true);
   const [showRating, setShowRating] = useState<boolean>(true);
+  const [showPremium, setPremium] = useState<boolean>(true);
   return (
     <Container fluid className="p-2 problem-list order-1">
       <div className="toc" id="toc">
@@ -80,12 +81,22 @@ export default function ({ data }: { data: ProblemCategory }) {
             label="难度分"
             id="toggle-ratings"
           />
+          <Form.Check
+            checked={showPremium}
+            onChange={() => {
+              setPremium(!showPremium);
+            }}
+            type="switch"
+            label="会员题"
+            id="toggle-premiums"
+          />
         </Form>
         <ProblemCategory
           title={`<p class="fs-6 fw-bold fst-italic">来源:<a target="_blank" class="ms-2 fs-6 link" href="${data.original_src}">${data.original_src}</a> <span class="ms-3 fw-semibold fst-italic">最近更新: ${data["last_update"]}</span></p>`}
           data={[data]}
-          en={showEn}
-          rating={showRating}
+          showEn={showEn}
+          showRating={showRating}
+          showPremium={showPremium}
           summary={data.summary}
         />
       </div>
