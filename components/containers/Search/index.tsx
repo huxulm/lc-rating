@@ -1,6 +1,6 @@
 "use client";
 import { useQuestionTags } from "@hooks/useQuestionTags";
-import { useSolutions } from "@hooks/useSolutions";
+import { useSolutions, Solutions } from "@hooks/useSolutions";
 import { useTags } from "@hooks/useTags";
 import { useEffect, useMemo, useState } from "react";
 import Button from "react-bootstrap/Button";
@@ -23,10 +23,10 @@ export default function Search() {
   };
 
   const solutions = useMemo(() => {
-    let result: any = {};
+    let result: Solutions = {};
     Object.keys(_solutions).forEach((id) => {
       let v = _solutions[id];
-      let key: string = v[6];
+      let key = v[6];
       if (
         filter === "" ||
         v[3].indexOf(filter) != -1 ||
@@ -53,13 +53,15 @@ export default function Search() {
     setSelectedTags({});
   };
 
-  const renderTags = (tags: any[]) => {
-    if (!tags) return;
+  const renderTags = (tags: [number, string[]]) => {
     return (
       <div className="d-flex flex-wrap" style={{ gap: ".3rem" }}>
-        {tags[1].map((t: any) => {
+        {tags[1].map((t) => {
           return (
-            <span className={`rounded fw-medium tag text-info active1 sm`}>
+            <span
+              className={`rounded fw-medium tag text-info active1 sm`}
+              key={t}
+            >
               {t}
             </span>
           );
@@ -181,7 +183,11 @@ export default function Search() {
           <div className="d-flex flex-wrap" style={{ columnGap: "1rem" }}>
             {tags.map((tag) => {
               return (
-                <span onClick={() => onSelectTags(tag[1])} className="p-1">
+                <span
+                  onClick={() => onSelectTags(tag[1])}
+                  className="p-1"
+                  key={tag[1]}
+                >
                   <span
                     className={`rounded p-1 fw-medium tag ${
                       !!selectedTags[`${tag[1]}`] ? "active" : ""
@@ -229,7 +235,7 @@ export default function Search() {
                   }
                   let _tags = qtags["" + sol[6]];
                   return (
-                    <tr className="table-row bg-color">
+                    <tr className="table-row bg-color" key={sol[6]}>
                       <td className="d-flex align-items-center">{i + 1}</td>
                       <td className="fw-medium text-left d-flex align-items-center">
                         <a href={link1}>{`${sol[3]}. ${sol[4]}`}</a>
