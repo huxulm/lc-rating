@@ -1,5 +1,6 @@
 import { ShareIcon } from "@components/icons";
 import RatingCircle, { ColorRating } from "@components/RatingCircle";
+import { hashCode } from "@utils/hash";
 import { useCallback, useState } from "react";
 import Form from "react-bootstrap/esm/Form";
 
@@ -55,19 +56,6 @@ interface ProblemCategoryProps {
   showRating?: boolean;
   showPremium?: boolean;
 }
-
-export const hashCode = function (s: string) {
-  var hash = 0,
-    i,
-    chr;
-  if (s.length === 0) return hash;
-  for (i = 0; i < s.length; i++) {
-    chr = s.charCodeAt(i);
-    hash = (hash << 5) - hash + chr;
-    hash |= 0; // Convert to 32bit integer
-  }
-  return hash;
-};
 
 function count(data: ProblemCategory[]) {
   let tot = 0;
@@ -162,6 +150,7 @@ function ProblemCategoryList({
     return "col3";
   };
 
+  // trigger page to refresh
   const [localStorageProgressData, setLocalStorageProgressData] =
     useState<ProgressData>({});
 

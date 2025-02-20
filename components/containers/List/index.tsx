@@ -1,11 +1,12 @@
 "use client";
-import Container from "react-bootstrap/Container";
-import ProblemCategory, { hashCode } from "@components/ProblemCatetory";
+import ProblemCategory from "@components/ProblemCatetory";
 import {
   TableOfContent,
   TOC,
 } from "@components/ProblemCatetory/TableOfContent";
+import { hashCode } from "@utils/hash";
 import { useEffect, useState } from "react";
+import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/esm/Form";
 
 const mapCategory2TOC = (
