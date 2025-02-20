@@ -16,17 +16,15 @@ export default function () {
   const { theme, toggleTheme } = useTheme();
   const [showModal, setShowModal] = useState(false);
 
-  const handleModalState = useCallback((state: boolean) => {
-    setShowModal(state);
-    if (!state) {
-      // When closing the modal
-      // Perform side effects here
+  const handleOpenModal = () => {
+    setShowModal(true);
+  };
+  const handleCloseModal = (update: boolean) => {
+    setShowModal(false);
+    if (update) {
       window.location.reload();
     }
-  }, []);
-
-  const handleOpenModal = () => handleModalState(true);
-  const handleCloseModal = () => handleModalState(false);
+  };
 
   useEffect(() => {
     toggleTheme(theme);
