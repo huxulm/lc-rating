@@ -436,8 +436,8 @@ function ContestList() {
                   let hsz = header.getSize();
                   return (
                     <th
+                      key={header.id}
                       {...{
-                        key: header.id,
                         colSpan: header.colSpan,
                         style: {
                           width: hsz,
@@ -516,8 +516,8 @@ function ContestList() {
                     {row.getVisibleCells().map((cell) => {
                       return (
                         <td
+                          key={cell.id}
                           {...{
-                            key: cell.id,
                             className: "tb-overflow",
                           }}
                         >
@@ -588,6 +588,7 @@ function ContestList() {
               {[20, 50, 100, 200, 500].map((v) => {
                 return (
                   <Button
+                    key={v}
                     className={pageSize === v ? "active" : ""}
                     onClick={(e) => {
                       table.setPageSize(Number(v));

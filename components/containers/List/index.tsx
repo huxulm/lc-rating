@@ -47,9 +47,11 @@ export default function ({ data }: { data: ProblemCategory }) {
   };
 
   useEffect(() => scrollToComponent(), []);
+
   const [showEn, setShowEn] = useState<boolean>(true);
   const [showRating, setShowRating] = useState<boolean>(true);
   const [showPremium, setPremium] = useState<boolean>(true);
+
   return (
     <Container fluid className="p-2 problem-list order-1">
       <div className="toc" id="toc">
