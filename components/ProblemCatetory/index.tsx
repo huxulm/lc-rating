@@ -1,7 +1,7 @@
 import { ShareIcon } from "@components/icons";
-import RatingCircle, { ColorRating } from "../RatingCircle";
-import Form from "react-bootstrap/esm/Form";
+import RatingCircle, { ColorRating } from "@components/RatingCircle";
 import { useCallback, useState } from "react";
+import Form from "react-bootstrap/esm/Form";
 
 const LC_RATING_PROGRESS_KEY = (questionID: string) =>
   `lc-rating-zen-progress-${questionID}`;

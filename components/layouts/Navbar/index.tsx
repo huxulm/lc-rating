@@ -1,14 +1,14 @@
 "use client";
+import { GithubBasicBadge as GithubBadge } from "@components/gh";
+import ThemeSwitchButton from "@components/ThemeSwitchButton";
+import { useTheme } from "@hooks/useTheme";
 import Link from "next/dist/client/link";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Button from "react-bootstrap/esm/Button";
 import Container from "react-bootstrap/esm/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { useTheme } from "../../../hooks/useTheme";
-import { GithubBasicBadge as GithubBadge } from "../../gh";
-import ThemeSwitchButton from "../../ThemeSwitchButton";
-// import GithubProfile from "../../gh";
+// import GithubProfile from "@components/gh";
 import SyncProgressModal from "@components/SyncProgressModal";
 import { useCallback, useEffect, useState } from "react";
 
@@ -104,13 +104,19 @@ export default function () {
               <Link className="nav-link px-lg-3" href="/list/grid">
                 <Button className="fw-bold fs-6 p-1">📑网格图</Button>
               </Link>
-              <Link className="nav-link px-lg-3" href="/list/bitwise_operations">
+              <Link
+                className="nav-link px-lg-3"
+                href="/list/bitwise_operations"
+              >
                 <Button className="fw-bold fs-6 p-1">📑位运算</Button>
               </Link>
               <Link className="nav-link px-lg-3" href="/list/graph">
                 <Button className="fw-bold fs-6 p-1">📑图论算法</Button>
               </Link>
-              <Link className="nav-link px-lg-3" href="/list/dynamic_programming">
+              <Link
+                className="nav-link px-lg-3"
+                href="/list/dynamic_programming"
+              >
                 <Button className="fw-bold fs-6 p-1">📑动态规划</Button>
               </Link>
               <Link className="nav-link px-lg-3" href="/list/data_structure">

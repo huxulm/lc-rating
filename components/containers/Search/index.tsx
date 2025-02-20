@@ -1,7 +1,7 @@
 "use client";
-import { useSolutions } from "../../../hooks/useSolutions";
-import { useQuestionTags } from "../../../hooks/useQuestionTags";
-import { useTags } from "../../../hooks/useTags";
+import { useQuestionTags } from "@hooks/useQuestionTags";
+import { useSolutions } from "@hooks/useSolutions";
+import { useTags } from "@hooks/useTags";
 import { useEffect, useMemo, useState } from "react";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
