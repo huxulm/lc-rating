@@ -198,7 +198,6 @@ const columns = [
                 setCk(e.target.checked);
                 setMark(e.target.checked ? info.row.original.TitleSlug : "");
               }}
-              defaultChecked={ck}
               checked={ck}
             />
           </Form.Group>
