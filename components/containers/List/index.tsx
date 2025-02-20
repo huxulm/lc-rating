@@ -5,7 +5,6 @@ import {
   TableOfContent,
   TOC,
 } from "@components/ProblemCatetory/TableOfContent";
-import Data from "@components/containers/List/data/binary_search";
 import { useEffect, useState } from "react";
 import Form from "react-bootstrap/esm/Form";
 
@@ -20,19 +19,21 @@ const mapCategory2TOC = (
     count: 0,
   } as TOC;
   // console.log(toc.title, toc.id);
-  if (child && !isLeaf) {
+
+  if (!child) return toc;
+
+  if (!isLeaf) {
     toc.children = child.map((c) => mapCategory2TOC(c, level + 1));
     toc.children.forEach((t) => {
       toc.count += t.count;
     });
-  }
-  if (isLeaf) {
+  } else {
     toc.count = child.length;
   }
   return toc;
 };
 
-export default function () {
+export default function ({ data }: { data: ProblemCategory }) {
   const scrollToComponent = () => {
     if (window.location.hash) {
       let id = window.location.hash.replace("#", "");
@@ -50,7 +51,7 @@ export default function () {
   return (
     <Container fluid className="p-2 problem-list order-1">
       <div className="toc" id="toc">
-        <TableOfContent toc={mapCategory2TOC(Data, 0)} />
+        <TableOfContent toc={mapCategory2TOC(data, 0)} />
       </div>
       <div
         className="pb-content ms-5 p-2"
@@ -81,11 +82,11 @@ export default function () {
           />
         </Form>
         <ProblemCategory
-          title={`<p class="fs-6 fw-bold fst-italic">来源:<a target="_blank" class="ms-2 fs-6 link" href="${Data.original_src}">${Data.original_src}</a> <span class="ms-3 fw-semibold fst-italic">最近更新: ${Data["last_update"]}</span></p>`}
-          data={[Data]}
+          title={`<p class="fs-6 fw-bold fst-italic">来源:<a target="_blank" class="ms-2 fs-6 link" href="${data.original_src}">${data.original_src}</a> <span class="ms-3 fw-semibold fst-italic">最近更新: ${data["last_update"]}</span></p>`}
+          data={[data]}
           en={showEn}
           rating={showRating}
-          summary={Data.summary}
+          summary={data.summary}
         />
       </div>
     </Container>

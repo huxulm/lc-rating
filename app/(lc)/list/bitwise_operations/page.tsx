@@ -1,8 +1,9 @@
 "use client";
 import { lazy } from "react";
+import data from "@components/containers/List/data/bitwise_operations";
 
-const List = lazy(() => import("@components/containers/List/BitManipulation"));
+const List = lazy(() => import("@components/containers/List"));
 
 export default function Page() {
-  return <List />;
+  return <List data={data} />;
 }

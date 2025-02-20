@@ -1,8 +1,9 @@
 "use client";
 import { lazy } from "react";
+import data from "@components/containers/List/data/math";
 
-const List = lazy(() => import("@components/containers/List/Math"));
+const List = lazy(() => import("@components/containers/List"));
 
 export default function Page() {
-  return <List />;
+  return <List data={data} />;
 }
