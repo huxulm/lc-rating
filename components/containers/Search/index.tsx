@@ -1,6 +1,6 @@
 "use client";
 import { useQuestionTags } from "@hooks/useQuestionTags";
-import { useSolutions, Solutions } from "@hooks/useSolutions";
+import { Solutions, useSolutions } from "@hooks/useSolutions";
 import { useTags } from "@hooks/useTags";
 import { useEffect, useMemo, useState } from "react";
 import Button from "react-bootstrap/Button";
@@ -114,6 +114,9 @@ export default function Search() {
     window.onscroll = function () {
       let btn = document.getElementById("btn-back-to-top");
       scrollFunction(btn);
+    };
+    return () => {
+      window.onscroll = null;
     };
   }, []);
 

@@ -382,6 +382,9 @@ function ContestList() {
       let btn = document.getElementById("btn-back-to-top");
       scrollFunction(btn);
     };
+    return () => {
+      window.onscroll = null;
+    };
   }, []);
 
   React.useEffect(() => {
