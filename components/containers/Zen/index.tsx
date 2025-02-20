@@ -196,7 +196,11 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
       >
         {tags.map((tag) => {
           return (
-            <span onClick={() => onSelectTags(tag[1])} className="p-1">
+            <span
+              onClick={() => onSelectTags(tag[1])}
+              className="p-1"
+              key={tag[1]}
+            >
               <Button
                 size="sm"
                 variant={!!selectedTags[tag[1]] ? "primary" : "secondary"}
