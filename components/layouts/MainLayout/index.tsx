@@ -1,12 +1,12 @@
 "use client";
 
-import { Suspense } from "react";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Navbar from "@components/layouts/Navbar";
-import { ThemeProvider } from "@hooks/useTheme";
 import Loading from "@components/Loading";
+import { ThemeProvider } from "@hooks/useTheme";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Suspense } from "react";
 
-import "../../../scss/styles.scss";
+import "@scss/styles.scss";
 
 const client = new QueryClient();
 

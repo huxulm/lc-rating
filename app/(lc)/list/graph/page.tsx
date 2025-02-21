@@ -1,8 +1,9 @@
 "use client";
 import { lazy } from "react";
+import data from "@components/containers/List/data/graph";
 
-const List = lazy(() => import("@components/containers/List/Graph"));
+const List = lazy(() => import("@components/containers/List"));
 
 export default function Page() {
-  return <List />;
+  return <List data={data} />;
 }

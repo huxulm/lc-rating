@@ -1,9 +1,16 @@
 "use client";
-import { useSolutions } from "../../../hooks/useSolutions";
-import { useQuestionTags } from "../../../hooks/useQuestionTags";
-import { useTags } from "../../../hooks/useTags";
-import { useEffect, useMemo, useState } from "react";
-import Button from "react-bootstrap/Button";
+import BackToTopButton from "@components/BackToTop";
+import { useQuestionTags } from "@hooks/useQuestionTags";
+import { Solutions, useSolutions } from "@hooks/useSolutions";
+import { useTags } from "@hooks/useTags";
+import {
+  flexRender,
+  getCoreRowModel,
+  getPaginationRowModel,
+  useReactTable,
+} from "@tanstack/react-table";
+import React, { useMemo, useState } from "react";
+import { Button } from "react-bootstrap";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
@@ -12,21 +19,200 @@ import Spinner from "react-bootstrap/Spinner";
 
 const LC_HOST = `https://leetcode.cn`;
 
+function PaginatedTable({ data }) {
+  const renderTags = (tags: string[]) => {
+    return (
+      <div className="d-flex flex-wrap" style={{ gap: ".3rem" }}>
+        {tags.map((t) => {
+          return (
+            <span className="rounded fw-medium tag active1 sm" key={t}>
+              {t}
+            </span>
+          );
+        })}
+      </div>
+    );
+  };
+
+  const columns = useMemo(
+    () => [
+      {
+        header: "编号",
+        cell: ({ row }) => (
+          <span className="d-flex">{row.original.idx + 1}</span>
+        ),
+      },
+      {
+        header: "题目",
+        accessorKey: "QTitle",
+        cell: ({ row }) => (
+          <a className="fw-medium" href={row.original.QLink}>
+            {row.original.QTitle}
+          </a>
+        ),
+      },
+      {
+        header: "标签",
+        accessorKey: "tags",
+        cell: ({ row }) => renderTags(row.original.tags),
+      },
+      {
+        header: "题解",
+        accessorKey: "ATitle",
+        cell: ({ row }) => (
+          <a className="fw-medium" href={row.original.ALink}>
+            {row.original.ATitle}
+          </a>
+        ),
+      },
+    ],
+    []
+  );
+
+  const [pagination, setPagination] = useState({
+    pageIndex: 0,
+    pageSize: 10,
+  });
+
+  const table = useReactTable({
+    data,
+    columns,
+    getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    state: {
+      pagination,
+    },
+    onPaginationChange: (pagination) => {
+      setPagination(pagination);
+    },
+  });
+
+  const [curPage, setCurPage] = useState(1);
+
+  const paginationRow = () => {
+    return (
+      <div className="d-flex align-items-center justify-content-evenly mt-3 mb-3">
+        <span className="d-flex align-items-center gap-2">
+          <Button
+            variant="primary"
+            onClick={() => table.previousPage()}
+            disabled={!table.getCanPreviousPage()}
+          >
+            上一页
+          </Button>
+          <span>
+            第 {table.getState().pagination.pageIndex + 1} 页 / 共{" "}
+            {table.getPageCount()} 页
+          </span>
+          <Button
+            variant="primary"
+            onClick={() => table.nextPage()}
+            disabled={!table.getCanNextPage()}
+          >
+            下一页
+          </Button>
+        </span>
+        <span className="d-flex align-items-center gap-2">
+          <span>跳转至第</span>
+          <input
+            value={curPage}
+            min={1}
+            max={table.getPageCount()}
+            type="number"
+            onChange={(e) => {
+              setCurPage(Number(e.target.value));
+            }}
+          />
+          <span>页</span>
+          <Button
+            variant="primary"
+            onClick={() => {
+              table.setPageIndex(curPage - 1);
+            }}
+          >
+            确认
+          </Button>
+        </span>
+        <select
+          value={table.getState().pagination.pageSize}
+          onChange={(e) => {
+            table.setPageSize(Number(e.target.value));
+          }}
+        >
+          {[10, 20, 30, 50, 100].map((size) => (
+            <option key={size} value={size}>
+              每页 {size} 条
+            </option>
+          ))}
+        </select>
+      </div>
+    );
+  };
+
+  return (
+    <div>
+      {paginationRow()}
+      <table className="search-table">
+        <thead className="table-head">
+          {table.getHeaderGroups().map((headerGroup) => (
+            <tr className="table-row" key={headerGroup.id}>
+              {headerGroup.headers.map((header) => (
+                <th className="d-flex align-items-center" key={header.id}>
+                  {flexRender(
+                    header.column.columnDef.header,
+                    header.getContext()
+                  )}
+                </th>
+              ))}
+            </tr>
+          ))}
+        </thead>
+        <tbody className="table-body">
+          {table.getRowModel().rows.map((row) => (
+            <tr className="table-row bg-color" key={row.id}>
+              {row.getVisibleCells().map((cell) => (
+                <td className="d-flex align-items-center" key={cell.id}>
+                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      {paginationRow()}
+    </div>
+  );
+}
+
 export default function Search() {
   const [filter, setFilter] = useState("");
-  const { solutions: _solutions, isPending: solLoading } = useSolutions(filter);
-  const { tags: qtags, isPending: tgLoading } = useQuestionTags(filter);
-  const { tags } = useTags();
   const onSearchTextChange = (e: React.ChangeEvent) => {
     // @ts-ignore
     setFilter(e.target.value);
   };
 
+  const { solutions: _solutions, isPending: solLoading } = useSolutions(filter);
+  const { tags: qtags, isPending: tgLoading } = useQuestionTags(filter);
+  const { tags } = useTags();
+
+  const [lang, setLang] = useState<"zh" | "en">("zh");
+  const onChangeLang = () => {
+    setLang(() => (lang === "en" ? "zh" : "en"));
+  };
+
+  const [selectedTags, setSelectedTags] = useState<Record<string, Boolean>>({});
+  const onSelectTags = (key: string) => {
+    setSelectedTags({ ...selectedTags, [key]: !!!selectedTags[key] });
+  };
+  const onResetTags = () => {
+    setSelectedTags({});
+  };
+
   const solutions = useMemo(() => {
-    let result: any = {};
+    let result: Solutions = {};
     Object.keys(_solutions).forEach((id) => {
       let v = _solutions[id];
-      let key: string = v[6];
+      let key = v[6];
       if (
         filter === "" ||
         v[3].indexOf(filter) != -1 ||
@@ -39,104 +225,43 @@ export default function Search() {
     return result;
   }, [filter, _solutions]);
 
-  const [lang, setLang] = useState("zh");
-  const onChangeLang = () => {
-    setLang(() => (lang === "en" ? "zh" : "en"));
-  };
-
-  const [selectedTags, setSelectedTags] = useState<Record<string, Boolean>>({});
-  const onSelectTags = (key: string) => {
-    setSelectedTags({ ...selectedTags, [key]: !!!selectedTags[key] });
-  };
-
-  const onResetTags = () => {
-    setSelectedTags({});
-  };
-
-  const renderTags = (tags: any[]) => {
-    if (!tags) return;
-    return (
-      <div className="d-flex flex-wrap" style={{ gap: ".3rem" }}>
-        {tags[1].map((t: any) => {
-          return (
-            <span className={`rounded fw-medium tag text-info active1 sm`}>
-              {t}
-            </span>
-          );
-        })}
-      </div>
+  const filteredSolutions = useMemo(() => {
+    const selectedTagIds = Object.keys(selectedTags).filter(
+      (id) => !!selectedTags[id]
     );
-  };
+    return Object.keys(solutions)
+      .filter((id) => {
+        const tags = qtags[id]?.[0] || [];
+        if (selectedTagIds.length == 0) return true;
+        return tags.some((tag) => selectedTags[tag]);
+      })
+      .sort(function (ia, ib) {
+        let a = solutions[ia];
+        let b = solutions[ib];
+        return a[2] < b[2] ? 1 : a[2] == b[2] ? 0 : -1;
+      })
+      .map((key, idx) => {
+        const sol = solutions[key];
+        const QLink = `${LC_HOST}/problems/${sol[5]}`;
+        const ALink = `${LC_HOST}/problems/${sol[5]}/solution/${sol[1]}`;
+        const QTitle = `${sol[3]}. ${sol[4]}`;
+        const tags = qtags[sol[6].toString()]?.[lang === "en" ? 0 : 1] || [];
+        const ATitle = sol[0];
 
-  const filteredSolutions = useMemo(
-    () =>
-      Object.keys(solutions).filter((id) => {
-        const tags = qtags[id] ? qtags[id][0] || [] : [];
-        if (
-          Object.keys(selectedTags).filter((id) => !!selectedTags[id]).length ==
-            0 &&
-          tags.length == 0
-        ) {
-          return true;
-        }
-        if (
-          Object.keys(selectedTags).filter((id) => !!selectedTags[id]).length ==
-            0 ||
-          tags.filter((id: string) => true === selectedTags[id]).length > 0
-        ) {
-          return true;
-        }
-        return false;
-        // return true;
-      }),
-    [selectedTags, solutions, solLoading]
-  );
-
-  function backToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-
-  function scrollFunction(btn: any) {
-    if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
-    ) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
-    }
-  }
-
-  useEffect(() => {
-    window.onscroll = function () {
-      let btn = document.getElementById("btn-back-to-top");
-      scrollFunction(btn);
-    };
-  }, []);
+        return {
+          idx,
+          QTitle,
+          QLink,
+          tags,
+          ATitle,
+          ALink,
+        };
+      });
+  }, [selectedTags, solutions, solLoading]);
 
   return (
     <Container className="search">
-      <Button
-        variant="primary"
-        id="btn-back-to-top"
-        style={{
-          borderRadius: "50%",
-          position: "fixed",
-          zIndex: 10000,
-          bottom: "50px",
-          right: "5rem",
-          width: "2.5rem",
-          height: "2.5rem",
-          fontSize: "1.5rem",
-          padding: "0",
-        }}
-        onClick={() => {
-          backToTop();
-        }}
-      >
-        ↑
-      </Button>
+      <BackToTopButton />
       <Row
         as="div"
         className="justify-content-center p-3 position-sticky top-0 z-3"
@@ -181,7 +306,11 @@ export default function Search() {
           <div className="d-flex flex-wrap" style={{ columnGap: "1rem" }}>
             {tags.map((tag) => {
               return (
-                <span onClick={() => onSelectTags(tag[1])} className="p-1">
+                <span
+                  onClick={() => onSelectTags(tag[1])}
+                  className="p-1"
+                  key={tag[1]}
+                >
                   <span
                     className={`rounded p-1 fw-medium tag ${
                       !!selectedTags[`${tag[1]}`] ? "active" : ""
@@ -202,55 +331,7 @@ export default function Search() {
               <Spinner animation="border"></Spinner>
             </Row>
           )}
-          <table className="search-table">
-            <thead className="table-head">
-              <tr className="table-row">
-                <th className="d-flex align-items-center">编号</th>
-                <th className="d-flex align-items-center text-left">题目</th>
-                <th className="d-flex align-items-center">标签</th>
-                <th className="d-flex align-items-center text-center">题解</th>
-              </tr>
-            </thead>
-            <tbody className="table-body">
-              {filteredSolutions
-                .sort(function (ia: any, ib: any) {
-                  let a = solutions[ia];
-                  let b = solutions[ib];
-                  return a[2] < b[2] ? 1 : a[2] == b[2] ? 0 : -1;
-                })
-                .map((id, i) => {
-                  const sol = solutions[id];
-                  let link = "";
-                  let link1 = "";
-                  if (sol) {
-                    link =
-                      LC_HOST + "/problems/" + sol[5] + "/solution/" + sol[1];
-                    link1 = LC_HOST + "/problems/" + sol[5];
-                  }
-                  let _tags = qtags["" + sol[6]];
-                  return (
-                    <tr className="table-row bg-color">
-                      <td className="d-flex align-items-center">{i + 1}</td>
-                      <td className="fw-medium text-left d-flex align-items-center">
-                        <a href={link1}>{`${sol[3]}. ${sol[4]}`}</a>
-                      </td>
-                      <td className="d-flex align-items-center">
-                        {_tags &&
-                          renderTags([
-                            sol[6],
-                            _tags[lang === "en" ? 0 : 1] || [],
-                          ])}
-                      </td>
-                      <td className="d-flex align-items-center">
-                        <a className="nav-link fw-medium" href={link}>
-                          {sol[0]}
-                        </a>
-                      </td>
-                    </tr>
-                  );
-                })}
-            </tbody>
-          </table>
+          <PaginatedTable data={filteredSolutions} />
         </Col>
       </Row>
     </Container>

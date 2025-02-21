@@ -1,5 +1,5 @@
-import { useEffect, useState, useTransition } from "react"
-import { Contest, mapContests } from "../util/makeData";
+import { Contest, mapContests } from "@utils/makeData";
+import { useEffect, useState, useTransition } from "react";
 
 type Contests = any[];
 

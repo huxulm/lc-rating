@@ -1,3 +1,4 @@
+import RatingCircle, { COLORS } from "@/components/RatingCircle";
 import React, { useEffect, useMemo, useState } from "react";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
@@ -8,7 +9,6 @@ import Pagination from "react-bootstrap/Pagination";
 import Popover from "react-bootstrap/Popover";
 import Spinner from "react-bootstrap/Spinner";
 import Table from "react-bootstrap/Table";
-import RatingCircle, { COLORS } from "../../../components/RatingCircle";
 
 import {
   Column,
@@ -32,14 +32,15 @@ import {
 
 import { rankItem } from "@tanstack/match-sorter-utils";
 
-import { getMark, getSize, setMark, setSize } from "../../../util/store";
+import { getMark, getSize, setMark, setSize } from "@/utils/store";
 
+import { useContests } from "@/hooks/useContests";
+import { useSolutions } from "@/hooks/useSolutions";
+import { Contest } from "@/utils/makeData";
+import BackToTopButton from "@components/BackToTop";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import clsx from "clsx";
 import Container from "react-bootstrap/esm/Container";
-import { useContests } from "../../../hooks/useContests";
-import { useSolutions } from "../../../hooks/useSolutions";
-import { Contest } from "../../../util/makeData";
 
 const host = `https://leetcode.cn`;
 
@@ -198,7 +199,6 @@ const columns = [
                 setCk(e.target.checked);
                 setMark(e.target.checked ? info.row.original.TitleSlug : "");
               }}
-              defaultChecked={ck}
               checked={ck}
             />
           </Form.Group>
@@ -212,14 +212,6 @@ const columns = [
   problemColDef("C"),
   problemColDef("D"),
 ];
-
-function scrollFunction(btn: any) {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    btn.style.display = "block";
-  } else {
-    btn.style.display = "none";
-  }
-}
 
 // Element or Position to move + Time in ms (milliseconds)
 function scrollTo(element: any, duration: any) {
@@ -379,13 +371,6 @@ function ContestList() {
   });
 
   useEffect(() => {
-    window.onscroll = function () {
-      let btn = document.getElementById("btn-back-to-top");
-      scrollFunction(btn);
-    };
-  }, []);
-
-  React.useEffect(() => {
     if (table.getState().columnFilters[0]?.id === "Contest") {
       if (table.getState().sorting[0]?.id !== "Contest") {
         table.setSorting([{ id: "Contest", desc: false }]);
@@ -396,26 +381,7 @@ function ContestList() {
   return (
     <Container fluid className="contest">
       <div className="contest-table">
-        <Button
-          variant="primary"
-          id="btn-back-to-top"
-          style={{
-            borderRadius: "50%",
-            position: "fixed",
-            zIndex: 10000,
-            bottom: "50px",
-            right: "5px",
-            width: "2.5rem",
-            height: "2.5rem",
-            fontSize: "1.5rem",
-            padding: "0",
-          }}
-          onClick={() => {
-            backToTop();
-          }}
-        >
-          ↑
-        </Button>
+        <BackToTopButton />
         <Table
           striped
           bordered
@@ -436,8 +402,8 @@ function ContestList() {
                   let hsz = header.getSize();
                   return (
                     <th
+                      key={header.id}
                       {...{
-                        key: header.id,
                         colSpan: header.colSpan,
                         style: {
                           width: hsz,
@@ -516,8 +482,8 @@ function ContestList() {
                     {row.getVisibleCells().map((cell) => {
                       return (
                         <td
+                          key={cell.id}
                           {...{
-                            key: cell.id,
                             className: "tb-overflow",
                           }}
                         >
@@ -588,6 +554,7 @@ function ContestList() {
               {[20, 50, 100, 200, 500].map((v) => {
                 return (
                   <Button
+                    key={v}
                     className={pageSize === v ? "active" : ""}
                     onClick={(e) => {
                       table.setPageSize(Number(v));

@@ -6,7 +6,7 @@
 @import "./list";
 
 // components
-@import "../components/ProblemCatetory/_index";
+@import "@components/ProblemCatetory/_index";
 
 nav {
     z-index: 1000;
@@ -21,7 +21,7 @@ nav {
         background: var(--bs-gray-700);
     }
 }
-  
+
 @include color-mode(light, false) {
     nav {
         background: $gray-100;

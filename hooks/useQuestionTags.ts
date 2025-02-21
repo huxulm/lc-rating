@@ -1,5 +1,5 @@
 import { useSuspenseQuery } from "@tanstack/react-query";
-type Tags = Record<string, any>;
+type Tags = Record<string, [string[], string[]]>;
 
 export function useQuestionTags(filter: any) {
   const { data, isFetching } = useSuspenseQuery({

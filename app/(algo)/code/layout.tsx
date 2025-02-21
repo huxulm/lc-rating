@@ -1,18 +1,18 @@
-import type { Metadata } from "next";
+import "@/scss/algorithm/styles.scss";
 import MdxLayout from "@components/layouts/MdxLayout";
-import MonotoneStack from "@components/sections/mono.mdx";
 import Dijkstra from "@components/sections/dijkstra.mdx";
-import SparseTable from "@components/sections/sparestable.mdx";
+import MonotoneStack from "@components/sections/mono.mdx";
 import SegmentTree from "@components/sections/segment_tree.mdx";
+import SparseTable from "@components/sections/sparestable.mdx";
 import String from "@components/sections/string.mdx";
-import "../../../scss/algorithm/styles.scss";
+import type { Metadata } from "next";
 
 const routes = [
   {
     path: "/algorithm-templates#String",
     display: "字符串 (String)",
     mdx: <String />,
-  },  
+  },
   {
     path: "/algorithm-templates#Monotone-Stack",
     display: "单调栈 (Monotone Stack)",

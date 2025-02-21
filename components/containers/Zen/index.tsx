@@ -147,7 +147,9 @@ function buildProgressFilterFn(selectedProgress: string) {
     return () => true;
   }
   return (v: ConstQuestion) => {
-    const progress = localStorage.getItem(LC_RATING_PROGRESS_KEY(v.question_id));
+    const progress = localStorage.getItem(
+      LC_RATING_PROGRESS_KEY(v.question_id)
+    );
     return progress === selectedProgress;
   };
 }
@@ -194,7 +196,11 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
       >
         {tags.map((tag) => {
           return (
-            <span onClick={() => onSelectTags(tag[1])} className="p-1">
+            <span
+              onClick={() => onSelectTags(tag[1])}
+              className="p-1"
+              key={tag[1]}
+            >
               <Button
                 size="sm"
                 variant={!!selectedTags[tag[1]] ? "primary" : "secondary"}
@@ -267,29 +273,27 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
           <hr />
           <h5 className="pt-1 pb-1">进度选择</h5>
           <Form.Select
-                className={progressOptionClassNames[selectedProgress]}
-                value={selectedProgress}
-                onChange={(e) =>
-                  setSelectedProgress(e.target.value)
-                }
-              >
-                <option value=""></option>
+            className={progressOptionClassNames[selectedProgress]}
+            value={selectedProgress}
+            onChange={(e) => setSelectedProgress(e.target.value)}
+          >
+            <option value=""></option>
 
-                {[
-                  Progress.WORKING,
-                  Progress.TOO_HARD,
-                  Progress.REVIEW_NEEDED,
-                  Progress.AC,
-                ].map((p) => (
-                  <option
-                    key={p}
-                    value={p}
-                    className={progressOptionClassNames[p] || ""}
-                  >
-                    {progressTranslations[p]}
-                  </option>
-                ))}
-              </Form.Select>
+            {[
+              Progress.WORKING,
+              Progress.TOO_HARD,
+              Progress.REVIEW_NEEDED,
+              Progress.AC,
+            ].map((p) => (
+              <option
+                key={p}
+                value={p}
+                className={progressOptionClassNames[p] || ""}
+              >
+                {progressTranslations[p]}
+              </option>
+            ))}
+          </Form.Select>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
@@ -399,9 +403,8 @@ export default function Zenk() {
     [data, currentFilter, settings]
   );
 
-
   if (loading) {
-    return <Loading />
+    return <Loading />;
   }
 
   return (
@@ -512,30 +515,34 @@ const ZenTableComp = React.memo(
               ? LC_HOST + "/problems/" + sol[5] + "/solution/" + sol[1]
               : null;
             return (
-            <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex justify-content-between align-items-center">
                 {!!item.paid_only && <span>👑</span>}
-                <a
+                <div>
+                  <a
                     href={`${LC_HOST}/problems/${item.title_slug}`}
                     target="_blank"
-                >
+                  >
                     {item.question_id}. {item.title}
-                    {columnVisibility['en'] && <a
-                        href={`${LC_HOST_EN}/problems/${item.title_slug}`}
-                        target="_blank"
-                        className="ms-2"
+                  </a>
+                  {columnVisibility["en"] && (
+                    <a
+                      href={`${LC_HOST_EN}/problems/${item.title_slug}`}
+                      target="_blank"
+                      className="ms-2"
                     >
-                        <ShareIcon height={16} width={16}/>
-                    </a>}                    
-                </a>
-                <div>
-                    {link && (
-                        <span className="zen-ans">
-                            <a href={link}>🎈</a>
-                        </span>
-                    )}
+                      <ShareIcon height={16} width={16} />
+                    </a>
+                  )}
                 </div>
-            </div>            
-              );
+                <div>
+                  {link && (
+                    <span className="zen-ans">
+                      <a href={link}>🎈</a>
+                    </span>
+                  )}
+                </div>
+              </div>
+            );
           },
           enableColumnFilter: false,
           header: () => <span>题号</span>,

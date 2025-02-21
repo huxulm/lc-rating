@@ -1,9 +1,9 @@
 "use client";
-import dynamic from "next/dynamic";
 import { lazy } from "react";
+import data from "@components/containers/List/data/data_structure";
 
-const List = lazy(() => import("@components/containers/List/DataStructure"));
+const List = lazy(() => import("@components/containers/List"));
 
 export default function Page() {
-  return <List />;
+  return <List data={data} />;
 }
