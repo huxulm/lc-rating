@@ -48,7 +48,7 @@ const RatingCircle = React.forwardRef<any, any>(
           ref={ref}
           {...props}
           className="inner-circle"
-          data={difficulty >= 3000 ? "top" : ""}
+          // data={difficulty >= 3000 ? "top" : ""}
           style={{
             borderColor: `var(--rating-color-${idx})`,
             background: `linear-gradient(to top, var(--rating-color-${idx}) ${rating}%, rgba(0, 0, 0, 0) ${rating}%) border-box border-box`,
