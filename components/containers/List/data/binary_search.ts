@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】二分算法（二分答案/最小化最大值/最大化最小值/第K小）",
     "original_src": "https://leetcode.cn/circle/discuss/SqopEo",
-    "last_update": "2025-02-08 04:11:16",
+    "last_update": "2025-02-19 14:03:24",
     "sort": 0,
     "child": [
         {
@@ -21,15 +21,15 @@ export default{
             ]
         },
         {
-            "title": "二分查找",
+            "title": "一、二分查找",
             "sort": 1,
             "summary": "",
             "child": [
                 {
-                    "title": "",
+                    "title": "§1.1 基础",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "请先学习：<a href=\"https://www.bilibili.com/video/BV1AP41137w7/\">二分查找 红蓝染色法【基础算法精讲 04】</a><br>**思维扩展**：<br>",
+                    "summary": "请先学习：<a href=\"https://www.bilibili.com/video/BV1AP41137w7/\">二分查找 红蓝染色法【基础算法精讲 04】</a><br>",
                     "child": [
                         {
                             "title": "34. 在排序数组中查找元素的第一个和最后一个位置",
@@ -70,26 +70,34 @@ export default{
                             "score": 1195.9731842298,
                             "solution": null,
                             "isPremium": false
-                        },
-                        {
-                            "title": "1385. 两个数组间的距离值",
-                            "sort": 5,
-                            "src": "/find-the-distance-value-between-two-arrays/",
-                            "score": 1234.8049089605,
-                            "solution": null,
-                            "isPremium": false
-                        },
+                        }
+                    ]
+                },
+                {
+                    "title": "§1.2 进阶",
+                    "sort": 1,
+                    "isLeaf": true,
+                    "summary": "部分题目需要先排序，然后在有序数组上二分查找。<br>**思维扩展**：<br>",
+                    "child": [
                         {
                             "title": "2300. 咒语和药水的成功对数",
-                            "sort": 6,
+                            "sort": 0,
                             "src": "/successful-pairs-of-spells-and-potions/",
                             "score": 1476.9062320302,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "1385. 两个数组间的距离值",
+                            "sort": 1,
+                            "src": "/find-the-distance-value-between-two-arrays/",
+                            "score": 1234.8049089605,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "2389. 和有限的最长子序列",
-                            "sort": 7,
+                            "sort": 2,
                             "src": "/longest-subsequence-with-limited-sum/",
                             "score": 1387.7347071166,
                             "solution": null,
@@ -97,7 +105,7 @@ export default{
                         },
                         {
                             "title": "1170. 比较字符串最小字母出现频次",
-                            "sort": 8,
+                            "sort": 3,
                             "src": "/compare-strings-by-frequency-of-the-smallest-character/",
                             "score": 1431.6864980883,
                             "solution": null,
@@ -105,7 +113,7 @@ export default{
                         },
                         {
                             "title": "2080. 区间内查询数字的频率",
-                            "sort": 9,
+                            "sort": 4,
                             "src": "/range-frequency-queries/",
                             "score": 1702.4387527636,
                             "solution": null,
@@ -113,23 +121,23 @@ export default{
                         },
                         {
                             "title": "2563. 统计公平数对的数目",
-                            "sort": 10,
+                            "sort": 5,
                             "src": "/count-the-number-of-fair-pairs/",
                             "score": 1720.7470612766,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "2856. 删除数对后的最小数组长度",
-                            "sort": 11,
-                            "src": "/minimum-array-length-after-pair-removals/",
-                            "score": 1749.9743684275,
+                            "title": "2070. 每一个查询的最大美丽值",
+                            "sort": 6,
+                            "src": "/most-beautiful-item-for-each-query/",
+                            "score": 1724.1545485476,
                             "solution": null,
                             "isPremium": false
                         },
                         {
                             "title": "981. 基于时间的键值存储",
-                            "sort": 12,
+                            "sort": 7,
                             "src": "/time-based-key-value-store/",
                             "score": 1574.7542247682,
                             "solution": null,
@@ -137,7 +145,7 @@ export default{
                         },
                         {
                             "title": "1146. 快照数组",
-                            "sort": 13,
+                            "sort": 8,
                             "src": "/snapshot-array/",
                             "score": 1770.8924569497,
                             "solution": null,
@@ -145,7 +153,7 @@ export default{
                         },
                         {
                             "title": "658. 找到 K 个最接近的元素",
-                            "sort": 14,
+                            "sort": 9,
                             "src": "/find-k-closest-elements/",
                             "score": null,
                             "solution": null,
@@ -153,7 +161,7 @@ export default{
                         },
                         {
                             "title": "1818. 绝对差值和",
-                            "sort": 15,
+                            "sort": 10,
                             "src": "/minimum-absolute-sum-difference/",
                             "score": 1934.3556201811,
                             "solution": null,
@@ -161,7 +169,7 @@ export default{
                         },
                         {
                             "title": "911. 在线选举",
-                            "sort": 16,
+                            "sort": 11,
                             "src": "/online-election/",
                             "score": 2000.8021428612,
                             "solution": null,
@@ -169,39 +177,15 @@ export default{
                         },
                         {
                             "title": "LCP 08. 剧情触发时间",
-                            "sort": 17,
+                            "sort": 12,
                             "src": "/ju-qing-hong-fa-shi-jian/",
                             "score": null,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "1150. 检查一个数是否在数组中占绝大多数",
-                            "sort": 18,
-                            "src": "/check-if-a-number-is-majority-element-in-a-sorted-array/",
-                            "score": 1249.9947800752,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
-                            "title": "1064. 不动点",
-                            "sort": 19,
-                            "src": "/fixed-point/",
-                            "score": 1307.9800903088,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
-                            "title": "702. 搜索长度未知的有序数组",
-                            "sort": 20,
-                            "src": "/search-in-a-sorted-array-of-unknown-size/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
                             "title": "1182. 与目标颜色间的最短距离",
-                            "sort": 21,
+                            "sort": 13,
                             "src": "/shortest-distance-to-target-color/",
                             "score": 1626.6740430119,
                             "solution": null,
@@ -209,42 +193,42 @@ export default{
                         },
                         {
                             "title": "2819. 购买巧克力后的最小相对损失",
-                            "sort": 22,
+                            "sort": 14,
                             "src": "/minimum-relative-loss-after-buying-chocolates/",
                             "score": null,
                             "solution": null,
                             "isPremium": true
                         },
                         {
-                            "title": "2936. 包含相等值数字块的数量",
-                            "sort": 23,
-                            "src": "/number-of-equal-numbers-blocks/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
                             "title": "1287. 有序数组中出现次数超过 25% 的元素",
-                            "sort": 24,
+                            "sort": 15,
                             "src": "/element-appearing-more-than-25-in-sorted-array/",
                             "score": 1179.1495967491,
                             "solution": null,
                             "isPremium": false
+                        },
+                        {
+                            "title": "1150. 检查一个数是否在数组中占绝大多数",
+                            "sort": 16,
+                            "src": "/check-if-a-number-is-majority-element-in-a-sorted-array/",
+                            "score": 1249.9947800752,
+                            "solution": null,
+                            "isPremium": true
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "二分答案：求最小",
+            "title": "二、二分答案",
             "sort": 2,
             "summary": "",
             "child": [
                 {
-                    "title": "",
+                    "title": "§2.1 求最小",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "> “花费一个 $\\log$ 的时间，增加了一个条件。” —— 二分答案<br>",
+                    "summary": "> “花费一个 $\\log$ 的时间，增加了一个条件。” —— 二分答案<br>题目求什么，就二分什么。<br>**思维扩展**：<br>",
                     "child": [
                         {
                             "title": "1283. 使结果不超过阈值的最小除数",
@@ -341,19 +325,20 @@ export default{
                             "score": null,
                             "solution": null,
                             "isPremium": true
+                        },
+                        {
+                            "title": "3453. 分割正方形 I",
+                            "sort": 12,
+                            "src": "/separate-squares-i/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "title": "二分答案：求最大",
-            "sort": 3,
-            "summary": "",
-            "child": [
+                },
                 {
-                    "title": "",
-                    "sort": 0,
+                    "title": "§2.2 求最大",
+                    "sort": 1,
                     "isLeaf": true,
                     "summary": "<a href=\"https://leetcode.cn/problems/h-index-ii/solution/tu-jie-yi-tu-zhang-wo-er-fen-da-an-si-ch-d15k/\">一图掌握二分答案！四种写法！</a><br>在练习时，请注意「求最小」和「求最大」的二分写法上的区别。<br>前面的「求最小」和二分查找求「排序数组中某元素的第一个位置」是类似的，按照红蓝染色法，左边是不满足要求的（红色），右边则是满足要求的（蓝色）。<br>「求最大」的题目则相反，左边是满足要求的（蓝色），右边是不满足要求的（红色）。这会导致二分写法和上面的「求最小」有一些区别。<br>以开区间二分为例：<br>- 求最小：`check(mid) == true` 时更新 `right = mid`，反之更新 `left = mid`，最后返回 `right`。<br>- 求最大：`check(mid) == true` 时更新 `left = mid`，反之更新 `right = mid`，最后返回 `left`。<br>对于开区间写法，简单来说 `check(mid) == true` 时更新的是谁，最后就返回谁。相比其他二分写法，开区间写法不需要思考加一减一等细节，个人推荐使用开区间写二分。<br>",
                     "child": [
@@ -486,17 +471,10 @@ export default{
                             "isPremium": true
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "title": "二分间接值",
-            "sort": 4,
-            "summary": "",
-            "child": [
+                },
                 {
-                    "title": "",
-                    "sort": 0,
+                    "title": "§2.3 二分间接值",
+                    "sort": 2,
                     "isLeaf": true,
                     "summary": "二分的不是答案，而是一个和答案有关的值（间接值）。<br>",
                     "child": [
@@ -517,17 +495,10 @@ export default{
                             "isPremium": false
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "title": "最小化最大值",
-            "sort": 5,
-            "summary": "",
-            "child": [
+                },
                 {
-                    "title": "",
-                    "sort": 0,
+                    "title": "§2.4 最小化最大值",
+                    "sort": 3,
                     "isLeaf": true,
                     "summary": "本质是二分答案求最小。二分的 $\\textit{mid}$ 表示上界。<br>",
                     "child": [
@@ -636,17 +607,10 @@ export default{
                             "isPremium": true
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "title": "最大化最小值",
-            "sort": 6,
-            "summary": "",
-            "child": [
+                },
                 {
-                    "title": "",
-                    "sort": 0,
+                    "title": "§2.5 最大化最小值",
+                    "sort": 4,
                     "isLeaf": true,
                     "summary": "本质是二分答案求最大。二分的 $\\textit{mid}$ 表示下界。<br>",
                     "child": [
@@ -691,8 +655,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1102. 得分最高的路径",
+                            "title": "3449. 最大化游戏分数的最小值",
                             "sort": 5,
+                            "src": "/maximize-the-minimum-game-score/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1102. 得分最高的路径",
+                            "sort": 6,
                             "src": "/path-with-maximum-minimum-value/",
                             "score": 2011.3542735398,
                             "solution": null,
@@ -700,24 +672,17 @@ export default{
                         },
                         {
                             "title": "1231. 分享巧克力",
-                            "sort": 6,
+                            "sort": 7,
                             "src": "/divide-chocolate/",
                             "score": 2029.1301557536,
                             "solution": null,
                             "isPremium": true
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "title": "第 K 小/大",
-            "sort": 7,
-            "summary": "",
-            "child": [
+                },
                 {
-                    "title": "",
-                    "sort": 0,
+                    "title": "§2.6 第 K 小/大",
+                    "sort": 5,
                     "isLeaf": true,
                     "summary": "- 第 $k$ 小等价于：求最小的 $x$，满足 $\\le x$ 的数至少有 $k$ 个。<br>- 第 $k$ 大等价于：求最大的 $x$，满足 $\\ge x$ 的数至少有 $k$ 个。<br>⚠**注意**：一般来说，题目规定 $k$ 从 $1$ 开始，而不是像下标那样从 $0$ 开始。<br>⚠**注意**：一般来说，题目规定不能去重。例如数组 $[1,1,1,2,2]$，其中第 $1$ 小、第 $2$ 小和第 $3$ 小的数都是 $1$，第 $4$ 小和第 $5$ 小的数都是 $2$。<br>部分题目也可以用堆解决。<br>",
                     "child": [
@@ -846,8 +811,8 @@ export default{
             ]
         },
         {
-            "title": "其他",
-            "sort": 8,
+            "title": "三、其他",
+            "sort": 3,
             "summary": "",
             "child": [
                 {
@@ -1001,8 +966,32 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1060. 有序数组中的缺失元素",
+                            "title": "1064. 不动点",
                             "sort": 18,
+                            "src": "/fixed-point/",
+                            "score": 1307.9800903088,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "702. 搜索长度未知的有序数组",
+                            "sort": 19,
+                            "src": "/search-in-a-sorted-array-of-unknown-size/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "2936. 包含相等值数字块的数量",
+                            "sort": 20,
+                            "src": "/number-of-equal-numbers-blocks/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "1060. 有序数组中的缺失元素",
+                            "sort": 21,
                             "src": "/missing-element-in-sorted-array/",
                             "score": null,
                             "solution": null,
@@ -1010,7 +999,7 @@ export default{
                         },
                         {
                             "title": "1198. 找出所有行中最小公共元素",
-                            "sort": 19,
+                            "sort": 22,
                             "src": "/find-smallest-common-element-in-all-rows/",
                             "score": 1401.2246983038,
                             "solution": null,
@@ -1018,7 +1007,7 @@ export default{
                         },
                         {
                             "title": "1428. 至少有一个 1 的最左端列",
-                            "sort": 20,
+                            "sort": 23,
                             "src": "/leftmost-column-with-at-least-a-one/",
                             "score": null,
                             "solution": null,
@@ -1026,7 +1015,7 @@ export default{
                         },
                         {
                             "title": "1533. 找到最大整数的索引",
-                            "sort": 21,
+                            "sort": 24,
                             "src": "/find-the-index-of-the-large-integer/",
                             "score": null,
                             "solution": null,
@@ -1034,7 +1023,7 @@ export default{
                         },
                         {
                             "title": "2387. 行排序矩阵的中位数",
-                            "sort": 22,
+                            "sort": 25,
                             "src": "/median-of-a-row-wise-sorted-matrix/",
                             "score": null,
                             "solution": null,
@@ -1042,7 +1031,7 @@ export default{
                         },
                         {
                             "title": "302. 包含全部黑色像素的最小矩形",
-                            "sort": 23,
+                            "sort": 26,
                             "src": "/smallest-rectangle-enclosing-black-pixels/",
                             "score": null,
                             "solution": null,

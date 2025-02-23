@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）",
     "original_src": "https://leetcode.cn/circle/discuss/mOr1u6",
-    "last_update": "2025-02-08 06:17:28",
+    "last_update": "2025-02-19 10:56:05",
     "sort": 0,
     "child": [
         {
@@ -328,8 +328,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2242. 节点序列的最大得分",
+                            "title": "3455. 最短匹配子字符串",
                             "sort": 7,
+                            "src": "/shortest-matching-substring/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2242. 节点序列的最大得分",
+                            "sort": 8,
                             "src": "/maximum-score-of-a-node-sequence/",
                             "score": 2304.3094138939,
                             "solution": null,
@@ -337,7 +345,7 @@ export default{
                         },
                         {
                             "title": "2867. 统计树中的合法路径数目",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/count-valid-paths-in-a-tree/",
                             "score": 2428.3242593838,
                             "solution": null,
@@ -345,7 +353,7 @@ export default{
                         },
                         {
                             "title": "2552. 统计上升四元组",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/count-increasing-quadruplets/",
                             "score": 2432.713399111,
                             "solution": null,
@@ -353,7 +361,7 @@ export default{
                         },
                         {
                             "title": "3257. 放三个车的价值之和最大 II",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/maximum-value-sum-by-placing-three-rooks-ii/",
                             "score": 2553.2367142614,
                             "solution": null,
@@ -361,7 +369,7 @@ export default{
                         },
                         {
                             "title": "3073. 最大递增三元组",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/maximum-increasing-triplet-value/",
                             "score": null,
                             "solution": null,
@@ -476,7 +484,7 @@ export default{
                     "title": "§1.2 前缀和与哈希表",
                     "sort": 1,
                     "isLeaf": true,
-                    "summary": "通常要用到「枚举右，维护左」的技巧。<br><a href=\"https://leetcode.cn/problems/subarray-sum-equals-k/solution/qian-zhui-he-ha-xi-biao-cong-liang-ci-bi-4mwr/\">讲解</a><br>**前缀和与有序集合**：<br>",
+                    "summary": "通常要用到「枚举右，维护左」的技巧。<br><a href=\"https://leetcode.cn/problems/subarray-sum-equals-k/solution/qian-zhui-he-ha-xi-biao-cong-liang-ci-bi-4mwr/\">讲解</a><br>**前缀和与有序集合**：<br>**思维扩展**：<br>",
                     "child": [
                         {
                             "title": "930. 和相同的二元子数组",
@@ -623,16 +631,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2025. 分割数组的最多方案数",
-                            "sort": 18,
-                            "src": "/maximum-number-of-ways-to-partition-an-array/",
-                            "score": 2217.8090802563,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "2949. 统计美丽子字符串 II",
-                            "sort": 19,
+                            "sort": 18,
                             "src": "/count-beautiful-substrings-ii/",
                             "score": 2444.7192647604,
                             "solution": null,
@@ -640,7 +640,7 @@ export default{
                         },
                         {
                             "title": "325. 和等于 k 的最长子数组长度",
-                            "sort": 20,
+                            "sort": 19,
                             "src": "/maximum-size-subarray-sum-equals-k/",
                             "score": null,
                             "solution": null,
@@ -648,7 +648,7 @@ export default{
                         },
                         {
                             "title": "548. 将数组分割成和相等的子数组",
-                            "sort": 21,
+                            "sort": 20,
                             "src": "/split-array-with-equal-sum/",
                             "score": null,
                             "solution": null,
@@ -656,7 +656,7 @@ export default{
                         },
                         {
                             "title": "1983. 范围和相等的最宽索引对",
-                            "sort": 22,
+                            "sort": 21,
                             "src": "/widest-pair-of-indices-with-equal-range-sum/",
                             "score": null,
                             "solution": null,
@@ -664,7 +664,7 @@ export default{
                         },
                         {
                             "title": "2489. 固定比率的子字符串数",
-                            "sort": 23,
+                            "sort": 22,
                             "src": "/number-of-substrings-with-fixed-ratio/",
                             "score": null,
                             "solution": null,
@@ -672,7 +672,7 @@ export default{
                         },
                         {
                             "title": "2950. 可整除子串的数量",
-                            "sort": 24,
+                            "sort": 23,
                             "src": "/number-of-divisible-substrings/",
                             "score": null,
                             "solution": null,
@@ -680,9 +680,17 @@ export default{
                         },
                         {
                             "title": "3364. 最小正和子数组",
-                            "sort": 25,
+                            "sort": 24,
                             "src": "/minimum-positive-sum-subarray/",
                             "score": 1300.5576941005,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2025. 分割数组的最多方案数",
+                            "sort": 25,
+                            "src": "/maximum-number-of-ways-to-partition-an-array/",
+                            "score": 2217.8090802563,
                             "solution": null,
                             "isPremium": false
                         }
@@ -741,6 +749,14 @@ export default{
                             "score": 2672.7613091907,
                             "solution": null,
                             "isPremium": false
+                        },
+                        {
+                            "title": "3422. 将子数组元素变为相等所需的最小操作数",
+                            "sort": 6,
+                            "src": "/minimum-operations-to-make-subarray-elements-equal/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
                         }
                     ]
                 },
@@ -1027,7 +1043,7 @@ export default{
                     "title": "§2.1 一维差分（扫描线）",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "<a href=\"https://leetcode.cn/problems/car-pooling/solution/suan-fa-xiao-ke-tang-chai-fen-shu-zu-fu-9d4ra/\">原理讲解</a>（推荐和<a href=\"https://leetcode.cn/problems/stamping-the-grid/solution/wu-nao-zuo-fa-er-wei-qian-zhui-he-er-wei-zwiu/\">【图解】从一维差分到二维差分</a> 一起看）<br>",
+                    "summary": "差分与前缀和的关系，类似导数与积分的关系。<br>差分的前缀和就是原数组。<br><a href=\"https://leetcode.cn/problems/car-pooling/solution/suan-fa-xiao-ke-tang-chai-fen-shu-zu-fu-9d4ra/\">原理讲解</a>（推荐和<a href=\"https://leetcode.cn/problems/stamping-the-grid/solution/wu-nao-zuo-fa-er-wei-qian-zhui-he-er-wei-zwiu/\">【图解】从一维差分到二维差分</a> 一起看）<br>",
                     "child": [
                         {
                             "title": "2848. 与车相交的点",
@@ -1126,8 +1142,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "995. K 连续位的最小翻转次数",
+                            "title": "3453. 分割正方形 I",
                             "sort": 12,
+                            "src": "/separate-squares-i/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "995. K 连续位的最小翻转次数",
+                            "sort": 13,
                             "src": "/minimum-number-of-k-consecutive-bit-flips/",
                             "score": 1835.4868365659,
                             "solution": null,
@@ -1135,7 +1159,7 @@ export default{
                         },
                         {
                             "title": "1589. 所有排列中的最大和",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/maximum-sum-obtained-of-any-permutation/",
                             "score": 1871.3112059413,
                             "solution": null,
@@ -1143,7 +1167,7 @@ export default{
                         },
                         {
                             "title": "1526. 形成目标数组的子数组最少增加次数",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/minimum-number-of-increments-on-subarrays-to-form-a-target-array/",
                             "score": 1872.0350138774,
                             "solution": null,
@@ -1151,7 +1175,7 @@ export default{
                         },
                         {
                             "title": "3356. 零数组变换 II",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/zero-array-transformation-ii/",
                             "score": 1913.4834168162,
                             "solution": null,
@@ -1159,7 +1183,7 @@ export default{
                         },
                         {
                             "title": "1943. 描述绘画结果",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/describe-the-painting/",
                             "score": 1969.2019235672,
                             "solution": null,
@@ -1167,7 +1191,7 @@ export default{
                         },
                         {
                             "title": "3224. 使差值相等的最少数组改动次数",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/minimum-array-changes-to-make-differences-equal/",
                             "score": 1996.0986736442,
                             "solution": null,
@@ -1175,7 +1199,7 @@ export default{
                         },
                         {
                             "title": "2251. 花期内花的数目",
-                            "sort": 18,
+                            "sort": 19,
                             "src": "/number-of-flowers-in-full-bloom/",
                             "score": 2022.3137128296,
                             "solution": null,
@@ -1183,7 +1207,7 @@ export default{
                         },
                         {
                             "title": "2772. 使数组中的所有元素都等于零",
-                            "sort": 19,
+                            "sort": 20,
                             "src": "/apply-operations-to-make-all-array-elements-equal-to-zero/",
                             "score": 2029.4024513478,
                             "solution": null,
@@ -1191,7 +1215,7 @@ export default{
                         },
                         {
                             "title": "3229. 使数组等于目标数组所需的最少操作次数",
-                            "sort": 20,
+                            "sort": 21,
                             "src": "/minimum-operations-to-make-array-equal-to-target/",
                             "score": 2066.5575759467,
                             "solution": null,
@@ -1199,7 +1223,7 @@ export default{
                         },
                         {
                             "title": "798. 得分最高的最小轮调",
-                            "sort": 21,
+                            "sort": 22,
                             "src": "/smallest-rotation-with-highest-score/",
                             "score": 2129.7051442916,
                             "solution": null,
@@ -1207,7 +1231,7 @@ export default{
                         },
                         {
                             "title": "3347. 执行操作后元素的最高频率 II",
-                            "sort": 22,
+                            "sort": 23,
                             "src": "/maximum-frequency-of-an-element-after-performing-operations-ii/",
                             "score": 2155.599241516,
                             "solution": null,
@@ -1215,7 +1239,7 @@ export default{
                         },
                         {
                             "title": "2528. 最大化城市的最小供电站数目",
-                            "sort": 23,
+                            "sort": 24,
                             "src": "/maximize-the-minimum-powered-city/",
                             "score": 2235.5784618885,
                             "solution": null,
@@ -1223,7 +1247,7 @@ export default{
                         },
                         {
                             "title": "1674. 使数组互补的最少操作次数",
-                            "sort": 24,
+                            "sort": 25,
                             "src": "/minimum-moves-to-make-array-complementary/",
                             "score": 2333.2401505813,
                             "solution": null,
@@ -1231,7 +1255,7 @@ export default{
                         },
                         {
                             "title": "3362. 零数组变换 III",
-                            "sort": 25,
+                            "sort": 26,
                             "src": "/zero-array-transformation-iii/",
                             "score": 2423.8553548566,
                             "solution": null,
@@ -1239,7 +1263,7 @@ export default{
                         },
                         {
                             "title": "3017. 按距离统计房屋对数目 II",
-                            "sort": 26,
+                            "sort": 27,
                             "src": "/count-the-number-of-houses-at-a-certain-distance-ii/",
                             "score": 2709.4067070911,
                             "solution": null,
@@ -1247,7 +1271,7 @@ export default{
                         },
                         {
                             "title": "253. 会议室 II",
-                            "sort": 27,
+                            "sort": 28,
                             "src": "/meeting-rooms-ii/",
                             "score": null,
                             "solution": null,
@@ -1255,7 +1279,7 @@ export default{
                         },
                         {
                             "title": "370. 区间加法",
-                            "sort": 28,
+                            "sort": 29,
                             "src": "/range-addition/",
                             "score": null,
                             "solution": null,
@@ -1263,7 +1287,7 @@ export default{
                         },
                         {
                             "title": "1989. 捉迷藏中可捕获的最大人数",
-                            "sort": 29,
+                            "sort": 30,
                             "src": "/maximum-number-of-people-that-can-be-caught-in-tag/",
                             "score": null,
                             "solution": null,
@@ -1271,7 +1295,7 @@ export default{
                         },
                         {
                             "title": "759. 员工空闲时间",
-                            "sort": 30,
+                            "sort": 31,
                             "src": "/employee-free-time/",
                             "score": 1710.1120861153,
                             "solution": null,
@@ -1279,7 +1303,7 @@ export default{
                         },
                         {
                             "title": "2021. 街上最亮的位置",
-                            "sort": 31,
+                            "sort": 32,
                             "src": "/brightest-position-on-street/",
                             "score": null,
                             "solution": null,
@@ -1287,7 +1311,7 @@ export default{
                         },
                         {
                             "title": "2015. 每段建筑物的平均高度",
-                            "sort": 32,
+                            "sort": 33,
                             "src": "/average-height-of-buildings-in-each-segment/",
                             "score": null,
                             "solution": null,
@@ -1295,7 +1319,7 @@ export default{
                         },
                         {
                             "title": "2237. 计算街道上满足所需亮度的位置数量",
-                            "sort": 33,
+                            "sort": 34,
                             "src": "/count-positions-on-street-with-required-brightness/",
                             "score": null,
                             "solution": null,
@@ -1303,7 +1327,7 @@ export default{
                         },
                         {
                             "title": "3009. 折线图上的最大交点数量",
-                            "sort": 34,
+                            "sort": 35,
                             "src": "/maximum-number-of-intersections-on-the-chart/",
                             "score": null,
                             "solution": null,
@@ -1311,7 +1335,7 @@ export default{
                         },
                         {
                             "title": "3279. 活塞占据的最大总面积",
-                            "sort": 35,
+                            "sort": 36,
                             "src": "/maximum-total-area-occupied-by-pistons/",
                             "score": null,
                             "solution": null,
@@ -2871,7 +2895,7 @@ export default{
                     "title": "§5.7 对顶堆（滑动窗口第 K 小/大）",
                     "sort": 6,
                     "isLeaf": true,
-                    "summary": "也可以用有序集合。<br>另见 <a href=\"/lc-rating/list/graph\">图论题单</a> 中的 Dijkstra 算法。<br>",
+                    "summary": "也可以用有序集合做。<br>另见 <a href=\"/lc-rating/list/graph\">图论题单</a> 中的 Dijkstra 算法。<br>",
                     "child": [
                         {
                             "title": "2102. 序列顺序查询",
@@ -2933,6 +2957,14 @@ export default{
                             "title": "3369. 设计数组统计跟踪器",
                             "sort": 7,
                             "src": "/design-an-array-statistics-tracker/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        },
+                        {
+                            "title": "3422. 将子数组元素变为相等所需的最小操作数",
+                            "sort": 8,
+                            "src": "/minimum-operations-to-make-subarray-elements-equal/",
                             "score": null,
                             "solution": null,
                             "isPremium": true
@@ -4055,8 +4087,24 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2916. 子数组不同元素数目的平方和 II",
+                            "title": "850. 矩形面积 II",
                             "sort": 3,
+                            "src": "/rectangle-area-ii/",
+                            "score": 2235.9672341699,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3454. 分割正方形 II",
+                            "sort": 4,
+                            "src": "/separate-squares-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2916. 子数组不同元素数目的平方和 II",
+                            "sort": 5,
                             "src": "/subarrays-distinct-element-sum-of-squares-ii/",
                             "score": 2816.0706257586,
                             "solution": null,
@@ -4064,7 +4112,7 @@ export default{
                         },
                         {
                             "title": "LCP 05. 发 LeetCoin",
-                            "sort": 4,
+                            "sort": 6,
                             "src": "/coin-bonus/",
                             "score": null,
                             "solution": null,
@@ -4072,7 +4120,7 @@ export default{
                         },
                         {
                             "title": "LCP 27. 黑盒光线反射",
-                            "sort": 5,
+                            "sort": 7,
                             "src": "/IQvJ9i/",
                             "score": null,
                             "solution": null,
@@ -4127,16 +4175,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "850. 矩形面积 II",
-                            "sort": 5,
-                            "src": "/rectangle-area-ii/",
-                            "score": 2235.9672341699,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "2276. 统计区间中的整数数目",
-                            "sort": 6,
+                            "sort": 5,
                             "src": "/count-integers-in-intervals/",
                             "score": 2222.4805422748,
                             "solution": null,
@@ -4144,7 +4184,7 @@ export default{
                         },
                         {
                             "title": "2770. 达到末尾下标所需的最大跳跃次数",
-                            "sort": 7,
+                            "sort": 6,
                             "src": "/maximum-number-of-jumps-to-reach-the-last-index/",
                             "score": 1533.47383662,
                             "solution": null,

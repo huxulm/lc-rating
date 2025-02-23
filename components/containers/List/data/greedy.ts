@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】贪心算法（基本贪心策略/反悔/区间/字典序/数学/思维/构造）",
     "original_src": "https://leetcode.cn/circle/discuss/g6KTKL",
-    "last_update": "2025-02-08 04:10:04",
+    "last_update": "2025-02-18 12:29:17",
     "sort": 0,
     "child": [
         {
@@ -230,8 +230,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "LCP 40. 心算挑战",
+                            "title": "3457. 吃披萨",
                             "sort": 24,
+                            "src": "/eat-pizzas/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "LCP 40. 心算挑战",
+                            "sort": 25,
                             "src": "/uOAnQW/",
                             "score": null,
                             "solution": null,
@@ -239,7 +247,7 @@ export default{
                         },
                         {
                             "title": "1262. 可被三整除的最大和",
-                            "sort": 25,
+                            "sort": 26,
                             "src": "/greatest-sum-divisible-by-three/",
                             "score": 1762.0307532652,
                             "solution": null,
@@ -247,7 +255,7 @@ export default{
                         },
                         {
                             "title": "948. 令牌放置",
-                            "sort": 26,
+                            "sort": 27,
                             "src": "/bag-of-tokens/",
                             "score": 1762.3115124143,
                             "solution": null,
@@ -255,7 +263,7 @@ export default{
                         },
                         {
                             "title": "1775. 通过最少操作次数使数组的和相等",
-                            "sort": 27,
+                            "sort": 28,
                             "src": "/equal-sum-arrays-with-minimum-number-of-operations/",
                             "score": 1850.4091449367,
                             "solution": null,
@@ -263,7 +271,7 @@ export default{
                         },
                         {
                             "title": "2333. 最小差值平方和",
-                            "sort": 28,
+                            "sort": 29,
                             "src": "/minimum-sum-of-squared-difference/",
                             "score": 2011.0496162515,
                             "solution": null,
@@ -271,7 +279,7 @@ export default{
                         },
                         {
                             "title": "3440. 重新安排会议得到最多空余时间 II",
-                            "sort": 29,
+                            "sort": 30,
                             "src": "/reschedule-meetings-for-maximum-free-time-ii/",
                             "score": null,
                             "solution": null,
@@ -279,7 +287,7 @@ export default{
                         },
                         {
                             "title": "2141. 同时运行 N 台电脑的最长时间",
-                            "sort": 30,
+                            "sort": 31,
                             "src": "/maximum-running-time-of-n-computers/",
                             "score": 2265.2118886972,
                             "solution": null,
@@ -287,7 +295,7 @@ export default{
                         },
                         {
                             "title": "1196. 最多可以买到的苹果数量",
-                            "sort": 31,
+                            "sort": 32,
                             "src": "/how-many-apples-can-you-put-into-the-basket/",
                             "score": 1248.8026990632,
                             "solution": null,
@@ -295,7 +303,7 @@ export default{
                         },
                         {
                             "title": "2214. 通关游戏所需的最低生命值",
-                            "sort": 32,
+                            "sort": 33,
                             "src": "/minimum-health-to-beat-game/",
                             "score": null,
                             "solution": null,
@@ -303,7 +311,7 @@ export default{
                         },
                         {
                             "title": "2098. 长度为 K 的最大偶数和子序列",
-                            "sort": 33,
+                            "sort": 34,
                             "src": "/subsequence-of-size-k-with-the-largest-even-sum/",
                             "score": null,
                             "solution": null,
@@ -311,7 +319,7 @@ export default{
                         },
                         {
                             "title": "2548. 填满背包的最大价格",
-                            "sort": 34,
+                            "sort": 35,
                             "src": "/maximum-price-to-fill-a-bag/",
                             "score": null,
                             "solution": null,
@@ -319,7 +327,7 @@ export default{
                         },
                         {
                             "title": "3119. 最大数量的可修复坑洼",
-                            "sort": 35,
+                            "sort": 36,
                             "src": "/maximum-number-of-potholes-that-can-be-fixed/",
                             "score": null,
                             "solution": null,
@@ -327,7 +335,7 @@ export default{
                         },
                         {
                             "title": "2557. 从一个范围内选择最多整数 II",
-                            "sort": 36,
+                            "sort": 37,
                             "src": "/maximum-number-of-integers-to-choose-from-a-range-ii/",
                             "score": null,
                             "solution": null,
@@ -335,7 +343,7 @@ export default{
                         },
                         {
                             "title": "624. 数组列表中的最大距离",
-                            "sort": 37,
+                            "sort": 38,
                             "src": "/maximum-distance-in-arrays/",
                             "score": null,
                             "solution": null,
@@ -343,7 +351,7 @@ export default{
                         },
                         {
                             "title": "910. 最小差值 II",
-                            "sort": 38,
+                            "sort": 39,
                             "src": "/smallest-range-ii/",
                             "score": 2134.5448970405,
                             "solution": null,
@@ -351,7 +359,7 @@ export default{
                         },
                         {
                             "title": "2835. 使子序列的和等于目标的最少操作次数",
-                            "sort": 39,
+                            "sort": 40,
                             "src": "/minimum-operations-to-form-subsequence-with-target-sum/",
                             "score": 2207.4917475411,
                             "solution": null,
@@ -359,7 +367,7 @@ export default{
                         },
                         {
                             "title": "3366. 最小数组和",
-                            "sort": 40,
+                            "sort": 41,
                             "src": "/minimum-array-sum/",
                             "score": 2040.219381217,
                             "solution": null,
@@ -702,8 +710,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2422. 使用合并操作将数组转换为回文序列",
+                            "title": "3449. 最大化游戏分数的最小值",
                             "sort": 23,
+                            "src": "/maximize-the-minimum-game-score/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2422. 使用合并操作将数组转换为回文序列",
+                            "sort": 24,
                             "src": "/merge-operations-to-turn-array-into-a-palindrome/",
                             "score": null,
                             "solution": null,
@@ -854,8 +870,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1665. 完成所有任务的最少初始能量",
+                            "title": "3457. 吃披萨",
                             "sort": 1,
+                            "src": "/eat-pizzas/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1665. 完成所有任务的最少初始能量",
+                            "sort": 2,
                             "src": "/minimum-initial-energy-to-finish-tasks/",
                             "score": 1900.8434122725,
                             "solution": null,
@@ -863,7 +887,7 @@ export default{
                         },
                         {
                             "title": "3273. 对 Bob 造成的最少伤害",
-                            "sort": 2,
+                            "sort": 3,
                             "src": "/minimum-amount-of-damage-dealt-to-bob/",
                             "score": 2012.8694334235,
                             "solution": null,
@@ -871,7 +895,7 @@ export default{
                         },
                         {
                             "title": "2136. 全部开花的最早一天",
-                            "sort": 3,
+                            "sort": 4,
                             "src": "/earliest-possible-day-of-full-bloom/",
                             "score": 2033.4597721985,
                             "solution": null,
@@ -879,7 +903,7 @@ export default{
                         },
                         {
                             "title": "179. 最大数",
-                            "sort": 4,
+                            "sort": 5,
                             "src": "/largest-number/",
                             "score": null,
                             "solution": null,
@@ -887,7 +911,7 @@ export default{
                         },
                         {
                             "title": "3309. 连接二进制表示可形成的最大数值",
-                            "sort": 5,
+                            "sort": 6,
                             "src": "/maximum-possible-number-by-binary-concatenation/",
                             "score": 1363.7443380057,
                             "solution": null,
@@ -1085,17 +1109,17 @@ export default{
                     "summary": "**变形**：每个区间有各自的分数，从中选一些两两互不相交的区间，最大化得分之和。详见 <a href=\"/lc-rating/list/dynamic_programming\">动态规划题单</a> 中的「§6.4 不相交区间」。<br>",
                     "child": [
                         {
-                            "title": "646. 最长数对链",
+                            "title": "435. 无重叠区间",
                             "sort": 0,
-                            "src": "/maximum-length-of-pair-chain/",
+                            "src": "/non-overlapping-intervals/",
                             "score": null,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "435. 无重叠区间",
+                            "title": "646. 最长数对链",
                             "sort": 1,
-                            "src": "/non-overlapping-intervals/",
+                            "src": "/maximum-length-of-pair-chain/",
                             "score": null,
                             "solution": null,
                             "isPremium": false
@@ -1105,6 +1129,14 @@ export default{
                             "sort": 2,
                             "src": "/maximum-number-of-non-overlapping-substrings/",
                             "score": 2362.6480880348,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3458. 选择 K 个互不重叠的特殊子字符串",
+                            "sort": 3,
+                            "src": "/select-k-disjoint-special-substrings/",
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         }
@@ -1138,7 +1170,7 @@ export default{
                     "title": "§2.3 区间选点",
                     "sort": 2,
                     "isLeaf": true,
-                    "summary": "",
+                    "summary": "本质上和不相交区间是一样的。<br>",
                     "child": [
                         {
                             "title": "452. 用最少数量的箭引爆气球",
@@ -2043,8 +2075,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "296. 最佳的碰头地点",
+                            "title": "3441. 变成好标题的最少代价",
                             "sort": 10,
+                            "src": "/minimum-cost-good-caption/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "296. 最佳的碰头地点",
+                            "sort": 11,
                             "src": "/best-meeting-point/",
                             "score": null,
                             "solution": null,
@@ -2958,6 +2998,14 @@ export default{
                             "score": null,
                             "solution": null,
                             "isPremium": true
+                        },
+                        {
+                            "title": "LCS 02. 完成一半题目",
+                            "sort": 18,
+                            "src": "/WqXACV/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
                         }
                     ]
                 }
