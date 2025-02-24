@@ -1,7 +1,7 @@
 "use client";
 
-import BackToTopButton from "@components/BackToTop";
 import FloatingSidebar from "@components/FloatingSidebar";
+import MoveToTopButton from "@components/MoveToTopButton";
 import { useQuestionTags } from "@hooks/useQuestionTags";
 import { Solutions, useSolutions } from "@hooks/useSolutions";
 import { useTags } from "@hooks/useTags";
@@ -267,8 +267,7 @@ export default function Search() {
         items={[
           {
             id: "back-to-top",
-            content: <BackToTopButton />,
-            tooltip: "回到上方",
+            content: <MoveToTopButton />,
           },
         ]}
         position="bottom"

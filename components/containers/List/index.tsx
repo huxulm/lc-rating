@@ -1,7 +1,7 @@
 "use client";
 
-import BackToTopButton from "@components/BackToTop";
 import FloatingSidebar from "@components/FloatingSidebar";
+import MoveToTopButton from "@components/MoveToTopButton";
 import ProblemCategory from "@components/ProblemCatetory";
 import {
   TableOfContent,
@@ -11,6 +11,7 @@ import { hashCode } from "@utils/hash";
 import { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/esm/Form";
+import MoveToTodoButton from "./MoveToTodoButton";
 
 const mapCategory2TOC = (
   { title, child, isLeaf }: ProblemCategory,
@@ -60,9 +61,18 @@ export default function ({ data }: { data: ProblemCategory }) {
       <FloatingSidebar
         items={[
           {
-            id: "back-to-top",
-            content: <BackToTopButton />,
-            tooltip: "回到上方",
+            id: "move-to-top",
+            content: <MoveToTopButton />,
+          },
+          {
+            id: "move-to-todo",
+            content: <MoveToTodoButton />,
+            tooltip: "下一题",
+          },
+          {
+            id: "move-to-todo",
+            content: <MoveToTodoButton random />,
+            tooltip: "随机下一题",
           },
         ]}
         position="bottom"

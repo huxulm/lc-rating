@@ -34,8 +34,8 @@ import { rankItem } from "@tanstack/match-sorter-utils";
 
 import { getMark, getSize, setMark, setSize } from "@utils/store";
 
-import BackToTopButton from "@components/BackToTop";
 import FloatingSidebar from "@components/FloatingSidebar";
+import MoveToTopButton from "@components/MoveToTopButton";
 import { useContests } from "@hooks/useContests";
 import { useSolutions } from "@hooks/useSolutions";
 import { useSuspenseQuery } from "@tanstack/react-query";
@@ -268,7 +268,7 @@ function easeInCuaic(t: any) {
   return t * t * t;
 }
 
-function backToTop() {
+function MoveToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
@@ -386,8 +386,7 @@ function ContestList() {
           items={[
             {
               id: "back-to-top",
-              content: <BackToTopButton />,
-              tooltip: "回到上方",
+              content: <MoveToTopButton />,
             },
           ]}
           position="bottom"
