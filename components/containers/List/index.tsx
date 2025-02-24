@@ -70,7 +70,7 @@ export default function ({ data }: { data: ProblemCategory }) {
             tooltip: "下一题",
           },
           {
-            id: "move-to-todo",
+            id: "move-to-random-todo",
             content: <MoveToTodoButton random />,
             tooltip: "随机下一题",
           },
