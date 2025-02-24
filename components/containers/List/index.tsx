@@ -1,4 +1,6 @@
 "use client";
+
+import BackToTopButton from "@components/BackToTop";
 import ProblemCategory from "@components/ProblemCatetory";
 import {
   TableOfContent,
@@ -8,7 +10,6 @@ import { hashCode } from "@utils/hash";
 import { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/esm/Form";
-import BackToTopButton from "@components/BackToTop";
 
 const mapCategory2TOC = (
   { title, child, isLeaf }: ProblemCategory,

@@ -1,6 +1,7 @@
 "use client";
-import { lazy } from "react";
+
 import data from "@components/containers/List/data/trees";
+import { lazy } from "react";
 
 const List = lazy(() => import("@components/containers/List"));
 

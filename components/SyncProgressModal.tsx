@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Modal, Button, Alert, Form } from "react-bootstrap";
 import AllProgress from "@components/AllProgress";
+import React, { useState } from "react";
+import { Alert, Button, Form, Modal } from "react-bootstrap";
 
 interface SyncProgressModalProps {
   show: boolean;

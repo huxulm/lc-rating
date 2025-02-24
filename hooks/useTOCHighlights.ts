@@ -7,75 +7,79 @@
 
 import { useEffect, useState } from "react";
 
-function useTOCHighlight(linkClassName: string, linkActiveClassName: string, topOffset: number) {
-    const [lastActiveLink, setLastActiveLink] = useState(undefined);
+function useTOCHighlight(
+  linkClassName: string,
+  linkActiveClassName: string,
+  topOffset: number
+) {
+  const [lastActiveLink, setLastActiveLink] = useState(undefined);
 
-    useEffect(() => {
-        let headersAnchors:any = [];
-        let links:any = [];
+  useEffect(() => {
+    let headersAnchors: any = [];
+    let links: any = [];
 
-        function setActiveLink() {
-            function getActiveHeaderAnchor() {
-                let index = 0;
-                let activeHeaderAnchor = null;
+    function setActiveLink() {
+      function getActiveHeaderAnchor() {
+        let index = 0;
+        let activeHeaderAnchor = null;
 
-                headersAnchors = document.getElementsByClassName("anchor");
-                while (index < headersAnchors.length && !activeHeaderAnchor) {
-                    const headerAnchor = headersAnchors[index];
-                    const { top } = headerAnchor.getBoundingClientRect();
+        headersAnchors = document.getElementsByClassName("anchor");
+        while (index < headersAnchors.length && !activeHeaderAnchor) {
+          const headerAnchor = headersAnchors[index];
+          const { top } = headerAnchor.getBoundingClientRect();
 
-                    if (top >= 0 && top <= topOffset) {
-                        activeHeaderAnchor = headerAnchor;
-                    }
+          if (top >= 0 && top <= topOffset) {
+            activeHeaderAnchor = headerAnchor;
+          }
 
-                    index += 1;
-                }
-
-                return activeHeaderAnchor;
-            }
-
-            const activeHeaderAnchor = getActiveHeaderAnchor();
-
-            if (activeHeaderAnchor) {
-                let index = 0;
-                let itemHighlighted = false;
-
-                links = document.getElementsByClassName(linkClassName);
-                while (index < links.length && !itemHighlighted) {
-                    const link = links[index];
-                    const { href } = link;
-                    const anchorValue = decodeURIComponent(
-                        href.substring(href.indexOf("#") + 1)
-                    );
-
-                    if (activeHeaderAnchor.id === anchorValue) {
-                        // if (lastActiveLink) {
-                        //     lastActiveLink.classList.remove(
-                        //         linkActiveClassName
-                        //     );
-                        // }
-                        // link.classList.add(linkActiveClassName);
-                        setLastActiveLink(link);
-                        itemHighlighted = true;
-                    }
-
-                    index += 1;
-                }
-            }
+          index += 1;
         }
 
-        document.addEventListener("scroll", setActiveLink);
-        document.addEventListener("resize", setActiveLink);
+        return activeHeaderAnchor;
+      }
 
-        setActiveLink();
+      const activeHeaderAnchor = getActiveHeaderAnchor();
 
-        return () => {
-            document.removeEventListener("scroll", setActiveLink);
-            document.removeEventListener("resize", setActiveLink);
-        };
-    },[]);
-    // @ts-ignore
-    return lastActiveLink?.attributes?.["href"]?.nodeValue || "";
+      if (activeHeaderAnchor) {
+        let index = 0;
+        let itemHighlighted = false;
+
+        links = document.getElementsByClassName(linkClassName);
+        while (index < links.length && !itemHighlighted) {
+          const link = links[index];
+          const { href } = link;
+          const anchorValue = decodeURIComponent(
+            href.substring(href.indexOf("#") + 1)
+          );
+
+          if (activeHeaderAnchor.id === anchorValue) {
+            // if (lastActiveLink) {
+            //     lastActiveLink.classList.remove(
+            //         linkActiveClassName
+            //     );
+            // }
+            // link.classList.add(linkActiveClassName);
+            setLastActiveLink(link);
+            itemHighlighted = true;
+          }
+
+          index += 1;
+        }
+      }
+    }
+
+    document.addEventListener("scroll", setActiveLink);
+    document.addEventListener("resize", setActiveLink);
+
+    setActiveLink();
+
+    return () => {
+      document.removeEventListener("scroll", setActiveLink);
+      document.removeEventListener("resize", setActiveLink);
+    };
+  }, []);
+  // @ts-ignore
+  return lastActiveLink?.attributes?.["href"]?.nodeValue || "";
 }
 
 export default useTOCHighlight;
