@@ -1,6 +1,7 @@
 "use client";
 
 import BackToTopButton from "@components/BackToTop";
+import FloatingSidebar from "@components/FloatingSidebar";
 import ProblemCategory from "@components/ProblemCatetory";
 import {
   TableOfContent,
@@ -56,7 +57,18 @@ export default function ({ data }: { data: ProblemCategory }) {
 
   return (
     <Container fluid className="p-2 problem-list order-1">
-      <BackToTopButton />
+      <FloatingSidebar
+        items={[
+          {
+            id: "back-to-top",
+            content: <BackToTopButton />,
+            tooltip: "回到上方",
+          },
+        ]}
+        position="bottom"
+        initialOffset={{ x: "2rem", y: "2rem" }}
+        gap={3}
+      />
       <div className="toc" id="toc">
         <TableOfContent toc={mapCategory2TOC(data, 0)} />
       </div>

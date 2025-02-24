@@ -1,6 +1,7 @@
 "use client";
 
 import BackToTopButton from "@components/BackToTop";
+import FloatingSidebar from "@components/FloatingSidebar";
 import { useQuestionTags } from "@hooks/useQuestionTags";
 import { Solutions, useSolutions } from "@hooks/useSolutions";
 import { useTags } from "@hooks/useTags";
@@ -262,7 +263,18 @@ export default function Search() {
 
   return (
     <Container className="search">
-      <BackToTopButton />
+      <FloatingSidebar
+        items={[
+          {
+            id: "back-to-top",
+            content: <BackToTopButton />,
+            tooltip: "回到上方",
+          },
+        ]}
+        position="bottom"
+        initialOffset={{ x: "2rem", y: "2rem" }}
+        gap={3}
+      />
       <Row
         as="div"
         className="justify-content-center p-3 position-sticky top-0 z-3"

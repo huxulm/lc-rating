@@ -24,10 +24,6 @@ export default function BackToTopButton() {
         variant="primary"
         style={{
           borderRadius: "50%",
-          position: "fixed",
-          zIndex: 10000,
-          bottom: "50px",
-          right: "5px",
           width: "2.5rem",
           height: "2.5rem",
           fontSize: "1.5rem",
