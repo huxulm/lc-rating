@@ -34,7 +34,7 @@ import { rankItem } from "@tanstack/match-sorter-utils";
 
 import { getMark, getSize, setMark, setSize } from "@utils/store";
 
-import FloatingSidebar from "@components/FloatingSidebar";
+import FixedSidebar from "@components/FixedSidebar";
 import MoveToTopButton from "@components/MoveToTopButton";
 import { useContests } from "@hooks/useContests";
 import { useSolutions } from "@hooks/useSolutions";
@@ -382,7 +382,7 @@ function ContestList() {
   return (
     <Container fluid className="contest">
       <div className="contest-table">
-        <FloatingSidebar
+        <FixedSidebar
           items={[
             {
               id: "back-to-top",

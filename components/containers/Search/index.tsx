@@ -1,6 +1,6 @@
 "use client";
 
-import FloatingSidebar from "@components/FloatingSidebar";
+import FixedSidebar from "@components/FixedSidebar";
 import MoveToTopButton from "@components/MoveToTopButton";
 import { useQuestionTags } from "@hooks/useQuestionTags";
 import { Solutions, useSolutions } from "@hooks/useSolutions";
@@ -263,7 +263,7 @@ export default function Search() {
 
   return (
     <Container className="search">
-      <FloatingSidebar
+      <FixedSidebar
         items={[
           {
             id: "back-to-top",

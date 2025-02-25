@@ -1,6 +1,6 @@
 "use client";
 
-import FloatingSidebar from "@components/FloatingSidebar";
+import FixedSidebar from "@components/FixedSidebar";
 import MoveToTopButton from "@components/MoveToTopButton";
 import ProblemCategory from "@components/ProblemCatetory";
 import {
@@ -58,7 +58,7 @@ export default function ({ data }: { data: ProblemCategory }) {
 
   return (
     <Container fluid className="p-2 problem-list order-1">
-      <FloatingSidebar
+      <FixedSidebar
         items={[
           {
             id: "move-to-top",
@@ -87,38 +87,54 @@ export default function ({ data }: { data: ProblemCategory }) {
         data-bs-spy="scroll"
         data-bs-target="#toc"
       >
-        <Form
-          className="position-absolute d-flex justify-content-end gap-3 fw-bold"
-          style={{ top: "80px", right: "10px" }}
-        >
-          <Form.Check
-            checked={showEn}
-            onChange={() => {
-              setShowEn(!showEn);
-            }}
-            type="switch"
-            label="英文链接"
-            id="toggle-tags"
-          />
-          <Form.Check
-            checked={showRating}
-            onChange={() => {
-              setShowRating(!showRating);
-            }}
-            type="switch"
-            label="难度分"
-            id="toggle-ratings"
-          />
-          <Form.Check
-            checked={showPremium}
-            onChange={() => {
-              setPremium(!showPremium);
-            }}
-            type="switch"
-            label="会员题"
-            id="toggle-premiums"
-          />
-        </Form>
+        <FixedSidebar
+          position="top"
+          direction="horizontal"
+          initialOffset={{ x: "1rem", y: "4rem" }}
+          gap={3}
+          className="fw-bold"
+          items={[
+            {
+              id: "toggle-tags",
+              content: (
+                <Form.Check
+                  checked={showEn}
+                  onChange={() => {
+                    setShowEn(!showEn);
+                  }}
+                  type="switch"
+                  label="英文链接"
+                />
+              ),
+            },
+            {
+              id: "toggle-ratings",
+              content: (
+                <Form.Check
+                  checked={showRating}
+                  onChange={() => {
+                    setShowRating(!showRating);
+                  }}
+                  type="switch"
+                  label="难度分"
+                />
+              ),
+            },
+            {
+              id: "toggle-premiums",
+              content: (
+                <Form.Check
+                  checked={showPremium}
+                  onChange={() => {
+                    setPremium(!showPremium);
+                  }}
+                  type="switch"
+                  label="会员题"
+                />
+              ),
+            },
+          ]}
+        />
         <ProblemCategory
           title={`<p class="fs-6 fw-bold fst-italic">来源:<a target="_blank" class="ms-2 fs-6 link" href="${data.original_src}">${data.original_src}</a> <span class="ms-3 fw-semibold fst-italic">最近更新: ${data["last_update"]}</span></p>`}
           data={[data]}

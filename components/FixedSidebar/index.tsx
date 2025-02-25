@@ -1,12 +1,11 @@
 import React from "react";
-import Stack from "react-bootstrap/Stack";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import Stack from "react-bootstrap/Stack";
 
-export interface FloatingItem {
+export interface FixedItem {
   id: string;
   content: React.ReactNode;
   tooltip?: string;
-  position?: "sticky" | "fixed";
   offset?: { x?: string; y?: string };
 }
 
@@ -21,8 +20,6 @@ const TooltipWrapper: React.FC<TooltipWrapperProps> = ({
   children,
   tooltip,
 }) => {
-  console.log(children);
-
   return tooltip ? (
     children && (
       <OverlayTrigger
@@ -37,20 +34,24 @@ const TooltipWrapper: React.FC<TooltipWrapperProps> = ({
   );
 };
 
-interface FloatingSidebarProps {
-  items: FloatingItem[];
+interface FixedSidebarProps {
+  items: FixedItem[];
   position?: "top" | "center" | "bottom";
+  direction?: "vertical" | "horizontal";
   initialOffset?: { x: string; y: string };
   gap?: number;
-  hoverEffect?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-const FloatingSidebar: React.FC<FloatingSidebarProps> = ({
+const FixedSidebar: React.FC<FixedSidebarProps> = ({
   items,
   position = "center",
+  direction = "vertical",
   initialOffset = { x: "1rem", y: "0" },
   gap = 2,
-  hoverEffect = true,
+  className,
+  style,
 }) => {
   const containerPosition = () => {
     const baseStyle = {
@@ -73,17 +74,19 @@ const FloatingSidebar: React.FC<FloatingSidebarProps> = ({
   };
 
   return (
-    <Stack gap={gap} className="position-fixed" style={containerPosition()}>
+    <Stack
+      gap={gap}
+      direction={direction}
+      className={`position-fixed ${className}`}
+      style={{ ...containerPosition(), ...style }}
+    >
       {items.map((item) => (
         <div
           key={item.id}
-          className={`${hoverEffect ? "hover-scale" : ""}`}
           style={{
-            position: item.position || "relative",
             right: item.offset?.x,
             top: item.offset?.y,
             transition: "transform 0.2s ease",
-            cursor: "pointer",
           }}
         >
           <TooltipWrapper id={item.id} tooltip={item.tooltip}>
@@ -95,4 +98,4 @@ const FloatingSidebar: React.FC<FloatingSidebarProps> = ({
   );
 };
 
-export default FloatingSidebar;
+export default FixedSidebar;
