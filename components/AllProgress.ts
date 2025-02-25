@@ -46,7 +46,7 @@ class AllProgress {
       }
     }
   }
-  
+
   private setProgress(questionID: string, value: string): void {
     this.data[questionID] = value;
     if (typeof Storage !== "undefined" && window.localStorage) {

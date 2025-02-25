@@ -1,25 +1,33 @@
 "use client";
+
 import React, { createContext, useContext, useReducer } from "react";
 
-const getStoredTheme = () => localStorage.getItem('theme')
-const setStoredTheme = (theme: string) => localStorage.setItem('theme', theme)
+const getStoredTheme = () => localStorage.getItem("theme");
+const setStoredTheme = (theme: string) => localStorage.setItem("theme", theme);
 
 const getPreferredTheme = () => {
-  const storedTheme = getStoredTheme()
+  const storedTheme = getStoredTheme();
   if (storedTheme) {
-    return storedTheme
+    return storedTheme;
   }
 
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-}
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
 
 const setTheme = (theme: string) => {
-  if (theme === 'auto') {
-    document.documentElement.setAttribute('data-bs-theme', (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'))
+  if (theme === "auto") {
+    document.documentElement.setAttribute(
+      "data-bs-theme",
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light"
+    );
   } else {
-    document.documentElement.setAttribute('data-bs-theme', theme)
+    document.documentElement.setAttribute("data-bs-theme", theme);
   }
-}
+};
 
 type ThemeStateType = {
   theme: "light" | "dark";
@@ -27,7 +35,7 @@ type ThemeStateType = {
 
 const initialState: ThemeStateType = {
   // @ts-ignore
-  theme: getStoredTheme() || 'light',
+  theme: getStoredTheme() || "light",
 };
 
 const ThemeContext = createContext<ThemeStateType>(initialState);

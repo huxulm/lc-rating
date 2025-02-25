@@ -1,6 +1,7 @@
 "use client";
-import { useMemo, useState } from "react";
+
 import Link from "next/link";
+import { useMemo, useState } from "react";
 
 export default function MdxLayout({
   children,
@@ -13,8 +14,8 @@ export default function MdxLayout({
   );
 
   const handleClick = (_, r) => {
-    setSelected(r.path)
-  }
+    setSelected(r.path);
+  };
   return (
     <div className="debug mdx-layout">
       <nav className="top-nav">
@@ -37,9 +38,7 @@ export default function MdxLayout({
           })}
         </ul>
       </aside>
-      <div className="content">
-        {code.mdx}
-      </div>
+      <div className="content">{code.mdx}</div>
     </div>
   );
 }

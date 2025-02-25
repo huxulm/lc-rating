@@ -1,4 +1,4 @@
-import RatingCircle, { COLORS } from "@/components/RatingCircle";
+import RatingCircle, { COLORS } from "@components/RatingCircle";
 import React, { useEffect, useMemo, useState } from "react";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
@@ -32,13 +32,14 @@ import {
 
 import { rankItem } from "@tanstack/match-sorter-utils";
 
-import { getMark, getSize, setMark, setSize } from "@/utils/store";
+import { getMark, getSize, setMark, setSize } from "@utils/store";
 
-import { useContests } from "@/hooks/useContests";
-import { useSolutions } from "@/hooks/useSolutions";
-import { Contest } from "@/utils/makeData";
-import BackToTopButton from "@components/BackToTop";
+import FixedSidebar from "@components/FixedSidebar";
+import MoveToTopButton from "@components/MoveToTopButton";
+import { useContests } from "@hooks/useContests";
+import { useSolutions } from "@hooks/useSolutions";
 import { useSuspenseQuery } from "@tanstack/react-query";
+import { Contest } from "@utils/makeData";
 import clsx from "clsx";
 import Container from "react-bootstrap/esm/Container";
 
@@ -267,7 +268,7 @@ function easeInCuaic(t: any) {
   return t * t * t;
 }
 
-function backToTop() {
+function MoveToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
@@ -381,7 +382,17 @@ function ContestList() {
   return (
     <Container fluid className="contest">
       <div className="contest-table">
-        <BackToTopButton />
+        <FixedSidebar
+          items={[
+            {
+              id: "back-to-top",
+              content: <MoveToTopButton />,
+            },
+          ]}
+          position="bottom"
+          initialOffset={{ x: "2rem", y: "2rem" }}
+          gap={3}
+        />
         <Table
           striped
           bordered
