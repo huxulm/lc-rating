@@ -1,10 +1,11 @@
-import "@/scss/algorithm/styles.scss";
 import MdxLayout from "@components/layouts/MdxLayout";
 import Dijkstra from "@components/sections/dijkstra.mdx";
 import MonotoneStack from "@components/sections/mono.mdx";
 import SegmentTree from "@components/sections/segment_tree.mdx";
 import SparseTable from "@components/sections/sparestable.mdx";
 import String from "@components/sections/string.mdx";
+import "@scss/algorithm/styles.scss";
+
 import type { Metadata } from "next";
 
 const routes = [

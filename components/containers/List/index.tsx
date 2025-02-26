@@ -1,4 +1,7 @@
 "use client";
+
+import FixedSidebar from "@components/FixedSidebar";
+import MoveToTopButton from "@components/MoveToTopButton";
 import ProblemCategory from "@components/ProblemCatetory";
 import {
   TableOfContent,
@@ -8,7 +11,7 @@ import { hashCode } from "@utils/hash";
 import { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/esm/Form";
-import BackToTopButton from "@components/BackToTop";
+import MoveToTodoButton from "./MoveToTodoButton";
 
 const mapCategory2TOC = (
   { title, child, isLeaf }: ProblemCategory,
@@ -55,7 +58,27 @@ export default function ({ data }: { data: ProblemCategory }) {
 
   return (
     <Container fluid className="p-2 problem-list order-1">
-      <BackToTopButton />
+      <FixedSidebar
+        items={[
+          {
+            id: "move-to-top",
+            content: <MoveToTopButton />,
+          },
+          {
+            id: "move-to-todo",
+            content: <MoveToTodoButton />,
+            tooltip: "下一题",
+          },
+          {
+            id: "move-to-random-todo",
+            content: <MoveToTodoButton random />,
+            tooltip: "随机下一题",
+          },
+        ]}
+        position="bottom"
+        initialOffset={{ x: "2rem", y: "2rem" }}
+        gap={3}
+      />
       <div className="toc" id="toc">
         <TableOfContent toc={mapCategory2TOC(data, 0)} />
       </div>
@@ -64,38 +87,54 @@ export default function ({ data }: { data: ProblemCategory }) {
         data-bs-spy="scroll"
         data-bs-target="#toc"
       >
-        <Form
-          className="position-absolute d-flex justify-content-end gap-3 fw-bold"
-          style={{ top: "80px", right: "10px" }}
-        >
-          <Form.Check
-            checked={showEn}
-            onChange={() => {
-              setShowEn(!showEn);
-            }}
-            type="switch"
-            label="英文链接"
-            id="toggle-tags"
-          />
-          <Form.Check
-            checked={showRating}
-            onChange={() => {
-              setShowRating(!showRating);
-            }}
-            type="switch"
-            label="难度分"
-            id="toggle-ratings"
-          />
-          <Form.Check
-            checked={showPremium}
-            onChange={() => {
-              setPremium(!showPremium);
-            }}
-            type="switch"
-            label="会员题"
-            id="toggle-premiums"
-          />
-        </Form>
+        <FixedSidebar
+          position="top"
+          direction="horizontal"
+          initialOffset={{ x: "1rem", y: "4rem" }}
+          gap={3}
+          className="fw-bold"
+          items={[
+            {
+              id: "toggle-tags",
+              content: (
+                <Form.Check
+                  checked={showEn}
+                  onChange={() => {
+                    setShowEn(!showEn);
+                  }}
+                  type="switch"
+                  label="英文链接"
+                />
+              ),
+            },
+            {
+              id: "toggle-ratings",
+              content: (
+                <Form.Check
+                  checked={showRating}
+                  onChange={() => {
+                    setShowRating(!showRating);
+                  }}
+                  type="switch"
+                  label="难度分"
+                />
+              ),
+            },
+            {
+              id: "toggle-premiums",
+              content: (
+                <Form.Check
+                  checked={showPremium}
+                  onChange={() => {
+                    setPremium(!showPremium);
+                  }}
+                  type="switch"
+                  label="会员题"
+                />
+              ),
+            },
+          ]}
+        />
         <ProblemCategory
           title={`<p class="fs-6 fw-bold fst-italic">来源:<a target="_blank" class="ms-2 fs-6 link" href="${data.original_src}">${data.original_src}</a> <span class="ms-3 fw-semibold fst-italic">最近更新: ${data["last_update"]}</span></p>`}
           data={[data]}
