@@ -35,7 +35,7 @@ import { FilterIcon, ShareIcon } from "@components/icons";
 // hooks
 import Loading from "@components/Loading";
 import { QTag, useQuestionTags } from "@hooks/useQuestionTags";
-import { SolutionInfo, useSolutions } from "@hooks/useSolutions";
+import { SolutionType, useSolutions } from "@hooks/useSolutions";
 import useStorage from "@hooks/useStorage";
 import { Tags, useTags } from "@hooks/useTags";
 import { useZen } from "@hooks/useZen";
@@ -460,7 +460,7 @@ const ZenTableComp = React.memo(
     columnVisibility: VisibilityState;
     queryTags: (id: string) => QTag;
     data: ConstQuestion[];
-    querySolution: (id: string) => SolutionInfo;
+    querySolution: (id: string) => SolutionType;
     progress: (v: ConstQuestion) => Progress;
     handleProgressSelectChange: (questionId: string, value: string) => void;
   }) => {

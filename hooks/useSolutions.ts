@@ -1,6 +1,6 @@
 import { useEffect, useState, useTransition } from "react";
 
-export type SolutionInfo = [
+export type SolutionType = [
   string,
   string,
   string,
@@ -9,7 +9,7 @@ export type SolutionInfo = [
   string,
   number
 ];
-export type Solutions = Record<string, SolutionInfo>;
+export type Solutions = Record<string, SolutionType>;
 
 export function useSolutions() {
   // solutions
