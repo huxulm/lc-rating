@@ -186,8 +186,8 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
     settings ? settings.selectedTags : {}
   );
 
-  const [selectedProgress, setSelectedProgress] = useState<Progress | "">(
-    settings ? settings.selectedProgress : Progress.TODO
+  const [selectedProgress, setSelectedProgress] = useState<Progress>(
+    settings?.selectedProgress || Progress.TODO
   );
 
   const onSelectTags = (key: string) => {
@@ -353,7 +353,10 @@ export default function Zenk() {
   );
 
   const currentFilter = useMemo(() => {
-    return filters.find((filter) => filter.label === currentFilterKey).fn;
+    return (
+      filters.find((filter) => filter.label === currentFilterKey)?.fn ||
+      (() => true)
+    );
   }, [currentFilterKey]);
 
   // Event handlers
@@ -497,9 +500,13 @@ const ZenTableComp = React.memo(
           },
           cell: (info) => {
             const item = info.row.original;
-            const sol = querySolution(`${item._hash}`);
-            let link = sol
-              ? LC_HOST + "/problems/" + sol[5] + "/solution/" + sol[1]
+            const soln = querySolution(item._hash.toString());
+            let link = soln
+              ? LC_HOST +
+                "/problems/" +
+                soln.questSlug +
+                "/solution/" +
+                soln.solnSlug
               : null;
             return (
               <div className="d-flex justify-content-between align-items-center">

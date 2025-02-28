@@ -1,14 +1,20 @@
 import { useEffect, useState, useTransition } from "react";
 
-export type SolutionType = [
+type SolutionsResponse = Record<
   string,
-  string,
-  string,
-  `${number}`,
-  string,
-  string,
-  number
-];
+  [string, string, string, `${number}`, string, string, number]
+>;
+
+export interface SolutionType {
+  questTitle: string;
+  questSlug: string;
+  questId: string;
+  solnTitle: string;
+  solnSlug: string;
+  solnTime: string;
+  _hash: number;
+}
+
 export type Solutions = Record<string, SolutionType>;
 
 export function useSolutions() {
@@ -22,9 +28,31 @@ export function useSolutions() {
         (new Date().getTime() / 100000).toFixed(0)
     )
       .then((res) => res.json())
-      .then((result: Solutions) => {
+      .then((result: SolutionsResponse) => {
         startTransition(() => {
-          setSolutions(result);
+          let solutions: Solutions = {};
+          for (let key in result) {
+            const [
+              solnTitle,
+              solnSlug,
+              solnTime,
+              questId,
+              questTitle,
+              questSlug,
+              _hash,
+            ] = result[key];
+
+            solutions[key] = {
+              questTitle,
+              questSlug,
+              questId,
+              solnTitle,
+              solnSlug,
+              solnTime,
+              _hash,
+            };
+          }
+          setSolutions(solutions);
         });
       });
   }, []);

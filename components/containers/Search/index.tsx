@@ -3,9 +3,10 @@
 import FixedSidebar from "@components/FixedSidebar";
 import MoveToTopButton from "@components/MoveToTopButton";
 import { useQuestionTags } from "@hooks/useQuestionTags";
-import { Solutions, useSolutions } from "@hooks/useSolutions";
+import { useSolutions } from "@hooks/useSolutions";
 import { useTags } from "@hooks/useTags";
 import {
+  createColumnHelper,
   flexRender,
   getCoreRowModel,
   getPaginationRowModel,
@@ -20,8 +21,22 @@ import Row from "react-bootstrap/Row";
 import Spinner from "react-bootstrap/Spinner";
 
 const LC_HOST = `https://leetcode.cn`;
+const columnHelper = createColumnHelper<filtSolnsType>();
 
-function PaginatedTable({ data }) {
+interface filtSolnsType {
+  idx: number;
+  questTitle: string;
+  questLink: string;
+  tags: string[];
+  solnTitle: string;
+  solnLink: string;
+}
+
+interface PaginatedTableProps {
+  data: filtSolnsType[];
+}
+
+function PaginatedTable({ data }: PaginatedTableProps) {
   const renderTags = (tags: string[]) => {
     return (
       <div className="d-flex flex-wrap" style={{ gap: ".3rem" }}>
@@ -38,35 +53,33 @@ function PaginatedTable({ data }) {
 
   const columns = useMemo(
     () => [
-      {
+      columnHelper.display({
+        id: "index",
         header: "编号",
         cell: ({ row }) => (
           <span className="d-flex">{row.original.idx + 1}</span>
         ),
-      },
-      {
+      }),
+      columnHelper.accessor("questTitle", {
         header: "题目",
-        accessorKey: "QTitle",
         cell: ({ row }) => (
-          <a className="fw-medium" href={row.original.QLink}>
-            {row.original.QTitle}
+          <a className="fw-medium" href={row.original.questLink}>
+            {row.original.questTitle}
           </a>
         ),
-      },
-      {
+      }),
+      columnHelper.accessor("tags", {
         header: "标签",
-        accessorKey: "tags",
         cell: ({ row }) => renderTags(row.original.tags),
-      },
-      {
+      }),
+      columnHelper.accessor("solnTitle", {
         header: "题解",
-        accessorKey: "ATitle",
         cell: ({ row }) => (
-          <a className="fw-medium" href={row.original.ALink}>
-            {row.original.ATitle}
+          <a className="fw-medium" href={row.original.solnLink}>
+            {row.original.solnTitle}
           </a>
         ),
-      },
+      }),
     ],
     []
   );
@@ -170,13 +183,19 @@ function PaginatedTable({ data }) {
           ))}
         </thead>
         <tbody className="table-body">
-          {table.getRowModel().rows.map((row) => (
+          {table.getRowModel().rows.map((row, rowIndex) => (
             <tr className="table-row bg-color" key={row.id}>
-              {row.getVisibleCells().map((cell) => (
-                <td className="d-flex align-items-center" key={cell.id}>
-                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                </td>
-              ))}
+              {row.getVisibleCells().map((cell) => {
+                const context = {
+                  ...cell.getContext(),
+                  rowIndex,
+                };
+                return (
+                  <td className="d-flex align-items-center" key={cell.id}>
+                    {flexRender(cell.column.columnDef.cell, context)}
+                  </td>
+                );
+              })}
             </tr>
           ))}
         </tbody>
@@ -193,7 +212,7 @@ export default function Search() {
     setFilter(e.target.value);
   };
 
-  const { solutions: _solutions, isPending: solLoading } = useSolutions();
+  const { solutions, isPending: solLoading } = useSolutions();
   const { tags: qtags, isPending: tgLoading } = useQuestionTags(filter);
   const { tags } = useTags();
 
@@ -210,56 +229,50 @@ export default function Search() {
     setSelectedTags({});
   };
 
-  const solutions = useMemo(() => {
-    let result: Solutions = {};
-    Object.keys(_solutions).forEach((id) => {
-      let v = _solutions[id];
-      let key = v[6];
-      if (
-        filter === "" ||
-        v[3].indexOf(filter) != -1 ||
-        v[0].indexOf(filter) != -1 ||
-        v[4].indexOf(filter) != -1
-      ) {
-        result[key] = v; // title_slug_hash => question
-      }
-    });
-    return result;
-  }, [filter, _solutions]);
-
-  const filteredSolutions = useMemo(() => {
+  const filtSolns = useMemo<filtSolnsType[]>(() => {
     const selectedTagIds = Object.keys(selectedTags).filter(
       (id) => !!selectedTags[id]
     );
+
     return Object.keys(solutions)
-      .filter((id) => {
-        const tags = qtags[id]?.[0] || [];
+      .filter((hash) => {
+        let sol = solutions[hash];
+        return (
+          filter === "" ||
+          sol.solnTitle.indexOf(filter) != -1 ||
+          sol.questId.indexOf(filter) != -1 ||
+          sol.questTitle.indexOf(filter) != -1
+        );
+      })
+      .filter((hash) => {
+        const tags = qtags[hash]?.[0] || [];
         if (selectedTagIds.length == 0) return true;
         return tags.some((tag) => selectedTags[tag]);
       })
-      .sort(function (ia, ib) {
-        let a = solutions[ia];
-        let b = solutions[ib];
-        return a[2] < b[2] ? 1 : a[2] == b[2] ? 0 : -1;
+      .sort(function (hash_a, hash_b) {
+        let a = solutions[hash_a];
+        let b = solutions[hash_b];
+        return a.solnTime < b.solnTime ? 1 : a.solnTime == b.solnTime ? 0 : -1;
       })
       .map((key, idx) => {
-        const sol = solutions[key];
-        const QLink = `${LC_HOST}/problems/${sol[5]}`;
-        const ALink = `${LC_HOST}/problems/${sol[5]}/solution/${sol[1]}`;
-        const QTitle = `${sol[3]}. ${sol[4]}`;
-        const tags = qtags[sol[6].toString()]?.[lang === "en" ? 0 : 1] || [];
-        const ATitle = sol[0];
+        const soln = solutions[key];
+        const questLink = `${LC_HOST}/problems/${soln.questSlug}`;
+        const solnLink = `${LC_HOST}/problems/${soln.questSlug}/solution/${soln.solnSlug}`;
+        const questTitle = `${soln.questId}. ${soln.questTitle}`;
+        const tags =
+          qtags[soln._hash.toString()]?.[lang === "en" ? 0 : 1] || [];
+        const solnTitle = soln.solnTitle;
 
         return {
           idx,
-          QTitle,
-          QLink,
+          questTitle,
+          questLink,
           tags,
-          ATitle,
-          ALink,
+          solnTitle,
+          solnLink,
         };
       });
-  }, [selectedTags, solutions, solLoading]);
+  }, [filter, solutions, selectedTags, solLoading]);
 
   return (
     <Container className="search">
@@ -292,7 +305,7 @@ export default function Search() {
               placeholder="题号、标目、题解标题（模糊匹配）"
               onChange={onSearchTextChange}
             ></input>
-            <span className="qtot">总数：{filteredSolutions.length}</span>
+            <span className="qtot">总数：{filtSolns.length}</span>
           </Col>
           <Col md={2} sm={12} lg={2}>
             <ButtonGroup className="w-100">
@@ -343,7 +356,7 @@ export default function Search() {
               <Spinner animation="border"></Spinner>
             </Row>
           )}
-          <PaginatedTable data={filteredSolutions} />
+          <PaginatedTable data={filtSolns} />
         </Col>
       </Row>
     </Container>

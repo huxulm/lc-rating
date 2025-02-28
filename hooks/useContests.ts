@@ -28,13 +28,13 @@ interface ContestType {
   title_slug: string;
 }
 
-type ContestResponse = {
+type ContestsResponse = {
   company: {};
   contest: ContestType;
   questions: Quadra<QuestionType>;
 }[];
 
-function mapContests(data: ContestResponse): Contest[] {
+function mapContests(data: ContestsResponse): Contest[] {
   return data.map(({ contest, questions }) => {
     return {
       ID: contest.id,
@@ -58,7 +58,7 @@ export function useContests() {
       "/lc-rating/contest.json?t=" + (new Date().getTime() / 100000).toFixed(0)
     )
       .then((res) => res.json())
-      .then((result: ContestResponse) => {
+      .then((result: ContestsResponse) => {
         startTransition(() => {
           setContests(mapContests(result));
         });

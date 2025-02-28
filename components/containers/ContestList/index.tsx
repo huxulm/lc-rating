@@ -74,10 +74,6 @@ function ContestList() {
 
   const { contests, isPending: loading } = useContests();
 
-  const querySolution = (id: string) => {
-    return solutions[id];
-  };
-
   const [size, setSize] = useStorage<string>("__size", {
     defaultValue: "100",
   });

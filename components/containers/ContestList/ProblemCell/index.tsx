@@ -18,7 +18,7 @@ interface ProblemCellProps {
   solution: SolutionType;
 }
 
-function ProblemCell({ question: que, solution: sol }: ProblemCellProps) {
+function ProblemCell({ question: que, solution: soln }: ProblemCellProps) {
   let link = `${host}/problems/${que.title_slug}`;
   const onClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
@@ -64,7 +64,7 @@ function ProblemCell({ question: que, solution: sol }: ProblemCellProps) {
       >
         {que.question_id}.{que.title}
       </a>
-      {sol && (
+      {soln && (
         <div className="fr-wrapper">
           <OverlayTrigger
             trigger={["hover", "focus"]}
@@ -76,21 +76,27 @@ function ProblemCell({ question: que, solution: sol }: ProblemCellProps) {
                   className={clsx(`rating-color-${idx}`, "ff-st")}
                   style={{ fontSize: "1rem" }}
                 >
-                  {sol[0]}
+                  {soln.solnTitle}
                 </Popover.Body>
               </Popover>
             }
           >
             <a
               className="fr ans"
-              href={host + "/problems/" + sol[5] + "/solution/" + sol[1]}
+              href={
+                host +
+                "/problems/" +
+                soln.questSlug +
+                "/solution/" +
+                soln.solnSlug
+              }
             >
               🎈
             </a>
           </OverlayTrigger>
         </div>
       )}
-      {!sol && display && (
+      {!soln && display && (
         <div className="fr-wrapper zen-spinner-td">
           <Spinner animation="border" size="sm" role="status" />
         </div>
