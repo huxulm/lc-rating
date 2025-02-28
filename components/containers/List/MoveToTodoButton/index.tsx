@@ -21,7 +21,7 @@ const MoveToTodoButton: React.FC<MoveToTodoButtonProps> = ({ random }) => {
   };
 
   const scrollToTodo = () => {
-    let targetElement: HTMLElement = null;
+    let targetElement: HTMLElement | null | undefined = null;
     if (random) {
       const todoElements = document.querySelectorAll(".zen-option-TODO");
       if (todoElements.length > 0) {
@@ -29,7 +29,7 @@ const MoveToTodoButton: React.FC<MoveToTodoButtonProps> = ({ random }) => {
         targetElement = todoElements[randomIndex].closest("li") as HTMLElement;
       }
     } else {
-      targetElement = document.querySelector(".zen-option-TODO").closest("li");
+      targetElement = document.querySelector(".zen-option-TODO")?.closest("li");
     }
     if (targetElement) {
       const yOffset = window.innerHeight / 2;

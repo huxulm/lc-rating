@@ -4,19 +4,19 @@ interface CategoryItem {
   title: string;
   src?: string;
   children?: CategoryItem[];
-};
+}
 class ProblemListParser {
   list: Record<string, CategoryItem[]> = {};
   g: Record<string, string> = {};
-  root: HTMLDivElement | null;
+  root: HTMLDivElement | null = null;
 
   parser(selector: string) {
     this.root = document.querySelector<HTMLDivElement>(selector);
     if (!this.root) {
       return;
     }
-    let lastH1: string;
-    let lastH2: string;
+    let lastH1: string = "";
+    let lastH2: string = "";
     let el = this.root.firstElementChild;
     let total = 0;
     while (el) {

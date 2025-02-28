@@ -7,14 +7,23 @@ interface EncryptionHandler {
   decrypt: (data: string) => string;
 }
 
-const useStorage = <T = undefined>(
+function useStorage<T>(
+  key: string,
+  options: {
+    type?: StorageType;
+    defaultValue: T;
+    encryption?: EncryptionHandler;
+  }
+): [T, Dispatch<SetStateAction<T>>];
+
+function useStorage<T>(
   key: string,
   options?: {
     type?: StorageType;
     defaultValue?: T;
     encryption?: EncryptionHandler;
   }
-): [T, Dispatch<SetStateAction<T>>] => {
+): [T | undefined, Dispatch<SetStateAction<T | undefined>>] {
   const type = options?.type ?? "local";
   const defaultValue = options?.defaultValue;
   const encryption = options?.encryption;
@@ -93,6 +102,6 @@ const useStorage = <T = undefined>(
   }, [key, type, storage, defaultValue, encryption]);
 
   return [storedValue, setValue];
-};
+}
 
 export default useStorage;

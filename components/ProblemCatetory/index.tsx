@@ -45,6 +45,7 @@ interface ProblemCategory {
   score?: Number | null;
   child?: ProblemCategory[];
   isPremium?: boolean;
+  last_update?: string;
 }
 
 interface ProblemCategoryProps {
