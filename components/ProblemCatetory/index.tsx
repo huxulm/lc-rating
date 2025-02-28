@@ -25,6 +25,7 @@ const progressTranslations = {
   [Progress.REVIEW_NEEDED]: "回头复习下",
   [Progress.AC]: "过了",
 };
+
 const progressOptionClassNames = {
   [Progress.TODO]: "zen-option-TODO",
   [Progress.WORKING]: "zen-option-WORKING",
@@ -40,11 +41,11 @@ interface ProblemCategory {
   original_src?: string;
   sort?: Number;
   isLeaf?: boolean;
-  solution?: string;
-  score?: Number;
+  solution?: string | null;
+  score?: Number | null;
   child?: ProblemCategory[];
   isPremium?: boolean;
-};
+}
 
 interface ProblemCategoryProps {
   title?: string;
@@ -57,13 +58,17 @@ interface ProblemCategoryProps {
   showPremium?: boolean;
 }
 
-function count(data: ProblemCategory[]) {
+function count(data: ProblemCategory[] | undefined) {
+  if (!data) {
+    return 0;
+  }
+
   let tot = 0;
   for (let i = 0; i < data.length; i++) {
     if (!data[i].isLeaf) {
       tot += count(data[i].child);
     } else {
-      tot += data[i].child ? data[i].child.length : 0;
+      tot += data[i].child?.length || 0;
     }
   }
   return tot;
@@ -179,7 +184,7 @@ function ProblemCategoryList({
   const progress = (title: string) => {
     const localtemp = localStorage.getItem(
       LC_RATING_PROGRESS_KEY(title2id(title))
-    );
+    ) as Progress;
     return localtemp || Progress.TODO;
   };
 
