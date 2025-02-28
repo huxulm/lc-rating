@@ -33,7 +33,7 @@ const progressOptionClassNames = {
   [Progress.AC]: "zen-option-AC",
 };
 
-type ProblemCategory = {
+interface ProblemCategory {
   title: string;
   summary?: string;
   src?: string;

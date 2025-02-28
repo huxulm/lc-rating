@@ -1,6 +1,6 @@
 const rootSelector = 'div[class="e2v1tt3 css-1ayia3m-MarkdownContent"]';
 
-type CategoryItem = {
+interface CategoryItem {
   title: string;
   src?: string;
   children?: CategoryItem[];
@@ -56,8 +56,6 @@ class ProblemListParser {
       }
       el = el.nextElementSibling;
     }
-    console.log(JSON.stringify(this.list, null, 2));
-    console.log(`total: ${total}`);
   }
 
   parseList(col: Element) {

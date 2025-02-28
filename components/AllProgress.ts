@@ -2,7 +2,7 @@
 const LC_RATING_PROGRESS_KEY = (questionID: string) =>
   `lc-rating-zen-progress-${questionID}`;
 
-type ProgressDataType = {
+interface ProgressDataType {
   [questionID: string]: string;
 };
 

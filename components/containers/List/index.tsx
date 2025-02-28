@@ -23,7 +23,6 @@ const mapCategory2TOC = (
     level: level,
     count: 0,
   } as TOC;
-  // console.log(toc.title, toc.id);
 
   if (!child) return toc;
 

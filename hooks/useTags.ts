@@ -1,6 +1,7 @@
 import { useEffect, useState, useTransition } from "react";
 
-type Tags = [number, string, string][];
+export type Tag = [number, string, string];
+export type Tags = Tag[];
 
 export function useTags() {
   // tags

@@ -29,7 +29,7 @@ const setTheme = (theme: string) => {
   }
 };
 
-type ThemeStateType = {
+interface ThemeStateType {
   theme: "light" | "dark";
 };
 
@@ -40,7 +40,7 @@ const initialState: ThemeStateType = {
 
 const ThemeContext = createContext<ThemeStateType>(initialState);
 
-type ThemeDispatchType = {
+interface ThemeDispatchType {
   toggleTheme: (theme: string) => void;
 };
 
@@ -52,7 +52,7 @@ const ActionTypes = {
   TOGGLE_THEME: "toggle_theme",
 };
 
-type Action = {
+interface Action {
   type: string;
   payload?: any;
 };

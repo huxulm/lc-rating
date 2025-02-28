@@ -33,7 +33,6 @@ const MoveToTodoButton: React.FC<MoveToTodoButtonProps> = ({ random }) => {
     }
     if (targetElement) {
       const yOffset = window.innerHeight / 2;
-      console.log(yOffset, targetElement.offsetTop);
       window.scrollTo({
         top: targetElement.offsetTop - yOffset,
         left: 0,

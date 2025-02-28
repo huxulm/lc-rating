@@ -1,9 +1,15 @@
 import { useEffect, useState, useTransition } from "react";
 
-export type Solutions = Record<
+export type SolutionInfo = [
   string,
-  [string, string, string, `${number}`, string, string, number]
->;
+  string,
+  string,
+  `${number}`,
+  string,
+  string,
+  number
+];
+export type Solutions = Record<string, SolutionInfo>;
 
 export function useSolutions(filter: any) {
   // solutions

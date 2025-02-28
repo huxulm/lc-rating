@@ -4,7 +4,7 @@ import { useSuspenseQuery } from "@tanstack/react-query";
 import { useEffect, useState, useTransition } from "react";
 
 // Question Data Type
-type ConstQuestion = {
+interface ConstQuestion {
   cont_title: string;
   cont_title_slug: string;
   title: string;
