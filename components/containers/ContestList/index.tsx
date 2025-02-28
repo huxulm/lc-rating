@@ -33,12 +33,11 @@ import {
 
 import { rankItem } from "@tanstack/match-sorter-utils";
 
-import { getMark, getSize, setMark, setSize } from "@utils/store";
-
 import FixedSidebar from "@components/FixedSidebar";
 import MoveToTopButton from "@components/MoveToTopButton";
 import { useContests } from "@hooks/useContests";
 import { useSolutions } from "@hooks/useSolutions";
+import useStorage from "@hooks/useStorage";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { Contest } from "@utils/makeData";
 import clsx from "clsx";
@@ -79,13 +78,16 @@ const fuzzyFilter: FilterFn<Contest> = (row, columnId, value, addMeta) => {
 };
 
 function ContextCell({ getValue, row }) {
+  const [mark, setMark] = useStorage<string>("__mark", {
+    defaultValue: "",
+  });
+
   let link = `${host}/contest/${row.original.TitleSlug}`;
   const onClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     openUrl(link);
   };
-  let mk = getMark();
-  const [ck, setCk] = React.useState<boolean>(mk === row.original.TitleSlug);
+  const [ck, setCk] = React.useState<boolean>(mark === row.original.TitleSlug);
   return (
     <div className={ck ? "col-contest row-selected" : "col-contest"}>
       <a href={link} onClick={onClick}>
@@ -232,11 +234,14 @@ function ContestList() {
     return data;
   };
 
-  const sz = getSize() || "100";
+  const [size, setSize] = useStorage<string>("__size", {
+    defaultValue: "100",
+  });
+
   const [{ pageIndex, pageSize }, setPagination] =
     React.useState<PaginationState>({
       pageIndex: 0,
-      pageSize: parseInt(sz),
+      pageSize: parseInt(size),
     });
   const pagination = React.useMemo(
     () => ({
@@ -266,7 +271,12 @@ function ContestList() {
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   );
-  const [selectedRow, setSelectedRow] = React.useState<string>(getMark());
+
+  const [mark, setMark] = useStorage<string>("__mark", {
+    defaultValue: "",
+  });
+
+  const [selectedRow, setSelectedRow] = React.useState<string>(mark);
   const [columnResizeMode, setColumnResizeMode] =
     React.useState<ColumnResizeMode>("onChange");
   const [globalFilter, setGlobalFilter] = React.useState("");
