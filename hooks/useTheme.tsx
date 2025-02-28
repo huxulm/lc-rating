@@ -1,93 +1,53 @@
-"use client";
+import useStorage from "@hooks/useStorage";
+import React, { createContext, useContext, useEffect } from "react";
 
-import React, { createContext, useContext, useReducer } from "react";
-
-const getStoredTheme = () => localStorage.getItem("theme");
-const setStoredTheme = (theme: string) => localStorage.setItem("theme", theme);
-
-const getPreferredTheme = () => {
-  const storedTheme = getStoredTheme();
-  if (storedTheme) {
-    return storedTheme;
-  }
-
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-};
-
-const setTheme = (theme: string) => {
-  if (theme === "auto") {
-    document.documentElement.setAttribute(
-      "data-bs-theme",
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light"
-    );
-  } else {
-    document.documentElement.setAttribute("data-bs-theme", theme);
-  }
-};
-
-interface ThemeStateType {
-  theme: "light" | "dark";
-};
-
-const initialState: ThemeStateType = {
-  // @ts-ignore
-  theme: getStoredTheme() || "light",
-};
-
-const ThemeContext = createContext<ThemeStateType>(initialState);
-
-interface ThemeDispatchType {
-  toggleTheme: (theme: string) => void;
-};
-
-const ThemeDispatch = createContext<ThemeDispatchType>({
-  toggleTheme: (theme: string) => {},
-});
-
-const ActionTypes = {
-  TOGGLE_THEME: "toggle_theme",
-};
-
-interface Action {
-  type: string;
-  payload?: any;
-};
-
-const ACTIONS: Record<string, (state: ThemeStateType, action: Action) => any> =
-  {
-    [ActionTypes.TOGGLE_THEME]: (state, action) => {
-      return { ...state, theme: action.payload };
-    },
-  };
-
-function reducer(state: ThemeStateType, action: Action) {
-  return ACTIONS[action.type](state, action);
+enum Theme {
+  Light = "light",
+  Dark = "dark",
 }
 
-const ThemeProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
-  const [state, dispath] = useReducer(reducer, initialState);
-  const toggleTheme = (theme: string) => {
-    dispath({ type: ActionTypes.TOGGLE_THEME, payload: theme });
-    setTheme(theme);
-    setStoredTheme(theme);
-  };
-  return (
-    <ThemeContext.Provider value={state}>
-      <ThemeDispatch.Provider value={{ toggleTheme }}>
-        {children}
-      </ThemeDispatch.Provider>
-    </ThemeContext.Provider>
-  );
-};
+interface ThemeContextValue {
+  theme: Theme;
+  toggleTheme: () => void;
+}
 
-const useTheme = () => {
-  const { theme } = useContext(ThemeContext);
-  const { toggleTheme } = useContext(ThemeDispatch);
-  return { theme, toggleTheme };
-};
+const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
+
+interface ThemeProviderProps {
+  children: React.ReactNode;
+}
+
+function ThemeProvider({ children }: ThemeProviderProps) {
+  const [theme, setTheme] = useStorage<Theme>("theme", {
+    defaultValue: Theme.Light,
+  });
+
+  const toggleTheme = () => {
+    setTheme(theme === Theme.Light ? Theme.Dark : Theme.Light);
+  };
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-bs-theme", theme);
+  }, [theme]);
+
+  const value: ThemeContextValue = {
+    theme,
+    toggleTheme,
+  };
+
+  return (
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
+}
+
+function useTheme(): ThemeContextValue {
+  const context = useContext(ThemeContext);
+
+  if (!context) {
+    throw new Error("useTheme must be used within a ThemeProvider");
+  }
+
+  return context;
+}
 
 export { ThemeProvider, useTheme };

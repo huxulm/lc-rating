@@ -74,7 +74,7 @@ const GithubBadge = (props) => {
           );
         });
     } catch (error) {
-      console.log("Error fetching data from GitHub API: " + error.message);
+      console.error("Error fetching data from GitHub API: " + error.message);
     }
   }, [props.url]);
 
@@ -177,7 +177,7 @@ const GithubBasicBadge = (props) => {
           );
         });
     } catch (error) {
-      console.log("Error fetching data from GitHub API: " + error.message);
+      console.error("Error fetching data from GitHub API: " + error.message);
     }
   }, [props.url]);
 

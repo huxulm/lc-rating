@@ -11,7 +11,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 // import GithubProfile from "@components/gh";
 import SyncProgressModal from "@components/SyncProgressModal";
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function () {
   const { theme, toggleTheme } = useTheme();
@@ -27,9 +27,6 @@ export default function () {
     }
   };
 
-  useEffect(() => {
-    toggleTheme(theme);
-  }, []);
   return (
     <Navbar expand="lg" className="position-sticky top-0 p-0">
       <Container className="navbar fw-bold ps-2 pe-2">
@@ -40,7 +37,7 @@ export default function () {
           <span
             className="btn d-flex rounded-circle p-1"
             onClick={() => {
-              toggleTheme(theme == "dark" ? "light" : "dark");
+              toggleTheme();
             }}
           >
             <ThemeSwitchButton height={24} width={24} theme={theme} />
@@ -148,7 +145,7 @@ export default function () {
           <span
             className="btn d-flex rounded-circle p-1 d-none d-lg-block d-xl-block d-sm-none"
             onClick={() => {
-              toggleTheme(theme == "dark" ? "light" : "dark");
+              toggleTheme();
             }}
           >
             <ThemeSwitchButton height={24} width={24} theme={theme} />
