@@ -10,31 +10,31 @@ function openUrl(url: string) {
 
 interface ContestCellProps {
   title: string;
-  slug: string;
+  titleSlug: string;
 }
 
-function ContestCell({ title, slug }: ContestCellProps) {
+function ContestCell({ title, titleSlug }: ContestCellProps) {
   const [mark, setMark] = useStorage<string>("__mark", {
     defaultValue: "",
   });
 
-  let link = `${host}/contest/${slug}`;
+  let link = `${host}/contest/${titleSlug}`;
   const onClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     openUrl(link);
   };
-  const [ck, setCk] = React.useState<boolean>(mark === slug);
+  const [ck, setCk] = React.useState<boolean>(mark === titleSlug);
   return (
     <div className={ck ? "col-contest row-selected" : "col-contest"}>
       <a href={link} onClick={onClick}>
         {title}
       </a>
-      <Form.Group controlId="formBasicCheckbox">
+      <Form.Group controlId={titleSlug}>
         <Form.Check
           type="checkbox"
           onChange={(e) => {
             setCk(e.target.checked);
-            setMark(e.target.checked ? slug : "");
+            setMark(e.target.checked ? titleSlug : "");
           }}
           checked={ck}
         />

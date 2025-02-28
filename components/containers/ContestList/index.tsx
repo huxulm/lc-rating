@@ -37,7 +37,6 @@ import MoveToTopButton from "@components/MoveToTopButton";
 import { Contest, useContests } from "@hooks/useContests";
 import { useSolutions } from "@hooks/useSolutions";
 import useStorage from "@hooks/useStorage";
-import { useSuspenseQuery } from "@tanstack/react-query";
 
 import Container from "react-bootstrap/esm/Container";
 
@@ -138,7 +137,7 @@ function ContestList() {
       cell: (info) => (
         <ContestCell
           title={info.getValue()}
-          slug={info.row.original.TitleSlug}
+          titleSlug={info.row.original.TitleSlug}
         />
       ),
       footer: (info) => info.column.id,
