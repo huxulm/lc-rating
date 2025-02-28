@@ -370,7 +370,7 @@ export default function Zenk() {
     []
   );
 
-  const { solutions } = useSolutions("");
+  const { solutions } = useSolutions();
   const { tags, isPending: tagsLoading } = useQuestionTags(null);
   const queryTags = (id: string): QTag => {
     return tags ? tags[id] : [[], []];

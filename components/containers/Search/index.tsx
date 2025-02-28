@@ -193,7 +193,7 @@ export default function Search() {
     setFilter(e.target.value);
   };
 
-  const { solutions: _solutions, isPending: solLoading } = useSolutions(filter);
+  const { solutions: _solutions, isPending: solLoading } = useSolutions();
   const { tags: qtags, isPending: tgLoading } = useQuestionTags(filter);
   const { tags } = useTags();
 

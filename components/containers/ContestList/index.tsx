@@ -278,7 +278,7 @@ type Solution = any[];
 
 function ContestList() {
   // solutions
-  const { solutions, isPending } = useSolutions("");
+  const { solutions, isPending } = useSolutions();
 
   // contests
   const { contests, isPending: loading } = useContests();

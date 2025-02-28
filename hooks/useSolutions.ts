@@ -11,7 +11,7 @@ export type SolutionInfo = [
 ];
 export type Solutions = Record<string, SolutionInfo>;
 
-export function useSolutions(filter: any) {
+export function useSolutions() {
   // solutions
   const [isPending, startTransition] = useTransition();
   const [solutions, setSolutions] = useState<Solutions>({});
@@ -27,7 +27,7 @@ export function useSolutions(filter: any) {
           setSolutions(result);
         });
       });
-  }, [filter]);
+  }, []);
 
   return { solutions, isPending };
 }
