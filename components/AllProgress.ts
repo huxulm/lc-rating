@@ -4,7 +4,7 @@ const LC_RATING_PROGRESS_KEY = (questionID: string) =>
 
 interface ProgressDataType {
   [questionID: string]: string;
-};
+}
 
 class AllProgress {
   private data: ProgressDataType;

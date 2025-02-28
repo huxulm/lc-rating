@@ -3,7 +3,7 @@ import React from "react";
 interface ThemeSwitchButtonProps<T> extends React.SVGProps<T> {
   theme: "light" | "dark";
 }
-export default function ({
+export default function ThemeSwitchButton({
   width = 16,
   height = 16,
   theme = "light",

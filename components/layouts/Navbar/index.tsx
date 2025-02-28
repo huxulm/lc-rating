@@ -1,6 +1,6 @@
 "use client";
 
-import { GithubBasicBadge as GithubBadge } from "@components/gh";
+import { GithubBasicBadge as GithubBadge } from "@components/GithubBadge";
 import ThemeSwitchButton from "@components/ThemeSwitchButton";
 import { useTheme } from "@hooks/useTheme";
 import Link from "next/dist/client/link";

@@ -3,7 +3,7 @@
 import axios from "axios";
 import React, { CSSProperties, useEffect, useState } from "react";
 
-import "./gh.css";
+import "@scss/_gh.scss";
 
 const ICONS_MAP = {
   aura999:
