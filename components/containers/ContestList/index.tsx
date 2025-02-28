@@ -1,18 +1,17 @@
-import RatingCircle, { COLORS } from "@components/RatingCircle";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo } from "react";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Pagination from "react-bootstrap/Pagination";
-import Popover from "react-bootstrap/Popover";
 import Spinner from "react-bootstrap/Spinner";
 import Table from "react-bootstrap/Table";
 
+import ContestCell from "./ContestCell";
+import ProblemCell from "./ProblemCell";
+
 import {
   Column,
-  ColumnDef,
   ColumnFiltersState,
   ColumnOrderState,
   ColumnResizeMode,
@@ -35,21 +34,14 @@ import { rankItem } from "@tanstack/match-sorter-utils";
 
 import FixedSidebar from "@components/FixedSidebar";
 import MoveToTopButton from "@components/MoveToTopButton";
-import { useContests } from "@hooks/useContests";
+import { Contest, useContests } from "@hooks/useContests";
 import { useSolutions } from "@hooks/useSolutions";
 import useStorage from "@hooks/useStorage";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { Contest } from "@utils/makeData";
-import clsx from "clsx";
+
 import Container from "react-bootstrap/esm/Container";
 
-const host = `https://leetcode.cn`;
-
 const columnHelper = createColumnHelper<Contest>();
-
-function openUrl(url: string) {
-  window.open(url, "_blank");
-}
 
 const ratingFilter: FilterFn<Contest> = (row, columnId, value, addMeta) => {
   // Rank the item
@@ -77,161 +69,13 @@ const fuzzyFilter: FilterFn<Contest> = (row, columnId, value, addMeta) => {
   return itemRank.passed;
 };
 
-function ContextCell({ getValue, row }) {
-  const [mark, setMark] = useStorage<string>("__mark", {
-    defaultValue: "",
-  });
-
-  let link = `${host}/contest/${row.original.TitleSlug}`;
-  const onClick = (e: React.MouseEvent<HTMLElement>) => {
-    e.preventDefault();
-    openUrl(link);
-  };
-  const [ck, setCk] = React.useState<boolean>(mark === row.original.TitleSlug);
-  return (
-    <div className={ck ? "col-contest row-selected" : "col-contest"}>
-      <a href={link} onClick={onClick}>
-        {getValue()}
-      </a>
-      <Form.Group controlId="formBasicCheckbox">
-        <Form.Check
-          type="checkbox"
-          onChange={(e) => {
-            setCk(e.target.checked);
-            setMark(e.target.checked ? row.original.TitleSlug : "");
-          }}
-          checked={ck}
-        />
-      </Form.Group>
-    </div>
-  );
-}
-
-function ProblemCell({ row, id }) {
-  let val = row.original[id];
-  let link = `${host}/problems/${val[1]}`;
-  const onClick = (e: React.MouseEvent<HTMLElement>) => {
-    e.preventDefault();
-    openUrl(link);
-  };
-  let difficulty: number = val[3];
-  let idx = COLORS.findIndex((v) => difficulty >= v.l && difficulty <= v.r);
-  let placement = `${difficulty}`;
-  let sol = row.original.QuerySolution?.(val[4]);
-  const [display, setDisplay] = useState(true);
-  useEffect(() => {
-    setTimeout(() => setDisplay(false), 5000);
-  });
-  return (
-    <div>
-      <OverlayTrigger
-        trigger={["hover", "focus"]}
-        key={placement}
-        placement={"bottom"}
-        overlay={
-          <Popover id={`popover-positioned-${placement}`}>
-            {/* <Popover.Header as="h3">{`Popover ${placement}`}</Popover.Header> */}
-            <Popover.Body
-              className={clsx(`rating-color-${idx}`, "ff-st")}
-              style={{ fontSize: "1.2rem" }}
-            >
-              <strong>难度: </strong> {difficulty.toFixed(2)}
-            </Popover.Body>
-          </Popover>
-        }
-      >
-        <RatingCircle difficulty={val[3]} />
-      </OverlayTrigger>
-      <a
-        href={link}
-        onClick={onClick}
-        className={clsx(
-          `rating-color-${idx}`,
-          "ff-st"
-        )} /* style={{color: `var(--rating-color-${idx})`}} */
-      >
-        {val[2]}.{val[0]}
-      </a>
-      {sol && (
-        <div className="fr-wrapper">
-          <OverlayTrigger
-            trigger={["hover", "focus"]}
-            key={placement}
-            placement={"bottom"}
-            overlay={
-              <Popover id={`popover-positioned-${placement}`}>
-                <Popover.Body
-                  className={clsx(`rating-color-${idx}`, "ff-st")}
-                  style={{ fontSize: "1rem" }}
-                >
-                  {sol[0]}
-                </Popover.Body>
-              </Popover>
-            }
-          >
-            <a
-              className="fr ans"
-              href={host + "/problems/" + sol[5] + "/solution/" + sol[1]}
-            >
-              🎈
-            </a>
-          </OverlayTrigger>
-        </div>
-      )}
-      {!sol && display && (
-        <div className="fr-wrapper zen-spinner-td">
-          <Spinner animation="border" size="sm" role="status" />
-        </div>
-      )}
-    </div>
-  );
-}
-
-const problemColDef = (id: string) => {
-  return columnHelper.accessor((row) => row[id][3], {
-    header: id,
-    enableColumnFilter: true,
-    size: 365,
-    cell: (info) => <ProblemCell row={info.row} id={id} />,
-    footer: (info) => info.column.id,
-  });
-};
-
-const columns: ColumnDef<Contest>[] = [
-  columnHelper.accessor("Contest", {
-    sortingFn: (a, b, id) => {
-      return a.original.StartTime - b.original.StartTime;
-    },
-    header: "Contest",
-    enableResizing: false,
-    enableSorting: true,
-    size: 150,
-    enableColumnFilter: false,
-    cell: (info) => <ContextCell getValue={info.getValue} row={info.row} />,
-    footer: (info) => info.column.id,
-  }),
-  problemColDef("A"),
-  problemColDef("B"),
-  problemColDef("C"),
-  problemColDef("D"),
-];
-
 function ContestList() {
-  // solutions
   const { solutions, isPending } = useSolutions();
 
-  // contests
   const { contests, isPending: loading } = useContests();
 
   const querySolution = (id: string) => {
     return solutions[id];
-  };
-
-  const injectSolutionQuery = (data: Contest[]) => {
-    data.forEach((v) => {
-      v.QuerySolution = querySolution;
-    });
-    return data;
   };
 
   const [size, setSize] = useStorage<string>("__size", {
@@ -243,25 +87,8 @@ function ContestList() {
       pageIndex: 0,
       pageSize: parseInt(size),
     });
-  const pagination = React.useMemo(
-    () => ({
-      pageIndex,
-      pageSize,
-    }),
-    [pageIndex, pageSize]
-  );
 
-  const dataQuery = useSuspenseQuery({
-    queryKey: ["data"],
-    queryFn: () => {
-      return {
-        rows: contests.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize),
-        pageCount: Math.ceil(contests.length / pageSize),
-      };
-    },
-  });
-
-  const [rows, pageCount] = useMemo(() => {
+  const [contestsInPage, pageCount] = useMemo(() => {
     return [
       contests.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize),
       Math.ceil(contests.length / pageSize),
@@ -283,8 +110,51 @@ function ContestList() {
   const [columnVisibility, setColumnVisibility] = React.useState({});
   const [columnOrder, setColumnOrder] = React.useState<ColumnOrderState>([]);
   const [sorting, setSorting] = React.useState<SortingState>([]);
+
+  const problemColDef = (id: "A" | "B" | "C" | "D") => {
+    return columnHelper.accessor((row) => row[id].rating, {
+      header: id,
+      enableColumnFilter: true,
+      size: 365,
+      cell: (info) => {
+        const question = info.row.original[id];
+        return (
+          <ProblemCell
+            question={question}
+            solution={solutions[question._hash]}
+          />
+        );
+      },
+      footer: (info) => info.column.id,
+    });
+  };
+
+  const columns = [
+    columnHelper.accessor("Contest", {
+      sortingFn: (a, b, id) => {
+        return a.original.StartTime - b.original.StartTime;
+      },
+      header: "Contest",
+      enableResizing: false,
+      enableSorting: true,
+      size: 150,
+      enableColumnFilter: false,
+      cell: (info) => (
+        <ContestCell
+          title={info.getValue()}
+          slug={info.row.original.TitleSlug}
+        />
+      ),
+      footer: (info) => info.column.id,
+    }),
+    problemColDef("A"),
+    problemColDef("B"),
+    problemColDef("C"),
+    problemColDef("D"),
+  ];
+
   const table = useReactTable<Contest>({
-    data: injectSolutionQuery(rows),
+    data: contestsInPage,
     columns,
     pageCount: pageCount,
     enableColumnResizing: true,
@@ -295,7 +165,7 @@ function ContestList() {
       sorting,
       columnFilters,
       globalFilter,
-      pagination,
+      pagination: { pageIndex, pageSize },
     },
     filterFns: {
       rating: ratingFilter,
