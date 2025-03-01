@@ -159,7 +159,6 @@ function buildProgressFilterFn(selectedProgress: string) {
 }
 
 interface FilterSettingsProps {
-  show: boolean;
   handleClose: () => void;
   onSettingsSaved: React.Dispatch<React.SetStateAction<SettingsType>>;
   tags: Tags;
@@ -169,29 +168,50 @@ interface FilterSettingsProps {
 
 const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
   tags,
-  show,
   handleClose,
   onSettingsSaved,
   settings,
   lang,
 }: FilterSettingsProps) => {
-  if (!show) return <></>;
+  const [curSetting, setCurSetting] = useState<SettingsType>(settings);
 
-  const [selectedTags, setSelectedTags] = useState<Record<string, boolean>>(
-    settings ? settings.selectedTags : {}
-  );
-
-  const [selectedProgress, setSelectedProgress] = useState<Progress | "">(
-    settings?.selectedProgress || ""
-  );
-
-  const onSelectTags = (key: string) => {
-    if (selectedTags[key]) {
-      const { [key]: _, ...rest } = selectedTags;
-      setSelectedTags(rest);
+  const onTagsChange = (key: string) => {
+    if (curSetting.selectedTags[key]) {
+      const { [key]: _, ...rest } = curSetting.selectedTags;
+      setCurSetting({ ...curSetting, selectedTags: rest });
     } else {
-      setSelectedTags({ ...selectedTags, [key]: true });
+      setCurSetting({
+        ...curSetting,
+        selectedTags: { ...curSetting.selectedTags, [key]: true },
+      });
     }
+  };
+
+  const onTagsReset = () => {
+    setCurSetting({ ...curSetting, selectedTags: {} });
+  };
+
+  const onVisibilityChange = (name: string) => {
+    setCurSetting({
+      ...curSetting,
+      columnVisibility: {
+        ...curSetting.columnVisibility,
+        [name]: !curSetting.columnVisibility[name],
+      },
+    });
+  };
+
+  const onProgressChange = (progress: Progress) => {
+    setCurSetting({ ...curSetting, selectedProgress: progress });
+  };
+
+  const onCancel = () => {
+    handleClose();
+  };
+
+  const onConfirm = () => {
+    onSettingsSaved(curSetting);
+    handleClose();
   };
 
   const RenderTags = (tags: Tags) => {
@@ -204,13 +224,15 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
         {tags.map((tag) => {
           return (
             <span
-              onClick={() => onSelectTags(tag[1])}
+              onClick={() => onTagsChange(tag[1])}
               className="p-1"
               key={tag[1]}
             >
               <Button
                 size="sm"
-                variant={!!selectedTags[tag[1]] ? "primary" : "secondary"}
+                variant={
+                  curSetting.selectedTags[tag[1]] ? "primary" : "secondary"
+                }
               >
                 {lang === "en" ? tag[1] : tag[2]}
               </Button>
@@ -221,24 +243,10 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
     );
   };
 
-  const reset = () => {
-    setSelectedTags({});
-    onSettingsSaved({ ...settings, selectedTags: {} });
-  };
-
-  const toggleVisibility = (name: string) => {
-    onSettingsSaved({
-      ...settings,
-      columnVisibility: {
-        ...settings.columnVisibility,
-        [name]: !settings.columnVisibility[name],
-      },
-    });
-  };
   return (
     <>
       <Modal
-        show={show}
+        show={true}
         dialogClassName="zen-filter-dialog"
         onHide={handleClose}
       >
@@ -250,22 +258,22 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
             列显示
             <Form className="d-flex mt-2 gap-3">
               <Form.Check
-                checked={Boolean(settings.columnVisibility.tags)}
-                onChange={() => toggleVisibility("tags")}
+                checked={Boolean(curSetting.columnVisibility.tags)}
+                onChange={() => onVisibilityChange("tags")}
                 type="switch"
                 label="算法标签"
                 id="toggle-tags"
               />
               <Form.Check
-                checked={Boolean(settings.columnVisibility.en)}
-                onChange={() => toggleVisibility("en")}
+                checked={Boolean(curSetting.columnVisibility.en)}
+                onChange={() => onVisibilityChange("en")}
                 type="switch"
                 label="英文链接"
                 id="toggle-en"
               />
               <Form.Check
-                checked={Boolean(settings.columnVisibility.ratings)}
-                onChange={() => toggleVisibility("ratings")}
+                checked={Boolean(curSetting.columnVisibility.ratings)}
+                onChange={() => onVisibilityChange("ratings")}
                 type="switch"
                 label="难度分"
                 id="toggle-ratings"
@@ -274,16 +282,20 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
           </h5>
           <hr />
           <h5>
-            标签 <Button onClick={reset}>重置</Button>
+            标签 <Button onClick={onTagsReset}>重置</Button>
           </h5>
           {RenderTags(tags)}
           <hr />
           <h5 className="pt-1 pb-1">进度选择</h5>
           <Form.Select
-            className={progressOptionClassNames[selectedProgress]}
-            value={selectedProgress}
+            className={
+              curSetting.selectedProgress
+                ? progressOptionClassNames[curSetting.selectedProgress]
+                : ""
+            }
+            value={curSetting.selectedProgress}
             onChange={(e) => {
-              setSelectedProgress(e.target.value as Progress);
+              onProgressChange(e.target.value as Progress);
             }}
           >
             <option value=""></option>
@@ -302,20 +314,10 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
           </Form.Select>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" onClick={onCancel}>
             关闭
           </Button>
-          <Button
-            variant="primary"
-            onClick={() => {
-              onSettingsSaved({
-                ...settings,
-                selectedTags,
-                selectedProgress,
-              });
-              handleClose();
-            }}
-          >
+          <Button variant="primary" onClick={onConfirm}>
             应用设置
           </Button>
         </Modal.Footer>
@@ -420,14 +422,15 @@ export default function Zenk() {
         </Button>
       </nav>
 
-      <FilterSettings
-        lang={"zh"}
-        tags={qtags}
-        show={showFilter}
-        handleClose={() => setShowFilter(false)}
-        onSettingsSaved={setSettings}
-        settings={settings}
-      />
+      {showFilter && (
+        <FilterSettings
+          lang={"zh"}
+          tags={qtags}
+          handleClose={() => setShowFilter(false)}
+          onSettingsSaved={setSettings}
+          settings={settings}
+        />
+      )}
       <div style={{ width: "100%" }}>
         <ZenTableComp
           querySolution={(id: string) => {
