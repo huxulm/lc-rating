@@ -24,9 +24,9 @@ function ProblemCell({ question: que, solution: soln }: ProblemCellProps) {
     e.preventDefault();
     openUrl(link);
   };
-  let difficulty = que.rating;
-  let idx = COLORS.findIndex((v) => difficulty >= v.l && difficulty <= v.r);
-  let placement = `${difficulty}`;
+  let rating = que.rating;
+  let idx = COLORS.findIndex((v) => rating >= v.l && rating <= v.r);
+  let placement = `${rating}`;
 
   const [display, setDisplay] = useState(true);
 
@@ -47,12 +47,12 @@ function ProblemCell({ question: que, solution: soln }: ProblemCellProps) {
               className={clsx(`rating-color-${idx}`, "ff-st")}
               style={{ fontSize: "1.2rem" }}
             >
-              <strong>难度: </strong> {difficulty.toFixed(2)}
+              <strong>难度: </strong> {rating.toFixed(2)}
             </Popover.Body>
           </Popover>
         }
       >
-        <RatingCircle difficulty={difficulty} />
+        <RatingCircle rating={rating} />
       </OverlayTrigger>
       <a
         href={link}

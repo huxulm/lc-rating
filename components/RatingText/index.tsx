@@ -13,12 +13,12 @@ export const COLORS = [
 ];
 const RatingText = React.forwardRef<any, any>(
   ({ as, bsPrefix, variant, size, active, className, ...props }, ref) => {
-    const { difficulty = 0 } = props;
-    let idx = COLORS.findIndex((v) => difficulty >= v.l && difficulty < v.r);
+    const { rating = 0 } = props;
+    let idx = COLORS.findIndex((v) => rating >= v.l && rating < v.r);
     let c = COLORS[idx];
-    let rating = c && ((difficulty - c.l) * 100) / (c.r - c.l + 1);
-    if (difficulty >= 3000) {
-      rating = 100;
+    let percent = c && ((rating - c.l) * 100) / (c.r - c.l + 1);
+    if (rating >= 3000) {
+      percent = 100;
     }
     return (
       <div
@@ -27,7 +27,7 @@ const RatingText = React.forwardRef<any, any>(
         {...props}
         style={{
           color: `black`,
-          background: `linear-gradient(to right, var(--rating-color-${idx}) ${rating}%, rgba(0, 0, 0, 0) ${rating}%) border-box border-box`,
+          background: `linear-gradient(to right, var(--rating-color-${idx}) ${percent}%, rgba(0, 0, 0, 0) ${percent}%) border-box border-box`,
         }}
       ></div>
     );

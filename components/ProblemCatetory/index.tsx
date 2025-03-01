@@ -228,7 +228,7 @@ function ProblemCategoryList({
                 </div>
                 {item.score && showRating ? (
                   <div className="ms-2 text-nowrap d-flex justify-content-center align-items-center pb-rating-bg">
-                    <RatingCircle difficulty={Number(item.score)} />
+                    <RatingCircle rating={Number(item.score)} />
                     <ColorRating
                       className="rating-text"
                       rating={Number(item.score)}
