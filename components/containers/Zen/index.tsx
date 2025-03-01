@@ -75,7 +75,7 @@ const createRatingFilter = (min: number, max?: number) => {
 
 const ALL_FILTER_LABEL = "< ALL >";
 
-const filters: Filter[] = [
+const ratingFilters: Filter[] = [
   { label: "(<=1200)", fn: createRatingFilter(1, 1200) }, // starting from 1 to exclude unrated questions
   { label: "(1200 - 1400)", fn: createRatingFilter(1200, 1400) },
   { label: "(1400 - 1600)", fn: createRatingFilter(1400, 1600) },
@@ -154,9 +154,9 @@ function buildProgressFilterFn(selectedProgress: string) {
     return () => true;
   }
   return (v: ConstQuestion) => {
-    const progress = localStorage.getItem(
-      LC_RATING_PROGRESS_KEY(v.question_id)
-    );
+    const progress =
+      localStorage.getItem(LC_RATING_PROGRESS_KEY(v.question_id)) ||
+      Progress.TODO;
     return progress === selectedProgress;
   };
 }
@@ -164,11 +164,10 @@ function buildProgressFilterFn(selectedProgress: string) {
 interface FilterSettingsProps {
   show: boolean;
   handleClose: () => void;
-  onSettingsSaved: (settings: SettingsType) => void;
+  onSettingsSaved: React.Dispatch<React.SetStateAction<SettingsType>>;
   tags: Tags;
   lang: "zh" | "en";
   settings: SettingsType;
-  queryTags: unknown;
 }
 
 const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
@@ -178,7 +177,6 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
   onSettingsSaved,
   settings,
   lang,
-  queryTags,
 }: FilterSettingsProps) => {
   if (!show) return <></>;
 
@@ -186,8 +184,8 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
     settings ? settings.selectedTags : {}
   );
 
-  const [selectedProgress, setSelectedProgress] = useState<Progress>(
-    settings?.selectedProgress || Progress.TODO
+  const [selectedProgress, setSelectedProgress] = useState<Progress | "">(
+    settings?.selectedProgress || ""
   );
 
   const onSelectTags = (key: string) => {
@@ -282,21 +280,20 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
           <Form.Select
             className={progressOptionClassNames[selectedProgress]}
             value={selectedProgress}
-            onChange={(e) => setSelectedProgress(e.target.value as Progress)}
+            onChange={(e) => {
+              setSelectedProgress(e.target.value as Progress);
+            }}
           >
             <option value=""></option>
 
             {[
+              Progress.TODO,
               Progress.WORKING,
               Progress.TOO_HARD,
               Progress.REVIEW_NEEDED,
               Progress.AC,
             ].map((p) => (
-              <option
-                key={p}
-                value={p}
-                className={progressOptionClassNames[p] || ""}
-              >
+              <option key={p} value={p} className={progressOptionClassNames[p]}>
                 {progressTranslations[p]}
               </option>
             ))}
@@ -352,9 +349,9 @@ export default function Zenk() {
     }
   );
 
-  const currentFilter = useMemo(() => {
+  const curRatingFilter = useMemo(() => {
     return (
-      filters.find((filter) => filter.label === currentFilterKey)?.fn ||
+      ratingFilters.find((filter) => filter.label === currentFilterKey)?.fn ||
       (() => true)
     );
   }, [currentFilterKey]);
@@ -386,14 +383,14 @@ export default function Zenk() {
     defaultValue: defaultSettings,
   });
 
-  const filteredData = useMemo(
-    () =>
-      data
-        .filter(currentFilter)
-        .filter(buildTagFilterFn(settings.selectedTags, queryTags))
-        .filter(buildProgressFilterFn(settings.selectedProgress)),
-    [data, currentFilter, settings]
-  );
+  const filteredData = useMemo(() => {
+    const tagsFilter = buildTagFilterFn(settings.selectedTags, queryTags);
+    const progressFilter = buildProgressFilterFn(settings.selectedProgress);
+    return data
+      .filter(curRatingFilter)
+      .filter(tagsFilter)
+      .filter(progressFilter);
+  }, [data, curRatingFilter, settings]);
 
   if (loading) {
     return <Loading />;
@@ -403,7 +400,7 @@ export default function Zenk() {
     <Container fluid="lg" className="zen-container">
       <nav className="nav navbar z-3 zen-nav justify-content-start postion-sticky">
         <ButtonGroup>
-          {filters.map((filter: Filter) => (
+          {ratingFilters.map((filter: Filter) => (
             <FilterButton
               key={filter.label}
               label={filter.label}
@@ -426,11 +423,8 @@ export default function Zenk() {
         tags={qtags}
         show={showFilter}
         handleClose={() => setShowFilter(false)}
-        onSettingsSaved={(settings: SettingsType) => {
-          setSettings(settings);
-        }}
+        onSettingsSaved={setSettings}
         settings={settings}
-        queryTags={queryTags}
       />
       <div style={{ width: "100%" }}>
         <ZenTableComp
@@ -550,7 +544,7 @@ const ZenTableComp = React.memo(
           enableColumnFilter: false,
           cell: (info) => (
             <>
-              <RatingCircle difficulty={Number(info.getValue())} />
+              <RatingCircle rating={Number(info.getValue())} />
               <ColorRating rating={Number(info.getValue())}>
                 {Number(info.getValue()).toFixed(0)}
               </ColorRating>
