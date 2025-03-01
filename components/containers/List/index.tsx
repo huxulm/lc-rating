@@ -7,8 +7,9 @@ import {
   TableOfContent,
   TOC,
 } from "@components/ProblemCatetory/TableOfContent";
+import useStorage from "@hooks/useStorage";
 import { hashCode } from "@utils/hash";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/esm/Form";
 import MoveToTodoButton from "./MoveToTodoButton";
@@ -51,32 +52,88 @@ export default function ({ data }: { data: ProblemCategory }) {
 
   useEffect(() => scrollToComponent(), []);
 
-  const [showEn, setShowEn] = useState<boolean>(true);
-  const [showRating, setShowRating] = useState<boolean>(true);
-  const [showPremium, setPremium] = useState<boolean>(true);
+  const [setting, setSetting] = useStorage("lc-rating-list-settings", {
+    defaultValue: {
+      showEn: true,
+      showRating: true,
+      showPremium: true,
+    },
+  });
+
+  const buttons = [
+    {
+      id: "move-to-top",
+      content: <MoveToTopButton />,
+    },
+    {
+      id: "move-to-todo",
+      content: <MoveToTodoButton />,
+      tooltip: "下一题",
+    },
+    {
+      id: "move-to-random-todo",
+      content: <MoveToTodoButton random />,
+      tooltip: "随机下一题",
+    },
+  ];
+
+  const switchers = [
+    {
+      id: "toggle-tags",
+      content: (
+        <Form.Check
+          checked={setting.showEn}
+          onChange={() => {
+            setSetting({ ...setting, showEn: !setting.showEn });
+          }}
+          type="switch"
+          label="英文链接"
+        />
+      ),
+    },
+    {
+      id: "toggle-ratings",
+      content: (
+        <Form.Check
+          checked={setting.showRating}
+          onChange={() => {
+            setSetting({ ...setting, showRating: !setting.showRating });
+          }}
+          type="switch"
+          label="难度分"
+        />
+      ),
+    },
+    {
+      id: "toggle-premiums",
+      content: (
+        <Form.Check
+          checked={setting.showPremium}
+          onChange={() => {
+            setSetting({ ...setting, showPremium: !setting.showPremium });
+          }}
+          type="switch"
+          label="会员题"
+        />
+      ),
+    },
+  ];
 
   return (
     <Container fluid className="p-2 problem-list order-1">
       <FixedSidebar
-        items={[
-          {
-            id: "move-to-top",
-            content: <MoveToTopButton />,
-          },
-          {
-            id: "move-to-todo",
-            content: <MoveToTodoButton />,
-            tooltip: "下一题",
-          },
-          {
-            id: "move-to-random-todo",
-            content: <MoveToTodoButton random />,
-            tooltip: "随机下一题",
-          },
-        ]}
-        position="bottom"
-        initialOffset={{ x: "2rem", y: "2rem" }}
         gap={3}
+        initialOffset={{ x: "2rem", y: "2rem" }}
+        items={buttons}
+        position="bottom"
+      />
+      <FixedSidebar
+        className="fw-bold"
+        direction="horizontal"
+        gap={3}
+        initialOffset={{ x: "1rem", y: "4rem" }}
+        items={switchers}
+        position="top"
       />
       <div className="toc" id="toc">
         <TableOfContent toc={mapCategory2TOC(data, 0)} />
@@ -86,60 +143,12 @@ export default function ({ data }: { data: ProblemCategory }) {
         data-bs-spy="scroll"
         data-bs-target="#toc"
       >
-        <FixedSidebar
-          position="top"
-          direction="horizontal"
-          initialOffset={{ x: "1rem", y: "4rem" }}
-          gap={3}
-          className="fw-bold"
-          items={[
-            {
-              id: "toggle-tags",
-              content: (
-                <Form.Check
-                  checked={showEn}
-                  onChange={() => {
-                    setShowEn(!showEn);
-                  }}
-                  type="switch"
-                  label="英文链接"
-                />
-              ),
-            },
-            {
-              id: "toggle-ratings",
-              content: (
-                <Form.Check
-                  checked={showRating}
-                  onChange={() => {
-                    setShowRating(!showRating);
-                  }}
-                  type="switch"
-                  label="难度分"
-                />
-              ),
-            },
-            {
-              id: "toggle-premiums",
-              content: (
-                <Form.Check
-                  checked={showPremium}
-                  onChange={() => {
-                    setPremium(!showPremium);
-                  }}
-                  type="switch"
-                  label="会员题"
-                />
-              ),
-            },
-          ]}
-        />
         <ProblemCategory
           title={`<p class="fs-6 fw-bold fst-italic">来源:<a target="_blank" class="ms-2 fs-6 link" href="${data.original_src}">${data.original_src}</a> <span class="ms-3 fw-semibold fst-italic">最近更新: ${data["last_update"]}</span></p>`}
           data={[data]}
-          showEn={showEn}
-          showRating={showRating}
-          showPremium={showPremium}
+          showEn={setting.showEn}
+          showRating={setting.showRating}
+          showPremium={setting.showPremium}
           summary={data.summary}
         />
       </div>
