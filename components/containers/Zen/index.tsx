@@ -134,10 +134,7 @@ function buildTagFilterFn(
     ? () => true
     : (v: ConstQuestion) => {
         const tags = q(v._hash.toString());
-        if (!tags || !tags[0]) {
-          return false;
-        }
-        if (tags[0].length == 0) {
+        if (!tags || !tags[0] || tags[0].length == 0) {
           return false;
         }
         for (let i = 0; i < tags[0].length; i++) {
@@ -189,7 +186,12 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
   );
 
   const onSelectTags = (key: string) => {
-    setSelectedTags({ ...selectedTags, [key]: !!!selectedTags[key] });
+    if (selectedTags[key]) {
+      const { [key]: _, ...rest } = selectedTags;
+      setSelectedTags(rest);
+    } else {
+      setSelectedTags({ ...selectedTags, [key]: true });
+    }
   };
 
   const RenderTags = (tags: Tags) => {
