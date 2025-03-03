@@ -8,7 +8,13 @@ import "@scss/algorithm/styles.scss";
 
 import type { Metadata } from "next";
 
-const routes = [
+export interface Route {
+  path: string;
+  display: string;
+  mdx: React.ReactNode;
+}
+
+const routes: Route[] = [
   {
     path: "/algorithm-templates#String",
     display: "字符串 (String)",

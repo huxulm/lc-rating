@@ -1,11 +1,23 @@
 import { useEffect, useState, useTransition } from "react";
 
-export type Solutions = Record<
+type SolutionsResponse = Record<
   string,
   [string, string, string, `${number}`, string, string, number]
 >;
 
-export function useSolutions(filter: any) {
+export interface SolutionType {
+  questTitle: string;
+  questSlug: string;
+  questId: string;
+  solnTitle: string;
+  solnSlug: string;
+  solnTime: string;
+  _hash: number;
+}
+
+export type Solutions = Record<string, SolutionType>;
+
+export function useSolutions() {
   // solutions
   const [isPending, startTransition] = useTransition();
   const [solutions, setSolutions] = useState<Solutions>({});
@@ -16,12 +28,34 @@ export function useSolutions(filter: any) {
         (new Date().getTime() / 100000).toFixed(0)
     )
       .then((res) => res.json())
-      .then((result: Solutions) => {
+      .then((result: SolutionsResponse) => {
         startTransition(() => {
-          setSolutions(result);
+          let solutions: Solutions = {};
+          for (let key in result) {
+            const [
+              solnTitle,
+              solnSlug,
+              solnTime,
+              questId,
+              questTitle,
+              questSlug,
+              _hash,
+            ] = result[key];
+
+            solutions[key] = {
+              questTitle,
+              questSlug,
+              questId,
+              solnTitle,
+              solnSlug,
+              solnTime,
+              _hash,
+            };
+          }
+          setSolutions(solutions);
         });
       });
-  }, [filter]);
+  }, []);
 
   return { solutions, isPending };
 }

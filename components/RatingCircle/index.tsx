@@ -35,12 +35,12 @@ export const ColorRating = React.memo(
 
 const RatingCircle = React.forwardRef<any, any>(
   ({ as, bsPrefix, variant, size, active, className, ...props }, ref) => {
-    const { difficulty = 0 } = props;
-    let idx = COLORS.findIndex((v) => difficulty >= v.l && difficulty < v.r);
+    const { rating = 0 } = props;
+    let idx = COLORS.findIndex((v) => rating >= v.l && rating < v.r);
     let c = COLORS[idx];
-    let rating = ((difficulty - c.l) * 100) / (c.r - c.l + 1);
-    if (difficulty >= 3000) {
-      rating = 100;
+    let percent = ((rating - c.l) * 100) / (c.r - c.l + 1);
+    if (rating >= 3000) {
+      percent = 100;
     }
     return (
       <div className="rating-circle">
@@ -48,13 +48,13 @@ const RatingCircle = React.forwardRef<any, any>(
           ref={ref}
           {...props}
           className="inner-circle"
-          // data={difficulty >= 3000 ? "top" : ""}
+          // data={ rating >= 3000 ? "top" : ""}
           style={{
             borderColor: `var(--rating-color-${idx})`,
-            background: `linear-gradient(to top, var(--rating-color-${idx}) ${rating}%, rgba(0, 0, 0, 0) ${rating}%) border-box border-box`,
+            background: `linear-gradient(to top, var(--rating-color-${idx}) ${percent}%, rgba(0, 0, 0, 0) ${percent}%) border-box border-box`,
           }}
         ></span>
-        {difficulty >= 3000 && <span className="inner-circle__plus"></span>}
+        {rating >= 3000 && <span className="inner-circle__plus"></span>}
       </div>
     );
   }

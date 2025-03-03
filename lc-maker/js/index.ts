@@ -1,22 +1,22 @@
 const rootSelector = 'div[class="e2v1tt3 css-1ayia3m-MarkdownContent"]';
 
-type CategoryItem = {
+interface CategoryItem {
   title: string;
   src?: string;
   children?: CategoryItem[];
-};
+}
 class ProblemListParser {
   list: Record<string, CategoryItem[]> = {};
   g: Record<string, string> = {};
-  root: HTMLDivElement | null;
+  root: HTMLDivElement | null = null;
 
   parser(selector: string) {
     this.root = document.querySelector<HTMLDivElement>(selector);
     if (!this.root) {
       return;
     }
-    let lastH1: string;
-    let lastH2: string;
+    let lastH1: string = "";
+    let lastH2: string = "";
     let el = this.root.firstElementChild;
     let total = 0;
     while (el) {
@@ -56,8 +56,6 @@ class ProblemListParser {
       }
       el = el.nextElementSibling;
     }
-    console.log(JSON.stringify(this.list, null, 2));
-    console.log(`total: ${total}`);
   }
 
   parseList(col: Element) {

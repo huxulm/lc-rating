@@ -1,14 +1,14 @@
-import RatingCircle, { COLORS } from "@components/RatingCircle";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo } from "react";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Pagination from "react-bootstrap/Pagination";
-import Popover from "react-bootstrap/Popover";
 import Spinner from "react-bootstrap/Spinner";
 import Table from "react-bootstrap/Table";
+
+import ContestCell from "./ContestCell";
+import ProblemCell from "./ProblemCell";
 
 import {
   Column,
@@ -32,39 +32,17 @@ import {
 
 import { rankItem } from "@tanstack/match-sorter-utils";
 
-import { getMark, getSize, setMark, setSize } from "@utils/store";
-
 import FixedSidebar from "@components/FixedSidebar";
 import MoveToTopButton from "@components/MoveToTopButton";
-import { useContests } from "@hooks/useContests";
+import { Contest, useContests } from "@hooks/useContests";
 import { useSolutions } from "@hooks/useSolutions";
-import { useSuspenseQuery } from "@tanstack/react-query";
-import { Contest } from "@utils/makeData";
-import clsx from "clsx";
-import Container from "react-bootstrap/esm/Container";
+import useStorage from "@hooks/useStorage";
 
-const host = `https://leetcode.cn`;
+import Container from "react-bootstrap/esm/Container";
 
 const columnHelper = createColumnHelper<Contest>();
 
-function openUrl(url: string) {
-  window.open(url, "_blank");
-}
-
-const ratingFilter: FilterFn<any> = (row, columnId, value, addMeta) => {
-  // Rank the item
-  const itemRank = rankItem(row.getValue<any>(columnId), value);
-
-  // Store the itemRank info
-  addMeta({
-    itemRank,
-  });
-
-  // Return if the item should be filtered in/out
-  return itemRank.passed;
-};
-
-const fuzzyFilter: FilterFn<any> = (row, columnId, value, addMeta) => {
+const ratingFilter: FilterFn<Contest> = (row, columnId, value, addMeta) => {
   // Rank the item
   const itemRank = rankItem(row.getValue(columnId), value);
 
@@ -77,248 +55,35 @@ const fuzzyFilter: FilterFn<any> = (row, columnId, value, addMeta) => {
   return itemRank.passed;
 };
 
-const problemColDef = (id: string) => {
-  return columnHelper.accessor((row: any) => row[id][3], {
-    header: id,
-    enableColumnFilter: true,
-    size: 365,
-    cell: (info) => {
-      // @ts-ignore
-      let val: any = info.row.original[id];
-      let link = `${host}/problems/${val[1]}`;
-      const onClick = (e: any) => {
-        e.preventDefault();
-        openUrl(link);
-      };
-      let difficulty: number = val[3];
-      let idx = COLORS.findIndex((v) => difficulty >= v.l && difficulty <= v.r);
-      let placement = `${difficulty}`;
-      let sol = info.row.original.QuerySolution?.(val[4]);
-      const [display, setDisplay] = useState(true);
-      useEffect(() => {
-        setTimeout(() => setDisplay(false), 5000);
-      });
-      return (
-        <div>
-          <OverlayTrigger
-            trigger={["hover", "focus"]}
-            key={placement}
-            placement={"bottom"}
-            overlay={
-              <Popover id={`popover-positioned-${placement}`}>
-                {/* <Popover.Header as="h3">{`Popover ${placement}`}</Popover.Header> */}
-                <Popover.Body
-                  className={clsx(`rating-color-${idx}`, "ff-st")}
-                  style={{ fontSize: "1.2rem" }}
-                >
-                  <strong>难度: </strong> {difficulty.toFixed(2)}
-                </Popover.Body>
-              </Popover>
-            }
-          >
-            <RatingCircle difficulty={val[3]} />
-          </OverlayTrigger>
-          <a
-            href={link}
-            onClick={onClick}
-            className={clsx(
-              `rating-color-${idx}`,
-              "ff-st"
-            )} /* style={{color: `var(--rating-color-${idx})`}} */
-          >
-            {val[2]}.{val[0]}
-          </a>
-          {sol && (
-            <div className="fr-wrapper">
-              <OverlayTrigger
-                trigger={["hover", "focus"]}
-                key={placement}
-                placement={"bottom"}
-                overlay={
-                  <Popover id={`popover-positioned-${placement}`}>
-                    <Popover.Body
-                      className={clsx(`rating-color-${idx}`, "ff-st")}
-                      style={{ fontSize: "1rem" }}
-                    >
-                      {sol[0]}
-                    </Popover.Body>
-                  </Popover>
-                }
-              >
-                <a
-                  className="fr ans"
-                  href={host + "/problems/" + sol[5] + "/solution/" + sol[1]}
-                >
-                  🎈
-                </a>
-              </OverlayTrigger>
-            </div>
-          )}
-          {!sol && display && (
-            <div className="fr-wrapper zen-spinner-td">
-              <Spinner animation="border" size="sm" role="status" />
-            </div>
-          )}
-        </div>
-      );
-    },
-    footer: (info) => info.column.id,
+const fuzzyFilter: FilterFn<Contest> = (row, columnId, value, addMeta) => {
+  // Rank the item
+  const itemRank = rankItem(row.getValue(columnId), value);
+
+  // Store the itemRank info
+  addMeta({
+    itemRank,
   });
+
+  // Return if the item should be filtered in/out
+  return itemRank.passed;
 };
 
-const columns = [
-  columnHelper.accessor("Contest", {
-    sortingFn: (a, b, id) => {
-      return a.original.StartTime - b.original.StartTime;
-    },
-    header: "Contest",
-    enableResizing: false,
-    enableSorting: true,
-    size: 150,
-    // filterFn: ratingFilter,
-    enableColumnFilter: false,
-    cell: (info) => {
-      let link = `${host}/contest/${info.row.original.TitleSlug}`;
-      const onClick = (e: any) => {
-        e.preventDefault();
-        openUrl(link);
-      };
-      let mk = getMark();
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      const [ck, setCk] = React.useState<boolean>(
-        mk === info.row.original.TitleSlug
-      );
-      return (
-        <div className={ck ? "col-contest row-selected" : "col-contest"}>
-          <a href={link} onClick={onClick}>
-            {info.getValue()}
-          </a>
-          <Form.Group controlId="formBasicCheckbox">
-            <Form.Check
-              type="checkbox"
-              onChange={(e) => {
-                setCk(e.target.checked);
-                setMark(e.target.checked ? info.row.original.TitleSlug : "");
-              }}
-              checked={ck}
-            />
-          </Form.Group>
-        </div>
-      );
-    },
-    footer: (info) => info.column.id,
-  }),
-  problemColDef("A"),
-  problemColDef("B"),
-  problemColDef("C"),
-  problemColDef("D"),
-];
-
-// Element or Position to move + Time in ms (milliseconds)
-function scrollTo(element: any, duration: any) {
-  var e = document.documentElement;
-  if (e.scrollTop === 0) {
-    var t = e.scrollTop;
-    ++e.scrollTop;
-    e = t + 1 === e.scrollTop-- ? e : document.body;
-  }
-  scrollToC(e, e.scrollTop, element, duration);
-}
-
-// Element to move, element or px from, element or px to, time in ms to animate
-function scrollToC(element: any, from: any, to: any, duration: any) {
-  if (duration <= 0) return;
-  if (typeof from === "object") from = from.offsetTop;
-  if (typeof to === "object") to = to.offsetTop;
-  // Choose one effect like easeInQuart
-  scrollToX(element, from, to, 0, 1 / duration, 20, easeInCuaic);
-}
-
-function scrollToX(
-  element: any,
-  xFrom: any,
-  xTo: any,
-  t01: any,
-  speed: any,
-  step: any,
-  motion: any
-) {
-  if (t01 < 0 || t01 > 1 || speed <= 0) {
-    element.scrollTop = xTo;
-    return;
-  }
-  element.scrollTop = xFrom - (xFrom - xTo) * motion(t01);
-  t01 += speed * step;
-
-  setTimeout(function () {
-    scrollToX(element, xFrom, xTo, t01, speed, step, motion);
-  }, step);
-}
-
-/* Effects List */
-function linearTween(t: any) {
-  return t;
-}
-
-function easeInQuad(t: any) {
-  return t * t;
-}
-
-function easeInCuaic(t: any) {
-  return t * t * t;
-}
-
-function MoveToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
-// Solution Data Type
-type Solution = any[];
-
 function ContestList() {
-  // solutions
-  const { solutions, isPending } = useSolutions("");
+  const { solutions, isPending } = useSolutions();
 
-  // contests
   const { contests, isPending: loading } = useContests();
 
-  const querySolution = (id: any): any => {
-    return solutions[id];
-  };
+  const [size, setSize] = useStorage<string>("__size", {
+    defaultValue: "100",
+  });
 
-  const injectSolutionQuery = (data: Contest[]) => {
-    data.forEach((v) => {
-      v.QuerySolution = querySolution;
-    });
-    return data;
-  };
-
-  const sz = getSize() || "100";
   const [{ pageIndex, pageSize }, setPagination] =
     React.useState<PaginationState>({
       pageIndex: 0,
-      pageSize: parseInt(sz),
+      pageSize: parseInt(size),
     });
-  const pagination = React.useMemo(
-    () => ({
-      pageIndex,
-      pageSize,
-    }),
-    [pageIndex, pageSize]
-  );
 
-  const dataQuery = useSuspenseQuery({
-    queryKey: ["data"],
-    queryFn: () => {
-      return {
-        rows: contests.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize),
-        pageCount: Math.ceil(contests.length / pageSize),
-      };
-    },
-  });
-
-  const [rows, pageCount] = useMemo(() => {
+  const [contestsInPage, pageCount] = useMemo(() => {
     return [
       contests.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize),
       Math.ceil(contests.length / pageSize),
@@ -328,16 +93,63 @@ function ContestList() {
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   );
-  const [selectedRow, setSelectedRow] = React.useState<string>(getMark());
+
+  const [mark, setMark] = useStorage<string>("__mark", {
+    defaultValue: "",
+  });
+
+  const [selectedRow, setSelectedRow] = React.useState<string>(mark);
   const [columnResizeMode, setColumnResizeMode] =
     React.useState<ColumnResizeMode>("onChange");
   const [globalFilter, setGlobalFilter] = React.useState("");
   const [columnVisibility, setColumnVisibility] = React.useState({});
   const [columnOrder, setColumnOrder] = React.useState<ColumnOrderState>([]);
   const [sorting, setSorting] = React.useState<SortingState>([]);
-  const table = useReactTable({
-    // data: injectSolutionQuery(dataQuery.data?.rows ?? defaultData),
-    data: injectSolutionQuery(rows),
+
+  const problemColDef = (id: "A" | "B" | "C" | "D") => {
+    return columnHelper.accessor((row) => row[id].rating, {
+      header: id,
+      enableColumnFilter: true,
+      size: 365,
+      cell: (info) => {
+        const question = info.row.original[id];
+        return (
+          <ProblemCell
+            question={question}
+            solution={solutions[question._hash]}
+          />
+        );
+      },
+      footer: (info) => info.column.id,
+    });
+  };
+
+  const columns = [
+    columnHelper.accessor("Contest", {
+      sortingFn: (a, b, id) => {
+        return a.original.StartTime - b.original.StartTime;
+      },
+      header: "Contest",
+      enableResizing: false,
+      enableSorting: true,
+      size: 150,
+      enableColumnFilter: false,
+      cell: (info) => (
+        <ContestCell
+          title={info.getValue()}
+          titleSlug={info.row.original.TitleSlug}
+        />
+      ),
+      footer: (info) => info.column.id,
+    }),
+    problemColDef("A"),
+    problemColDef("B"),
+    problemColDef("C"),
+    problemColDef("D"),
+  ];
+
+  const table = useReactTable<Contest>({
+    data: contestsInPage,
     columns,
     pageCount: pageCount,
     enableColumnResizing: true,
@@ -348,7 +160,7 @@ function ContestList() {
       sorting,
       columnFilters,
       globalFilter,
-      pagination,
+      pagination: { pageIndex, pageSize },
     },
     filterFns: {
       rating: ratingFilter,
@@ -589,12 +401,12 @@ function Filter({
   column,
   table,
 }: {
-  column: Column<any, unknown>;
-  table: TTable<any>;
+  column: Column<Contest>;
+  table: TTable<Contest>;
 }) {
   const firstValue = table
     .getPreFilteredRowModel()
-    .flatRows[0]?.getValue<any>(column.id);
+    .flatRows[0]?.getValue(column.id);
 
   const columnFilterValue = column.getFilterValue();
 
@@ -606,6 +418,8 @@ function Filter({
     [column.getFacetedUniqueValues()]
   );
 
+  const [min, max] = column.getFacetedMinMaxValues() ?? [0, 0];
+
   return typeof firstValue === "number" ? (
     <div
       style={{
@@ -614,47 +428,33 @@ function Filter({
         alignItems: "center",
       }}
     >
-      <InputGroup
-        style={
-          {
-            /* height: "1.2rem" */
-          }
-        }
-      >
+      <InputGroup>
         <DebouncedInput
           type="number"
-          min={Number(column.getFacetedMinMaxValues()?.[0] ?? "")}
-          max={Number(column.getFacetedMinMaxValues()?.[1] ?? "")}
+          min={min}
+          max={max}
           value={(columnFilterValue as [number, number])?.[0] ?? ""}
           onChange={(value) =>
             column.setFilterValue((old: [number, number]) => [value, old?.[1]])
           }
-          placeholder={`Min ${
-            column.getFacetedMinMaxValues()?.[0]
-              ? `(${column.getFacetedMinMaxValues()?.[0]})`
-              : ""
-          }`}
+          placeholder={`Min (${min})`}
         />
         <DebouncedInput
           type="number"
-          min={Number(column.getFacetedMinMaxValues()?.[0] ?? "")}
-          max={Number(column.getFacetedMinMaxValues()?.[1] ?? "")}
+          min={min}
+          max={max}
           value={(columnFilterValue as [number, number])?.[1] ?? ""}
           onChange={(value) =>
             column.setFilterValue((old: [number, number]) => [old?.[0], value])
           }
-          placeholder={`Max ${
-            column.getFacetedMinMaxValues()?.[1]
-              ? `(${column.getFacetedMinMaxValues()?.[1]})`
-              : ""
-          }`}
+          placeholder={`Max (${max})`}
         />
       </InputGroup>
     </div>
   ) : (
     <>
       <datalist id={column.id + "list"}>
-        {sortedUniqueValues.slice(0, 5000).map((value: any) => (
+        {sortedUniqueValues.slice(0, 5000).map((value) => (
           <option value={value} key={value} />
         ))}
       </datalist>

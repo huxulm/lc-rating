@@ -1,9 +1,9 @@
 "use client";
 
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { CSSProperties, useEffect, useState } from "react";
 
-import "./gh.css";
+import "@scss/_gh.scss";
 
 const ICONS_MAP = {
   aura999:
@@ -34,11 +34,21 @@ const ICONS_MAP = {
   communist:
     "https://vaibhav1663.github.io/custumized-google-form/images/communist.png",
 };
-const GithubBadge = (props) => {
+
+interface GithubBadgeProps {
+  url: string;
+  theme: string;
+  text: string;
+  icon: keyof typeof ICONS_MAP;
+  className: string | undefined;
+  style: CSSProperties | undefined;
+}
+
+const GithubBadge = (props: GithubBadgeProps) => {
   const [starCount, setStarCount] = useState(-1);
   useEffect(() => {
     // Function to extract repo owner and name from GitHub URL
-    const getRepoDetailsFromUrl = (url) => {
+    const getRepoDetailsFromUrl = (url: string) => {
       const match = url.match(/github\.com\/([^\/]+)\/([^\/]+)/);
       if (match && match.length === 3) {
         return { owner: match[1], repo: match[2] };
@@ -74,11 +84,15 @@ const GithubBadge = (props) => {
           );
         });
     } catch (error) {
-      console.log("Error fetching data from GitHub API: " + error.message);
+      if (error instanceof Error) {
+        console.error("Error fetching data from GitHub API: " + error.message);
+      } else {
+        console.error("Error fetching data from GitHub API: " + error);
+      }
     }
   }, [props.url]);
 
-  const formatStarCount = (count) => {
+  const formatStarCount = (count: number) => {
     if (count >= 1000000) {
       return (count / 1000000).toFixed(1) + "M";
     } else if (count >= 1000) {
@@ -137,11 +151,11 @@ const GithubBadge = (props) => {
   );
 };
 
-const GithubBasicBadge = (props) => {
+const GithubBasicBadge = (props: GithubBadgeProps) => {
   const [starCount, setStarCount] = useState(0);
   useEffect(() => {
     // Function to extract repo owner and name from GitHub URL
-    const getRepoDetailsFromUrl = (url) => {
+    const getRepoDetailsFromUrl = (url: string) => {
       const match = url.match(/github\.com\/([^\/]+)\/([^\/]+)/);
       if (match && match.length === 3) {
         return { owner: match[1], repo: match[2] };
@@ -177,11 +191,15 @@ const GithubBasicBadge = (props) => {
           );
         });
     } catch (error) {
-      console.log("Error fetching data from GitHub API: " + error.message);
+      if (error instanceof Error) {
+        console.error("Error fetching data from GitHub API: " + error.message);
+      } else {
+        console.error("Error fetching data from GitHub API: " + error);
+      }
     }
   }, [props.url]);
 
-  const formatStarCount = (count) => {
+  const formatStarCount = (count: number) => {
     if (count >= 1000000) {
       return (count / 1000000).toFixed(1) + "M";
     } else if (count >= 1000) {

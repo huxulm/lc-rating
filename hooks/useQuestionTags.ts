@@ -1,5 +1,7 @@
 import { useSuspenseQuery } from "@tanstack/react-query";
-type Tags = Record<string, [string[], string[]]>;
+
+export type QTag = [string[], string[]];
+export type QTags = Record<string, QTag>;
 
 export function useQuestionTags(filter: any) {
   const { data, isFetching } = useSuspenseQuery({
@@ -9,7 +11,7 @@ export function useQuestionTags(filter: any) {
         "/lc-rating/qtags.json?t=" + (new Date().getTime() / 100000).toFixed(0)
       )
         .then((res) => res.json())
-        .then((result: Tags) => {
+        .then((result: QTags) => {
           return result;
         });
     },
