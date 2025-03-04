@@ -1,77 +1,140 @@
-import { Dispatch, SetStateAction, useEffect, useMemo, useState } from "react";
+import {
+  Dispatch,
+  SetStateAction,
+  useCallback,
+  useState,
+  useRef,
+  useLayoutEffect,
+  useEffect,
+} from "react";
 
 type StorageType = "local" | "session";
 
-interface EncryptionHandler {
-  encrypt: (data: string) => string;
-  decrypt: (data: string) => string;
-}
+type Encryption =
+  | {
+      encrypt: (data: string) => string;
+      decrypt: (data: string) => string;
+    }
+  | {};
+
+type Serialization<T> =
+  | {
+      serializer: (data: T) => string;
+      deserializer: (data: string) => T;
+    }
+  | {};
+
+type Options<T> = {
+  type?: StorageType;
+  defaultValue?: T;
+} & Serialization<T> &
+  Encryption;
+
+type UseStorageReturn<T> = [
+  T | undefined,
+  Dispatch<SetStateAction<T | undefined>>,
+  () => void
+];
+
+type OptionsWithDefault<T> = {
+  type?: StorageType;
+  defaultValue: T;
+} & Serialization<T> &
+  Encryption;
+
+type UseStorageReturnWithDefault<T> = [
+  T,
+  Dispatch<SetStateAction<T>>,
+  () => void
+];
 
 function useStorage<T>(
   key: string,
-  options: {
-    type?: StorageType;
-    defaultValue: T;
-    encryption?: EncryptionHandler;
-  }
-): [T, Dispatch<SetStateAction<T>>];
+  options: OptionsWithDefault<T>
+): UseStorageReturnWithDefault<T>;
 
-function useStorage<T>(
-  key: string,
-  options?: {
-    type?: StorageType;
-    defaultValue?: T;
-    encryption?: EncryptionHandler;
-  }
-): [T | undefined, Dispatch<SetStateAction<T | undefined>>] {
-  const type = options?.type ?? "local";
+function useStorage<T>(key: string, options?: Options<T>): UseStorageReturn<T> {
   const defaultValue = options?.defaultValue;
-  const encryption = options?.encryption;
 
-  const storage = useMemo(() => {
-    if (typeof window === "undefined") return null;
-    return type === "session" ? window.sessionStorage : window.localStorage;
-  }, [type]);
+  if (!key) {
+    throw new Error("useLocalStorage key may not be falsy");
+  }
 
-  const [storedValue, setStoredValue] = useState<T | undefined>(() => {
-    if (!storage) return defaultValue;
+  if (typeof window === "undefined") {
+    return [defaultValue, () => {}, () => {}];
+  }
+
+  const type = options?.type ?? "local";
+  const encryption =
+    options && "encrypt" in options ? options.encrypt : (data: string) => data;
+  const decryption =
+    options && "decrypt" in options ? options.decrypt : (data: string) => data;
+  const serializer =
+    options && "serializer" in options ? options.serializer : JSON.stringify;
+  const deserializer =
+    options && "deserializer" in options ? options.deserializer : JSON.parse;
+
+  const storage =
+    type === "session" ? window.sessionStorage : window.localStorage;
+
+  const initializer = useRef((key: string) => {
     try {
-      const rawValue = storage.getItem(key);
-      if (rawValue === null) return defaultValue;
-
-      const decryptedValue = encryption
-        ? encryption.decrypt(rawValue)
-        : rawValue;
-
-      return JSON.parse(decryptedValue) as T;
+      const localStorageValue = storage.getItem(key);
+      if (localStorageValue !== null) {
+        return deserializer(decryption(localStorageValue));
+      } else {
+        defaultValue &&
+          storage.setItem(key, encryption(serializer(defaultValue)));
+        return defaultValue;
+      }
     } catch (error) {
-      console.error(`Error reading storage key "${key}":`, error);
-      return defaultValue;
+      if (error instanceof Error) {
+        console.error(
+          `Error handling storage getItem for key "${key}": ` +
+            (error instanceof Error ? error.message : error)
+        );
+        return defaultValue;
+      }
     }
   });
 
-  const setValue: React.Dispatch<React.SetStateAction<T | undefined>> = (
-    value
-  ) => {
-    const valueToStore = value instanceof Function ? value(storedValue) : value;
-    setStoredValue(valueToStore);
+  const [state, setState] = useState<T | undefined>(() =>
+    initializer.current(key)
+  );
 
-    if (!storage) return;
+  useLayoutEffect(() => setState(initializer.current(key)), [key]);
 
-    try {
-      if (valueToStore === undefined) {
-        storage.removeItem(key);
-      } else {
-        const serializedValue = JSON.stringify(valueToStore);
-        const encryptedValue = encryption
-          ? encryption.encrypt(serializedValue)
-          : serializedValue;
-        storage.setItem(key, encryptedValue);
+  const setItem: Dispatch<SetStateAction<T | undefined>> = useCallback(
+    (valOrFunc: SetStateAction<T | undefined>) => {
+      try {
+        const newState =
+          valOrFunc instanceof Function
+            ? valOrFunc(initializer.current(key))
+            : valOrFunc;
+
+        storage.setItem(key, encryption(serializer(newState)));
+        setState(newState);
+      } catch (error) {
+        console.error(
+          `Error handling storage setItem for key "${key}": ` +
+            (error instanceof Error ? error.message : error)
+        );
       }
+    },
+    [key, setState]
+  );
+
+  const removeItem = useCallback(() => {
+    try {
+      localStorage.removeItem(key);
+      setState(undefined);
     } catch (error) {
-      console.error(`Error setting storage key "${key}":`, error);
+      console.error(
+        `Error handling storage removeItem for key "${key}": ` +
+          (error instanceof Error ? error.message : error)
+      );
     }
-  };
+  }, [key, setState]);
 
   useEffect(() => {
     if (type !== "local" || !storage) return;
@@ -80,17 +143,14 @@ function useStorage<T>(
       if (e.key === key && e.storageArea === storage) {
         try {
           if (e.newValue !== null) {
-            const decryptedValue = encryption
-              ? encryption.decrypt(e.newValue)
-              : e.newValue;
-            setStoredValue(JSON.parse(decryptedValue) as T);
+            setState(deserializer(decryption(e.newValue)));
           } else {
-            setStoredValue(defaultValue);
+            setState(defaultValue);
           }
         } catch (error) {
           console.error(
-            `Error handling storage change for key "${key}":`,
-            error
+            `Error handling storage change for key "${key}": ` +
+              (error instanceof Error ? error.message : error)
           );
         }
       }
@@ -99,9 +159,9 @@ function useStorage<T>(
     window.addEventListener("storage", handleStorageChange);
 
     return () => window.removeEventListener("storage", handleStorageChange);
-  }, [key, type, storage, defaultValue, encryption]);
+  }, [key, setState]);
 
-  return [storedValue, setValue];
+  return [state, setItem, removeItem];
 }
 
 export default useStorage;

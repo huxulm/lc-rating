@@ -1,6 +1,17 @@
 "use client";
 
-import React, { useCallback, useMemo, useState, useTransition } from "react";
+// Custom components
+import { FilterIcon, ShareIcon } from "@components/icons";
+import Loading from "@components/Loading";
+import RatingCircle, { ColorRating } from "@components/RatingCircle";
+
+// hooks
+import useAllProgress, { Progress } from "@hooks/useAllProgress";
+import { QTag, useQuestionTags } from "@hooks/useQuestionTags";
+import { SolutionType, useSolutions } from "@hooks/useSolutions";
+import useStorage from "@hooks/useStorage";
+import { Tags, useTags } from "@hooks/useTags";
+import { useZen } from "@hooks/useZen";
 
 import {
   Column,
@@ -17,7 +28,7 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-
+import React, { useCallback, useMemo, useState, useTransition } from "react";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Container from "react-bootstrap/Container";
@@ -27,18 +38,6 @@ import FormLabel from "react-bootstrap/FormLabel";
 import Modal from "react-bootstrap/Modal";
 import Pagination from "react-bootstrap/Pagination";
 import Table from "react-bootstrap/Table";
-
-// Custom components
-import RatingCircle, { ColorRating } from "@components/RatingCircle";
-import { FilterIcon, ShareIcon } from "@components/icons";
-
-// hooks
-import Loading from "@components/Loading";
-import { QTag, useQuestionTags } from "@hooks/useQuestionTags";
-import { SolutionType, useSolutions } from "@hooks/useSolutions";
-import useStorage from "@hooks/useStorage";
-import { Tags, useTags } from "@hooks/useTags";
-import { useZen } from "@hooks/useZen";
 
 // Constants and Enums
 const LC_HOST = `https://leetcode.cn`;
@@ -87,14 +86,6 @@ const ratingFilters: Filter[] = [
 ];
 // Progress Related
 type ProgressData = Record<string, string>;
-
-enum Progress {
-  TODO = "TODO",
-  WORKING = "WORKING",
-  TOO_HARD = "TOO_HARD",
-  REVIEW_NEEDED = "REVIEW_NEEDED",
-  AC = "AC",
-}
 
 const progressTranslations = {
   [Progress.TODO]: "下次一定",
@@ -340,11 +331,8 @@ const defaultSettings: SettingsType = {
 
 export default function Zenk() {
   // State and hooks
-  const [_, startTransition] = useTransition();
-  const [localStorageProgressData, setLocalStorageProgressData] =
-    useState<ProgressData>({});
-
-  const { zen: data, isPending: loading } = useZen(setLocalStorageProgressData);
+  const { zen: data, isPending: progressLoading } = useZen();
+  const [allProgress, _, setProgress] = useAllProgress();
 
   const [currentFilterKey, setCurrentFilterKey] = useStorage(
     LC_RATING_ZEN_LAST_USED_FILTER_KEY,
@@ -362,14 +350,9 @@ export default function Zenk() {
 
   // Event handlers
   const handleProgressSelectChange = useCallback(
-    (questionId: string, value: string) => {
-      const newValue = value || Progress.TODO;
-
-      localStorage.setItem(LC_RATING_PROGRESS_KEY(questionId), newValue);
-      setLocalStorageProgressData((prevData) => ({
-        ...prevData,
-        [questionId]: newValue,
-      }));
+    (questID: string, value: Progress) => {
+      const newValue = value;
+      setProgress(questID, newValue);
     },
     []
   );
@@ -389,14 +372,21 @@ export default function Zenk() {
 
   const filteredData = useMemo(() => {
     const tagsFilter = buildTagFilterFn(settings.selectedTags, queryTags);
-    const progressFilter = buildProgressFilterFn(settings.selectedProgress);
+
+    const progressFilter = settings.selectedProgress
+      ? (v: ConstQuestion) => {
+          const progress = allProgress[v.question_id] || Progress.TODO;
+          return progress === settings.selectedProgress;
+        }
+      : () => true;
+
     return data
       .filter(curRatingFilter)
       .filter(tagsFilter)
       .filter(progressFilter);
   }, [data, curRatingFilter, settings]);
 
-  if (loading) {
+  if (progressLoading) {
     return <Loading />;
   }
 
@@ -440,8 +430,7 @@ export default function Zenk() {
           queryTags={queryTags}
           data={filteredData}
           progress={(item: ConstQuestion) =>
-            (localStorageProgressData[item.question_id] as Progress) ||
-            Progress.TODO
+            allProgress[item.question_id] || Progress.TODO
           }
           handleProgressSelectChange={handleProgressSelectChange}
         />
@@ -464,7 +453,7 @@ const ZenTableComp = React.memo(
     data: ConstQuestion[];
     querySolution: (id: string) => SolutionType;
     progress: (v: ConstQuestion) => Progress;
-    handleProgressSelectChange: (questionId: string, value: string) => void;
+    handleProgressSelectChange: (questID: string, value: Progress) => void;
   }) => {
     const columns = React.useMemo<ColumnDef<ConstQuestion>[]>(
       () => [
@@ -579,13 +568,14 @@ const ZenTableComp = React.memo(
                 className={progressOptionClassNames[progress(item)] || ""}
                 value={progress(item) === Progress.TODO ? "" : progress(item)}
                 onChange={(e) =>
-                  handleProgressSelectChange(item.question_id, e.target.value)
+                  handleProgressSelectChange(
+                    item.question_id,
+                    e.target.value as Progress
+                  )
                 }
               >
-                {/* Empty option for TODO */}
-                <option value=""></option>
-
                 {[
+                  Progress.TODO,
                   Progress.WORKING,
                   Progress.TOO_HARD,
                   Progress.REVIEW_NEEDED,

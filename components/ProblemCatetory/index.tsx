@@ -1,5 +1,6 @@
 import { ShareIcon } from "@components/icons";
 import RatingCircle, { ColorRating } from "@components/RatingCircle";
+import { Progress } from "@hooks/useAllProgress";
 import { hashCode } from "@utils/hash";
 import { useCallback, useState } from "react";
 import Form from "react-bootstrap/esm/Form";
@@ -9,14 +10,6 @@ const LC_RATING_PROGRESS_KEY = (questionID: string) =>
 
 // Progress Related
 type ProgressData = Record<string, string>;
-
-enum Progress {
-  TODO = "TODO",
-  WORKING = "WORKING",
-  TOO_HARD = "TOO_HARD",
-  REVIEW_NEEDED = "REVIEW_NEEDED",
-  AC = "AC",
-}
 
 const progressTranslations = {
   [Progress.TODO]: "下次一定",
