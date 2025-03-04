@@ -79,7 +79,7 @@ function useAllProgress(): [
 
     const handleStorageChange = (e: StorageEvent) => {
       if (
-        e.key.startsWith("lc-rating-zen-progress-") &&
+        e.key?.startsWith("lc-rating-zen-progress-") &&
         e.storageArea === localStorage
       ) {
         const questID = e.key.replace("lc-rating-zen-progress-", "");

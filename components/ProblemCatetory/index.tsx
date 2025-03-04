@@ -1,6 +1,6 @@
 import { ShareIcon } from "@components/icons";
 import RatingCircle, { ColorRating } from "@components/RatingCircle";
-import { Progress } from "@hooks/useProgress";
+import { Progress } from "@hooks/useAllProgress";
 import { hashCode } from "@utils/hash";
 import { useCallback, useState } from "react";
 import Form from "react-bootstrap/esm/Form";
