@@ -186,7 +186,7 @@ const GithubBasicBadge = (props: GithubBadgeProps) => {
           setStarCount(response.data.stargazers_count);
         })
         .catch((error) => {
-          throw new Error(
+          console.error(
             "Error fetching data from GitHub API: " + error.message
           );
         });

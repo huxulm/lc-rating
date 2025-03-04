@@ -1,21 +1,70 @@
 "use client";
 
 import { GithubBasicBadge as GithubBadge } from "@components/GithubBadge";
+import SyncProgressModal from "@components/SyncProgressModal";
 import ThemeSwitchButton from "@components/ThemeSwitchButton";
 import { useTheme } from "@hooks/useTheme";
 import Link from "next/dist/client/link";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import Button from "react-bootstrap/esm/Button";
-import Container from "react-bootstrap/esm/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-// import GithubProfile from "@components/gh";
-import SyncProgressModal from "@components/SyncProgressModal";
 import { useState } from "react";
+import { Button, Container, Dropdown, Nav, Navbar } from "react-bootstrap";
+
+const questList = [
+  {
+    title: "滑动窗口",
+    link: "/list/slide_window",
+  },
+  {
+    title: "二分查找",
+    link: "/list/binary_search",
+  },
+  {
+    title: "单调栈",
+    link: "/list/monotonic_stack",
+  },
+  {
+    title: "网格图",
+    link: "/list/grid",
+  },
+
+  {
+    title: "位运算",
+    link: "/list/bitwise_operations",
+  },
+  {
+    title: "图论算法",
+    link: "/list/graph",
+  },
+  {
+    title: "动态规划",
+    link: "/list/dynamic_programming",
+  },
+  {
+    title: "数据结构",
+    link: "/list/data_structure",
+  },
+
+  {
+    title: "数学",
+    link: "/list/math",
+  },
+  {
+    title: "贪心",
+    link: "/list/greedy",
+  },
+  {
+    title: "树和二叉树",
+    link: "/list/trees",
+  },
+  {
+    title: "字符串",
+    link: "/list/string",
+  },
+];
 
 export default function () {
   const { theme, toggleTheme } = useTheme();
   const [showModal, setShowModal] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
 
   const handleOpenModal = () => {
     setShowModal(true);
@@ -28,11 +77,9 @@ export default function () {
   };
 
   return (
-    <Navbar expand="lg" className="position-sticky top-0 p-0">
-      <Container className="navbar fw-bold ps-2 pe-2">
-        <Navbar.Brand href="/lc-rating" className="navbar-brand nav-link">
-          力扣竞赛题目
-        </Navbar.Brand>
+    <Navbar expand="lg" sticky="top" className="p-0">
+      <Container className="navbar fw-bold px-2">
+        <Navbar.Brand>力扣竞赛题目</Navbar.Brand>
         <div className="d-flex flex-fill d-md-none d-lg-none justify-content-end pe-2">
           <span
             className="btn d-flex rounded-circle p-1"
@@ -55,23 +102,49 @@ export default function () {
           className="justify-content-end"
         >
           <Nav className="me-auto">
-            <Link className="nav-link d-flex" href="/">
+            <Link
+              href="/"
+              className="nav-link"
+              style={{
+                width: "fit-content",
+              }}
+            >
               <Button id="nav-cl" className="fw-bold fs-6 p-1">
                 竞赛列表
               </Button>
             </Link>
-            <Link className="nav-link d-flex" href="/zen">
+
+            <Link
+              href="/zen"
+              className="nav-link"
+              style={{
+                width: "fit-content",
+              }}
+            >
               <Button id="nav-tr" className="fw-bold fs-6 p-1">
                 难度练习
               </Button>
             </Link>
-            <Link className="nav-link d-flex" href="/search">
+
+            <Link
+              href="/search"
+              className="nav-link"
+              style={{
+                width: "fit-content",
+              }}
+            >
               <Button id="nav-0x3f" className="fw-bold fs-6 p-1">
                 💡0x3F
               </Button>
             </Link>
 
-            <div className="nav-link d-flex">
+            <Link
+              href="#"
+              className="nav-link"
+              style={{
+                width: "fit-content",
+              }}
+            >
               <Button
                 id="nav-pg"
                 className="fw-bold fs-6 p-1"
@@ -79,67 +152,56 @@ export default function () {
               >
                 同步进度
               </Button>
-            </div>
-            <SyncProgressModal show={showModal} onHide={handleCloseModal} />
+              <SyncProgressModal show={showModal} onHide={handleCloseModal} />
+            </Link>
 
-            <DropdownButton
-              id="nav-pl"
-              color="primary"
-              title="📑题单"
-              className="nav-link d-flex fw-bold"
+            <Dropdown
+              className="nav-link"
+              show={showDropdown}
+              onToggle={(showDropdown) => setShowDropdown(showDropdown)}
             >
-              <Link className="nav-link px-lg-3" href="/list/slide_window">
-                <Button className="fw-bold fs-6 p-1">📑滑动窗口</Button>
-              </Link>
-              <Link className="nav-link px-lg-3" href="/list/binary_search">
-                <Button className="fw-bold fs-6 p-1">📑二分查找</Button>
-              </Link>
-              <Link className="nav-link px-lg-3" href="/list/monotonic_stack">
-                <Button className="fw-bold fs-6 p-1">📑单调栈</Button>
-              </Link>
-              <Link className="nav-link px-lg-3" href="/list/grid">
-                <Button className="fw-bold fs-6 p-1">📑网格图</Button>
-              </Link>
-              <Link
-                className="nav-link px-lg-3"
-                href="/list/bitwise_operations"
-              >
-                <Button className="fw-bold fs-6 p-1">📑位运算</Button>
-              </Link>
-              <Link className="nav-link px-lg-3" href="/list/graph">
-                <Button className="fw-bold fs-6 p-1">📑图论算法</Button>
-              </Link>
-              <Link
-                className="nav-link px-lg-3"
-                href="/list/dynamic_programming"
-              >
-                <Button className="fw-bold fs-6 p-1">📑动态规划</Button>
-              </Link>
-              <Link className="nav-link px-lg-3" href="/list/data_structure">
-                <Button className="fw-bold fs-6 p-1">📑数据结构</Button>
-              </Link>
-              <Link className="nav-link px-lg-3" href="/list/math">
-                <Button className="fw-bold fs-6 p-1">📑数学</Button>
-              </Link>
-              <Link className="nav-link px-lg-3" href="/list/greedy">
-                <Button className="fw-bold fs-6 p-1">📑贪心</Button>
-              </Link>
-              <Link className="nav-link px-lg-3" href="/list/trees">
-                <Button className="fw-bold fs-6 p-1">📑树和二叉树</Button>
-              </Link>
-              <Link className="nav-link px-lg-3" href="/list/string">
-                <Button className="fw-bold fs-6 p-1">📑字符串</Button>
-              </Link>
-            </DropdownButton>
+              <Dropdown.Toggle id="nav-pl">📑题单</Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(4, 1fr)",
+                    gap: "10px",
+                    padding: "10px",
+                  }}
+                >
+                  {questList.map((item) => (
+                    <Link
+                      key={item.link}
+                      href={item.link}
+                      className="text-center"
+                    >
+                      <Button
+                        className="fw-bold w-100"
+                        style={{
+                          whiteSpace: "nowrap",
+                        }}
+                        onClick={() => setShowDropdown(false)}
+                      >
+                        📑{item.title}
+                      </Button>
+                    </Link>
+                  ))}
+                </div>
+              </Dropdown.Menu>
+            </Dropdown>
           </Nav>
+
           <span className="navbar-brand fs-6 fw-semibold">
             本页面所有题解来自{" "}
-            <a
+            <Link
               href="https://space.bilibili.com/206214/"
+              target="_blank"
               className="link fw-bold text-danger"
             >
               bilibili@灵茶山艾府
-            </a>{" "}
+            </Link>{" "}
             感谢！
           </span>
           <span
