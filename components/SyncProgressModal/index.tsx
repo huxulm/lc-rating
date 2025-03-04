@@ -29,7 +29,10 @@ export default function SyncProgressModal({
       setAllProgress(parsedData);
       setSyncStatus("set");
     } catch (error) {
-      console.error("Error handling Set AllProgress: " + error.message);
+      console.error(
+        `Error handling Set AllProgress: ` +
+          (error instanceof Error ? error.message : error)
+      );
       setSyncStatus("error");
     }
   };

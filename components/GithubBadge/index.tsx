@@ -79,16 +79,16 @@ const GithubBadge = (props: GithubBadgeProps) => {
           setStarCount(response.data.stargazers_count);
         })
         .catch((error) => {
-          throw new Error(
-            "Error fetching data from GitHub API: " + error.message
+          console.error(
+            `Error fetching data from GitHub API: ` +
+              (error instanceof Error ? error.message : error)
           );
         });
     } catch (error) {
-      if (error instanceof Error) {
-        console.error("Error fetching data from GitHub API: " + error.message);
-      } else {
-        console.error("Error fetching data from GitHub API: " + error);
-      }
+      console.error(
+        `Error fetching data from GitHub API: ` +
+          (error instanceof Error ? error.message : error)
+      );
     }
   }, [props.url]);
 
@@ -187,15 +187,15 @@ const GithubBasicBadge = (props: GithubBadgeProps) => {
         })
         .catch((error) => {
           console.error(
-            "Error fetching data from GitHub API: " + error.message
+            `Error fetching data from GitHub API: ` +
+              (error instanceof Error ? error.message : error)
           );
         });
     } catch (error) {
-      if (error instanceof Error) {
-        console.error("Error fetching data from GitHub API: " + error.message);
-      } else {
-        console.error("Error fetching data from GitHub API: " + error);
-      }
+      console.error(
+        `Error fetching data from GitHub API: ` +
+          (error instanceof Error ? error.message : error)
+      );
     }
   }, [props.url]);
 

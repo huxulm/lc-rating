@@ -88,8 +88,13 @@ function useStorage<T>(key: string, options?: Options<T>): UseStorageReturn<T> {
         return defaultValue;
       }
     } catch (error) {
-      console.error(`Error handling storage getItem for key "${key}":`, error);
-      return defaultValue;
+      if (error instanceof Error) {
+        console.error(
+          `Error handling storage getItem for key "${key}": ` +
+            (error instanceof Error ? error.message : error)
+        );
+        return defaultValue;
+      }
     }
   });
 
@@ -111,8 +116,8 @@ function useStorage<T>(key: string, options?: Options<T>): UseStorageReturn<T> {
         setState(newState);
       } catch (error) {
         console.error(
-          `Error handling storage setItem for key "${key}":`,
-          error
+          `Error handling storage setItem for key "${key}": ` +
+            (error instanceof Error ? error.message : error)
         );
       }
     },
@@ -125,8 +130,8 @@ function useStorage<T>(key: string, options?: Options<T>): UseStorageReturn<T> {
       setState(undefined);
     } catch (error) {
       console.error(
-        `Error handling storage removeItem for key "${key}":`,
-        error
+        `Error handling storage removeItem for key "${key}": ` +
+          (error instanceof Error ? error.message : error)
       );
     }
   }, [key, setState]);
@@ -144,8 +149,8 @@ function useStorage<T>(key: string, options?: Options<T>): UseStorageReturn<T> {
           }
         } catch (error) {
           console.error(
-            `Error handling storage change for key "${key}":`,
-            error
+            `Error handling storage change for key "${key}": ` +
+              (error instanceof Error ? error.message : error)
           );
         }
       }
