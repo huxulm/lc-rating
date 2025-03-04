@@ -106,7 +106,6 @@ function useStorage<T>(key: string, options?: Options<T>): UseStorageReturn<T> {
           valOrFunc instanceof Function
             ? valOrFunc(initializer.current(key))
             : valOrFunc;
-        console.log("newState", newState);
 
         storage.setItem(key, encryption(serializer(newState)));
         setState(newState);
@@ -133,12 +132,9 @@ function useStorage<T>(key: string, options?: Options<T>): UseStorageReturn<T> {
   }, [key, setState]);
 
   useEffect(() => {
-    console.log(1);
-
     if (type !== "local" || !storage) return;
 
     const handleStorageChange = (e: StorageEvent) => {
-      console.log("storage change", e);
       if (e.key === key && e.storageArea === storage) {
         try {
           if (e.newValue !== null) {
