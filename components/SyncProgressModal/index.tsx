@@ -1,4 +1,4 @@
-import AllProgress from "@components/AllProgress";
+import ProgressManager from "@utils/ProgressManager";
 import React, { useState } from "react";
 import { Alert, Button, Form, Modal } from "react-bootstrap";
 
@@ -18,7 +18,7 @@ export default function SyncProgressModal({
   const [inputData, setInputData] = useState("");
 
   const handleFetch = () => {
-    const allProgress = new AllProgress();
+    const allProgress = new ProgressManager();
     const result = allProgress.getAllProgress();
     setFetchedData(JSON.stringify(result, null, 2));
     setInputData(JSON.stringify(result, null, 2));
@@ -27,7 +27,7 @@ export default function SyncProgressModal({
 
   const handleSet = () => {
     try {
-      const allProgress = new AllProgress();
+      const allProgress = new ProgressManager();
       const parsedData = JSON.parse(inputData);
       allProgress.setAllProgress(parsedData);
       setSyncStatus("set");

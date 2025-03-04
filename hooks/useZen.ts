@@ -1,7 +1,8 @@
 "use client";
 
+import { Progress } from "@hooks/useProgress";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { useEffect, useState, useTransition } from "react";
+import { useEffect } from "react";
 
 // Question Data Type
 interface ConstQuestion {
@@ -13,7 +14,7 @@ interface ConstQuestion {
   paid_only: boolean;
   rating: number;
   _hash: number;
-};
+}
 
 const LC_RATING_PROGRESS_KEY = (questionID: string) =>
   `lc-rating-zen-progress-${questionID}`;
@@ -21,14 +22,6 @@ const LC_RATING_ZEN_LAST_USED_FILTER_KEY = `lc-rating-zen-last-used-filter`;
 
 // Progress Related
 type ProgressData = Record<string, string>;
-
-enum Progress {
-  TODO = "TODO",
-  WORKING = "WORKING",
-  TOO_HARD = "TOO_HARD",
-  REVIEW_NEEDED = "REVIEW_NEEDED",
-  AC = "AC",
-}
 
 export function useZen(setLocalStorageProgressData: any) {
   const { data, isFetching } = useSuspenseQuery({

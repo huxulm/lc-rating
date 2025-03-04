@@ -1,5 +1,6 @@
 "use client";
 
+import { Progress } from "@hooks/useProgress";
 import React, { useCallback, useMemo, useState, useTransition } from "react";
 
 import {
@@ -87,14 +88,6 @@ const ratingFilters: Filter[] = [
 ];
 // Progress Related
 type ProgressData = Record<string, string>;
-
-enum Progress {
-  TODO = "TODO",
-  WORKING = "WORKING",
-  TOO_HARD = "TOO_HARD",
-  REVIEW_NEEDED = "REVIEW_NEEDED",
-  AC = "AC",
-}
 
 const progressTranslations = {
   [Progress.TODO]: "下次一定",

@@ -1,12 +1,11 @@
-// Constants
-const LC_RATING_PROGRESS_KEY = (questionID: string) =>
-  `lc-rating-zen-progress-${questionID}`;
+const getProgressKey = (questID: string) =>
+  `lc-rating-zen-progress-${questID}`;
 
 interface ProgressDataType {
-  [questionID: string]: string;
+  [questID: string]: string;
 }
 
-class AllProgress {
+class ProgressManager {
   private data: ProgressDataType;
 
   constructor() {
@@ -50,9 +49,9 @@ class AllProgress {
   private setProgress(questionID: string, value: string): void {
     this.data[questionID] = value;
     if (typeof Storage !== "undefined" && window.localStorage) {
-      localStorage.setItem(LC_RATING_PROGRESS_KEY(questionID), value);
+      localStorage.setItem(getProgressKey(questionID), value);
     }
   }
 }
 
-export default AllProgress;
+export default ProgressManager;
