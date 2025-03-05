@@ -266,10 +266,12 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
             }}
             style={{ color: getOption(curSetting.selectedProgress).color }}
           >
-            <option value="">[全部]</option>
+            <option value="" style={{ color: getOption("").color }}>
+              [全部]
+            </option>
 
             {optionKeys.map((p) => (
-              <option key={p} value={p}>
+              <option key={p} value={p} style={{ color: getOption(p).color }}>
                 {getOption(p).label}
               </option>
             ))}
@@ -559,7 +561,11 @@ const ZenTableComp = React.memo(
                 style={{ color: getOption(quest2progress(item)).color }}
               >
                 {optionKeys.map((p) => (
-                  <option key={p} value={p}>
+                  <option
+                    key={p}
+                    value={p}
+                    style={{ color: getOption(p).color }}
+                  >
                     {getOption(p).label}
                   </option>
                 ))}

@@ -225,7 +225,11 @@ function ProblemCategoryList({
                     }
                   >
                     {optionKeys.map((p) => (
-                      <option key={getOption(p).key} value={getOption(p).key}>
+                      <option
+                        key={p}
+                        value={p}
+                        style={{ color: getOption(p).color }}
+                      >
                         {getOption(p).label}
                       </option>
                     ))}
