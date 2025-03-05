@@ -1,6 +1,6 @@
 import { ShareIcon } from "@components/icons";
 import RatingCircle, { ColorRating } from "@components/RatingCircle";
-import { Progress } from "@hooks/useAllProgress";
+import { ProgressKeyType, useProgressOptions } from "@hooks/useProgress";
 import { hashCode } from "@utils/hash";
 import { useCallback, useState } from "react";
 import Form from "react-bootstrap/esm/Form";
@@ -10,22 +10,6 @@ const LC_RATING_PROGRESS_KEY = (questionID: string) =>
 
 // Progress Related
 type ProgressData = Record<string, string>;
-
-const progressTranslations = {
-  [Progress.TODO]: "下次一定",
-  [Progress.WORKING]: "攻略中",
-  [Progress.TOO_HARD]: "太难了，不会",
-  [Progress.REVIEW_NEEDED]: "回头复习下",
-  [Progress.AC]: "过了",
-};
-
-const progressOptionClassNames = {
-  [Progress.TODO]: "zen-option-TODO",
-  [Progress.WORKING]: "zen-option-WORKING",
-  [Progress.TOO_HARD]: "zen-option-TOO_HARD",
-  [Progress.REVIEW_NEEDED]: "zen-option-REVIEW_NEEDED",
-  [Progress.AC]: "zen-option-AC",
-};
 
 interface ProblemCategory {
   title: string;
@@ -152,19 +136,18 @@ function ProblemCategoryList({
     }
     return "col3";
   };
-
+  const { optionKeys, getOption } = useProgressOptions();
   // trigger page to refresh
   const [localStorageProgressData, setLocalStorageProgressData] =
     useState<ProgressData>({});
 
   // Event handlers
   const handleProgressSelectChange = useCallback(
-    (questionId: string, value: string) => {
-      const newValue = value || Progress.TODO;
-      localStorage.setItem(LC_RATING_PROGRESS_KEY(questionId), newValue);
+    (questionId: string, value: ProgressKeyType) => {
+      localStorage.setItem(LC_RATING_PROGRESS_KEY(questionId), value);
       setLocalStorageProgressData((prevData) => ({
         ...prevData,
-        [questionId]: newValue,
+        [questionId]: value,
       }));
     },
     []
@@ -178,8 +161,8 @@ function ProblemCategoryList({
   const progress = (title: string) => {
     const localtemp = localStorage.getItem(
       LC_RATING_PROGRESS_KEY(title2id(title))
-    ) as Progress;
-    return localtemp || Progress.TODO;
+    ) as ProgressKeyType;
+    return localtemp;
   };
 
   return (
@@ -232,14 +215,8 @@ function ProblemCategoryList({
                 ) : null}
                 <div className="d-flex align-items-center ms-2">
                   <Form.Select
-                    className={
-                      progressOptionClassNames[progress(item.title)] || ""
-                    }
-                    value={
-                      progress(item.title) === Progress.TODO
-                        ? ""
-                        : progress(item.title)
-                    }
+                    style={{ color: getOption(progress(item.title)).color }}
+                    value={getOption(progress(item.title)).key}
                     onChange={(e) =>
                       handleProgressSelectChange(
                         title2id(item.title),
@@ -247,21 +224,9 @@ function ProblemCategoryList({
                       )
                     }
                   >
-                    {/* Empty option for TODO */}
-                    <option value=""></option>
-
-                    {[
-                      Progress.WORKING,
-                      Progress.TOO_HARD,
-                      Progress.REVIEW_NEEDED,
-                      Progress.AC,
-                    ].map((p) => (
-                      <option
-                        key={p}
-                        value={p}
-                        className={progressOptionClassNames[p] || ""}
-                      >
-                        {progressTranslations[p]}
+                    {optionKeys.map((p) => (
+                      <option key={getOption(p).key} value={getOption(p).key}>
+                        {getOption(p).label}
                       </option>
                     ))}
                   </Form.Select>
