@@ -98,7 +98,7 @@ function useQuestProgress(): {
   allProgress: QuestProgressType;
   setAllProgress: (newProgress: QuestProgressType) => void;
   updateProgress: (questID: string, progress: ProgressKeyType) => void;
-  deleteProgress: (questID: string) => void;
+  removeProgress: (questID: string) => void;
 } {
   const allProgress = useSyncExternalStore(store.subscribe, store.getSnapshot);
 
@@ -130,7 +130,7 @@ function useQuestProgress(): {
     allProgress,
     setAllProgress: store.setAllProgress.bind(store),
     updateProgress: store.updateProgress.bind(store),
-    deleteProgress: store.removeProgress.bind(store),
+    removeProgress: store.removeProgress.bind(store),
   };
 }
 

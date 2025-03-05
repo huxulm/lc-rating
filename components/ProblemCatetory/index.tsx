@@ -38,7 +38,7 @@ function ProblemCategory({
   showPremium,
 }: ProblemCategoryProps) {
   const { optionKeys, getOption } = useProgressOptions();
-  const { allProgress, updateProgress } = useQuestProgress();
+  const { allProgress, updateProgress, removeProgress } = useQuestProgress();
 
   return (
     <div className={`pb-container level-${level}` + className}>
@@ -67,6 +67,7 @@ function ProblemCategory({
                     getOption={getOption}
                     allProgress={allProgress}
                     updateProgress={updateProgress}
+                    removeProgress={removeProgress}
                     showEn={showEn}
                     showRating={showRating}
                     showPremium={showPremium}

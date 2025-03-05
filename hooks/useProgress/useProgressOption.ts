@@ -58,7 +58,7 @@ export function useProgressOptions() {
   const optionKeys = useMemo(() => Object.keys(fullConfig), [fullConfig]);
 
   const getOption = useCallback(
-    (key: ProgressKeyType | null | undefined) => {
+    (key?: ProgressKeyType | null) => {
       if (!key) {
         return defaultOptions.TODO;
       }

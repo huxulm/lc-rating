@@ -127,9 +127,11 @@ function buildTagFilterFn(
 
 interface FilterSettingsProps {
   handleClose: () => void;
-  onSettingsSaved: React.Dispatch<React.SetStateAction<SettingsType>>;
+  onSettingsSaved: React.Dispatch<
+    React.SetStateAction<SettingsType | undefined>
+  >;
   optionKeys: ProgressKeyType[];
-  getOption: (key: ProgressKeyType) => OptionEntry;
+  getOption: (key?: ProgressKeyType) => OptionEntry;
   tags: Tags;
   lang: "zh" | "en";
   settings: SettingsType;
@@ -265,7 +267,7 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
             }}
             style={{ color: getOption(curSetting.selectedProgress).color }}
           >
-            <option value="" style={{ color: getOption("").color }}>
+            <option value="" style={{ color: getOption().color }}>
               [全部]
             </option>
 
@@ -311,11 +313,14 @@ export default function Zenk() {
 
   const [showFilter, setShowFilter] = useState(false);
 
-  const [settings, setSettings] = useStorage(LC_RATING_ZEN_SETTINGS_KEY, {
-    defaultValue: defaultSettings,
-  });
+  const [settings = defaultSettings, setSettings] = useStorage(
+    LC_RATING_ZEN_SETTINGS_KEY,
+    {
+      defaultValue: defaultSettings,
+    }
+  );
 
-  const { allProgress, updateProgress } = useQuestProgress();
+  const { allProgress, updateProgress, removeProgress } = useQuestProgress();
   const { optionKeys, getOption } = useProgressOptions();
 
   const [currentFilterKey, setCurrentFilterKey] = useStorage(
@@ -354,9 +359,12 @@ export default function Zenk() {
 
   // Event handlers
   const handleProgressSelectChange = useCallback(
-    (questID: string, value: ProgressKeyType) => {
-      const newValue = value;
-      updateProgress(questID, newValue);
+    (questID: string, progress: ProgressKeyType) => {
+      if (progress === getOption().key) {
+        removeProgress(questID);
+      } else {
+        updateProgress(questID, progress);
+      }
     },
     []
   );

@@ -40,9 +40,10 @@ interface ProblemCategory {
 
 interface ProblemCategoryListProps {
   optionKeys: ProgressKeyType[];
-  getOption: (key: ProgressKeyType) => OptionEntry;
+  getOption: (key?: ProgressKeyType) => OptionEntry;
   allProgress: Record<string, ProgressKeyType>;
-  updateProgress: (questionId: string, progress: ProgressKeyType) => void;
+  updateProgress: (questID: string, progress: ProgressKeyType) => void;
+  removeProgress: (questID: string) => void;
   data: ProblemCategory;
   showEn?: boolean;
   showRating?: boolean;
@@ -54,6 +55,7 @@ function ProblemCategoryList({
   getOption,
   allProgress,
   updateProgress,
+  removeProgress,
   data,
   showEn,
   showRating,
@@ -61,10 +63,14 @@ function ProblemCategoryList({
 }: ProblemCategoryListProps) {
   // Event handlers
   const handleProgressSelectChange = (
-    questionId: string,
+    questID: string,
     progress: ProgressKeyType
   ) => {
-    updateProgress(questionId, progress);
+    if (progress === getOption().key) {
+      removeProgress(questID);
+    } else {
+      updateProgress(questID, progress);
+    }
   };
 
   return (

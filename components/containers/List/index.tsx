@@ -52,13 +52,18 @@ export default function ({ data }: { data: ProblemCategory }) {
 
   useEffect(() => scrollToComponent(), []);
 
-  const [setting, setSetting] = useStorage("lc-rating-list-settings", {
-    defaultValue: {
-      showEn: true,
-      showRating: true,
-      showPremium: true,
-    },
-  });
+  const settingDefault = {
+    showEn: true,
+    showRating: true,
+    showPremium: true,
+  };
+
+  const [setting = settingDefault, setSetting] = useStorage(
+    "lc-rating-list-settings",
+    {
+      defaultValue: settingDefault,
+    }
+  );
 
   const buttons = [
     {

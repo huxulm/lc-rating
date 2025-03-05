@@ -80,7 +80,7 @@ function ContestList() {
   const [{ pageIndex, pageSize }, setPagination] =
     React.useState<PaginationState>({
       pageIndex: 0,
-      pageSize: parseInt(size),
+      pageSize: parseInt(size || "100"),
     });
 
   const [contestsInPage, pageCount] = useMemo(() => {
@@ -98,7 +98,7 @@ function ContestList() {
     defaultValue: "",
   });
 
-  const [selectedRow, setSelectedRow] = React.useState<string>(mark);
+  const [selectedRow, setSelectedRow] = React.useState<string>(mark || "");
   const [columnResizeMode, setColumnResizeMode] =
     React.useState<ColumnResizeMode>("onChange");
   const [globalFilter, setGlobalFilter] = React.useState("");

@@ -18,7 +18,7 @@ interface ThemeProviderProps {
 }
 
 function ThemeProvider({ children }: ThemeProviderProps) {
-  const [theme, setTheme] = useStorage<Theme>("theme", {
+  const [theme = Theme.Light, setTheme] = useStorage<Theme>("theme", {
     defaultValue: Theme.Light,
   });
 
