@@ -1,7 +1,7 @@
-import CustomizeOption from "./settingPages/CustomizeOption";
-import SyncProgress from "./settingPages/SyncProgress";
-import { LuArrowUpDown } from "react-icons/lu";
 import { BiSolidCustomize } from "react-icons/bi";
+import { LuArrowUpDown } from "react-icons/lu";
+import CustomizeOptions from "./settingPages/CustomizeOptions";
+import SyncProgress from "./settingPages/SyncProgress";
 export type SettingTabType = {
   key: string;
   title: string;
@@ -17,9 +17,9 @@ export const setting_tabs: SettingTabType[] = [
     component: <SyncProgress />,
   },
   {
-    key: "CustomizeOption",
+    key: "CustomizeOptions",
     title: "自定义进度选项",
     icon: <BiSolidCustomize />,
-    component: <CustomizeOption />,
+    component: <CustomizeOptions />,
   },
 ];

@@ -1,11 +1,17 @@
-import { useProgressOptions } from "./useProgressOption";
+import { defaultOptions, useProgressOptions } from "./useProgressOption";
 import useQuestProgress from "./useQuestProgress";
 
 import type {
-    OptionEntry,
-    ProgressKeyType,
-    ProgressOptionsType,
+  CustomOptionsType,
+  OptionEntry,
+  ProgressKeyType,
+  ProgressOptionsType,
 } from "./useProgressOption";
 
-export { useProgressOptions, useQuestProgress };
-export type { OptionEntry, ProgressKeyType, ProgressOptionsType };
+export { defaultOptions, useProgressOptions, useQuestProgress };
+export type {
+  CustomOptionsType,
+  OptionEntry,
+  ProgressKeyType,
+  ProgressOptionsType
+};

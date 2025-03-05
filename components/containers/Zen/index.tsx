@@ -17,7 +17,6 @@ import { SolutionType, useSolutions } from "@hooks/useSolutions";
 import useStorage from "@hooks/useStorage";
 import { Tags, useTags } from "@hooks/useTags";
 import { useZen } from "@hooks/useZen";
-import { Options } from "@node_modules/next/dist/server/base-server";
 
 import {
   Column,
@@ -34,22 +33,22 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import React, { useCallback, useMemo, useState, useTransition } from "react";
-import Button from "react-bootstrap/Button";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
-import Container from "react-bootstrap/Container";
-import Dropdown from "react-bootstrap/Dropdown";
-import Form from "react-bootstrap/Form";
-import FormLabel from "react-bootstrap/FormLabel";
-import Modal from "react-bootstrap/Modal";
-import Pagination from "react-bootstrap/Pagination";
-import Table from "react-bootstrap/Table";
+import React, { useCallback, useMemo, useState } from "react";
+import {
+  Button,
+  ButtonGroup,
+  Container,
+  Dropdown,
+  Form,
+  FormLabel,
+  Modal,
+  Pagination,
+  Table,
+} from "react-bootstrap";
 
 // Constants and Enums
 const LC_HOST = `https://leetcode.cn`;
 const LC_HOST_EN = `https://leetcode.com`;
-const LC_RATING_PROGRESS_KEY = (questionID: string) =>
-  `lc-rating-zen-progress-${questionID}`;
 const LC_RATING_ZEN_LAST_USED_FILTER_KEY = `lc-rating-zen-last-used-filter`;
 const LC_RATING_ZEN_SETTINGS_KEY = `lc-rating-zen-settings`;
 
@@ -549,16 +548,18 @@ const ZenTableComp = React.memo(
           enableSorting: false,
           cell: (info) => {
             const item = info.row.original;
+            const curOption = getOption(quest2progress(item));
+
             return (
               <Form.Select
-                value={getOption(quest2progress(item)).key}
+                value={curOption.key}
                 onChange={(e) =>
                   handleProgressSelectChange(
                     item.question_id,
                     e.target.value as ProgressKeyType
                   )
                 }
-                style={{ color: getOption(quest2progress(item)).color }}
+                style={{ color: curOption.color }}
               >
                 {optionKeys.map((p) => (
                   <option
@@ -569,6 +570,15 @@ const ZenTableComp = React.memo(
                     {getOption(p).label}
                   </option>
                 ))}
+                {!(curOption.key in optionKeys) && (
+                  <option
+                    key={curOption.key}
+                    value={curOption.key}
+                    style={{ color: curOption.color }}
+                  >
+                    {curOption.label}
+                  </option>
+                )}
               </Form.Select>
             );
           },
