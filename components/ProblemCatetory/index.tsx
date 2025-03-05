@@ -1,6 +1,10 @@
 import { ShareIcon } from "@components/icons";
 import RatingCircle, { ColorRating } from "@components/RatingCircle";
-import { ProgressKeyType, useProgressOptions } from "@hooks/useProgress";
+import {
+  ProgressKeyType,
+  useProgressOptions,
+  useQuestProgress,
+} from "@hooks/useProgress";
 import { hashCode } from "@utils/hash";
 import { useCallback, useState } from "react";
 import Form from "react-bootstrap/esm/Form";
@@ -114,9 +118,23 @@ function ProblemCategory({
   );
 }
 
+const getCols = (l: number) => {
+  if (l < 12) {
+    return "";
+  }
+  if (l < 20) {
+    return "col2";
+  }
+  return "col3";
+};
+
+const title2id = (title: string) => {
+  // title: number. title
+  return title.split(". ")[0];
+};
+
 function ProblemCategoryList({
   data,
-  className = "",
   showEn,
   showRating,
   showPremium,
@@ -127,42 +145,15 @@ function ProblemCategoryList({
   showRating?: boolean;
   showPremium?: boolean;
 }) {
-  const getCols = (l: number) => {
-    if (l < 12) {
-      return "";
-    }
-    if (l < 20) {
-      return "col2";
-    }
-    return "col3";
-  };
   const { optionKeys, getOption } = useProgressOptions();
-  // trigger page to refresh
-  const [localStorageProgressData, setLocalStorageProgressData] =
-    useState<ProgressData>({});
+  const { allProgress, updateProgress } = useQuestProgress();
 
   // Event handlers
-  const handleProgressSelectChange = useCallback(
-    (questionId: string, value: ProgressKeyType) => {
-      localStorage.setItem(LC_RATING_PROGRESS_KEY(questionId), value);
-      setLocalStorageProgressData((prevData) => ({
-        ...prevData,
-        [questionId]: value,
-      }));
-    },
-    []
-  );
-
-  const title2id = (title: string) => {
-    // title: number. title
-    return title.split(". ")[0];
-  };
-
-  const progress = (title: string) => {
-    const localtemp = localStorage.getItem(
-      LC_RATING_PROGRESS_KEY(title2id(title))
-    ) as ProgressKeyType;
-    return localtemp;
+  const handleProgressSelectChange = (
+    questionId: string,
+    progress: ProgressKeyType
+  ) => {
+    updateProgress(questionId, progress);
   };
 
   return (
@@ -180,63 +171,67 @@ function ProblemCategoryList({
         {data.child &&
           data.child
             .filter((item) => !item.isPremium || showPremium)
-            .map((item) => (
-              <li
-                className="d-flex justify-content-between"
-                key={hashCode(item.title || "")}
-              >
-                <div>
-                  <a
-                    href={"https://leetcode.cn/problems" + item.src}
-                    target="_blank"
-                  >
-                    {item.title + (item.isPremium ? " (会员题)" : "")}
-                  </a>
-                  {showEn && (
+            .map((item) => {
+              const id = title2id(item.title);
+              const progressKey = allProgress[id];
+              const option = getOption(progressKey);
+
+              const rating = Number(item.score);
+
+              return (
+                <li
+                  className="d-flex justify-content-between"
+                  key={hashCode(item.title || "")}
+                >
+                  <div>
                     <a
-                      className="ms-2"
-                      href={"https://leetcode.com/problems" + item.src}
+                      href={"https://leetcode.cn/problems" + item.src}
                       target="_blank"
                     >
-                      <ShareIcon height={16} width={16} />
+                      {item.title + (item.isPremium ? " (会员题)" : "")}
                     </a>
-                  )}
-                </div>
-                {item.score && showRating ? (
-                  <div className="ms-2 text-nowrap d-flex justify-content-center align-items-center pb-rating-bg">
-                    <RatingCircle rating={Number(item.score)} />
-                    <ColorRating
-                      className="rating-text"
-                      rating={Number(item.score)}
-                    >
-                      {Number(item.score).toFixed(0)}
-                    </ColorRating>
-                  </div>
-                ) : null}
-                <div className="d-flex align-items-center ms-2">
-                  <Form.Select
-                    style={{ color: getOption(progress(item.title)).color }}
-                    value={getOption(progress(item.title)).key}
-                    onChange={(e) =>
-                      handleProgressSelectChange(
-                        title2id(item.title),
-                        e.target.value
-                      )
-                    }
-                  >
-                    {optionKeys.map((p) => (
-                      <option
-                        key={p}
-                        value={p}
-                        style={{ color: getOption(p).color }}
+                    {showEn && (
+                      <a
+                        className="ms-2"
+                        href={"https://leetcode.com/problems" + item.src}
+                        target="_blank"
                       >
-                        {getOption(p).label}
-                      </option>
-                    ))}
-                  </Form.Select>
-                </div>
-              </li>
-            ))}
+                        <ShareIcon height={16} width={16} />
+                      </a>
+                    )}
+                  </div>
+                  {item.score && showRating ? (
+                    <div className="ms-2 text-nowrap d-flex justify-content-center align-items-center pb-rating-bg">
+                      <RatingCircle rating={rating} />
+                      <ColorRating className="rating-text" rating={rating}>
+                        {rating.toFixed(0)}
+                      </ColorRating>
+                    </div>
+                  ) : null}
+                  <div className="d-flex align-items-center ms-2">
+                    <Form.Select
+                      style={{
+                        color: option.color,
+                      }}
+                      value={option.key}
+                      onChange={(e) =>
+                        handleProgressSelectChange(id, e.target.value)
+                      }
+                    >
+                      {optionKeys.map((p) => (
+                        <option
+                          key={p}
+                          value={p}
+                          style={{ color: getOption(p).color }}
+                        >
+                          {getOption(p).label}
+                        </option>
+                      ))}
+                    </Form.Select>
+                  </div>
+                </li>
+              );
+            })}
       </ul>
     </div>
   );

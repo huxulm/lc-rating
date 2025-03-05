@@ -316,7 +316,7 @@ export default function Zenk() {
     defaultValue: defaultSettings,
   });
 
-  const [allProgress, _, setProgress] = useQuestProgress();
+  const { allProgress, updateProgress } = useQuestProgress();
   const { optionKeys, getOption } = useProgressOptions();
 
   const [currentFilterKey, setCurrentFilterKey] = useStorage(
@@ -357,7 +357,7 @@ export default function Zenk() {
   const handleProgressSelectChange = useCallback(
     (questID: string, value: ProgressKeyType) => {
       const newValue = value;
-      setProgress(questID, newValue);
+      updateProgress(questID, newValue);
     },
     []
   );

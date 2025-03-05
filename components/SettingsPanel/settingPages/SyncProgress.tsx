@@ -7,7 +7,7 @@ export default function SyncProgress() {
     "idle" | "fetched" | "set" | "error"
   >("idle");
   const [inputData, setInputData] = useState("");
-  const [allProgress, setAllProgress] = useQuestProgress();
+  const { allProgress, setAllProgress } = useQuestProgress();
 
   const allProgressStr = useMemo(
     () => JSON.stringify(allProgress, null, 2),
