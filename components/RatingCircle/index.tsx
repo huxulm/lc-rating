@@ -38,9 +38,9 @@ const RatingCircle = React.forwardRef<any, any>(
     const { rating = 0 } = props;
     let idx = COLORS.findIndex((v) => rating >= v.l && rating < v.r);
     let c = COLORS[idx];
-    let percent = ((rating - c.l) * 100) / (c.r - c.l + 1);
+    let bgPercent = ((rating - c.l) * 100) / (c.r - c.l + 1);
     if (rating >= 3000) {
-      percent = 100;
+      bgPercent = 0;
     }
     return (
       <div className="rating-circle">
@@ -48,10 +48,9 @@ const RatingCircle = React.forwardRef<any, any>(
           ref={ref}
           {...props}
           className="inner-circle"
-          // data={ rating >= 3000 ? "top" : ""}
           style={{
             borderColor: `var(--rating-color-${idx})`,
-            background: `linear-gradient(to top, var(--rating-color-${idx}) ${percent}%, rgba(0, 0, 0, 0) ${percent}%) border-box border-box`,
+            background: `linear-gradient(to top, var(--rating-color-${idx}) ${bgPercent}%, rgba(0, 0, 0, 0) ${bgPercent}%) border-box border-box`,
           }}
         ></span>
         {rating >= 3000 && <span className="inner-circle__plus"></span>}
