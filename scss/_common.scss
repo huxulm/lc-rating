@@ -278,7 +278,7 @@ td,
   --rating-color-4: #9B1EA4;
   --rating-color-5: #F09235;
   --rating-color-6: #EA3323;
-  --rating-color-7: transparent;
+  --rating-color-7: #EA3323;
 }
 
 [data-bs-theme=dark] {
@@ -290,7 +290,7 @@ td,
   --rating-color-4: #ec60f6;
   --rating-color-5: #f8a95b;
   --rating-color-6: #f35041;
-  --rating-color-7: transparent;
+  --rating-color-7: #f35041;
 }
 
 .topcoder-like-circle {
@@ -362,6 +362,6 @@ td,
   color: var(--rating-color-6)
 }
 .rating-color-7 {
-  color: var(--rating-color-6);
+  color: var(--rating-color-7);
   font-weight: 900;
 }

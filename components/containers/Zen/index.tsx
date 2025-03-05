@@ -6,12 +6,18 @@ import Loading from "@components/Loading";
 import RatingCircle, { ColorRating } from "@components/RatingCircle";
 
 // hooks
-import useAllProgress, { Progress } from "@hooks/useAllProgress";
+import {
+  OptionEntry,
+  ProgressKeyType,
+  useProgressOptions,
+  useQuestProgress,
+} from "@hooks/useProgress";
 import { QTag, useQuestionTags } from "@hooks/useQuestionTags";
 import { SolutionType, useSolutions } from "@hooks/useSolutions";
 import useStorage from "@hooks/useStorage";
 import { Tags, useTags } from "@hooks/useTags";
 import { useZen } from "@hooks/useZen";
+import { Options } from "@node_modules/next/dist/server/base-server";
 
 import {
   Column,
@@ -84,23 +90,6 @@ const ratingFilters: Filter[] = [
   { label: "(>=2400)", fn: createRatingFilter(2400) },
   { label: ALL_FILTER_LABEL, fn: createRatingFilter(1) },
 ];
-// Progress Related
-type ProgressData = Record<string, string>;
-
-const progressTranslations = {
-  [Progress.TODO]: "下次一定",
-  [Progress.WORKING]: "攻略中",
-  [Progress.TOO_HARD]: "太难了，不会",
-  [Progress.REVIEW_NEEDED]: "回头复习下",
-  [Progress.AC]: "过了",
-};
-const progressOptionClassNames = {
-  [Progress.TODO]: "zen-option-TODO",
-  [Progress.WORKING]: "zen-option-WORKING",
-  [Progress.TOO_HARD]: "zen-option-TOO_HARD",
-  [Progress.REVIEW_NEEDED]: "zen-option-REVIEW_NEEDED",
-  [Progress.AC]: "zen-option-AC",
-};
 
 // Filter Button Component
 interface FilterButtonProps {
@@ -137,27 +126,19 @@ function buildTagFilterFn(
       };
 }
 
-function buildProgressFilterFn(selectedProgress: string) {
-  if (!selectedProgress) {
-    return () => true;
-  }
-  return (v: ConstQuestion) => {
-    const progress =
-      localStorage.getItem(LC_RATING_PROGRESS_KEY(v.question_id)) ||
-      Progress.TODO;
-    return progress === selectedProgress;
-  };
-}
-
 interface FilterSettingsProps {
   handleClose: () => void;
   onSettingsSaved: React.Dispatch<React.SetStateAction<SettingsType>>;
+  optionKeys: ProgressKeyType[];
+  getOption: (key: ProgressKeyType) => OptionEntry;
   tags: Tags;
   lang: "zh" | "en";
   settings: SettingsType;
 }
 
 const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
+  optionKeys,
+  getOption,
   tags,
   handleClose,
   onSettingsSaved,
@@ -192,7 +173,7 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
     });
   };
 
-  const onProgressChange = (progress: Progress) => {
+  const onProgressChange = (progress: ProgressKeyType) => {
     setCurSetting({ ...curSetting, selectedProgress: progress });
   };
 
@@ -279,27 +260,17 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
           <hr />
           <h5 className="pt-1 pb-1">进度选择</h5>
           <Form.Select
-            className={
-              curSetting.selectedProgress
-                ? progressOptionClassNames[curSetting.selectedProgress]
-                : ""
-            }
             value={curSetting.selectedProgress}
             onChange={(e) => {
-              onProgressChange(e.target.value as Progress);
+              onProgressChange(e.target.value as ProgressKeyType);
             }}
+            style={{ color: getOption(curSetting.selectedProgress).color }}
           >
-            <option value=""></option>
+            <option value="">[全部]</option>
 
-            {[
-              Progress.TODO,
-              Progress.WORKING,
-              Progress.TOO_HARD,
-              Progress.REVIEW_NEEDED,
-              Progress.AC,
-            ].map((p) => (
-              <option key={p} value={p} className={progressOptionClassNames[p]}>
-                {progressTranslations[p]}
+            {optionKeys.map((p) => (
+              <option key={p} value={p}>
+                {getOption(p).label}
               </option>
             ))}
           </Form.Select>
@@ -319,7 +290,7 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
 
 interface SettingsType {
   columnVisibility: VisibilityState;
-  selectedProgress: Progress | "";
+  selectedProgress: ProgressKeyType;
   selectedTags: Record<string, boolean>;
 }
 
@@ -332,7 +303,19 @@ const defaultSettings: SettingsType = {
 export default function Zenk() {
   // State and hooks
   const { zen: data, isPending: progressLoading } = useZen();
-  const [allProgress, _, setProgress] = useAllProgress();
+  const { solutions } = useSolutions();
+
+  const { tags, isPending: tagsLoading } = useQuestionTags(null);
+  const { tags: qtags } = useTags();
+
+  const [showFilter, setShowFilter] = useState(false);
+
+  const [settings, setSettings] = useStorage(LC_RATING_ZEN_SETTINGS_KEY, {
+    defaultValue: defaultSettings,
+  });
+
+  const [allProgress, _, setProgress] = useQuestProgress();
+  const { optionKeys, getOption } = useProgressOptions();
 
   const [currentFilterKey, setCurrentFilterKey] = useStorage(
     LC_RATING_ZEN_LAST_USED_FILTER_KEY,
@@ -341,6 +324,10 @@ export default function Zenk() {
     }
   );
 
+  const queryTags = (id: string): QTag => {
+    return tags ? tags[id] : [[], []];
+  };
+
   const curRatingFilter = useMemo(() => {
     return (
       ratingFilters.find((filter) => filter.label === currentFilterKey)?.fn ||
@@ -348,35 +335,13 @@ export default function Zenk() {
     );
   }, [currentFilterKey]);
 
-  // Event handlers
-  const handleProgressSelectChange = useCallback(
-    (questID: string, value: Progress) => {
-      const newValue = value;
-      setProgress(questID, newValue);
-    },
-    []
-  );
-
-  const { solutions } = useSolutions();
-  const { tags, isPending: tagsLoading } = useQuestionTags(null);
-  const queryTags = (id: string): QTag => {
-    return tags ? tags[id] : [[], []];
-  };
-
-  const { tags: qtags } = useTags();
-  const [showFilter, setShowFilter] = useState(false);
-
-  const [settings, setSettings] = useStorage(LC_RATING_ZEN_SETTINGS_KEY, {
-    defaultValue: defaultSettings,
-  });
-
   const filteredData = useMemo(() => {
     const tagsFilter = buildTagFilterFn(settings.selectedTags, queryTags);
 
     const progressFilter = settings.selectedProgress
       ? (v: ConstQuestion) => {
-          const progress = allProgress[v.question_id] || Progress.TODO;
-          return progress === settings.selectedProgress;
+          const progress = getOption(allProgress[v.question_id]);
+          return progress.key === settings.selectedProgress;
         }
       : () => true;
 
@@ -385,6 +350,15 @@ export default function Zenk() {
       .filter(tagsFilter)
       .filter(progressFilter);
   }, [data, curRatingFilter, settings]);
+
+  // Event handlers
+  const handleProgressSelectChange = useCallback(
+    (questID: string, value: ProgressKeyType) => {
+      const newValue = value;
+      setProgress(questID, newValue);
+    },
+    []
+  );
 
   if (progressLoading) {
     return <Loading />;
@@ -414,6 +388,8 @@ export default function Zenk() {
 
       {showFilter && (
         <FilterSettings
+          optionKeys={optionKeys}
+          getOption={getOption}
           lang={"zh"}
           tags={qtags}
           handleClose={() => setShowFilter(false)}
@@ -423,14 +399,16 @@ export default function Zenk() {
       )}
       <div style={{ width: "100%" }}>
         <ZenTableComp
+          optionKeys={optionKeys}
+          getOption={getOption}
           querySolution={(id: string) => {
             return solutions[id];
           }}
           columnVisibility={settings.columnVisibility}
           queryTags={queryTags}
           data={filteredData}
-          progress={(item: ConstQuestion) =>
-            allProgress[item.question_id] || Progress.TODO
+          quest2progress={(item: ConstQuestion) =>
+            allProgress[item.question_id]
           }
           handleProgressSelectChange={handleProgressSelectChange}
         />
@@ -439,22 +417,28 @@ export default function Zenk() {
   );
 }
 
+interface ZenTableCompProps {
+  optionKeys: ProgressKeyType[];
+  getOption: (key: ProgressKeyType) => OptionEntry;
+  columnVisibility: VisibilityState;
+  queryTags: (id: string) => QTag;
+  data: ConstQuestion[];
+  querySolution: (id: string) => SolutionType;
+  quest2progress: (v: ConstQuestion) => ProgressKeyType;
+  handleProgressSelectChange: (questID: string, value: ProgressKeyType) => void;
+}
+
 const ZenTableComp = React.memo(
   ({
+    optionKeys,
+    getOption,
     queryTags,
     data,
     columnVisibility,
     querySolution,
-    progress,
+    quest2progress,
     handleProgressSelectChange,
-  }: {
-    columnVisibility: VisibilityState;
-    queryTags: (id: string) => QTag;
-    data: ConstQuestion[];
-    querySolution: (id: string) => SolutionType;
-    progress: (v: ConstQuestion) => Progress;
-    handleProgressSelectChange: (questID: string, value: Progress) => void;
-  }) => {
+  }: ZenTableCompProps) => {
     const columns = React.useMemo<ColumnDef<ConstQuestion>[]>(
       () => [
         {
@@ -565,28 +549,18 @@ const ZenTableComp = React.memo(
             const item = info.row.original;
             return (
               <Form.Select
-                className={progressOptionClassNames[progress(item)] || ""}
-                value={progress(item) === Progress.TODO ? "" : progress(item)}
+                value={getOption(quest2progress(item)).key}
                 onChange={(e) =>
                   handleProgressSelectChange(
                     item.question_id,
-                    e.target.value as Progress
+                    e.target.value as ProgressKeyType
                   )
                 }
+                style={{ color: getOption(quest2progress(item)).color }}
               >
-                {[
-                  Progress.TODO,
-                  Progress.WORKING,
-                  Progress.TOO_HARD,
-                  Progress.REVIEW_NEEDED,
-                  Progress.AC,
-                ].map((p) => (
-                  <option
-                    key={p}
-                    value={p}
-                    className={progressOptionClassNames[p] || ""}
-                  >
-                    {progressTranslations[p]}
+                {optionKeys.map((p) => (
+                  <option key={p} value={p}>
+                    {getOption(p).label}
                   </option>
                 ))}
               </Form.Select>

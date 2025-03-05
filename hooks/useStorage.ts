@@ -2,10 +2,10 @@ import {
   Dispatch,
   SetStateAction,
   useCallback,
-  useState,
-  useRef,
-  useLayoutEffect,
   useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
 } from "react";
 
 type StorageType = "local" | "session";
@@ -30,30 +30,23 @@ type Options<T> = {
 } & Serialization<T> &
   Encryption;
 
-type UseStorageReturn<T> = [
+type Return<T> = [
   T | undefined,
   Dispatch<SetStateAction<T | undefined>>,
   () => void
 ];
 
-type OptionsWithDefault<T> = {
+type Options_D<T> = {
   type?: StorageType;
   defaultValue: T;
 } & Serialization<T> &
   Encryption;
 
-type UseStorageReturnWithDefault<T> = [
-  T,
-  Dispatch<SetStateAction<T>>,
-  () => void
-];
+type Return_D<T> = [T, Dispatch<SetStateAction<T>>, () => void];
 
-function useStorage<T>(
-  key: string,
-  options: OptionsWithDefault<T>
-): UseStorageReturnWithDefault<T>;
-
-function useStorage<T>(key: string, options?: Options<T>): UseStorageReturn<T> {
+function useStorage<T>(key: string, options: Options_D<T>): Return_D<T>;
+function useStorage<T>(key: string, options?: Options<T>): Return<T>;
+function useStorage<T>(key: string, options?: Options<T>): Return<T> {
   const defaultValue = options?.defaultValue;
 
   if (!key) {

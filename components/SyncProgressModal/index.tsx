@@ -1,4 +1,4 @@
-import useAllProgress, { Progress } from "@hooks/useAllProgress";
+import { ProgressKeyType, useQuestProgress } from "@hooks/useProgress";
 import React, { useState } from "react";
 import { Alert, Button, Form, Modal } from "react-bootstrap";
 
@@ -15,7 +15,7 @@ export default function SyncProgressModal({
     "idle" | "fetched" | "set" | "error"
   >("idle");
   const [inputData, setInputData] = useState("");
-  const [allProgress, setAllProgress] = useAllProgress();
+  const [allProgress, setAllProgress] = useQuestProgress();
   const fetchedData = JSON.stringify(allProgress, null, 2);
 
   const handleFetch = () => {
@@ -25,7 +25,10 @@ export default function SyncProgressModal({
 
   const handleSet = () => {
     try {
-      const parsedData = JSON.parse(inputData) as Record<string, Progress>;
+      const parsedData = JSON.parse(inputData) as Record<
+        string,
+        ProgressKeyType
+      >;
       setAllProgress(parsedData);
       setSyncStatus("set");
     } catch (error) {
