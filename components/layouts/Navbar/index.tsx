@@ -1,7 +1,7 @@
 "use client";
 
 import { GithubBasicBadge as GithubBadge } from "@components/GithubBadge";
-import SyncProgressModal from "@components/SyncProgressModal";
+import SettingsPanel from "@components/SettingsPanel";
 import ThemeSwitchButton from "@components/ThemeSwitchButton";
 import { useTheme } from "@hooks/useTheme";
 import Link from "next/dist/client/link";
@@ -69,11 +69,8 @@ export default function () {
   const handleOpenModal = () => {
     setShowModal(true);
   };
-  const handleCloseModal = (update: boolean) => {
+  const handleCloseModal = () => {
     setShowModal(false);
-    if (update) {
-      window.location.reload();
-    }
   };
 
   return (
@@ -150,9 +147,9 @@ export default function () {
                 className="fw-bold fs-6 p-1"
                 onClick={handleOpenModal}
               >
-                同步进度
+                站点设置
               </Button>
-              <SyncProgressModal show={showModal} onHide={handleCloseModal} />
+              <SettingsPanel show={showModal} onHide={handleCloseModal} />
             </Link>
 
             <Dropdown
