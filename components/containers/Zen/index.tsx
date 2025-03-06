@@ -222,6 +222,7 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
         show={true}
         dialogClassName="zen-filter-dialog"
         onHide={handleClose}
+        size="xl"
       >
         <Modal.Header closeButton>
           <Modal.Title>设置</Modal.Title>
@@ -260,23 +261,24 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
           {RenderTags(tags)}
           <hr />
           <h5 className="pt-1 pb-1">进度选择</h5>
-          <Form.Select
-            value={curSetting.selectedProgress}
-            onChange={(e) => {
-              onProgressChange(e.target.value as ProgressKeyType);
-            }}
-            style={{ color: getOption(curSetting.selectedProgress).color }}
-          >
-            <option value="" style={{ color: getOption().color }}>
-              [全部]
-            </option>
-
-            {optionKeys.map((p) => (
-              <option key={p} value={p} style={{ color: getOption(p).color }}>
-                {getOption(p).label}
+          <div className="w-25">
+            <Form.Select
+              value={curSetting.selectedProgress}
+              onChange={(e) => {
+                onProgressChange(e.target.value as ProgressKeyType);
+              }}
+              style={{ color: getOption(curSetting.selectedProgress).color }}
+            >
+              <option value="" style={{ color: getOption().color }}>
+                [全部]
               </option>
-            ))}
-          </Form.Select>
+              {optionKeys.map((p) => (
+                <option key={p} value={p} style={{ color: getOption(p).color }}>
+                  {getOption(p).label}
+                </option>
+              ))}
+            </Form.Select>
+          </div>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={onCancel}>
