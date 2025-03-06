@@ -144,6 +144,15 @@ function ProblemCategoryList({
                           {getOption(p).label}
                         </option>
                       ))}
+                      {optionKeys.indexOf(option.key) == -1 && (
+                        <option
+                          key={option.key}
+                          value={option.key}
+                          style={{ color: option.color }}
+                        >
+                          {option.label}
+                        </option>
+                      )}
                     </Form.Select>
                   </div>
                 </li>
