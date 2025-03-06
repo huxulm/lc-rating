@@ -2,6 +2,7 @@ import { BiSolidCustomize } from "react-icons/bi";
 import { LuArrowUpDown } from "react-icons/lu";
 import CustomizeOptions from "./settingPages/CustomizeOptions";
 import SyncProgress from "./settingPages/SyncProgress";
+
 export type SettingTabType = {
   key: string;
   title: string;

@@ -149,8 +149,8 @@ export default function () {
               >
                 站点设置
               </Button>
-              <SettingsPanel show={showModal} onHide={handleCloseModal} />
             </Link>
+            <SettingsPanel show={showModal} onHide={handleCloseModal} />
 
             <Dropdown
               className="nav-link"
