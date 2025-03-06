@@ -24,10 +24,6 @@ function CustomizeOptions() {
     }));
   });
 
-  const onChange = (formData: OptionEntry[]) => {
-    setNewFormData(formData);
-  };
-
   const onSubmit = () => {
     const newOptions = newFormData.reduce((acc: CustomOptionsType, item) => {
       acc[item.key] = { key: item.key, label: item.label, color: item.color };
@@ -42,7 +38,7 @@ function CustomizeOptions() {
         <Col md={8}>
           <OptionsFrom
             formData={newFormData}
-            onChange={onChange}
+            onChange={setNewFormData}
             onSubmit={onSubmit}
           />
         </Col>

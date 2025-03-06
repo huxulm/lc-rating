@@ -19,8 +19,6 @@ interface OptionsFormProps {
 }
 
 function OptionsForm({ formData, onChange, onSubmit }: OptionsFormProps) {
-  const [submitErrors, setSubmitErrors] = useState<string[]>([]);
-
   const sortedFormData = useMemo(() => {
     const [customEntries, defaultEntries] = partition(
       formData,
@@ -29,6 +27,19 @@ function OptionsForm({ formData, onChange, onSubmit }: OptionsFormProps) {
     return [...defaultEntries, ...customEntries];
   }, [formData]);
 
+  const errors = useMemo(() => {
+    const existingKeys = new Set<string>();
+    const errors: string[] = [];
+    sortedFormData.forEach((item, i) => {
+      if (existingKeys.has(item.key)) {
+        errors[i] = "Key不能重复";
+      } else {
+        existingKeys.add(item.key);
+      }
+    });
+    return errors;
+  }, [sortedFormData]);
+
   const handleKeyChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     idx: number
@@ -36,7 +47,6 @@ function OptionsForm({ formData, onChange, onSubmit }: OptionsFormProps) {
     const newData = [...sortedFormData];
     newData[idx] = { ...newData[idx], key: e.target.value.trim() };
     onChange(newData);
-    setSubmitErrors([]);
   };
 
   const handleLabelChange = (
@@ -73,21 +83,7 @@ function OptionsForm({ formData, onChange, onSubmit }: OptionsFormProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const keys = sortedFormData.map((item) => item.key);
-    const keyCounts: { [key: string]: number } = {};
-
-    keys.forEach((key) => {
-      keyCounts[key] = (keyCounts[key] || 0) + 1;
-    });
-
-    const duplicates = Object.keys(keyCounts).filter(
-      (key) => keyCounts[key] > 1
-    );
-
-    if (duplicates.length > 0) {
-      setSubmitErrors(duplicates);
-    } else {
-      setSubmitErrors([]);
+    if (errors.length === 0) {
       onSubmit();
     }
   };
@@ -96,19 +92,19 @@ function OptionsForm({ formData, onChange, onSubmit }: OptionsFormProps) {
     <Form>
       <Stack gap={3}>
         {sortedFormData.map((item, i) => (
-          <Row key={i} className="g-2 align-items-center">
+          <Row key={i} className="g-2">
             <Col>
               <Form.Group controlId={`key-${item.key}`}>
                 <Form.Control
                   placeholder="主键 Key"
                   value={item.key}
                   onChange={(e) => handleKeyChange(e, i)}
-                  isInvalid={submitErrors.includes(item.key)}
+                  isInvalid={errors[i] !== undefined}
                   disabled={i < Object.keys(defaultOptions).length}
                 />
-                {submitErrors.includes(item.key) && (
+                {errors[i] && (
                   <Form.Control.Feedback type="invalid">
-                    Key不能重复
+                    {errors[i]}
                   </Form.Control.Feedback>
                 )}
               </Form.Group>
