@@ -31,7 +31,9 @@ function OptionsForm({ formData, onChange, onSubmit }: OptionsFormProps) {
     const existingKeys = new Set<string>();
     const errors: string[] = [];
     sortedFormData.forEach((item, i) => {
-      if (existingKeys.has(item.key)) {
+      if (item.key === "") {
+        errors[i] = "Key不能为空";
+      } else if (existingKeys.has(item.key)) {
         errors[i] = "Key不能重复";
       } else {
         existingKeys.add(item.key);
