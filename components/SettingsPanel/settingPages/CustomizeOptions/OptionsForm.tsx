@@ -40,30 +40,13 @@ function OptionsForm({ formData, onChange, onSubmit }: OptionsFormProps) {
     return errors;
   }, [sortedFormData]);
 
-  const handleKeyChange = (
+  const handleFieldChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-    idx: number
+    idx: number,
+    field: "key" | "label" | "color"
   ) => {
     const newData = [...sortedFormData];
-    newData[idx] = { ...newData[idx], key: e.target.value.trim() };
-    onChange(newData);
-  };
-
-  const handleLabelChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-    idx: number
-  ) => {
-    const newData = [...sortedFormData];
-    newData[idx] = { ...newData[idx], label: e.target.value.trim() };
-    onChange(newData);
-  };
-
-  const handleColorChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-    idx: number
-  ) => {
-    const newData = [...sortedFormData];
-    newData[idx] = { ...newData[idx], color: e.target.value };
+    newData[idx] = { ...newData[idx], [field]: e.target.value.trim() };
     onChange(newData);
   };
 
@@ -98,7 +81,7 @@ function OptionsForm({ formData, onChange, onSubmit }: OptionsFormProps) {
                 <Form.Control
                   placeholder="主键 Key"
                   value={item.key}
-                  onChange={(e) => handleKeyChange(e, i)}
+                  onChange={(e) => handleFieldChange(e, i, "key")}
                   isInvalid={errors[i] !== undefined}
                   disabled={i < Object.keys(defaultOptions).length}
                 />
@@ -114,7 +97,7 @@ function OptionsForm({ formData, onChange, onSubmit }: OptionsFormProps) {
               <Form.Control
                 placeholder="标签 Label"
                 value={item.label}
-                onChange={(e) => handleLabelChange(e, i)}
+                onChange={(e) => handleFieldChange(e, i, "label")}
               />
             </Col>
 
@@ -125,7 +108,7 @@ function OptionsForm({ formData, onChange, onSubmit }: OptionsFormProps) {
                   title="颜色 Color"
                   value={item.color}
                   className="w-50"
-                  onChange={(e) => handleColorChange(e, i)}
+                  onChange={(e) => handleFieldChange(e, i, "color")}
                 />
                 <Button
                   variant="outline-danger"
