@@ -6,6 +6,7 @@ import {
   useProgressOptions,
   useQuestProgress,
 } from "@hooks/useProgress";
+import useStorage from "@hooks/useStorage";
 import { hashCode } from "@utils/hash";
 import Form from "react-bootstrap/esm/Form";
 
@@ -73,6 +74,10 @@ function ProblemCategoryList({
     }
   };
 
+  const filteredChild = (data.child || []).filter(
+    (item) => !item.isPremium || showPremium
+  );
+
   return (
     <div className="shadow rounded p-2 leaf">
       <h3 className="title" id={`${hashCode(data.title || "")}`}>
@@ -84,71 +89,69 @@ function ProblemCategoryList({
           dangerouslySetInnerHTML={{ __html: data.summary }}
         ></p>
       )}
-      <ul className={`list p-2 ${data.child && getCols(data.child.length)}`}>
-        {data.child &&
-          data.child
-            .filter((item) => !item.isPremium || showPremium)
-            .map((item) => {
-              const id = title2id(item.title);
-              const progressKey = allProgress[id];
-              const option = getOption(progressKey);
+      <ul className={`list p-2 ${getCols(filteredChild.length)}`}>
+        {filteredChild &&
+          filteredChild.map((item) => {
+            const id = title2id(item.title);
+            const progressKey = allProgress[id];
+            const option = getOption(progressKey);
+            const rating = Number(item.score);
 
-              const rating = Number(item.score);
-
-              return (
-                <li
-                  className="d-flex justify-content-between"
-                  key={hashCode(item.title || "")}
-                >
-                  <div>
+            return (
+              <li
+                data-todo={option.key === getOption().key}
+                className="d-flex justify-content-between"
+                key={hashCode(item.title || "")}
+              >
+                <div>
+                  <a
+                    href={"https://leetcode.cn/problems" + item.src}
+                    target="_blank"
+                  >
+                    {item.title + (item.isPremium ? " (会员题)" : "")}
+                  </a>
+                  {showEn && (
                     <a
-                      href={"https://leetcode.cn/problems" + item.src}
+                      className="ms-2"
+                      href={"https://leetcode.com/problems" + item.src}
                       target="_blank"
                     >
-                      {item.title + (item.isPremium ? " (会员题)" : "")}
+                      <ShareIcon height={16} width={16} />
                     </a>
-                    {showEn && (
-                      <a
-                        className="ms-2"
-                        href={"https://leetcode.com/problems" + item.src}
-                        target="_blank"
+                  )}
+                </div>
+                {item.score && showRating ? (
+                  <div className="ms-2 text-nowrap d-flex justify-content-center align-items-center pb-rating-bg">
+                    <RatingCircle rating={rating} />
+                    <ColorRating className="rating-text" rating={rating}>
+                      {rating.toFixed(0)}
+                    </ColorRating>
+                  </div>
+                ) : null}
+                <div className="d-flex align-items-center ms-2">
+                  <Form.Select
+                    style={{
+                      color: option.color,
+                    }}
+                    value={option.key}
+                    onChange={(e) =>
+                      handleProgressSelectChange(id, e.target.value)
+                    }
+                  >
+                    {optionKeys.map((p) => (
+                      <option
+                        key={p}
+                        value={p}
+                        style={{ color: getOption(p).color }}
                       >
-                        <ShareIcon height={16} width={16} />
-                      </a>
-                    )}
-                  </div>
-                  {item.score && showRating ? (
-                    <div className="ms-2 text-nowrap d-flex justify-content-center align-items-center pb-rating-bg">
-                      <RatingCircle rating={rating} />
-                      <ColorRating className="rating-text" rating={rating}>
-                        {rating.toFixed(0)}
-                      </ColorRating>
-                    </div>
-                  ) : null}
-                  <div className="d-flex align-items-center ms-2">
-                    <Form.Select
-                      style={{
-                        color: option.color,
-                      }}
-                      value={option.key}
-                      onChange={(e) =>
-                        handleProgressSelectChange(id, e.target.value)
-                      }
-                    >
-                      {optionKeys.map((p) => (
-                        <option
-                          key={p}
-                          value={p}
-                          style={{ color: getOption(p).color }}
-                        >
-                          {getOption(p).label}
-                        </option>
-                      ))}
-                    </Form.Select>
-                  </div>
-                </li>
-              );
-            })}
+                        {getOption(p).label}
+                      </option>
+                    ))}
+                  </Form.Select>
+                </div>
+              </li>
+            );
+          })}
       </ul>
     </div>
   );

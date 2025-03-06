@@ -21,15 +21,16 @@ const MoveToTodoButton: React.FC<MoveToTodoButtonProps> = ({ random }) => {
   };
 
   const scrollToTodo = () => {
-    let targetElement: HTMLElement | null | undefined = null;
+    let targetElement: HTMLElement | null = null;
     if (random) {
-      const todoElements = document.querySelectorAll(".zen-option-TODO");
+      const todoElements: NodeListOf<HTMLDivElement> =
+        document.querySelectorAll("[data-todo=true]");
       if (todoElements.length > 0) {
         const randomIndex = Math.floor(Math.random() * todoElements.length);
-        targetElement = todoElements[randomIndex].closest("li") as HTMLElement;
+        targetElement = todoElements[randomIndex];
       }
     } else {
-      targetElement = document.querySelector(".zen-option-TODO")?.closest("li");
+      targetElement = document.querySelector("[data-todo=true]");
     }
     if (targetElement) {
       const yOffset = window.innerHeight / 2;
