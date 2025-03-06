@@ -11,31 +11,28 @@ import Preview from "./Preview";
 function CustomizeOptions() {
   const { optionKeys, getOption, updateOptions } = useProgressOptions();
 
-  const options = useMemo(
+  const savedFormData = useMemo(
     () => optionKeys.map(getOption),
     [optionKeys, getOption]
   );
 
-  const [formData, setFormData] = useState<OptionEntry[]>(() => {
-    return options.map((option) => ({
+  const [newFormData, setNewFormData] = useState<OptionEntry[]>(() => {
+    return savedFormData.map((option) => ({
       key: option.key,
       label: option.label,
       color: option.color,
     }));
   });
 
-  const newOptions = useMemo(() => {
-    return formData.reduce((acc: CustomOptionsType, item) => {
-      acc[item.key] = { key: item.key, label: item.label, color: item.color };
-      return acc;
-    }, {});
-  }, [formData]);
-
   const onChange = (formData: OptionEntry[]) => {
-    setFormData(formData);
+    setNewFormData(formData);
   };
 
   const onSubmit = () => {
+    const newOptions = newFormData.reduce((acc: CustomOptionsType, item) => {
+      acc[item.key] = { key: item.key, label: item.label, color: item.color };
+      return acc;
+    }, {});
     updateOptions(newOptions);
   };
 
@@ -44,14 +41,14 @@ function CustomizeOptions() {
       <Row>
         <Col md={8}>
           <OptionsFrom
-            formData={formData}
+            formData={newFormData}
             onChange={onChange}
             onSubmit={onSubmit}
           />
         </Col>
 
         <Col md={4} className="preview-section">
-          <Preview options={options} />
+          <Preview options={newFormData} />
         </Col>
       </Row>
     </Container>
