@@ -57,7 +57,10 @@ class StorageStore<T> {
   private getValue(): T | undefined {
     const storage = this.getStorage();
     const value = storage?.getItem(this.key);
-    if (value !== undefined && value !== null) {
+    if (value === undefined || value === null) {
+      return this.options.defaultValue;
+    }
+    try {
       const decryptedValue =
         "decrypt" in this.options ? this.options.decrypt(value) : value;
       const deserializedValue =
@@ -65,8 +68,10 @@ class StorageStore<T> {
           ? this.options.deserializer(decryptedValue)
           : JSON.parse(decryptedValue);
       return deserializedValue;
+    } catch (error) {
+      console.error("Failed to parse value from storage: ", error);
+      return this.options.defaultValue;
     }
-    return this.options.defaultValue;
   }
 
   private setValue(value: T | undefined) {
