@@ -17,7 +17,6 @@ import { SolutionType, useSolutions } from "@hooks/useSolutions";
 import useStorage from "@hooks/useStorage";
 import { Tags, useTags } from "@hooks/useTags";
 import { useZen } from "@hooks/useZen";
-import { Options } from "@node_modules/next/dist/server/base-server";
 
 import {
   Column,
@@ -34,22 +33,22 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import React, { useCallback, useMemo, useState, useTransition } from "react";
-import Button from "react-bootstrap/Button";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
-import Container from "react-bootstrap/Container";
-import Dropdown from "react-bootstrap/Dropdown";
-import Form from "react-bootstrap/Form";
-import FormLabel from "react-bootstrap/FormLabel";
-import Modal from "react-bootstrap/Modal";
-import Pagination from "react-bootstrap/Pagination";
-import Table from "react-bootstrap/Table";
+import React, { useCallback, useMemo, useState } from "react";
+import {
+  Button,
+  ButtonGroup,
+  Container,
+  Dropdown,
+  Form,
+  FormLabel,
+  Modal,
+  Pagination,
+  Table,
+} from "react-bootstrap";
 
 // Constants and Enums
 const LC_HOST = `https://leetcode.cn`;
 const LC_HOST_EN = `https://leetcode.com`;
-const LC_RATING_PROGRESS_KEY = (questionID: string) =>
-  `lc-rating-zen-progress-${questionID}`;
 const LC_RATING_ZEN_LAST_USED_FILTER_KEY = `lc-rating-zen-last-used-filter`;
 const LC_RATING_ZEN_SETTINGS_KEY = `lc-rating-zen-settings`;
 
@@ -128,9 +127,11 @@ function buildTagFilterFn(
 
 interface FilterSettingsProps {
   handleClose: () => void;
-  onSettingsSaved: React.Dispatch<React.SetStateAction<SettingsType>>;
+  onSettingsSaved: React.Dispatch<
+    React.SetStateAction<SettingsType | undefined>
+  >;
   optionKeys: ProgressKeyType[];
-  getOption: (key: ProgressKeyType) => OptionEntry;
+  getOption: (key?: ProgressKeyType) => OptionEntry;
   tags: Tags;
   lang: "zh" | "en";
   settings: SettingsType;
@@ -266,10 +267,12 @@ const FilterSettings: React.FunctionComponent<FilterSettingsProps> = ({
             }}
             style={{ color: getOption(curSetting.selectedProgress).color }}
           >
-            <option value="">[全部]</option>
+            <option value="" style={{ color: getOption().color }}>
+              [全部]
+            </option>
 
             {optionKeys.map((p) => (
-              <option key={p} value={p}>
+              <option key={p} value={p} style={{ color: getOption(p).color }}>
                 {getOption(p).label}
               </option>
             ))}
@@ -310,11 +313,14 @@ export default function Zenk() {
 
   const [showFilter, setShowFilter] = useState(false);
 
-  const [settings, setSettings] = useStorage(LC_RATING_ZEN_SETTINGS_KEY, {
-    defaultValue: defaultSettings,
-  });
+  const [settings = defaultSettings, setSettings] = useStorage(
+    LC_RATING_ZEN_SETTINGS_KEY,
+    {
+      defaultValue: defaultSettings,
+    }
+  );
 
-  const [allProgress, _, setProgress] = useQuestProgress();
+  const { allProgress, updateProgress, removeProgress } = useQuestProgress();
   const { optionKeys, getOption } = useProgressOptions();
 
   const [currentFilterKey, setCurrentFilterKey] = useStorage(
@@ -353,9 +359,12 @@ export default function Zenk() {
 
   // Event handlers
   const handleProgressSelectChange = useCallback(
-    (questID: string, value: ProgressKeyType) => {
-      const newValue = value;
-      setProgress(questID, newValue);
+    (questID: string, progress: ProgressKeyType) => {
+      if (progress === getOption().key) {
+        removeProgress(questID);
+      } else {
+        updateProgress(questID, progress);
+      }
     },
     []
   );
@@ -547,22 +556,37 @@ const ZenTableComp = React.memo(
           enableSorting: false,
           cell: (info) => {
             const item = info.row.original;
+            const curOption = getOption(quest2progress(item));
+
             return (
               <Form.Select
-                value={getOption(quest2progress(item)).key}
+                value={curOption.key}
                 onChange={(e) =>
                   handleProgressSelectChange(
                     item.question_id,
                     e.target.value as ProgressKeyType
                   )
                 }
-                style={{ color: getOption(quest2progress(item)).color }}
+                style={{ color: curOption.color }}
               >
                 {optionKeys.map((p) => (
-                  <option key={p} value={p}>
+                  <option
+                    key={p}
+                    value={p}
+                    style={{ color: getOption(p).color }}
+                  >
                     {getOption(p).label}
                   </option>
                 ))}
+                {!(curOption.key in optionKeys) && (
+                  <option
+                    key={curOption.key}
+                    value={curOption.key}
+                    style={{ color: curOption.color }}
+                  >
+                    {curOption.label}
+                  </option>
+                )}
               </Form.Select>
             );
           },

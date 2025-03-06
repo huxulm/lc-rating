@@ -1,92 +1,137 @@
-import { useEffect, useState } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import { ProgressKeyType } from "./useProgressOption";
 
-const getStorageKey = (questID: string) => `lc-rating-zen-progress-${questID}`;
+const storageKeyPrefix = "lc-rating-zen-progress-";
+const getStorageKey = (questID: string) => `${storageKeyPrefix}${questID}`;
 
 type QuestProgressType = Record<string, ProgressKeyType>;
 
-function useQuestProgress(): [
-  QuestProgressType,
-  (newProgress: QuestProgressType) => void,
-  (questID: string, progress: ProgressKeyType) => void,
-  (questID: string) => void
-] {
-  const [questProgress, setQuestProgress] = useState<QuestProgressType>({});
+const isBrowser = () => typeof window !== "undefined";
 
-  if (typeof window === "undefined") {
-    return [questProgress, () => {}, () => {}, () => {}];
+const getQuestProgressKeys = () => {
+  const keys = Object.keys(localStorage).filter((key) =>
+    key.startsWith(storageKeyPrefix)
+  );
+  return keys;
+};
+
+interface StoreType {
+  allProgress: QuestProgressType;
+  setAllProgress: (newProgress: QuestProgressType) => void;
+  updateProgress: (questID: string, progress: ProgressKeyType) => void;
+  removeProgress: (questID: string) => void;
+
+  listeners: Set<() => void>;
+  subscribe: (listener: () => void) => () => void;
+  getSnapshot: () => QuestProgressType;
+  notifyListeners: () => void;
+}
+
+class Store implements StoreType {
+  allProgress: QuestProgressType;
+  listeners: Set<() => void>;
+
+  constructor() {
+    this.allProgress = {};
+    this.listeners = new Set();
+
+    if (isBrowser()) {
+      const keys = getQuestProgressKeys();
+      keys.forEach((key) => {
+        const value = localStorage.getItem(key);
+        const questID = key.replace(storageKeyPrefix, "");
+        if (value) {
+          this.allProgress[questID] = value as ProgressKeyType;
+        }
+      });
+    }
   }
 
-  const getQuestProgressKeys = () => {
-    const keys = Object.keys(localStorage).filter((key) =>
-      key.startsWith("lc-rating-zen-progress-")
-    );
-    return keys;
+  setAllProgress = (newProgress: QuestProgressType) => {
+    if (isBrowser()) {
+      Object.entries(newProgress).forEach(([questID, progress]) => {
+        const key = getStorageKey(questID);
+        localStorage.setItem(key, progress);
+      });
+    }
+
+    this.allProgress = { ...this.allProgress, ...newProgress };
+    this.notifyListeners();
   };
 
-  const getQuestProgress = () => {
-    const keys = getQuestProgressKeys();
-    const newProgressMap: QuestProgressType = {};
-    keys.forEach((key) => {
-      const value = localStorage.getItem(key);
-      const questID = key.replace("lc-rating-zen-progress-", "");
-      if (value) {
-        newProgressMap[questID] = value as ProgressKeyType;
-      }
-    });
-    setQuestProgress(newProgressMap);
-  };
-
-  useEffect(() => {
-    getQuestProgress();
-  }, []);
-
-  const set = (next: QuestProgressType) => {
-    Object.entries(next).forEach(([questID, progress]) => {
+  updateProgress = (questID: string, progress: ProgressKeyType) => {
+    if (isBrowser()) {
       const key = getStorageKey(questID);
       localStorage.setItem(key, progress);
-    });
+    }
 
-    setQuestProgress(next);
+    this.allProgress = { ...this.allProgress, [questID]: progress };
+    this.notifyListeners();
   };
 
-  const updateProgress = (questID: string, progress: ProgressKeyType) => {
-    const key = getStorageKey(questID);
-    localStorage.setItem(key, progress);
-    setQuestProgress((prev) => ({ ...prev, [questID]: progress }));
+  removeProgress = (questID: string) => {
+    if (isBrowser()) {
+      const key = getStorageKey(questID);
+      localStorage.removeItem(key);
+    }
+
+    const { [questID]: _, ...rest } = this.allProgress;
+    this.allProgress = rest;
+    this.notifyListeners();
   };
 
-  const deleteProgress = (questID: string) => {
-    const key = getStorageKey(questID);
-    localStorage.removeItem(key);
-    setQuestProgress((prev) => {
-      const { [questID]: _, ...rest } = prev;
-      return rest;
-    });
+  subscribe = (listener: () => void) => {
+    this.listeners.add(listener);
+    return () => this.listeners.delete(listener);
   };
+
+  getSnapshot = () => this.allProgress;
+
+  notifyListeners = () => {
+    this.listeners.forEach((listener) => listener());
+  };
+}
+
+const store = new Store();
+
+function useQuestProgress(): {
+  allProgress: QuestProgressType;
+  setAllProgress: (newProgress: QuestProgressType) => void;
+  updateProgress: (questID: string, progress: ProgressKeyType) => void;
+  removeProgress: (questID: string) => void;
+} {
+  const allProgress = useSyncExternalStore(store.subscribe, store.getSnapshot);
 
   useEffect(() => {
-    if (typeof window === "undefined") {
+    if (!isBrowser()) {
       return;
     }
 
     const handleStorageChange = (e: StorageEvent) => {
       if (
-        e.key?.startsWith("lc-rating-zen-progress-") &&
+        e.key?.startsWith(storageKeyPrefix) &&
         e.storageArea === localStorage
       ) {
-        const questID = e.key.replace("lc-rating-zen-progress-", "");
+        const questID = e.key.replace(storageKeyPrefix, "");
         const newProgress = e.newValue as ProgressKeyType;
-        setQuestProgress((prev) => ({ ...prev, [questID]: newProgress }));
+        if (newProgress) {
+          store.updateProgress(questID, newProgress);
+        } else {
+          store.removeProgress(questID);
+        }
       }
     };
 
     window.addEventListener("storage", handleStorageChange);
-
     return () => window.removeEventListener("storage", handleStorageChange);
   }, []);
 
-  return [questProgress, set, updateProgress, deleteProgress];
+  return {
+    allProgress,
+    setAllProgress: store.setAllProgress.bind(store),
+    updateProgress: store.updateProgress.bind(store),
+    removeProgress: store.removeProgress.bind(store),
+  };
 }
 
 export default useQuestProgress;

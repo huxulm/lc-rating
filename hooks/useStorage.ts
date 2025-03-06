@@ -2,10 +2,7 @@ import {
   Dispatch,
   SetStateAction,
   useCallback,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
+  useSyncExternalStore,
 } from "react";
 
 type StorageType = "local" | "session";
@@ -30,131 +27,138 @@ type Options<T> = {
 } & Serialization<T> &
   Encryption;
 
-type Return<T> = [
-  T | undefined,
-  Dispatch<SetStateAction<T | undefined>>,
-  () => void
-];
+// 全局存储 StorageStore 实例
+const globalStores: Record<StorageType, Record<string, StorageStore<any>>> = {
+  local: {},
+  session: {},
+};
 
-type Options_D<T> = {
-  type?: StorageType;
-  defaultValue: T;
-} & Serialization<T> &
-  Encryption;
+class StorageStore<T> {
+  private key: string;
+  private options: Options<T>;
+  private listeners: Set<() => void> = new Set();
+  private cachedValue: T | undefined; // Cache the last snapshot value
 
-type Return_D<T> = [T, Dispatch<SetStateAction<T>>, () => void];
-
-function useStorage<T>(key: string, options: Options_D<T>): Return_D<T>;
-function useStorage<T>(key: string, options?: Options<T>): Return<T>;
-function useStorage<T>(key: string, options?: Options<T>): Return<T> {
-  const defaultValue = options?.defaultValue;
-
-  if (!key) {
-    throw new Error("useLocalStorage key may not be falsy");
+  constructor(key: string, options: Options<T>) {
+    this.key = key;
+    this.options = options;
+    this.cachedValue = this.getValue(); // Initialize the cached value
   }
 
-  if (typeof window === "undefined") {
-    return [defaultValue, () => {}, () => {}];
+  public getStorage(): Storage | undefined {
+    if (typeof window === "undefined") {
+      return undefined;
+    }
+    return this.options.type === "session"
+      ? window.sessionStorage
+      : window.localStorage;
   }
 
-  const type = options?.type ?? "local";
-  const encryption =
-    options && "encrypt" in options ? options.encrypt : (data: string) => data;
-  const decryption =
-    options && "decrypt" in options ? options.decrypt : (data: string) => data;
-  const serializer =
-    options && "serializer" in options ? options.serializer : JSON.stringify;
-  const deserializer =
-    options && "deserializer" in options ? options.deserializer : JSON.parse;
-
-  const storage =
-    type === "session" ? window.sessionStorage : window.localStorage;
-
-  const initializer = useRef((key: string) => {
-    try {
-      const localStorageValue = storage.getItem(key);
-      if (localStorageValue !== null) {
-        return deserializer(decryption(localStorageValue));
-      } else {
-        defaultValue &&
-          storage.setItem(key, encryption(serializer(defaultValue)));
-        return defaultValue;
-      }
-    } catch (error) {
-      if (error instanceof Error) {
-        console.error(
-          `Error handling storage getItem for key "${key}": ` +
-            (error instanceof Error ? error.message : error)
-        );
-        return defaultValue;
-      }
+  private getValue(): T | undefined {
+    const storage = this.getStorage();
+    const value = storage?.getItem(this.key);
+    if (value !== undefined && value !== null) {
+      const decryptedValue =
+        "decrypt" in this.options ? this.options.decrypt(value) : value;
+      const deserializedValue =
+        "deserializer" in this.options
+          ? this.options.deserializer(decryptedValue)
+          : JSON.parse(decryptedValue);
+      return deserializedValue;
     }
-  });
+    return this.options.defaultValue;
+  }
 
-  const [state, setState] = useState<T | undefined>(() =>
-    initializer.current(key)
-  );
-
-  useLayoutEffect(() => setState(initializer.current(key)), [key]);
-
-  const setItem: Dispatch<SetStateAction<T | undefined>> = useCallback(
-    (valOrFunc: SetStateAction<T | undefined>) => {
-      try {
-        const newState =
-          valOrFunc instanceof Function
-            ? valOrFunc(initializer.current(key))
-            : valOrFunc;
-
-        storage.setItem(key, encryption(serializer(newState)));
-        setState(newState);
-      } catch (error) {
-        console.error(
-          `Error handling storage setItem for key "${key}": ` +
-            (error instanceof Error ? error.message : error)
-        );
-      }
-    },
-    [key, setState]
-  );
-
-  const removeItem = useCallback(() => {
-    try {
-      localStorage.removeItem(key);
-      setState(undefined);
-    } catch (error) {
-      console.error(
-        `Error handling storage removeItem for key "${key}": ` +
-          (error instanceof Error ? error.message : error)
-      );
+  private setValue(value: T | undefined) {
+    const storage = this.getStorage();
+    if (value === undefined || value === null) {
+      storage?.removeItem(this.key);
+    } else {
+      const serializedValue =
+        "serializer" in this.options
+          ? this.options.serializer(value)
+          : JSON.stringify(value);
+      const encryptedValue =
+        "encrypt" in this.options
+          ? this.options.encrypt(serializedValue)
+          : serializedValue;
+      storage?.setItem(this.key, encryptedValue);
     }
-  }, [key, setState]);
+    this.cachedValue = value;
+    this.notifyListeners();
+  }
 
-  useEffect(() => {
-    if (type !== "local" || !storage) return;
-
+  subscribe(listener: () => void): () => void {
     const handleStorageChange = (e: StorageEvent) => {
-      if (e.key === key && e.storageArea === storage) {
-        try {
-          if (e.newValue !== null) {
-            setState(deserializer(decryption(e.newValue)));
-          } else {
-            setState(defaultValue);
-          }
-        } catch (error) {
-          console.error(
-            `Error handling storage change for key "${key}": ` +
-              (error instanceof Error ? error.message : error)
-          );
-        }
+      if (e.key === null) return;
+      if (e.key === this.key && e.storageArea === this.getStorage()) {
+        this.cachedValue = this.getValue();
+        this.notifyListeners();
       }
     };
-
+    this.listeners.add(listener);
     window.addEventListener("storage", handleStorageChange);
 
-    return () => window.removeEventListener("storage", handleStorageChange);
-  }, [key, setState]);
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+      this.listeners.delete(listener);
+    };
+  }
 
-  return [state, setItem, removeItem];
+  getSnapshot(): T | undefined {
+    return this.cachedValue;
+  }
+
+  getServerSnapshot(): T | undefined {
+    return this.options.defaultValue;
+  }
+
+  notifyListeners() {
+    this.listeners.forEach((listener) => listener());
+  }
+
+  setItem(value: SetStateAction<T | undefined>) {
+    const newValue =
+      typeof value === "function"
+        ? (value as (prevState: T | undefined) => T | undefined)(
+            this.getSnapshot()
+          )
+        : value;
+    this.setValue(newValue);
+  }
+}
+
+function getOrCreateStore<T>(
+  key: string,
+  options: Options<T>
+): StorageStore<T> {
+  const storeType = options.type || "local";
+  let store = globalStores[storeType][key];
+  if (!store) {
+    store = globalStores[storeType][key] = new StorageStore(key, options);
+  }
+  return store;
+}
+
+type Return<T> = [T | undefined, Dispatch<SetStateAction<T | undefined>>];
+
+function useStorage<T>(key: string, options?: Options<T>): Return<T> {
+  const store = getOrCreateStore(key, options || {});
+
+  const state: T | undefined = useSyncExternalStore(
+    store.subscribe.bind(store),
+    store.getSnapshot.bind(store),
+    store.getServerSnapshot.bind(store)
+  );
+
+  const setItem = useCallback(
+    (value: SetStateAction<T | undefined>) => {
+      store.setItem(value);
+    },
+    [store]
+  );
+
+  return [state, setItem];
 }
 
 export default useStorage;
