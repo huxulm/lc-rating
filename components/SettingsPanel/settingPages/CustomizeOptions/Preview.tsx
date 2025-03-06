@@ -10,9 +10,9 @@ function Preview({ options }: PreviewProps) {
   return (
     <div className="p-3 border rounded">
       <FormLabel className="fw-bold">预览</FormLabel>
-      {options.map((option) => (
+      {options.map((option, i) => (
         <Form.Select
-          key={option.key}
+          key={i}
           defaultValue={option.key}
           style={{ color: option.color }}
           className="my-1"
