@@ -580,7 +580,7 @@ const ZenTableComp = React.memo(
                     {getOption(p).label}
                   </option>
                 ))}
-                {!(curOption.key in optionKeys) && (
+                {optionKeys.indexOf(curOption.key) == -1 && (
                   <option
                     key={curOption.key}
                     value={curOption.key}
