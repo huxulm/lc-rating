@@ -1,5 +1,6 @@
 import { ProgressKeyType, useQuestProgress } from "@hooks/useProgress";
-import React, { useMemo, useState } from "react";
+import debounce from "@utils/debounce";
+import React, { useEffect, useMemo, useState } from "react";
 import { Alert, Button, Form } from "react-bootstrap";
 
 export default function SyncProgress() {
@@ -40,14 +41,31 @@ export default function SyncProgress() {
     navigator.clipboard.writeText(allProgressStr);
   };
 
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    const onResize = debounce(() => {
+      setWindowHeight(window.innerHeight);
+    }, 100);
+    window.addEventListener("resize", onResize);
+
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
+
   return (
     <div>
       <Button onClick={onFetchClick}>下载题目进度</Button>
       {syncStatus === "fetched" && (
         <div className="mt-3 position-relative">
-          <pre className="bg-light p-3 rounded">
-            <code>{allProgressStr}</code>
-          </pre>
+          <Form.Control
+            as="textarea"
+            rows={windowHeight / 100}
+            value={allProgressStr}
+            readOnly
+            disabled
+          />
           <Button
             variant="link"
             className="position-absolute top-0 end-0 p-2"
@@ -62,7 +80,7 @@ export default function SyncProgress() {
         <Form.Label>Input Progress Data:</Form.Label>
         <Form.Control
           as="textarea"
-          rows={5}
+          rows={windowHeight / 100}
           value={inputData}
           onChange={(e) => setInputData(e.target.value)}
         />
