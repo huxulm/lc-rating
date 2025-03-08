@@ -34,7 +34,8 @@ interface ProblemCategory {
   isLeaf?: boolean;
   solution?: string | null;
   score?: Number | null;
-  child?: ProblemCategory[];
+  leafChild?: ProblemCategory[];
+  nonLeafChild?: ProblemCategory[];
   isPremium?: boolean;
   last_update?: string;
 }
@@ -74,7 +75,7 @@ function ProblemCategoryList({
     }
   };
 
-  const filteredChild = (data.child || []).filter(
+  const filteredChild = (data.leafChild || []).filter(
     (item) => !item.isPremium || showPremium
   );
 

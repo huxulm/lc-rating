@@ -2,623 +2,1015 @@ import ProblemCategory from "@components/ProblemCatetory";
 
 export default{
     "title": "分享丨【题单】网格图（DFS/BFS/综合应用）",
+    "summary": "",
+    "src": "",
     "original_src": "https://leetcode.cn/circle/discuss/YiXPXW",
-    "last_update": "2024-11-03 09:29:32",
     "sort": 0,
-    "child": [
+    "isLeaf": false,
+    "solution": "",
+    "score": 0,
+    "leafChild": [],
+    "nonLeafChild": [
         {
-            "title": "",
+            "title": "介绍",
+            "summary": "<img src=\"https://pic.leetcode.cn/1724834645-OYGBxU-grid004.png\" alt=\"网格图题单 DFS BFS 网格图题目 图论 灵茶山艾府\" style=\"width: 100%;\"><br>> 小小贪吃蛇，移动花样多。<br>平移加旋转，为把迷宫破。<br>代码复代码，bug 何其多。<br>六步化一步，AC 定我夺。<br>—— <a href=\"https://leetcode.cn/problems/minimum-moves-to-reach-target-with-rotations/\">1210. 穿过迷宫的最少移动次数</a><br>",
+            "src": "",
+            "original_src": "",
             "sort": 0,
-            "summary": "",
-            "child": [
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [],
+            "nonLeafChild": [
                 {
-                    "title": "",
-                    "sort": 0,
-                    "isLeaf": true,
-                    "summary": "!<a href=\"https://pic.leetcode.cn/1724834645-OYGBxU-grid004.png\">网格图题单 DFS BFS 网格图题目 图论 灵茶山艾府</a><br>> 小小贪吃蛇，移动花样多。<br>平移加旋转，为把迷宫破。<br>代码复代码，bug 何其多。<br>六步化一步，AC 定我夺。<br>—— <a href=\"https://leetcode.cn/problems/minimum-moves-to-reach-target-with-rotations/\">1210. 穿过迷宫的最少移动次数</a><br>",
-                    "child": []
-                }
-            ]
-        },
-        {
-            "title": "网格图 DFS",
-            "sort": 1,
-            "summary": "",
-            "child": [
-                {
-                    "title": "",
-                    "sort": 0,
-                    "isLeaf": true,
+                    "title": "一、网格图 DFS",
                     "summary": "适用于需要计算连通块个数、大小的题目。<br>部分题目也可以用 BFS 或并查集解决。<br>",
-                    "child": [
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
                         {
                             "title": "200. 岛屿数量",
-                            "sort": 0,
+                            "summary": "",
                             "src": "/number-of-islands/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/number-of-islands/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "695. 岛屿的最大面积",
-                            "sort": 1,
+                            "summary": "",
                             "src": "/max-area-of-island/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/max-area-of-island/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "面试题 16.19. 水域大小",
-                            "sort": 2,
+                            "summary": "",
                             "src": "/pond-sizes-lcci/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/pond-sizes-lcci/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "LCS 03. 主题空间",
-                            "sort": 3,
+                            "summary": "",
                             "src": "/YesdPw/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/YesdPw/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "463. 岛屿的周长",
-                            "sort": 4,
+                            "summary": "",
                             "src": "/island-perimeter/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/island-perimeter/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2658. 网格图中鱼的最大数目",
-                            "sort": 5,
+                            "summary": "",
                             "src": "/maximum-number-of-fish-in-a-grid/",
-                            "score": 1489.7210915287,
+                            "original_src": "https://leetcode.cn/problems/maximum-number-of-fish-in-a-grid/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1489.7210915287,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1034. 边界着色",
-                            "sort": 6,
+                            "summary": "",
                             "src": "/coloring-a-border/",
-                            "score": 1578.8503818621,
+                            "original_src": "https://leetcode.cn/problems/coloring-a-border/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1578.8503818621,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1020. 飞地的数量",
-                            "sort": 7,
+                            "summary": "",
                             "src": "/number-of-enclaves/",
-                            "score": 1615.4767730477,
+                            "original_src": "https://leetcode.cn/problems/number-of-enclaves/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1615.4767730477,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2684. 矩阵中移动的最大次数",
-                            "sort": 8,
+                            "summary": "",
                             "src": "/maximum-number-of-moves-in-a-grid/",
-                            "score": 1625.9636825798,
+                            "original_src": "https://leetcode.cn/problems/maximum-number-of-moves-in-a-grid/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1625.9636825798,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1254. 统计封闭岛屿的数目",
-                            "sort": 9,
+                            "summary": "",
                             "src": "/number-of-closed-islands/",
-                            "score": 1658.7495899767,
+                            "original_src": "https://leetcode.cn/problems/number-of-closed-islands/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1658.7495899767,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "130. 被围绕的区域",
-                            "sort": 10,
+                            "summary": "",
                             "src": "/surrounded-regions/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/surrounded-regions/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1905. 统计子岛屿",
-                            "sort": 11,
+                            "summary": "",
                             "src": "/count-sub-islands/",
-                            "score": 1678.7231378948,
+                            "original_src": "https://leetcode.cn/problems/count-sub-islands/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1678.7231378948,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1391. 检查网格中是否存在有效路径",
-                            "sort": 12,
+                            "summary": "",
                             "src": "/check-if-there-is-a-valid-path-in-a-grid/",
-                            "score": 1745.6490739887,
+                            "original_src": "https://leetcode.cn/problems/check-if-there-is-a-valid-path-in-a-grid/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1745.6490739887,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "417. 太平洋大西洋水流问题",
-                            "sort": 13,
+                            "summary": "",
                             "src": "/pacific-atlantic-water-flow/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/pacific-atlantic-water-flow/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "529. 扫雷游戏",
-                            "sort": 14,
+                            "summary": "",
                             "src": "/minesweeper/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/minesweeper/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1559. 二维网格图中探测环",
-                            "sort": 15,
+                            "summary": "",
                             "src": "/detect-cycles-in-2d-grid/",
-                            "score": 1837.8252904904,
+                            "original_src": "https://leetcode.cn/problems/detect-cycles-in-2d-grid/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1837.8252904904,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "827. 最大人工岛",
-                            "sort": 16,
+                            "summary": "",
                             "src": "/making-a-large-island/",
-                            "score": 1933.9571917853,
+                            "original_src": "https://leetcode.cn/problems/making-a-large-island/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1933.9571917853,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "LCP 63. 弹珠游戏",
-                            "sort": 17,
+                            "summary": "",
                             "src": "/EXvqDp/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/EXvqDp/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "305. 岛屿数量 II",
-                            "sort": 18,
+                            "summary": "",
                             "src": "/number-of-islands-ii/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/number-of-islands-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "2061. 扫地机器人清扫过的空间个数",
-                            "sort": 19,
+                            "summary": "",
                             "src": "/number-of-spaces-cleaning-robot-cleaned/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/number-of-spaces-cleaning-robot-cleaned/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "2852. 所有单元格的远离程度之和",
-                            "sort": 20,
+                            "summary": "",
                             "src": "/sum-of-remoteness-of-all-cells/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/sum-of-remoteness-of-all-cells/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "489. 扫地机器人",
+                            "summary": "",
+                            "src": "/robot-room-cleaner/",
+                            "original_src": "https://leetcode.cn/problems/robot-room-cleaner/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         }
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "网格图 BFS",
-            "sort": 2,
-            "summary": "",
-            "child": [
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
                 {
-                    "title": "",
-                    "sort": 0,
-                    "isLeaf": true,
+                    "title": "二、网格图 BFS",
                     "summary": "适用于需要计算最短距离（最短路）的题目。<br>",
-                    "child": [
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
                         {
                             "title": "1926. 迷宫中离入口最近的出口",
-                            "sort": 0,
+                            "summary": "",
                             "src": "/nearest-exit-from-entrance-in-maze/",
-                            "score": 1638.3134093066,
+                            "original_src": "https://leetcode.cn/problems/nearest-exit-from-entrance-in-maze/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1638.3134093066,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1091. 二进制矩阵中的最短路径",
-                            "sort": 1,
+                            "summary": "",
                             "src": "/shortest-path-in-binary-matrix/",
-                            "score": 1658.3474650806,
+                            "original_src": "https://leetcode.cn/problems/shortest-path-in-binary-matrix/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1658.3474650806,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1162. 地图分析",
-                            "sort": 2,
+                            "summary": "",
                             "src": "/as-far-from-land-as-possible/",
-                            "score": 1666.346990979,
+                            "original_src": "https://leetcode.cn/problems/as-far-from-land-as-possible/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1666.346990979,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "542. 01 矩阵",
-                            "sort": 3,
+                            "summary": "",
                             "src": "/01-matrix/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/01-matrix/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "994. 腐烂的橘子",
-                            "sort": 4,
+                            "summary": "",
                             "src": "/rotting-oranges/",
-                            "score": 1432.9051050881,
+                            "original_src": "https://leetcode.cn/problems/rotting-oranges/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1432.9051050881,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1765. 地图中的最高点",
-                            "sort": 5,
+                            "summary": "",
                             "src": "/map-of-highest-peak/",
-                            "score": 1782.9801784101,
+                            "original_src": "https://leetcode.cn/problems/map-of-highest-peak/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1782.9801784101,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "934. 最短的桥",
-                            "sort": 6,
+                            "summary": "",
                             "src": "/shortest-bridge/",
-                            "score": 1825.770486008,
+                            "original_src": "https://leetcode.cn/problems/shortest-bridge/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1825.770486008,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2146. 价格范围内最高排名的 K 样物品",
-                            "sort": 7,
+                            "summary": "",
                             "src": "/k-highest-ranked-items-within-a-price-range/",
-                            "score": 1836.5345744332,
+                            "original_src": "https://leetcode.cn/problems/k-highest-ranked-items-within-a-price-range/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1836.5345744332,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1293. 网格中的最短路径",
-                            "sort": 8,
+                            "summary": "",
                             "src": "/shortest-path-in-a-grid-with-obstacles-elimination/",
-                            "score": 1967.3284576938,
+                            "original_src": "https://leetcode.cn/problems/shortest-path-in-a-grid-with-obstacles-elimination/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1967.3284576938,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "909. 蛇梯棋",
-                            "sort": 9,
+                            "summary": "",
                             "src": "/snakes-and-ladders/",
-                            "score": 2019.5399647546,
+                            "original_src": "https://leetcode.cn/problems/snakes-and-ladders/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2019.5399647546,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1210. 穿过迷宫的最少移动次数",
-                            "sort": 10,
+                            "summary": "",
                             "src": "/minimum-moves-to-reach-target-with-rotations/",
-                            "score": 2022.4752963768,
+                            "original_src": "https://leetcode.cn/problems/minimum-moves-to-reach-target-with-rotations/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2022.4752963768,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "675. 为高尔夫比赛砍树",
-                            "sort": 11,
+                            "summary": "",
                             "src": "/cut-off-trees-for-golf-event/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/cut-off-trees-for-golf-event/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "749. 隔离病毒",
-                            "sort": 12,
+                            "summary": "",
                             "src": "/contain-virus/",
-                            "score": 2277.0238076464,
+                            "original_src": "https://leetcode.cn/problems/contain-virus/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2277.0238076464,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1730. 获取食物的最短路径",
-                            "sort": 13,
+                            "summary": "",
                             "src": "/shortest-path-to-get-food/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/shortest-path-to-get-food/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "286. 墙与门",
-                            "sort": 14,
+                            "summary": "",
                             "src": "/walls-and-gates/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/walls-and-gates/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "490. 迷宫",
-                            "sort": 15,
+                            "summary": "",
                             "src": "/the-maze/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/the-maze/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "505. 迷宫 II",
-                            "sort": 16,
+                            "summary": "",
                             "src": "/the-maze-ii/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/the-maze-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "499. 迷宫 III",
-                            "sort": 17,
+                            "summary": "",
                             "src": "/the-maze-iii/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/the-maze-iii/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "317. 离建筑物最近的距离",
-                            "sort": 18,
+                            "summary": "",
                             "src": "/shortest-distance-from-all-buildings/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/shortest-distance-from-all-buildings/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "2814. 避免淹死并到达目的地的最短时间",
-                            "sort": 19,
+                            "summary": "",
                             "src": "/minimum-time-takes-to-reach-destination-without-drowning/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/minimum-time-takes-to-reach-destination-without-drowning/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         }
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "网格图 0-1 BFS",
-            "sort": 3,
-            "summary": "",
-            "child": [
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
                 {
-                    "title": "",
-                    "sort": 0,
-                    "isLeaf": true,
+                    "title": "三、网格图 0-1 BFS",
                     "summary": "边权只有 $0$ 和 $1$ 的题目，也可以用 BFS 做。<br>",
-                    "child": [
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
                         {
                             "title": "1368. 使网格图至少有一条有效路径的最小代价",
-                            "sort": 0,
+                            "summary": "",
                             "src": "/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/",
-                            "score": 2068.806637566,
+                            "original_src": "https://leetcode.cn/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2068.806637566,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2290. 到达角落需要移除障碍物的最小数目",
-                            "sort": 1,
+                            "summary": "",
                             "src": "/minimum-obstacle-removal-to-reach-corner/",
-                            "score": 2137.5633267453,
+                            "original_src": "https://leetcode.cn/problems/minimum-obstacle-removal-to-reach-corner/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2137.5633267453,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "3286. 穿越网格图的安全路径",
-                            "sort": 2,
+                            "summary": "",
                             "src": "/find-a-safe-walk-through-a-grid/",
-                            "score": 1607.8207466026,
+                            "original_src": "https://leetcode.cn/problems/find-a-safe-walk-through-a-grid/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1607.8207466026,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1824. 最少侧跳次数",
-                            "sort": 3,
+                            "summary": "",
                             "src": "/minimum-sideway-jumps/",
-                            "score": 1778.4880620629,
+                            "original_src": "https://leetcode.cn/problems/minimum-sideway-jumps/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1778.4880620629,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "LCP 56. 信物传送",
-                            "sort": 4,
+                            "summary": "",
                             "src": "/6UEx57/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/6UEx57/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         }
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "网格图 Dijkstra",
-            "sort": 4,
-            "summary": "",
-            "child": [
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
                 {
-                    "title": "",
-                    "sort": 0,
-                    "isLeaf": true,
+                    "title": "四、网格图 Dijkstra",
                     "summary": "见 <a href=\"/lc-rating/list/graph\">图论题单</a> 中的 Dijkstra。<br>",
-                    "child": []
-                }
-            ]
-        },
-        {
-            "title": "综合应用",
-            "sort": 5,
-            "summary": "",
-            "child": [
-                {
-                    "title": "",
+                    "src": "",
+                    "original_src": "",
                     "sort": 0,
-                    "isLeaf": true,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "五、综合应用",
                     "summary": "",
-                    "child": [
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
                         {
                             "title": "1631. 最小体力消耗路径",
-                            "sort": 0,
+                            "summary": "",
                             "src": "/path-with-minimum-effort/",
-                            "score": 1947.5013967785,
+                            "original_src": "https://leetcode.cn/problems/path-with-minimum-effort/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1947.5013967785,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "778. 水位上升的泳池中游泳",
-                            "sort": 1,
+                            "summary": "",
                             "src": "/swim-in-rising-water/",
-                            "score": 2096.6201393558,
+                            "original_src": "https://leetcode.cn/problems/swim-in-rising-water/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2096.6201393558,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "329. 矩阵中的最长递增路径",
-                            "sort": 2,
+                            "summary": "",
                             "src": "/longest-increasing-path-in-a-matrix/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/longest-increasing-path-in-a-matrix/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1036. 逃离大迷宫",
-                            "sort": 3,
+                            "summary": "",
                             "src": "/escape-a-large-maze/",
-                            "score": 2164.8287157213,
+                            "original_src": "https://leetcode.cn/problems/escape-a-large-maze/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2164.8287157213,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "864. 获取所有钥匙的最短路径",
-                            "sort": 4,
+                            "summary": "",
                             "src": "/shortest-path-to-get-all-keys/",
-                            "score": 2258.6371797452,
+                            "original_src": "https://leetcode.cn/problems/shortest-path-to-get-all-keys/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2258.6371797452,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1263. 推箱子",
-                            "sort": 5,
+                            "summary": "",
                             "src": "/minimum-moves-to-move-a-box-to-their-target-location/",
-                            "score": 2297.105362516,
+                            "original_src": "https://leetcode.cn/problems/minimum-moves-to-move-a-box-to-their-target-location/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2297.105362516,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2258. 逃离火灾",
-                            "sort": 6,
+                            "summary": "",
                             "src": "/escape-the-spreading-fire/",
-                            "score": 2346.5717839654,
+                            "original_src": "https://leetcode.cn/problems/escape-the-spreading-fire/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2346.5717839654,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2556. 二进制矩阵中翻转最多一次使路径不连通",
-                            "sort": 7,
+                            "summary": "",
                             "src": "/disconnect-path-in-a-binary-matrix-by-at-most-one-flip/",
-                            "score": 2368.6674771307,
+                            "original_src": "https://leetcode.cn/problems/disconnect-path-in-a-binary-matrix-by-at-most-one-flip/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2368.6674771307,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2577. 在网格图中访问一个格子的最少时间",
-                            "sort": 8,
+                            "summary": "",
                             "src": "/minimum-time-to-visit-a-cell-in-a-grid/",
-                            "score": 2381.625583289,
+                            "original_src": "https://leetcode.cn/problems/minimum-time-to-visit-a-cell-in-a-grid/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2381.625583289,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2617. 网格图中最少访问的格子数",
-                            "sort": 9,
+                            "summary": "",
                             "src": "/minimum-number-of-visited-cells-in-a-grid/",
-                            "score": 2581.9961985753,
+                            "original_src": "https://leetcode.cn/problems/minimum-number-of-visited-cells-in-a-grid/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2581.9961985753,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "LCP 13. 寻宝",
-                            "sort": 10,
+                            "summary": "",
                             "src": "/xun-bao/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/xun-bao/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "LCP 31. 变换的迷宫",
-                            "sort": 11,
+                            "summary": "",
                             "src": "/Db3wC1/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/Db3wC1/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "LCP 45. 自行车炫技赛场",
-                            "sort": 12,
+                            "summary": "",
                             "src": "/kplEvH/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/kplEvH/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "LCP 75. 传送卷轴",
-                            "sort": 13,
+                            "summary": "",
                             "src": "/rdmXM7/",
+                            "original_src": "https://leetcode.cn/problems/rdmXM7/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
                             "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1728. 猫和老鼠 II",
-                            "sort": 14,
-                            "src": "/cat-and-mouse-ii/",
-                            "score": 2849.4841858619,
-                            "solution": null,
-                            "isPremium": false
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "694. 不同岛屿的数量",
-                            "sort": 15,
+                            "summary": "",
                             "src": "/number-of-distinct-islands/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/number-of-distinct-islands/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "711. 不同岛屿的数量 II",
-                            "sort": 16,
+                            "summary": "",
                             "src": "/number-of-distinct-islands-ii/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/number-of-distinct-islands-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "1102. 得分最高的路径",
-                            "sort": 17,
+                            "summary": "",
                             "src": "/path-with-maximum-minimum-value/",
-                            "score": 2011.3542735398,
+                            "original_src": "https://leetcode.cn/problems/path-with-maximum-minimum-value/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": 2011.3542735398,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         }
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "思考题",
-            "sort": 6,
-            "summary": "",
-            "child": [
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
                 {
-                    "title": "",
-                    "sort": 0,
-                    "isLeaf": true,
+                    "title": "思考题",
                     "summary": "1. 对于 $m$ 行 $n$ 列的网格图，BFS 的队列最多消耗多少空间？DFS 的递归栈最多消耗多少空间？<br>2. 构造一个网格图，让 DFS 的递归深度尽量大。如果起点是 $(0,0)$ 要如何构造？如果起点是 $(i,j)$ 要如何构造？<br>欢迎在评论区发表你的思路。<br>",
-                    "child": []
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
-            ]
+            ],
+            "isPremium": false,
+            "last_update": ""
         }
-    ]
+    ],
+    "isPremium": false,
+    "last_update": "2025-02-24 01:46:47"
 } as ProblemCategory;

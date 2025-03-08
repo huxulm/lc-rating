@@ -2,419 +2,679 @@ import ProblemCategory from "@components/ProblemCatetory";
 
 export default{
     "title": "分享｜【题单】单调栈（矩形面积/贡献法/最小字典序）",
+    "summary": "",
+    "src": "",
     "original_src": "https://leetcode.cn/circle/discuss/9oZFK9",
-    "last_update": "2024-12-25 14:46:19",
     "sort": 0,
-    "child": [
+    "isLeaf": false,
+    "solution": "",
+    "score": 0,
+    "leafChild": [],
+    "nonLeafChild": [
         {
-            "title": "",
+            "title": "介绍",
+            "summary": "<img src=\"https://pic.leetcode.cn/1711714526-rMdiIh-t3-c.png\" alt=\"单调栈题单单调栈入门单调栈题目单调栈教程单调栈视频leetcode单调栈 灵茶山艾府 灵神 灵神题单\" style=\"width: 100%;\"><br>> 他向远方望去，无法看到高山背后的矮山，只能看到一座座更高的山峰。<br>⚠**注意**：推荐先做做 <a href=\"/lc-rating/list/data_structure\">数据结构题单</a> 中的「枚举右，维护左」以及第三章「栈」的题目后，再来刷本题单。<br>",
+            "src": "",
+            "original_src": "",
             "sort": 0,
-            "summary": "",
-            "child": [
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [],
+            "nonLeafChild": [
                 {
-                    "title": "",
-                    "sort": 0,
-                    "isLeaf": true,
-                    "summary": "!<a href=\"https://pic.leetcode.cn/1711714526-rMdiIh-t3-c.png\">单调栈题单单调栈入门单调栈题目单调栈教程单调栈视频leetcode单调栈 灵茶山艾府 灵神 灵神题单</a><br>> 他向远方望去，无法看到高山背后的矮山，只能看到一座座更高的山峰。<br>⚠**注意**：推荐先做做 <a href=\"/lc-rating/list/data_structure\">数据结构题单</a> 中的「枚举右，维护左」以及第三章「栈」的题目后，再来刷本题单。<br>",
-                    "child": []
-                }
-            ]
-        },
-        {
-            "title": "单调栈",
-            "sort": 1,
-            "summary": "",
-            "child": [
-                {
-                    "title": "",
-                    "sort": 0,
-                    "isLeaf": true,
+                    "title": "单调栈",
                     "summary": "请先学习：<a href=\"https://www.bilibili.com/video/BV1VN411J7S7/\">单调栈【基础算法精讲 26】</a><br>",
-                    "child": [
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
                         {
                             "title": "739. 每日温度",
-                            "sort": 0,
+                            "summary": "",
                             "src": "/daily-temperatures/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/daily-temperatures/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1475. 商品折扣后的最终价格",
-                            "sort": 1,
+                            "summary": "",
                             "src": "/final-prices-with-a-special-discount-in-a-shop/",
-                            "score": 1212.2606422181,
+                            "original_src": "https://leetcode.cn/problems/final-prices-with-a-special-discount-in-a-shop/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1212.2606422181,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "496. 下一个更大元素 I",
-                            "sort": 2,
+                            "summary": "",
                             "src": "/next-greater-element-i/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/next-greater-element-i/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "503. 下一个更大元素 II",
-                            "sort": 3,
+                            "summary": "",
                             "src": "/next-greater-element-ii/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/next-greater-element-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1019. 链表中的下一个更大节点",
-                            "sort": 4,
+                            "summary": "",
                             "src": "/next-greater-node-in-linked-list/",
-                            "score": 1570.8347522104,
+                            "original_src": "https://leetcode.cn/problems/next-greater-node-in-linked-list/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1570.8347522104,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "962. 最大宽度坡",
-                            "sort": 5,
+                            "summary": "",
                             "src": "/maximum-width-ramp/",
-                            "score": 1607.80608595,
+                            "original_src": "https://leetcode.cn/problems/maximum-width-ramp/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1607.80608595,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "853. 车队",
-                            "sort": 6,
+                            "summary": "",
                             "src": "/car-fleet/",
-                            "score": 1678.1133886034,
+                            "original_src": "https://leetcode.cn/problems/car-fleet/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1678.1133886034,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "901. 股票价格跨度",
-                            "sort": 7,
+                            "summary": "",
                             "src": "/online-stock-span/",
-                            "score": 1708.8735585776,
+                            "original_src": "https://leetcode.cn/problems/online-stock-span/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1708.8735585776,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1124. 表现良好的最长时间段",
-                            "sort": 8,
+                            "summary": "",
                             "src": "/longest-well-performing-interval/",
-                            "score": 1908.3866125757,
+                            "original_src": "https://leetcode.cn/problems/longest-well-performing-interval/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1908.3866125757,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1793. 好子数组的最大分数",
-                            "sort": 9,
+                            "summary": "",
                             "src": "/maximum-score-of-a-good-subarray/",
-                            "score": 1945.7515607928,
+                            "original_src": "https://leetcode.cn/problems/maximum-score-of-a-good-subarray/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1945.7515607928,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "456. 132 模式",
-                            "sort": 10,
+                            "summary": "",
                             "src": "/132-pattern/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/132-pattern/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "3113. 边界元素是最大值的子数组数目",
-                            "sort": 11,
+                            "summary": "",
                             "src": "/find-the-number-of-subarrays-where-boundary-elements-are-maximum/",
-                            "score": 2046.2618466463,
+                            "original_src": "https://leetcode.cn/problems/find-the-number-of-subarrays-where-boundary-elements-are-maximum/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2046.2618466463,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2866. 美丽塔 II",
-                            "sort": 12,
+                            "summary": "",
                             "src": "/beautiful-towers-ii/",
-                            "score": 2071.6322841217,
+                            "original_src": "https://leetcode.cn/problems/beautiful-towers-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2071.6322841217,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1944. 队列中可以看到的人数",
-                            "sort": 13,
+                            "summary": "",
                             "src": "/number-of-visible-people-in-a-queue/",
-                            "score": 2104.9526046945,
+                            "original_src": "https://leetcode.cn/problems/number-of-visible-people-in-a-queue/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2104.9526046945,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2454. 下一个更大元素 IV",
-                            "sort": 14,
+                            "summary": "",
                             "src": "/next-greater-element-iv/",
-                            "score": 2175.1190473433,
+                            "original_src": "https://leetcode.cn/problems/next-greater-element-iv/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2175.1190473433,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1130. 叶值的最小代价生成树",
-                            "sort": 15,
+                            "summary": "",
                             "src": "/minimum-cost-tree-from-leaf-values/",
-                            "score": 1919.1749818083,
+                            "original_src": "https://leetcode.cn/problems/minimum-cost-tree-from-leaf-values/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1919.1749818083,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2289. 使数组按非递减顺序排列",
-                            "sort": 16,
+                            "summary": "",
                             "src": "/steps-to-make-array-non-decreasing/",
-                            "score": 2481.8722909195,
+                            "original_src": "https://leetcode.cn/problems/steps-to-make-array-non-decreasing/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2481.8722909195,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1776. 车队 II",
-                            "sort": 17,
+                            "summary": "",
                             "src": "/car-fleet-ii/",
-                            "score": 2530.6905139914,
+                            "original_src": "https://leetcode.cn/problems/car-fleet-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2530.6905139914,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "3221. 最大数组跳跃得分 II",
-                            "sort": 18,
+                            "summary": "",
                             "src": "/maximum-array-hopping-score-ii/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/maximum-array-hopping-score-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "1966. 未排序数组中的可被二分搜索的数",
-                            "sort": 19,
+                            "summary": "",
                             "src": "/binary-searchable-numbers-in-an-unsorted-array/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/binary-searchable-numbers-in-an-unsorted-array/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "2832. 每个元素为最大值的最大范围",
-                            "sort": 20,
+                            "summary": "",
                             "src": "/maximal-range-that-each-element-is-maximum-in-it/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/maximal-range-that-each-element-is-maximum-in-it/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "2282. 在一个网格中可以看到的人数",
-                            "sort": 21,
+                            "summary": "",
                             "src": "/number-of-people-that-can-be-seen-in-a-grid/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/number-of-people-that-can-be-seen-in-a-grid/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         }
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "矩形",
-            "sort": 2,
-            "summary": "",
-            "child": [
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
                 {
-                    "title": "",
-                    "sort": 0,
-                    "isLeaf": true,
+                    "title": "矩形",
                     "summary": "",
-                    "child": [
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
                         {
                             "title": "84. 柱状图中最大的矩形",
-                            "sort": 0,
+                            "summary": "",
                             "src": "/largest-rectangle-in-histogram/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/largest-rectangle-in-histogram/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1793. 好子数组的最大分数",
-                            "sort": 1,
+                            "summary": "",
                             "src": "/maximum-score-of-a-good-subarray/",
-                            "score": 1945.7515607928,
+                            "original_src": "https://leetcode.cn/problems/maximum-score-of-a-good-subarray/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1945.7515607928,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "85. 最大矩形",
-                            "sort": 2,
+                            "summary": "",
                             "src": "/maximal-rectangle/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/maximal-rectangle/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1504. 统计全 1 子矩形",
-                            "sort": 3,
+                            "summary": "",
                             "src": "/count-submatrices-with-all-ones/",
-                            "score": 1845.0428731248,
+                            "original_src": "https://leetcode.cn/problems/count-submatrices-with-all-ones/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1845.0428731248,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "42. 接雨水",
-                            "sort": 4,
+                            "summary": "",
                             "src": "/trapping-rain-water/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/trapping-rain-water/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "755. 倒水",
-                            "sort": 5,
+                            "summary": "",
                             "src": "/pour-water/",
-                            "score": 1832.2280384591,
+                            "original_src": "https://leetcode.cn/problems/pour-water/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": 1832.2280384591,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         }
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "贡献法",
-            "sort": 3,
-            "summary": "",
-            "child": [
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
                 {
-                    "title": "",
-                    "sort": 0,
-                    "isLeaf": true,
+                    "title": "贡献法",
                     "summary": "**思维扩展**：<br>",
-                    "child": [
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
                         {
                             "title": "907. 子数组的最小值之和",
-                            "sort": 0,
+                            "summary": "",
                             "src": "/sum-of-subarray-minimums/",
-                            "score": 1975.5726300727,
+                            "original_src": "https://leetcode.cn/problems/sum-of-subarray-minimums/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1975.5726300727,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2104. 子数组范围和（最大值-最小值）",
-                            "sort": 1,
+                            "summary": "",
                             "src": "/sum-of-subarray-ranges/",
-                            "score": 1504.2133321504,
+                            "original_src": "https://leetcode.cn/problems/sum-of-subarray-ranges/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1504.2133321504,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1856. 子数组最小乘积的最大值",
-                            "sort": 2,
+                            "summary": "",
                             "src": "/maximum-subarray-min-product/",
-                            "score": 2051.0879431258,
+                            "original_src": "https://leetcode.cn/problems/maximum-subarray-min-product/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2051.0879431258,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2818. 操作使得分最大",
-                            "sort": 3,
+                            "summary": "",
                             "src": "/apply-operations-to-maximize-score/",
-                            "score": 2396.6770372863,
+                            "original_src": "https://leetcode.cn/problems/apply-operations-to-maximize-score/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2396.6770372863,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2281. 巫师的总力量和（最小值×和）",
-                            "sort": 4,
+                            "summary": "",
                             "src": "/sum-of-total-strength-of-wizards/",
-                            "score": 2621.1208072273,
+                            "original_src": "https://leetcode.cn/problems/sum-of-total-strength-of-wizards/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2621.1208072273,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "3359. 查找最大元素不超过 K 的有序子矩阵",
-                            "sort": 5,
+                            "summary": "",
                             "src": "/find-sorted-submatrices-with-maximum-element-at-most-k/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/find-sorted-submatrices-with-maximum-element-at-most-k/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "2334. 元素值大于变化阈值的子数组",
-                            "sort": 6,
+                            "summary": "",
                             "src": "/subarray-with-elements-greater-than-varying-threshold/",
-                            "score": 2381.2160234811,
+                            "original_src": "https://leetcode.cn/problems/subarray-with-elements-greater-than-varying-threshold/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2381.2160234811,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         }
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "最小字典序",
-            "sort": 4,
-            "summary": "",
-            "child": [
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
                 {
-                    "title": "",
-                    "sort": 0,
-                    "isLeaf": true,
+                    "title": "最小字典序",
                     "summary": "",
-                    "child": [
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
                         {
                             "title": "402. 移掉 K 位数字",
-                            "sort": 0,
+                            "summary": "",
                             "src": "/remove-k-digits/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/remove-k-digits/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1673. 找出最具竞争力的子序列",
-                            "sort": 1,
+                            "summary": "",
                             "src": "/find-the-most-competitive-subsequence/",
-                            "score": 1802.2256875356,
+                            "original_src": "https://leetcode.cn/problems/find-the-most-competitive-subsequence/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1802.2256875356,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "316. 去除重复字母",
-                            "sort": 2,
+                            "summary": "",
                             "src": "/remove-duplicate-letters/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/remove-duplicate-letters/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "316 扩展：重复个数不超过 limit",
-                            "sort": 3,
-                            "src": "https://leetcode.cn/contest/tianchi2022/problems/ev2bru/",
-                            "score": null,
+                            "summary": "",
+                            "src": null,
+                            "original_src": "https://leetcode.cn/contest/tianchi2022/problems/ev2bru/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1081. 不同字符的最小子序列",
-                            "sort": 4,
+                            "summary": "",
                             "src": "/smallest-subsequence-of-distinct-characters/",
-                            "score": 2184.5241011615,
+                            "original_src": "https://leetcode.cn/problems/smallest-subsequence-of-distinct-characters/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2184.5241011615,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "321. 拼接最大数",
-                            "sort": 5,
+                            "summary": "",
                             "src": "/create-maximum-number/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/create-maximum-number/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2030. 含特定字母的最小子序列",
-                            "sort": 6,
+                            "summary": "",
                             "src": "/smallest-k-length-subsequence-with-occurrences-of-a-letter/",
-                            "score": 2561.7794931859,
+                            "original_src": "https://leetcode.cn/problems/smallest-k-length-subsequence-with-occurrences-of-a-letter/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2561.7794931859,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         }
-                    ]
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
-            ]
+            ],
+            "isPremium": false,
+            "last_update": ""
         }
-    ]
+    ],
+    "isPremium": false,
+    "last_update": "2024-12-25 14:46:19"
 } as ProblemCategory;

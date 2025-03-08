@@ -2,1246 +2,2104 @@ import ProblemCategory from "@components/ProblemCatetory";
 
 export default{
     "title": "分享丨【题单】图论算法（DFS/BFS/拓扑排序/最短路/最小生成树/二分图/基环树/欧拉路径）",
+    "summary": "",
+    "src": "",
     "original_src": "https://leetcode.cn/circle/discuss/01LUak",
-    "last_update": "2025-01-29 06:26:55",
     "sort": 0,
-    "child": [
-        {
-            "title": "",
-            "sort": 0,
-            "summary": "",
-            "child": [
-                {
-                    "title": "",
-                    "sort": 0,
-                    "isLeaf": true,
-                    "summary": "",
-                    "child": []
-                }
-            ]
-        },
+    "isLeaf": false,
+    "solution": "",
+    "score": 0,
+    "leafChild": [],
+    "nonLeafChild": [
         {
             "title": "一、基础遍历",
-            "sort": 1,
             "summary": "",
-            "child": [
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [],
+            "nonLeafChild": [
                 {
                     "title": "§1.1 DFS 基础",
-                    "sort": 0,
-                    "isLeaf": true,
                     "summary": "找连通块、判断是否有环等。部分题目**做法不止一种**。<br>",
-                    "child": [
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
                         {
                             "title": "547. 省份数量",
-                            "sort": 0,
+                            "summary": "",
                             "src": "/number-of-provinces/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/number-of-provinces/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1971. 寻找图中是否存在路径",
-                            "sort": 1,
+                            "summary": "",
                             "src": "/find-if-path-exists-in-graph/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/find-if-path-exists-in-graph/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "797. 所有可能的路径",
-                            "sort": 2,
+                            "summary": "",
                             "src": "/all-paths-from-source-to-target/",
-                            "score": 1382.5129151601,
+                            "original_src": "https://leetcode.cn/problems/all-paths-from-source-to-target/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1382.5129151601,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "841. 钥匙和房间",
-                            "sort": 3,
+                            "summary": "",
                             "src": "/keys-and-rooms/",
-                            "score": 1412.2790156634,
+                            "original_src": "https://leetcode.cn/problems/keys-and-rooms/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1412.2790156634,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2316. 统计无向图中无法互相到达点对数",
-                            "sort": 4,
+                            "summary": "",
                             "src": "/count-unreachable-pairs-of-nodes-in-an-undirected-graph/",
-                            "score": 1604.0695445163,
+                            "original_src": "https://leetcode.cn/problems/count-unreachable-pairs-of-nodes-in-an-undirected-graph/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1604.0695445163,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1319. 连通网络的操作次数",
-                            "sort": 5,
+                            "summary": "",
                             "src": "/number-of-operations-to-make-network-connected/",
-                            "score": 1633.1372577433,
+                            "original_src": "https://leetcode.cn/problems/number-of-operations-to-make-network-connected/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1633.1372577433,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2492. 两个城市间路径的最小分数",
-                            "sort": 6,
+                            "summary": "",
                             "src": "/minimum-score-of-a-path-between-two-cities/",
-                            "score": 1679.5737760149,
+                            "original_src": "https://leetcode.cn/problems/minimum-score-of-a-path-between-two-cities/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1679.5737760149,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "3387. 两天自由外汇交易后的最大货币数",
-                            "sort": 7,
+                            "summary": "",
                             "src": "/maximize-amount-after-two-days-of-conversions/",
-                            "score": 1787.5923894417,
+                            "original_src": "https://leetcode.cn/problems/maximize-amount-after-two-days-of-conversions/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1787.5923894417,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "3310. 移除可疑的方法",
-                            "sort": 8,
+                            "summary": "",
                             "src": "/remove-methods-from-project/",
-                            "score": 1710.5210499321,
+                            "original_src": "https://leetcode.cn/problems/remove-methods-from-project/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1710.5210499321,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2685. 统计完全连通分量的数量",
-                            "sort": 9,
+                            "summary": "",
                             "src": "/count-the-number-of-complete-components/",
-                            "score": 1769.4344566771,
+                            "original_src": "https://leetcode.cn/problems/count-the-number-of-complete-components/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1769.4344566771,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2192. 有向无环图中一个节点的所有祖先",
-                            "sort": 10,
+                            "summary": "",
                             "src": "/all-ancestors-of-a-node-in-a-directed-acyclic-graph/",
-                            "score": 1787.8550568757,
+                            "original_src": "https://leetcode.cn/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1787.8550568757,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "924. 尽量减少恶意软件的传播",
-                            "sort": 11,
+                            "summary": "",
                             "src": "/minimize-malware-spread/",
-                            "score": 1868.9146755896,
+                            "original_src": "https://leetcode.cn/problems/minimize-malware-spread/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1868.9146755896,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2101. 引爆最多的炸弹",
-                            "sort": 12,
+                            "summary": "",
                             "src": "/detonate-the-maximum-bombs/",
-                            "score": 1880.0511044074,
+                            "original_src": "https://leetcode.cn/problems/detonate-the-maximum-bombs/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1880.0511044074,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "721. 账户合并",
-                            "sort": 13,
+                            "summary": "",
                             "src": "/accounts-merge/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/accounts-merge/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "207. 课程表",
-                            "sort": 14,
+                            "summary": "",
                             "src": "/course-schedule/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/course-schedule/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "802. 找到最终的安全状态",
-                            "sort": 15,
+                            "summary": "",
                             "src": "/find-eventual-safe-states/",
-                            "score": 1962.3314335449,
+                            "original_src": "https://leetcode.cn/problems/find-eventual-safe-states/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1962.3314335449,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "928. 尽量减少恶意软件的传播 II",
-                            "sort": 16,
+                            "summary": "",
                             "src": "/minimize-malware-spread-ii/",
-                            "score": 1985.2504512337,
+                            "original_src": "https://leetcode.cn/problems/minimize-malware-spread-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1985.2504512337,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2092. 找出知晓秘密的所有专家",
-                            "sort": 17,
+                            "summary": "",
                             "src": "/find-all-people-with-secret/",
-                            "score": 2003.5794613668,
+                            "original_src": "https://leetcode.cn/problems/find-all-people-with-secret/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2003.5794613668,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "3108. 带权图里旅途的最小代价",
-                            "sort": 18,
+                            "summary": "",
                             "src": "/minimum-cost-walk-in-weighted-graph/",
-                            "score": 2108.5054318055,
+                            "original_src": "https://leetcode.cn/problems/minimum-cost-walk-in-weighted-graph/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2108.5054318055,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "261. 以图判树",
-                            "sort": 19,
+                            "summary": "",
                             "src": "/graph-valid-tree/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/graph-valid-tree/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "323. 无向图中连通分量的数目",
-                            "sort": 20,
+                            "summary": "",
                             "src": "/number-of-connected-components-in-an-undirected-graph/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/number-of-connected-components-in-an-undirected-graph/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         }
-                    ]
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 },
                 {
                     "title": "§1.2 BFS 基础",
-                    "sort": 1,
-                    "isLeaf": true,
                     "summary": "求最短路等。<br>注：关于**网格图**的 DFS 和 BFS，请看 <a href=\"/lc-rating/list/grid\">网格图题单</a>。<br>",
-                    "child": [
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
                         {
                             "title": "3243. 新增道路查询后的最短距离 I",
-                            "sort": 0,
+                            "summary": "",
                             "src": "/shortest-distance-after-road-addition-queries-i/",
-                            "score": 1567.8396535313,
+                            "original_src": "https://leetcode.cn/problems/shortest-distance-after-road-addition-queries-i/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1567.8396535313,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1311. 获取你好友已观看的视频",
-                            "sort": 1,
+                            "summary": "",
                             "src": "/get-watched-videos-by-your-friends/",
-                            "score": 1652.5809810428,
+                            "original_src": "https://leetcode.cn/problems/get-watched-videos-by-your-friends/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1652.5809810428,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1129. 颜色交替的最短路径",
-                            "sort": 2,
+                            "summary": "",
                             "src": "/shortest-path-with-alternating-colors/",
-                            "score": 1779.7534349429,
+                            "original_src": "https://leetcode.cn/problems/shortest-path-with-alternating-colors/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1779.7534349429,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1298. 你能从盒子里获得的最大糖果数",
-                            "sort": 3,
+                            "summary": "",
                             "src": "/maximum-candies-you-can-get-from-boxes/",
-                            "score": 1824.829446341,
+                            "original_src": "https://leetcode.cn/problems/maximum-candies-you-can-get-from-boxes/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1824.829446341,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2039. 网络空闲的时刻",
-                            "sort": 4,
+                            "summary": "",
                             "src": "/the-time-when-the-network-becomes-idle/",
-                            "score": 1865.3441063734,
+                            "original_src": "https://leetcode.cn/problems/the-time-when-the-network-becomes-idle/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1865.3441063734,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2608. 图中的最短环",
-                            "sort": 5,
+                            "summary": "",
                             "src": "/shortest-cycle-in-a-graph/",
-                            "score": 1904.2279434479,
+                            "original_src": "https://leetcode.cn/problems/shortest-cycle-in-a-graph/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1904.2279434479,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "815. 公交路线",
-                            "sort": 6,
+                            "summary": "",
                             "src": "/bus-routes/",
-                            "score": 1964.3793590858,
+                            "original_src": "https://leetcode.cn/problems/bus-routes/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1964.3793590858,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         }
-                    ]
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
-            ]
+            ],
+            "isPremium": false,
+            "last_update": ""
         },
         {
             "title": "二、拓扑排序",
-            "sort": 2,
-            "summary": "!<a href=\"https://pic.leetcode.cn/1738131168-tWFNGZ-006-toposort.png\">图论题单 图论算法 图论题目 LeetCode 力扣图论 灵茶山艾府</a><br>把拓扑排序想象成一个黑盒，给它一堆杂乱的先修课约束，它会给你一个井井有条的课程学习安排。<br>这一种在图上的「排序」，可以把杂乱的点排列一排。<br>前提条件是图中无环，从而保证每条边是从排在前面的点，指向排在后面的点。<br>",
-            "child": [
+            "summary": "<img src=\"https://pic.leetcode.cn/1738131168-tWFNGZ-006-toposort.png\" alt=\"图论题单 图论算法 图论题目 LeetCode 力扣图论 灵茶山艾府\" style=\"width: 100%;\"><br>把拓扑排序想象成一个黑盒，给它一堆杂乱的先修课约束，它会给你一个井井有条的课程学习安排。<br>这一种在图上的「排序」，可以把杂乱的点排列一排。<br>前提条件是图中无环，从而保证每条边是从排在前面的点，指向排在后面的点。<br>",
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [],
+            "nonLeafChild": [
                 {
                     "title": "§2.1 拓扑排序",
-                    "sort": 0,
-                    "isLeaf": true,
                     "summary": "学习拓扑排序前，请先完成 <a href=\"https://leetcode.cn/problems/minimum-number-of-vertices-to-reach-all-nodes/\">1557. 可以到达所有点的最少点数目</a>，有助于理解拓扑排序。<br>",
-                    "child": [
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
                         {
                             "title": "210. 课程表 II",
-                            "sort": 0,
+                            "summary": "",
                             "src": "/course-schedule-ii/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/course-schedule-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1462. 课程表 IV",
-                            "sort": 1,
+                            "summary": "",
                             "src": "/course-schedule-iv/",
-                            "score": 1692.5884631801,
+                            "original_src": "https://leetcode.cn/problems/course-schedule-iv/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1692.5884631801,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2115. 从给定原材料中找到所有可以做出的菜",
-                            "sort": 2,
+                            "summary": "",
                             "src": "/find-all-possible-recipes-from-given-supplies/",
-                            "score": 1678.5871762113,
+                            "original_src": "https://leetcode.cn/problems/find-all-possible-recipes-from-given-supplies/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1678.5871762113,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "851. 喧闹和富有",
-                            "sort": 3,
+                            "summary": "",
                             "src": "/loud-and-rich/",
-                            "score": 1783.2337340478,
+                            "original_src": "https://leetcode.cn/problems/loud-and-rich/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1783.2337340478,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "310. 最小高度树",
-                            "sort": 4,
+                            "summary": "",
                             "src": "/minimum-height-trees/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/minimum-height-trees/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2392. 给定条件下构造矩阵",
-                            "sort": 5,
+                            "summary": "",
                             "src": "/build-a-matrix-with-conditions/",
-                            "score": 1960.5517123728,
+                            "original_src": "https://leetcode.cn/problems/build-a-matrix-with-conditions/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1960.5517123728,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "802. 找到最终的安全状态",
-                            "sort": 6,
+                            "summary": "",
                             "src": "/find-eventual-safe-states/",
-                            "score": 1962.3314335449,
+                            "original_src": "https://leetcode.cn/problems/find-eventual-safe-states/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1962.3314335449,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1591. 奇怪的打印机 II",
-                            "sort": 7,
+                            "summary": "",
                             "src": "/strange-printer-ii/",
-                            "score": 2290.9040038639,
+                            "original_src": "https://leetcode.cn/problems/strange-printer-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2290.9040038639,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1203. 项目管理",
-                            "sort": 8,
+                            "summary": "",
                             "src": "/sort-items-by-groups-respecting-dependencies/",
-                            "score": 2418.5742747632,
+                            "original_src": "https://leetcode.cn/problems/sort-items-by-groups-respecting-dependencies/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2418.5742747632,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2603. 收集树中金币",
-                            "sort": 9,
+                            "summary": "",
                             "src": "/collect-coins-in-a-tree/",
-                            "score": 2711.8717381409,
+                            "original_src": "https://leetcode.cn/problems/collect-coins-in-a-tree/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2711.8717381409,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "LCR 114. 火星词典",
-                            "sort": 10,
+                            "summary": "",
                             "src": "/Jf1JuT/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/Jf1JuT/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "269. 火星词典",
-                            "sort": 11,
+                            "summary": "",
                             "src": "/alien-dictionary/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/alien-dictionary/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "444. 序列重建",
-                            "sort": 12,
+                            "summary": "",
                             "src": "/sequence-reconstruction/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/sequence-reconstruction/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "1059. 从始点到终点的所有路径",
-                            "sort": 13,
+                            "summary": "",
                             "src": "/all-paths-from-source-lead-to-destination/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/all-paths-from-source-lead-to-destination/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "1136. 并行课程",
-                            "sort": 14,
+                            "summary": "",
                             "src": "/parallel-courses/",
-                            "score": 1710.0787625377,
+                            "original_src": "https://leetcode.cn/problems/parallel-courses/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": 1710.0787625377,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         }
-                    ]
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 },
                 {
                     "title": "§2.2 在拓扑序上 DP",
-                    "sort": 1,
-                    "isLeaf": true,
                     "summary": "",
-                    "child": [
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
                         {
                             "title": "2050. 并行课程 III",
-                            "sort": 0,
+                            "summary": "",
                             "src": "/parallel-courses-iii/",
-                            "score": 2084.1404698713,
+                            "original_src": "https://leetcode.cn/problems/parallel-courses-iii/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2084.1404698713,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1857. 有向图中最大颜色值",
-                            "sort": 1,
+                            "summary": "",
                             "src": "/largest-color-value-in-a-directed-graph/",
-                            "score": 2312.9919953644,
+                            "original_src": "https://leetcode.cn/problems/largest-color-value-in-a-directed-graph/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2312.9919953644,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         }
-                    ]
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 },
                 {
                     "title": "§2.3 基环树",
-                    "sort": 2,
-                    "isLeaf": true,
                     "summary": "<a href=\"https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/solution/nei-xiang-ji-huan-shu-tuo-bu-pai-xu-fen-c1i1b/\">基环树介绍</a><br>",
-                    "child": [
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
                         {
                             "title": "2359. 找到离给定两个节点最近的节点",
-                            "sort": 0,
+                            "summary": "",
                             "src": "/find-closest-node-to-given-two-nodes/",
-                            "score": 1714.992763701,
+                            "original_src": "https://leetcode.cn/problems/find-closest-node-to-given-two-nodes/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1714.992763701,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2360. 图中的最长环",
-                            "sort": 1,
+                            "summary": "",
                             "src": "/longest-cycle-in-a-graph/",
-                            "score": 1897.1863301576,
+                            "original_src": "https://leetcode.cn/problems/longest-cycle-in-a-graph/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1897.1863301576,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "684. 冗余连接",
-                            "sort": 2,
+                            "summary": "",
                             "src": "/redundant-connection/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/redundant-connection/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "685. 冗余连接 II",
-                            "sort": 3,
+                            "summary": "",
                             "src": "/redundant-connection-ii/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/redundant-connection-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2876. 有向图访问计数",
-                            "sort": 4,
+                            "summary": "",
                             "src": "/count-visited-nodes-in-a-directed-graph/",
-                            "score": 2209.8785430371,
+                            "original_src": "https://leetcode.cn/problems/count-visited-nodes-in-a-directed-graph/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2209.8785430371,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2127. 参加会议的最多员工数",
-                            "sort": 5,
+                            "summary": "",
                             "src": "/maximum-employees-to-be-invited-to-a-meeting/",
-                            "score": 2449.1323757838,
+                            "original_src": "https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2449.1323757838,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2836. 在传球游戏中最大化函数值",
-                            "sort": 6,
+                            "summary": "",
                             "src": "/maximize-value-of-function-in-a-ball-passing-game",
-                            "score": 2768.8154223451,
+                            "original_src": "https://leetcode.cn/problems/maximize-value-of-function-in-a-ball-passing-game",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2768.8154223451,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "LCP 21. 追逐游戏",
-                            "sort": 7,
+                            "summary": "",
                             "src": "/Za25hA/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/Za25hA/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2204. 无向图中到环的距离",
-                            "sort": 8,
+                            "summary": "",
                             "src": "/distance-to-a-cycle-in-undirected-graph/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/distance-to-a-cycle-in-undirected-graph/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         }
-                    ]
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
-            ]
+            ],
+            "isPremium": false,
+            "last_update": ""
         },
         {
             "title": "三、最短路",
-            "sort": 3,
             "summary": "",
-            "child": [
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [],
+            "nonLeafChild": [
                 {
                     "title": "§3.1 单源最短路：Dijkstra 算法",
-                    "sort": 0,
-                    "isLeaf": true,
                     "summary": "<a href=\"https://leetcode.cn/problems/network-delay-time/solution/liang-chong-dijkstra-xie-fa-fu-ti-dan-py-ooe8/\">Dijkstra 算法介绍</a><br>",
-                    "child": [
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
                         {
                             "title": "743. 网络延迟时间",
-                            "sort": 0,
+                            "summary": "",
                             "src": "/network-delay-time/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/network-delay-time/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "3341. 到达最后一个房间的最少时间 I",
-                            "sort": 1,
+                            "summary": "",
                             "src": "/find-minimum-time-to-reach-last-room-i/",
-                            "score": 1721.4793821913,
+                            "original_src": "https://leetcode.cn/problems/find-minimum-time-to-reach-last-room-i/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1721.4793821913,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "3112. 访问消失节点的最少时间",
-                            "sort": 2,
+                            "summary": "",
                             "src": "/minimum-time-to-visit-disappearing-nodes/",
-                            "score": 1756.963553993,
+                            "original_src": "https://leetcode.cn/problems/minimum-time-to-visit-disappearing-nodes/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1756.963553993,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2642. 设计可以求最短路径的图类",
-                            "sort": 3,
+                            "summary": "",
                             "src": "/design-graph-with-shortest-path-calculator/",
-                            "score": 1810.6470004623,
+                            "original_src": "https://leetcode.cn/problems/design-graph-with-shortest-path-calculator/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1810.6470004623,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1514. 概率最大的路径",
-                            "sort": 4,
+                            "summary": "",
                             "src": "/path-with-maximum-probability/",
-                            "score": 1846.4077077642,
+                            "original_src": "https://leetcode.cn/problems/path-with-maximum-probability/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1846.4077077642,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "3342. 到达最后一个房间的最少时间 II",
-                            "sort": 5,
+                            "summary": "",
                             "src": "/find-minimum-time-to-reach-last-room-ii/",
-                            "score": 1861.7421056879,
+                            "original_src": "https://leetcode.cn/problems/find-minimum-time-to-reach-last-room-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1861.7421056879,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1631. 最小体力消耗路径",
-                            "sort": 6,
+                            "summary": "",
                             "src": "/path-with-minimum-effort/",
-                            "score": 1947.5013967785,
+                            "original_src": "https://leetcode.cn/problems/path-with-minimum-effort/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1947.5013967785,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1786. 从第一个节点出发到最后一个节点的受限路径数",
-                            "sort": 7,
+                            "summary": "",
                             "src": "/number-of-restricted-paths-from-first-to-last-node/",
-                            "score": 2078.5417326415,
+                            "original_src": "https://leetcode.cn/problems/number-of-restricted-paths-from-first-to-last-node/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2078.5417326415,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "3123. 最短路径中的边",
-                            "sort": 8,
+                            "summary": "",
                             "src": "/find-edges-in-shortest-paths/",
-                            "score": 2093.0316157073,
+                            "original_src": "https://leetcode.cn/problems/find-edges-in-shortest-paths/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2093.0316157073,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1976. 到达目的地的方案数",
-                            "sort": 9,
+                            "summary": "",
                             "src": "/number-of-ways-to-arrive-at-destination/",
-                            "score": 2094.592426537,
+                            "original_src": "https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2094.592426537,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "778. 水位上升的泳池中游泳",
-                            "sort": 10,
+                            "summary": "",
                             "src": "/swim-in-rising-water/",
-                            "score": 2096.6201393558,
+                            "original_src": "https://leetcode.cn/problems/swim-in-rising-water/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2096.6201393558,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2662. 前往目标的最小代价",
-                            "sort": 11,
+                            "summary": "",
                             "src": "/minimum-cost-of-a-path-with-special-roads/",
-                            "score": 2153.8943791656,
+                            "original_src": "https://leetcode.cn/problems/minimum-cost-of-a-path-with-special-roads/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2153.8943791656,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "3377. 使两个整数相等的数位操作",
-                            "sort": 12,
+                            "summary": "",
                             "src": "/digit-operations-to-make-two-integers-equal/",
-                            "score": 2186.3802199168,
+                            "original_src": "https://leetcode.cn/problems/digit-operations-to-make-two-integers-equal/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2186.3802199168,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2045. 到达目的地的第二短时间",
-                            "sort": 13,
+                            "summary": "",
                             "src": "/second-minimum-time-to-reach-destination/",
-                            "score": 2201.6219336792,
+                            "original_src": "https://leetcode.cn/problems/second-minimum-time-to-reach-destination/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2201.6219336792,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "3419. 图的最大边权的最小值",
-                            "sort": 14,
+                            "summary": "",
                             "src": "/minimize-the-maximum-edge-weight-of-graph/",
-                            "score": 2243.2051062979,
+                            "original_src": "https://leetcode.cn/problems/minimize-the-maximum-edge-weight-of-graph/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2243.2051062979,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "882. 细分图中的可到达节点",
-                            "sort": 15,
+                            "summary": "",
                             "src": "/reachable-nodes-in-subdivided-graph/",
-                            "score": 2328.4294689238,
+                            "original_src": "https://leetcode.cn/problems/reachable-nodes-in-subdivided-graph/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2328.4294689238,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2203. 得到要求路径的最小带权子图",
-                            "sort": 16,
+                            "summary": "",
                             "src": "/minimum-weighted-subgraph-with-the-required-paths/",
-                            "score": 2364.3455634374,
+                            "original_src": "https://leetcode.cn/problems/minimum-weighted-subgraph-with-the-required-paths/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2364.3455634374,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2577. 在网格图中访问一个格子的最少时间",
-                            "sort": 17,
+                            "summary": "",
                             "src": "/minimum-time-to-visit-a-cell-in-a-grid/",
-                            "score": 2381.625583289,
+                            "original_src": "https://leetcode.cn/problems/minimum-time-to-visit-a-cell-in-a-grid/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2381.625583289,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1928. 规定时间内到达终点的最小花费",
-                            "sort": 18,
+                            "summary": "",
                             "src": "/minimum-cost-to-reach-destination-in-time/",
-                            "score": 2413.3969129689,
+                            "original_src": "https://leetcode.cn/problems/minimum-cost-to-reach-destination-in-time/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2413.3969129689,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "787. K 站中转内最便宜的航班",
-                            "sort": 19,
+                            "summary": "",
                             "src": "/cheapest-flights-within-k-stops/",
-                            "score": 1786.4753467293,
+                            "original_src": "https://leetcode.cn/problems/cheapest-flights-within-k-stops/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1786.4753467293,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2699. 修改图中的边权",
-                            "sort": 20,
+                            "summary": "",
                             "src": "/modify-graph-edge-weights/",
-                            "score": 2873.9745576413,
+                            "original_src": "https://leetcode.cn/problems/modify-graph-edge-weights/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2873.9745576413,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "LCP 35. 电动车游城市",
-                            "sort": 21,
+                            "summary": "",
                             "src": "/DFPeFJ/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/DFPeFJ/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1810. 隐藏网格下的最小消耗路径",
-                            "sort": 22,
+                            "summary": "",
                             "src": "/minimum-path-cost-in-a-hidden-grid/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/minimum-path-cost-in-a-hidden-grid/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "2093. 前往目标城市的最小费用",
-                            "sort": 23,
+                            "summary": "",
                             "src": "/minimum-cost-to-reach-city-with-discounts/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/minimum-cost-to-reach-city-with-discounts/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "2473. 购买苹果的最低成本",
-                            "sort": 24,
+                            "summary": "",
                             "src": "/minimum-cost-to-buy-apples/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/minimum-cost-to-buy-apples/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "2714. 找到最短路径的 K 次跨越",
-                            "sort": 25,
+                            "summary": "",
                             "src": "/find-shortest-path-with-k-hops/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/find-shortest-path-with-k-hops/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         },
                         {
                             "title": "2737. 找到最近的标记节点",
-                            "sort": 26,
+                            "summary": "",
                             "src": "/find-the-closest-marked-node/",
-                            "score": null,
+                            "original_src": "https://leetcode.cn/problems/find-the-closest-marked-node/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": true
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         }
-                    ]
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 },
                 {
                     "title": "§3.2 全源最短路：Floyd 算法",
-                    "sort": 1,
-                    "isLeaf": true,
                     "summary": "<a href=\"https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/solution/dai-ni-fa-ming-floyd-suan-fa-cong-ji-yi-m8s51/\">带你发明 Floyd 算法：从记忆化搜索到递推</a><br>**Bitset 优化 Floyd**<br>",
-                    "child": [
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
                         {
                             "title": "2642. 设计可以求最短路径的图类",
-                            "sort": 0,
+                            "summary": "",
                             "src": "/design-graph-with-shortest-path-calculator/",
-                            "score": 1810.6470004623,
+                            "original_src": "https://leetcode.cn/problems/design-graph-with-shortest-path-calculator/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1810.6470004623,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "1334. 阈值距离内邻居最少的城市",
-                            "sort": 1,
+                            "summary": "",
                             "src": "/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/",
-                            "score": 1854.9547783559,
+                            "original_src": "https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1854.9547783559,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2976. 转换字符串的最小成本 I",
-                            "sort": 2,
+                            "summary": "",
                             "src": "/minimum-cost-to-convert-string-i/",
-                            "score": 1882.0842446557,
+                            "original_src": "https://leetcode.cn/problems/minimum-cost-to-convert-string-i/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1882.0842446557,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2959. 关闭分部的可行集合数目",
-                            "sort": 3,
+                            "summary": "",
                             "src": "/number-of-possible-sets-of-closing-branches/",
-                            "score": 2077.4738459704,
+                            "original_src": "https://leetcode.cn/problems/number-of-possible-sets-of-closing-branches/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2077.4738459704,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2977. 转换字符串的最小成本 II",
-                            "sort": 4,
+                            "summary": "",
                             "src": "/minimum-cost-to-convert-string-ii/",
-                            "score": 2695.809667046,
+                            "original_src": "https://leetcode.cn/problems/minimum-cost-to-convert-string-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 2695.809667046,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         },
                         {
                             "title": "2101. 引爆最多的炸弹",
-                            "sort": 5,
+                            "summary": "",
                             "src": "/detonate-the-maximum-bombs/",
-                            "score": 1880.0511044074,
+                            "original_src": "https://leetcode.cn/problems/detonate-the-maximum-bombs/",
+                            "sort": 0,
+                            "isLeaf": true,
                             "solution": null,
-                            "isPremium": false
+                            "score": 1880.0511044074,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         }
-                    ]
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
-            ]
+            ],
+            "isPremium": false,
+            "last_update": ""
         },
         {
             "title": "四、最小生成树",
-            "sort": 4,
-            "summary": "涉及到 Kruskal 算法和 Prim 算法。前者一般用于稀疏图，后者一般用于稠密图。<br>",
-            "child": [
+            "summary": "涉及到 Kruskal 算法和 Prim 算法。前者一般用于稀疏图，后者一般用于稠密图。<br>**思维扩展**<br>",
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [
                 {
-                    "title": "",
+                    "title": "1584. 连接所有点的最小费用",
+                    "summary": "",
+                    "src": "/min-cost-to-connect-all-points/",
+                    "original_src": "https://leetcode.cn/problems/min-cost-to-connect-all-points/",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "**思维扩展**<br>",
-                    "child": [
-                        {
-                            "title": "1584. 连接所有点的最小费用",
-                            "sort": 0,
-                            "src": "/min-cost-to-connect-all-points/",
-                            "score": 1857.6431822094,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1489. 找到最小生成树里的关键边和伪关键边",
-                            "sort": 1,
-                            "src": "/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/",
-                            "score": 2571.552028121,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1135. 最低成本连通所有城市",
-                            "sort": 2,
-                            "src": "/connecting-cities-with-minimum-cost/",
-                            "score": 1752.9555725796,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
-                            "title": "1168. 水资源分配优化",
-                            "sort": 3,
-                            "src": "/optimize-water-distribution-in-a-village/",
-                            "score": 2069.4030284676,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
-                            "title": "3219. 切蛋糕的最小总开销 II",
-                            "sort": 4,
-                            "src": "/minimum-cost-for-cutting-cake-ii/",
-                            "score": 1789.3681547685,
-                            "solution": null,
-                            "isPremium": false
-                        }
-                    ]
+                    "solution": null,
+                    "score": 1857.6431822094,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "1489. 找到最小生成树里的关键边和伪关键边",
+                    "summary": "",
+                    "src": "/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/",
+                    "original_src": "https://leetcode.cn/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2571.552028121,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "1135. 最低成本连通所有城市",
+                    "summary": "",
+                    "src": "/connecting-cities-with-minimum-cost/",
+                    "original_src": "https://leetcode.cn/problems/connecting-cities-with-minimum-cost/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 1752.9555725796,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": true,
+                    "last_update": ""
+                },
+                {
+                    "title": "1168. 水资源分配优化",
+                    "summary": "",
+                    "src": "/optimize-water-distribution-in-a-village/",
+                    "original_src": "https://leetcode.cn/problems/optimize-water-distribution-in-a-village/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2069.4030284676,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": true,
+                    "last_update": ""
+                },
+                {
+                    "title": "3219. 切蛋糕的最小总开销 II",
+                    "summary": "",
+                    "src": "/minimum-cost-for-cutting-cake-ii/",
+                    "original_src": "https://leetcode.cn/problems/minimum-cost-for-cutting-cake-ii/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 1789.3681547685,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
-            ]
+            ],
+            "nonLeafChild": [],
+            "isPremium": false,
+            "last_update": ""
         },
         {
             "title": "五、欧拉路径/欧拉回路",
-            "sort": 5,
             "summary": "涉及到 Hierholzer 算法。<br>",
-            "child": [
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [
                 {
-                    "title": "",
+                    "title": "332. 重新安排行程",
+                    "summary": "",
+                    "src": "/reconstruct-itinerary/",
+                    "original_src": "https://leetcode.cn/problems/reconstruct-itinerary/",
                     "sort": 0,
                     "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "753. 破解保险箱",
                     "summary": "",
-                    "child": [
-                        {
-                            "title": "332. 重新安排行程",
-                            "sort": 0,
-                            "src": "/reconstruct-itinerary/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "753. 破解保险箱",
-                            "sort": 1,
-                            "src": "/cracking-the-safe/",
-                            "score": 2273.7910625337,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "2097. 合法重新排列数对",
-                            "sort": 2,
-                            "src": "/valid-arrangement-of-pairs/",
-                            "score": 2650.8996457642,
-                            "solution": null,
-                            "isPremium": false
-                        }
-                    ]
+                    "src": "/cracking-the-safe/",
+                    "original_src": "https://leetcode.cn/problems/cracking-the-safe/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2273.7910625337,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "2097. 合法重新排列数对",
+                    "summary": "",
+                    "src": "/valid-arrangement-of-pairs/",
+                    "original_src": "https://leetcode.cn/problems/valid-arrangement-of-pairs/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2650.8996457642,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
-            ]
+            ],
+            "nonLeafChild": [],
+            "isPremium": false,
+            "last_update": ""
         },
         {
             "title": "六、强连通分量/双连通分量",
-            "sort": 6,
             "summary": "涉及到 Tarjan 算法。<br>",
-            "child": [
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [
                 {
-                    "title": "",
+                    "title": "1192. 查找集群内的关键连接",
+                    "summary": "",
+                    "src": "/critical-connections-in-a-network/",
+                    "original_src": "https://leetcode.cn/problems/critical-connections-in-a-network/",
                     "sort": 0,
                     "isLeaf": true,
+                    "solution": null,
+                    "score": 2084.6866916045,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "1568. 使陆地分离的最少天数",
                     "summary": "",
-                    "child": [
-                        {
-                            "title": "1192. 查找集群内的关键连接",
-                            "sort": 0,
-                            "src": "/critical-connections-in-a-network/",
-                            "score": 2084.6866916045,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1568. 使陆地分离的最少天数",
-                            "sort": 1,
-                            "src": "/minimum-number-of-days-to-disconnect-island/",
-                            "score": 2208.5532172086,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "LCP 54. 夺回据点",
-                            "sort": 2,
-                            "src": "/s5kipK/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "3383. 施法所需最低符文数量",
-                            "sort": 3,
-                            "src": "/minimum-runes-to-add-to-cast-spell/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": true
-                        }
-                    ]
+                    "src": "/minimum-number-of-days-to-disconnect-island/",
+                    "original_src": "https://leetcode.cn/problems/minimum-number-of-days-to-disconnect-island/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2208.5532172086,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "LCP 54. 夺回据点",
+                    "summary": "",
+                    "src": "/s5kipK/",
+                    "original_src": "https://leetcode.cn/problems/s5kipK/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "3383. 施法所需最低符文数量",
+                    "summary": "",
+                    "src": "/minimum-runes-to-add-to-cast-spell/",
+                    "original_src": "https://leetcode.cn/problems/minimum-runes-to-add-to-cast-spell/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": true,
+                    "last_update": ""
                 }
-            ]
+            ],
+            "nonLeafChild": [],
+            "isPremium": false,
+            "last_update": ""
         },
         {
             "title": "七、二分图染色",
-            "sort": 7,
-            "summary": "",
-            "child": [
+            "summary": "关于二分图的最大匹配，见下面网络流的题目。其中标有「一对一」的题目也可以用带权二分图最大匹配做。<br>",
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [
                 {
-                    "title": "",
+                    "title": "785. 判断二分图",
+                    "summary": "",
+                    "src": "/is-graph-bipartite/",
+                    "original_src": "https://leetcode.cn/problems/is-graph-bipartite/",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "关于二分图的最大匹配，见下面网络流的题目。其中标有「一对一」的题目也可以用带权二分图最大匹配做。<br>",
-                    "child": [
-                        {
-                            "title": "785. 判断二分图",
-                            "sort": 0,
-                            "src": "/is-graph-bipartite/",
-                            "score": 1624.9775945043,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "886. 可能的二分法",
-                            "sort": 1,
-                            "src": "/possible-bipartition/",
-                            "score": 1794.5827898448,
-                            "solution": null,
-                            "isPremium": false
-                        }
-                    ]
+                    "solution": null,
+                    "score": 1624.9775945043,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "886. 可能的二分法",
+                    "summary": "",
+                    "src": "/possible-bipartition/",
+                    "original_src": "https://leetcode.cn/problems/possible-bipartition/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 1794.5827898448,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
-            ]
+            ],
+            "nonLeafChild": [],
+            "isPremium": false,
+            "last_update": ""
         },
         {
             "title": "八、网络流",
-            "sort": 8,
-            "summary": "由于有其他做法（比如状压 DP），难度分仅供参考。<br>",
-            "child": [
+            "summary": "由于有其他做法（比如状压 DP），难度分仅供参考。<br>**模拟费用流**<br>",
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [
                 {
-                    "title": "",
+                    "title": "3376. 破解锁的最少时间 I",
+                    "summary": "",
+                    "src": "/minimum-time-to-break-locks-i/",
+                    "original_src": "https://leetcode.cn/problems/minimum-time-to-break-locks-i/",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "**模拟费用流**<br>",
-                    "child": [
-                        {
-                            "title": "3376. 破解锁的最少时间 I",
-                            "sort": 0,
-                            "src": "/minimum-time-to-break-locks-i/",
-                            "score": 1793.2112436729,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1947. 最大兼容性评分和",
-                            "sort": 1,
-                            "src": "/maximum-compatibility-score-sum/",
-                            "score": 1704.360891641,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "2850. 将石头分散到网格图的最少移动次数",
-                            "sort": 2,
-                            "src": "/minimum-moves-to-spread-stones-over-grid/",
-                            "score": 2001.4515854273,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1879. 两个数组最小的异或值之和",
-                            "sort": 3,
-                            "src": "/minimum-xor-sum-of-two-arrays/",
-                            "score": 2145.183995267,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1349. 参加考试的最大学生数",
-                            "sort": 4,
-                            "src": "/maximum-students-taking-exam/",
-                            "score": 2385.8072128533,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "2172. 数组的最大与和",
-                            "sort": 5,
-                            "src": "/maximum-and-sum-of-array/",
-                            "score": 2392.0799451298,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "3276. 选择矩阵中单元格的最大得分",
-                            "sort": 6,
-                            "src": "/select-cells-in-grid-with-maximum-score/",
-                            "score": 2402.6213260468,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1595. 连通两组点的最小成本",
-                            "sort": 7,
-                            "src": "/minimum-cost-to-connect-two-groups-of-points/",
-                            "score": 2537.7965575726,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "3257. 放三个车的价值之和最大 II",
-                            "sort": 8,
-                            "src": "/maximum-value-sum-by-placing-three-rooks-ii/",
-                            "score": 2553.2367142614,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "LCP 04. 覆盖",
-                            "sort": 9,
-                            "src": "/broken-board-dominoes/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "LCP 38. 守卫城堡",
-                            "sort": 10,
-                            "src": "/7rLGCR/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1820. 最多邀请的个数",
-                            "sort": 11,
-                            "src": "/maximum-number-of-accepted-invitations/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
-                            "title": "2403. 杀死所有怪物的最短时间",
-                            "sort": 12,
-                            "src": "/minimum-time-to-kill-all-monsters/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
-                            "title": "3385. 破解锁的最少时间 II",
-                            "sort": 13,
-                            "src": "/minimum-time-to-break-locks-ii/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
-                            "title": "1066. 校园自行车分配 II",
-                            "sort": 14,
-                            "src": "/campus-bikes-ii/",
-                            "score": 1885.1051527272,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
-                            "title": "2123. 使矩阵中的 1 互不相邻的最小操作数",
-                            "sort": 15,
-                            "src": "/minimum-operations-to-remove-adjacent-ones-in-matrix/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
-                            "title": "2463. 最小移动总距离",
-                            "sort": 16,
-                            "src": "/minimum-total-distance-traveled/",
-                            "score": 2453.9054896968,
-                            "solution": null,
-                            "isPremium": false
-                        }
-                    ]
+                    "solution": null,
+                    "score": 1793.2112436729,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "1947. 最大兼容性评分和",
+                    "summary": "",
+                    "src": "/maximum-compatibility-score-sum/",
+                    "original_src": "https://leetcode.cn/problems/maximum-compatibility-score-sum/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 1704.360891641,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "2850. 将石头分散到网格图的最少移动次数",
+                    "summary": "",
+                    "src": "/minimum-moves-to-spread-stones-over-grid/",
+                    "original_src": "https://leetcode.cn/problems/minimum-moves-to-spread-stones-over-grid/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2001.4515854273,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "1879. 两个数组最小的异或值之和",
+                    "summary": "",
+                    "src": "/minimum-xor-sum-of-two-arrays/",
+                    "original_src": "https://leetcode.cn/problems/minimum-xor-sum-of-two-arrays/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2145.183995267,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "1349. 参加考试的最大学生数",
+                    "summary": "",
+                    "src": "/maximum-students-taking-exam/",
+                    "original_src": "https://leetcode.cn/problems/maximum-students-taking-exam/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2385.8072128533,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "2172. 数组的最大与和",
+                    "summary": "",
+                    "src": "/maximum-and-sum-of-array/",
+                    "original_src": "https://leetcode.cn/problems/maximum-and-sum-of-array/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2392.0799451298,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "3276. 选择矩阵中单元格的最大得分",
+                    "summary": "",
+                    "src": "/select-cells-in-grid-with-maximum-score/",
+                    "original_src": "https://leetcode.cn/problems/select-cells-in-grid-with-maximum-score/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2402.6213260468,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "1595. 连通两组点的最小成本",
+                    "summary": "",
+                    "src": "/minimum-cost-to-connect-two-groups-of-points/",
+                    "original_src": "https://leetcode.cn/problems/minimum-cost-to-connect-two-groups-of-points/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2537.7965575726,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "3257. 放三个车的价值之和最大 II",
+                    "summary": "",
+                    "src": "/maximum-value-sum-by-placing-three-rooks-ii/",
+                    "original_src": "https://leetcode.cn/problems/maximum-value-sum-by-placing-three-rooks-ii/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2553.2367142614,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "LCP 04. 覆盖",
+                    "summary": "",
+                    "src": "/broken-board-dominoes/",
+                    "original_src": "https://leetcode.cn/problems/broken-board-dominoes/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "LCP 38. 守卫城堡",
+                    "summary": "",
+                    "src": "/7rLGCR/",
+                    "original_src": "https://leetcode.cn/problems/7rLGCR/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "1820. 最多邀请的个数",
+                    "summary": "",
+                    "src": "/maximum-number-of-accepted-invitations/",
+                    "original_src": "https://leetcode.cn/problems/maximum-number-of-accepted-invitations/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": true,
+                    "last_update": ""
+                },
+                {
+                    "title": "2403. 杀死所有怪物的最短时间",
+                    "summary": "",
+                    "src": "/minimum-time-to-kill-all-monsters/",
+                    "original_src": "https://leetcode.cn/problems/minimum-time-to-kill-all-monsters/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": true,
+                    "last_update": ""
+                },
+                {
+                    "title": "3385. 破解锁的最少时间 II",
+                    "summary": "",
+                    "src": "/minimum-time-to-break-locks-ii/",
+                    "original_src": "https://leetcode.cn/problems/minimum-time-to-break-locks-ii/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": true,
+                    "last_update": ""
+                },
+                {
+                    "title": "1066. 校园自行车分配 II",
+                    "summary": "",
+                    "src": "/campus-bikes-ii/",
+                    "original_src": "https://leetcode.cn/problems/campus-bikes-ii/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 1885.1051527272,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": true,
+                    "last_update": ""
+                },
+                {
+                    "title": "2123. 使矩阵中的 1 互不相邻的最小操作数",
+                    "summary": "",
+                    "src": "/minimum-operations-to-remove-adjacent-ones-in-matrix/",
+                    "original_src": "https://leetcode.cn/problems/minimum-operations-to-remove-adjacent-ones-in-matrix/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": true,
+                    "last_update": ""
+                },
+                {
+                    "title": "2463. 最小移动总距离",
+                    "summary": "",
+                    "src": "/minimum-total-distance-traveled/",
+                    "original_src": "https://leetcode.cn/problems/minimum-total-distance-traveled/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2453.9054896968,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
-            ]
+            ],
+            "nonLeafChild": [],
+            "isPremium": false,
+            "last_update": ""
         },
         {
             "title": "九、其他",
-            "sort": 9,
             "summary": "",
-            "child": [
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [
                 {
-                    "title": "",
+                    "title": "1042. 不邻接植花",
+                    "summary": "",
+                    "src": "/flower-planting-with-no-adjacent/",
+                    "original_src": "https://leetcode.cn/problems/flower-planting-with-no-adjacent/",
                     "sort": 0,
                     "isLeaf": true,
+                    "solution": null,
+                    "score": 1712.4010133221,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "1761. 一个图中连通三元组的最小度数",
                     "summary": "",
-                    "child": [
-                        {
-                            "title": "1042. 不邻接植花",
-                            "sort": 0,
-                            "src": "/flower-planting-with-no-adjacent/",
-                            "score": 1712.4010133221,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1761. 一个图中连通三元组的最小度数",
-                            "sort": 1,
-                            "src": "/minimum-degree-of-a-connected-trio-in-a-graph/",
-                            "score": 2005.2755755378,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "2508. 添加边使所有节点度数都为偶数",
-                            "sort": 2,
-                            "src": "/add-edges-to-make-degrees-of-all-nodes-even/",
-                            "score": 2060.0720834082,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1579. 保证图可完全遍历",
-                            "sort": 3,
-                            "src": "/remove-max-number-of-edges-to-keep-graph-fully-traversable/",
-                            "score": 2131.7917160422,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "2065. 最大化一张图中的路径价值",
-                            "sort": 4,
-                            "src": "/maximum-path-quality-of-a-graph/",
-                            "score": 2178.4249114144,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1697. 检查边长度限制的路径是否存在",
-                            "sort": 5,
-                            "src": "/checking-existence-of-edge-length-limited-paths/",
-                            "score": 2300.1557840589,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "2242. 节点序列的最大得分",
-                            "sort": 6,
-                            "src": "/maximum-score-of-a-node-sequence/",
-                            "score": 2304.3094138939,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "2493. 将节点分成尽可能多的组",
-                            "sort": 7,
-                            "src": "/divide-nodes-into-the-maximum-number-of-groups/",
-                            "score": 2415.2802039252,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "1782. 统计点对的数目",
-                            "sort": 8,
-                            "src": "/count-pairs-of-nodes/",
-                            "score": 2457.115574186,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "3435. 最短公共超序列的字母出现频率",
-                            "sort": 9,
-                            "src": "/frequencies-of-shortest-supersequences/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "LCP 16. 游乐园的游览计划",
-                            "sort": 10,
-                            "src": "/you-le-yuan-de-you-lan-ji-hua/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "277. 搜寻名人",
-                            "sort": 11,
-                            "src": "/find-the-celebrity/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
-                            "title": "1724. 检查边长度限制的路径是否存在 II",
-                            "sort": 12,
-                            "src": "/checking-existence-of-edge-length-limited-paths-ii/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": true
-                        },
-                        {
-                            "title": "2077. 殊途同归",
-                            "sort": 13,
-                            "src": "/paths-in-maze-that-lead-to-same-room/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": true
-                        }
-                    ]
+                    "src": "/minimum-degree-of-a-connected-trio-in-a-graph/",
+                    "original_src": "https://leetcode.cn/problems/minimum-degree-of-a-connected-trio-in-a-graph/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2005.2755755378,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "2508. 添加边使所有节点度数都为偶数",
+                    "summary": "",
+                    "src": "/add-edges-to-make-degrees-of-all-nodes-even/",
+                    "original_src": "https://leetcode.cn/problems/add-edges-to-make-degrees-of-all-nodes-even/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2060.0720834082,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "1579. 保证图可完全遍历",
+                    "summary": "",
+                    "src": "/remove-max-number-of-edges-to-keep-graph-fully-traversable/",
+                    "original_src": "https://leetcode.cn/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2131.7917160422,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "2065. 最大化一张图中的路径价值",
+                    "summary": "",
+                    "src": "/maximum-path-quality-of-a-graph/",
+                    "original_src": "https://leetcode.cn/problems/maximum-path-quality-of-a-graph/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2178.4249114144,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "1697. 检查边长度限制的路径是否存在",
+                    "summary": "",
+                    "src": "/checking-existence-of-edge-length-limited-paths/",
+                    "original_src": "https://leetcode.cn/problems/checking-existence-of-edge-length-limited-paths/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2300.1557840589,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "2242. 节点序列的最大得分",
+                    "summary": "",
+                    "src": "/maximum-score-of-a-node-sequence/",
+                    "original_src": "https://leetcode.cn/problems/maximum-score-of-a-node-sequence/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2304.3094138939,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "2493. 将节点分成尽可能多的组",
+                    "summary": "",
+                    "src": "/divide-nodes-into-the-maximum-number-of-groups/",
+                    "original_src": "https://leetcode.cn/problems/divide-nodes-into-the-maximum-number-of-groups/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2415.2802039252,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "1782. 统计点对的数目",
+                    "summary": "",
+                    "src": "/count-pairs-of-nodes/",
+                    "original_src": "https://leetcode.cn/problems/count-pairs-of-nodes/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2457.115574186,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "3435. 最短公共超序列的字母出现频率",
+                    "summary": "",
+                    "src": "/frequencies-of-shortest-supersequences/",
+                    "original_src": "https://leetcode.cn/problems/frequencies-of-shortest-supersequences/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "LCP 16. 游乐园的游览计划",
+                    "summary": "",
+                    "src": "/you-le-yuan-de-you-lan-ji-hua/",
+                    "original_src": "https://leetcode.cn/problems/you-le-yuan-de-you-lan-ji-hua/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "277. 搜寻名人",
+                    "summary": "",
+                    "src": "/find-the-celebrity/",
+                    "original_src": "https://leetcode.cn/problems/find-the-celebrity/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": true,
+                    "last_update": ""
+                },
+                {
+                    "title": "1724. 检查边长度限制的路径是否存在 II",
+                    "summary": "",
+                    "src": "/checking-existence-of-edge-length-limited-paths-ii/",
+                    "original_src": "https://leetcode.cn/problems/checking-existence-of-edge-length-limited-paths-ii/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": true,
+                    "last_update": ""
+                },
+                {
+                    "title": "2077. 殊途同归",
+                    "summary": "",
+                    "src": "/paths-in-maze-that-lead-to-same-room/",
+                    "original_src": "https://leetcode.cn/problems/paths-in-maze-that-lead-to-same-room/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": true,
+                    "last_update": ""
                 }
-            ]
+            ],
+            "nonLeafChild": [],
+            "isPremium": false,
+            "last_update": ""
         }
-    ]
+    ],
+    "isPremium": false,
+    "last_update": "2025-01-29 06:26:55"
 } as ProblemCategory;
