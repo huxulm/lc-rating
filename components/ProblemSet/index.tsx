@@ -17,12 +17,9 @@ function ProblemSet() {
 
   const [filterFn, setFilterFn] = useState<FilterFunction>(() => () => true);
 
-  const handleSearch = useCallback(
-    (filter: FilterFunction) => {
-      setFilterFn(() => filter);
-    },
-    []
-  );
+  const handleSearch = useCallback((filter: FilterFunction) => {
+    setFilterFn(() => filter);
+  }, []);
 
   const filtProblems = useMemo(() => {
     return joinProblem.filter((problem) => filterFn(problem));
@@ -30,10 +27,10 @@ function ProblemSet() {
 
   return (
     <div className="p-8 flex flex-col select-none gap-4">
-      <div className="w-1/2 m-auto">
+      <div className="w-4/5 xl:w-3/4 2xl:w-2/3 m-auto">
         <Search onSearch={handleSearch}></Search>
       </div>
-      <div className="w-full xl:w-3/4  m-auto">
+      <div className="w-full 2xl:w-2/3  m-auto">
         <ProblemsTable problems={filtProblems} isPending={isPending} />
       </div>
     </div>

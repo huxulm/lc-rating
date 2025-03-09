@@ -1,4 +1,4 @@
-import { LC_RATING_PROGRESS_KEY_PREFIX } from "@/config/constants";
+import { LC_RATING_PROGRESS_KEY } from "@/config/constants";
 import { shared } from "use-broadcast-ts";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
@@ -27,7 +27,7 @@ export const useProgressStore = create<ProgressStore>()(
         getProgress: (id) => get().progresses[id],
       }),
       {
-        name: LC_RATING_PROGRESS_KEY_PREFIX,
+        name: LC_RATING_PROGRESS_KEY,
       }
     )
   )
