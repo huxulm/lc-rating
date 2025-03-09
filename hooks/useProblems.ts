@@ -1,20 +1,20 @@
-import type { ContestMap } from "@/types";
+import type { ProblemMap } from "@/types";
 import { useQuery } from "@tanstack/react-query";
 import { fetchApi } from "@/utils/fetch";
 
-export function useContests() {
+export function useProblems() {
   const {
-    data: contestMap,
+    data: problemMap,
     isPending,
     error,
-  } = useQuery<ContestMap>({
-    queryKey: ["contests"],
+  } = useQuery<ProblemMap>({
+    queryKey: ["problems"],
     queryFn: () =>
       fetchApi(
-        "/data/contests.json?t=" +
+        "/data/problems.json?t=" +
           (new Date().getTime() / 100000).toFixed(0)
       ).then((res) => res.json()),
   });
 
-  return { contestMap, isPending, error };
+  return { problemMap, isPending, error };
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { Route } from "@app/(algo)/code/layout";
+import { Route } from "@/app/(algo)/code/layout";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
@@ -10,7 +10,7 @@ interface MaxLayoutProps {
 }
 
 export default function MdxLayout({ children, routes = [] }: MaxLayoutProps) {
-  const [selected, setSelected] = useState(routes[0].path);
+  const [selected, setSelected] = useState(routes[0]?.path);
   const code = useMemo(
     () => routes.find((r) => r.path === selected),
     [selected]

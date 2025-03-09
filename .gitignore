@@ -8,27 +8,46 @@
 # testing
 /coverage
 
+# next.js
+/.next/
+/out/
+/app/(test)
+
 # production
-.next
 /build
 
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# local env files
+.env*.local
 
+# npm
+.npmrc
 npm-debug.log*
+
+# yarn
+.yarnrc.yml
 yarn-debug.log*
 yarn-error.log*
 
+# pnpm
+.pnpm-debug.log*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
 .idea
-.yarn
-.yarnrc.yml
+.vscode
 
-lc-maker/.venv
-lc-maker/__pycache__
-lc-maker/hds.txt
-
+# python
 .venv
+__pycache__
+
+# misc
+.DS_Store
+*.pem
+lc-maker/hds.txt
+/test
