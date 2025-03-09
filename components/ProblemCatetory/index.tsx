@@ -11,7 +11,8 @@ interface ProblemCategory {
   isLeaf?: boolean;
   solution?: string | null;
   score?: Number | null;
-  child?: ProblemCategory[];
+  leafChild?: ProblemCategory[];
+  nonLeafChild?: ProblemCategory[];
   isPremium?: boolean;
   last_update?: string;
 }
@@ -53,45 +54,41 @@ function ProblemCategory({
           dangerouslySetInnerHTML={{ __html: summary }}
         ></span>
       )}
-      <div className={`level-${level + 1}`}>
+      <div className={`level-${level}`}>
         {data &&
           data.map((item) => {
+            let summary = item.leafChild.length == 0 ? item.summary : "";
+            let title = item.leafChild.length == 0 ? item.title : "";
             return (
-              <div
-                className={`pb-container level-${level + 2}`}
-                key={hashCode(item.title || "")}
-              >
-                {item.isLeaf ? (
+              <div key={hashCode(item.title || "") + "head"}>
+                {item.leafChild.length > 0 ? (
                   <ProblemCategoryList
-                    optionKeys={optionKeys}
-                    getOption={getOption}
-                    allProgress={allProgress}
-                    updateProgress={updateProgress}
-                    removeProgress={removeProgress}
-                    showEn={showEn}
-                    showRating={showRating}
-                    showPremium={showPremium}
-                    data={item}
+                  optionKeys={optionKeys}
+                  getOption={getOption}
+                  allProgress={allProgress}
+                  updateProgress={updateProgress}
+                  removeProgress={removeProgress}
+                  showEn={showEn}
+                  showRating={showRating}
+                  showPremium={showPremium}
+                  data={item}
+                  key={hashCode(item.title || "") + "leaf"}
                   />
-                ) : (
-                  item.child &&
-                  item.child?.map((item) => (
-                    <ProblemCategory
-                      showEn={showEn}
-                      showRating={showRating}
-                      showPremium={showPremium}
-                      level={level + 3}
-                      title={item.title}
-                      data={item.child}
-                      summary={item.summary}
-                      key={hashCode(item.title || "")}
-                    />
-                  ))
-                )}
+                ) : <></>}
+                <ProblemCategory
+                  showEn={showEn}
+                  showRating={showRating}
+                  showPremium={showPremium}
+                  level={level + 1}
+                  title={title}
+                  data={item.nonLeafChild}
+                  summary={summary}
+                  key={hashCode(item.title || "") + "nonLeaf"}
+                />
               </div>
             );
           })}
-      </div>
+      </div >
     </div>
   );
 }

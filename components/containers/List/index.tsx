@@ -15,7 +15,7 @@ import Form from "react-bootstrap/esm/Form";
 import MoveToTodoButton from "./MoveToTodoButton";
 
 const mapCategory2TOC = (
-  { title, child, isLeaf }: ProblemCategory,
+  { title, leafChild, nonLeafChild }: ProblemCategory,
   level: number
 ): TOC => {
   let toc = {
@@ -24,17 +24,14 @@ const mapCategory2TOC = (
     level: level,
     count: 0,
   } as TOC;
-
-  if (!child) return toc;
-
-  if (!isLeaf) {
-    toc.children = child.map((c) => mapCategory2TOC(c, level + 1));
-    toc.children.forEach((t) => {
-      toc.count += t.count;
-    });
-  } else {
-    toc.count = child.length;
-  }
+  toc.count = leafChild?.length || 0;
+  toc.children = nonLeafChild.map((c) => {
+    if (c) return mapCategory2TOC(c, level + 1);
+    return null;
+  });
+  toc.children.forEach((t) => {
+    toc.count += t.count;
+  });
   return toc;
 };
 
@@ -154,7 +151,7 @@ export default function ({ data }: { data: ProblemCategory }) {
           showEn={setting.showEn}
           showRating={setting.showRating}
           showPremium={setting.showPremium}
-          summary={data.summary}
+          summary={""}
         />
       </div>
     </Container>

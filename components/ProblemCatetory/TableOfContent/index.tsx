@@ -6,31 +6,20 @@ export interface TOC {
   level: number;
   count: number;
 }
+
 export const TableOfContent: React.FC<{ toc: TOC }> = ({ toc }) => {
-  const className = toc.className || "toc-list";
-  return toc.children?.length ? (
-    <ul className={className}>
-      {toc.children.map((item) => {
-        return (
-          <li key={item.id}>
-            <a
-              className="text-danger fw-medium lh-2"
-              href={item.id}
-            >{`${item.title} [${item.count}]`}</a>
-            {item.children && (
-              <ul>
-                {item.children.map((sub) => (
-                  <TableOfContent toc={sub} key={sub.id} />
-                ))}
-              </ul>
-            )}
-          </li>
-        );
-      })}
-    </ul>
-  ) : (
-    <a className="text-warning-emphasis" href={toc.id}>
-      {toc.title}
-    </a>
+  return (
+    <li className={toc.className || "toc-list"}>
+      { toc.title != "介绍" ? <a className="text-warning-emphasis" href={`${toc.id}`}>
+        {toc.title} [{toc.count}]
+      </a> : <></>}   
+      {toc.children?.length > 0 && (
+        <ul>
+          {toc.children.map((child) => (
+            <TableOfContent toc={child} key={child.id} />
+          ))}
+        </ul>
+      )}
+    </li>
   );
 };
