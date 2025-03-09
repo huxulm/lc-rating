@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）",
     "original_src": "https://leetcode.cn/circle/discuss/mOr1u6",
-    "last_update": "2025-02-19 10:56:05",
+    "last_update": "2025-03-03 01:31:45",
     "sort": 0,
     "child": [
         {
@@ -56,58 +56,58 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "219. 存在重复元素 II",
-                            "sort": 3,
-                            "src": "/contains-duplicate-ii/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "121. 买卖股票的最佳时机",
-                            "sort": 4,
+                            "sort": 3,
                             "src": "/best-time-to-buy-and-sell-stock/",
                             "score": null,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "624. 数组列表中的最大距离",
-                            "sort": 5,
-                            "src": "/maximum-distance-in-arrays/",
-                            "score": null,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
-                            "title": "2815. 数组中的最大数对和",
-                            "sort": 6,
-                            "src": "/max-pair-sum-in-an-array/",
-                            "score": 1295.0947625986,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "2342. 数位和相等数对的最大和",
-                            "sort": 7,
+                            "sort": 4,
                             "src": "/max-sum-of-a-pair-with-equal-sum-of-digits/",
                             "score": 1308.9617729374,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "2815. 数组中的最大数对和",
+                            "sort": 5,
+                            "src": "/max-pair-sum-in-an-array/",
+                            "score": 1295.0947625986,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "1679. K 和数对的最大数目",
-                            "sort": 8,
+                            "sort": 6,
                             "src": "/max-number-of-k-sum-pairs/",
                             "score": 1345.737168609,
                             "solution": null,
                             "isPremium": false
                         },
                         {
+                            "title": "219. 存在重复元素 II",
+                            "sort": 7,
+                            "src": "/contains-duplicate-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
                             "title": "2260. 必须拿起的最小连续卡牌数",
-                            "sort": 9,
+                            "sort": 8,
                             "src": "/minimum-consecutive-cards-to-pick-up/",
                             "score": 1364.6787168645,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "624. 数组列表中的最大距离",
+                            "sort": 9,
+                            "src": "/maximum-distance-in-arrays/",
+                            "score": null,
                             "solution": null,
                             "isPremium": false
                         },
@@ -467,7 +467,7 @@ export default{
                             "sort": 9,
                             "src": "/maximum-subarray/",
                             "score": null,
-                            "solution": "/maximum-subarray/solution/qian-zhui-he-zuo-fa-ben-zhi-shi-mai-mai-abu71/",
+                            "solution": null,
                             "isPremium": false
                         },
                         {
@@ -4087,8 +4087,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "850. 矩形面积 II",
+                            "title": "2502. 设计内存分配器",
                             "sort": 3,
+                            "src": "/design-memory-allocator/",
+                            "score": 1745.5352025872,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "850. 矩形面积 II",
+                            "sort": 4,
                             "src": "/rectangle-area-ii/",
                             "score": 2235.9672341699,
                             "solution": null,
@@ -4096,7 +4104,7 @@ export default{
                         },
                         {
                             "title": "3454. 分割正方形 II",
-                            "sort": 4,
+                            "sort": 5,
                             "src": "/separate-squares-ii/",
                             "score": null,
                             "solution": null,
@@ -4104,7 +4112,7 @@ export default{
                         },
                         {
                             "title": "2916. 子数组不同元素数目的平方和 II",
-                            "sort": 5,
+                            "sort": 6,
                             "src": "/subarrays-distinct-element-sum-of-squares-ii/",
                             "score": 2816.0706257586,
                             "solution": null,
@@ -4112,7 +4120,7 @@ export default{
                         },
                         {
                             "title": "LCP 05. 发 LeetCoin",
-                            "sort": 6,
+                            "sort": 7,
                             "src": "/coin-bonus/",
                             "score": null,
                             "solution": null,
@@ -4120,7 +4128,7 @@ export default{
                         },
                         {
                             "title": "LCP 27. 黑盒光线反射",
-                            "sort": 7,
+                            "sort": 8,
                             "src": "/IQvJ9i/",
                             "score": null,
                             "solution": null,

@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】二分算法（二分答案/最小化最大值/最大化最小值/第K小）",
     "original_src": "https://leetcode.cn/circle/discuss/SqopEo",
-    "last_update": "2025-02-19 14:03:24",
+    "last_update": "2025-03-04 04:54:26",
     "sort": 0,
     "child": [
         {
@@ -136,18 +136,18 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "981. 基于时间的键值存储",
+                            "title": "1146. 快照数组",
                             "sort": 7,
-                            "src": "/time-based-key-value-store/",
-                            "score": 1574.7542247682,
+                            "src": "/snapshot-array/",
+                            "score": 1770.8924569497,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "1146. 快照数组",
+                            "title": "981. 基于时间的键值存储",
                             "sort": 8,
-                            "src": "/snapshot-array/",
-                            "score": 1770.8924569497,
+                            "src": "/time-based-key-value-store/",
+                            "score": 1574.7542247682,
                             "solution": null,
                             "isPremium": false
                         },
@@ -222,13 +222,13 @@ export default{
         {
             "title": "二、二分答案",
             "sort": 2,
-            "summary": "",
+            "summary": "> “花费一个 $\\log$ 的时间，增加了一个条件。” —— 二分答案<br>",
             "child": [
                 {
                     "title": "§2.1 求最小",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "> “花费一个 $\\log$ 的时间，增加了一个条件。” —— 二分答案<br>题目求什么，就二分什么。<br>**思维扩展**：<br>",
+                    "summary": "题目求什么，就二分什么。<br>**思维扩展**：<br>",
                     "child": [
                         {
                             "title": "1283. 使结果不超过阈值的最小除数",
@@ -247,16 +247,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1870. 准时到达的列车最小时速",
-                            "sort": 2,
-                            "src": "/minimum-speed-to-arrive-on-time/",
-                            "score": 1675.761234741,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "1011. 在 D 天内送达包裹的能力",
-                            "sort": 3,
+                            "sort": 2,
                             "src": "/capacity-to-ship-packages-within-d-days/",
                             "score": 1725.4481937307,
                             "solution": null,
@@ -264,7 +256,7 @@ export default{
                         },
                         {
                             "title": "875. 爱吃香蕉的珂珂",
-                            "sort": 4,
+                            "sort": 3,
                             "src": "/koko-eating-bananas/",
                             "score": 1765.5654059263,
                             "solution": null,
@@ -272,7 +264,7 @@ export default{
                         },
                         {
                             "title": "3296. 移山所需的最少秒数",
-                            "sort": 5,
+                            "sort": 4,
                             "src": "/minimum-number-of-seconds-to-make-mountain-height-zero/",
                             "score": 1694.7320914942,
                             "solution": null,
@@ -280,7 +272,7 @@ export default{
                         },
                         {
                             "title": "475. 供暖器",
-                            "sort": 6,
+                            "sort": 5,
                             "src": "/heaters/",
                             "score": null,
                             "solution": null,
@@ -288,7 +280,7 @@ export default{
                         },
                         {
                             "title": "2594. 修车的最少时间",
-                            "sort": 7,
+                            "sort": 6,
                             "src": "/minimum-time-to-repair-cars/",
                             "score": 1915.2628132733,
                             "solution": null,
@@ -296,7 +288,7 @@ export default{
                         },
                         {
                             "title": "1482. 制作 m 束花所需的最少天数",
-                            "sort": 8,
+                            "sort": 7,
                             "src": "/minimum-number-of-days-to-make-m-bouquets/",
                             "score": 1945.5095833982,
                             "solution": null,
@@ -304,7 +296,7 @@ export default{
                         },
                         {
                             "title": "3048. 标记所有下标的最早秒数 I",
-                            "sort": 9,
+                            "sort": 8,
                             "src": "/earliest-second-to-mark-indices-i/",
                             "score": 2262.5641910108,
                             "solution": null,
@@ -312,7 +304,7 @@ export default{
                         },
                         {
                             "title": "2604. 吃掉所有谷子的最短时间",
-                            "sort": 10,
+                            "sort": 9,
                             "src": "/minimum-time-to-eat-all-grains/",
                             "score": null,
                             "solution": null,
@@ -320,11 +312,19 @@ export default{
                         },
                         {
                             "title": "2702. 使数字变为非正数的最小操作次数",
-                            "sort": 11,
+                            "sort": 10,
                             "src": "/minimum-operations-to-make-numbers-non-positive/",
                             "score": null,
                             "solution": null,
                             "isPremium": true
+                        },
+                        {
+                            "title": "1870. 准时到达的列车最小时速",
+                            "sort": 11,
+                            "src": "/minimum-speed-to-arrive-on-time/",
+                            "score": 1675.761234741,
+                            "solution": null,
+                            "isPremium": false
                         },
                         {
                             "title": "3453. 分割正方形 I",
@@ -340,7 +340,7 @@ export default{
                     "title": "§2.2 求最大",
                     "sort": 1,
                     "isLeaf": true,
-                    "summary": "<a href=\"https://leetcode.cn/problems/h-index-ii/solution/tu-jie-yi-tu-zhang-wo-er-fen-da-an-si-ch-d15k/\">一图掌握二分答案！四种写法！</a><br>在练习时，请注意「求最小」和「求最大」的二分写法上的区别。<br>前面的「求最小」和二分查找求「排序数组中某元素的第一个位置」是类似的，按照红蓝染色法，左边是不满足要求的（红色），右边则是满足要求的（蓝色）。<br>「求最大」的题目则相反，左边是满足要求的（蓝色），右边是不满足要求的（红色）。这会导致二分写法和上面的「求最小」有一些区别。<br>以开区间二分为例：<br>- 求最小：`check(mid) == true` 时更新 `right = mid`，反之更新 `left = mid`，最后返回 `right`。<br>- 求最大：`check(mid) == true` 时更新 `left = mid`，反之更新 `right = mid`，最后返回 `left`。<br>对于开区间写法，简单来说 `check(mid) == true` 时更新的是谁，最后就返回谁。相比其他二分写法，开区间写法不需要思考加一减一等细节，个人推荐使用开区间写二分。<br>",
+                    "summary": "<a href=\"https://leetcode.cn/problems/h-index-ii/solution/tu-jie-yi-tu-zhang-wo-er-fen-da-an-si-ch-d15k/\">一图掌握二分答案！四种写法！</a><br>在练习时，请注意「求最小」和「求最大」的二分写法上的区别。<br>前面的「求最小」和二分查找求「排序数组中某元素的第一个位置」是类似的，按照红蓝染色法，左边是不满足要求的（红色），右边则是满足要求的（蓝色）。<br>「求最大」的题目则相反，左边是满足要求的（蓝色），右边是不满足要求的（红色）。这会导致二分写法和上面的「求最小」有一些区别。<br>以开区间二分为例：<br>- 求最小：`check(mid) == true` 时更新 `right = mid`，反之更新 `left = mid`，最后返回 `right`。<br>- 求最大：`check(mid) == true` 时更新 `left = mid`，反之更新 `right = mid`，最后返回 `left`。<br>对于开区间写法，简单来说 `check(mid) == true` 时更新的是谁，最后就返回谁。相比其他二分写法，开区间写法不需要思考加一减一等细节，**推荐使用开区间写二分**。<br>",
                     "child": [
                         {
                             "title": "275. H 指数 II",
@@ -655,8 +655,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3449. 最大化游戏分数的最小值",
+                            "title": "3464. 正方形上的点之间的最大距离",
                             "sort": 5,
+                            "src": "/maximize-the-distance-between-points-on-a-square/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3449. 最大化游戏分数的最小值",
+                            "sort": 6,
                             "src": "/maximize-the-minimum-game-score/",
                             "score": null,
                             "solution": null,
@@ -664,7 +672,7 @@ export default{
                         },
                         {
                             "title": "1102. 得分最高的路径",
-                            "sort": 6,
+                            "sort": 7,
                             "src": "/path-with-maximum-minimum-value/",
                             "score": 2011.3542735398,
                             "solution": null,
@@ -672,7 +680,7 @@ export default{
                         },
                         {
                             "title": "1231. 分享巧克力",
-                            "sort": 7,
+                            "sort": 8,
                             "src": "/divide-chocolate/",
                             "score": 2029.1301557536,
                             "solution": null,
@@ -684,7 +692,7 @@ export default{
                     "title": "§2.6 第 K 小/大",
                     "sort": 5,
                     "isLeaf": true,
-                    "summary": "- 第 $k$ 小等价于：求最小的 $x$，满足 $\\le x$ 的数至少有 $k$ 个。<br>- 第 $k$ 大等价于：求最大的 $x$，满足 $\\ge x$ 的数至少有 $k$ 个。<br>⚠**注意**：一般来说，题目规定 $k$ 从 $1$ 开始，而不是像下标那样从 $0$ 开始。<br>⚠**注意**：一般来说，题目规定不能去重。例如数组 $[1,1,1,2,2]$，其中第 $1$ 小、第 $2$ 小和第 $3$ 小的数都是 $1$，第 $4$ 小和第 $5$ 小的数都是 $2$。<br>部分题目也可以用堆解决。<br>",
+                    "summary": "例如数组 $[1,1,1,2,2]$，其中第 $1$ 小、第 $2$ 小和第 $3$ 小的数都是 $1$，第 $4$ 小和第 $5$ 小的数都是 $2$。<br>- 第 $k$ 小等价于：求**最小**的 $x$，满足 $\\le x$ 的数**至少**有 $k$ 个。<br>- 第 $k$ 大等价于：求**最大**的 $x$，满足 $\\ge x$ 的数**至少**有 $k$ 个。<br>> 注 1：一般规定 $k$ 从 $1$ 开始，而不是像数组下标那样从 $0$ 开始。<br>><br>> 注 2：部分题目也可以用堆解决。<br>",
                     "child": [
                         {
                             "title": "668. 乘法表中第 K 小的数",

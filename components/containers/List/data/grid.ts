@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】网格图（DFS/BFS/综合应用）",
     "original_src": "https://leetcode.cn/circle/discuss/YiXPXW",
-    "last_update": "2024-11-03 09:29:32",
+    "last_update": "2025-02-24 01:46:47",
     "sort": 0,
     "child": [
         {
@@ -21,7 +21,7 @@ export default{
             ]
         },
         {
-            "title": "网格图 DFS",
+            "title": "一、网格图 DFS",
             "sort": 1,
             "summary": "",
             "child": [
@@ -198,13 +198,21 @@ export default{
                             "score": null,
                             "solution": null,
                             "isPremium": true
+                        },
+                        {
+                            "title": "489. 扫地机器人",
+                            "sort": 21,
+                            "src": "/robot-room-cleaner/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "网格图 BFS",
+            "title": "二、网格图 BFS",
             "sort": 2,
             "summary": "",
             "child": [
@@ -379,7 +387,7 @@ export default{
             ]
         },
         {
-            "title": "网格图 0-1 BFS",
+            "title": "三、网格图 0-1 BFS",
             "sort": 3,
             "summary": "",
             "child": [
@@ -434,7 +442,7 @@ export default{
             ]
         },
         {
-            "title": "网格图 Dijkstra",
+            "title": "四、网格图 Dijkstra",
             "sort": 4,
             "summary": "",
             "child": [
@@ -448,7 +456,7 @@ export default{
             ]
         },
         {
-            "title": "综合应用",
+            "title": "五、综合应用",
             "sort": 5,
             "summary": "",
             "child": [
@@ -571,16 +579,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1728. 猫和老鼠 II",
-                            "sort": 14,
-                            "src": "/cat-and-mouse-ii/",
-                            "score": 2849.4841858619,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "694. 不同岛屿的数量",
-                            "sort": 15,
+                            "sort": 14,
                             "src": "/number-of-distinct-islands/",
                             "score": null,
                             "solution": null,
@@ -588,7 +588,7 @@ export default{
                         },
                         {
                             "title": "711. 不同岛屿的数量 II",
-                            "sort": 16,
+                            "sort": 15,
                             "src": "/number-of-distinct-islands-ii/",
                             "score": null,
                             "solution": null,
@@ -596,7 +596,7 @@ export default{
                         },
                         {
                             "title": "1102. 得分最高的路径",
-                            "sort": 17,
+                            "sort": 16,
                             "src": "/path-with-maximum-minimum-value/",
                             "score": 2011.3542735398,
                             "solution": null,

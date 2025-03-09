@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）",
     "original_src": "https://leetcode.cn/circle/discuss/0viNMK",
-    "last_update": "2025-02-01 09:41:25",
+    "last_update": "2025-02-23 02:20:04",
     "sort": 0,
     "child": [
         {
@@ -15,7 +15,7 @@ export default{
                     "title": "",
                     "sort": 0,
                     "isLeaf": true,
-                    "summary": "!<a href=\"https://pic.leetcode.cn/1718242805-sqSjqc-lc1456.png\">滑动窗口题单 双指针题单 力扣题目 灵茶山艾府</a><br>如果你刚开始刷题，还不熟悉**基本编程语法**和**常用库函数**，推荐先刷力扣官方的**入门题单**：<br>有了一些简单题的积累，就可以开始刷我的题单啦~<br>下面的题目已按照难度分排序，右侧数字为难度分。<br>如果遇到难度很大，题解都看不懂的题目，建议直接收藏，过段时间再来做。<br>",
+                    "summary": "!<a href=\"https://pic.leetcode.cn/1718242805-sqSjqc-lc1456.png\">滑动窗口题单 双指针题单 力扣题目 灵茶山艾府</a><br>如果你刚开始刷题，还不熟悉**基本编程语法**和**常用库函数**，推荐先刷力扣官方的**入门题单**：<br>有了一些简单题的积累，就可以开始刷我的题单啦~<br>下面的题目已按照难度分排序，右侧数字为难度分。<br>在刷题的过程中，如果遇到难度很大，题解都看不懂的题目，建议直接收藏，过段时间再来做。<br>",
                     "child": [
                         {
                             "title": "「新」动计划 · 编程入门",
@@ -81,16 +81,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1052. 爱生气的书店老板",
-                            "sort": 5,
-                            "src": "/grumpy-bookstore-owner/",
-                            "score": 1418.1401949854,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "2841. 几乎唯一子数组的最大和",
-                            "sort": 6,
+                            "sort": 5,
                             "src": "/maximum-sum-of-almost-unique-subarray/",
                             "score": 1545.9654593951,
                             "solution": null,
@@ -98,7 +90,7 @@ export default{
                         },
                         {
                             "title": "2461. 长度为 K 子数组中的最大和",
-                            "sort": 7,
+                            "sort": 6,
                             "src": "/maximum-sum-of-distinct-subarrays-with-length-k/",
                             "score": 1552.8935571247,
                             "solution": null,
@@ -106,9 +98,17 @@ export default{
                         },
                         {
                             "title": "1423. 可获得的最大点数",
-                            "sort": 8,
+                            "sort": 7,
                             "src": "/maximum-points-you-can-obtain-from-cards/",
                             "score": 1573.824807946,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1052. 爱生气的书店老板",
+                            "sort": 8,
+                            "src": "/grumpy-bookstore-owner/",
+                            "score": 1418.1401949854,
                             "solution": null,
                             "isPremium": false
                         },
@@ -201,8 +201,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1888. 使二进制字符串字符交替的最少反转次数",
+                            "title": "3439. 重新安排会议得到最多空余时间 I",
                             "sort": 4,
+                            "src": "/reschedule-meetings-for-maximum-free-time-i/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1888. 使二进制字符串字符交替的最少反转次数",
+                            "sort": 5,
                             "src": "/minimum-number-of-flips-to-make-the-binary-string-alternating/",
                             "score": 2005.5862669078,
                             "solution": null,
@@ -210,7 +218,7 @@ export default{
                         },
                         {
                             "title": "567. 字符串的排列",
-                            "sort": 5,
+                            "sort": 6,
                             "src": "/permutation-in-string/",
                             "score": null,
                             "solution": null,
@@ -218,7 +226,7 @@ export default{
                         },
                         {
                             "title": "438. 找到字符串中所有字母异位词",
-                            "sort": 6,
+                            "sort": 7,
                             "src": "/find-all-anagrams-in-a-string/",
                             "score": null,
                             "solution": null,
@@ -226,7 +234,7 @@ export default{
                         },
                         {
                             "title": "30. 串联所有单词的子串",
-                            "sort": 7,
+                            "sort": 8,
                             "src": "/substring-with-concatenation-of-all-words/",
                             "score": null,
                             "solution": null,
@@ -234,7 +242,7 @@ export default{
                         },
                         {
                             "title": "2156. 查找给定哈希值的子串",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/find-substring-with-given-hash-value/",
                             "score": 2062.9876807625,
                             "solution": null,
@@ -242,7 +250,7 @@ export default{
                         },
                         {
                             "title": "2953. 统计完全子字符串",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/count-complete-substrings/",
                             "score": 2449.3352959316,
                             "solution": null,
@@ -250,7 +258,7 @@ export default{
                         },
                         {
                             "title": "1016. 子串能表示从 1 到 N 数字的二进制串",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/binary-string-with-substrings-representing-1-to-n/",
                             "score": 1779.3931248179,
                             "solution": null,
@@ -258,7 +266,7 @@ export default{
                         },
                         {
                             "title": "683. K 个关闭的灯泡",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/k-empty-slots/",
                             "score": null,
                             "solution": null,
@@ -266,7 +274,7 @@ export default{
                         },
                         {
                             "title": "2067. 等计数子串的数量",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/number-of-equal-count-substrings/",
                             "score": null,
                             "solution": null,
@@ -274,7 +282,7 @@ export default{
                         },
                         {
                             "title": "2524. 子数组的最大频率分数",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/maximum-frequency-score-of-a-subarray/",
                             "score": null,
                             "solution": null,
@@ -319,13 +327,20 @@ export default{
         {
             "title": "二、不定长滑动窗口",
             "sort": 2,
-            "summary": "不定长滑动窗口主要分为三类：求最长子数组，求最短子数组，以及求子数组个数。<br>**推荐先完成 2000 分以下的题目，难题可以留到后面再做。**<br>",
+            "summary": "不定长滑动窗口主要分为三类：求最长子数组，求最短子数组，以及求子数组个数。<br>",
             "child": [
                 {
                     "title": "§2.1 求最长/最大",
                     "sort": 0,
                     "isLeaf": true,
                     "summary": "一般题目都有「至多」的要求。<br>",
+                    "child": []
+                },
+                {
+                    "title": "§2.1.1 基础",
+                    "sort": 1,
+                    "isLeaf": true,
+                    "summary": "",
                     "child": [
                         {
                             "title": "3. 无重复字符的最长子串",
@@ -360,16 +375,8 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "2730. 找到最长的半重复子字符串",
-                            "sort": 4,
-                            "src": "/find-the-longest-semi-repetitive-substring/",
-                            "score": 1501.9080845668,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "904. 水果成篮",
-                            "sort": 5,
+                            "sort": 4,
                             "src": "/fruit-into-baskets/",
                             "score": 1516.4104902196,
                             "solution": null,
@@ -377,7 +384,7 @@ export default{
                         },
                         {
                             "title": "1695. 删除子数组的最大得分",
-                            "sort": 6,
+                            "sort": 5,
                             "src": "/maximum-erasure-value/",
                             "score": 1528.7183829005,
                             "solution": null,
@@ -385,23 +392,15 @@ export default{
                         },
                         {
                             "title": "2958. 最多 K 个重复元素的最长子数组",
-                            "sort": 7,
+                            "sort": 6,
                             "src": "/length-of-longest-subarray-with-at-most-k-frequency/",
                             "score": 1535.3680469616,
                             "solution": null,
                             "isPremium": false
                         },
                         {
-                            "title": "2779. 数组的最大美丽值",
-                            "sort": 8,
-                            "src": "/maximum-beauty-of-an-array-after-applying-operation/",
-                            "score": 1638.4147703093,
-                            "solution": null,
-                            "isPremium": false
-                        },
-                        {
                             "title": "2024. 考试的最大困扰度",
-                            "sort": 9,
+                            "sort": 7,
                             "src": "/maximize-the-confusion-of-an-exam/",
                             "score": 1643.1325351423,
                             "solution": null,
@@ -409,7 +408,7 @@ export default{
                         },
                         {
                             "title": "1004. 最大连续 1 的个数 III",
-                            "sort": 10,
+                            "sort": 8,
                             "src": "/max-consecutive-ones-iii/",
                             "score": 1655.6433885989,
                             "solution": null,
@@ -417,15 +416,39 @@ export default{
                         },
                         {
                             "title": "1658. 将 x 减到 0 的最小操作数",
-                            "sort": 11,
+                            "sort": 9,
                             "src": "/minimum-operations-to-reduce-x-to-zero/",
                             "score": 1817.224026292,
+                            "solution": null,
+                            "isPremium": false
+                        }
+                    ]
+                },
+                {
+                    "title": "§2.1.2 进阶（选做）",
+                    "sort": 2,
+                    "isLeaf": true,
+                    "summary": "",
+                    "child": [
+                        {
+                            "title": "2730. 找到最长的半重复子字符串",
+                            "sort": 0,
+                            "src": "/find-the-longest-semi-repetitive-substring/",
+                            "score": 1501.9080845668,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "2779. 数组的最大美丽值",
+                            "sort": 1,
+                            "src": "/maximum-beauty-of-an-array-after-applying-operation/",
+                            "score": 1638.4147703093,
                             "solution": null,
                             "isPremium": false
                         },
                         {
                             "title": "1838. 最高频元素的频数",
-                            "sort": 12,
+                            "sort": 2,
                             "src": "/frequency-of-the-most-frequent-element/",
                             "score": 1876.3611046625,
                             "solution": null,
@@ -433,7 +456,7 @@ export default{
                         },
                         {
                             "title": "2516. 每种字符至少取 K 个",
-                            "sort": 13,
+                            "sort": 3,
                             "src": "/take-k-of-each-character-from-left-and-right/",
                             "score": 1947.8832856412,
                             "solution": null,
@@ -441,7 +464,7 @@ export default{
                         },
                         {
                             "title": "2831. 找出最长等值子数组",
-                            "sort": 14,
+                            "sort": 4,
                             "src": "/find-the-longest-equal-subarray/",
                             "score": 1975.9693382075,
                             "solution": null,
@@ -449,7 +472,7 @@ export default{
                         },
                         {
                             "title": "2271. 毯子覆盖的最多白色砖块数",
-                            "sort": 15,
+                            "sort": 5,
                             "src": "/maximum-white-tiles-covered-by-a-carpet/",
                             "score": 2021.7790710467,
                             "solution": null,
@@ -457,7 +480,7 @@ export default{
                         },
                         {
                             "title": "2106. 摘水果",
-                            "sort": 16,
+                            "sort": 6,
                             "src": "/maximum-fruits-harvested-after-at-most-k-steps/",
                             "score": 2062.3601158741,
                             "solution": null,
@@ -465,7 +488,7 @@ export default{
                         },
                         {
                             "title": "2555. 两个线段获得的最多奖品",
-                            "sort": 17,
+                            "sort": 7,
                             "src": "/maximize-win-from-two-segments/",
                             "score": 2080.7845644831,
                             "solution": null,
@@ -473,7 +496,7 @@ export default{
                         },
                         {
                             "title": "2009. 使数组连续的最少操作数",
-                            "sort": 18,
+                            "sort": 8,
                             "src": "/minimum-number-of-operations-to-make-array-continuous/",
                             "score": 2084.4980206639,
                             "solution": null,
@@ -481,7 +504,7 @@ export default{
                         },
                         {
                             "title": "1610. 可见点的最大数目",
-                            "sort": 19,
+                            "sort": 9,
                             "src": "/maximum-number-of-visible-points/",
                             "score": 2147.1828941776,
                             "solution": null,
@@ -489,7 +512,7 @@ export default{
                         },
                         {
                             "title": "2781. 最长合法子字符串的长度",
-                            "sort": 20,
+                            "sort": 10,
                             "src": "/length-of-the-longest-valid-substring/",
                             "score": 2203.5694828019,
                             "solution": null,
@@ -497,7 +520,7 @@ export default{
                         },
                         {
                             "title": "3411. 最长乘积等价子数组",
-                            "sort": 21,
+                            "sort": 11,
                             "src": "/maximum-subarray-with-equal-products/",
                             "score": 1443.185430222,
                             "solution": null,
@@ -505,7 +528,7 @@ export default{
                         },
                         {
                             "title": "2968. 执行操作使频率分数最大",
-                            "sort": 22,
+                            "sort": 12,
                             "src": "/apply-operations-to-maximize-frequency-score/",
                             "score": 2444.2791027022,
                             "solution": null,
@@ -513,7 +536,7 @@ export default{
                         },
                         {
                             "title": "1040. 移动石子直到连续 II",
-                            "sort": 23,
+                            "sort": 13,
                             "src": "/moving-stones-until-consecutive-ii/",
                             "score": 2455.8244137907,
                             "solution": null,
@@ -521,7 +544,7 @@ export default{
                         },
                         {
                             "title": "3413. 收集连续 K 个袋子可以获得的最多硬币数量",
-                            "sort": 24,
+                            "sort": 14,
                             "src": "/maximum-coins-from-k-consecutive-bags/",
                             "score": 2373.8124052261,
                             "solution": null,
@@ -529,7 +552,7 @@ export default{
                         },
                         {
                             "title": "395. 至少有 K 个重复字符的最长子串",
-                            "sort": 25,
+                            "sort": 15,
                             "src": "/longest-substring-with-at-least-k-repeating-characters/",
                             "score": null,
                             "solution": null,
@@ -537,7 +560,7 @@ export default{
                         },
                         {
                             "title": "1763. 最长的美好子字符串",
-                            "sort": 26,
+                            "sort": 16,
                             "src": "/longest-nice-substring/",
                             "score": 1521.7133617698,
                             "solution": null,
@@ -545,7 +568,7 @@ export default{
                         },
                         {
                             "title": "487. 最大连续 1 的个数 II",
-                            "sort": 27,
+                            "sort": 17,
                             "src": "/max-consecutive-ones-ii/",
                             "score": null,
                             "solution": null,
@@ -553,7 +576,7 @@ export default{
                         },
                         {
                             "title": "159. 至多包含两个不同字符的最长子串",
-                            "sort": 28,
+                            "sort": 18,
                             "src": "/longest-substring-with-at-most-two-distinct-characters/",
                             "score": null,
                             "solution": null,
@@ -561,7 +584,7 @@ export default{
                         },
                         {
                             "title": "340. 至多包含 K 个不同字符的最长子串",
-                            "sort": 29,
+                            "sort": 19,
                             "src": "/longest-substring-with-at-most-k-distinct-characters/",
                             "score": null,
                             "solution": null,
@@ -571,7 +594,7 @@ export default{
                 },
                 {
                     "title": "§2.2 求最短/最小",
-                    "sort": 1,
+                    "sort": 3,
                     "isLeaf": true,
                     "summary": "一般题目都有「至少」的要求。<br>",
                     "child": [
@@ -627,14 +650,14 @@ export default{
                 },
                 {
                     "title": "§2.3 求子数组个数",
-                    "sort": 2,
+                    "sort": 4,
                     "isLeaf": true,
                     "summary": "",
                     "child": []
                 },
                 {
                     "title": "§2.3.1 越长越合法",
-                    "sort": 3,
+                    "sort": 5,
                     "isLeaf": true,
                     "summary": "一般要写 `ans += left`。<br>滑动窗口的内层循环结束时，右端点**固定**在 $\\textit{right}$，左端点在 $0,1,2,\\ldots,\\textit{left}-1$ 的所有子数组（子串）都是合法的，这一共有 $\\textit{left}$ 个。<br>",
                     "child": [
@@ -698,7 +721,7 @@ export default{
                 },
                 {
                     "title": "§2.3.2 越短越合法",
-                    "sort": 4,
+                    "sort": 6,
                     "isLeaf": true,
                     "summary": "一般要写 `ans += right - left + 1`。<br>滑动窗口的内层循环结束时，右端点**固定**在 $\\textit{right}$，左端点在 $\\textit{left},\\textit{left}+1,\\ldots,\\textit{right}$ 的所有子数组（子串）都是合法的，这一共有 $\\textit{right}-\\textit{left}+1$ 个。<br>",
                     "child": [
@@ -770,7 +793,7 @@ export default{
                 },
                 {
                     "title": "§2.3.3 恰好型滑动窗口",
-                    "sort": 5,
+                    "sort": 7,
                     "isLeaf": true,
                     "summary": "例如，要计算有多少个元素和**恰好等于** $k$ 的子数组，可以把问题变成：<br>- 计算有多少个元素和 $\\ge k$ 的子数组。<br>- 计算有多少个元素和 $> k$，也就是 $\\ge k + 1$ 的子数组。<br>答案就是元素和 $\\ge k$ 的子数组个数，减去元素和 $\\ge k + 1$ 的子数组个数。这里把 $>$ 转换成 $\\ge$，从而可以把滑窗逻辑封装成一个函数 `f`，然后用 `f(k) - f(k + 1)` 计算，无需编写两份滑窗代码。<br>**总结**：「恰好」可以拆分成两个「至少」，也就是两个「越长越合法」的滑窗问题。<br>注：也可以把问题变成 $\\le k$ 减去 $\\le k-1$（两个至多）。可根据题目选择合适的变形方式。<br>注：也可以把两个滑动窗口合并起来，维护同一个右端点 $\\textit{right}$ 和两个左端点 $\\textit{left}_1$ 和 $\\textit{left}_2$，我把这种写法叫做**三指针滑动窗口**。<br>",
                     "child": [
@@ -810,7 +833,7 @@ export default{
                 },
                 {
                     "title": "§2.4 其他（选做）",
-                    "sort": 6,
+                    "sort": 8,
                     "isLeaf": true,
                     "summary": "**滑窗的内容到这里就结束了，可以去刷下一个题单（二分算法）**。<br>---<br>",
                     "child": [
@@ -1142,8 +1165,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "3323. 通过插入区间最小化连通组",
+                            "title": "2234. 花园的最大总美丽值",
                             "sort": 3,
+                            "src": "/maximum-total-beauty-of-the-gardens/",
+                            "score": 2561.508149216,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "3323. 通过插入区间最小化连通组",
+                            "sort": 4,
                             "src": "/minimize-connected-groups-by-inserting-interval/",
                             "score": null,
                             "solution": null,
@@ -1151,7 +1182,7 @@ export default{
                         },
                         {
                             "title": "581. 最短无序连续子数组",
-                            "sort": 4,
+                            "sort": 5,
                             "src": "/shortest-unsorted-continuous-subarray/",
                             "score": null,
                             "solution": null,
@@ -1603,8 +1634,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1957. 删除字符使字符串变好",
+                            "title": "3456. 找出长度为 K 的特殊子字符串",
                             "sort": 3,
+                            "src": "/find-special-substring-of-length-k/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1957. 删除字符使字符串变好",
+                            "sort": 4,
                             "src": "/delete-characters-to-make-fancy-string/",
                             "score": 1357.6553050616,
                             "solution": null,
@@ -1612,7 +1651,7 @@ export default{
                         },
                         {
                             "title": "674. 最长连续递增序列",
-                            "sort": 4,
+                            "sort": 5,
                             "src": "/longest-continuous-increasing-subsequence/",
                             "score": null,
                             "solution": null,
@@ -1620,7 +1659,7 @@ export default{
                         },
                         {
                             "title": "978. 最长湍流子数组",
-                            "sort": 5,
+                            "sort": 6,
                             "src": "/longest-turbulent-subarray/",
                             "score": 1393.4123491817,
                             "solution": null,
@@ -1628,7 +1667,7 @@ export default{
                         },
                         {
                             "title": "2110. 股票平滑下跌阶段的数目",
-                            "sort": 6,
+                            "sort": 7,
                             "src": "/number-of-smooth-descent-periods-of-a-stock/",
                             "score": 1408.427592417,
                             "solution": null,
@@ -1636,7 +1675,7 @@ export default{
                         },
                         {
                             "title": "228. 汇总区间",
-                            "sort": 7,
+                            "sort": 8,
                             "src": "/summary-ranges/",
                             "score": null,
                             "solution": null,
@@ -1644,7 +1683,7 @@ export default{
                         },
                         {
                             "title": "2760. 最长奇偶子数组",
-                            "sort": 8,
+                            "sort": 9,
                             "src": "/longest-even-odd-subarray-with-threshold/",
                             "score": 1420.3698647434,
                             "solution": null,
@@ -1652,7 +1691,7 @@ export default{
                         },
                         {
                             "title": "1887. 使数组元素相等的减少操作次数",
-                            "sort": 9,
+                            "sort": 10,
                             "src": "/reduction-operations-to-make-the-array-elements-equal/",
                             "score": 1427.7906804882,
                             "solution": null,
@@ -1660,7 +1699,7 @@ export default{
                         },
                         {
                             "title": "845. 数组中的最长山脉",
-                            "sort": 10,
+                            "sort": 11,
                             "src": "/longest-mountain-in-array/",
                             "score": 1436.5343999134,
                             "solution": null,
@@ -1668,7 +1707,7 @@ export default{
                         },
                         {
                             "title": "2038. 如果相邻两个颜色均相同则删除当前颜色",
-                            "sort": 11,
+                            "sort": 12,
                             "src": "/remove-colored-pieces-if-both-neighbors-are-the-same-color/",
                             "score": 1467.7383709213,
                             "solution": null,
@@ -1676,7 +1715,7 @@ export default{
                         },
                         {
                             "title": "1759. 统计同质子字符串的数目",
-                            "sort": 12,
+                            "sort": 13,
                             "src": "/count-number-of-homogenous-substrings/",
                             "score": 1490.8990184504,
                             "solution": null,
@@ -1684,7 +1723,7 @@ export default{
                         },
                         {
                             "title": "3011. 判断一个数组是否可以变为有序",
-                            "sort": 13,
+                            "sort": 14,
                             "src": "/find-if-array-can-be-sorted/",
                             "score": 1496.6441112156,
                             "solution": null,
@@ -1692,7 +1731,7 @@ export default{
                         },
                         {
                             "title": "1578. 使绳子变成彩色的最短时间",
-                            "sort": 14,
+                            "sort": 15,
                             "src": "/minimum-time-to-make-rope-colorful/",
                             "score": 1574.0392121288,
                             "solution": null,
@@ -1700,7 +1739,7 @@ export default{
                         },
                         {
                             "title": "1839. 所有元音按顺序排布的最长子字符串",
-                            "sort": 15,
+                            "sort": 16,
                             "src": "/longest-substring-of-all-vowels-in-order/",
                             "score": 1580.3620959714,
                             "solution": null,
@@ -1708,7 +1747,7 @@ export default{
                         },
                         {
                             "title": "2765. 最长交替子序列",
-                            "sort": 16,
+                            "sort": 17,
                             "src": "/longest-alternating-subarray/",
                             "score": 1580.9748095835,
                             "solution": null,
@@ -1716,7 +1755,7 @@ export default{
                         },
                         {
                             "title": "3255. 长度为 K 的子数组的能量值 II",
-                            "sort": 17,
+                            "sort": 18,
                             "src": "/find-the-power-of-k-size-subarrays-ii/",
                             "score": 1595.0583171953,
                             "solution": null,
@@ -1724,7 +1763,7 @@ export default{
                         },
                         {
                             "title": "3350. 检测相邻递增子数组 II",
-                            "sort": 18,
+                            "sort": 19,
                             "src": "/adjacent-increasing-subarrays-detection-ii/",
                             "score": 1600.0334724549,
                             "solution": null,
@@ -1732,7 +1771,7 @@ export default{
                         },
                         {
                             "title": "3105. 最长的严格递增或递减子数组",
-                            "sort": 19,
+                            "sort": 20,
                             "src": "/longest-strictly-increasing-or-strictly-decreasing-subarray/",
                             "score": 1217.0003384199,
                             "solution": null,
@@ -1740,7 +1779,7 @@ export default{
                         },
                         {
                             "title": "467. 环绕字符串中唯一的子字符串",
-                            "sort": 20,
+                            "sort": 21,
                             "src": "/unique-substrings-in-wraparound-string/",
                             "score": null,
                             "solution": null,
@@ -1748,7 +1787,7 @@ export default{
                         },
                         {
                             "title": "2948. 交换得到字典序最小的数组",
-                            "sort": 21,
+                            "sort": 22,
                             "src": "/make-lexicographically-smallest-array-by-swapping-elements/",
                             "score": 2047.3919190727,
                             "solution": null,
@@ -1756,7 +1795,7 @@ export default{
                         },
                         {
                             "title": "2593. 标记所有元素后数组的分数",
-                            "sort": 22,
+                            "sort": 23,
                             "src": "/find-score-of-an-array-after-marking-all-elements/",
                             "score": 1665.1885910815,
                             "solution": null,
@@ -1764,7 +1803,7 @@ export default{
                         },
                         {
                             "title": "2393. 严格递增的子数组个数",
-                            "sort": 23,
+                            "sort": 24,
                             "src": "/count-strictly-increasing-subarrays/",
                             "score": null,
                             "solution": null,
@@ -1772,7 +1811,7 @@ export default{
                         },
                         {
                             "title": "2436. 使子数组最大公约数大于一的最小分割数",
-                            "sort": 24,
+                            "sort": 25,
                             "src": "/minimum-split-into-subarrays-with-gcd-greater-than-one/",
                             "score": null,
                             "solution": null,
@@ -1780,7 +1819,7 @@ export default{
                         },
                         {
                             "title": "2495. 乘积为偶数的子数组数",
-                            "sort": 25,
+                            "sort": 26,
                             "src": "/number-of-subarrays-having-even-product/",
                             "score": null,
                             "solution": null,
@@ -1788,7 +1827,7 @@ export default{
                         },
                         {
                             "title": "3063. 链表频率",
-                            "sort": 26,
+                            "sort": 27,
                             "src": "/linked-list-frequency/",
                             "score": null,
                             "solution": null,

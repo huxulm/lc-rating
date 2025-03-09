@@ -3,7 +3,7 @@ import ProblemCategory from "@components/ProblemCatetory";
 export default{
     "title": "分享丨【题单】数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）",
     "original_src": "https://leetcode.cn/circle/discuss/IYT3ss",
-    "last_update": "2025-02-18 04:12:30",
+    "last_update": "2025-02-23 13:32:49",
     "sort": 0,
     "child": [
         {
@@ -692,6 +692,14 @@ export default{
                             "score": 1317.2976846981,
                             "solution": null,
                             "isPremium": false
+                        },
+                        {
+                            "title": "3463. 判断操作后字符串中的数字是否相等 II",
+                            "sort": 6,
+                            "src": "/check-if-digits-are-equal-in-string-after-operations-ii/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
                         }
                     ]
                 }
@@ -700,7 +708,7 @@ export default{
         {
             "title": "二、组合数学",
             "sort": 3,
-            "summary": "",
+            "summary": "<a href=\"https://leetcode.cn/circle/discuss/mDfnkW/\">模运算的世界：当加减乘除遇上取模</a><br>",
             "child": [
                 {
                     "title": "§2.1 乘法原理",
@@ -2032,8 +2040,16 @@ export default{
                             "isPremium": false
                         },
                         {
-                            "title": "1956. 感染 K 种病毒所需的最短时间",
+                            "title": "3464. 正方形上的点之间的最大距离",
                             "sort": 4,
+                            "src": "/maximize-the-distance-between-points-on-a-square/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": false
+                        },
+                        {
+                            "title": "1956. 感染 K 种病毒所需的最短时间",
+                            "sort": 5,
                             "src": "/minimum-time-for-k-virus-variants-to-spread/",
                             "score": null,
                             "solution": null,
@@ -2041,7 +2057,7 @@ export default{
                         },
                         {
                             "title": "2613. 美数对",
-                            "sort": 5,
+                            "sort": 6,
                             "src": "/beautiful-pairs/",
                             "score": null,
                             "solution": null,
@@ -2050,8 +2066,24 @@ export default{
                     ]
                 },
                 {
-                    "title": "§7.4 其他",
+                    "title": "§7.4 多项式卷积",
                     "sort": 3,
+                    "isLeaf": true,
+                    "summary": "",
+                    "child": [
+                        {
+                            "title": "3400. 右移后的最大匹配索引数",
+                            "sort": 0,
+                            "src": "/maximum-number-of-matching-indices-after-right-shifts/",
+                            "score": null,
+                            "solution": null,
+                            "isPremium": true
+                        }
+                    ]
+                },
+                {
+                    "title": "§7.5 其他",
+                    "sort": 4,
                     "isLeaf": true,
                     "summary": "",
                     "child": [
