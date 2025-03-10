@@ -39,11 +39,11 @@ const Navigator = React.memo(() => {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger className="cursor-pointer text-center text-base font-semibold w-fit select-none">
-              分类题单
+              {ROUTERS.studyPlans.title}
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 grid-cols-3">
-                {ROUTERS.studyPlans.map((plan) => (
+                {ROUTERS.studyPlans.children.map((plan) => (
                   <Button
                     key={plan.title}
                     variant="secondary"
