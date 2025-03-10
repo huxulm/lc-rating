@@ -8,6 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { cn } from "@/lib/utils";
 import { genericMemo } from "@/types/common";
 import {
   flexRender,
@@ -18,11 +19,10 @@ import {
 } from "@tanstack/react-table";
 import { ArrowDownUp, MoveDown, MoveUp } from "lucide-react";
 import { useMemo, useState } from "react";
-import { getColumns } from "./columns";
+import { columnInitialTableState, getColumns } from "./columns";
 import { PageControl } from "./PageControl";
 import { TableCol } from "./types";
 import { VisibilityControl } from "./VisibilityControl";
-import { cn } from "@/lib/utils";
 
 interface DataTableProps<TData extends TableCol> {
   data: TData[];
@@ -40,6 +40,7 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
     data,
     columns,
     initialState: {
+      ...columnInitialTableState,
       pagination: {
         pageSize: 20,
       },

@@ -2,7 +2,7 @@
 import { ProgressSelector } from "@/components/common/ProgressSelector";
 import { RatingCircle } from "@/components/common/RatingCircle";
 import { Badge } from "@/components/ui/badge";
-import { createColumnHelper } from "@tanstack/react-table";
+import { createColumnHelper, InitialTableState } from "@tanstack/react-table";
 import Link from "next/link";
 import { TableCol, key2Label } from "./types";
 
@@ -132,3 +132,12 @@ export const getColumns = () => [
     enableHiding: true,
   }),
 ];
+
+export const columnInitialTableState: InitialTableState = {
+  sorting: [
+    {
+      id: "problem",
+      desc: true,
+    },
+  ],
+};
