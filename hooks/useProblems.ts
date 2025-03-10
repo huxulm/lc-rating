@@ -14,6 +14,7 @@ export function useProblems() {
         "/problemset/problems.json?t=" +
           (new Date().getTime() / 100000).toFixed(0)
       ).then((res) => res.json()),
+      staleTime: 3600 * 1000, // 1 hour
   });
 
   return { problemMap, isPending, error };

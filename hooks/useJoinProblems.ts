@@ -43,13 +43,6 @@ export function useJoinProblems() {
     });
   }, [problemMap && contestMap && tagMap && solutionMap]);
 
-  if (joinProblem.length === 0) {
-    console.error("problemMap", problemMap, problemPending, problemError);
-    console.error("contestMap", contestMap, contestPending, contestError);
-    console.error("tagMap", tagMap, tagPending, tagError);
-    console.error("solutionMap", solutionMap, solutionPending, solutionError);
-  }
-
   return {
     joinProblem,
     isPending:

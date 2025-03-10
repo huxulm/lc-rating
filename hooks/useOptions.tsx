@@ -65,7 +65,7 @@ const useOptionsStore = create<OptionsStore>()(
           const fullConfig = { ...defaultOptions, ...get().options } as Options;
           let option = fullConfig[key];
           if (option === undefined) {
-            console.error(`Invalid progress key: ${key}`);
+            console.error(`[useOptionsStore] Invalid progress key: ${key}`);
             return {
               key,
               label: `"${key}" 未定义`,
@@ -80,12 +80,12 @@ const useOptionsStore = create<OptionsStore>()(
 
           Object.entries(newOptions).forEach(([key, value]) => {
             if (!key.trim()) {
-              console.error("Progress key cannot be empty");
+              console.error("[useOptionsStore] Progress key cannot be empty");
               return;
             }
 
             if (map.has(key)) {
-              console.error(`Duplicate progress key: ${key}`);
+              console.error(`[useOptionsStore] Duplicate progress key: ${key}`);
               return;
             }
 

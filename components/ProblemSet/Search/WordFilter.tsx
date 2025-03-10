@@ -9,7 +9,6 @@ const match = (prob: JoinProblem, keyword: string) => {
   } ${prob.rating || ""} ${prob.tags
     .map((t) => `${t.en} ${t.zh}`)
     ?.join(" ")}`.toLowerCase();
-  console.log(str, keyword);
 
   const kws = keyword
     .toLowerCase()

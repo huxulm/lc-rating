@@ -12,7 +12,7 @@ function ProblemSet() {
 
   useEffect(() => {
     if (Object.values(errors).filter(isTruthy).length > 0) {
-      console.error("[ProblemSet] error: ", errors);
+      console.error("[ProblemSet] useJoinProblems errors: ", errors);
     }
   }, [errors]);
 

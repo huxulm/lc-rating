@@ -65,8 +65,6 @@ const RatingFilter = React.memo(
       });
     }, []);
 
-    console.log(range);
-
     return (
       <div className="flex flex-wrap gap-2">
         {buttons.map((button, i) => (
