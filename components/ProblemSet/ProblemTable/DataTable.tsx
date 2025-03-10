@@ -136,6 +136,23 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
           )}
         </TableBody>
       </Table>
+
+      <Separator />
+
+      <div className="flex items-center justify-center p-2">
+        <PageControl
+          pageSize={tableState.pagination.pageSize}
+          onPageSizeChange={table.setPageSize}
+          pageIndex={tableState.pagination.pageIndex}
+          pageCount={table.getPageCount()}
+          onPageChange={table.setPageIndex}
+          canPreviousPage={table.getCanPreviousPage()}
+          canNextPage={table.getCanNextPage()}
+          previousPage={table.previousPage}
+          nextPage={table.nextPage}
+        />
+        <VisibilityControl table={table} />
+      </div>
     </div>
   );
 });

@@ -18,7 +18,7 @@ const RatingCircle = React.memo(
           position: "relative",
           overflow: "hidden",
         }}
-      ></div>
+      />
     );
   }
 );
