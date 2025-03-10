@@ -2,10 +2,6 @@ import { lazy } from "react";
 
 const StudyPlan = lazy(() => import("@/components/StudyPlan"));
 
-export default function Page() {
-  return <StudyPlan />;
-}
-
 export async function generateStaticParams() {
   const categories = [
     "binary-search",
@@ -25,3 +21,9 @@ export async function generateStaticParams() {
     category,
   }));
 }
+
+export default function Page() {
+  return <StudyPlan />;
+}
+
+URL
