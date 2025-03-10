@@ -11,7 +11,7 @@ export function useContests() {
     queryKey: ["contests"],
     queryFn: () =>
       fetchApi(
-        "/data/contests.json?t=" +
+        "/problemset/contests.json?t=" +
           (new Date().getTime() / 100000).toFixed(0)
       ).then((res) => res.json()),
   });

@@ -13,7 +13,7 @@ export const ROUTERS = {
   contest: { title: "竞赛列表", href: `${BASE_PATH}/contest` },
   problemset: { title: "题库", href: `${BASE_PATH}/problemset` },
   studyPlans: [
-    { title: "滑动窗口", href: `${BASE_PATH}/studyplan/slide_window` },
+    { title: "滑动窗口", href: `${BASE_PATH}/studyplan/slide-window` },
     { title: "二分查找", href: `${BASE_PATH}/studyplan/binary-search` },
     { title: "单调栈", href: `${BASE_PATH}/studyplan/monotonic_stack` },
     { title: "网格图", href: `${BASE_PATH}/studyplan/grid` },
@@ -26,4 +26,19 @@ export const ROUTERS = {
     { title: "树和二叉树", href: `${BASE_PATH}/studyplan/trees` },
     { title: "字符串", href: `${BASE_PATH}/studyplan/string` },
   ],
+};
+
+export const STUDYPLANS = {
+  "binary-search": "binary_search",
+  "bitwise-operations": "bitwise_operations",
+  "data-structure": "data_structure",
+  "dynamic-programming": "dynamic_programming",
+  graph: "graph",
+  greedy: "greedy",
+  grid: "grid",
+  math: "math",
+  "monotonic-stack": "monotonic_stack",
+  "slide-window": "slide_window",
+  string: "string",
+  trees: "trees",
 };

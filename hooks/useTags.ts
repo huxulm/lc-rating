@@ -11,7 +11,7 @@ export function useTags() {
     queryKey: ["tags"],
     queryFn: () =>
       fetchApi(
-        "/data/tags.json?t=" +
+        "/problemset/tags.json?t=" +
           (new Date().getTime() / 100000).toFixed(0)
       ).then((res) => res.json()),
   });

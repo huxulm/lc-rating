@@ -1,22 +1,10 @@
+import { STUDYPLANS } from "@/config/constants";
 import { lazy } from "react";
 
 const StudyPlan = lazy(() => import("@/components/StudyPlan"));
 
 export async function generateStaticParams() {
-  const categories = [
-    "binary-search",
-    "bitwise-operations",
-    "data_structure",
-    "dynamic_programming",
-    "graph",
-    "greedy",
-    "grid",
-    "math",
-    "monotonic_stack",
-    "slide_window",
-    "string",
-    "trees",
-  ];
+  const categories = Object.keys(STUDYPLANS);
   return categories.map((category) => ({
     category,
   }));
@@ -26,4 +14,4 @@ export default function Page() {
   return <StudyPlan />;
 }
 
-URL
+URL;

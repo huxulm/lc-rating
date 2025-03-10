@@ -11,7 +11,7 @@ export function useProblems() {
     queryKey: ["problems"],
     queryFn: () =>
       fetchApi(
-        "/data/problems.json?t=" +
+        "/problemset/problems.json?t=" +
           (new Date().getTime() / 100000).toFixed(0)
       ).then((res) => res.json()),
   });

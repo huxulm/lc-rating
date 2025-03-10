@@ -132,18 +132,21 @@ async function convert() {
   }
 
   await fs.writeFile(
-    "public/data/contests.json",
+    "public/problemset/contests.json",
     JSON.stringify(contestMap, null, 2)
   );
   await fs.writeFile(
-    "public/data/problems.json",
+    "public/problemset/problems.json",
     JSON.stringify(problemMap, null, 2)
   );
   await fs.writeFile(
-    "public/data/solutions.json",
+    "public/problemset/solutions.json",
     JSON.stringify(solutionMap, null, 2)
   );
-  await fs.writeFile("public/data/tags.json", JSON.stringify(tagMap, null, 2));
+  await fs.writeFile(
+    "public/problemset/tags.json",
+    JSON.stringify(tagMap, null, 2)
+  );
 }
 
 convert();
