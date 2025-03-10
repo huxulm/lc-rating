@@ -8,7 +8,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
+} from "@/components/ui-customized/navigation-menu";
 import { BILIBILI_0X3F_SPACE, ROUTERS } from "@/config/constants";
 import Link from "next/link";
 import React from "react";

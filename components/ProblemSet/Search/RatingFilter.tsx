@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { JoinProblem } from "@/types";
 import React, { useCallback, useEffect, useState } from "react";
 import { FilterFn } from "./type";
+import { Slider } from "@/components/ui/slider";
 
 const buttons = [
   { label: "未知", min: 0, max: 1000 },
@@ -12,7 +13,7 @@ const buttons = [
   { label: "[1900, 2100)", min: 1900, max: 2100 },
   { label: "[2100, 2400)", min: 2100, max: 2400 },
   { label: "[2400, 3000)", min: 2400, max: 3000 },
-  { label: ">=3000", min: 3000, max: Infinity },
+  { label: ">=3000", min: 3000, max: 4000 },
 ];
 
 interface RatingFilterProps {
@@ -25,14 +26,14 @@ const RatingFilter = React.memo(
   ({ idx, registerReset, registerFilter }: RatingFilterProps) => {
     const [range, setRange] = useState<{ min: number; max: number }>({
       min: 0,
-      max: Infinity,
+      max: 4000,
     });
 
     useEffect(() => {
       const onReset = () => {
         setRange({
           min: 0,
-          max: Infinity,
+          max: 4000,
         });
       };
       registerReset(idx, onReset);
@@ -50,12 +51,21 @@ const RatingFilter = React.memo(
           if (min != nextMin || max != nextMax) {
             return { min: nextMin, max: nextMax };
           } else {
-            return { min: 0, max: Infinity };
+            return { min: 0, max: 4000 };
           }
         });
       },
       []
     );
+
+    const handleRangeChange = useCallback((newRange: [number, number]) => {
+      setRange({
+        min: newRange[0],
+        max: newRange[1],
+      });
+    }, []);
+
+    console.log(range);
 
     return (
       <div className="flex flex-wrap gap-2">
@@ -74,6 +84,14 @@ const RatingFilter = React.memo(
             {button.label}
           </Button>
         ))}
+        <Slider
+          value={[range.min, range.max]}
+          onValueChange={handleRangeChange}
+          min={1000}
+          max={4000}
+          step={1}
+          minStepsBetweenThumbs={1}
+        />
       </div>
     );
   }
