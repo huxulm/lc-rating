@@ -6,8 +6,17 @@ import { FilterFn } from "./type";
 const match = (prob: JoinProblem, keyword: string) => {
   const str = `${prob.contest?.title || ""} ${prob.id} ${prob.title} ${
     prob.solution?.title || ""
-  }`;
-  return str.toLowerCase().includes(keyword.toLowerCase());
+  } ${prob.rating || ""} ${prob.tags
+    .map((t) => `${t.en} ${t.zh}`)
+    ?.join(" ")}`.toLowerCase();
+  console.log(str, keyword);
+
+  const kws = keyword
+    .toLowerCase()
+    .split("")
+    .map((kw) => kw.trim());
+
+  return kws.every((kw) => str.includes(kw));
 };
 
 interface WordFilterProps {
