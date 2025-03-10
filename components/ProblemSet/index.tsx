@@ -34,7 +34,7 @@ function ProblemSet() {
       []
     );
     const sortProblems = filtProblems
-      .sort((a, b) => a[0] - b[0])
+      .sort((a, b) => b[0] - a[0])
       .map(([_, problem]) => problem);
     return sortProblems;
   }, [joinProblem, filterFn]);

@@ -7,14 +7,14 @@ import Link from "next/link";
 import { TableCol, key2Label } from "./types";
 
 const ratingList = [
-  { l: 0, r: 1200, c: "#C0C0C0" },
+  { l: 1000, r: 1200, c: "#C0C0C0" },
   { l: 1200, r: 1400, c: "#A0BA87" },
   { l: 1400, r: 1600, c: "#80B44E" },
   { l: 1600, r: 1900, c: "#FFB800" },
   { l: 1900, r: 2100, c: "#FF9616" },
   { l: 2100, r: 2400, c: "#FF732B" },
   { l: 2400, r: 3000, c: "#FF2D55" },
-  { l: 3000, r: Infinity, c: "#663399" },
+  { l: 3000, r: 4000, c: "#663399" },
 ];
 
 const ratingInfo = (rating: number) => {
