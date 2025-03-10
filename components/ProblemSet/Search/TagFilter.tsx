@@ -1,14 +1,14 @@
 import { Badge } from "@/components/ui/badge";
+import { useGlobalSettingsStore } from "@/hooks/useGlobalSettings";
 import { useTags } from "@/hooks/useTags";
 import { JoinProblem } from "@/types";
 import React, { useCallback, useEffect, useState } from "react";
 import { FilterFn } from "./type";
-import { useGlobalSettingsStore } from "@/hooks/useGlobalSettings";
 
 interface TagFilterProps {
-  idx: number;
-  registerReset: (idx: number, reset: () => void) => void;
-  registerFilter: (idx: number, newFilter: FilterFn) => void;
+  idx: string;
+  registerReset: (idx: string, reset: () => void) => void;
+  registerFilter: (idx: string, newFilter: FilterFn) => void;
 }
 
 const TagFilter = React.memo(
@@ -26,7 +26,9 @@ const TagFilter = React.memo(
 
     useEffect(() => {
       registerFilter(idx, (prob: JoinProblem) => {
-        return select.size === 0 || prob.tags.some((tag) => select.has(tag.id));
+        return Number(
+          select.size === 0 || prob.tags.some((tag) => select.has(tag.id))
+        );
       });
     }, [registerFilter, select]);
 

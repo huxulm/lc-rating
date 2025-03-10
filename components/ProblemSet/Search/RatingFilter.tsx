@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { Slider } from "@/components/ui/slider";
 import { JoinProblem } from "@/types";
 import React, { useCallback, useEffect, useState } from "react";
 import { FilterFn } from "./type";
-import { Slider } from "@/components/ui/slider";
 
 const buttons = [
   { label: "未知", min: 0, max: 1000 },
@@ -17,9 +17,9 @@ const buttons = [
 ];
 
 interface RatingFilterProps {
-  idx: number;
-  registerReset: (idx: number, reset: () => void) => void;
-  registerFilter: (idx: number, newFilter: FilterFn) => void;
+  idx: string;
+  registerReset: (idx: string, reset: () => void) => void;
+  registerFilter: (idx: string, newFilter: FilterFn) => void;
 }
 
 const RatingFilter = React.memo(
@@ -41,7 +41,7 @@ const RatingFilter = React.memo(
 
     useEffect(() => {
       registerFilter(idx, (prob: JoinProblem) => {
-        return prob.rating >= range.min && prob.rating < range.max;
+        return Number(prob.rating >= range.min && prob.rating < range.max);
       });
     }, [registerFilter, range]);
 

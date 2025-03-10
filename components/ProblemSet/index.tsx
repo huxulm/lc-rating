@@ -1,10 +1,11 @@
 "use client";
 
-import { FilterFunction, Search } from "@/components/ProblemSet/Search";
 import { useJoinProblems } from "@/hooks/useJoinProblems";
+import { isTruthy } from "@/types/common";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { ProblemsTable } from "./ProblemTable";
-import { isTruthy } from "@/types/common";
+import { FilterFn, Search } from "./Search";
+import { JoinProblem } from "@/types";
 
 function ProblemSet() {
   const { joinProblem, isPending, errors } = useJoinProblems();
@@ -15,14 +16,27 @@ function ProblemSet() {
     }
   }, [errors]);
 
-  const [filterFn, setFilterFn] = useState<FilterFunction>(() => () => true);
+  const [filterFn, setFilterFn] = useState<FilterFn>(() => () => 1);
 
-  const handleSearch = useCallback((filter: FilterFunction) => {
+  const handleSearch = useCallback((filter: FilterFn) => {
     setFilterFn(() => filter);
   }, []);
 
-  const filtProblems = useMemo(() => {
-    return joinProblem.filter((problem) => filterFn(problem));
+  const sortProblems = useMemo(() => {
+    const filtProblems = joinProblem.reduce(
+      (acc: [number, JoinProblem][], problem: JoinProblem) => {
+        const sort = filterFn(problem);
+        if (sort > 0) {
+          acc.push([sort, problem]);
+        }
+        return acc;
+      },
+      []
+    );
+    const sortProblems = filtProblems
+      .sort((a, b) => a[0] - b[0])
+      .map(([_, problem]) => problem);
+    return sortProblems;
   }, [joinProblem, filterFn]);
 
   return (
@@ -31,7 +45,7 @@ function ProblemSet() {
         <Search onSearch={handleSearch}></Search>
       </div>
       <div className="w-full 2xl:w-2/3  m-auto">
-        <ProblemsTable problems={filtProblems} isPending={isPending} />
+        <ProblemsTable problems={sortProblems} isPending={isPending} />
       </div>
     </div>
   );

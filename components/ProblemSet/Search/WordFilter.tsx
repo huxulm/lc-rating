@@ -20,9 +20,9 @@ const match = (prob: JoinProblem, keyword: string) => {
 };
 
 interface WordFilterProps {
-  idx: number;
-  registerReset: (idx: number, reset: () => void) => void;
-  registerFilter: (idx: number, newFilter: FilterFn) => void;
+  idx: string;
+  registerReset: (idx: string, reset: () => void) => void;
+  registerFilter: (idx: string, newFilter: FilterFn) => void;
 }
 
 const WordFilter = React.memo(
@@ -38,7 +38,7 @@ const WordFilter = React.memo(
 
     useEffect(() => {
       registerFilter(idx, (prob: JoinProblem) => {
-        return value === "" || match(prob, value);
+        return Number(value === "" || match(prob, value));
       });
     }, [registerFilter, value]);
 
