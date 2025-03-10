@@ -40,7 +40,7 @@ function ProblemSet() {
   }, [joinProblem, filterFn]);
 
   return (
-    <div className="p-8 flex flex-col select-none gap-4">
+    <div className="p-8 flex flex-col gap-4">
       <div className="w-4/5 xl:w-3/4 2xl:w-2/3 m-auto">
         <Search onSearch={handleSearch}></Search>
       </div>

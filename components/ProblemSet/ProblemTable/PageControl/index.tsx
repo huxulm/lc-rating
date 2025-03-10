@@ -4,12 +4,12 @@ import {
   PaginationItem,
   PaginationLink,
   PaginationNext,
-  PaginationPrevious,
 } from "@/components/ui/pagination";
-import { ChevronLeftIcon } from "lucide-react";
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import React, { useCallback } from "react";
 import { PageJumper } from "./PageJumper";
 import { PageResizer } from "./PageResizer";
+import { Button } from "@/components/ui-customized/button";
 
 interface PaginationControlsProps {
   pageIndex: number;
@@ -65,27 +65,35 @@ const PageControl = React.memo(
         <Pagination className="w-fit">
           <PaginationContent className="flex items-center gap-2">
             <PaginationItem>
-              <PaginationLink
+              <Button
+                variant="outline"
                 onClick={handlePrevClick}
-                isActive={canPreviousPage}
+                disabled={!canPreviousPage}
                 aria-label="Go to previous page"
                 size="default"
                 className="gap-1 px-2.5 sm:pl-2.5"
               >
                 <ChevronLeftIcon />
                 <span className="hidden sm:block">上一页</span>
-              </PaginationLink>
+              </Button>
             </PaginationItem>
 
             <PaginationItem>
-              <span>第 {`${pageIndex + 1} / ${pageCount}`} 页</span>
+              <div>第 {`${pageIndex + 1} / ${pageCount}`} 页</div>
             </PaginationItem>
 
             <PaginationItem>
-              <PaginationNext
+              <Button
+                variant="outline"
                 onClick={handleNextClick}
-                isActive={canNextPage}
-              />
+                disabled={!canNextPage}
+                aria-label="Go to next page"
+                size="default"
+                className="gap-1 px-2.5 sm:pl-2.5"
+              >
+                <span className="hidden sm:block">下一页</span>
+                <ChevronRightIcon />
+              </Button>
             </PaginationItem>
           </PaginationContent>
         </Pagination>

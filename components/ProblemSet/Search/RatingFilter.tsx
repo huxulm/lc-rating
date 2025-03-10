@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui-customized/button";
 import { Slider } from "@/components/ui/slider";
 import { JoinProblem } from "@/types";
 import React, { useCallback, useEffect, useState } from "react";

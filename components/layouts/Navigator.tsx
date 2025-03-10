@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui-customized/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -38,7 +38,7 @@ const Navigator = React.memo(() => {
             </Button>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="cursor-pointer text-center text-base font-semibold">
+            <NavigationMenuTrigger className="cursor-pointer text-center text-base font-semibold w-fit select-none">
               分类题单
             </NavigationMenuTrigger>
             <NavigationMenuContent>
