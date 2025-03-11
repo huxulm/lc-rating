@@ -48,6 +48,7 @@ class Section:
 
 @dataclass
 class Problem:
+    id: str
     title: str
     slug: str
     src: str
@@ -140,6 +141,7 @@ def refactor_helper(content: List[str], rating: Dict) -> Section:
             node.isLeaf = True
             node.problems.append(
                 Problem(
+                    title_id,
                     title,
                     src,
                     ori_src,
@@ -200,7 +202,7 @@ if __name__ == "__main__":
         "-f", "--file", help="uuids and title of discussion from a file"
     )
     parser.add_argument(
-        "--pretty", help="indent the json file with 4 spaces"
+        "--pretty", action="store_true", help="indent the json file with 4 spaces"
     )
     args = parser.parse_args()
     if len(sys.argv) == 1:
@@ -231,9 +233,14 @@ if __name__ == "__main__":
     for uuid, file_path in tqdm(uuids_title):
         title, content, last_update = get_discussion(uuid, lc)
         # format last_update into yyyy-mm-dd hh:mm:ss
-        temp_split = last_update.split("T")
-        last_update = temp_split[0] + " " + temp_split[1].split(".")[0]
         content = content.replace("\r\n", "\n").strip()
+
+        try:
+            with open(f"raw_md/{uuid}.txt", "w", encoding="utf-8") as f:
+                f.write(content)
+        except BaseException as e:
+            print("Error: ", uuid, file_path, e)
+
         original_src = "https://leetcode.cn/circle/discuss/" + uuid
         content_queue = deque(content.split("\n"))
         parent = StudyPlan(title, original_src, last_update, [])

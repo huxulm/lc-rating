@@ -22,7 +22,7 @@ const TagFilter = React.memo(
         setSelect(new Set());
       };
       registerReset(idx, onReset);
-    }, [registerReset]);
+    }, [registerReset, idx]);
 
     useEffect(() => {
       registerFilter(idx, (prob: JoinProblem) => {
@@ -30,7 +30,7 @@ const TagFilter = React.memo(
           select.size === 0 || prob.tags.some((tag) => select.has(tag.id))
         );
       });
-    }, [registerFilter, select]);
+    }, [registerFilter, idx, select]);
 
     const handleChange = useCallback(
       (id: string) => {

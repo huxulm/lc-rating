@@ -10,6 +10,11 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function Page() {
-  return <StudyPlan />;
+interface PageProps {
+  params: Promise<{ category: string }>;
+}
+
+export default async function Page({ params }: PageProps) {
+  const { category } = await params;
+  return <StudyPlan plan={category} />;
 }

@@ -1,5 +1,3 @@
-import { title } from "process";
-
 export const BASE_PATH = "";
 export const LC_HOST_ZH = `https://leetcode.cn`;
 export const LC_HOST_EN = `https://leetcode.com`;
@@ -21,7 +19,7 @@ export const STUDYPLANS = {
   grid: "网格图",
   math: "数学",
   monotonic_stack: "单调栈",
-  slide_window: "滑动窗口",
+  sliding_window: "滑动窗口",
   string: "字符串",
   trees: "树和二叉树",
 };

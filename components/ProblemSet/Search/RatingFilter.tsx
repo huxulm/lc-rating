@@ -37,13 +37,13 @@ const RatingFilter = React.memo(
         });
       };
       registerReset(idx, onReset);
-    }, [registerReset]);
+    }, [registerReset, idx]);
 
     useEffect(() => {
       registerFilter(idx, (prob: JoinProblem) => {
         return Number(prob.rating >= range.min && prob.rating < range.max);
       });
-    }, [registerFilter, range]);
+    }, [registerFilter, idx, range]);
 
     const handleButtonClick = useCallback(
       (nextMin: number, nextMax: number) => {

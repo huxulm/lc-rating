@@ -50,4 +50,4 @@ __pycache__
 .DS_Store
 *.pem
 lc-maker/hds.txt
-/test
+test

@@ -15,7 +15,7 @@ import React from "react";
 
 const Navigator = React.memo(() => {
   return (
-    <NavigationMenu className="bg-gray-80/90 px-4 py-3 ring-1 ring-gray-900/10 backdrop-blur-sm dark:bg-gray-700/90 dark:text-gray-200 dark:ring-black/10 sticky z-100 top-0 max-w-full flex justify-between items-center">
+    <NavigationMenu className="bg-gray-80/90 px-4 py-3 ring-1 ring-gray-900/10 backdrop-blur-sm dark:bg-gray-700/90 dark:text-gray-200 dark:ring-black/10 sticky z-10 top-0 max-w-full flex justify-between items-center">
       <div className="font-bold text-lg">力扣竞赛题目</div>
       <div>
         <NavigationMenuList>
@@ -38,7 +38,7 @@ const Navigator = React.memo(() => {
             </Button>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="cursor-pointer text-center text-base font-semibold w-fit select-none">
+            <NavigationMenuTrigger className="cursor-pointer text-center text-base font-semibold w-fit select-none bg-transparent">
               {ROUTERS.studyPlans.title}
             </NavigationMenuTrigger>
             <NavigationMenuContent>

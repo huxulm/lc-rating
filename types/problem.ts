@@ -1,5 +1,3 @@
-import { Double } from "./common";
-
 export interface Problem {
   id: string;
   title: string;

@@ -33,13 +33,13 @@ const WordFilter = React.memo(
         setValue("");
       };
       registerReset(idx, onReset);
-    }, [registerReset]);
+    }, [registerReset, idx]);
 
     useEffect(() => {
       registerFilter(idx, (prob: JoinProblem) => {
         return Number(value === "" || match(prob, value));
       });
-    }, [registerFilter, value]);
+    }, [registerFilter, idx, value]);
 
     const handleChange = useCallback(
       (e: React.ChangeEvent<HTMLInputElement>) => {

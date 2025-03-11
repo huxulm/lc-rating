@@ -1,4 +1,4 @@
-interface Problem {
+export interface Item {
   title: string;
   slug: string;
   src: string;
@@ -7,15 +7,15 @@ interface Problem {
   isPremium: boolean;
 }
 
-interface Section {
+export interface Section {
   title: string;
   summary: string;
   isLeaf: boolean;
   children: Section[];
-  problems: Problem[];
+  problems: Item[];
 }
 
-export interface StudyPlan {
+export interface Root {
   title: string;
   src: string;
   last_update: string;
