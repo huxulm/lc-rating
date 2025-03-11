@@ -1,7 +1,7 @@
 import { Provider } from "@/components/common/Provider";
 import type { Metadata } from "next";
 import "./globals.css";
-import { Navigator } from "@/components/layouts/Navigator";
+import { Navigator } from "@/components/common/Navigator";
 
 export const metadata: Metadata = {
   title: "LC-Rating & Training",
