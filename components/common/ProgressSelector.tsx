@@ -59,10 +59,10 @@ const ProgressSelector = React.memo(({ problemId }: ProgressSelectorProps) => {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[10em] justify-between"
+          className="rounded-full flex justify-center cursor-pointer shadow-none px-0"
           style={{ color: optValue.color }}
         >
-          <span>{optValue.label}</span>
+          <span className="hidden">{optValue.label}</span>
           <ChevronsUpDown className="opacity-50" />
         </Button>
       </PopoverTrigger>
@@ -91,3 +91,4 @@ const ProgressSelector = React.memo(({ problemId }: ProgressSelectorProps) => {
 
 ProgressSelector.displayName = "ProgressSelector";
 export { ProgressSelector };
+
