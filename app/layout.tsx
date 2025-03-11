@@ -14,10 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh" className="scroll-smooth">
+    <html lang="zh" className="scroll-smooth" suppressHydrationWarning>
       <body>
-        <Navigator />
-        <Provider>{children}</Provider>
+        <Provider>
+          <Navigator />
+          {children}
+        </Provider>
       </body>
     </html>
   );
