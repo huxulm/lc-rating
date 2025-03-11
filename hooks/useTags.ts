@@ -1,28 +1,20 @@
-import { useEffect, useState, useTransition } from "react";
-
-export type Tag = [number, string, string];
-export type Tags = Tag[];
+import type { TagMap } from "@/types";
+import { useQuery } from "@tanstack/react-query";
+import { fetchApi } from "@/utils/fetch";
 
 export function useTags() {
-  // tags
-  const [isPending, startTransition] = useTransition();
-  const [tags, setTags] = useState<Tags>([]);
+  const {
+    data: tagMap,
+    isPending,
+    error,
+  } = useQuery<TagMap>({
+    queryKey: ["tags"],
+    queryFn: () =>
+      fetchApi(
+        "/problemset/tags.json?t=" + (new Date().getTime() / 100000).toFixed(0)
+      ).then((res) => res.json()),
+      staleTime: 3600 * 1000, // 1 hour
+  });
 
-  useEffect(() => {
-    fetch(
-      "/lc-rating/tags.json?t=" + (new Date().getTime() / 100000).toFixed(0)
-    )
-      .then((res) => res.json())
-      .then((result: Tags) => {
-        startTransition(() => {
-          setTags(
-            result.sort(function (t1, t2) {
-              return t1[2].localeCompare(t2[2]);
-            })
-          );
-        });
-      });
-  }, []);
-
-  return { tags, isPending };
+  return { tagMap, isPending, error };
 }

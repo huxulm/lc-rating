@@ -24,7 +24,7 @@ jobs:
         working-directory: ./lc-maker
 
       - name: Run script
-        run: python 0x3f_discuss.py --f ./discussion.txt
+        run: python 0x3f_discuss.py -f ./discussion.txt
         working-directory: ./lc-maker
 
       - name: Configure Git
