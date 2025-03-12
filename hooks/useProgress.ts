@@ -12,6 +12,14 @@ interface ProgressStore {
   getProgress: (id: string) => OptionKey | undefined;
 }
 
+const persistOption = {
+  name: LC_RATING_PROGRESS_KEY,
+};
+
+const sharedOption = {
+  name: LC_RATING_PROGRESS_KEY,
+};
+
 export const useProgressStore = create<ProgressStore>()(
   shared(
     persist(
@@ -36,20 +44,23 @@ export const useProgressStore = create<ProgressStore>()(
           }),
 
         setAllProgress: (progress: Record<string, OptionKey>) => {
-          set((state) => ({
-            progress: {
-              ...state.progress,
-              ...progress,
-            },
-          }));
+          set((state) => {
+            console.log(state);
+
+            return {
+              progress: {
+                ...state.progress,
+                ...progress,
+              },
+            };
+          });
         },
 
         getProgress: (id) => get().progress[id],
       }),
-      {
-        name: LC_RATING_PROGRESS_KEY,
-      }
-    )
+      persistOption
+    ),
+    sharedOption
   )
 );
 

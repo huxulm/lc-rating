@@ -26,6 +26,14 @@ const initialState: GlobalSettingsStoreState = {
   premium: true,
 };
 
+const persistOption = {
+  name: LC_RATING_GLOBAL_SETTING_KEY,
+};
+
+const sharedOption = {
+  name: LC_RATING_GLOBAL_SETTING_KEY,
+};
+
 export const useGlobalSettingsStore = create<GlobalSettingsStore>()(
   shared(
     persist(
@@ -41,9 +49,8 @@ export const useGlobalSettingsStore = create<GlobalSettingsStore>()(
 
         togglePremium: () => set({ premium: !get().premium }),
       }),
-      {
-        name: LC_RATING_GLOBAL_SETTING_KEY,
-      }
-    )
+      persistOption
+    ),
+    sharedOption
   )
 );

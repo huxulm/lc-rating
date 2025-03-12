@@ -1,9 +1,15 @@
 export const BASE_PATH = "";
 export const LC_HOST_ZH = `https://leetcode.cn`;
 export const LC_HOST_EN = `https://leetcode.com`;
+
+// v1 localStorage
+export const LC_RATING_PROGRESS_KEY_PREFIX = "lc-rating-zen-progress-";
+
+// v2 localStorage
 export const LC_RATING_GLOBAL_SETTING_KEY = "lc-rating-global-settings";
 export const LC_RATING_PROGRESS_KEY = "lc-rating-progress";
-export const LC_RATING_PROGRESS_KEY_PREFIX = "lc-rating-zen-progress-";
+export const LC_RATING_OPTION_KEY = "lc-rating-option";
+
 export const BILIBILI_0X3F_SPACE = {
   url: "https://space.bilibili.com/206214/",
   title: "bilibili@灵茶山艾府",

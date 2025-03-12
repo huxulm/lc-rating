@@ -1,8 +1,7 @@
+import { LC_RATING_OPTION_KEY } from "@/config/constants";
 import { shared } from "use-broadcast-ts";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-
-const PROGRESS_CONFIG_KEY = "lc-rating-progress-config";
 
 export type OptionValue = {
   key: string;
@@ -52,6 +51,14 @@ interface OptionsStoreActions {
 
 type OptionsStore = OptionsStoreState & OptionsStoreActions;
 
+const persistOption = {
+  name: LC_RATING_OPTION_KEY,
+};
+
+const sharedOption = {
+  name: LC_RATING_OPTION_KEY,
+};
+
 const useOptionsStore = create<OptionsStore>()(
   shared(
     persist(
@@ -99,10 +106,9 @@ const useOptionsStore = create<OptionsStore>()(
           set({ options: { ...defaultOptions, ...Object.fromEntries(map) } });
         },
       }),
-      {
-        name: PROGRESS_CONFIG_KEY,
-      }
-    )
+      persistOption
+    ),
+    sharedOption
   )
 );
 
