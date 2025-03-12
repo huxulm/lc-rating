@@ -5,8 +5,10 @@ import { persist } from "zustand/middleware";
 import { OptionKey } from "./useOptions";
 
 interface ProgressStore {
-  progresses: Record<string, OptionKey>;
+  progress: Record<string, OptionKey>;
   setProgress: (id: string, value: OptionKey) => void;
+  delProgress: (id: string) => void;
+  setAllProgress: (progress: Record<string, OptionKey>) => void;
   getProgress: (id: string) => OptionKey | undefined;
 }
 
@@ -14,17 +16,35 @@ export const useProgressStore = create<ProgressStore>()(
   shared(
     persist(
       (set, get) => ({
-        progresses: {},
+        progress: {},
 
         setProgress: (id, value) =>
           set((state) => ({
-            progresses: {
-              ...state.progresses,
+            progress: {
+              ...state.progress,
               [id]: value,
             },
           })),
 
-        getProgress: (id) => get().progresses[id],
+        delProgress: (id) =>
+          set((state) => {
+            const progress = { ...state.progress };
+            delete progress[id];
+            return {
+              progress,
+            };
+          }),
+
+        setAllProgress: (progress: Record<string, OptionKey>) => {
+          set((state) => ({
+            progress: {
+              ...state.progress,
+              ...progress,
+            },
+          }));
+        },
+
+        getProgress: (id) => get().progress[id],
       }),
       {
         name: LC_RATING_PROGRESS_KEY,
@@ -34,11 +54,13 @@ export const useProgressStore = create<ProgressStore>()(
 );
 
 export const useProgress = (id: string) => {
-  const progress = useProgressStore((state) => state.progresses[id]);
+  const progress = useProgressStore((state) => state.progress[id]);
   const setProgress = useProgressStore((state) => state.setProgress);
+  const delProgress = useProgressStore((state) => state.delProgress);
 
   return {
     progress,
     setProgress: (value: OptionKey) => setProgress(id, value),
+    delProgress: () => delProgress(id),
   };
 };

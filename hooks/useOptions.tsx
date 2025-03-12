@@ -10,8 +10,8 @@ export type OptionValue = {
   color: string;
 };
 
-export type Options = Record<string, OptionValue>;
-export type OptionKey = keyof Options;
+export type OptionKey = string;
+export type Options = Record<OptionKey, OptionValue>;
 
 export const defaultOptions = {
   TODO: {
@@ -110,7 +110,7 @@ export const useOptions = () => {
   const { options: customOptions, getOption, setOptions } = useOptionsStore();
 
   const fullConfig = { ...defaultOptions, ...customOptions };
-  const optionKeys = Object.keys(fullConfig);
+  const optionKeys = Object.keys(fullConfig) as OptionKey[];
 
   return {
     optionKeys,
