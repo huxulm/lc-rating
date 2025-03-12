@@ -18,7 +18,7 @@ const Preview = React.memo(({ options }: PreviewProps) => {
     <div className="p-3 space-y-2 border rounded-md">
       <Label className="text-sm font-medium leading-none">预览</Label>
       {options.map((option, i) => (
-        <Select key={i} value={option.key}>
+        <Select key={i} value={option.key || " "}>
           <SelectTrigger className="w-full" style={{ color: option.color }}>
             <SelectValue />
           </SelectTrigger>
