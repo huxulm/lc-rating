@@ -20,6 +20,6 @@ export const settingTabs: SettingTabType[] = [
     key: "CustomizeOptions",
     title: "自定义进度选项",
     icon: <List />,
-    component: <div></div>,
+    component: <CustomizeOptions />,
   },
 ];

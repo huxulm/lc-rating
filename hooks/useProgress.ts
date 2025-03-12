@@ -45,8 +45,6 @@ export const useProgressStore = create<ProgressStore>()(
 
         setAllProgress: (progress: Record<string, OptionKey>) => {
           set((state) => {
-            console.log(state);
-
             return {
               progress: {
                 ...state.progress,

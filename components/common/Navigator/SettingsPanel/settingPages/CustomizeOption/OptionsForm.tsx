@@ -1,141 +1,104 @@
-import { defaultOptions, OptionEntry } from "@hooks/useProgress";
-import { useMemo, useState } from "react";
-import { Button, Col, Form, Row, Stack } from "react-bootstrap";
-
-function partition<T>(array: T[], filter: (item: T) => boolean): [T[], T[]] {
-  return array.reduce(
-    (acc, item) => {
-      acc[Number(filter(item))].push(item);
-      return acc;
-    },
-    [[], []] as [T[], T[]]
-  );
-}
-
+import { Button } from "@/components/ui-customized/button";
+import { Form, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { defaultOptions, OptionValue } from "@/hooks/useOptions";
+import { cn } from "@/lib/utils";
+import React, { useCallback } from "react";
+import { useFieldArray, UseFormReturn, useWatch } from "react-hook-form";
 interface OptionsFormProps {
-  formData: OptionEntry[];
-  onChange: (formData: OptionEntry[]) => void;
+  form: UseFormReturn<{
+    options: OptionValue[];
+  }>;
   onSubmit: () => void;
 }
 
-function OptionsForm({ formData, onChange, onSubmit }: OptionsFormProps) {
-  const sortedFormData = useMemo(() => {
-    const [customEntries, defaultEntries] = partition(
-      formData,
-      (item) => item.key in defaultOptions
-    );
-    return [...defaultEntries, ...customEntries];
-  }, [formData]);
+const OptionsForm = React.memo(({ form, onSubmit }: OptionsFormProps) => {
+  const options = useWatch({ name: "options", control: form.control });
 
-  const errors = useMemo(() => {
-    const existingKeys = new Set<string>();
-    const errors: string[] = [];
-    sortedFormData.forEach((item, i) => {
-      if (item.key === "") {
-        errors[i] = "Key不能为空";
-      } else if (existingKeys.has(item.key)) {
-        errors[i] = "Key不能重复";
-      } else {
-        existingKeys.add(item.key);
-      }
-    });
-    return errors;
-  }, [sortedFormData]);
+  console.log(options);
 
-  const handleFieldChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-    idx: number,
-    field: "key" | "label" | "color"
-  ) => {
-    const newData = [...sortedFormData];
-    newData[idx] = { ...newData[idx], [field]: e.target.value.trim() };
-    onChange(newData);
-  };
+  const fieldArray = useFieldArray({
+    control: form.control,
+    name: "options",
+  });
 
-  const handleRemove = (idx: number) => {
-    const newData = sortedFormData.filter((item, i) => i !== idx);
-    onChange(newData);
-  };
+  const errors = form.formState.errors.options;
 
-  const addFormRow = () => {
-    const newEntry: OptionEntry = {
-      key: "",
-      label: "",
-      color: "#000000",
-    };
-    onChange([...sortedFormData, newEntry]);
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (errors.length === 0) {
-      onSubmit();
-    }
-  };
+  const handleAdd = useCallback(
+    () => fieldArray.append({ key: "", label: "", color: "#000000" }),
+    [fieldArray.append]
+  );
 
   return (
-    <Form>
-      <Stack gap={3}>
-        {sortedFormData.map((item, i) => (
-          <Row key={i} className="g-2">
-            <Col>
-              <Form.Group controlId={`key-${item.key}`}>
-                <Form.Control
-                  placeholder="主键 Key"
-                  value={item.key}
-                  onChange={(e) => handleFieldChange(e, i, "key")}
-                  isInvalid={errors[i] !== undefined}
-                  disabled={i < Object.keys(defaultOptions).length}
-                />
-                {errors[i] && (
-                  <Form.Control.Feedback type="invalid">
-                    {errors[i]}
-                  </Form.Control.Feedback>
-                )}
-              </Form.Group>
-            </Col>
+    <Form {...form}>
+      <form onSubmit={onSubmit} className="space-y-4">
+        <div className="space-y-3">
+          {fieldArray.fields.map((field, index) => {
+            const isDefault = field.key in defaultOptions;
+            return (
+              <div key={index} className="flex gap-2 items-start">
+                <div className="space-y-1">
+                  <Input
+                    placeholder="主键 Key"
+                    {...form.register(`options.${index}.key`, {
+                      validate: (value) => {
+                        if (value.trim() === "") {
+                          return "Key不能为空";
+                        }
+                        const isDuplicate = options.some(
+                          (opt, i) => i !== index && opt.key === value
+                        );
+                        if (isDuplicate) {
+                          return "Key已存在";
+                        }
+                        return true;
+                      },
+                    })}
+                    disabled={isDefault}
+                  />
+                  {errors?.[index]?.key && (
+                    <FormMessage>{errors[index]?.key?.message}</FormMessage>
+                  )}
+                </div>
 
-            <Col>
-              <Form.Control
-                placeholder="标签 Label"
-                value={item.label}
-                onChange={(e) => handleFieldChange(e, i, "label")}
-              />
-            </Col>
+                <div className="">
+                  <Input
+                    placeholder="标签 Label"
+                    {...form.register(`options.${index}.label`)}
+                  />
+                </div>
 
-            <Col>
-              <Stack direction="horizontal" gap={2}>
-                <Form.Control
-                  type="color"
-                  title="颜色 Color"
-                  value={item.color}
-                  className="w-50"
-                  onChange={(e) => handleFieldChange(e, i, "color")}
-                />
-                <Button
-                  variant="outline-danger"
-                  onClick={() => handleRemove(i)}
-                  hidden={i < Object.keys(defaultOptions).length}
-                  disabled={i < Object.keys(defaultOptions).length}
-                >
-                  删除
-                </Button>
-              </Stack>
-            </Col>
-          </Row>
-        ))}
+                <div className="flex gap-2 items-center">
+                  <Input
+                    type="color"
+                    className="size-8 p-0 border-none"
+                    {...form.register(`options.${index}.color`)}
+                  />
+                  <Button
+                    variant="destructive"
+                    className={cn({ invisible: isDefault })}
+                    onClick={() => fieldArray.remove(index)}
+                    type="button"
+                  >
+                    删除
+                  </Button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
 
-        <Stack direction="horizontal" gap={2} className="mt-3">
-          <Button variant="success" onClick={addFormRow}>
+        <div className="flex gap-2">
+          <Button variant="secondary" onClick={handleAdd} type="button">
             添加新行
           </Button>
-          <Button variant="primary" type="submit" onClick={handleSubmit}>
-            保存
-          </Button>
-        </Stack>
-      </Stack>
+          <Button type="submit">保存配置</Button>
+        </div>
+      </form>
     </Form>
   );
-}
+});
 
-export default OptionsForm;
+OptionsForm.displayName = "OptionsForm";
+
+export { OptionsForm };
