@@ -1,4 +1,5 @@
 import { LC_RATING_OPTION_KEY } from "@/config/constants";
+import { useMemo } from "react";
 import { shared } from "use-broadcast-ts";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
@@ -113,10 +114,12 @@ const useOptionsStore = create<OptionsStore>()(
 );
 
 export const useOptions = () => {
-  const { options: customOptions, getOption, setOptions } = useOptionsStore();
+  const { options, getOption, setOptions } = useOptionsStore();
 
-  const fullConfig = { ...defaultOptions, ...customOptions };
-  const optionKeys = Object.keys(fullConfig) as OptionKey[];
+  const optionKeys = useMemo(
+    () => Object.keys({ ...defaultOptions, ...options }) as OptionKey[],
+    [options]
+  );
 
   return {
     optionKeys,
