@@ -1,7 +1,7 @@
 import { Provider } from "@/components/common/Provider";
 import type { Metadata } from "next";
 import "./globals.css";
-import { Navigator } from "@/components/layouts/Navigator";
+import { Navigator } from "@/components/common/Navigator";
 
 export const metadata: Metadata = {
   title: "LC-Rating & Training",
@@ -14,10 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh" className="scroll-smooth">
+    <html lang="zh" className="scroll-smooth" suppressHydrationWarning>
       <body>
-        <Navigator />
-        <Provider>{children}</Provider>
+        <Provider>
+          <Navigator />
+          {children}
+        </Provider>
       </body>
     </html>
   );

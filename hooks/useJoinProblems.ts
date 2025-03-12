@@ -41,7 +41,7 @@ export function useJoinProblems() {
         solution: solutionMap[problem._hash],
       };
     });
-  }, [problemMap && contestMap && tagMap && solutionMap]);
+  }, [problemPending || contestPending || tagPending || solutionPending]);
 
   return {
     joinProblem,
