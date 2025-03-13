@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh" className="scroll-smooth" suppressHydrationWarning>
-      <body>
+      <body className="mt-[var(--navbar-height)]">
         <Provider>
           <Navigator />
           {children}

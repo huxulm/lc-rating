@@ -16,7 +16,7 @@ interface TableOfContentProps {
 
 const TableOfContent = React.memo(({ toc }: TableOfContentProps) => {
   return (
-    <Sidebar>
+    <Sidebar className="top-[var(--navbar-height)] h-auto">
       <SidebarContent>
         <SidebarMenu>
           {toc.children.map((subToc) => (
