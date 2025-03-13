@@ -1,24 +1,12 @@
-import { LC_RATING_GLOBAL_SETTING_KEY } from "@/config/constants";
+import {
+  LC_RATING_GLOBAL_SETTING_KEY,
+  STORAGE_VERSION,
+} from "@/config/constants";
 import { shared } from "use-broadcast-ts";
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
-
-type Language = "zh" | "en";
-
-interface GlobalSettingsStoreState {
-  language: Language;
-  showEnLink: boolean;
-  premium: boolean;
-}
-
-interface GlobalSettingsStoreActions {
-  toggleLanguage: () => void;
-  toggleShowEnLink: () => void;
-  togglePremium: () => void;
-}
-
-type GlobalSettingsStore = GlobalSettingsStoreState &
-  GlobalSettingsStoreActions;
+import { persist, PersistOptions } from "zustand/middleware";
+import { GlobalSettingsStore, GlobalSettingsStoreState } from "./types_v2";
+import { globalSettingToLTS } from "@/migrate/toLatest";
 
 const initialState: GlobalSettingsStoreState = {
   language: "zh",
@@ -26,8 +14,13 @@ const initialState: GlobalSettingsStoreState = {
   premium: true,
 };
 
-const persistOption = {
+const persistOption: PersistOptions<
+  GlobalSettingsStore,
+  GlobalSettingsStoreState
+> = {
   name: LC_RATING_GLOBAL_SETTING_KEY,
+  version: STORAGE_VERSION,
+  migrate: globalSettingToLTS,
 };
 
 const sharedOption = {

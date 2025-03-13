@@ -1,11 +1,11 @@
 import { ProgressSelector } from "@/components/common/ProgressSelector";
 import { RatingCircle, ratingInfo } from "@/components/common/RatingCircle";
 import { Separator } from "@/components/ui/separator";
+import { LC_HOST_EN, LC_HOST_ZH } from "@/config/constants";
+import { useGlobalSettingsStore } from "@/hooks/useGlobalSettings";
 import { StudyPlanData } from "@/types";
 import Link from "next/link";
 import React from "react";
-import { LC_HOST_ZH, LC_HOST_EN } from "@/config/constants";
-import { useGlobalSettingsStore } from "@/hooks/useGlobalSettings";
 
 interface ProblemListProps {
   problems: StudyPlanData.Item[];

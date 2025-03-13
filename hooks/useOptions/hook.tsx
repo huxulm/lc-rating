@@ -1,17 +1,17 @@
-import { LC_RATING_OPTION_KEY } from "@/config/constants";
+import { LC_RATING_OPTION_KEY, STORAGE_VERSION } from "@/config/constants";
+import { optionToLTS } from "@/migrate/toLatest";
 import { useMemo } from "react";
 import { shared } from "use-broadcast-ts";
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
-
-export type OptionValue = {
-  key: string;
-  label: string;
-  color: string;
-};
-
-export type OptionKey = string;
-export type Options = Record<OptionKey, OptionValue>;
+import { persist, PersistOptions } from "zustand/middleware";
+import { migrateFromLocalStorage } from "./migrateFromV1";
+import {
+  OptionKey,
+  Options,
+  OptionsStore,
+  OptionsStoreState,
+  OptionValue,
+} from "./types_v2";
 
 export const defaultOptions = {
   TODO: {
@@ -41,19 +41,10 @@ export const defaultOptions = {
   },
 } as const;
 
-interface OptionsStoreState {
-  options: Options;
-}
-
-interface OptionsStoreActions {
-  setOptions: (newOptions: Options) => void;
-  getOption: (key?: OptionKey) => OptionValue;
-}
-
-type OptionsStore = OptionsStoreState & OptionsStoreActions;
-
-const persistOption = {
+const persistOption: PersistOptions<OptionsStore, OptionsStoreState> = {
   name: LC_RATING_OPTION_KEY,
+  version: STORAGE_VERSION,
+  migrate: optionToLTS,
 };
 
 const sharedOption = {
@@ -64,7 +55,7 @@ const useOptionsStore = create<OptionsStore>()(
   shared(
     persist(
       (set, get) => ({
-        options: {},
+        ...migrateFromLocalStorage(),
 
         getOption: (key) => {
           if (typeof key === "undefined") {
