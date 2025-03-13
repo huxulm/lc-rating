@@ -15,12 +15,14 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import React from "react";
 import { GithubBadge } from "./GithubBadge";
+import SettingsPanel from "./SettingsPanel";
 
 const Navigator = React.memo(() => {
   const { setTheme } = useTheme();
+  const [show, setShow] = React.useState(false);
 
   return (
-    <NavigationMenu className="bg-gray-80/90 px-4 py-3 ring-1 ring-gray-900/10 backdrop-blur-sm dark:bg-gray-700/90 dark:text-gray-200 dark:ring-black/10 sticky z-10 top-0 max-w-full flex justify-between items-center">
+    <NavigationMenu className="px-4 py-3 ring-1 ring-gray-900/10 backdrop-blur-sm dark:bg-gray-700/90 dark:text-gray-200 dark:ring-black/10 sticky z-10 top-0 max-w-full flex justify-between items-center">
       <div className="font-bold text-lg">力扣竞赛题目</div>
       <div>
         <NavigationMenuList>
@@ -61,9 +63,13 @@ const Navigator = React.memo(() => {
             </NavigationMenuContent>
             <NavigationMenuViewport />
           </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <SettingsPanel show={show} onOpenChange={setShow} />
+          </NavigationMenuItem>
         </NavigationMenuList>
       </div>
-      <div className="font-bold flex gap-1">
+      <div className="font-bold md:flex gap-1 hidden">
         <div>本页面所有题解来自</div>
         <Link href={BILIBILI_0X3F_SPACE.url} className="underline text-red-700">
           {BILIBILI_0X3F_SPACE.title}

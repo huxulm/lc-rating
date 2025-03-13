@@ -1,8 +1,8 @@
+import { LC_RATING_OPTION_KEY } from "@/config/constants";
+import { useMemo } from "react";
 import { shared } from "use-broadcast-ts";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-
-const PROGRESS_CONFIG_KEY = "lc-rating-progress-config";
 
 export type OptionValue = {
   key: string;
@@ -10,8 +10,8 @@ export type OptionValue = {
   color: string;
 };
 
-export type Options = Record<string, OptionValue>;
-export type OptionKey = keyof Options;
+export type OptionKey = string;
+export type Options = Record<OptionKey, OptionValue>;
 
 export const defaultOptions = {
   TODO: {
@@ -51,6 +51,14 @@ interface OptionsStoreActions {
 }
 
 type OptionsStore = OptionsStoreState & OptionsStoreActions;
+
+const persistOption = {
+  name: LC_RATING_OPTION_KEY,
+};
+
+const sharedOption = {
+  name: LC_RATING_OPTION_KEY,
+};
 
 const useOptionsStore = create<OptionsStore>()(
   shared(
@@ -99,18 +107,19 @@ const useOptionsStore = create<OptionsStore>()(
           set({ options: { ...defaultOptions, ...Object.fromEntries(map) } });
         },
       }),
-      {
-        name: PROGRESS_CONFIG_KEY,
-      }
-    )
+      persistOption
+    ),
+    sharedOption
   )
 );
 
 export const useOptions = () => {
-  const { options: customOptions, getOption, setOptions } = useOptionsStore();
+  const { options, getOption, setOptions } = useOptionsStore();
 
-  const fullConfig = { ...defaultOptions, ...customOptions };
-  const optionKeys = Object.keys(fullConfig);
+  const optionKeys = useMemo(
+    () => Object.keys({ ...defaultOptions, ...options }) as OptionKey[],
+    [options]
+  );
 
   return {
     optionKeys,

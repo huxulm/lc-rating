@@ -10,7 +10,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { useOptions } from "@/hooks/useOptions";
+import { OptionKey, useOptions } from "@/hooks/useOptions";
 import { useProgress } from "@/hooks/useProgress";
 import { cn } from "@/lib/utils";
 import { Check, ChevronsUpDown } from "lucide-react";
@@ -23,11 +23,16 @@ interface ProgressSelectorProps {
 const ProgressSelector = React.memo(({ problemId }: ProgressSelectorProps) => {
   const [open, setOpen] = useState(false);
   const { optionKeys, getOption } = useOptions();
-  const { progress, setProgress } = useProgress(problemId);
+  const { progress, setProgress, delProgress } = useProgress(problemId);
+  const todoOption = getOption();
   const optValue = getOption(progress);
 
-  const handleSelect = useCallback((key: string) => {
-    setProgress(key);
+  const handleSelect = useCallback((key: OptionKey) => {
+    if (key === todoOption.key) {
+      delProgress();
+    } else {
+      setProgress(key);
+    }
     setOpen(false);
   }, []);
 
@@ -91,4 +96,3 @@ const ProgressSelector = React.memo(({ problemId }: ProgressSelectorProps) => {
 
 ProgressSelector.displayName = "ProgressSelector";
 export { ProgressSelector };
-
