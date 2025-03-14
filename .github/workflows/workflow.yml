@@ -8,8 +8,8 @@ on:
   workflow_run:
     workflows:
       [
-        "Weekly Problem List Update",
-        "Public Data Updater",
+        "StudyPlan Updater",
+        "Problemset Updater",
         "Rating Solution Updater",
       ]
     types:
