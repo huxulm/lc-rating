@@ -6,7 +6,9 @@ const GithubBadge = () => {
     queryKey: ["github-stars"],
     queryFn: () =>
       fetch("https://api.github.com/repos/huxulm/lc-rating")
-        .then((response) => response.json())
+        .then((response) =>
+          response.ok ? response.json() : Promise.reject(response.json())
+        )
         .then((data) => data.stargazers_count),
     staleTime: 60 * 1000, // 1 minute
   });
