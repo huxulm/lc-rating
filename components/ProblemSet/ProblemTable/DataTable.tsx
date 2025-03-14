@@ -1,4 +1,5 @@
 // components/DataTable/DataTable.tsx
+import { PageControl } from "@/components/common/PageControl";
 import { Separator } from "@/components/ui/separator";
 import {
   Table,
@@ -20,7 +21,6 @@ import {
 import { ArrowDownUp, MoveDown, MoveUp } from "lucide-react";
 import { useMemo, useState } from "react";
 import { columnInitialTableState, getColumns } from "./columns";
-import { PageControl } from "./PageControl";
 import { TableCol } from "./types";
 import { VisibilityControl } from "./VisibilityControl";
 
@@ -83,7 +83,7 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map((header) => (
-                <TableHead key={header.id}>
+                <TableHead key={header.id} className="border border-gray-200">
                   <div
                     className={cn("flex items-center justify-center", {
                       "cursor-pointer": header.column.getCanSort(),
@@ -121,7 +121,7 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
                 data-state={row.getIsSelected() && "selected"}
               >
                 {row.getVisibleCells().map((cell) => (
-                  <TableCell key={cell.id}>
+                  <TableCell key={cell.id} className="border border-gray-200">
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </TableCell>
                 ))}

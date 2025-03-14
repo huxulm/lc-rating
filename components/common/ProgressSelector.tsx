@@ -66,11 +66,11 @@ const ProgressSelector = React.memo(({ problemId }: ProgressSelectorProps) => {
       {!optionKeys.includes(optValue.key) && (
         <SelectOption
           value={optValue.key}
-          className="flex flex-row "
+          className="flex flex-row"
           style={{ color: optValue.color }}
         >
           <span>{optValue.label}1</span>
-          <Check className={cn("ml-auto", "opacity-100")} />
+          <Check />
         </SelectOption>
       )}
     </Select>

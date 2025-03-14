@@ -46,7 +46,7 @@ const SectionContainer = React.memo(
             <CardDescription>
               <p
                 ref={innerHtml}
-                className="p-4 rounded dark:bg-gray-800 rounded-lg"
+                className="p-4 rounded dark:bg-gray-800 rounded-lg text-pretty"
                 dangerouslySetInnerHTML={{ __html: section.summary }}
               />
             </CardDescription>

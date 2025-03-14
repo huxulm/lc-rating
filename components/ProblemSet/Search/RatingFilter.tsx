@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui-customized/button";
 import { Slider } from "@/components/ui/slider";
-import { JoinProblem } from "@/types";
 import React, { useCallback, useEffect, useState } from "react";
+import { TableCol } from "../ProblemTable/types";
 import { FilterFn } from "./type";
 
 const buttons = [
@@ -40,8 +40,8 @@ const RatingFilter = React.memo(
     }, [registerReset, idx]);
 
     useEffect(() => {
-      registerFilter(idx, (prob: JoinProblem) => {
-        return Number(prob.rating >= range.min && prob.rating < range.max);
+      registerFilter(idx, (row: TableCol) => {
+        return Number(row.rating >= range.min && row.rating < range.max);
       });
     }, [registerFilter, idx, range]);
 
