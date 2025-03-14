@@ -58,10 +58,13 @@ const useOptionsStore = create<OptionsStore>()(
         ...migrateFromLocalStorage(),
 
         getOption: (key) => {
+          const fullConfig: Options & typeof defaultOptions = {
+            ...defaultOptions,
+            ...get().options,
+          };
           if (typeof key === "undefined") {
-            return defaultOptions.TODO;
+            return fullConfig.TODO;
           }
-          const fullConfig = { ...defaultOptions, ...get().options } as Options;
           let option = fullConfig[key];
           if (option === undefined) {
             console.error(`[useOptionsStore] Invalid progress key: ${key}`);
