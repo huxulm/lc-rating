@@ -1,13 +1,13 @@
 import { Input } from "@/components/ui/input";
-import { JoinProblem } from "@/types";
 import React, { useCallback, useEffect, useState } from "react";
+import { TableCol } from "../ProblemTable/types";
 import { FilterFn } from "./type";
 
-const match = (prob: JoinProblem, keyword: string) => {
-  const str = `${prob.contest?.title || ""} ${prob.id} ${prob.title} ${
-    prob.solution?.title || ""
-  } ${prob.rating || ""} ${prob.tags
-    .map((t) => `${t.en} ${t.zh}`)
+const match = (row: TableCol, keyword: string) => {
+  const str = `${row.contest?.title || ""} ${row.problem.id} ${
+    row.problem.title
+  } ${row.solution?.title || ""} ${row.rating || ""} ${row.tags
+    .map((t) => `${t.label.en} ${t.label.zh}`)
     ?.join(" ")}`.toLowerCase();
 
   const kws = keyword
@@ -36,7 +36,7 @@ const WordFilter = React.memo(
     }, [registerReset, idx]);
 
     useEffect(() => {
-      registerFilter(idx, (prob: JoinProblem) => {
+      registerFilter(idx, (prob: TableCol) => {
         return Number(value === "" || match(prob, value));
       });
     }, [registerFilter, idx, value]);

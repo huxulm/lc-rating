@@ -1,8 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { useGlobalSettingsStore } from "@/hooks/useGlobalSettings";
 import { useTags } from "@/hooks/useTags";
-import { JoinProblem } from "@/types";
 import React, { useCallback, useEffect, useState } from "react";
+import { TableCol } from "../ProblemTable/types";
 import { FilterFn } from "./type";
 
 interface TagFilterProps {
@@ -25,9 +25,9 @@ const TagFilter = React.memo(
     }, [registerReset, idx]);
 
     useEffect(() => {
-      registerFilter(idx, (prob: JoinProblem) => {
+      registerFilter(idx, (row: TableCol) => {
         return Number(
-          select.size === 0 || prob.tags.some((tag) => select.has(tag.id))
+          select.size === 0 || row.tags.some((tag) => select.has(tag.id))
         );
       });
     }, [registerFilter, idx, select]);

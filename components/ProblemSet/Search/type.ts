@@ -1,4 +1,4 @@
-import type { JoinProblem } from "@/types";
+import { TableCol } from "../ProblemTable/types";
 
-export type FilterFn = (item: JoinProblem) => number;
+export type FilterFn = (item: TableCol) => number;
 export type ResetFn = () => void;

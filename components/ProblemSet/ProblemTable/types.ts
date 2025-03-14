@@ -3,26 +3,40 @@ export type TableCol = {
     id: string;
     time: number;
     title: string;
-    titleSlug: string;
-    company: object;
+    link: {
+      zh: string;
+      en: string;
+    };
+    company?: object;
   };
   problem: {
     id: string;
     title: string;
-    titleSlug: string;
+    link: {
+      zh: string;
+      en: string;
+    };
     rating: number;
     premium: boolean;
-    _hash: string;
   };
   rating: number;
-  tags: string[];
+  tags: {
+    id: string;
+    label: {
+      zh: string;
+      en: string;
+    };
+  }[];
   progress: {
     problemId: string;
   };
   solution: {
     id: string;
     title: string;
-    titleSlug: string;
+    link: {
+      zh: string;
+      en: string;
+    };
     time: number;
   };
 };

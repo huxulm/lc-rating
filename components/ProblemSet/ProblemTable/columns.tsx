@@ -1,9 +1,8 @@
-// components/DataTable/columns.ts
+import { I18NLink } from "@/components/common/I18NLink";
+import { I18NTag } from "@/components/common/I18NTag";
 import { ProgressSelector } from "@/components/common/ProgressSelector";
 import { RatingCircle, ratingInfo } from "@/components/common/RatingCircle";
-import { Badge } from "@/components/ui/badge";
 import { createColumnHelper, InitialTableState } from "@tanstack/react-table";
-import Link from "next/link";
 import { key2Label, TableCol } from "./types";
 
 const columnHelper = createColumnHelper<TableCol>();
@@ -14,13 +13,11 @@ export const getColumns = () => [
     cell: ({ row }) => {
       const contest = row.getValue<TableCol["contest"]>("contest");
       return (
-        <Link
-          href={contest.titleSlug}
-          target="_blank"
-          className="text-left text-pretty hover:underline"
-        >
-          {contest.title}
-        </Link>
+        <I18NLink
+          link={contest.link}
+          title={contest.title}
+          className="text-pretty"
+        />
       );
     },
     sortingFn: (a, b) =>
@@ -33,11 +30,11 @@ export const getColumns = () => [
     cell: ({ row }) => {
       const problem = row.getValue<TableCol["problem"]>("problem");
       return (
-        <Link
-          href={problem.titleSlug}
-          target="_blank"
-          className="text-left text-pretty hover:underline"
-        >{`${problem.id}. ${problem.title}`}</Link>
+        <I18NLink
+          link={problem.link}
+          title={`${problem.id}. ${problem.title}`}
+          className="text-pretty"
+        />
       );
     },
     sortingFn: (a, b) =>
@@ -66,14 +63,14 @@ export const getColumns = () => [
   columnHelper.accessor("tags", {
     header: () => <div>{key2Label["tags"]}</div>,
     cell: ({ row }) => {
-      const tags = row.getValue<string[]>("tags");
+      const tags = row.getValue<TableCol["tags"]>("tags");
       return (
-        <div className="flex flex-wrap justify-center gap-1">
-          {tags.map((tag) => (
-            <Badge variant="outline" key={tag}>
-              {tag}
-            </Badge>
-          ))}
+        <div className="w-full flex justify-center">
+          <div className="flex flex-wrap justify-center gap-1 text-pretty w-30">
+            {tags.map((tag) => (
+              <I18NTag key={tag.id} label={tag.label} />
+            ))}
+          </div>
         </div>
       );
     },
@@ -94,13 +91,11 @@ export const getColumns = () => [
     cell: ({ row }) => {
       const solution = row.getValue<TableCol["solution"]>("solution");
       return (
-        <Link
-          href={solution.titleSlug}
-          target="_blank"
-          className="text-left text-pretty hover:underline blur-xs hover:blur-none transition duration-300"
-        >
-          {solution.title}
-        </Link>
+        <I18NLink
+          link={solution.link}
+          title={solution.title}
+          className="text-pretty"
+        />
       );
     },
     enableSorting: false,
