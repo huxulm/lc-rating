@@ -22,8 +22,8 @@ const Navigator = React.memo(() => {
   const [show, setShow] = React.useState(false);
 
   return (
-    <NavigationMenu className="px-4 py-3 ring-1 ring-gray-900/10 backdrop-blur-sm dark:bg-gray-700/90 dark:text-gray-200 dark:ring-black/10 sticky z-10 top-0 max-w-full flex justify-between items-center">
-      <div className="font-bold text-lg">力扣竞赛题目</div>
+    <NavigationMenu className="px-4 py-3 ring-1 ring-gray-900/10 backdrop-blur-sm dark:bg-gray-700/90 dark:text-gray-200 dark:ring-black/10 fixed w-full z-10 top-0 max-w-full flex justify-between items-center h-[var(--navbar-height)] md:h-[var(--navbar-height)]">
+      <div className="font-bold text-lg hidden md:block">力扣竞赛题目</div>
       <div>
         <NavigationMenuList>
           <NavigationMenuItem>

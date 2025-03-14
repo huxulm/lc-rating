@@ -1,19 +1,16 @@
-import { LC_RATING_PROGRESS_KEY } from "@/config/constants";
+import { LC_RATING_PROGRESS_KEY, STORAGE_VERSION } from "@/config/constants";
+import { OptionKey } from "@/hooks/useOptions/types_v2";
+import { progressToLTS } from "@/migrate/toLatest";
 import { shared } from "use-broadcast-ts";
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
-import { OptionKey } from "./useOptions";
+import { persist, PersistOptions } from "zustand/middleware";
+import { migrateFromLocalStorage } from "./migrateFromV1";
+import { ProgressStore, ProgressStoreState } from "./types_v2";
 
-interface ProgressStore {
-  progress: Record<string, OptionKey>;
-  setProgress: (id: string, value: OptionKey) => void;
-  delProgress: (id: string) => void;
-  setAllProgress: (progress: Record<string, OptionKey>) => void;
-  getProgress: (id: string) => OptionKey | undefined;
-}
-
-const persistOption = {
+const persistOption: PersistOptions<ProgressStore, ProgressStoreState> = {
   name: LC_RATING_PROGRESS_KEY,
+  version: STORAGE_VERSION,
+  migrate: progressToLTS,
 };
 
 const sharedOption = {
@@ -24,7 +21,7 @@ export const useProgressStore = create<ProgressStore>()(
   shared(
     persist(
       (set, get) => ({
-        progress: {},
+        ...migrateFromLocalStorage(),
 
         setProgress: (id, value) =>
           set((state) => ({

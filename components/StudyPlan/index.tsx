@@ -44,7 +44,7 @@ function StudyPlan({ plan }: StudyPlanProps) {
       {toc && <TableOfContent toc={toc} />}
       <div className="flex flex-col">
         {/* 导航栏高度是60px */}
-        <SidebarTrigger className="sticky top-[60px]" />
+        <SidebarTrigger className="fixed top-[var(--navbar-height)]" />
         <div className="flex flex-col gap-8 px-8">
           {studyPlan?.children.map((section) => (
             <SectionContainer key={section.title} section={section} />
