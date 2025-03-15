@@ -123,10 +123,12 @@ function ProblemSet() {
     if (similarties === undefined) {
       return tableData;
     }
-    const filtData = tableData.filter(
-      (_, idx) => similarties[idx] && similarties[idx] > 0
-    );
-    filtData.sort((a, b) => b.rating - a.rating);
+    const indices = tableData
+      .map((_, idx) => idx)
+      .filter((idx) => similarties[idx] && similarties[idx] > 0.5);
+    indices.sort((a, b) => Number(similarties[b]) - Number(similarties[a]));
+    const filtData = indices.map((idx) => tableData[idx] as TableCol);
+
     return filtData;
   }, [tableData, similarties]);
 

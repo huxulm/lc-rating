@@ -1,4 +1,3 @@
-// components/DataTable/DataTable.tsx
 import { PageControl } from "@/components/common/PageControl";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -19,7 +18,7 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 import { ArrowDownUp, MoveDown, MoveUp } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { columnInitialTableState, getColumns } from "./columns";
 import { TableCol } from "./types";
 import { VisibilityControl } from "./VisibilityControl";
@@ -58,6 +57,10 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
   });
 
   const tableState = table.getState();
+
+  useEffect(() => {
+    table.resetSorting();
+  }, [data, table]);
 
   return (
     <div>

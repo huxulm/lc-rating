@@ -105,9 +105,9 @@ export const getColumns = () => [
 
 export const columnInitialTableState: InitialTableState = {
   sorting: [
-    {
-      id: "problem",
-      desc: true,
-    },
+    // {
+    //   id: "problem",
+    //   desc: true,
+    // },
   ],
 };

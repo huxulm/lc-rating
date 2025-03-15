@@ -71,7 +71,7 @@ const Search = React.memo(({ data, onSearch }: SearchProps) => {
       onOpenChange={setIsOpen}
       className="space-y-2 m-auto"
     >
-      <div className="flex items-center justify-between space-x-4 px-4">
+      <div className="flex justify-between space-x-4 px-4">
         <WordFilter
           name={"WordFilter"}
           data={data}
