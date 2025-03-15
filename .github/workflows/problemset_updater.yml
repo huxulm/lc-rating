@@ -1,4 +1,4 @@
-name: Public Data Updater
+name: Problemset Updater
 
 on:
   schedule:

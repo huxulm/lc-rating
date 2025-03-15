@@ -15,5 +15,3 @@
         uuid2 output/path/for/uuid2
         ...
       ```
-3. 如果生成的ts文件不在`components/containers/List/data`中，将其拖入，并在`components/containers/List/`下创建对应的文件夹以及`index.tsx`文件, 并在`app/(lc)/list`下创建对应的文件以启用
-4. 同时在`components/layouts/Navbar/index.tsx`中添加对应的导航链接

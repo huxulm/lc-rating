@@ -1,4 +1,4 @@
-name: Weekly Problem List Update
+name: StudyPlan Updater
 
 on:
   schedule:

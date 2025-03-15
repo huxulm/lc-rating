@@ -2,7 +2,6 @@ import { Button } from "@/components/ui-customized/button";
 import { Slider } from "@/components/ui/slider";
 import React, { useCallback, useEffect, useState } from "react";
 import { TableCol } from "../ProblemTable/types";
-import { FilterFn } from "./type";
 
 const buttons = [
   { label: "未知", min: 0, max: 1000 },
@@ -17,13 +16,14 @@ const buttons = [
 ];
 
 interface RatingFilterProps {
-  idx: string;
+  name: string;
+  data: TableCol[];
+  onChange: (idx: string, similarties: number[]) => void;
   registerReset: (idx: string, reset: () => void) => void;
-  registerFilter: (idx: string, newFilter: FilterFn) => void;
 }
 
 const RatingFilter = React.memo(
-  ({ idx, registerReset, registerFilter }: RatingFilterProps) => {
+  ({ name, data, onChange, registerReset }: RatingFilterProps) => {
     const [range, setRange] = useState<{ min: number; max: number }>({
       min: 0,
       max: 4000,
@@ -36,14 +36,15 @@ const RatingFilter = React.memo(
           max: 4000,
         });
       };
-      registerReset(idx, onReset);
-    }, [registerReset, idx]);
+      registerReset(name, onReset);
+    }, [registerReset, name]);
 
     useEffect(() => {
-      registerFilter(idx, (row: TableCol) => {
-        return Number(row.rating >= range.min && row.rating < range.max);
-      });
-    }, [registerFilter, idx, range]);
+      const results = data.map((row) =>
+        Number(row.rating >= range.min && row.rating < range.max)
+      );
+      onChange(name, results);
+    }, [data, range, onChange, name]);
 
     const handleButtonClick = useCallback(
       (nextMin: number, nextMax: number) => {

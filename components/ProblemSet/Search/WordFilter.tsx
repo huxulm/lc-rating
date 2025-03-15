@@ -1,45 +1,72 @@
 import { Input } from "@/components/ui/input";
-import React, { useCallback, useEffect, useState } from "react";
+import Fuse from "fuse.js";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { TableCol } from "../ProblemTable/types";
-import { FilterFn } from "./type";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@radix-ui/react-label";
 
-const match = (row: TableCol, keyword: string) => {
-  const str = `${row.contest?.title || ""} ${row.problem.id} ${
-    row.problem.title
-  } ${row.solution?.title || ""} ${row.rating || ""} ${row.tags
-    .map((t) => `${t.label.en} ${t.label.zh}`)
-    ?.join(" ")}`.toLowerCase();
+const preciseSearch = (data: TableCol[], keyword: string) => {
+  return data.map((row) => {
+    const str = `${row.contest?.title || ""} ${row.problem.id} ${
+      row.problem.title
+    } ${row.solution?.title || ""} ${row.rating || ""} ${row.tags
+      .map((t) => `${t.label.en} ${t.label.zh}`)
+      ?.join(" ")}`.toLowerCase();
 
-  const kws = keyword
-    .toLowerCase()
-    .split("")
-    .map((kw) => kw.trim());
+    const kws = keyword
+      .toLowerCase()
+      .split(" ")
+      .map((kw) => kw.trim());
 
-  return kws.every((kw) => str.includes(kw));
+    return Number(kws.every((kw) => str.includes(kw)));
+  });
+};
+
+const options = {
+  ignoreDiacritics: true,
+  ignoreLocation: true,
+  includeScore: true,
+  keys: ["contest.title", "problem.title", "solution.title"],
+  minMatchCharLength: 1,
+  threshold: 1,
 };
 
 interface WordFilterProps {
-  idx: string;
+  name: string;
+  data: TableCol[];
+  onChange: (idx: string, similarties: number[]) => void;
   registerReset: (idx: string, reset: () => void) => void;
-  registerFilter: (idx: string, newFilter: FilterFn) => void;
 }
 
 const WordFilter = React.memo(
-  ({ idx, registerReset, registerFilter }: WordFilterProps) => {
+  ({ name, data, onChange, registerReset }: WordFilterProps) => {
+    const [useFuse, setUseFuse] = useState(false);
     const [value, setValue] = useState("");
+    const fuse = useMemo(() => new Fuse(data, options), [data, options]);
 
     useEffect(() => {
       const onReset = () => {
         setValue("");
       };
-      registerReset(idx, onReset);
-    }, [registerReset, idx]);
+      registerReset(name, onReset);
+    }, [registerReset, name]);
 
     useEffect(() => {
-      registerFilter(idx, (prob: TableCol) => {
-        return Number(value === "" || match(prob, value));
-      });
-    }, [registerFilter, idx, value]);
+      if (useFuse) {
+        const matches = fuse.search(value).map((r) => ({
+          score: 1 - (r.score ? r.score : 1),
+          idx: r.refIndex,
+        }));
+        const results = Array.from({ length: data.length }, () => 0);
+        matches.forEach((m) => {
+          results[m.idx] = m.score;
+        });
+        onChange(name, results);
+      } else {
+        const results = preciseSearch(data, value);
+        onChange(name, results);
+      }
+    }, [useFuse, value, data, onChange, name]);
 
     const handleChange = useCallback(
       (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -50,12 +77,24 @@ const WordFilter = React.memo(
     );
 
     return (
-      <Input
-        type="text"
-        placeholder="竞赛、题目、题解搜索"
-        value={value}
-        onChange={handleChange}
-      />
+      <div className="w-full flex flex-col justify-center items-left gap-1">
+        <Input
+          type="text"
+          placeholder="竞赛、题目、题解搜索"
+          value={value}
+          onChange={handleChange}
+        />
+        <div className="flex items-center gap-1 p-1">
+          <Checkbox
+            checked={useFuse}
+            onClick={() => {
+              setUseFuse((v) => !v);
+            }}
+            className=""
+          />
+          <Label>模糊搜索</Label>
+        </div>
+      </div>
     );
   }
 );

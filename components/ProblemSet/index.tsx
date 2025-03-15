@@ -5,10 +5,10 @@ import { useProblems } from "@/hooks/useProblems";
 import { useSolutions } from "@/hooks/useSolutions";
 import { useTags } from "@/hooks/useTags";
 import { isTruthy } from "@/types/common";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { ProblemsTable } from "./ProblemTable";
 import { TableCol } from "./ProblemTable/types";
-import { FilterFn, Search } from "./Search";
+import { Search } from "./Search";
 
 function ProblemSet() {
   const {
@@ -31,7 +31,7 @@ function ProblemSet() {
   const isPending =
     problemPending || contestPending || tagPending || solutionPending;
 
-  useEffect(() => {
+  const tableData: TableCol[] = useMemo(() => {
     if (problemError) {
       console.error("[ProblemSet] problems Error: ", problemError);
     }
@@ -44,9 +44,7 @@ function ProblemSet() {
     if (solutionError) {
       console.error("[ProblemSet] solutions Error: ", solutionError);
     }
-  }, [isPending]);
 
-  const tableData: TableCol[] = useMemo(() => {
     const joinProblems = Object.values(problemMap).map((problem) => {
       return {
         id: problem.id,
@@ -110,38 +108,37 @@ function ProblemSet() {
         },
       };
     });
-  }, [problemPending || contestPending || tagPending || solutionPending]);
+  }, [isPending]);
 
-  const [filterFn, setFilterFn] = useState<FilterFn>(() => () => 1);
+  const [similarties, setSimilarties] = useState<number[] | undefined>();
 
-  const handleSearch = useCallback((filter: FilterFn) => {
-    setFilterFn(() => filter);
-  }, []);
+  const handleSearch = useCallback(
+    (similarties: number[]) => {
+      setSimilarties(similarties);
+    },
+    [tableData]
+  );
 
-  const sortedTableData = useMemo(() => {
-    const filtProblems = tableData.reduce(
-      (acc: [number, TableCol][], problem: TableCol) => {
-        const sort = filterFn(problem);
-        if (sort > 0) {
-          acc.push([sort, problem]);
-        }
-        return acc;
-      },
-      []
-    );
-    const sortProblems = filtProblems
-      .sort((a, b) => b[0] - a[0])
-      .map(([_, problem]) => problem);
-    return sortProblems;
-  }, [tableData, filterFn]);
+  const searchedData = useMemo(() => {
+    if (similarties === undefined) {
+      return tableData;
+    }
+    const indices = tableData
+      .map((_, idx) => idx)
+      .filter((idx) => similarties[idx] && similarties[idx] > 0.5);
+    indices.sort((a, b) => Number(similarties[b]) - Number(similarties[a]));
+    const filtData = indices.map((idx) => tableData[idx] as TableCol);
+
+    return filtData;
+  }, [tableData, similarties]);
 
   return (
     <div className="p-8 flex flex-col gap-4">
       <div className="w-4/5 xl:w-3/4 2xl:w-2/3 m-auto">
-        <Search onSearch={handleSearch}></Search>
+        <Search data={tableData} onSearch={handleSearch}></Search>
       </div>
       <div className="w-full 2xl:w-2/3  m-auto">
-        <ProblemsTable tableData={sortedTableData} isPending={isPending} />
+        <ProblemsTable tableData={searchedData} isPending={isPending} />
       </div>
     </div>
   );
