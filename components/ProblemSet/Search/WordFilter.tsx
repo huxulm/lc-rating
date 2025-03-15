@@ -1,7 +1,6 @@
 import { Input } from "@/components/ui/input";
 import React, { useCallback, useEffect, useState } from "react";
 import { TableCol } from "../ProblemTable/types";
-import { FilterFn } from "./type";
 
 const match = (row: TableCol, keyword: string) => {
   const str = `${row.contest?.title || ""} ${row.problem.id} ${
@@ -12,35 +11,34 @@ const match = (row: TableCol, keyword: string) => {
 
   const kws = keyword
     .toLowerCase()
-    .split("")
+    .split(" ")
     .map((kw) => kw.trim());
 
   return kws.every((kw) => str.includes(kw));
 };
 
 interface WordFilterProps {
-  idx: string;
+  name: string;
+  data: TableCol[];
+  onChange: (idx: string, similarties: number[]) => void;
   registerReset: (idx: string, reset: () => void) => void;
-  registerFilter: (idx: string, newFilter: FilterFn) => void;
 }
 
 const WordFilter = React.memo(
-  ({ idx, registerReset, registerFilter }: WordFilterProps) => {
+  ({ name, data, onChange, registerReset }: WordFilterProps) => {
     const [value, setValue] = useState("");
 
     useEffect(() => {
       const onReset = () => {
         setValue("");
       };
-      registerReset(idx, onReset);
-    }, [registerReset, idx]);
+      registerReset(name, onReset);
+    }, [registerReset, name]);
 
     useEffect(() => {
-      registerFilter(idx, (prob: TableCol) => {
-        return Number(value === "" || match(prob, value));
-      });
-    }, [registerFilter, idx, value]);
-
+      const results = data.map((row) => (match(row, value) ? 1 : 0));
+      onChange(name, results);
+    }, [value, data, onChange, name]);
     const handleChange = useCallback(
       (e: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = e.target.value;

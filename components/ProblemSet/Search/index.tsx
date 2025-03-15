@@ -5,40 +5,37 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { Separator } from "@/components/ui/separator";
-import { isTruthy } from "@/types/common";
-import { parallelReduceFn } from "@/utils/function";
 import { ChevronsDownUp, ChevronsUpDown } from "lucide-react";
 import React, { useCallback, useState } from "react";
+import { TableCol } from "../ProblemTable/types";
 import { RatingFilter } from "./RatingFilter";
 import { TagFilter } from "./TagFilter";
-import type { FilterFn, ResetFn } from "./type";
 import { WordFilter } from "./WordFilter";
 
-export { FilterFn };
-
 interface SearchProps {
-  onSearch: (filterFn: FilterFn) => void;
+  data: TableCol[];
+  onSearch: (similarties: number[]) => void;
 }
 
-const Search = React.memo(({ onSearch }: SearchProps) => {
-  const [filters, setFilters] = useState<Record<string, FilterFn | undefined>>(
-    {}
-  );
-  const [resets, setResets] = useState<Record<string, () => void | undefined>>(
-    {}
-  );
-
+const Search = React.memo(({ data, onSearch }: SearchProps) => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [similartiesMap, setSimilartiesMap] = useState<
+    Record<string, number[]>
+  >({});
+  const [resets, setResets] = useState<Record<string, () => void>>({});
 
-  const updateFilter = useCallback((idx: string, newFilter: FilterFn) => {
-    setFilters((prev) => {
-      const next = { ...prev };
-      next[idx] = newFilter;
-      return next;
-    });
-  }, []);
+  const updateIndices = useCallback(
+    (name: string, newSimilarties: number[]) => {
+      setSimilartiesMap((prev) => {
+        const next = { ...prev };
+        next[name] = newSimilarties;
+        return next;
+      });
+    },
+    []
+  );
 
-  const updateReset = useCallback((idx: string, newReset: ResetFn) => {
+  const updateReset = useCallback((idx: string, newReset: () => void) => {
     setResets((prev) => {
       const next = { ...prev };
       next[idx] = newReset;
@@ -47,19 +44,25 @@ const Search = React.memo(({ onSearch }: SearchProps) => {
   }, []);
 
   const handleConfirm = useCallback(() => {
-    onSearch((item) =>
-      parallelReduceFn(
-        Object.values(filters).filter(isTruthy),
-        (x, y) => x * y,
-        1
-      )(item)
+    const results = Object.values(similartiesMap).reduce(
+      (total, arr) => {
+        arr.forEach((val, idx) => {
+          if (total[idx]) {
+            total[idx] *= val;
+          }
+        });
+        return total;
+      },
+      Array.from({ length: data.length }, () => 1)
     );
-  }, [onSearch, filters]);
+
+    onSearch(results);
+  }, [onSearch, similartiesMap]);
 
   const handleReset = useCallback(() => {
-    setFilters({});
-    onSearch(() => 1);
     Object.values(resets).forEach((fn) => fn?.());
+    setSimilartiesMap({});
+    onSearch(data.map((_, idx) => idx));
   }, [onSearch, resets]);
 
   return (
@@ -70,9 +73,10 @@ const Search = React.memo(({ onSearch }: SearchProps) => {
     >
       <div className="flex items-center justify-between space-x-4 px-4">
         <WordFilter
-          idx={"WordFilter"}
+          name={"WordFilter"}
+          data={data}
           registerReset={updateReset}
-          registerFilter={updateFilter}
+          onChange={updateIndices}
         />
         <CollapsibleTrigger asChild>
           {isOpen ? (
@@ -92,15 +96,17 @@ const Search = React.memo(({ onSearch }: SearchProps) => {
         <div className="flex flex-col items-start gap-4 p-4">
           <Separator />
           <RatingFilter
-            idx={"RatingFilter"}
+            name={"RatingFilter"}
+            data={data}
             registerReset={updateReset}
-            registerFilter={updateFilter}
+            onChange={updateIndices}
           />
           <Separator />
           <TagFilter
-            idx={"TagFilter"}
+            name={"TagFilter"}
+            data={data}
             registerReset={updateReset}
-            registerFilter={updateFilter}
+            onChange={updateIndices}
           />
         </div>
       </CollapsibleContent>

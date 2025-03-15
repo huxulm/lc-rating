@@ -3,16 +3,16 @@ import { useGlobalSettingsStore } from "@/hooks/useGlobalSettings";
 import { useTags } from "@/hooks/useTags";
 import React, { useCallback, useEffect, useState } from "react";
 import { TableCol } from "../ProblemTable/types";
-import { FilterFn } from "./type";
 
 interface TagFilterProps {
-  idx: string;
+  name: string;
+  data: TableCol[];
+  onChange: (idx: string, similarties: number[]) => void;
   registerReset: (idx: string, reset: () => void) => void;
-  registerFilter: (idx: string, newFilter: FilterFn) => void;
 }
 
 const TagFilter = React.memo(
-  ({ idx, registerReset, registerFilter }: TagFilterProps) => {
+  ({ name, data, onChange, registerReset }: TagFilterProps) => {
     const [select, setSelect] = useState<Set<string>>(new Set());
     const { language } = useGlobalSettingsStore();
     const isZh = language === "zh";
@@ -21,16 +21,15 @@ const TagFilter = React.memo(
       const onReset = () => {
         setSelect(new Set());
       };
-      registerReset(idx, onReset);
-    }, [registerReset, idx]);
+      registerReset(name, onReset);
+    }, [registerReset, name]);
 
     useEffect(() => {
-      registerFilter(idx, (row: TableCol) => {
-        return Number(
-          select.size === 0 || row.tags.some((tag) => select.has(tag.id))
-        );
-      });
-    }, [registerFilter, idx, select]);
+      const results = data.map((row) =>
+        Number(select.size === 0 || row.tags.some((tag) => select.has(tag.id)))
+      );
+      onChange(name, results);
+    }, [data, select, onChange, name]);
 
     const handleChange = useCallback(
       (id: string) => {

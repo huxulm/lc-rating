@@ -16,8 +16,6 @@ interface OptionsFormProps {
 const OptionsForm = React.memo(({ form, onSubmit }: OptionsFormProps) => {
   const options = useWatch({ name: "options", control: form.control });
 
-  console.log(options);
-
   const fieldArray = useFieldArray({
     control: form.control,
     name: "options",
