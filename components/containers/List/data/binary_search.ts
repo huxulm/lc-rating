@@ -388,7 +388,7 @@ export default{
                     "nonLeafChild": [
                         {
                             "title": "§2.1 求最小",
-                            "summary": "题目求什么，就二分什么。<br>**思维扩展**：<br>",
+                            "summary": "题目求什么，就二分什么。<br>**注**：部分题目可以优化二分边界，减少二分次数，从而减少代码运行时间。对于初次接触二分答案的同学，无需强求自己写出最优的代码，设定一个比较大的二分上界也是可以的。<br>**思维扩展**：<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -572,7 +572,7 @@ export default{
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1735.4106121238,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1150,7 +1150,7 @@ export default{
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2805.990278358,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1164,7 +1164,7 @@ export default{
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2748.125042961,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1831,5 +1831,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-03-04 04:54:26"
+    "last_update": "2025-03-15 11:26:17"
 } as ProblemCategory;

@@ -347,7 +347,7 @@ export default{
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1728.8495630128,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -2006,6 +2006,20 @@ export default{
                             "score": 0,
                             "leafChild": [
                                 {
+                                    "title": "611. 有效三角形的个数",
+                                    "summary": "",
+                                    "src": "/valid-triangle-number/",
+                                    "original_src": "https://leetcode.cn/problems/valid-triangle-number/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1574. 删除最短的子数组使剩余数组有序",
                                     "summary": "",
                                     "src": "/shortest-subarray-to-be-removed-to-make-array-sorted/",
@@ -2212,6 +2226,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1173.505926482,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3467. 将数组按照奇偶性转化",
+                                    "summary": "",
+                                    "src": "/transform-array-by-parity/",
+                                    "original_src": "https://leetcode.cn/problems/transform-array-by-parity/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1165.8314068327,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -2707,7 +2735,7 @@ export default{
                 },
                 {
                     "title": "五、三指针",
-                    "summary": "注：部分题目已整理到「§2.3.3 恰好型滑动窗口」中。<br>",
+                    "summary": "注：部分题目已整理到「§2.3.3 恰好型滑动窗口」中。<br>**思维扩展**：<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -2798,6 +2826,20 @@ export default{
                             "nonLeafChild": [],
                             "isPremium": true,
                             "last_update": ""
+                        },
+                        {
+                            "title": "3464. 正方形上的点之间的最大距离",
+                            "summary": "",
+                            "src": "/maximize-the-distance-between-points-on-a-square/",
+                            "original_src": "https://leetcode.cn/problems/maximize-the-distance-between-points-on-a-square/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2805.990278358,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         }
                     ],
                     "nonLeafChild": [],
@@ -2864,7 +2906,7 @@ export default{
                             "sort": 0,
                             "isLeaf": true,
                             "solution": null,
-                            "score": null,
+                            "score": 1244.425108458,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -3231,5 +3273,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-02-23 02:20:04"
+    "last_update": "2025-03-11 11:47:57"
 } as ProblemCategory;

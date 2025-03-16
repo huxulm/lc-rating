@@ -2032,7 +2032,7 @@ export default{
                     "sort": 0,
                     "isLeaf": true,
                     "solution": null,
-                    "score": null,
+                    "score": 3027.89612787,
                     "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
