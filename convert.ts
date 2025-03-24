@@ -21,7 +21,6 @@ type ContestsIn = {
     _hash: number;
     paid_only: boolean;
   }>;
-  company: {};
 }[];
 
 type ZenkIn = {
@@ -74,7 +73,7 @@ async function convert() {
 
   const p2c: Record<string, number> = {};
 
-  for (const { contest, questions, company } of contestsIn) {
+  for (const { contest, questions } of contestsIn) {
     const { id, title, title_slug: titleSlug, start_time: time } = contest;
     const problemIds = questions.map((q) => q.question_id);
     contestMap[id] = {
@@ -82,7 +81,6 @@ async function convert() {
       title,
       titleSlug,
       time: time * 1000,
-      company,
       problemIds: problemIds.map((i) => i.toString()) as Quodra<string>,
     };
     problemIds.forEach((p) => (p2c[p] = id));
@@ -117,7 +115,7 @@ async function convert() {
         return (tags.find((t) => t.en === en)?.id || 0).toString();
       }),
       solutionId: _hash.toString(),
-      contestId: p2c[id]?.toString(),
+      contestId: p2c[id]?.toString() as string,
     };
   }
 

@@ -6,7 +6,7 @@ export interface Problem {
   premium: boolean;
   _hash: string;
 
-  contestId?: string;
+  contestId: string;
   solutionId?: string;
   tagIds: string[];
 }
