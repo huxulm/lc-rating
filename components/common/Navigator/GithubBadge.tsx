@@ -40,7 +40,7 @@ const GithubBadge = () => {
         ></path>
       </svg>
 
-      {data ? <span className="text-sm">{567}</span> : null}
+      {data ? <span className="text-sm">{data}</span> : null}
     </Link>
   );
 };
