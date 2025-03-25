@@ -13,8 +13,8 @@ interface I18NTagProps {
 }
 
 const I18NTag = React.memo(({ label, className, style }: I18NTagProps) => {
-  const language = useGlobalSettingsStore((s) => s.language);
-  const labelLocal = language === "zh" ? label.zh : label.en;
+  const tagLanguage = useGlobalSettingsStore((s) => s.tagLanguage);
+  const labelLocal = tagLanguage === "zh" ? label.zh : label.en;
 
   return (
     <Badge variant="outline" className={cn(className)} style={style}>

@@ -1,14 +1,14 @@
 type Language = "zh" | "en";
 
 export interface GlobalSettingsStoreState {
-  language: Language;
-  showEnLink: boolean;
+  tagLanguage: Language;
+  linkLanguage: Language;
   premium: boolean;
 }
 
 interface GlobalSettingsStoreActions {
-  toggleLanguage: () => void;
-  toggleShowEnLink: () => void;
+  toggleTagLanguage: () => void;
+  toggleLinkLanguage: () => void;
   togglePremium: () => void;
 }
 

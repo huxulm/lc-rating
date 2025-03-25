@@ -14,8 +14,8 @@ interface TagFilterProps {
 const TagFilter = React.memo(
   ({ name, data, onChange, registerReset }: TagFilterProps) => {
     const [select, setSelect] = useState<Set<string>>(new Set());
-    const { language } = useGlobalSettingsStore();
-    const isZh = language === "zh";
+    const tagLanguage = useGlobalSettingsStore((state) => state.tagLanguage);
+    const isZh = tagLanguage === "zh";
 
     useEffect(() => {
       const onReset = () => {

@@ -12,8 +12,8 @@ interface ProblemListProps {
 }
 
 const ProblemList = React.memo(({ problems }: ProblemListProps) => {
-  const { language } = useGlobalSettingsStore();
-  const LC_HOST = language === "zh" ? LC_HOST_ZH : LC_HOST_EN;
+  const linkLanguage = useGlobalSettingsStore((state) => state.linkLanguage);
+  const LC_HOST = linkLanguage === "zh" ? LC_HOST_ZH : LC_HOST_EN;
 
   return (
     <div className="flex flex-col">

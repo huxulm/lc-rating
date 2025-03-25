@@ -1,6 +1,7 @@
+import { List, RefreshCw, Settings } from "lucide-react";
 import CustomizeOptions from "./settingPages/CustomizeOption";
+import { Preference } from "./settingPages/Preference";
 import SyncProgress from "./settingPages/SyncProgress";
-import { List, RefreshCw } from "lucide-react";
 
 export type SettingTabType = {
   key: string;
@@ -21,5 +22,11 @@ export const settingTabs: SettingTabType[] = [
     title: "自定义进度选项",
     icon: <List />,
     component: <CustomizeOptions />,
+  },
+  {
+    key: "Preference",
+    title: "页面偏好设置",
+    icon: <Settings />,
+    component: <Preference />,
   },
 ];

@@ -94,7 +94,7 @@ export const getColumns = () => [
         <I18NLink
           link={solution.link}
           title={solution.title}
-          className="text-pretty"
+          className="text-pretty blur-xs hover:blur-none transition duration-300"
         />
       );
     },
