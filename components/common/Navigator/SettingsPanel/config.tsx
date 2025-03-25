@@ -1,7 +1,7 @@
 import { List, RefreshCw, Settings } from "lucide-react";
 import CustomizeOptions from "./settingPages/CustomizeOption";
 import { Preference } from "./settingPages/Preference";
-import SyncProgress from "./settingPages/SyncProgress";
+import SyncStorage from "./settingPages/SyncStorage";
 
 export type SettingTabType = {
   key: string;
@@ -13,9 +13,9 @@ export type SettingTabType = {
 export const settingTabs: SettingTabType[] = [
   {
     key: "SyncProgress",
-    title: "同步题目进度",
+    title: "同步站点数据",
     icon: <RefreshCw />,
-    component: <SyncProgress />,
+    component: <SyncStorage />,
   },
   {
     key: "CustomizeOptions",

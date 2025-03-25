@@ -8,8 +8,11 @@ export interface GlobalSettingsStoreState {
 
 interface GlobalSettingsStoreActions {
   toggleTagLanguage: () => void;
+  setTagLanguage: (lang: Language) => void;
   toggleLinkLanguage: () => void;
+  setLinkLanguage: (lang: Language) => void;
   togglePremium: () => void;
+  setPremium: (premium: boolean) => void;
 }
 
 export type GlobalSettingsStore = GlobalSettingsStoreState &

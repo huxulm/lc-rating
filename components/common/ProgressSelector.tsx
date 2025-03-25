@@ -69,7 +69,7 @@ const ProgressSelector = React.memo(({ problemId }: ProgressSelectorProps) => {
           className="flex flex-row"
           style={{ color: optValue.color }}
         >
-          <span>{optValue.label}1</span>
+          <span>{optValue.label}</span>
           <Check />
         </SelectOption>
       )}

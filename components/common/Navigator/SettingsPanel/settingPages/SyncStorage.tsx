@@ -9,19 +9,18 @@ import {
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import { LC_RATING_PROGRESS_KEY } from "@/config/constants";
-import { OptionKey } from "@/hooks/useOptions";
-import { useProgressStore } from "@/hooks/useProgress";
+import { useSiteStorage } from "@/hooks/useSiteStorage";
 import debounce from "debounce";
 import { Copy, HeartCrack, ThumbsUp } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
-export default function SyncProgress() {
+export default function SyncStorage() {
   const [syncStatus, setSyncStatus] = useState<
     "idle" | "fetched" | "set" | "error"
   >("idle");
-  const { progress, setAllProgress } = useProgressStore();
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+  const { siteStorage, setSiteStorage } = useSiteStorage();
 
   const form = useForm({
     defaultValues: {
@@ -29,7 +28,7 @@ export default function SyncProgress() {
     },
   });
 
-  const progressStr = JSON.stringify(progress, null, 2);
+  const progressStr = JSON.stringify(siteStorage, null, 2);
 
   const handleFetchProgress = () => {
     form.setValue("progressData", progressStr);
@@ -42,11 +41,8 @@ export default function SyncProgress() {
 
   const onSubmit = (data: { progressData: string }) => {
     try {
-      const parsedData = JSON.parse(data.progressData) as Record<
-        string,
-        OptionKey
-      >;
-      setAllProgress(parsedData);
+      const parsedData = JSON.parse(data.progressData);
+      setSiteStorage(parsedData);
       setSyncStatus("set");
     } catch (error) {
       console.error("Error setting progress:", error);
@@ -54,18 +50,9 @@ export default function SyncProgress() {
     }
   };
 
-  useEffect(() => {
-    const handleResize = debounce(() => {
-      setWindowHeight(window.innerHeight);
-    }, 100);
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <div className="space-y-4">
-      <Button onClick={handleFetchProgress}>下载题目进度</Button>
+      <Button onClick={handleFetchProgress}>导出站点数据</Button>
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -77,9 +64,9 @@ export default function SyncProgress() {
                   <div className="relative">
                     <Textarea
                       readOnly
-                      rows={windowHeight / 50}
+                      rows={5}
                       value={progressStr}
-                      className="pr-10"
+                      className="resize-none field-sizing-fixed"
                     />
                     <Button
                       size="icon"
@@ -100,12 +87,12 @@ export default function SyncProgress() {
             name="progressData"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>输入题目进度:</FormLabel>
+                <FormLabel>输入站点数据:</FormLabel>
                 <FormControl>
                   <Textarea
                     {...field}
-                    rows={windowHeight / 50}
-                    className="resize-none"
+                    rows={5}
+                    className="resize-none field-sizing-fixed"
                   />
                 </FormControl>
               </FormItem>
@@ -113,7 +100,7 @@ export default function SyncProgress() {
           />
 
           <Button type="submit" className="w-full">
-            上传题目进度
+            导入站点数据
           </Button>
         </form>
       </Form>
@@ -122,7 +109,7 @@ export default function SyncProgress() {
         <Alert variant="default">
           <ThumbsUp />
           <AlertDescription className="text-green-700">
-            保存至 {`localStorage["${LC_RATING_PROGRESS_KEY}"]`}
+            保存成功
           </AlertDescription>
         </Alert>
       )}
