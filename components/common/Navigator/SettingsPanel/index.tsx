@@ -42,7 +42,7 @@ export function SettingsPanel({ show, onOpenChange }: SettingsPanelProps) {
           </div>
 
           <div className="w-full">
-            <div className="p-1 bg-white rounded shadow-sm min-h-[300px]">
+            <div className="p-1 rounded shadow-sm min-h-[300px]">
               {ActiveComponent ? ActiveComponent : "页面配置错误"}
             </div>
           </div>

@@ -15,8 +15,8 @@ interface I18NLinkProps {
 
 const I18NLink = React.memo(
   ({ link, title, className, style }: I18NLinkProps) => {
-    const language = useGlobalSettingsStore((s) => s.language);
-    const linkLocal = language === "zh" ? link.zh : link.en;
+    const linkLanguage = useGlobalSettingsStore((s) => s.linkLanguage);
+    const linkLocal = linkLanguage === "zh" ? link.zh : link.en;
 
     return (
       <Link

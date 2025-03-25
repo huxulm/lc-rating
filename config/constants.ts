@@ -5,6 +5,7 @@ export const LC_HOST_EN = `https://leetcode.com`;
 export const LC_RATING_GLOBAL_SETTING_KEY = "lc-rating-global-settings";
 export const LC_RATING_PROGRESS_KEY = "lc-rating-progress";
 export const LC_RATING_OPTION_KEY = "lc-rating-option";
+export const LC_RATING_PROBLEMSET_TABLE_KEY = "lc-rating-problemset-table-state";
 export const STORAGE_VERSION = 0;
 
 export const BILIBILI_0X3F_SPACE = {

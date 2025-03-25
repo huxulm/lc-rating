@@ -116,6 +116,7 @@ export const useOptions = () => {
   );
 
   return {
+    options,
     optionKeys,
     getOption,
     setOptions,

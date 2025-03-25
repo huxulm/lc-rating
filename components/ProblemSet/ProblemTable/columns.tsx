@@ -65,12 +65,10 @@ export const getColumns = () => [
     cell: ({ row }) => {
       const tags = row.getValue<TableCol["tags"]>("tags");
       return (
-        <div className="w-full flex justify-center">
-          <div className="flex flex-wrap justify-center gap-1 text-pretty w-30">
-            {tags.map((tag) => (
-              <I18NTag key={tag.id} label={tag.label} />
-            ))}
-          </div>
+        <div className="flex flex-wrap justify-center items-center gap-1 text-pretty w-30 m-auto">
+          {tags.map((tag) => (
+            <I18NTag key={tag.id} label={tag.label} />
+          ))}
         </div>
       );
     },
@@ -81,7 +79,11 @@ export const getColumns = () => [
     header: () => <div>{key2Label["progress"]}</div>,
     cell: ({ row }) => {
       const progress = row.getValue<TableCol["progress"]>("progress");
-      return <ProgressSelector problemId={progress.problemId} />;
+      return (
+        <div className="w-fit m-auto">
+          <ProgressSelector problemId={progress.problemId} />
+        </div>
+      );
     },
     enableSorting: false,
     enableHiding: true,
@@ -94,7 +96,7 @@ export const getColumns = () => [
         <I18NLink
           link={solution.link}
           title={solution.title}
-          className="text-pretty"
+          className="text-pretty blur-xs hover:blur-none transition duration-300"
         />
       );
     },

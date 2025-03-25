@@ -8,6 +8,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { LC_RATING_PROBLEMSET_TABLE_KEY } from "@/config/constants";
+import { createTableStore } from "@/hooks/useTableState";
 import { cn } from "@/lib/utils";
 import { genericMemo } from "@/types/common";
 import {
@@ -18,10 +20,21 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 import { ArrowDownUp, MoveDown, MoveUp } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 import { columnInitialTableState, getColumns } from "./columns";
 import { TableCol } from "./types";
 import { VisibilityControl } from "./VisibilityControl";
+
+const { useTableState, setState } = createTableStore({
+  key: LC_RATING_PROBLEMSET_TABLE_KEY,
+  initialState: {
+    pagination: {
+      pageIndex: 0,
+      pageSize: 20,
+    },
+  },
+  ...columnInitialTableState,
+});
 
 interface DataTableProps<TData extends TableCol> {
   data: TData[];
@@ -30,26 +43,13 @@ interface DataTableProps<TData extends TableCol> {
 export const DataTable = genericMemo(function <TData extends TableCol>({
   data,
 }: DataTableProps<TData>) {
-  const [columnVisibility, setColumnVisibility] = useState({});
-  const [columnSizing, setColumnSizing] = useState({});
-
   const columns = useMemo(() => getColumns(), []);
 
   const table = useReactTable({
     data,
     columns,
-    initialState: {
-      ...columnInitialTableState,
-      pagination: {
-        pageSize: 20,
-      },
-    },
-    state: {
-      columnVisibility,
-      columnSizing,
-    },
-    onColumnVisibilityChange: setColumnVisibility,
-    onColumnSizingChange: setColumnSizing,
+    state: useTableState(),
+    onStateChange: (state) => setState(state),
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getPaginationRowModel: getPaginationRowModel(),

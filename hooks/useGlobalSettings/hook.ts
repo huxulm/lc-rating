@@ -2,15 +2,15 @@ import {
   LC_RATING_GLOBAL_SETTING_KEY,
   STORAGE_VERSION,
 } from "@/config/constants";
+import { globalSettingToLTS } from "@/migrate/toLatest";
 import { shared } from "use-broadcast-ts";
 import { create } from "zustand";
 import { persist, PersistOptions } from "zustand/middleware";
 import { GlobalSettingsStore, GlobalSettingsStoreState } from "./types_v2";
-import { globalSettingToLTS } from "@/migrate/toLatest";
 
 const initialState: GlobalSettingsStoreState = {
-  language: "zh",
-  showEnLink: true,
+  tagLanguage: "zh",
+  linkLanguage: "zh",
   premium: true,
 };
 
@@ -32,15 +32,18 @@ export const useGlobalSettingsStore = create<GlobalSettingsStore>()(
     persist(
       (set, get) => ({
         ...initialState,
-        toggleLanguage: () =>
-          set({ language: get().language === "zh" ? "en" : "zh" }),
+        toggleTagLanguage: () =>
+          set({ tagLanguage: get().tagLanguage === "zh" ? "en" : "zh" }),
+        setTagLanguage: (lang: "zh" | "en") => set({ tagLanguage: lang }),
 
-        toggleShowEnLink: () =>
+        toggleLinkLanguage: () =>
           set((state) => ({
-            showEnLink: !state.showEnLink,
+            linkLanguage: get().linkLanguage === "zh" ? "en" : "zh",
           })),
+        setLinkLanguage: (lang: "zh" | "en") => set({ linkLanguage: lang }),
 
         togglePremium: () => set({ premium: !get().premium }),
+        setPremium: (premium: boolean) => set({ premium }),
       }),
       persistOption
     ),
