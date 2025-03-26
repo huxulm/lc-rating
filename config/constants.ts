@@ -1,11 +1,13 @@
-export const BASE_PATH = "";
+export const BASE_PATH = process.env.NEXT_PUBLIC_LC_BASE_PATH ?? "/lc-rating";
+
 export const LC_HOST_ZH = `https://leetcode.cn`;
 export const LC_HOST_EN = `https://leetcode.com`;
 
 export const LC_RATING_GLOBAL_SETTING_KEY = "lc-rating-global-settings";
 export const LC_RATING_PROGRESS_KEY = "lc-rating-progress";
 export const LC_RATING_OPTION_KEY = "lc-rating-option";
-export const LC_RATING_PROBLEMSET_TABLE_KEY = "lc-rating-problemset-table-state";
+export const LC_RATING_PROBLEMSET_TABLE_KEY =
+  "lc-rating-problemset-table-state";
 export const STORAGE_VERSION = 0;
 
 export const BILIBILI_0X3F_SPACE = {
@@ -29,14 +31,14 @@ export const STUDYPLANS = {
 };
 
 export const ROUTERS = {
-  contest: { title: "竞赛", href: `${BASE_PATH}/contest` },
-  problemset: { title: "题库", href: `${BASE_PATH}/problemset` },
+  contest: { title: "竞赛", href: `/contest` },
+  problemset: { title: "题库", href: `/problemset` },
   studyPlans: {
     title: "题单",
     children: Object.entries(STUDYPLANS).reduce(
       (acc: { title: string; href: string }[], [key, title]) => [
         ...acc,
-        { title, href: `${BASE_PATH}/studyplan/${key}` },
+        { title, href: `/studyplan/${key}` },
       ],
       []
     ),
