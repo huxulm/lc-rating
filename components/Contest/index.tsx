@@ -104,8 +104,8 @@ function ProblemSet() {
   }, [problemPending || contestPending || tagPending || solutionPending]);
 
   return (
-    <div className="p-8 flex flex-col gap-4">
-      <div className="w-full 2xl:w-2/3  m-auto">
+    <div className="p-8 flex flex-col gap-4 font-song font-bold">
+      <div className="w-full m-auto">
         <ProblemsTable tableData={tableData} isPending={isPending} />
       </div>
     </div>
