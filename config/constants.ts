@@ -1,4 +1,5 @@
-export const BASE_PATH = process.env.LC_BASE_PATH || "/lc-rating";
+export const BASE_PATH = process.env.NEXT_PUBLIC_LC_BASE_PATH ?? "/lc-rating";
+
 export const LC_HOST_ZH = `https://leetcode.cn`;
 export const LC_HOST_EN = `https://leetcode.com`;
 
