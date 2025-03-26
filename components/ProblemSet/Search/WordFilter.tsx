@@ -40,7 +40,7 @@ interface WordFilterProps {
 
 const WordFilter = React.memo(
   ({ name, data, onChange, registerReset }: WordFilterProps) => {
-    const [useFuse, setUseFuse] = useState(false);
+    const [useFuse, setUseFuse] = useState(true);
     const [value, setValue] = useState("");
     const fuse = useMemo(() => new Fuse(data, options), [data, options]);
 

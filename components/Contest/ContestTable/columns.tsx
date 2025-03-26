@@ -27,6 +27,9 @@ const generate = (key: "Q1" | "Q2" | "Q3" | "Q4") => {
             <I18NLink
               link={Q1.problem.link}
               title={`${Q1.problem.id}. ${Q1.problem.title}`}
+              style={{
+                color: info.color,
+              }}
             />
           </div>
           {Q1.solution ? (
