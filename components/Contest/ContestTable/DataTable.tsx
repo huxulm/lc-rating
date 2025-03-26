@@ -85,7 +85,7 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
               {headerGroup.headers.map((header) => (
                 <TableHead key={header.id} className="border border-gray-200">
                   <div
-                    className={cn("flex items-center justify-center", {
+                    className={cn("flex items-center justify-center font-extrabold", {
                       "cursor-pointer": header.column.getCanSort(),
                     })}
                     onClick={header.column.getToggleSortingHandler()}
