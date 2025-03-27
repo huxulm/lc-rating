@@ -3,6 +3,8 @@ import { useEffect, useMemo } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import { OptionsForm } from "./OptionsForm";
 import { Preview } from "./Preview";
+import { toast } from "sonner";
+import { ThumbsUp } from "lucide-react";
 
 function CustomizeOptions() {
   const { optionKeys, getOption, setOptions } = useOptions();
@@ -27,6 +29,9 @@ function CustomizeOptions() {
       return acc;
     }, {});
     setOptions(newOptions);
+    toast(<span className="text-green-500">保存成功</span>, {
+      icon: <ThumbsUp className="text-green-500" />,
+    });
   };
 
   const options = useWatch({ name: "options", control: form.control });
