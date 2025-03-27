@@ -42,7 +42,12 @@ const generate = (key: "Q1" | "Q2" | "Q3" | "Q4") => {
         </div>
       );
     },
-    enableSorting: false,
+    enableSorting: true,
+    sortingFn: (a: Row<TableCol>, b: Row<TableCol>) => {
+      const A = a.getValue<TableCol[typeof key]>(key);
+      const B = b.getValue<TableCol[typeof key]>(key);
+      return A.problem.rating - B.problem.rating;
+    },
     enableHiding: true,
   };
 };
@@ -54,6 +59,7 @@ export const getColumns = () => [
       const contest = row.getValue<TableCol["contest"]>("contest");
       return <I18NLink link={contest.link} title={contest.title} />;
     },
+    enableSorting: true,
     sortingFn: (a, b) =>
       a.getValue<TableCol["contest"]>("contest").time -
       b.getValue<TableCol["contest"]>("contest").time,
