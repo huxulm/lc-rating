@@ -1,4 +1,3 @@
-// components/DataTable/DataTable.tsx
 import { PageControl } from "@/components/common/PageControl";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -14,11 +13,11 @@ import { genericMemo } from "@/types/common";
 import {
   flexRender,
   getCoreRowModel,
+  getFilteredRowModel,
   getPaginationRowModel,
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { ArrowDownUp, MoveDown, MoveUp } from "lucide-react";
 import { useMemo, useState } from "react";
 import { columnInitialTableState, getColumns } from "./columns";
 import { TableCol } from "./types";
@@ -32,7 +31,6 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
   data,
 }: DataTableProps<TData>) {
   const [columnVisibility, setColumnVisibility] = useState({});
-  const [columnSizing, setColumnSizing] = useState({});
 
   const columns = useMemo(() => getColumns(), []);
 
@@ -47,10 +45,9 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
     },
     state: {
       columnVisibility,
-      columnSizing,
     },
+    getFilteredRowModel: getFilteredRowModel(),
     onColumnVisibilityChange: setColumnVisibility,
-    onColumnSizingChange: setColumnSizing,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
@@ -85,9 +82,12 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
               {headerGroup.headers.map((header) => (
                 <TableHead key={header.id} className="border border-gray-200">
                   <div
-                    className={cn("flex items-center justify-center font-extrabold", {
-                      "cursor-pointer": header.column.getCanSort(),
-                    })}
+                    className={cn(
+                      "flex items-center justify-center font-extrabold",
+                      {
+                        "cursor-pointer": header.column.getCanSort(),
+                      }
+                    )}
                     onClick={header.column.getToggleSortingHandler()}
                   >
                     {header.isPlaceholder
@@ -96,17 +96,6 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
                           header.column.columnDef.header,
                           header.getContext()
                         )}
-                    {(() => {
-                      if (!header.column.getCanSort()) {
-                        return null;
-                      } else if (!header.column.getIsSorted()) {
-                        return <ArrowDownUp size="1em" />;
-                      } else if (header.column.getIsSorted() === "desc") {
-                        return <MoveDown size="1em" />;
-                      } else {
-                        return <MoveUp size="1em" />;
-                      }
-                    })()}
                   </div>
                 </TableHead>
               ))}
