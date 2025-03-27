@@ -90,7 +90,7 @@ const generate = (
       const info = ratingInfo(rating);
       return (
         <div className="flex items-center justify-between">
-          <div className="flex justify-left items-center gap-1">
+          <div className="flex flex-row justify-left items-center  gap-1">
             <RatingCircle
               rating={rating}
               color={info.color}

@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import React from "react";
 
 const ratingList = [
@@ -34,16 +35,30 @@ interface RatingCircleProps {
 const RatingCircle = React.memo(
   ({ rating, color, percent }: RatingCircleProps) => {
     return (
-      <div
-        className={`inline-block size-[1em] rounded-full`}
-        style={{
-          borderColor: color,
-          borderWidth: "0.1em",
-          backgroundImage: `linear-gradient(to top, ${color} ${percent}%, rgba(0, 0, 0, 0) ${percent}%)`,
-          position: "relative",
-          overflow: "hidden",
-        }}
-      />
+      <div className={cn("flex items-center gap-1", "relative", "group")}>
+        <div
+          className="inline-block size-[1em] rounded-full"
+          style={{
+            borderColor: color,
+            borderWidth: "0.1em",
+            backgroundImage: `linear-gradient(to top, ${color} ${percent}%, rgba(0, 0, 0, 0) ${percent}%)`,
+          }}
+        />
+        <span
+          className={cn(
+            "absolute",
+            "left-1/2 -translate-x-1/2",
+            "top-0 -translate-y-full",
+            "opacity-0 group-hover:opacity-100",
+            "transition-all duration-500 ease-in-out",
+          )}
+          style={{
+            color: color,
+          }}
+        >
+          {rating.toFixed(0)}
+        </span>
+      </div>
     );
   }
 );
