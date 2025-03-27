@@ -116,7 +116,7 @@ function ProblemSet() {
     (similarties: number[]) => {
       setSimilarties(similarties);
     },
-    [tableData]
+    []
   );
 
   const searchedData = useMemo(() => {

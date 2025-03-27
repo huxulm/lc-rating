@@ -19,7 +19,7 @@ function CustomizeOptions() {
 
   useEffect(() => {
     form.reset({ options: savedFormData });
-  }, [savedFormData, form.reset]);
+  }, [form, savedFormData]);
 
   const onSubmit = (data: { options: OptionValue[] }) => {
     const newOptions = data.options.reduce((acc: Options, item) => {
