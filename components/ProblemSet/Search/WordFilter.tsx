@@ -42,7 +42,7 @@ const WordFilter = React.memo(
   ({ name, data, onChange, registerReset }: WordFilterProps) => {
     const [useFuse, setUseFuse] = useState(true);
     const [value, setValue] = useState("");
-    const fuse = useMemo(() => new Fuse(data, options), [data, options]);
+    const fuse = useMemo(() => new Fuse(data, options), [data]);
 
     useEffect(() => {
       const onReset = () => {
@@ -66,7 +66,7 @@ const WordFilter = React.memo(
         const results = preciseSearch(data, value);
         onChange(name, results);
       }
-    }, [useFuse, value, data, onChange, name]);
+    }, [useFuse, fuse, value, data, onChange, name]);
 
     const handleChange = useCallback(
       (e: React.ChangeEvent<HTMLInputElement>) => {

@@ -25,7 +25,7 @@ const OptionsForm = React.memo(({ form, onSubmit }: OptionsFormProps) => {
 
   const handleAdd = useCallback(
     () => fieldArray.append({ key: "", label: "", color: "#000000" }),
-    [fieldArray.append]
+    [fieldArray]
   );
 
   return (

@@ -57,13 +57,13 @@ const Search = React.memo(({ data, onSearch }: SearchProps) => {
     );
 
     onSearch(results);
-  }, [onSearch, similartiesMap]);
+  }, [similartiesMap, data.length, onSearch]);
 
   const handleReset = useCallback(() => {
     Object.values(resets).forEach((fn) => fn?.());
     setSimilartiesMap({});
     onSearch(data.map((_, idx) => idx));
-  }, [onSearch, resets]);
+  }, [resets, onSearch, data]);
 
   return (
     <Collapsible

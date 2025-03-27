@@ -79,8 +79,6 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
         <VisibilityControl table={table} />
       </div>
 
-      <Separator />
-
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
@@ -139,8 +137,6 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
           )}
         </TableBody>
       </Table>
-
-      <Separator />
 
       <div className="flex items-center justify-center p-2">
         <PageControl

@@ -19,13 +19,16 @@ const ProgressSelector = React.memo(({ problemId }: ProgressSelectorProps) => {
   const todoOption = getOption();
   const optValue = getOption(progress);
 
-  const handleSelect = useCallback((key: OptionKey) => {
-    if (key === todoOption.key) {
-      delProgress();
-    } else {
-      setProgress(key);
-    }
-  }, []);
+  const handleSelect = useCallback(
+    (key: OptionKey) => {
+      if (key === todoOption.key) {
+        delProgress();
+      } else {
+        setProgress(key);
+      }
+    },
+    [todoOption.key, delProgress, setProgress]
+  );
 
   const selectGroup = useMemo(() => {
     return optionKeys.map((key) => {
@@ -47,7 +50,7 @@ const ProgressSelector = React.memo(({ problemId }: ProgressSelectorProps) => {
         </SelectOption>
       );
     });
-  }, [optionKeys, getOption, handleSelect, optValue.key]);
+  }, [optionKeys, getOption, optValue.key]);
 
   return (
     <Select value={optValue.key} onChange={handleSelect}>

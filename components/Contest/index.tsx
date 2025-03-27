@@ -101,7 +101,7 @@ function ProblemSet() {
         Q4: generate(3),
       };
     });
-  }, [problemPending || contestPending || tagPending || solutionPending]);
+  }, [isPending]);
 
   return (
     <div className="p-8 flex flex-col gap-4 font-song font-bold">

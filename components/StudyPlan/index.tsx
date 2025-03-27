@@ -37,7 +37,7 @@ function StudyPlan({ plan }: StudyPlanProps) {
         children: res,
       }
     );
-  }, [studyPlan]);
+  }, [studyPlan, plan]);
 
   return (
     <SidebarProvider>

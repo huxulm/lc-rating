@@ -1,4 +1,3 @@
-import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -8,19 +7,14 @@ import {
   FormLabel,
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
-import { LC_RATING_PROGRESS_KEY } from "@/config/constants";
 import { useSiteStorage } from "@/hooks/useSiteStorage";
-import debounce from "debounce";
 import { Copy, HeartCrack, ThumbsUp } from "lucide-react";
-import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 export default function SyncStorage() {
-  const [syncStatus, setSyncStatus] = useState<
-    "idle" | "fetched" | "set" | "error"
-  >("idle");
-
   const { siteStorage, setSiteStorage } = useSiteStorage();
+  const progressStr = JSON.stringify(siteStorage, null, 2);
 
   const form = useForm({
     defaultValues: {
@@ -28,59 +22,50 @@ export default function SyncStorage() {
     },
   });
 
-  const progressStr = JSON.stringify(siteStorage, null, 2);
-
-  const handleFetchProgress = () => {
-    form.setValue("progressData", progressStr);
-    setSyncStatus("fetched");
-  };
-
   const handleCopy = () => {
     navigator.clipboard.writeText(progressStr);
+    toast(<span className="text-green-500">复制成功</span>, {
+      icon: <ThumbsUp className="text-green-500" />,
+    });
   };
 
   const onSubmit = (data: { progressData: string }) => {
     try {
       const parsedData = JSON.parse(data.progressData);
       setSiteStorage(parsedData);
-      setSyncStatus("set");
+      toast(<span className="text-green-500">保存成功</span>, {
+        icon: <ThumbsUp className="text-green-500" />,
+      });
     } catch (error) {
       console.error("Error setting progress:", error);
-      setSyncStatus("error");
+      toast(<span className="text-red-500">保存失败</span>, {
+        icon: <HeartCrack className="text-red-500" />,
+      });
     }
   };
 
   return (
     <div className="space-y-4">
-      <Button onClick={handleFetchProgress}>导出站点数据</Button>
-
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-          {syncStatus === "fetched" && (
-            <FormField
-              name="progressData"
-              render={() => (
-                <FormItem>
-                  <div className="relative">
-                    <Textarea
-                      readOnly
-                      rows={5}
-                      value={progressStr}
-                      className="resize-none field-sizing-fixed"
-                    />
-                    <Button
-                      size="icon"
-                      variant="ghost"
-                      className="absolute top-1 right-1 h-8 w-8"
-                      onClick={handleCopy}
-                      type="button"
-                    >
-                      <Copy className="h-4 w-4" />
-                    </Button>
-                  </div>
-                </FormItem>
-              )}
-            />
+          {progressStr && (
+            <div className="relative">
+              <Textarea
+                readOnly
+                rows={5}
+                value={progressStr}
+                className="resize-none field-sizing-fixed"
+              />
+              <Button
+                size="icon"
+                variant="outline"
+                className="absolute top-1 right-5 h-8 w-8"
+                onClick={handleCopy}
+                type="button"
+              >
+                <Copy />
+              </Button>
+            </div>
           )}
           <FormField
             control={form.control}
@@ -104,22 +89,6 @@ export default function SyncStorage() {
           </Button>
         </form>
       </Form>
-
-      {syncStatus === "set" && (
-        <Alert variant="default">
-          <ThumbsUp />
-          <AlertDescription className="text-green-700">
-            保存成功
-          </AlertDescription>
-        </Alert>
-      )}
-
-      {syncStatus === "error" && (
-        <Alert variant="destructive">
-          <HeartCrack />
-          <AlertDescription>保存失败</AlertDescription>
-        </Alert>
-      )}
     </div>
   );
 }

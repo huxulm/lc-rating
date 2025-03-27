@@ -1,11 +1,12 @@
+import { Navigator } from "@/components/common/Navigator";
 import { Provider } from "@/components/common/Provider";
+import { BASE_PATH } from "@/config/constants";
 import type { Metadata } from "next";
 import "./globals.css";
-import { Navigator } from "@/components/common/Navigator";
 
 export const metadata: Metadata = {
   title: "LC-Rating & Training",
-  icons: "/lc-rating/favico.svg",
+  icons: `${BASE_PATH}/favico.svg`,
 };
 
 export default function RootLayout({
