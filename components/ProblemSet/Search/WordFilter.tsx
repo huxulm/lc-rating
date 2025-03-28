@@ -52,7 +52,7 @@ const WordFilter = React.memo(
     }, [registerReset, name]);
 
     useEffect(() => {
-      if (useFuse) {
+      if (value && useFuse) {
         const matches = fuse.search(value).map((r) => ({
           score: 1 - (r.score ? r.score : 1),
           idx: r.refIndex,
