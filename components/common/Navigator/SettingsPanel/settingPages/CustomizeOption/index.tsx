@@ -1,10 +1,10 @@
 import { OptionValue, Options, useOptions } from "@/hooks/useOptions";
+import { ThumbsUp } from "lucide-react";
 import { useEffect, useMemo } from "react";
 import { useForm, useWatch } from "react-hook-form";
+import { toast } from "sonner";
 import { OptionsForm } from "./OptionsForm";
 import { Preview } from "./Preview";
-import { toast } from "sonner";
-import { ThumbsUp } from "lucide-react";
 
 function CustomizeOptions() {
   const { optionKeys, getOption, setOptions } = useOptions();
