@@ -25,7 +25,7 @@ export default function SyncStorage() {
   const handleCopy = () => {
     navigator.clipboard.writeText(progressStr);
     toast(<span className="text-green-500">复制成功</span>, {
-      icon: <ThumbsUp className="text-green-500" />,
+      icon: <ThumbsUp className="text-green-500 size-full" />,
     });
   };
 
@@ -34,12 +34,12 @@ export default function SyncStorage() {
       const parsedData = JSON.parse(data.progressData);
       setSiteStorage(parsedData);
       toast(<span className="text-green-500">保存成功</span>, {
-        icon: <ThumbsUp className="text-green-500" />,
+        icon: <ThumbsUp className="text-green-500 size-full" />,
       });
     } catch (error) {
       console.error("Error setting progress:", error);
       toast(<span className="text-red-500">保存失败</span>, {
-        icon: <HeartCrack className="text-red-500" />,
+        icon: <HeartCrack className="text-red-500 size-full" />,
       });
     }
   };

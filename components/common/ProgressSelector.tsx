@@ -15,19 +15,19 @@ interface ProgressSelectorProps {
 
 const ProgressSelector = React.memo(({ problemId }: ProgressSelectorProps) => {
   const { optionKeys, getOption } = useOptions();
-  const { progress, setProgress, delProgress } = useProgress(problemId);
+  const { progress, setProgress, delProgress } = useProgress();
   const todoOption = getOption();
-  const optValue = getOption(progress);
+  const optValue = getOption(progress[problemId]);
 
   const handleSelect = useCallback(
     (key: OptionKey) => {
       if (key === todoOption.key) {
-        delProgress();
+        delProgress(problemId);
       } else {
-        setProgress(key);
+        setProgress(problemId, key);
       }
     },
-    [todoOption.key, delProgress, setProgress]
+    [problemId, todoOption, delProgress, setProgress]
   );
 
   const selectGroup = useMemo(() => {

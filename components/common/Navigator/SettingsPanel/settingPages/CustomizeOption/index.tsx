@@ -30,7 +30,7 @@ function CustomizeOptions() {
     }, {});
     setOptions(newOptions);
     toast(<span className="text-green-500">保存成功</span>, {
-      icon: <ThumbsUp className="text-green-500" />,
+      icon: <ThumbsUp className="text-green-500 size-full" />,
     });
   };
 

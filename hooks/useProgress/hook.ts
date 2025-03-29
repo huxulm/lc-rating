@@ -59,14 +59,14 @@ export const useProgressStore = create<ProgressStore>()(
   )
 );
 
-export const useProgress = (id: string) => {
-  const progress = useProgressStore((state) => state.progress[id]);
+export const useProgress = () => {
+  const progress = useProgressStore((state) => state.progress);
   const setProgress = useProgressStore((state) => state.setProgress);
   const delProgress = useProgressStore((state) => state.delProgress);
 
   return {
     progress,
-    setProgress: (value: OptionKey) => setProgress(id, value),
-    delProgress: () => delProgress(id),
+    setProgress,
+    delProgress,
   };
 };
