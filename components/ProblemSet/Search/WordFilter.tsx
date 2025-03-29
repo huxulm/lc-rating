@@ -26,7 +26,7 @@ const options = {
   ignoreDiacritics: true,
   ignoreLocation: true,
   includeScore: true,
-  keys: ["contest.title", "problem.title", "solution.title"],
+  keys: ["contest.title", "problem.title", "problem.id", "solution.title"],
   minMatchCharLength: 1,
   threshold: 1,
 };
