@@ -1,12 +1,10 @@
-const optionKeys = ["AC", "WORKING"] as const;
-
 export interface ProgressEventData {
   problemSlug: string;
-  optionKey: (typeof optionKeys)[number];
+  optionKey: string;
   overwrite: string[];
 }
 
-export function isProgressEventData(data: any): data is ProgressEventData {
+export function isProgressEventData(data: unknown): data is ProgressEventData {
   return (
     typeof data === "object" &&
     data !== null &&
@@ -14,6 +12,9 @@ export function isProgressEventData(data: any): data is ProgressEventData {
     "problemSlug" in data &&
     typeof data["problemSlug"] === "string" &&
     "optionKey" in data &&
-    optionKeys.includes(data["optionKey"])
+    typeof data["optionKey"] === "string" &&
+    "overwrite" in data &&
+    Array.isArray(data["overwrite"]) &&
+    data["overwrite"].every((item) => typeof item === "string")
   );
 }
