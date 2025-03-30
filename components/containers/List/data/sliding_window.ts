@@ -284,14 +284,14 @@ export default{
                             "score": 0,
                             "leafChild": [
                                 {
-                                    "title": "1461. 检查一个字符串是否包含所有长度为 K 的二进制子串",
+                                    "title": "3439. 重新安排会议得到最多空余时间 I",
                                     "summary": "",
-                                    "src": "/check-if-a-string-contains-all-binary-codes-of-size-k/",
-                                    "original_src": "https://leetcode.cn/problems/check-if-a-string-contains-all-binary-codes-of-size-k/",
+                                    "src": "/reschedule-meetings-for-maximum-free-time-i/",
+                                    "original_src": "https://leetcode.cn/problems/reschedule-meetings-for-maximum-free-time-i/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": 1504.0178888667,
+                                    "score": 1728.8495630128,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -334,20 +334,6 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1785.6006955353,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "3439. 重新安排会议得到最多空余时间 I",
-                                    "summary": "",
-                                    "src": "/reschedule-meetings-for-maximum-free-time-i/",
-                                    "original_src": "https://leetcode.cn/problems/reschedule-meetings-for-maximum-free-time-i/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1728.8495630128,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -531,6 +517,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1306.2821637677,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "1461. 检查一个字符串是否包含所有长度为 K 的二进制子串",
+                                    "summary": "",
+                                    "src": "/check-if-a-string-contains-all-binary-codes-of-size-k/",
+                                    "original_src": "https://leetcode.cn/problems/check-if-a-string-contains-all-binary-codes-of-size-k/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1504.0178888667,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -915,6 +915,20 @@ export default{
                                             "last_update": ""
                                         },
                                         {
+                                            "title": "3413. 收集连续 K 个袋子可以获得的最多硬币数量",
+                                            "summary": "",
+                                            "src": "/maximum-coins-from-k-consecutive-bags/",
+                                            "original_src": "https://leetcode.cn/problems/maximum-coins-from-k-consecutive-bags/",
+                                            "sort": 0,
+                                            "isLeaf": true,
+                                            "solution": null,
+                                            "score": 2373.8124052261,
+                                            "leafChild": [],
+                                            "nonLeafChild": [],
+                                            "isPremium": false,
+                                            "last_update": ""
+                                        },
+                                        {
                                             "title": "2968. 执行操作使频率分数最大",
                                             "summary": "",
                                             "src": "/apply-operations-to-maximize-frequency-score/",
@@ -937,20 +951,6 @@ export default{
                                             "isLeaf": true,
                                             "solution": null,
                                             "score": 2455.8244137907,
-                                            "leafChild": [],
-                                            "nonLeafChild": [],
-                                            "isPremium": false,
-                                            "last_update": ""
-                                        },
-                                        {
-                                            "title": "3413. 收集连续 K 个袋子可以获得的最多硬币数量",
-                                            "summary": "",
-                                            "src": "/maximum-coins-from-k-consecutive-bags/",
-                                            "original_src": "https://leetcode.cn/problems/maximum-coins-from-k-consecutive-bags/",
-                                            "sort": 0,
-                                            "isLeaf": true,
-                                            "solution": null,
-                                            "score": 2373.8124052261,
                                             "leafChild": [],
                                             "nonLeafChild": [],
                                             "isPremium": false,
@@ -1260,7 +1260,7 @@ export default{
                                 },
                                 {
                                     "title": "§2.3.2 越短越合法",
-                                    "summary": "一般要写 `ans += right - left + 1`。<br>滑动窗口的内层循环结束时，右端点**固定**在 $\\textit{right}$，左端点在 $\\textit{left},\\textit{left}+1,\\ldots,\\textit{right}$ 的所有子数组（子串）都是合法的，这一共有 $\\textit{right}-\\textit{left}+1$ 个。<br>",
+                                    "summary": "一般要写 `ans += right - left + 1`。<br>滑动窗口的内层循环结束时，右端点**固定**在 $\\textit{right}$，左端点在 $\\textit{left},\\textit{left}+1,\\ldots,\\textit{right}$ 的所有子数组（子串）都是合法的，这一共有 $\\textit{right}-\\textit{left}+1$ 个。<br>**思维扩展（选做）**<br>",
                                     "src": "",
                                     "original_src": "",
                                     "sort": 0,
@@ -1325,34 +1325,6 @@ export default{
                                             "last_update": ""
                                         },
                                         {
-                                            "title": "3134. 找出唯一性数组的中位数",
-                                            "summary": "",
-                                            "src": "/find-the-median-of-the-uniqueness-array/",
-                                            "original_src": "https://leetcode.cn/problems/find-the-median-of-the-uniqueness-array/",
-                                            "sort": 0,
-                                            "isLeaf": true,
-                                            "solution": null,
-                                            "score": 2451.1558771446,
-                                            "leafChild": [],
-                                            "nonLeafChild": [],
-                                            "isPremium": false,
-                                            "last_update": ""
-                                        },
-                                        {
-                                            "title": "3261. 统计满足 K 约束的子字符串数量 II",
-                                            "summary": "",
-                                            "src": "/count-substrings-that-satisfy-k-constraint-ii/",
-                                            "original_src": "https://leetcode.cn/problems/count-substrings-that-satisfy-k-constraint-ii/",
-                                            "sort": 0,
-                                            "isLeaf": true,
-                                            "solution": null,
-                                            "score": 2658.9223715182,
-                                            "leafChild": [],
-                                            "nonLeafChild": [],
-                                            "isPremium": false,
-                                            "last_update": ""
-                                        },
-                                        {
                                             "title": "LCP 68. 美观的花束",
                                             "summary": "",
                                             "src": "/1GxJYY/",
@@ -1378,6 +1350,34 @@ export default{
                                             "leafChild": [],
                                             "nonLeafChild": [],
                                             "isPremium": true,
+                                            "last_update": ""
+                                        },
+                                        {
+                                            "title": "3134. 找出唯一性数组的中位数",
+                                            "summary": "",
+                                            "src": "/find-the-median-of-the-uniqueness-array/",
+                                            "original_src": "https://leetcode.cn/problems/find-the-median-of-the-uniqueness-array/",
+                                            "sort": 0,
+                                            "isLeaf": true,
+                                            "solution": null,
+                                            "score": 2451.1558771446,
+                                            "leafChild": [],
+                                            "nonLeafChild": [],
+                                            "isPremium": false,
+                                            "last_update": ""
+                                        },
+                                        {
+                                            "title": "3261. 统计满足 K 约束的子字符串数量 II",
+                                            "summary": "",
+                                            "src": "/count-substrings-that-satisfy-k-constraint-ii/",
+                                            "original_src": "https://leetcode.cn/problems/count-substrings-that-satisfy-k-constraint-ii/",
+                                            "sort": 0,
+                                            "isLeaf": true,
+                                            "solution": null,
+                                            "score": 2658.9223715182,
+                                            "leafChild": [],
+                                            "nonLeafChild": [],
+                                            "isPremium": false,
                                             "last_update": ""
                                         }
                                     ],
@@ -1462,7 +1462,7 @@ export default{
                         },
                         {
                             "title": "§2.4 其他（选做）",
-                            "summary": "**滑窗的内容到这里就结束了，可以去刷下一个题单（二分算法）**。<br>---<br>",
+                            "summary": "",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -1583,7 +1583,22 @@ export default{
                                     "last_update": ""
                                 }
                             ],
-                            "nonLeafChild": [],
+                            "nonLeafChild": [
+                                {
+                                    "title": "滑窗的内容到这里就结束了，可以去刷下一个题单（二分算法）。",
+                                    "summary": "---<br>---<br>",
+                                    "src": "",
+                                    "original_src": "",
+                                    "sort": 0,
+                                    "isLeaf": false,
+                                    "solution": "",
+                                    "score": 0,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                }
+                            ],
                             "isPremium": false,
                             "last_update": ""
                         }
@@ -2303,6 +2318,20 @@ export default{
                             "solution": "",
                             "score": 0,
                             "leafChild": [
+                                {
+                                    "title": "2109. 向字符串添加空格",
+                                    "summary": "",
+                                    "src": "/adding-spaces-to-a-string/",
+                                    "original_src": "https://leetcode.cn/problems/adding-spaces-to-a-string/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1315.1890809249,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
                                 {
                                     "title": "2540. 最小公共值",
                                     "summary": "",
@@ -3273,5 +3302,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-03-11 11:47:57"
+    "last_update": "2025-03-29 22:11:44"
 } as ProblemCategory;

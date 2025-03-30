@@ -49,7 +49,7 @@ export default{
                     "nonLeafChild": [
                         {
                             "title": "§1.1 判断质数",
-                            "summary": "",
+                            "summary": "<a href=\"https://leetcode.cn/problems/prime-in-diagonal/solutions/2216347/pan-duan-zhi-shu-by-endlesscheng-m6nt/\">模板</a><br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -134,7 +134,7 @@ export default{
                         },
                         {
                             "title": "§1.2 预处理质数（筛质数）",
-                            "summary": "",
+                            "summary": "<a href=\"https://leetcode.cn/problems/closest-prime-numbers-in-range/solutions/2040087/yu-chu-li-zhi-shu-mei-ju-by-endlesscheng-uw2b/\">模板（埃氏筛和欧拉筛）</a><br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -1239,7 +1239,7 @@ export default{
                 },
                 {
                     "title": "二、组合数学",
-                    "summary": "<a href=\"https://leetcode.cn/circle/discuss/mDfnkW/\">模运算的世界：当加减乘除遇上取模</a><br>",
+                    "summary": "组合数取模的**模板**见 <a href=\"https://leetcode.cn/circle/discuss/mDfnkW/\">模运算的世界：当加减乘除遇上取模</a><br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -1413,6 +1413,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "1617. 统计子树中城市之间最大距离",
+                                    "summary": "",
+                                    "src": "/count-subtrees-with-max-distance-between-cities/",
+                                    "original_src": "https://leetcode.cn/problems/count-subtrees-with-max-distance-between-cities/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2308.6545905335,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2450. 应用操作后不同二进制字符串的数量",
                                     "summary": "",
                                     "src": "/number-of-distinct-binary-strings-after-applying-operations/",
@@ -1433,7 +1447,7 @@ export default{
                         },
                         {
                             "title": "§2.2 组合计数",
-                            "summary": "",
+                            "summary": "**思维扩展**：<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -1817,6 +1831,20 @@ export default{
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3470. 全排列 IV",
+                                    "summary": "",
+                                    "src": "/permutations-iv/",
+                                    "original_src": "https://leetcode.cn/problems/permutations-iv/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2473.7239890264,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
                                     "last_update": ""
                                 }
                             ],
@@ -3755,6 +3783,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3468. 可行数组的数目",
+                                    "summary": "",
+                                    "src": "/find-the-number-of-copy-arrays/",
+                                    "original_src": "https://leetcode.cn/problems/find-the-number-of-copy-arrays/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1544.8911121275,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2310. 个位数字为 K 的整数之和",
                                     "summary": "",
                                     "src": "/sum-of-numbers-with-units-digit-k/",
@@ -4119,5 +4161,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-02-23 13:32:49"
+    "last_update": "2025-03-20 04:18:50"
 } as ProblemCategory;

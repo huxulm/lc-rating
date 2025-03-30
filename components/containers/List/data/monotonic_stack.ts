@@ -13,7 +13,7 @@ export default{
     "nonLeafChild": [
         {
             "title": "介绍",
-            "summary": "<img src=\"https://pic.leetcode.cn/1711714526-rMdiIh-t3-c.png\" alt=\"单调栈题单单调栈入门单调栈题目单调栈教程单调栈视频leetcode单调栈 灵茶山艾府 灵神 灵神题单\" style=\"width: 100%;\"><br>> 他向远方望去，无法看到高山背后的矮山，只能看到一座座更高的山峰。<br>⚠**注意**：推荐先做做 <a href=\"/lc-rating/list/data_structure\">数据结构题单</a> 中的「枚举右，维护左」以及第三章「栈」的题目后，再来刷本题单。<br>",
+            "summary": "<img src=\"https://pic.leetcode.cn/1711714526-rMdiIh-t3-c.png\" alt=\"单调栈题单单调栈入门单调栈题目单调栈教程单调栈视频leetcode单调栈 灵茶山艾府 灵神 灵神题单\" style=\"width: 100%;\"><br>> 他向远方望去，无法看到高山背后的矮山，只看到一座座更高的山峰。<br>推荐先做做 <a href=\"/lc-rating/list/data_structure\">数据结构题单</a> 中的「枚举右，维护左」以及第三章「栈」的题目后，再来刷本题单。<br>",
             "src": "",
             "original_src": "",
             "sort": 0,
@@ -24,7 +24,7 @@ export default{
             "nonLeafChild": [
                 {
                     "title": "单调栈",
-                    "summary": "请先学习：<a href=\"https://www.bilibili.com/video/BV1VN411J7S7/\">单调栈【基础算法精讲 26】</a><br>",
+                    "summary": "",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -35,7 +35,7 @@ export default{
                     "nonLeafChild": [
                         {
                             "title": "基础",
-                            "summary": "",
+                            "summary": "<a href=\"https://www.bilibili.com/video/BV1VN411J7S7/\">单调栈【基础算法精讲 26】</a><br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -541,20 +541,6 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "3430. 最多 K 个元素的子数组的最值之和",
-                            "summary": "",
-                            "src": "/maximum-and-minimum-sums-of-at-most-size-k-subarrays/",
-                            "original_src": "https://leetcode.cn/problems/maximum-and-minimum-sums-of-at-most-size-k-subarrays/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 2644.9681021386,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "2281. 巫师的总力量和（最小值×和）",
                             "summary": "",
                             "src": "/sum-of-total-strength-of-wizards/",
@@ -563,6 +549,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2621.1208072273,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3430. 最多 K 个元素的子数组的最值之和",
+                            "summary": "",
+                            "src": "/maximum-and-minimum-sums-of-at-most-size-k-subarrays/",
+                            "original_src": "https://leetcode.cn/problems/maximum-and-minimum-sums-of-at-most-size-k-subarrays/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2644.9681021386,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -720,5 +720,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-03-11 04:19:09"
+    "last_update": "2025-03-25 08:28:47"
 } as ProblemCategory;

@@ -1414,7 +1414,7 @@ export default{
                         },
                         {
                             "title": "§1.5 其他一维前缀和",
-                            "summary": "",
+                            "summary": "**思维扩展**：<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -1630,6 +1630,20 @@ export default{
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "1534. 统计好三元组",
+                                    "summary": "",
+                                    "src": "/count-good-triplets/",
+                                    "original_src": "https://leetcode.cn/problems/count-good-triplets/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1279.3383966145,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
                                     "last_update": ""
                                 }
                             ],
@@ -1986,20 +2000,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "2381. 字母移位 II",
-                                    "summary": "",
-                                    "src": "/shifting-letters-ii/",
-                                    "original_src": "https://leetcode.cn/problems/shifting-letters-ii/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1793.3037316825,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "3453. 分割正方形 I",
                                     "summary": "",
                                     "src": "/separate-squares-i/",
@@ -2008,6 +2008,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1735.4106121238,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2381. 字母移位 II",
+                                    "summary": "",
+                                    "src": "/shifting-letters-ii/",
+                                    "original_src": "https://leetcode.cn/problems/shifting-letters-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1793.3037316825,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -2168,7 +2182,7 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "2528. 最大化城市的最小供电站数目",
+                                    "title": "2528. 最大化城市的最小电量",
                                     "summary": "",
                                     "src": "/maximize-the-minimum-powered-city/",
                                     "original_src": "https://leetcode.cn/problems/maximize-the-minimum-powered-city/",
@@ -3085,6 +3099,20 @@ export default{
                             "score": 0,
                             "leafChild": [
                                 {
+                                    "title": "1006. 笨阶乘",
+                                    "summary": "",
+                                    "src": "/clumsy-factorial/",
+                                    "original_src": "https://leetcode.cn/problems/clumsy-factorial/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1407.9870845299,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "150. 逆波兰表达式求值",
                                     "summary": "",
                                     "src": "/evaluate-reverse-polish-notation/",
@@ -3099,14 +3127,14 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "1006. 笨阶乘",
+                                    "title": "394. 字符串解码",
                                     "summary": "",
-                                    "src": "/clumsy-factorial/",
-                                    "original_src": "https://leetcode.cn/problems/clumsy-factorial/",
+                                    "src": "/decode-string/",
+                                    "original_src": "https://leetcode.cn/problems/decode-string/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": 1407.9870845299,
+                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4158,20 +4186,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "3408. 设计任务管理器",
-                                    "summary": "",
-                                    "src": "/design-task-manager/",
-                                    "original_src": "https://leetcode.cn/problems/design-task-manager/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1806.5135130091,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "1792. 最大平均通过率",
                                     "summary": "",
                                     "src": "/maximum-average-pass-ratio/",
@@ -5073,6 +5087,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3408. 设计任务管理器",
+                                    "summary": "",
+                                    "src": "/design-task-manager/",
+                                    "original_src": "https://leetcode.cn/problems/design-task-manager/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1806.5135130091,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2034. 股票价格波动",
                                     "summary": "",
                                     "src": "/stock-price-fluctuation/",
@@ -5121,7 +5149,7 @@ export default{
                         },
                         {
                             "title": "§5.7 对顶堆（滑动窗口第 K 小/大）",
-                            "summary": "也可以用有序集合做。<br>另见 <a href=\"/lc-rating/list/graph\">图论题单</a> 中的 Dijkstra 算法。<br>",
+                            "summary": "<a href=\"https://leetcode.cn/problems/find-median-from-data-stream/solutions/3015873/ru-he-zi-ran-yin-ru-da-xiao-dui-jian-ji-4v22k/\">讲解</a><br>部分题目需要结合懒删除堆。<br>另见 <a href=\"/lc-rating/list/graph\">图论题单</a> 中的 Dijkstra 算法。<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -5901,7 +5929,7 @@ export default{
                 },
                 {
                     "title": "返回 x 所在集合的大小",
-                    "summary": "模板：<br>```py [sol-Python3]<br>class UnionFind:<br>def __init__(self, n: int):<br>self._fa = list(range(n))  # 代表元<br>self._size = [1] * n  # 集合大小<br>def find(self, x: int) -> int:<br>if self._fa[x] != x:<br>self._fa[x] = self.find(self._fa[x])  # fa 改成代表元<br>return self._fa[x]<br>def is_same(self, x: int, y: int) -> bool:<br>return self.find(x) == self.find(y)<br>def merge(self, from_: int, to: int) -> bool:<br>x, y = self.find(from_), self.find(to)<br>if x == y:  # from 和 to 在同一个集合，不做合并<br>return False<br>self._fa[x] = y  # 合并集合。修改后就可以认为 from 和 to 在同一个集合了<br>self._size[y] += self._size[x]  # 更新集合大小（注意集合大小保存在代表元上）<br>return True<br>def get_size(self, x: int) -> int:<br>return self._size[self.find(x)]  # 集合大小保存在代表元上<br>```<br>```java [sol-Java]<br>class UnionFind {<br>private final int[] fa; // 代表元<br>private final int[] size; // 集合大小<br>UnionFind(int n) {<br>// 一开始有 n 个集合 {0}, {1}, ..., {n-1}<br>// 集合 i 的代表元是自己，大小为 1<br>fa = new int[n];<br>for (int i = 0; i < n; i++) {<br>fa[i] = i;<br>}<br>size = new int[n];<br>Arrays.fill(size, 1);<br>}<br>// 返回 x 所在集合的代表元<br>// 同时做路径压缩，也就是把 x 所在集合中的所有元素的 fa 都改成代表元<br>public int find(int x) {<br>// 如果 fa[x] == x，则表示 x 是代表元<br>if (fa[x] != x) {<br>fa[x] = find(fa[x]); // fa 改成代表元<br>}<br>return fa[x];<br>}<br>// 判断 x 和 y 是否在同一个集合<br>public boolean isSame(int x, int y) {<br>// 如果 x 的代表元和 y 的代表元相同，那么 x 和 y 就在同一个集合<br>// 这就是代表元的作用：用来快速判断两个元素是否在同一个集合<br>return find(x) == find(y);<br>}<br>// 把 from 所在集合合并到 to 所在集合中<br>// 返回是否合并成功<br>public boolean merge(int from, int to) {<br>int x = find(from);<br>int y = find(to);<br>if (x == y) { // from 和 to 在同一个集合，不做合并<br>return false;<br>}<br>fa[x] = y; // 合并集合。修改后就可以认为 from 和 to 在同一个集合了<br>size[y] += size[x]; // 更新集合大小（注意集合大小保存在代表元上）<br>// 无需更新 size[x]，因为我们不用 size[x] 而是用 size[find(x)] 获取集合大小，但 find(x) == y，我们不会再访问 size[x]<br>return true;<br>}<br>// 返回 x 所在集合的大小<br>public int getSize(int x) {<br>return size[find(x)]; // 集合大小保存在代表元上<br>}<br>}<br>```<br>```cpp [sol-C++]<br>class UnionFind {<br>vector<int> fa; // 代表元<br>vector<int> sz; // 集合大小<br>public:<br>UnionFind(int n) : fa(n), sz(n, 1) {<br>// 一开始有 n 个集合 {0}, {1}, ..., {n-1}<br>// 集合 i 的代表元是自己，大小为 1<br>iota(fa.begin(), fa.end(), 0);<br>}<br>// 返回 x 所在集合的代表元<br>// 同时做路径压缩，也就是把 x 所在集合中的所有元素的 fa 都改成代表元<br>int find(int x) {<br>// 如果 fa[x] == x，则表示 x 是代表元<br>if (fa[x] != x) {<br>fa[x] = find(fa[x]); // fa 改成代表元<br>}<br>return fa[x];<br>}<br>// 判断 x 和 y 是否在同一个集合<br>bool is_same(int x, int y) {<br>// 如果 x 的代表元和 y 的代表元相同，那么 x 和 y 就在同一个集合<br>// 这就是代表元的作用：用来快速判断两个元素是否在同一个集合<br>return find(x) == find(y);<br>}<br>// 把 from 所在集合合并到 to 所在集合中<br>// 返回是否合并成功<br>bool merge(int from, int to) {<br>int x = find(from), y = find(to);<br>if (x == y) { // from 和 to 在同一个集合，不做合并<br>return false;<br>}<br>fa[x] = y; // 合并集合。修改后就可以认为 from 和 to 在同一个集合了<br>sz[y] += sz[x]; // 更新集合大小（注意集合大小保存在代表元上）<br>// 无需更新 sz[x]，因为我们不用 sz[x] 而是用 sz[find(x)] 获取集合大小，但 find(x) == y，我们不会再访问 sz[x]<br>return true;<br>}<br>// 返回 x 所在集合的大小<br>int get_size(int x) {<br>return sz[find(x)]; // 集合大小保存在代表元上<br>}<br>};<br>```<br>```go [sol-Go]<br>type unionFind struct {<br>fa []int // 代表元<br>sz []int // 集合大小<br>}<br>func newUnionFind(n int) unionFind {<br>fa := make([]int, n)<br>sz := make([]int, n)<br>// 一开始有 n 个集合 {0}, {1}, ..., {n-1}<br>// 集合 i 的代表元是自己，大小为 1<br>for i := range fa {<br>fa[i] = i<br>sz[i] = 1<br>}<br>return unionFind{fa, sz}<br>}<br>// 返回 x 所在集合的代表元<br>// 同时做路径压缩，也就是把 x 所在集合中的所有元素的 fa 都改成代表元<br>func (u unionFind) find(x int) int {<br>// 如果 fa[x] == x，则表示 x 是代表元<br>if u.fa[x] != x {<br>u.fa[x] = u.find(u.fa[x]) // fa 改成代表元<br>}<br>return u.fa[x]<br>}<br>// 判断 x 和 y 是否在同一个集合<br>func (u unionFind) same(x, y int) bool {<br>// 如果 x 的代表元和 y 的代表元相同，那么 x 和 y 就在同一个集合<br>// 这就是代表元的作用：用来快速判断两个元素是否在同一个集合<br>return u.find(x) == u.find(y)<br>}<br>// 把 from 所在集合合并到 to 所在集合中<br>// 返回是否合并成功<br>// 注：有些题目还要维护其他属性，考虑可扩展性，这里用 pointer receiver<br>func (u *unionFind) merge(from, to int) bool {<br>x, y := u.find(from), u.find(to)<br>if x == y { // from 和 to 在同一个集合，不做合并<br>return false<br>}<br>u.fa[x] = y // 合并集合。修改后就可以认为 from 和 to 在同一个集合了<br>u.sz[y] += u.sz[x] // 更新集合大小（注意集合大小保存在代表元上）<br>// 无需更新 sz[x]，因为我们不用 sz[x] 而是用 sz[find(x)] 获取集合大小，但 find(x) == y，我们不会再访问 sz[x]<br>return true<br>}<br>// 返回 x 所在集合的大小<br>func (u unionFind) size(x int) int {<br>return u.sz[u.find(x)] // 集合大小保存在代表元上<br>}<br>```<br>",
+                    "summary": "模板：<br>```py [sol-Python3]<br>class UnionFind:<br>def __init__(self, n: int):<br>self._fa = list(range(n))  # 代表元<br>self._size = [1] * n  # 集合大小<br>self.cc = n  # 连通块个数<br>def find(self, x: int) -> int:<br>if self._fa[x] != x:<br>self._fa[x] = self.find(self._fa[x])  # fa 改成代表元<br>return self._fa[x]<br>def is_same(self, x: int, y: int) -> bool:<br>return self.find(x) == self.find(y)<br>def merge(self, from_: int, to: int) -> bool:<br>x, y = self.find(from_), self.find(to)<br>if x == y:  # from 和 to 在同一个集合，不做合并<br>return False<br>self._fa[x] = y  # 合并集合。修改后就可以认为 from 和 to 在同一个集合了<br>self._size[y] += self._size[x]  # 更新集合大小（注意集合大小保存在代表元上）<br>self.cc -= 1  # 成功合并，连通块个数减一<br>return True<br>def get_size(self, x: int) -> int:<br>return self._size[self.find(x)]  # 集合大小保存在代表元上<br>```<br>```java [sol-Java]<br>class UnionFind {<br>private final int[] fa; // 代表元<br>private final int[] size; // 集合大小<br>public int cc; // 连通块个数<br>UnionFind(int n) {<br>// 一开始有 n 个集合 {0}, {1}, ..., {n-1}<br>// 集合 i 的代表元是自己，大小为 1<br>fa = new int[n];<br>for (int i = 0; i < n; i++) {<br>fa[i] = i;<br>}<br>size = new int[n];<br>Arrays.fill(size, 1);<br>cc = n;<br>}<br>// 返回 x 所在集合的代表元<br>// 同时做路径压缩，也就是把 x 所在集合中的所有元素的 fa 都改成代表元<br>public int find(int x) {<br>// 如果 fa[x] == x，则表示 x 是代表元<br>if (fa[x] != x) {<br>fa[x] = find(fa[x]); // fa 改成代表元<br>}<br>return fa[x];<br>}<br>// 判断 x 和 y 是否在同一个集合<br>public boolean isSame(int x, int y) {<br>// 如果 x 的代表元和 y 的代表元相同，那么 x 和 y 就在同一个集合<br>// 这就是代表元的作用：用来快速判断两个元素是否在同一个集合<br>return find(x) == find(y);<br>}<br>// 把 from 所在集合合并到 to 所在集合中<br>// 返回是否合并成功<br>public boolean merge(int from, int to) {<br>int x = find(from);<br>int y = find(to);<br>if (x == y) { // from 和 to 在同一个集合，不做合并<br>return false;<br>}<br>fa[x] = y; // 合并集合。修改后就可以认为 from 和 to 在同一个集合了<br>size[y] += size[x]; // 更新集合大小（注意集合大小保存在代表元上）<br>// 无需更新 size[x]，因为我们不用 size[x] 而是用 size[find(x)] 获取集合大小，但 find(x) == y，我们不会再访问 size[x]<br>cc--; // 成功合并，连通块个数减一<br>return true;<br>}<br>// 返回 x 所在集合的大小<br>public int getSize(int x) {<br>return size[find(x)]; // 集合大小保存在代表元上<br>}<br>}<br>```<br>```cpp [sol-C++]<br>class UnionFind {<br>vector<int> fa; // 代表元<br>vector<int> sz; // 集合大小<br>public:<br>int cc; // 连通块个数<br>UnionFind(int n) : fa(n), sz(n, 1), cc(n) {<br>// 一开始有 n 个集合 {0}, {1}, ..., {n-1}<br>// 集合 i 的代表元是自己，大小为 1<br>ranges::iota(fa, 0); // iota(fa.begin(), fa.end(), 0);<br>}<br>// 返回 x 所在集合的代表元<br>// 同时做路径压缩，也就是把 x 所在集合中的所有元素的 fa 都改成代表元<br>int find(int x) {<br>// 如果 fa[x] == x，则表示 x 是代表元<br>if (fa[x] != x) {<br>fa[x] = find(fa[x]); // fa 改成代表元<br>}<br>return fa[x];<br>}<br>// 判断 x 和 y 是否在同一个集合<br>bool is_same(int x, int y) {<br>// 如果 x 的代表元和 y 的代表元相同，那么 x 和 y 就在同一个集合<br>// 这就是代表元的作用：用来快速判断两个元素是否在同一个集合<br>return find(x) == find(y);<br>}<br>// 把 from 所在集合合并到 to 所在集合中<br>// 返回是否合并成功<br>bool merge(int from, int to) {<br>int x = find(from), y = find(to);<br>if (x == y) { // from 和 to 在同一个集合，不做合并<br>return false;<br>}<br>fa[x] = y; // 合并集合。修改后就可以认为 from 和 to 在同一个集合了<br>sz[y] += sz[x]; // 更新集合大小（注意集合大小保存在代表元上）<br>// 无需更新 sz[x]，因为我们不用 sz[x] 而是用 sz[find(x)] 获取集合大小，但 find(x) == y，我们不会再访问 sz[x]<br>cc--; // 成功合并，连通块个数减一<br>return true;<br>}<br>// 返回 x 所在集合的大小<br>int get_size(int x) {<br>return sz[find(x)]; // 集合大小保存在代表元上<br>}<br>};<br>```<br>```go [sol-Go]<br>type unionFind struct {<br>fa []int // 代表元<br>sz []int // 集合大小<br>cc int   // 连通块个数<br>}<br>func newUnionFind(n int) unionFind {<br>fa := make([]int, n)<br>sz := make([]int, n)<br>// 一开始有 n 个集合 {0}, {1}, ..., {n-1}<br>// 集合 i 的代表元是自己，大小为 1<br>for i := range fa {<br>fa[i] = i<br>sz[i] = 1<br>}<br>return unionFind{fa, sz, n}<br>}<br>// 返回 x 所在集合的代表元<br>// 同时做路径压缩，也就是把 x 所在集合中的所有元素的 fa 都改成代表元<br>func (u unionFind) find(x int) int {<br>// 如果 fa[x] == x，则表示 x 是代表元<br>if u.fa[x] != x {<br>u.fa[x] = u.find(u.fa[x]) // fa 改成代表元<br>}<br>return u.fa[x]<br>}<br>// 判断 x 和 y 是否在同一个集合<br>func (u unionFind) same(x, y int) bool {<br>// 如果 x 的代表元和 y 的代表元相同，那么 x 和 y 就在同一个集合<br>// 这就是代表元的作用：用来快速判断两个元素是否在同一个集合<br>return u.find(x) == u.find(y)<br>}<br>// 把 from 所在集合合并到 to 所在集合中<br>// 返回是否合并成功<br>func (u *unionFind) merge(from, to int) bool {<br>x, y := u.find(from), u.find(to)<br>if x == y { // from 和 to 在同一个集合，不做合并<br>return false<br>}<br>u.fa[x] = y // 合并集合。修改后就可以认为 from 和 to 在同一个集合了<br>u.sz[y] += u.sz[x] // 更新集合大小（注意集合大小保存在代表元上）<br>// 无需更新 sz[x]，因为我们不用 sz[x] 而是用 sz[find(x)] 获取集合大小，但 find(x) == y，我们不会再访问 sz[x]<br>u.cc-- // 成功合并，连通块个数减一<br>return true<br>}<br>// 返回 x 所在集合的大小<br>func (u unionFind) size(x int) int {<br>return u.sz[u.find(x)] // 集合大小保存在代表元上<br>}<br>```<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -5920,6 +5948,20 @@ export default{
                             "solution": "",
                             "score": 0,
                             "leafChild": [
+                                {
+                                    "title": "3493. 属性图",
+                                    "summary": "",
+                                    "src": "/properties-graph/",
+                                    "original_src": "https://leetcode.cn/problems/properties-graph/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
                                 {
                                     "title": "990. 等式方程的可满足性",
                                     "summary": "",
@@ -7432,20 +7474,6 @@ export default{
                             "nonLeafChild": [],
                             "isPremium": false,
                             "last_update": ""
-                        },
-                        {
-                            "title": "LCP 27. 黑盒光线反射",
-                            "summary": "",
-                            "src": "/IQvJ9i/",
-                            "original_src": "https://leetcode.cn/problems/IQvJ9i/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": null,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
                         }
                     ],
                     "nonLeafChild": [],
@@ -7740,5 +7768,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-03-11 00:53:44"
+    "last_update": "2025-03-29 12:05:46"
 } as ProblemCategory;

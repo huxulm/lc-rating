@@ -131,20 +131,6 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "3387. 两天自由外汇交易后的最大货币数",
-                            "summary": "",
-                            "src": "/maximize-amount-after-two-days-of-conversions/",
-                            "original_src": "https://leetcode.cn/problems/maximize-amount-after-two-days-of-conversions/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1787.5923894417,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "3310. 移除可疑的方法",
                             "summary": "",
                             "src": "/remove-methods-from-project/",
@@ -181,6 +167,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1787.8550568757,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3387. 两天自由外汇交易后的最大货币数",
+                            "summary": "",
+                            "src": "/maximize-amount-after-two-days-of-conversions/",
+                            "original_src": "https://leetcode.cn/problems/maximize-amount-after-two-days-of-conversions/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1787.5923894417,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -1646,20 +1646,6 @@ export default{
             "score": 0,
             "leafChild": [
                 {
-                    "title": "3376. 破解锁的最少时间 I",
-                    "summary": "",
-                    "src": "/minimum-time-to-break-locks-i/",
-                    "original_src": "https://leetcode.cn/problems/minimum-time-to-break-locks-i/",
-                    "sort": 0,
-                    "isLeaf": true,
-                    "solution": null,
-                    "score": 1793.2112436729,
-                    "leafChild": [],
-                    "nonLeafChild": [],
-                    "isPremium": false,
-                    "last_update": ""
-                },
-                {
                     "title": "1947. 最大兼容性评分和",
                     "summary": "",
                     "src": "/maximum-compatibility-score-sum/",
@@ -1668,6 +1654,20 @@ export default{
                     "isLeaf": true,
                     "solution": null,
                     "score": 1704.360891641,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "3376. 破解锁的最少时间 I",
+                    "summary": "",
+                    "src": "/minimum-time-to-break-locks-i/",
+                    "original_src": "https://leetcode.cn/problems/minimum-time-to-break-locks-i/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 1793.2112436729,
                     "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
@@ -2101,5 +2101,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-01-29 06:26:55"
+    "last_update": "2025-03-20 02:02:38"
 } as ProblemCategory;

@@ -173,6 +173,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3455. 最短匹配子字符串",
+                            "summary": "",
+                            "src": "/shortest-matching-substring/",
+                            "original_src": "https://leetcode.cn/problems/shortest-matching-substring/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2303.1891955206,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "1397. 找到所有好字符串",
                             "summary": "",
                             "src": "/find-all-good-strings/",
@@ -280,6 +294,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2661.736901362,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3474. 字典序最小的生成字符串",
+                            "summary": "",
+                            "src": "/lexicographically-smallest-generated-string/",
+                            "original_src": "https://leetcode.cn/problems/lexicographically-smallest-generated-string/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2605.3698165497,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -433,7 +461,7 @@ export default{
                 },
                 {
                     "title": "四、字符串哈希",
-                    "summary": "本题单的大多数题目都可以用字符串哈希解决。<br>推荐先把 <a href=\"https://leetcode.cn/problems/find-substring-with-given-hash-value/\">2156. 查找给定哈希值的子串</a> 做了，对理解**多项式哈希**的计算方法有帮助。<br>模板代码见 <a href=\"https://leetcode.cn/problems/construct-string-with-minimum-cost/solutions/2833949/hou-zhui-shu-zu-by-endlesscheng-32h9/\">我的题解</a>，包含单模哈希和双模哈希。<br>",
+                    "summary": "本题单的大多数题目都可以用字符串哈希解决。<br>推荐先把 <a href=\"https://leetcode.cn/problems/find-substring-with-given-hash-value/\">2156. 查找给定哈希值的子串</a> 做了，对理解**多项式哈希**的计算方法有帮助。<br>**模板代码**见 <a href=\"https://leetcode.cn/problems/construct-string-with-minimum-cost/solutions/2833949/hou-zhui-shu-zu-by-endlesscheng-32h9/\">我的题解</a>，包含单模哈希和双模哈希。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -997,7 +1025,7 @@ export default{
                 },
                 {
                     "title": "九、子序列自动机",
-                    "summary": "上面都是和**子串**相关的算法，本节是和**子序列**相关的算法：子序列自动机。<br>虽然名字有些高大上，但实际上只是预处理 $s[i]$ 右侧最近字母 $\\textit{c}$ 的下标而已。<br>",
+                    "summary": "上面都是和**子串**相关的算法，本节是和**子序列**相关的算法：子序列自动机。<br>虽然名字有些高大上，但实际上只是预处理 $\\ge i$ 的最近字母 $\\textit{c}$ 的下标而已。<br>见 <a href=\"https://leetcode.cn/problems/is-subsequence/solutions/2813031/jian-ji-xie-fa-pythonjavaccgojsrust-by-e-mz22/\">讲解</a> 中的「进阶问题」。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -1079,6 +1107,35 @@ export default{
                     "nonLeafChild": [],
                     "isPremium": false,
                     "last_update": ""
+                },
+                {
+                    "title": "十、其他",
+                    "summary": "",
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
+                        {
+                            "title": "3485. 删除元素后 K 个字符串的最长公共前缀",
+                            "summary": "",
+                            "src": "/longest-common-prefix-of-k-strings-after-removal/",
+                            "original_src": "https://leetcode.cn/problems/longest-common-prefix-of-k-strings-after-removal/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        }
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
             ],
             "isPremium": false,
@@ -1086,5 +1143,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-01-29 06:29:56"
+    "last_update": "2025-03-27 01:10:28"
 } as ProblemCategory;

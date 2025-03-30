@@ -268,6 +268,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3462. 提取至多 K 个元素的最大总和",
+                                    "summary": "",
+                                    "src": "/maximum-sum-with-at-most-k-elements/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-sum-with-at-most-k-elements/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1416.0720873451,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3301. 高度互不相同的最大塔高和",
                                     "summary": "",
                                     "src": "/maximize-the-total-height-of-unique-towers/",
@@ -304,20 +318,6 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1454.3901912166,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "3462. 提取至多 K 个元素的最大总和",
-                                    "summary": "",
-                                    "src": "/maximum-sum-with-at-most-k-elements/",
-                                    "original_src": "https://leetcode.cn/problems/maximum-sum-with-at-most-k-elements/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1416.0720873451,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -478,20 +478,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "2333. 最小差值平方和",
-                                    "summary": "",
-                                    "src": "/minimum-sum-of-squared-difference/",
-                                    "original_src": "https://leetcode.cn/problems/minimum-sum-of-squared-difference/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 2011.0496162515,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "3440. 重新安排会议得到最多空余时间 II",
                                     "summary": "",
                                     "src": "/reschedule-meetings-for-maximum-free-time-ii/",
@@ -500,6 +486,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1997.5972097891,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2333. 最小差值平方和",
+                                    "summary": "",
+                                    "src": "/minimum-sum-of-squared-difference/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-sum-of-squared-difference/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2011.0496162515,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -538,6 +538,20 @@ export default{
                                     "summary": "",
                                     "src": "/minimum-health-to-beat-game/",
                                     "original_src": "https://leetcode.cn/problems/minimum-health-to-beat-game/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3476. 最大化任务分配的利润",
+                                    "summary": "",
+                                    "src": "/maximize-profit-from-task-assignment/",
+                                    "original_src": "https://leetcode.cn/problems/maximize-profit-from-task-assignment/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
@@ -1119,20 +1133,6 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1649.2000410344,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "2712. 使所有字符相等的最小成本",
-                                    "summary": "",
-                                    "src": "/minimum-cost-to-make-all-characters-equal/",
-                                    "original_src": "https://leetcode.cn/problems/minimum-cost-to-make-all-characters-equal/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1791.0336923305,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1935,7 +1935,7 @@ export default{
                     "nonLeafChild": [
                         {
                             "title": "§2.1 不相交区间",
-                            "summary": "**变形**：每个区间有各自的分数，从中选一些两两互不相交的区间，最大化得分之和。详见 <a href=\"/lc-rating/list/dynamic_programming\">动态规划题单</a> 中的「§6.4 不相交区间」。<br>",
+                            "summary": "**变形**：每个区间有各自的分数，从中选一些两两互不相交的区间，最大化得分之和。详见 <a href=\"/lc-rating/list/dynamic_programming\">动态规划题单</a> 中的「§5.4 不相交区间」。<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -4091,6 +4091,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3432. 统计元素和差值为偶数的分区方案",
+                                    "summary": "",
+                                    "src": "/count-partitions-with-even-sum-difference/",
+                                    "original_src": "https://leetcode.cn/problems/count-partitions-with-even-sum-difference/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1199.8475039745,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1903. 字符串中的最大奇数",
                                     "summary": "",
                                     "src": "/largest-odd-number-in-string/",
@@ -4113,20 +4127,6 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1265.8320564115,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "3432. 统计元素和差值为偶数的分区方案",
-                                    "summary": "",
-                                    "src": "/count-partitions-with-even-sum-difference/",
-                                    "original_src": "https://leetcode.cn/problems/count-partitions-with-even-sum-difference/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1199.8475039745,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4421,6 +4421,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1771.7317932329,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2712. 使所有字符相等的最小成本",
+                                    "summary": "",
+                                    "src": "/minimum-cost-to-make-all-characters-equal/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-cost-to-make-all-characters-equal/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1791.0336923305,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -5261,6 +5275,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3480. 删除一个冲突对后最大子数组数目",
+                            "summary": "",
+                            "src": "/maximize-subarrays-after-removing-one-conflicting-pair/",
+                            "original_src": "https://leetcode.cn/problems/maximize-subarrays-after-removing-one-conflicting-pair/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "782. 变为棋盘",
                             "summary": "",
                             "src": "/transform-to-chessboard/",
@@ -5383,5 +5411,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-03-05 03:04:24"
+    "last_update": "2025-03-19 13:52:58"
 } as ProblemCategory;
