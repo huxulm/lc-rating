@@ -251,7 +251,7 @@ export default{
                 },
                 {
                     "title": "§1.3 最大子数组和（最大子段和）",
-                    "summary": "有两种做法：<br>1. 定义状态 $f[i]$ 表示以 $a[i]$ 结尾的最大子数组和，不和 $i$ 左边拼起来就是 $f[i]=a[i]$，和 $i$ 左边拼起来就是 $f[i]=f[i-1]+a[i]$，取最大值就得到了状态转移方程 $f[i]=\\max(f[i−1],0)+a[i]$，答案为 $\\max(f)$。这个做法也叫做 Kadane 算法。<br>2. 用前缀和解决。<br>具体见 <a href=\"https://leetcode.cn/problems/maximum-subarray/solution/qian-zhui-he-zuo-fa-ben-zhi-shi-mai-mai-abu71/\">我的题解</a>。<br>**思维扩展**：<br>",
+                    "summary": "有两种做法：<br>1. 定义状态 $f[i]$ 表示以 $a[i]$ 结尾的最大子数组和，不和 $i$ 左边拼起来就是 $f[i]=a[i]$，和 $i$ 左边拼起来就是 $f[i]=f[i-1]+a[i]$，取最大值就得到了状态转移方程 $f[i]=\\max(f[i−1],0)+a[i]$，答案为 $\\max(f)$。这个做法也叫做 Kadane 算法。<br>2. 用 <a href=\"https://leetcode.cn/problems/range-sum-query-immutable/solution/qian-zhui-he-ji-qi-kuo-zhan-fu-ti-dan-py-vaar/\">前缀和</a>，转化成 <a href=\"https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/\">121. 买卖股票的最佳时机</a>。<br>**思维扩展**：<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -361,6 +361,20 @@ export default{
                     "nonLeafChild": [],
                     "isPremium": false,
                     "last_update": ""
+                },
+                {
+                    "title": "思考题",
+                    "summary": "完成本章后，请思考：什么时候要返回 $f[n]$，什么时候要返回 $\\max(f)$？<br>",
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
             ],
             "isPremium": false,
@@ -379,7 +393,7 @@ export default{
             "nonLeafChild": [
                 {
                     "title": "§2.1 基础",
-                    "summary": "",
+                    "summary": "**思维扩展**：<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -522,6 +536,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1798.2282534931,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "1824. 最少侧跳次数",
+                            "summary": "",
+                            "src": "/minimum-sideway-jumps/",
+                            "original_src": "https://leetcode.cn/problems/minimum-sideway-jumps/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1778.4880620629,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -1267,7 +1295,7 @@ export default{
                     "nonLeafChild": [
                         {
                             "title": "§4.1.1 基础",
-                            "summary": "",
+                            "summary": "**思维扩展**：<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -1354,6 +1382,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1823.5831437787,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "718. 最长重复子数组",
+                                    "summary": "",
+                                    "src": "/maximum-length-of-repeated-subarray/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-length-of-repeated-subarray/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1931,6 +1973,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3144. 分割字符频率相等的最少子字符串",
+                            "summary": "",
+                            "src": "/minimum-substring-partition-of-equal-character-frequency/",
+                            "original_src": "https://leetcode.cn/problems/minimum-substring-partition-of-equal-character-frequency/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1917.2052894619,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "1416. 恢复数组",
                             "summary": "",
                             "src": "/restore-the-array/",
@@ -2023,6 +2079,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2695.809667046,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3500. 将数组分割为子数组的最小代价",
+                            "summary": "",
+                            "src": "/minimum-cost-to-divide-array-into-subarrays/",
+                            "original_src": "https://leetcode.cn/problems/minimum-cost-to-divide-array-into-subarrays/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -2240,6 +2310,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3505. 使 K 个子数组内元素相等的最少操作数",
+                            "summary": "",
+                            "src": "/minimum-operations-to-make-elements-within-k-subarrays-equal/",
+                            "original_src": "https://leetcode.cn/problems/minimum-operations-to-make-elements-within-k-subarrays-equal/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "3077. K 个不相交子数组的最大能量值",
                             "summary": "",
                             "src": "/maximum-strength-of-k-disjoint-subarrays/",
@@ -2276,105 +2360,6 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2735.0909781144,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        }
-                    ],
-                    "nonLeafChild": [],
-                    "isPremium": false,
-                    "last_update": ""
-                },
-                {
-                    "title": "§5.4 不相交区间",
-                    "summary": "",
-                    "src": "",
-                    "original_src": "",
-                    "sort": 0,
-                    "isLeaf": false,
-                    "solution": "",
-                    "score": 0,
-                    "leafChild": [
-                        {
-                            "title": "2830. 销售利润最大化",
-                            "summary": "",
-                            "src": "/maximize-the-profit-as-the-salesman/",
-                            "original_src": "https://leetcode.cn/problems/maximize-the-profit-as-the-salesman/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1851.2677996923,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "2008. 出租车的最大盈利",
-                            "summary": "",
-                            "src": "/maximum-earnings-from-taxi/",
-                            "original_src": "https://leetcode.cn/problems/maximum-earnings-from-taxi/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1871.8245218615,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "2054. 两个最好的不重叠活动",
-                            "summary": "",
-                            "src": "/two-best-non-overlapping-events/",
-                            "original_src": "https://leetcode.cn/problems/two-best-non-overlapping-events/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1883.3541964032,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "1235. 规划兼职工作",
-                            "summary": "",
-                            "src": "/maximum-profit-in-job-scheduling/",
-                            "original_src": "https://leetcode.cn/problems/maximum-profit-in-job-scheduling/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 2022.8520613737,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "1751. 最多可以参加的会议数目 II",
-                            "summary": "",
-                            "src": "/maximum-number-of-events-that-can-be-attended-ii/",
-                            "original_src": "https://leetcode.cn/problems/maximum-number-of-events-that-can-be-attended-ii/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 2040.5621123027,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "3414. 不重叠区间的最大得分",
-                            "summary": "",
-                            "src": "/maximum-score-of-non-overlapping-intervals/",
-                            "original_src": "https://leetcode.cn/problems/maximum-score-of-non-overlapping-intervals/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 2723.2974277194,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -2524,34 +2509,6 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "2222. 选择建筑的方案数",
-                            "summary": "",
-                            "src": "/number-of-ways-to-select-buildings/",
-                            "original_src": "https://leetcode.cn/problems/number-of-ways-to-select-buildings/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1656.5588918365,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "1567. 乘积为正数的最长子数组长度",
-                            "summary": "",
-                            "src": "/maximum-length-of-subarray-with-positive-product/",
-                            "original_src": "https://leetcode.cn/problems/maximum-length-of-subarray-with-positive-product/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1710.3243520032,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "2708. 一个小组的最大实力值",
                             "summary": "",
                             "src": "/maximum-strength-of-a-group/",
@@ -2566,14 +2523,14 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "2826. 将三个组排序",
+                            "title": "1567. 乘积为正数的最长子数组长度",
                             "summary": "",
-                            "src": "/sorting-three-groups/",
-                            "original_src": "https://leetcode.cn/problems/sorting-three-groups/",
+                            "src": "/maximum-length-of-subarray-with-positive-product/",
+                            "original_src": "https://leetcode.cn/problems/maximum-length-of-subarray-with-positive-product/",
                             "sort": 0,
                             "isLeaf": true,
                             "solution": null,
-                            "score": 1721.1964988483,
+                            "score": 1710.3243520032,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -2622,20 +2579,6 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "1186. 删除一次得到子数组最大和",
-                            "summary": "",
-                            "src": "/maximum-subarray-sum-with-one-deletion/",
-                            "original_src": "https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1799.4635458535,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "3466. 最大硬币收集量",
                             "summary": "",
                             "src": "/maximum-coin-collection/",
@@ -2665,34 +2608,6 @@ export default{
                     "score": 0,
                     "leafChild": [
                         {
-                            "title": "1262. 可被三整除的最大和",
-                            "summary": "",
-                            "src": "/greatest-sum-divisible-by-three/",
-                            "original_src": "https://leetcode.cn/problems/greatest-sum-divisible-by-three/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1762.0307532652,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "1363. 形成三的最大倍数",
-                            "summary": "",
-                            "src": "/largest-multiple-of-three/",
-                            "original_src": "https://leetcode.cn/problems/largest-multiple-of-three/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1822.9768689716,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "2771. 构造最长非递减子数组",
                             "summary": "",
                             "src": "/longest-non-decreasing-subarray-from-two-arrays/",
@@ -2701,6 +2616,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1791.5102962397,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "1186. 删除一次得到子数组最大和",
+                            "summary": "",
+                            "src": "/maximum-subarray-sum-with-one-deletion/",
+                            "original_src": "https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1799.4635458535,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -3017,20 +2946,6 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "3144. 分割字符频率相等的最少子字符串",
-                            "summary": "",
-                            "src": "/minimum-substring-partition-of-equal-character-frequency/",
-                            "original_src": "https://leetcode.cn/problems/minimum-substring-partition-of-equal-character-frequency/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1917.2052894619,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "871. 最低加油次数",
                             "summary": "",
                             "src": "/minimum-number-of-refueling-stops/",
@@ -3148,7 +3063,106 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "§7.2 合法子序列 DP（特殊子序列 DP）",
+                    "title": "§7.2 不相交区间",
+                    "summary": "",
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
+                        {
+                            "title": "2830. 销售利润最大化",
+                            "summary": "",
+                            "src": "/maximize-the-profit-as-the-salesman/",
+                            "original_src": "https://leetcode.cn/problems/maximize-the-profit-as-the-salesman/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1851.2677996923,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "2008. 出租车的最大盈利",
+                            "summary": "",
+                            "src": "/maximum-earnings-from-taxi/",
+                            "original_src": "https://leetcode.cn/problems/maximum-earnings-from-taxi/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1871.8245218615,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "2054. 两个最好的不重叠活动",
+                            "summary": "",
+                            "src": "/two-best-non-overlapping-events/",
+                            "original_src": "https://leetcode.cn/problems/two-best-non-overlapping-events/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1883.3541964032,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "1235. 规划兼职工作",
+                            "summary": "",
+                            "src": "/maximum-profit-in-job-scheduling/",
+                            "original_src": "https://leetcode.cn/problems/maximum-profit-in-job-scheduling/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2022.8520613737,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "1751. 最多可以参加的会议数目 II",
+                            "summary": "",
+                            "src": "/maximum-number-of-events-that-can-be-attended-ii/",
+                            "original_src": "https://leetcode.cn/problems/maximum-number-of-events-that-can-be-attended-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2040.5621123027,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3414. 不重叠区间的最大得分",
+                            "summary": "",
+                            "src": "/maximum-score-of-non-overlapping-intervals/",
+                            "original_src": "https://leetcode.cn/problems/maximum-score-of-non-overlapping-intervals/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2723.2974277194,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        }
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "§7.3 合法子序列 DP（特殊子序列 DP）",
                     "summary": "计算合法子序列的最长长度、个数、元素和等。<br>一般定义 $f[x]$ 表示以元素 $x$ 结尾的合法子序列的最长长度/个数/元素和，从子序列的倒数第二个数转移过来。<br>**思维扩展**：<br>",
                     "src": "",
                     "original_src": "",
@@ -3180,6 +3194,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1597.1931473887,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "2826. 将三个组排序",
+                            "summary": "",
+                            "src": "/sorting-three-groups/",
+                            "original_src": "https://leetcode.cn/problems/sorting-three-groups/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1721.1964988483,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -3317,7 +3345,7 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "§7.3 矩阵快速幂优化 DP",
+                    "title": "§7.4 矩阵快速幂优化 DP",
                     "summary": "部分题目由于数据范围小，也可以用线性 DP。<br>",
                     "src": "",
                     "original_src": "",
@@ -3472,7 +3500,7 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "§7.4 子矩形 DP",
+                    "title": "§7.5 子矩形 DP",
                     "summary": "",
                     "src": "",
                     "original_src": "",
@@ -3557,7 +3585,7 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "§7.5 多维 DP",
+                    "title": "§7.6 多维 DP",
                     "summary": "",
                     "src": "",
                     "original_src": "",
@@ -3566,6 +3594,34 @@ export default{
                     "solution": "",
                     "score": 0,
                     "leafChild": [
+                        {
+                            "title": "2222. 选择建筑的方案数",
+                            "summary": "",
+                            "src": "/number-of-ways-to-select-buildings/",
+                            "original_src": "https://leetcode.cn/problems/number-of-ways-to-select-buildings/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1656.5588918365,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "2826. 将三个组排序",
+                            "summary": "",
+                            "src": "/sorting-three-groups/",
+                            "original_src": "https://leetcode.cn/problems/sorting-three-groups/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1721.1964988483,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
                         {
                             "title": "2400. 恰好移动 k 步到达某一位置的方法数目",
                             "summary": "",
@@ -3581,14 +3637,14 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "1824. 最少侧跳次数",
+                            "title": "1262. 可被三整除的最大和",
                             "summary": "",
-                            "src": "/minimum-sideway-jumps/",
-                            "original_src": "https://leetcode.cn/problems/minimum-sideway-jumps/",
+                            "src": "/greatest-sum-divisible-by-three/",
+                            "original_src": "https://leetcode.cn/problems/greatest-sum-divisible-by-three/",
                             "sort": 0,
                             "isLeaf": true,
                             "solution": null,
-                            "score": 1778.4880620629,
+                            "score": 1762.0307532652,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -5214,20 +5270,6 @@ export default{
                     "score": 0,
                     "leafChild": [
                         {
-                            "title": "698. 划分为k个相等的子集",
-                            "summary": "",
-                            "src": "/partition-to-k-equal-sum-subsets/",
-                            "original_src": "https://leetcode.cn/problems/partition-to-k-equal-sum-subsets/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": null,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "1411. 给 N x 3 网格图涂色的方案数",
                             "summary": "",
                             "src": "/number-of-ways-to-paint-n-3-grid/",
@@ -5236,6 +5278,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1844.6289439644,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "698. 划分为k个相等的子集",
+                            "summary": "",
+                            "src": "/partition-to-k-equal-sum-subsets/",
+                            "original_src": "https://leetcode.cn/problems/partition-to-k-equal-sum-subsets/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -5513,20 +5569,6 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "2843. 统计对称整数的数目",
-                    "summary": "",
-                    "src": "/count-symmetric-integers/",
-                    "original_src": "https://leetcode.cn/problems/count-symmetric-integers/",
-                    "sort": 0,
-                    "isLeaf": true,
-                    "solution": null,
-                    "score": 1269.8118442786,
-                    "leafChild": [],
-                    "nonLeafChild": [],
-                    "isPremium": false,
-                    "last_update": ""
-                },
-                {
                     "title": "788. 旋转数字",
                     "summary": "",
                     "src": "/rotated-digits/",
@@ -5647,6 +5689,20 @@ export default{
                     "isLeaf": true,
                     "solution": null,
                     "score": 2367.4705934718,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "2843. 统计对称整数的数目",
+                    "summary": "",
+                    "src": "/count-symmetric-integers/",
+                    "original_src": "https://leetcode.cn/problems/count-symmetric-integers/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 1269.8118442786,
                     "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
@@ -5798,7 +5854,7 @@ export default{
             "last_update": ""
         },
         {
-            "title": "十一、数据结构优化 DP",
+            "title": "十一、优化 DP",
             "summary": "",
             "src": "",
             "original_src": "",
@@ -6416,8 +6472,80 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "§11.6 其他优化 DP",
-                    "summary": "**扩展：WQS 二分**<br>把最多选 $k$ 个物品的问题（时间复杂度高）转换成选任意个物品的问题（时间复杂度低）。<br>",
+                    "title": "§11.6 斜率优化 DP",
+                    "summary": "也叫凸包优化/凸壳优化（CHT，Convex Hull Trick）。<br>",
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
+                        {
+                            "title": "3500. 将数组分割为子数组的最小代价",
+                            "summary": "",
+                            "src": "/minimum-cost-to-divide-array-into-subarrays/",
+                            "original_src": "https://leetcode.cn/problems/minimum-cost-to-divide-array-into-subarrays/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        }
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "§11.7 WQS 二分优化 DP",
+                    "summary": "把最多选 $k$ 个物品的问题（时间复杂度高）转换成选任意个物品的问题（时间复杂度低）。<br>",
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
+                        {
+                            "title": "188. 买卖股票的最佳时机 IV",
+                            "summary": "",
+                            "src": "/best-time-to-buy-and-sell-stock-iv/",
+                            "original_src": "https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "2209. 用地毯覆盖后的最少白色砖块",
+                            "summary": "",
+                            "src": "/minimum-white-tiles-after-covering-with-carpets/",
+                            "original_src": "https://leetcode.cn/problems/minimum-white-tiles-after-covering-with-carpets/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2105.8582288624,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        }
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "§11.8 其他优化 DP",
+                    "summary": "",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -6535,34 +6663,6 @@ export default{
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": true,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "188. 买卖股票的最佳时机 IV",
-                            "summary": "",
-                            "src": "/best-time-to-buy-and-sell-stock-iv/",
-                            "original_src": "https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": null,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "2209. 用地毯覆盖后的最少白色砖块",
-                            "summary": "",
-                            "src": "/minimum-white-tiles-after-covering-with-carpets/",
-                            "original_src": "https://leetcode.cn/problems/minimum-white-tiles-after-covering-with-carpets/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 2105.8582288624,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
                             "last_update": ""
                         }
                     ],
@@ -7574,6 +7674,20 @@ export default{
                     "last_update": ""
                 },
                 {
+                    "title": "1363. 形成三的最大倍数",
+                    "summary": "",
+                    "src": "/largest-multiple-of-three/",
+                    "original_src": "https://leetcode.cn/problems/largest-multiple-of-three/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 1822.9768689716,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
                     "title": "1449. 数位成本和为目标值的最大数字",
                     "summary": "",
                     "src": "/form-largest-integer-with-digits-that-add-up-to-target/",
@@ -8115,20 +8229,6 @@ export default{
                     "isLeaf": true,
                     "solution": null,
                     "score": 1912.8455659711,
-                    "leafChild": [],
-                    "nonLeafChild": [],
-                    "isPremium": false,
-                    "last_update": ""
-                },
-                {
-                    "title": "1888. 使二进制字符串字符交替的最少反转次数",
-                    "summary": "",
-                    "src": "/minimum-number-of-flips-to-make-the-binary-string-alternating/",
-                    "original_src": "https://leetcode.cn/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/",
-                    "sort": 0,
-                    "isLeaf": true,
-                    "solution": null,
-                    "score": 2005.5862669078,
                     "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
@@ -9138,5 +9238,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-03-26 05:53:08"
+    "last_update": "2025-04-04 02:33:25"
 } as ProblemCategory;

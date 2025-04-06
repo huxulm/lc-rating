@@ -5095,6 +5095,20 @@ export default{
                                     "nonLeafChild": [],
                                     "isPremium": false,
                                     "last_update": ""
+                                },
+                                {
+                                    "title": "2002. 两个回文子序列长度的最大乘积",
+                                    "summary": "",
+                                    "src": "/maximum-product-of-the-length-of-two-palindromic-subsequences/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1869.402439128,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
                                 }
                             ],
                             "nonLeafChild": [],
@@ -5204,20 +5218,6 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": null,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "816. 模糊坐标",
-                                    "summary": "",
-                                    "src": "/ambiguous-coordinates/",
-                                    "original_src": "https://leetcode.cn/problems/ambiguous-coordinates/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1707.8992927609,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -5483,7 +5483,7 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "§4.6 爆搜+剪枝",
+                            "title": "§4.6 搜索",
                             "summary": "",
                             "src": "",
                             "original_src": "",
@@ -5571,6 +5571,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1830.3165569278,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2002. 两个回文子序列长度的最大乘积",
+                                    "summary": "",
+                                    "src": "/maximum-product-of-the-length-of-two-palindromic-subsequences/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1869.402439128,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -5956,5 +5970,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-03-24 03:34:22"
+    "last_update": "2025-04-04 14:52:48"
 } as ProblemCategory;

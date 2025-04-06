@@ -128,20 +128,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "1679. K 和数对的最大数目",
-                                    "summary": "",
-                                    "src": "/max-number-of-k-sum-pairs/",
-                                    "original_src": "https://leetcode.cn/problems/max-number-of-k-sum-pairs/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1345.737168609,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "219. 存在重复元素 II",
                                     "summary": "",
                                     "src": "/contains-duplicate-ii/",
@@ -150,6 +136,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "1679. K 和数对的最大数目",
+                                    "summary": "",
+                                    "src": "/max-number-of-k-sum-pairs/",
+                                    "original_src": "https://leetcode.cn/problems/max-number-of-k-sum-pairs/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1345.737168609,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -248,6 +248,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1583.212966224,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2364. 统计坏数对的数目",
+                                    "summary": "",
+                                    "src": "/count-number-of-bad-pairs/",
+                                    "original_src": "https://leetcode.cn/problems/count-number-of-bad-pairs/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1622.2389577197,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4675,6 +4689,20 @@ export default{
                                     "nonLeafChild": [],
                                     "isPremium": true,
                                     "last_update": ""
+                                },
+                                {
+                                    "title": "3506. 查找消除细菌菌株所需时间 II",
+                                    "summary": "",
+                                    "src": "/find-time-required-to-eliminate-bacterial-strains-ii/",
+                                    "original_src": "https://leetcode.cn/problems/find-time-required-to-eliminate-bacterial-strains-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
                                 }
                             ],
                             "nonLeafChild": [],
@@ -5208,6 +5236,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2395.8765531206,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3505. 使 K 个子数组内元素相等的最少操作数",
+                                    "summary": "",
+                                    "src": "/minimum-operations-to-make-elements-within-k-subarrays-equal/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-operations-to-make-elements-within-k-subarrays-equal/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -7296,6 +7338,20 @@ export default{
                     "last_update": ""
                 },
                 {
+                    "title": "3501. 操作后最大活跃区段数 II",
+                    "summary": "",
+                    "src": "/maximize-active-section-with-trade-ii/",
+                    "original_src": "https://leetcode.cn/problems/maximize-active-section-with-trade-ii/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
                     "title": "LCP 81. 与非的谜题",
                     "summary": "",
                     "src": "/ryfUiz/",
@@ -7768,5 +7824,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-03-29 12:05:46"
+    "last_update": "2025-04-03 05:31:50"
 } as ProblemCategory;

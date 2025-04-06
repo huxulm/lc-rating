@@ -1223,20 +1223,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "2193. 得到回文串的最少操作次数",
-                                    "summary": "",
-                                    "src": "/minimum-number-of-moves-to-make-palindrome/",
-                                    "original_src": "https://leetcode.cn/problems/minimum-number-of-moves-to-make-palindrome/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 2090.6800569319,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "2528. 最大化城市的最小电量",
                                     "summary": "",
                                     "src": "/maximize-the-minimum-powered-city/",
@@ -1624,7 +1610,7 @@ export default{
                         },
                         {
                             "title": "§1.8 相邻不同",
-                            "summary": "给定正整数数组，每次操作，把数组中的两个数各减少一，并去掉变成 $0$ 的数。目标：使最后剩下的数最小，或者最大化操作次数。<br>由于每次操作的都是两个下标不同的数，把这些下标按顺序拼接，可以构造出一个相邻元素不同的序列。例如 $(1,2),(2,3),(3,4)$ 这三个操作，可以拼接成 $[1,2,3,2,3,4]$。<br><a href=\"https://leetcode.cn/problems/reorganize-string/solution/tan-xin-gou-zao-pai-xu-bu-pai-xu-liang-c-h9jg/\">证明/构造方案</a><br>**扩展**：<br>",
+                            "summary": "给定正整数数组，每次操作，把数组中的两个数各减少一，并去掉变成 $0$ 的数。目标：使最后剩下的数最小，或者最大化操作次数。<br>由于每次操作的都是两个下标不同的数，把这些下标按顺序拼接，可以构造出一个相邻元素不同的序列。例如 $(1,2),(2,3),(3,4)$ 这三个操作，可以拼接成 $[1,2,3,2,3,4]$。<br><a href=\"https://leetcode.cn/problems/maximum-number-of-weeks-for-which-you-can-work/solution/tan-xin-ju-ti-gou-zao-fang-an-pythonjava-3xyq/\">证明</a><br><a href=\"https://leetcode.cn/problems/reorganize-string/solution/tan-xin-gou-zao-pai-xu-bu-pai-xu-liang-c-h9jg/\">输出具体构造</a><br>**扩展**：<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -1711,6 +1697,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1681.3263732456,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3495. 使数组元素都变为零的最少操作次数",
+                                    "summary": "",
+                                    "src": "/minimum-operations-to-make-array-elements-zero/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-operations-to-make-array-elements-zero/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -5411,5 +5411,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-03-19 13:52:58"
+    "last_update": "2025-04-03 01:39:09"
 } as ProblemCategory;
