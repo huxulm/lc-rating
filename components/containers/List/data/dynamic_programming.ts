@@ -783,20 +783,6 @@ export default{
                     "score": 0,
                     "leafChild": [
                         {
-                            "title": "2915. 和为目标值的最长子序列的长度",
-                            "summary": "",
-                            "src": "/length-of-the-longest-subsequence-that-sums-to-target/",
-                            "original_src": "https://leetcode.cn/problems/length-of-the-longest-subsequence-that-sums-to-target/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1658.8190087768,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "416. 分割等和子集",
                             "summary": "",
                             "src": "/partition-equal-subset-sum/",
@@ -819,6 +805,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "2915. 和为目标值的最长子序列的长度",
+                            "summary": "",
+                            "src": "/length-of-the-longest-subsequence-that-sums-to-target/",
+                            "original_src": "https://leetcode.cn/problems/length-of-the-longest-subsequence-that-sums-to-target/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1658.8190087768,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -6482,6 +6482,20 @@ export default{
                     "score": 0,
                     "leafChild": [
                         {
+                            "title": "3494. 酿造药水需要的最少总时间",
+                            "summary": "",
+                            "src": "/find-the-minimum-amount-of-time-to-brew-potions/",
+                            "original_src": "https://leetcode.cn/problems/find-the-minimum-amount-of-time-to-brew-potions/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "3500. 将数组分割为子数组的最小代价",
                             "summary": "",
                             "src": "/minimum-cost-to-divide-array-into-subarrays/",
@@ -9078,6 +9092,20 @@ export default{
                     "last_update": ""
                 },
                 {
+                    "title": "3509. 最大化交错和为 K 的子序列乘积",
+                    "summary": "",
+                    "src": "/maximum-product-of-subsequences-with-an-alternating-sum-equal-to-k/",
+                    "original_src": "https://leetcode.cn/problems/maximum-product-of-subsequences-with-an-alternating-sum-equal-to-k/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
                     "title": "2060. 同源字符串检测",
                     "summary": "",
                     "src": "/check-if-an-original-string-exists-given-two-encoded-strings/",
@@ -9238,5 +9266,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-04-04 02:33:25"
+    "last_update": "2025-04-08 21:50:55"
 } as ProblemCategory;

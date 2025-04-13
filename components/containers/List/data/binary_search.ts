@@ -269,6 +269,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3508. 设计路由器",
+                                    "summary": "",
+                                    "src": "/implement-router/",
+                                    "original_src": "https://leetcode.cn/problems/implement-router/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "658. 找到 K 个最接近的元素",
                                     "summary": "",
                                     "src": "/find-k-closest-elements/",
@@ -785,6 +799,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2648.1748409542,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "LCP 78. 城墙防线",
+                                    "summary": "",
+                                    "src": "/Nsibyl/",
+                                    "original_src": "https://leetcode.cn/problems/Nsibyl/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1860,5 +1888,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-03-24 07:30:07"
+    "last_update": "2025-04-09 01:26:10"
 } as ProblemCategory;

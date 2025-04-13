@@ -103,6 +103,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "1342. 将数字变成 0 的操作次数",
+                            "summary": "",
+                            "src": "/number-of-steps-to-reduce-a-number-to-zero/",
+                            "original_src": "https://leetcode.cn/problems/number-of-steps-to-reduce-a-number-to-zero/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1163.6047095526,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "476. 数字的补数",
                             "summary": "",
                             "src": "/number-complement/",
@@ -682,7 +696,7 @@ export default{
                     "nonLeafChild": [
                         {
                             "title": "LogTrick",
-                            "summary": "原地写法：<a href=\"https://leetcode.cn/problems/find-subarray-with-bitwise-or-closest-to-k/solutions/2798206/li-yong-and-de-xing-zhi-pythonjavacgo-by-gg4d/\">讲解</a><br>额外维护一个数组：<a href=\"https://leetcode.cn/problems/smallest-subarrays-with-maximum-bitwise-or/solution/by-endlesscheng-zai1/\">讲解（方法二）</a><br>",
+                            "summary": "原地写法：<a href=\"https://leetcode.cn/problems/find-subarray-with-bitwise-or-closest-to-k/solutions/2798206/li-yong-and-de-xing-zhi-pythonjavacgo-by-gg4d/\">讲解</a><br>额外维护一个数组：<a href=\"https://leetcode.cn/problems/smallest-subarrays-with-maximum-bitwise-or/solution/by-endlesscheng-zai1/\">讲解（方法二）</a><br>**思维扩展**：<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -769,6 +783,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2133.1003195919,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2654. 使数组所有元素变成 1 的最少操作次数",
+                                    "summary": "",
+                                    "src": "/minimum-number-of-operations-to-make-all-array-elements-equal-to-1/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-number-of-operations-to-make-all-array-elements-equal-to-1/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1928.7961204946,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -927,7 +955,7 @@ export default{
                             "original_src": "https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array/",
                             "sort": 0,
                             "isLeaf": true,
-                            "solution": "/maximum-xor-of-two-numbers-in-an-array/solution/tu-jie-jian-ji-gao-xiao-yi-tu-miao-dong-1427d/",
+                            "solution": null,
                             "score": null,
                             "leafChild": [],
                             "nonLeafChild": [],
@@ -1564,5 +1592,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-01-10 12:03:56"
+    "last_update": "2025-04-08 00:31:24"
 } as ProblemCategory;
