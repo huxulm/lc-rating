@@ -1147,7 +1147,7 @@ export default{
                             "nonLeafChild": [
                                 {
                                     "title": "§2.3.1 越长越合法",
-                                    "summary": "一般要写 `ans += left`。<br>滑动窗口的内层循环结束时，右端点**固定**在 $\\textit{right}$，左端点在 $0,1,2,\\ldots,\\textit{left}-1$ 的所有子数组（子串）都是合法的，这一共有 $\\textit{left}$ 个。<br>",
+                                    "summary": "一般要写 `ans += left`。<br>内层循环结束后，$[\\textit{left},\\textit{right}]$ 这个子数组是不满足题目要求的，但在退出循环之前的最后一轮循环，$[\\textit{left}-1,\\textit{right}]$ 是满足题目要求的。由于子数组越长，越能满足题目要求，所以除了 $[\\textit{left}-1,\\textit{right}]$，还有 $[\\textit{left}-2,\\textit{right}],[\\textit{left}-3,\\textit{right}],\\ldots,[0,\\textit{right}]$ 都是满足要求的。也就是说，当右端点**固定**在 $\\textit{right}$ 时，左端点在 $0,1,2,\\ldots,\\textit{left}-1$ 的所有子数组都是满足要求的，这一共有 $\\textit{left}$ 个。<br>",
                                     "src": "",
                                     "original_src": "",
                                     "sort": 0,
@@ -1260,7 +1260,7 @@ export default{
                                 },
                                 {
                                     "title": "§2.3.2 越短越合法",
-                                    "summary": "一般要写 `ans += right - left + 1`。<br>滑动窗口的内层循环结束时，右端点**固定**在 $\\textit{right}$，左端点在 $\\textit{left},\\textit{left}+1,\\ldots,\\textit{right}$ 的所有子数组（子串）都是合法的，这一共有 $\\textit{right}-\\textit{left}+1$ 个。<br>**思维扩展（选做）**<br>",
+                                    "summary": "一般要写 `ans += right - left + 1`。<br>内层循环结束后，$[\\textit{left},\\textit{right}]$ 这个子数组是满足题目要求的。由于子数组越短，越能满足题目要求，所以除了 $[\\textit{left},\\textit{right}]$，还有 $[\\textit{left}+1,\\textit{right}],[\\textit{left}+2,\\textit{right}],\\ldots,[\\textit{right},\\textit{right}]$ 都是满足要求的。也就是说，当右端点**固定**在 $\\textit{right}$ 时，左端点在 $\\textit{left},\\textit{left}+1,\\textit{left}+2,\\ldots,\\textit{right}$ 的所有子数组都是满足要求的，这一共有 $\\textit{right}-\\textit{left}+1$ 个。<br>**思维扩展（选做）**<br>",
                                     "src": "",
                                     "original_src": "",
                                     "sort": 0,
@@ -1585,8 +1585,8 @@ export default{
                             ],
                             "nonLeafChild": [
                                 {
-                                    "title": "滑窗的内容到这里就结束了，可以去刷下一个题单（二分算法）。",
-                                    "summary": "---<br>---<br>",
+                                    "title": "⚠ 滑窗的内容到这里就结束了，可以去刷下一个题单。",
+                                    "summary": "刷题路线请看 <a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题</a>。<br>---<br>---<br>",
                                     "src": "",
                                     "original_src": "",
                                     "sort": 0,
@@ -1762,6 +1762,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1165.8838207286,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2563. 统计公平数对的数目",
+                                    "summary": "",
+                                    "src": "/count-the-number-of-fair-pairs/",
+                                    "original_src": "https://leetcode.cn/problems/count-the-number-of-fair-pairs/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1720.7470612766,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -3194,6 +3208,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3499. 操作后最大活跃区段数 I",
+                            "summary": "",
+                            "src": "/maximize-active-section-with-trade-i/",
+                            "original_src": "https://leetcode.cn/problems/maximize-active-section-with-trade-i/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "2948. 交换得到字典序最小的数组",
                             "summary": "",
                             "src": "/make-lexicographically-smallest-array-by-swapping-elements/",
@@ -3302,5 +3330,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-03-29 22:11:44"
+    "last_update": "2025-04-19 00:05:51"
 } as ProblemCategory;

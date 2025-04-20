@@ -577,6 +577,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "1534. 统计好三元组",
+                                    "summary": "",
+                                    "src": "/count-good-triplets/",
+                                    "original_src": "https://leetcode.cn/problems/count-good-triplets/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1279.3383966145,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3455. 最短匹配子字符串",
                                     "summary": "",
                                     "src": "/shortest-matching-substring/",
@@ -3551,6 +3565,20 @@ export default{
                             "score": 0,
                             "leafChild": [
                                 {
+                                    "title": "3508. 设计路由器",
+                                    "summary": "",
+                                    "src": "/implement-router/",
+                                    "original_src": "https://leetcode.cn/problems/implement-router/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "225. 用队列实现栈",
                                     "summary": "",
                                     "src": "/implement-stack-using-queues/",
@@ -3644,6 +3672,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1192.9770230345,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2071. 你可以安排的最多任务数目",
+                                    "summary": "",
+                                    "src": "/maximum-number-of-tasks-you-can-assign/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-number-of-tasks-you-can-assign/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2648.1748409542,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -3757,20 +3799,6 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2456.3900212097,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "2071. 你可以安排的最多任务数目",
-                                    "summary": "",
-                                    "src": "/maximum-number-of-tasks-you-can-assign/",
-                                    "original_src": "https://leetcode.cn/problems/maximum-number-of-tasks-you-can-assign/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 2648.1748409542,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -5157,6 +5185,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3510. 移除最小数对使数组有序 II",
+                                    "summary": "",
+                                    "src": "/minimum-pair-removal-to-sort-array-ii/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-pair-removal-to-sort-array-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3391. 设计一个高效的层跟踪三维二进制矩阵",
                                     "summary": "",
                                     "src": "/design-a-3d-binary-matrix-with-efficient-layer-tracking/",
@@ -5370,34 +5412,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "211. 添加与搜索单词 - 数据结构设计",
-                                    "summary": "",
-                                    "src": "/design-add-and-search-words-data-structure/",
-                                    "original_src": "https://leetcode.cn/problems/design-add-and-search-words-data-structure/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": null,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "14. 最长公共前缀",
-                                    "summary": "",
-                                    "src": "/longest-common-prefix/",
-                                    "original_src": "https://leetcode.cn/problems/longest-common-prefix/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": null,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "648. 单词替换",
                                     "summary": "",
                                     "src": "/replace-words/",
@@ -5412,10 +5426,10 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "677. 键值映射",
+                                    "title": "720. 词典中最长的单词",
                                     "summary": "",
-                                    "src": "/map-sum-pairs/",
-                                    "original_src": "https://leetcode.cn/problems/map-sum-pairs/",
+                                    "src": "/longest-word-in-dictionary/",
+                                    "original_src": "https://leetcode.cn/problems/longest-word-in-dictionary/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
@@ -5426,10 +5440,24 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "720. 词典中最长的单词",
+                                    "title": "2416. 字符串的前缀分数和",
                                     "summary": "",
-                                    "src": "/longest-word-in-dictionary/",
-                                    "original_src": "https://leetcode.cn/problems/longest-word-in-dictionary/",
+                                    "src": "/sum-of-prefix-scores-of-strings/",
+                                    "original_src": "https://leetcode.cn/problems/sum-of-prefix-scores-of-strings/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1725.1995150882,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "677. 键值映射",
+                                    "summary": "",
+                                    "src": "/map-sum-pairs/",
+                                    "original_src": "https://leetcode.cn/problems/map-sum-pairs/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
@@ -5476,20 +5504,6 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1632.0191837349,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "2416. 字符串的前缀分数和",
-                                    "summary": "",
-                                    "src": "/sum-of-prefix-scores-of-strings/",
-                                    "original_src": "https://leetcode.cn/problems/sum-of-prefix-scores-of-strings/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1725.1995150882,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -5552,6 +5566,20 @@ export default{
                             "solution": "",
                             "score": 0,
                             "leafChild": [
+                                {
+                                    "title": "211. 添加与搜索单词 - 数据结构设计",
+                                    "summary": "",
+                                    "src": "/design-add-and-search-words-data-structure/",
+                                    "original_src": "https://leetcode.cn/problems/design-add-and-search-words-data-structure/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
                                 {
                                     "title": "676. 实现一个魔法字典",
                                     "summary": "",
@@ -6880,6 +6908,34 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3515. 带权树中的最短路径",
+                                    "summary": "",
+                                    "src": "/shortest-path-in-a-weighted-tree/",
+                                    "original_src": "https://leetcode.cn/problems/shortest-path-in-a-weighted-tree/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "LCP 05. 发 LeetCoin",
+                                    "summary": "",
+                                    "src": "/coin-bonus/",
+                                    "original_src": "https://leetcode.cn/problems/coin-bonus/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1505. 最多 K 次交换相邻数位后得到的最小整数",
                                     "summary": "",
                                     "src": "/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits/",
@@ -7516,20 +7572,6 @@ export default{
                             "nonLeafChild": [],
                             "isPremium": false,
                             "last_update": ""
-                        },
-                        {
-                            "title": "LCP 05. 发 LeetCoin",
-                            "summary": "",
-                            "src": "/coin-bonus/",
-                            "original_src": "https://leetcode.cn/problems/coin-bonus/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": null,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
                         }
                     ],
                     "nonLeafChild": [],
@@ -7824,5 +7866,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-04-03 05:31:50"
+    "last_update": "2025-04-19 02:15:55"
 } as ProblemCategory;

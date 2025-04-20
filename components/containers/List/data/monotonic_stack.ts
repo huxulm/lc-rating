@@ -134,7 +134,7 @@ export default{
                         },
                         {
                             "title": "进阶（选做）",
-                            "summary": "",
+                            "summary": "**思维扩展**：<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -151,34 +151,6 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1570.8347522104,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "962. 最大宽度坡",
-                                    "summary": "",
-                                    "src": "/maximum-width-ramp/",
-                                    "original_src": "https://leetcode.cn/problems/maximum-width-ramp/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1607.80608595,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "1124. 表现良好的最长时间段",
-                                    "summary": "",
-                                    "src": "/longest-well-performing-interval/",
-                                    "original_src": "https://leetcode.cn/problems/longest-well-performing-interval/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1908.3866125757,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -364,6 +336,34 @@ export default{
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "962. 最大宽度坡",
+                                    "summary": "",
+                                    "src": "/maximum-width-ramp/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-width-ramp/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1607.80608595,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "1124. 表现良好的最长时间段",
+                                    "summary": "",
+                                    "src": "/longest-well-performing-interval/",
+                                    "original_src": "https://leetcode.cn/problems/longest-well-performing-interval/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1908.3866125757,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
                                     "last_update": ""
                                 }
                             ],
@@ -720,5 +720,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-03-25 08:28:47"
+    "last_update": "2025-04-16 12:50:01"
 } as ProblemCategory;
