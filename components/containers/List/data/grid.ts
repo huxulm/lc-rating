@@ -1,7 +1,7 @@
 import ProblemCategory from "@components/ProblemCatetory";
 
 export default{
-    "title": "分享丨【题单】网格图（DFS/BFS/综合应用）",
+    "title": "分享丨【算法题单】网格图（DFS/BFS/综合应用）",
     "summary": "",
     "src": "",
     "original_src": "https://leetcode.cn/circle/discuss/YiXPXW",
@@ -1005,6 +1005,20 @@ export default{
                     "nonLeafChild": [],
                     "isPremium": false,
                     "last_update": ""
+                },
+                {
+                    "title": "算法题单",
+                    "summary": "<a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题？</a><br>1. <a href=\"/lc-rating/list/sliding_window\">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a><br>2. <a href=\"/lc-rating/list/binary_search\">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a><br>3. <a href=\"/lc-rating/list/monotonic_stack\">单调栈（基础/矩形面积/贡献法/最小字典序）</a><br>4. <a href=\"/lc-rating/list/grid\">网格图（DFS/BFS/综合应用）</a><br>5. <a href=\"/lc-rating/list/bitwise_operations\">位运算（基础/性质/拆位/试填/恒等式/思维）</a><br>6. <a href=\"/lc-rating/list/graph\">图论算法（DFS/BFS/拓扑排序/最短路/最小生成树/二分图/基环树/欧拉路径）</a><br>7. <a href=\"/lc-rating/list/dynamic_programming\">动态规划（入门/背包/划分/状态机/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a><br>8. <a href=\"/lc-rating/list/data_structure\">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a><br>9. <a href=\"/lc-rating/list/math\">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a><br>10. <a href=\"/lc-rating/list/greedy\">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a><br>11. <a href=\"/lc-rating/list/trees\">链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）</a><br>12. <a href=\"/lc-rating/list/string\">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a><br>如果你发现有题目可以补充进来，欢迎评论反馈。<br>",
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
             ],
             "isPremium": false,
@@ -1012,5 +1026,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-02-24 01:46:47"
+    "last_update": "2025-04-25 03:19:47"
 } as ProblemCategory;

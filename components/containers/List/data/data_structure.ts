@@ -1,7 +1,7 @@
 import ProblemCategory from "@components/ProblemCatetory";
 
 export default{
-    "title": "分享丨【题单】常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）",
+    "title": "分享丨【算法题单】常用数据结构（前缀和/栈/队列/堆/字典树/并查集/树状数组/线段树）",
     "summary": "",
     "src": "",
     "original_src": "https://leetcode.cn/circle/discuss/mOr1u6",
@@ -80,6 +80,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1435.9559888935,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "1128. 等价多米诺骨牌对的数量",
+                                    "summary": "",
+                                    "src": "/number-of-equivalent-domino-pairs/description/",
+                                    "original_src": "https://leetcode.cn/problems/number-of-equivalent-domino-pairs/description/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1332.622596763,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -2210,6 +2224,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3529. 统计水平子串和垂直子串重叠格子的数目",
+                                    "summary": "",
+                                    "src": "/count-cells-in-overlapping-horizontal-and-vertical-substrings/",
+                                    "original_src": "https://leetcode.cn/problems/count-cells-in-overlapping-horizontal-and-vertical-substrings/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2528. 最大化城市的最小电量",
                                     "summary": "",
                                     "src": "/maximize-the-minimum-powered-city/",
@@ -3565,6 +3593,20 @@ export default{
                             "score": 0,
                             "leafChild": [
                                 {
+                                    "title": "1670. 设计前中后队列",
+                                    "summary": "",
+                                    "src": "/design-front-middle-back-queue/",
+                                    "original_src": "https://leetcode.cn/problems/design-front-middle-back-queue/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1610.1866391145,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3508. 设计路由器",
                                     "summary": "",
                                     "src": "/implement-router/",
@@ -3572,7 +3614,7 @@ export default{
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1851.1720518145,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -3633,20 +3675,6 @@ export default{
                                     "nonLeafChild": [],
                                     "isPremium": false,
                                     "last_update": ""
-                                },
-                                {
-                                    "title": "1670. 设计前中后队列",
-                                    "summary": "",
-                                    "src": "/design-front-middle-back-queue/",
-                                    "original_src": "https://leetcode.cn/problems/design-front-middle-back-queue/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1610.1866391145,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
                                 }
                             ],
                             "nonLeafChild": [],
@@ -3698,7 +3726,7 @@ export default{
                         },
                         {
                             "title": "§4.4 单调队列",
-                            "summary": "个人觉得叫**单调双端队列**更准确。<br><a href=\"https://www.bilibili.com/video/BV1bM411X72E/\">原理讲解</a><br>",
+                            "summary": "个人觉得叫**单调双端队列**更准确。<br>单调队列 = 滑动窗口 + 单调栈。<br>**问**：入队、出队、更新答案，这三步的顺序如何思考？<br>**答**：有两种情况。如果更新答案时，用到的数据包含当前元素，那么就需要先入队，再更新答案；如果用到的数据不包含当前元素，那么就需要先更新答案，再入队。至于出队，一般写在前面，每遍历到一个新的元素，就看看队首元素是否失效（不满足要求），失效则弹出队首。<br><a href=\"https://www.bilibili.com/video/BV1bM411X72E/\">原理讲解</a><br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -4186,6 +4214,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3478. 选出和最大的 K 个元素",
+                                    "summary": "",
+                                    "src": "/choose-k-elements-with-maximum-sum/",
+                                    "original_src": "https://leetcode.cn/problems/choose-k-elements-with-maximum-sum/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1753.278205425,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2462. 雇佣 K 位工人的总代价",
                                     "summary": "",
                                     "src": "/total-cost-to-hire-k-workers/",
@@ -4208,20 +4250,6 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1797.7466000366,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "3478. 选出和最大的 K 个元素",
-                                    "summary": "",
-                                    "src": "/choose-k-elements-with-maximum-sum/",
-                                    "original_src": "https://leetcode.cn/problems/choose-k-elements-with-maximum-sum/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -5192,7 +5220,7 @@ export default{
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2608.014730401,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -5291,7 +5319,7 @@ export default{
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2538.8958579924,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -6023,6 +6051,20 @@ export default{
                                     "summary": "",
                                     "src": "/properties-graph/",
                                     "original_src": "https://leetcode.cn/problems/properties-graph/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1565.0047379604,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3532. 针对图的路径存在性查询 I",
+                                    "summary": "",
+                                    "src": "/path-existence-queries-in-a-graph-i/",
+                                    "original_src": "https://leetcode.cn/problems/path-existence-queries-in-a-graph-i/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
@@ -6915,7 +6957,7 @@ export default{
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2312.2207190263,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -7237,7 +7279,7 @@ export default{
                         },
                         {
                             "title": "§8.3 线段树（无区间更新）",
-                            "summary": "线段树本质是二叉树，在学习之前，建议先做做 <a href=\"https://leetcode.cn/problems/maximum-depth-of-binary-tree/\">104. 二叉树的最大深度</a> 和 <a href=\"https://leetcode.cn/problems/minimum-depth-of-binary-tree/\">111. 二叉树的最小深度</a>（自底向上写法），当作热身。<br><a href=\"https://www.bilibili.com/video/BV15gRaYZE5o/\">线段树：为什么要这样设计？</a> 理解线段树发明的动机。<br>基础模板代码如下。为方便入门理解，我没有做复杂封装。通用模板代码可以参考 AtCoder Library 的 <a href=\"https://github.com/atcoder/ac-library/blob/master/atcoder/segtree.hpp\">segtree.hpp</a>。<br>```py [sol-Python3]<br>",
+                            "summary": "线段树本质是二叉树，在学习之前，建议先做做 <a href=\"https://leetcode.cn/problems/maximum-depth-of-binary-tree/\">104. 二叉树的最大深度</a> 和 <a href=\"https://leetcode.cn/problems/minimum-depth-of-binary-tree/\">111. 二叉树的最小深度</a>（自底向上写法），当作热身。<br><a href=\"https://www.bilibili.com/video/BV15gRaYZE5o/\">线段树：为什么要这样设计？</a> 理解线段树发明的动机。<br>把任意区间用 $\\mathcal{O}(\\log n)$ 个区间表示，线段树的每个节点记录对应区间的信息。<br>- **询问**：把询问区间拆分成 $\\mathcal{O}(\\log n)$ 个区间，对应着线段树的 $\\mathcal{O}(\\log n)$ 个节点，把这 $\\mathcal{O}(\\log n)$ 个节点的信息合并，即为答案。<br>- **单点更新**：有 $\\mathcal{O}(\\log n)$ 个区间包含被修改的位置，需要更新 $\\mathcal{O}(\\log n)$ 个节点的信息。<br>基础模板代码如下。为方便入门理解，我没有做复杂封装。通用模板代码可以参考 AtCoder Library 的 <a href=\"https://github.com/atcoder/ac-library/blob/master/atcoder/segtree.hpp\">segtree.hpp</a>。<br>```py [sol-Python3]<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -7287,7 +7329,7 @@ export default{
         },
         {
             "title": "时间复杂度 O(log n)",
-            "summary": "class SegmentTree:<br>def __init__(self, n: int, init_val=0):<br>if isinstance(init_val, int):<br>init_val = [init_val] * n<br>self._n = n<br>self._tree = [0] * (2 << (n - 1).bit_length())<br>self._build(init_val, 1, 0, n - 1)<br>def _merge_val(self, a: int, b: int) -> int:<br>return max(a, b)  # **根据题目修改**<br>def _maintain(self, node: int) -> None:<br>self._tree[node] = self._merge_val(self._tree[node * 2], self._tree[node * 2 + 1])<br>def _build(self, a: List[int], node: int, l: int, r: int) -> None:<br>if l == r:  # 叶子<br>self._tree[node] = a[l]  # 初始化叶节点的值<br>return<br>m = (l + r) // 2<br>self._build(a, node * 2, l, m)  # 初始化左子树<br>self._build(a, node * 2 + 1, m + 1, r)  # 初始化右子树<br>self._maintain(node)<br>def _update(self, node: int, l: int, r: int, i: int, val: int) -> None:<br>if l == r:  # 叶子（到达目标）<br>self._tree[node] = self._merge_val(self._tree[node], val)<br>return<br>m = (l + r) // 2<br>if i <= m:  # i 在左子树<br>self._update(node * 2, l, m, i, val)<br>else:  # i 在右子树<br>self._update(node * 2 + 1, m + 1, r, i, val)<br>self._maintain(node)<br>def _query(self, node: int, l: int, r: int, ql: int, qr: int) -> int:<br>if ql <= l and r <= qr:  # 当前子树完全在 [ql, qr] 内<br>return self._tree[node]<br>m = (l + r) // 2<br>if qr <= m:  # [ql, qr] 在左子树<br>return self._query(node * 2, l, m, ql, qr)<br>if ql > m:  # [ql, qr] 在右子树<br>return self._query(node * 2 + 1, m + 1, r, ql, qr)<br>l_res = self._query(node * 2, l, m, ql, qr)<br>r_res = self._query(node * 2 + 1, m + 1, r, ql, qr)<br>return self._merge_val(l_res, r_res)<br>def update(self, i: int, val: int) -> None:<br>self._update(1, 0, self._n - 1, i, val)<br>def query(self, ql: int, qr: int) -> int:<br>return self._query(1, 0, self._n - 1, ql, qr)<br>def get(self, i: int) -> int:<br>return self._query(1, 0, self._n - 1, i, i)<br>```<br>```java [sol-Java]<br>// 线段树有两个下标，一个是线段树节点的下标，另一个是线段树维护的区间的下标<br>// 节点的下标：从 1 开始，如果你想改成从 0 开始，需要把左右儿子下标分别改成 node*2+1 和 node*2+2<br>// 区间的下标：从 0 开始<br>class SegmentTree {<br>private final int n;<br>private final long[] tree; // 如果计算结果没有超出 int 范围，可以改成 int<br>// 合并两个 val<br>private long mergeVal(long a, long b) {<br>return Math.max(a, b); // **根据题目修改**<br>}<br>// 线段树维护一个长为 n 的数组（下标从 0 到 n-1），元素初始值为 initVal<br>public SegmentTree(int n, long initVal) {<br>this.n = n;<br>long[] a = new long[n];<br>Arrays.fill(a, initVal);<br>tree = new long[2 << (32 - Integer.numberOfLeadingZeros(n - 1))];<br>build(a, 1, 0, n - 1);<br>}<br>// 线段树维护数组 a<br>public SegmentTree(long[] a) {<br>n = a.length;<br>tree = new long[2 << (32 - Integer.numberOfLeadingZeros(n - 1))];<br>build(a, 1, 0, n - 1);<br>}<br>// 更新 a[i] 为 mergeVal(a[i], val)<br>// 时间复杂度 O(log n)<br>public void update(int i, long val) {<br>update(1, 0, n - 1, i, val);<br>}<br>// 返回用 mergeVal 合并所有 a[i] 的计算结果，其中 i 在闭区间 [ql, qr] 中<br>// 时间复杂度 O(log n)<br>public long query(int ql, int qr) {<br>return query(1, 0, n - 1, ql, qr);<br>}<br>// 获取 a[i] 的值<br>// 时间复杂度 O(log n)<br>public long get(int i) {<br>return query(1, 0, n - 1, i, i);<br>}<br>// 合并左右儿子的 val 到当前节点的 val<br>private void maintain(int node) {<br>tree[node] = mergeVal(tree[node * 2], tree[node * 2 + 1]);<br>}<br>// 用 a 初始化线段树<br>// 时间复杂度 O(n)<br>private void build(long[] a, int node, int l, int r) {<br>if (l == r) { // 叶子<br>tree[node] = a[l]; // 初始化叶节点的值<br>return;<br>}<br>int m = (l + r) / 2;<br>build(a, node * 2, l, m); // 初始化左子树<br>build(a, node * 2 + 1, m + 1, r); // 初始化右子树<br>maintain(node);<br>}<br>private void update(int node, int l, int r, int i, long val) {<br>if (l == r) { // 叶子（到达目标）<br>// 如果想直接替换的话，可以写 tree[node] = val<br>tree[node] = mergeVal(tree[node], val);<br>return;<br>}<br>int m = (l + r) / 2;<br>if (i <= m) { // i 在左子树<br>update(node * 2, l, m, i, val);<br>} else { // i 在右子树<br>update(node * 2 + 1, m + 1, r, i, val);<br>}<br>maintain(node);<br>}<br>private long query(int node, int l, int r, int ql, int qr) {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>return tree[node];<br>}<br>int m = (l + r) / 2;<br>if (qr <= m) { // [ql, qr] 在左子树<br>return query(node * 2, l, m, ql, qr);<br>}<br>if (ql > m) { // [ql, qr] 在右子树<br>return query(node * 2 + 1, m + 1, r, ql, qr);<br>}<br>long lRes = query(node * 2, l, m, ql, qr);<br>long rRes = query(node * 2 + 1, m + 1, r, ql, qr);<br>return mergeVal(lRes, rRes);<br>}<br>}<br>```<br>```cpp [sol-C++]<br>// 线段树有两个下标，一个是线段树节点的下标，另一个是线段树维护的区间的下标<br>// 节点的下标：从 1 开始，如果你想改成从 0 开始，需要把左右儿子下标分别改成 node*2+1 和 node*2+2<br>// 区间的下标：从 0 开始<br>template<typename T><br>class SegmentTree {<br>int n;<br>vector<T> tree;<br>// 合并两个 val<br>T merge_val(T a, T b) const {<br>return max(a, b); // **根据题目修改**<br>}<br>// 合并左右儿子的 val 到当前节点的 val<br>void maintain(int node) {<br>tree[node] = merge_val(tree[node * 2], tree[node * 2 + 1]);<br>}<br>// 用 a 初始化线段树<br>// 时间复杂度 O(n)<br>void build(const vector<T>& a, int node, int l, int r) {<br>if (l == r) { // 叶子<br>tree[node] = a[l]; // 初始化叶节点的值<br>return;<br>}<br>int m = (l + r) / 2;<br>build(a, node * 2, l, m); // 初始化左子树<br>build(a, node * 2 + 1, m + 1, r); // 初始化右子树<br>maintain(node);<br>}<br>void update(int node, int l, int r, int i, T val) {<br>if (l == r) { // 叶子（到达目标）<br>// 如果想直接替换的话，可以写 tree[node] = val<br>tree[node] = merge_val(tree[node], val);<br>return;<br>}<br>int m = (l + r) / 2;<br>if (i <= m) {  // i 在左子树<br>update(node * 2, l, m, i, val);<br>} else {  // i 在右子树<br>update(node * 2 + 1, m + 1, r, i, val);<br>}<br>maintain(node);<br>}<br>T query(int node, int l, int r, int ql, int qr) const {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>return tree[node];<br>}<br>int m = (l + r) / 2;<br>if (qr <= m) {  // [ql, qr] 在左子树<br>return query(node * 2, l, m, ql, qr);<br>}<br>if (ql > m) {  // [ql, qr] 在右子树<br>return query(node * 2 + 1, m + 1, r, ql, qr);<br>}<br>T l_res = query(node * 2, l, m, ql, qr);<br>T r_res = query(node * 2 + 1, m + 1, r, ql, qr);<br>return merge_val(l_res, r_res);<br>}<br>public:<br>// 线段树维护一个长为 n 的数组（下标从 0 到 n-1），元素初始值为 init_val<br>SegmentTree(int n, T init_val) : SegmentTree(vector<T>(n, init_val)) {}<br>// 线段树维护数组 a<br>SegmentTree(const vector<T>& a) : n(a.size()), tree(2 << bit_width(a.size() - 1)) {<br>build(a, 1, 0, n - 1);<br>}<br>// 更新 a[i] 为 merge_val(a[i], val)<br>// 时间复杂度 O(log n)<br>void update(int i, T val) {<br>update(1, 0, n - 1, i, val);<br>}<br>// 返回用 merge_val 合并所有 a[i] 的计算结果，其中 i 在闭区间 [ql, qr] 中<br>// 时间复杂度 O(log n)<br>T query(int ql, int qr) const {<br>return query(1, 0, n - 1, ql, qr);<br>}<br>// 获取 a[i] 的值<br>// 时间复杂度 O(log n)<br>T get(int i) const {<br>return query(1, 0, n - 1, i, i);<br>}<br>};<br>int main() {<br>SegmentTree t(8, 0LL); // 如果这里写 0LL，那么 SegmentTree 存储的就是 long long 数据<br>t.update(0, 1LL << 60);<br>cout << t.query(0, 7) << endl;<br>vector<int> nums = {3, 1, 4, 1, 5, 9, 2, 6};<br>// 注意：如果要让 SegmentTree 存储 long long 数据，需要传入 vector<long long><br>SegmentTree t2(nums); // 这里 SegmentTree 存储的是 int 数据<br>cout << t2.query(0, 7) << endl;<br>return 0;<br>}<br>```<br>```go [sol-Go]<br>// 线段树有两个下标，一个是线段树节点的下标，另一个是线段树维护的区间的下标<br>// 节点的下标：从 1 开始，如果你想改成从 0 开始，需要把左右儿子下标分别改成 node*2+1 和 node*2+2<br>// 区间的下标：从 0 开始<br>type seg []struct {<br>val int // **根据题目修改**<br>}<br>// 合并两个 val<br>func (seg) mergeVal(a, b int) int {<br>return max(a, b) // **根据题目修改**<br>}<br>// 线段树维护一个长为 n 的数组（下标从 0 到 n-1），元素初始值为 initVal<br>func newSegmentTree(n int, initVal int) seg {<br>a := make([]int, n)<br>for i := range a {<br>a[i] = initVal<br>}<br>return newSegmentTreeWithArray(a)<br>}<br>// 线段树维护数组 a<br>func newSegmentTreeWithArray(a []int) seg {<br>n := len(a)<br>t := make(seg, 2<<bits.Len(uint(n-1)))<br>t.build(a, 1, 0, n-1)<br>return t<br>}<br>// 合并左右儿子的 val 到当前节点的 val<br>func (t seg) maintain(node int) {<br>t[node].val = t.mergeVal(t[node*2].val, t[node*2+1].val)<br>}<br>// 用 a 初始化线段树<br>// 时间复杂度 O(n)<br>func (t seg) build(a []int, node, l, r int) {<br>if l == r { // 叶子<br>t[node].val = a[l] // 初始化叶节点的值<br>return<br>}<br>m := (l + r) / 2<br>t.build(a, node*2, l, m) // 初始化左子树<br>t.build(a, node*2+1, m+1, r) // 初始化右子树<br>t.maintain(node)<br>}<br>// 更新 a[i] 为 mergeVal(a[i], val)<br>// 调用 t.update(1, 0, n-1, i, val)<br>// 0 <= i <= n-1<br>// 时间复杂度 O(log n)<br>func (t seg) update(node, l, r, i int, val int) {<br>if l == r { // 叶子（到达目标）<br>// 如果想直接替换的话，可以写 t[o].val = val<br>t[node].val = t.mergeVal(t[node].val, val)<br>return<br>}<br>m := (l + r) / 2<br>if i <= m { // i 在左子树<br>t.update(node*2, l, m, i, val)<br>} else { // i 在右子树<br>t.update(node*2+1, m+1, r, i, val)<br>}<br>t.maintain(node)<br>}<br>// 返回用 mergeVal 合并所有 a[i] 的计算结果，其中 i 在闭区间 [ql, qr] 中<br>// 调用 t.query(1, 0, n-1, ql, qr)<br>// 如果只想获取 a[i]，可以调用 t.query(1, 0, n-1, i, i)<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>func (t seg) query(node, l, r, ql, qr int) int {<br>if ql <= l && r <= qr { // 当前子树完全在 [ql, qr] 内<br>return t[node].val<br>}<br>m := (l + r) / 2<br>if qr <= m { // [ql, qr] 在左子树<br>return t.query(node*2, l, m, ql, qr)<br>}<br>if ql > m { // [ql, qr] 在右子树<br>return t.query(node*2+1, m+1, r, ql, qr)<br>}<br>lRes := t.query(node*2, l, m, ql, qr)<br>rRes := t.query(node*2+1, m+1, r, ql, qr)<br>return t.mergeVal(lRes, rRes)<br>}<br>```<br>**思维扩展**：<br>",
+            "summary": "class SegmentTree:<br>def __init__(self, n: int, init_val=0):<br>if isinstance(init_val, int):<br>init_val = [init_val] * n<br>self._n = n<br>self._tree = [0] * (2 << (n - 1).bit_length())<br>self._build(init_val, 1, 0, n - 1)<br>def _merge_val(self, a: int, b: int) -> int:<br>return max(a, b)  # **根据题目修改**<br>def _maintain(self, node: int) -> None:<br>self._tree[node] = self._merge_val(self._tree[node * 2], self._tree[node * 2 + 1])<br>def _build(self, a: List[int], node: int, l: int, r: int) -> None:<br>if l == r:  # 叶子<br>self._tree[node] = a[l]  # 初始化叶节点的值<br>return<br>m = (l + r) // 2<br>self._build(a, node * 2, l, m)  # 初始化左子树<br>self._build(a, node * 2 + 1, m + 1, r)  # 初始化右子树<br>self._maintain(node)<br>def _update(self, node: int, l: int, r: int, i: int, val: int) -> None:<br>if l == r:  # 叶子（到达目标）<br>self._tree[node] = self._merge_val(self._tree[node], val)<br>return<br>m = (l + r) // 2<br>if i <= m:  # i 在左子树<br>self._update(node * 2, l, m, i, val)<br>else:  # i 在右子树<br>self._update(node * 2 + 1, m + 1, r, i, val)<br>self._maintain(node)<br>def _query(self, node: int, l: int, r: int, ql: int, qr: int) -> int:<br>if ql <= l and r <= qr:  # 当前子树完全在 [ql, qr] 内<br>return self._tree[node]<br>m = (l + r) // 2<br>if qr <= m:  # [ql, qr] 在左子树<br>return self._query(node * 2, l, m, ql, qr)<br>if ql > m:  # [ql, qr] 在右子树<br>return self._query(node * 2 + 1, m + 1, r, ql, qr)<br>l_res = self._query(node * 2, l, m, ql, qr)<br>r_res = self._query(node * 2 + 1, m + 1, r, ql, qr)<br>return self._merge_val(l_res, r_res)<br>def update(self, i: int, val: int) -> None:<br>self._update(1, 0, self._n - 1, i, val)<br>def query(self, ql: int, qr: int) -> int:<br>return self._query(1, 0, self._n - 1, ql, qr)<br>def get(self, i: int) -> int:<br>return self._query(1, 0, self._n - 1, i, i)<br>```<br>```java [sol-Java]<br>// 线段树有两个下标，一个是线段树节点的下标，另一个是线段树维护的区间的下标<br>// 节点的下标：从 1 开始，如果你想改成从 0 开始，需要把左右儿子下标分别改成 node*2+1 和 node*2+2<br>// 区间的下标：从 0 开始<br>class SegmentTree {<br>private final int n;<br>private final long[] tree; // 如果计算结果没有超出 int 范围，可以改成 int<br>// 合并两个 val<br>private long mergeVal(long a, long b) {<br>return Math.max(a, b); // **根据题目修改**<br>}<br>// 线段树维护一个长为 n 的数组（下标从 0 到 n-1），元素初始值为 initVal<br>public SegmentTree(int n, long initVal) {<br>this.n = n;<br>long[] a = new long[n];<br>Arrays.fill(a, initVal);<br>tree = new long[2 << (32 - Integer.numberOfLeadingZeros(n - 1))];<br>build(a, 1, 0, n - 1);<br>}<br>// 线段树维护数组 a<br>public SegmentTree(long[] a) {<br>n = a.length;<br>tree = new long[2 << (32 - Integer.numberOfLeadingZeros(n - 1))];<br>build(a, 1, 0, n - 1);<br>}<br>// 更新 a[i] 为 mergeVal(a[i], val)<br>// 时间复杂度 O(log n)<br>public void update(int i, long val) {<br>update(1, 0, n - 1, i, val);<br>}<br>// 返回用 mergeVal 合并所有 a[i] 的计算结果，其中 i 在闭区间 [ql, qr] 中<br>// 时间复杂度 O(log n)<br>public long query(int ql, int qr) {<br>return query(1, 0, n - 1, ql, qr);<br>}<br>// 获取 a[i] 的值<br>// 时间复杂度 O(log n)<br>public long get(int i) {<br>return query(1, 0, n - 1, i, i);<br>}<br>// 合并左右儿子的 val 到当前节点的 val<br>private void maintain(int node) {<br>tree[node] = mergeVal(tree[node * 2], tree[node * 2 + 1]);<br>}<br>// 用 a 初始化线段树<br>// 时间复杂度 O(n)<br>private void build(long[] a, int node, int l, int r) {<br>if (l == r) { // 叶子<br>tree[node] = a[l]; // 初始化叶节点的值<br>return;<br>}<br>int m = (l + r) / 2;<br>build(a, node * 2, l, m); // 初始化左子树<br>build(a, node * 2 + 1, m + 1, r); // 初始化右子树<br>maintain(node);<br>}<br>private void update(int node, int l, int r, int i, long val) {<br>if (l == r) { // 叶子（到达目标）<br>// 如果想直接替换的话，可以写 tree[node] = val<br>tree[node] = mergeVal(tree[node], val);<br>return;<br>}<br>int m = (l + r) / 2;<br>if (i <= m) { // i 在左子树<br>update(node * 2, l, m, i, val);<br>} else { // i 在右子树<br>update(node * 2 + 1, m + 1, r, i, val);<br>}<br>maintain(node);<br>}<br>private long query(int node, int l, int r, int ql, int qr) {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>return tree[node];<br>}<br>int m = (l + r) / 2;<br>if (qr <= m) { // [ql, qr] 在左子树<br>return query(node * 2, l, m, ql, qr);<br>}<br>if (ql > m) { // [ql, qr] 在右子树<br>return query(node * 2 + 1, m + 1, r, ql, qr);<br>}<br>long lRes = query(node * 2, l, m, ql, qr);<br>long rRes = query(node * 2 + 1, m + 1, r, ql, qr);<br>return mergeVal(lRes, rRes);<br>}<br>}<br>```<br>```cpp [sol-C++]<br>// 线段树有两个下标，一个是线段树节点的下标，另一个是线段树维护的区间的下标<br>// 节点的下标：从 1 开始，如果你想改成从 0 开始，需要把左右儿子下标分别改成 node*2+1 和 node*2+2<br>// 区间的下标：从 0 开始<br>template<typename T><br>class SegmentTree {<br>// 注：也可以去掉 template<typename T>，改在这里定义 T<br>// using T = pair<int, int>;<br>int n;<br>vector<T> tree;<br>// 合并两个 val<br>T merge_val(T a, T b) const {<br>return max(a, b); // **根据题目修改**<br>}<br>// 合并左右儿子的 val 到当前节点的 val<br>void maintain(int node) {<br>tree[node] = merge_val(tree[node * 2], tree[node * 2 + 1]);<br>}<br>// 用 a 初始化线段树<br>// 时间复杂度 O(n)<br>void build(const vector<T>& a, int node, int l, int r) {<br>if (l == r) { // 叶子<br>tree[node] = a[l]; // 初始化叶节点的值<br>return;<br>}<br>int m = (l + r) / 2;<br>build(a, node * 2, l, m); // 初始化左子树<br>build(a, node * 2 + 1, m + 1, r); // 初始化右子树<br>maintain(node);<br>}<br>void update(int node, int l, int r, int i, T val) {<br>if (l == r) { // 叶子（到达目标）<br>// 如果想直接替换的话，可以写 tree[node] = val<br>tree[node] = merge_val(tree[node], val);<br>return;<br>}<br>int m = (l + r) / 2;<br>if (i <= m) { // i 在左子树<br>update(node * 2, l, m, i, val);<br>} else { // i 在右子树<br>update(node * 2 + 1, m + 1, r, i, val);<br>}<br>maintain(node);<br>}<br>T query(int node, int l, int r, int ql, int qr) const {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>return tree[node];<br>}<br>int m = (l + r) / 2;<br>if (qr <= m) { // [ql, qr] 在左子树<br>return query(node * 2, l, m, ql, qr);<br>}<br>if (ql > m) { // [ql, qr] 在右子树<br>return query(node * 2 + 1, m + 1, r, ql, qr);<br>}<br>T l_res = query(node * 2, l, m, ql, qr);<br>T r_res = query(node * 2 + 1, m + 1, r, ql, qr);<br>return merge_val(l_res, r_res);<br>}<br>public:<br>// 线段树维护一个长为 n 的数组（下标从 0 到 n-1），元素初始值为 init_val<br>SegmentTree(int n, T init_val) : SegmentTree(vector<T>(n, init_val)) {}<br>// 线段树维护数组 a<br>SegmentTree(const vector<T>& a) : n(a.size()), tree(2 << bit_width(a.size() - 1)) {<br>build(a, 1, 0, n - 1);<br>}<br>// 更新 a[i] 为 merge_val(a[i], val)<br>// 时间复杂度 O(log n)<br>void update(int i, T val) {<br>update(1, 0, n - 1, i, val);<br>}<br>// 返回用 merge_val 合并所有 a[i] 的计算结果，其中 i 在闭区间 [ql, qr] 中<br>// 时间复杂度 O(log n)<br>T query(int ql, int qr) const {<br>return query(1, 0, n - 1, ql, qr);<br>}<br>// 获取 a[i] 的值<br>// 时间复杂度 O(log n)<br>T get(int i) const {<br>return query(1, 0, n - 1, i, i);<br>}<br>};<br>int main() {<br>SegmentTree t(8, 0LL); // 如果这里写 0LL，那么 SegmentTree 存储的就是 long long 数据<br>t.update(0, 1LL << 60);<br>cout << t.query(0, 7) << endl;<br>vector<int> nums = {3, 1, 4, 1, 5, 9, 2, 6};<br>// 注意：如果要让 SegmentTree 存储 long long 数据，需要传入 vector<long long><br>SegmentTree t2(nums); // 这里 SegmentTree 存储的是 int 数据<br>cout << t2.query(0, 7) << endl;<br>return 0;<br>}<br>```<br>```go [sol-Go]<br>// 线段树有两个下标，一个是线段树节点的下标，另一个是线段树维护的区间的下标<br>// 节点的下标：从 1 开始，如果你想改成从 0 开始，需要把左右儿子下标分别改成 node*2+1 和 node*2+2<br>// 区间的下标：从 0 开始<br>type seg []struct {<br>val int // **根据题目修改**<br>}<br>// 合并两个 val<br>func (seg) mergeVal(a, b int) int {<br>return max(a, b) // **根据题目修改**<br>}<br>// 线段树维护一个长为 n 的数组（下标从 0 到 n-1），元素初始值为 initVal<br>func newSegmentTree(n int, initVal int) seg {<br>a := make([]int, n)<br>for i := range a {<br>a[i] = initVal<br>}<br>return newSegmentTreeWithArray(a)<br>}<br>// 线段树维护数组 a<br>func newSegmentTreeWithArray(a []int) seg {<br>n := len(a)<br>t := make(seg, 2<<bits.Len(uint(n-1)))<br>t.build(a, 1, 0, n-1)<br>return t<br>}<br>// 合并左右儿子的 val 到当前节点的 val<br>func (t seg) maintain(node int) {<br>t[node].val = t.mergeVal(t[node*2].val, t[node*2+1].val)<br>}<br>// 用 a 初始化线段树<br>// 时间复杂度 O(n)<br>func (t seg) build(a []int, node, l, r int) {<br>if l == r { // 叶子<br>t[node].val = a[l] // 初始化叶节点的值<br>return<br>}<br>m := (l + r) / 2<br>t.build(a, node*2, l, m) // 初始化左子树<br>t.build(a, node*2+1, m+1, r) // 初始化右子树<br>t.maintain(node)<br>}<br>// 更新 a[i] 为 mergeVal(a[i], val)<br>// 调用 t.update(1, 0, n-1, i, val)<br>// 0 <= i <= n-1<br>// 时间复杂度 O(log n)<br>func (t seg) update(node, l, r, i int, val int) {<br>if l == r { // 叶子（到达目标）<br>// 如果想直接替换的话，可以写 t[o].val = val<br>t[node].val = t.mergeVal(t[node].val, val)<br>return<br>}<br>m := (l + r) / 2<br>if i <= m { // i 在左子树<br>t.update(node*2, l, m, i, val)<br>} else { // i 在右子树<br>t.update(node*2+1, m+1, r, i, val)<br>}<br>t.maintain(node)<br>}<br>// 返回用 mergeVal 合并所有 a[i] 的计算结果，其中 i 在闭区间 [ql, qr] 中<br>// 调用 t.query(1, 0, n-1, ql, qr)<br>// 如果只想获取 a[i]，可以调用 t.query(1, 0, n-1, i, i)<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>func (t seg) query(node, l, r, ql, qr int) int {<br>if ql <= l && r <= qr { // 当前子树完全在 [ql, qr] 内<br>return t[node].val<br>}<br>m := (l + r) / 2<br>if qr <= m { // [ql, qr] 在左子树<br>return t.query(node*2, l, m, ql, qr)<br>}<br>if ql > m { // [ql, qr] 在右子树<br>return t.query(node*2+1, m+1, r, ql, qr)<br>}<br>lRes := t.query(node*2, l, m, ql, qr)<br>rRes := t.query(node*2+1, m+1, r, ql, qr)<br>return t.mergeVal(lRes, rRes)<br>}<br>```<br>**思维扩展**：<br>",
             "src": "",
             "original_src": "",
             "sort": 0,
@@ -7303,7 +7345,7 @@ export default{
                     "sort": 0,
                     "isLeaf": true,
                     "solution": null,
-                    "score": null,
+                    "score": 2178.0485179115,
                     "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
@@ -7346,6 +7388,20 @@ export default{
                     "isLeaf": true,
                     "solution": null,
                     "score": 2513.0284514744,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "3525. 求出数组的 X 值 II",
+                    "summary": "",
+                    "src": "/find-x-value-of-array-ii/",
+                    "original_src": "https://leetcode.cn/problems/find-x-value-of-array-ii/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
                     "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
@@ -7401,7 +7457,7 @@ export default{
                     "sort": 0,
                     "isLeaf": true,
                     "solution": null,
-                    "score": null,
+                    "score": 2940.548809489,
                     "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
@@ -7453,7 +7509,7 @@ export default{
             "nonLeafChild": [
                 {
                     "title": "时间复杂度 O(log n)",
-                    "summary": "基础模板代码如下。为方便入门理解，我没有做复杂封装。通用模板代码可以参考 AtCoder Library 的 <a href=\"https://github.com/atcoder/ac-library/blob/master/atcoder/lazysegtree.hpp\">lazysegtree.hpp</a>。<br>```py [sol-Python3]<br>class Node:<br>__slots__ = 'val', 'todo'<br>class LazySegmentTree:<br>_TODO_INIT = 0  # **根据题目修改**<br>def __init__(self, n: int, init_val=0):<br>if isinstance(init_val, int):<br>init_val = [init_val] * n<br>self._n = n<br>self._tree = [Node() for _ in range(2 << (n - 1).bit_length())]<br>self._build(init_val, 1, 0, n - 1)<br>def _merge_val(self, a: int, b: int) -> int:<br>return a + b  # **根据题目修改**<br>def _merge_todo(self, a: int, b: int) -> int:<br>return a + b  # **根据题目修改**<br>def _apply(self, node: int, l: int, r: int, todo: int) -> None:<br>cur = self._tree[node]<br>cur.val += todo * (r - l + 1)  # **根据题目修改**<br>cur.todo = self._merge_todo(todo, cur.todo)<br>def _spread(self, node: int, l: int, r: int) -> None:<br>todo = self._tree[node].todo<br>if todo == self._TODO_INIT:  # 没有需要下传的信息<br>return<br>m = (l + r) // 2<br>self._apply(node * 2, l, m, todo)<br>self._apply(node * 2 + 1, m + 1, r, todo)<br>self._tree[node].todo = self._TODO_INIT  # 下传完毕<br>def _maintain(self, node: int) -> None:<br>self._tree[node].val = self._merge_val(self._tree[node * 2].val, self._tree[node * 2 + 1].val)<br>def _build(self, a: List[int], node: int, l: int, r: int) -> None:<br>self._tree[node].todo = self._TODO_INIT<br>if l == r:  # 叶子<br>self._tree[node].val = a[l]  # 初始化叶节点的值<br>return<br>m = (l + r) // 2<br>self._build(a, node * 2, l, m)  # 初始化左子树<br>self._build(a, node * 2 + 1, m + 1, r)  # 初始化右子树<br>self._maintain(node)<br>def _update(self, node: int, l: int, r: int, ql: int, qr: int, f: int) -> None:<br>if ql <= l and r <= qr:  # 当前子树完全在 [ql, qr] 内<br>self._apply(node, l, r, f)<br>return<br>self._spread(node, l, r)<br>m = (l + r) // 2<br>if ql <= m:  # 更新左子树<br>self._update(node * 2, l, m, ql, qr, f)<br>if qr > m:  # 更新右子树<br>self._update(node * 2 + 1, m + 1, r, ql, qr, f)<br>self._maintain(node)<br>def _query(self, node: int, l: int, r: int, ql: int, qr: int) -> int:<br>if ql <= l and r <= qr:  # 当前子树完全在 [ql, qr] 内<br>return self._tree[node].val<br>self._spread(node, l, r)<br>m = (l + r) // 2<br>if qr <= m:  # [ql, qr] 在左子树<br>return self._query(node * 2, l, m, ql, qr)<br>if ql > m:  # [ql, qr] 在右子树<br>return self._query(node * 2 + 1, m + 1, r, ql, qr)<br>l_res = self._query(node * 2, l, m, ql, qr)<br>r_res = self._query(node * 2 + 1, m + 1, r, ql, qr)<br>return self._merge_val(l_res, r_res)<br>def update(self, ql: int, qr: int, f: int) -> None:<br>self._update(1, 0, self._n - 1, ql, qr, f)<br>def query(self, ql: int, qr: int) -> int:<br>return self._query(1, 0, self._n - 1, ql, qr)<br>```<br>```java [sol-Java]<br>class LazySegmentTree {<br>// 懒标记初始值<br>private static final long TODO_INIT = 0; // **根据题目修改**<br>private static final class Node {<br>long val; // **根据题目修改**<br>long todo;<br>}<br>// 合并两个 val<br>private long mergeVal(long a, long b) {<br>return a + b; // **根据题目修改**<br>}<br>// 合并两个懒标记<br>private long mergeTodo(long a, long b) {<br>return a + b; // **根据题目修改**<br>}<br>// 把懒标记作用到 node 子树（本例为区间加）<br>private void apply(int node, int l, int r, long todo) {<br>Node cur = tree[node];<br>// 计算 tree[node] 区间的整体变化<br>cur.val += todo * (r - l + 1); // **根据题目修改**<br>cur.todo = mergeTodo(todo, cur.todo);<br>}<br>private final int n;<br>private final Node[] tree;<br>// 线段树维护一个长为 n 的数组（下标从 0 到 n-1），元素初始值为 initVal<br>public LazySegmentTree(int n, long initVal) {<br>this.n = n;<br>long[] a = new long[n];<br>Arrays.fill(a, initVal);<br>tree = new Node[2 << (32 - Integer.numberOfLeadingZeros(n - 1))];<br>build(a, 1, 0, n - 1);<br>}<br>// 线段树维护数组 a<br>public LazySegmentTree(long[] a) {<br>n = a.length;<br>tree = new Node[2 << (32 - Integer.numberOfLeadingZeros(n - 1))];<br>build(a, 1, 0, n - 1);<br>}<br>// 用 f 更新 [ql, qr] 中的每个 a[i]<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>public void update(int ql, int qr, long f) {<br>update(1, 0, n - 1, ql, qr, f);<br>}<br>// 返回用 mergeVal 合并所有 a[i] 的计算结果，其中 i 在闭区间 [ql, qr] 中<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>public long query(int ql, int qr) {<br>return query(1, 0, n - 1, ql, qr);<br>}<br>// 把当前节点的懒标记下传给左右儿子<br>private void spread(int node, int l, int r) {<br>long todo = tree[node].todo;<br>if (todo == TODO_INIT) { // 没有需要下传的信息<br>return;<br>}<br>int m = (l + r) / 2;<br>apply(node * 2, l, m, todo);<br>apply(node * 2 + 1, m + 1, r, todo);<br>tree[node].todo = TODO_INIT; // 下传完毕<br>}<br>// 合并左右儿子的 val 到当前节点的 val<br>private void maintain(int node) {<br>tree[node].val = mergeVal(tree[node * 2].val, tree[node * 2 + 1].val);<br>}<br>// 用 a 初始化线段树<br>// 时间复杂度 O(n)<br>private void build(long[] a, int node, int l, int r) {<br>tree[node] = new Node();<br>tree[node].todo = TODO_INIT;<br>if (l == r) { // 叶子<br>tree[node].val = a[l]; // 初始化叶节点的值<br>return;<br>}<br>int m = (l + r) / 2;<br>build(a, node * 2, l, m); // 初始化左子树<br>build(a, node * 2 + 1, m + 1, r); // 初始化右子树<br>maintain(node);<br>}<br>private void update(int node, int l, int r, int ql, int qr, long f) {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>apply(node, l, r, f);<br>return;<br>}<br>spread(node, l, r);<br>int m = (l + r) / 2;<br>if (ql <= m) { // 更新左子树<br>update(node * 2, l, m, ql, qr, f);<br>}<br>if (qr > m) { // 更新右子树<br>update(node * 2 + 1, m + 1, r, ql, qr, f);<br>}<br>maintain(node);<br>}<br>private long query(int node, int l, int r, int ql, int qr) {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>return tree[node].val;<br>}<br>spread(node, l, r);<br>int m = (l + r) / 2;<br>if (qr <= m) { // [ql, qr] 在左子树<br>return query(node * 2, l, m, ql, qr);<br>}<br>if (ql > m) { // [ql, qr] 在右子树<br>return query(node * 2 + 1, m + 1, r, ql, qr);<br>}<br>long lRes = query(node * 2, l, m, ql, qr);<br>long rRes = query(node * 2 + 1, m + 1, r, ql, qr);<br>return mergeVal(lRes, rRes);<br>}<br>}<br>```<br>```cpp [sol-C++]<br>template<typename T, typename F><br>class LazySegmentTree {<br>// 懒标记初始值<br>const F TODO_INIT = 0; // **根据题目修改**<br>struct Node {<br>T val; // **根据题目修改**<br>F todo;<br>};<br>int n;<br>vector<Node> tree;<br>// 合并两个 val<br>T merge_val(T a, T b) const {<br>return a + b; // **根据题目修改**<br>}<br>// 合并两个懒标记<br>F merge_todo(F a, F b) const {<br>return a + b; // **根据题目修改**<br>}<br>// 把懒标记作用到 node 子树（本例为区间加）<br>void apply(int node, int l, int r, F todo) {<br>Node& cur = tree[node];<br>// 计算 tree[node] 区间的整体变化<br>cur.val += todo * (r - l + 1); // **根据题目修改**<br>cur.todo = merge_todo(todo, cur.todo);<br>}<br>// 把当前节点的懒标记下传给左右儿子<br>void spread(int node, int l, int r) {<br>Node& cur = tree[node];<br>F todo = cur.todo;<br>if (todo == TODO_INIT) { // 没有需要下传的信息<br>return;<br>}<br>int m = (l + r) / 2;<br>apply(node * 2, l, m, todo);<br>apply(node * 2 + 1, m + 1, r, todo);<br>cur.todo = TODO_INIT; // 下传完毕<br>}<br>// 合并左右儿子的 val 到当前节点的 val<br>void maintain(int node) {<br>tree[node].val = merge_val(tree[node * 2].val, tree[node * 2 + 1].val);<br>}<br>// 用 a 初始化线段树<br>// 时间复杂度 O(n)<br>void build(const vector<T>& a, int node, int l, int r) {<br>Node& cur = tree[node];<br>cur.todo = TODO_INIT;<br>if (l == r) { // 叶子<br>cur.val = a[l]; // 初始化叶节点的值<br>return;<br>}<br>int m = (l + r) / 2;<br>build(a, node * 2, l, m); // 初始化左子树<br>build(a, node * 2 + 1, m + 1, r); // 初始化右子树<br>maintain(node);<br>}<br>void update(int node, int l, int r, int ql, int qr, F f) {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>apply(node, l, r, f);<br>return;<br>}<br>spread(node, l, r);<br>int m = (l + r) / 2;<br>if (ql <= m) { // 更新左子树<br>update(node * 2, l, m, ql, qr, f);<br>}<br>if (qr > m) { // 更新右子树<br>update(node * 2 + 1, m + 1, r, ql, qr, f);<br>}<br>maintain(node);<br>}<br>T query(int node, int l, int r, int ql, int qr) {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>return tree[node].val;<br>}<br>spread(node, l, r);<br>int m = (l + r) / 2;<br>if (qr <= m) { // [ql, qr] 在左子树<br>return query(node * 2, l, m, ql, qr);<br>}<br>if (ql > m) { // [ql, qr] 在右子树<br>return query(node * 2 + 1, m + 1, r, ql, qr);<br>}<br>T l_res = query(node * 2, l, m, ql, qr);<br>T r_res = query(node * 2 + 1, m + 1, r, ql, qr);<br>return merge_val(l_res, r_res);<br>}<br>public:<br>// 线段树维护一个长为 n 的数组（下标从 0 到 n-1），元素初始值为 init_val<br>LazySegmentTree(int n, T init_val = 0) : LazySegmentTree(vector<T>(n, init_val)) {}<br>// 线段树维护数组 a<br>LazySegmentTree(const vector<T>& a) : n(a.size()), tree(2 << bit_width(a.size() - 1)) {<br>build(a, 1, 0, n - 1);<br>}<br>// 用 f 更新 [ql, qr] 中的每个 a[i]<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>void update(int ql, int qr, F f) {<br>update(1, 0, n - 1, ql, qr, f);<br>}<br>// 返回用 merge_val 合并所有 a[i] 的计算结果，其中 i 在闭区间 [ql, qr] 中<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>T query(int ql, int qr) {<br>return query(1, 0, n - 1, ql, qr);<br>}<br>};<br>int main() {<br>LazySegmentTree<long long, long long> t(8); // 默认值为 0<br>t.update(3, 5, 100);<br>t.update(4, 6, 10);<br>cout << t.query(0, 7) << endl;<br>vector<long long> nums = {3, 1, 4, 1, 5, 9, 2, 6};<br>LazySegmentTree<long long, long long> t2(nums);<br>t2.update(3, 5, 1);<br>t2.update(4, 6, 1);<br>cout << t2.query(0, 7) << endl;<br>return 0;<br>}<br>```<br>```go [sol-Go]<br>// 懒标记初始值<br>const todoInit int = 0 // **根据题目修改**<br>type lazySeg []struct {<br>val  int // **根据题目修改**<br>todo int<br>}<br>// 合并两个 val<br>func (lazySeg) mergeVal(a, b int) int {<br>return a + b // **根据题目修改**<br>}<br>// 合并两个懒标记<br>func (lazySeg) mergeTodo(a, b int) int {<br>return a + b // **根据题目修改**<br>}<br>// 把懒标记作用到 node 子树（本例为区间加）<br>func (t lazySeg) apply(node, l, r int, todo int) {<br>cur := &t[node]<br>// 计算 tree[node] 区间的整体变化<br>cur.val += todo * (r - l + 1) // **根据题目修改**<br>cur.todo = t.mergeTodo(todo, cur.todo)<br>}<br>// 线段树维护一个长为 n 的数组（下标从 0 到 n-1），元素初始值为 initVal<br>func newLazySegmentTree(n int, initVal int) lazySeg {<br>a := make([]int, n)<br>for i := range a {<br>a[i] = initVal<br>}<br>return newLazySegmentTreeWithArray(a)<br>}<br>// 线段树维护数组 a<br>func newLazySegmentTreeWithArray(a []int) lazySeg {<br>n := len(a)<br>t := make(lazySeg, 2<<bits.Len(uint(n-1)))<br>t.build(a, 1, 0, n-1)<br>return t<br>}<br>// 把当前节点的懒标记下传给左右儿子<br>func (t lazySeg) spread(node, l, r int) {<br>// 类似「断点续传」，接着完成之前没完成的下传任务<br>todo := t[node].todo<br>if todo == todoInit { // 没有需要下传的信息<br>return<br>}<br>m := (l + r) / 2<br>t.apply(node*2, l, m, todo)<br>t.apply(node*2+1, m+1, r, todo)<br>t[node].todo = todoInit // 下传完毕<br>}<br>// 合并左右儿子的 val 到当前节点的 val<br>func (t lazySeg) maintain(node int) {<br>t[node].val = t.mergeVal(t[node*2].val, t[node*2+1].val)<br>}<br>// 用 a 初始化线段树<br>// 时间复杂度 O(n)<br>func (t lazySeg) build(a []int, node, l, r int) {<br>t[node].todo = todoInit<br>if l == r { // 叶子<br>t[node].val = a[l] // 初始化叶节点的值<br>return<br>}<br>m := (l + r) / 2<br>t.build(a, node*2, l, m) // 初始化左子树<br>t.build(a, node*2+1, m+1, r) // 初始化右子树<br>t.maintain(node)<br>}<br>// 用 f 更新 [ql, qr] 中的每个 a[i]<br>// 调用 t.update(1, 0, n-1, ql, qr, f)<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>func (t lazySeg) update(node, l, r, ql, qr int, f int) {<br>if ql <= l && r <= qr { // 当前子树完全在 [ql, qr] 内<br>t.apply(node, l, r, f)<br>return<br>}<br>t.spread(node, l, r)<br>m := (l + r) / 2<br>if ql <= m { // 更新左子树<br>t.update(node*2, l, m, ql, qr, f)<br>}<br>if qr > m { // 更新右子树<br>t.update(node*2+1, m+1, r, ql, qr, f)<br>}<br>t.maintain(node)<br>}<br>// 返回用 mergeVal 合并所有 a[i] 的计算结果，其中 i 在闭区间 [ql, qr] 中<br>// 调用 t.query(1, 0, n-1, ql, qr)<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>func (t lazySeg) query(node, l, r, ql, qr int) int {<br>if ql <= l && r <= qr { // 当前子树完全在 [ql, qr] 内<br>return t[node].val<br>}<br>t.spread(node, l, r)<br>m := (l + r) / 2<br>if qr <= m { // [ql, qr] 在左子树<br>return t.query(node*2, l, m, ql, qr)<br>}<br>if ql > m { // [ql, qr] 在右子树<br>return t.query(node*2+1, m+1, r, ql, qr)<br>}<br>lRes := t.query(node*2, l, m, ql, qr)<br>rRes := t.query(node*2+1, m+1, r, ql, qr)<br>return t.mergeVal(lRes, rRes)<br>}<br>```<br>",
+                    "summary": "把任意区间用 $\\mathcal{O}(\\log n)$ 个区间表示，线段树的每个节点记录对应区间的信息。<br>- **询问**：把询问区间拆分成 $\\mathcal{O}(\\log n)$ 个区间，对应着线段树的 $\\mathcal{O}(\\log n)$ 个节点，把这 $\\mathcal{O}(\\log n)$ 个节点的信息合并，即为答案。<br>- **区间更新**：仍然是拆分成 $\\mathcal{O}(\\log n)$ 个区间，对应着线段树的 $\\mathcal{O}(\\log n)$ 个节点。但对于其中的非叶节点，不把更新的内容往下传递给子节点，而是记录「发生了更新，内容为 xxx」，把更新的内容记录下来。直到后续的询问或更新操作，需要访问或修改更下面的子节点信息时，才把更新的内容往下传。<br>基础模板代码如下。为方便入门理解，我没有做复杂封装。通用模板代码可以参考 AtCoder Library 的 <a href=\"https://github.com/atcoder/ac-library/blob/master/atcoder/lazysegtree.hpp\">lazysegtree.hpp</a>。<br>```py [sol-Python3]<br>class Node:<br>__slots__ = 'val', 'todo'<br>class LazySegmentTree:<br>_TODO_INIT = 0  # **根据题目修改**<br>def __init__(self, n: int, init_val=0):<br>if isinstance(init_val, int):<br>init_val = [init_val] * n<br>self._n = n<br>self._tree = [Node() for _ in range(2 << (n - 1).bit_length())]<br>self._build(init_val, 1, 0, n - 1)<br>def _merge_val(self, a: int, b: int) -> int:<br>return a + b  # **根据题目修改**<br>def _merge_todo(self, a: int, b: int) -> int:<br>return a + b  # **根据题目修改**<br>def _apply(self, node: int, l: int, r: int, todo: int) -> None:<br>cur = self._tree[node]<br>cur.val += todo * (r - l + 1)  # **根据题目修改**<br>cur.todo = self._merge_todo(todo, cur.todo)<br>def _spread(self, node: int, l: int, r: int) -> None:<br>todo = self._tree[node].todo<br>if todo == self._TODO_INIT:  # 没有需要下传的信息<br>return<br>m = (l + r) // 2<br>self._apply(node * 2, l, m, todo)<br>self._apply(node * 2 + 1, m + 1, r, todo)<br>self._tree[node].todo = self._TODO_INIT  # 下传完毕<br>def _maintain(self, node: int) -> None:<br>self._tree[node].val = self._merge_val(self._tree[node * 2].val, self._tree[node * 2 + 1].val)<br>def _build(self, a: List[int], node: int, l: int, r: int) -> None:<br>self._tree[node].todo = self._TODO_INIT<br>if l == r:  # 叶子<br>self._tree[node].val = a[l]  # 初始化叶节点的值<br>return<br>m = (l + r) // 2<br>self._build(a, node * 2, l, m)  # 初始化左子树<br>self._build(a, node * 2 + 1, m + 1, r)  # 初始化右子树<br>self._maintain(node)<br>def _update(self, node: int, l: int, r: int, ql: int, qr: int, f: int) -> None:<br>if ql <= l and r <= qr:  # 当前子树完全在 [ql, qr] 内<br>self._apply(node, l, r, f)<br>return<br>self._spread(node, l, r)<br>m = (l + r) // 2<br>if ql <= m:  # 更新左子树<br>self._update(node * 2, l, m, ql, qr, f)<br>if qr > m:  # 更新右子树<br>self._update(node * 2 + 1, m + 1, r, ql, qr, f)<br>self._maintain(node)<br>def _query(self, node: int, l: int, r: int, ql: int, qr: int) -> int:<br>if ql <= l and r <= qr:  # 当前子树完全在 [ql, qr] 内<br>return self._tree[node].val<br>self._spread(node, l, r)<br>m = (l + r) // 2<br>if qr <= m:  # [ql, qr] 在左子树<br>return self._query(node * 2, l, m, ql, qr)<br>if ql > m:  # [ql, qr] 在右子树<br>return self._query(node * 2 + 1, m + 1, r, ql, qr)<br>l_res = self._query(node * 2, l, m, ql, qr)<br>r_res = self._query(node * 2 + 1, m + 1, r, ql, qr)<br>return self._merge_val(l_res, r_res)<br>def update(self, ql: int, qr: int, f: int) -> None:<br>self._update(1, 0, self._n - 1, ql, qr, f)<br>def query(self, ql: int, qr: int) -> int:<br>return self._query(1, 0, self._n - 1, ql, qr)<br>```<br>```java [sol-Java]<br>class LazySegmentTree {<br>// 懒标记初始值<br>private static final long TODO_INIT = 0; // **根据题目修改**<br>private static final class Node {<br>long val; // **根据题目修改**<br>long todo;<br>}<br>// 合并两个 val<br>private long mergeVal(long a, long b) {<br>return a + b; // **根据题目修改**<br>}<br>// 合并两个懒标记<br>private long mergeTodo(long a, long b) {<br>return a + b; // **根据题目修改**<br>}<br>// 把懒标记作用到 node 子树（本例为区间加）<br>private void apply(int node, int l, int r, long todo) {<br>Node cur = tree[node];<br>// 计算 tree[node] 区间的整体变化<br>cur.val += todo * (r - l + 1); // **根据题目修改**<br>cur.todo = mergeTodo(todo, cur.todo);<br>}<br>private final int n;<br>private final Node[] tree;<br>// 线段树维护一个长为 n 的数组（下标从 0 到 n-1），元素初始值为 initVal<br>public LazySegmentTree(int n, long initVal) {<br>this.n = n;<br>long[] a = new long[n];<br>Arrays.fill(a, initVal);<br>tree = new Node[2 << (32 - Integer.numberOfLeadingZeros(n - 1))];<br>build(a, 1, 0, n - 1);<br>}<br>// 线段树维护数组 a<br>public LazySegmentTree(long[] a) {<br>n = a.length;<br>tree = new Node[2 << (32 - Integer.numberOfLeadingZeros(n - 1))];<br>build(a, 1, 0, n - 1);<br>}<br>// 用 f 更新 [ql, qr] 中的每个 a[i]<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>public void update(int ql, int qr, long f) {<br>update(1, 0, n - 1, ql, qr, f);<br>}<br>// 返回用 mergeVal 合并所有 a[i] 的计算结果，其中 i 在闭区间 [ql, qr] 中<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>public long query(int ql, int qr) {<br>return query(1, 0, n - 1, ql, qr);<br>}<br>// 把当前节点的懒标记下传给左右儿子<br>private void spread(int node, int l, int r) {<br>long todo = tree[node].todo;<br>if (todo == TODO_INIT) { // 没有需要下传的信息<br>return;<br>}<br>int m = (l + r) / 2;<br>apply(node * 2, l, m, todo);<br>apply(node * 2 + 1, m + 1, r, todo);<br>tree[node].todo = TODO_INIT; // 下传完毕<br>}<br>// 合并左右儿子的 val 到当前节点的 val<br>private void maintain(int node) {<br>tree[node].val = mergeVal(tree[node * 2].val, tree[node * 2 + 1].val);<br>}<br>// 用 a 初始化线段树<br>// 时间复杂度 O(n)<br>private void build(long[] a, int node, int l, int r) {<br>tree[node] = new Node();<br>tree[node].todo = TODO_INIT;<br>if (l == r) { // 叶子<br>tree[node].val = a[l]; // 初始化叶节点的值<br>return;<br>}<br>int m = (l + r) / 2;<br>build(a, node * 2, l, m); // 初始化左子树<br>build(a, node * 2 + 1, m + 1, r); // 初始化右子树<br>maintain(node);<br>}<br>private void update(int node, int l, int r, int ql, int qr, long f) {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>apply(node, l, r, f);<br>return;<br>}<br>spread(node, l, r);<br>int m = (l + r) / 2;<br>if (ql <= m) { // 更新左子树<br>update(node * 2, l, m, ql, qr, f);<br>}<br>if (qr > m) { // 更新右子树<br>update(node * 2 + 1, m + 1, r, ql, qr, f);<br>}<br>maintain(node);<br>}<br>private long query(int node, int l, int r, int ql, int qr) {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>return tree[node].val;<br>}<br>spread(node, l, r);<br>int m = (l + r) / 2;<br>if (qr <= m) { // [ql, qr] 在左子树<br>return query(node * 2, l, m, ql, qr);<br>}<br>if (ql > m) { // [ql, qr] 在右子树<br>return query(node * 2 + 1, m + 1, r, ql, qr);<br>}<br>long lRes = query(node * 2, l, m, ql, qr);<br>long rRes = query(node * 2 + 1, m + 1, r, ql, qr);<br>return mergeVal(lRes, rRes);<br>}<br>}<br>```<br>```cpp [sol-C++]<br>template<typename T, typename F><br>class LazySegmentTree {<br>// 注：也可以去掉 template<typename T, typename F>，改在这里定义 T 和 F<br>// using T = pair<int, int>;<br>// using F = pair<int, int>;<br>// 懒标记初始值<br>const F TODO_INIT = 0; // **根据题目修改**<br>struct Node {<br>T val;<br>F todo;<br>};<br>int n;<br>vector<Node> tree;<br>// 合并两个 val<br>T merge_val(T a, T b) const {<br>return a + b; // **根据题目修改**<br>}<br>// 合并两个懒标记<br>F merge_todo(F a, F b) const {<br>return a + b; // **根据题目修改**<br>}<br>// 把懒标记作用到 node 子树（本例为区间加）<br>void apply(int node, int l, int r, F todo) {<br>Node& cur = tree[node];<br>// 计算 tree[node] 区间的整体变化<br>cur.val += todo * (r - l + 1); // **根据题目修改**<br>cur.todo = merge_todo(todo, cur.todo);<br>}<br>// 把当前节点的懒标记下传给左右儿子<br>void spread(int node, int l, int r) {<br>Node& cur = tree[node];<br>F todo = cur.todo;<br>if (todo == TODO_INIT) { // 没有需要下传的信息<br>return;<br>}<br>int m = (l + r) / 2;<br>apply(node * 2, l, m, todo);<br>apply(node * 2 + 1, m + 1, r, todo);<br>cur.todo = TODO_INIT; // 下传完毕<br>}<br>// 合并左右儿子的 val 到当前节点的 val<br>void maintain(int node) {<br>tree[node].val = merge_val(tree[node * 2].val, tree[node * 2 + 1].val);<br>}<br>// 用 a 初始化线段树<br>// 时间复杂度 O(n)<br>void build(const vector<T>& a, int node, int l, int r) {<br>Node& cur = tree[node];<br>cur.todo = TODO_INIT;<br>if (l == r) { // 叶子<br>cur.val = a[l]; // 初始化叶节点的值<br>return;<br>}<br>int m = (l + r) / 2;<br>build(a, node * 2, l, m); // 初始化左子树<br>build(a, node * 2 + 1, m + 1, r); // 初始化右子树<br>maintain(node);<br>}<br>void update(int node, int l, int r, int ql, int qr, F f) {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>apply(node, l, r, f);<br>return;<br>}<br>spread(node, l, r);<br>int m = (l + r) / 2;<br>if (ql <= m) { // 更新左子树<br>update(node * 2, l, m, ql, qr, f);<br>}<br>if (qr > m) { // 更新右子树<br>update(node * 2 + 1, m + 1, r, ql, qr, f);<br>}<br>maintain(node);<br>}<br>T query(int node, int l, int r, int ql, int qr) {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>return tree[node].val;<br>}<br>spread(node, l, r);<br>int m = (l + r) / 2;<br>if (qr <= m) { // [ql, qr] 在左子树<br>return query(node * 2, l, m, ql, qr);<br>}<br>if (ql > m) { // [ql, qr] 在右子树<br>return query(node * 2 + 1, m + 1, r, ql, qr);<br>}<br>T l_res = query(node * 2, l, m, ql, qr);<br>T r_res = query(node * 2 + 1, m + 1, r, ql, qr);<br>return merge_val(l_res, r_res);<br>}<br>public:<br>// 线段树维护一个长为 n 的数组（下标从 0 到 n-1），元素初始值为 init_val<br>LazySegmentTree(int n, T init_val = 0) : LazySegmentTree(vector<T>(n, init_val)) {}<br>// 线段树维护数组 a<br>LazySegmentTree(const vector<T>& a) : n(a.size()), tree(2 << bit_width(a.size() - 1)) {<br>build(a, 1, 0, n - 1);<br>}<br>// 用 f 更新 [ql, qr] 中的每个 a[i]<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>void update(int ql, int qr, F f) {<br>update(1, 0, n - 1, ql, qr, f);<br>}<br>// 返回用 merge_val 合并所有 a[i] 的计算结果，其中 i 在闭区间 [ql, qr] 中<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>T query(int ql, int qr) {<br>return query(1, 0, n - 1, ql, qr);<br>}<br>};<br>int main() {<br>LazySegmentTree<long long, long long> t(8); // 默认值为 0<br>t.update(3, 5, 100);<br>t.update(4, 6, 10);<br>cout << t.query(0, 7) << endl;<br>vector<long long> nums = {3, 1, 4, 1, 5, 9, 2, 6};<br>LazySegmentTree<long long, long long> t2(nums);<br>t2.update(3, 5, 1);<br>t2.update(4, 6, 1);<br>cout << t2.query(0, 7) << endl;<br>return 0;<br>}<br>```<br>```go [sol-Go]<br>// 懒标记初始值<br>const todoInit int = 0 // **根据题目修改**<br>type lazySeg []struct {<br>val  int // **根据题目修改**<br>todo int<br>}<br>// 合并两个 val<br>func (lazySeg) mergeVal(a, b int) int {<br>return a + b // **根据题目修改**<br>}<br>// 合并两个懒标记<br>func (lazySeg) mergeTodo(a, b int) int {<br>return a + b // **根据题目修改**<br>}<br>// 把懒标记作用到 node 子树（本例为区间加）<br>func (t lazySeg) apply(node, l, r int, todo int) {<br>cur := &t[node]<br>// 计算 tree[node] 区间的整体变化<br>cur.val += todo * (r - l + 1) // **根据题目修改**<br>cur.todo = t.mergeTodo(todo, cur.todo)<br>}<br>// 线段树维护一个长为 n 的数组（下标从 0 到 n-1），元素初始值为 initVal<br>func newLazySegmentTree(n int, initVal int) lazySeg {<br>a := make([]int, n)<br>for i := range a {<br>a[i] = initVal<br>}<br>return newLazySegmentTreeWithArray(a)<br>}<br>// 线段树维护数组 a<br>func newLazySegmentTreeWithArray(a []int) lazySeg {<br>n := len(a)<br>t := make(lazySeg, 2<<bits.Len(uint(n-1)))<br>t.build(a, 1, 0, n-1)<br>return t<br>}<br>// 把当前节点的懒标记下传给左右儿子<br>func (t lazySeg) spread(node, l, r int) {<br>// 类似「断点续传」，接着完成之前没完成的下传任务<br>todo := t[node].todo<br>if todo == todoInit { // 没有需要下传的信息<br>return<br>}<br>m := (l + r) / 2<br>t.apply(node*2, l, m, todo)<br>t.apply(node*2+1, m+1, r, todo)<br>t[node].todo = todoInit // 下传完毕<br>}<br>// 合并左右儿子的 val 到当前节点的 val<br>func (t lazySeg) maintain(node int) {<br>t[node].val = t.mergeVal(t[node*2].val, t[node*2+1].val)<br>}<br>// 用 a 初始化线段树<br>// 时间复杂度 O(n)<br>func (t lazySeg) build(a []int, node, l, r int) {<br>t[node].todo = todoInit<br>if l == r { // 叶子<br>t[node].val = a[l] // 初始化叶节点的值<br>return<br>}<br>m := (l + r) / 2<br>t.build(a, node*2, l, m) // 初始化左子树<br>t.build(a, node*2+1, m+1, r) // 初始化右子树<br>t.maintain(node)<br>}<br>// 用 f 更新 [ql, qr] 中的每个 a[i]<br>// 调用 t.update(1, 0, n-1, ql, qr, f)<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>func (t lazySeg) update(node, l, r, ql, qr int, f int) {<br>if ql <= l && r <= qr { // 当前子树完全在 [ql, qr] 内<br>t.apply(node, l, r, f)<br>return<br>}<br>t.spread(node, l, r)<br>m := (l + r) / 2<br>if ql <= m { // 更新左子树<br>t.update(node*2, l, m, ql, qr, f)<br>}<br>if qr > m { // 更新右子树<br>t.update(node*2+1, m+1, r, ql, qr, f)<br>}<br>t.maintain(node)<br>}<br>// 返回用 mergeVal 合并所有 a[i] 的计算结果，其中 i 在闭区间 [ql, qr] 中<br>// 调用 t.query(1, 0, n-1, ql, qr)<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>func (t lazySeg) query(node, l, r, ql, qr int) int {<br>if ql <= l && r <= qr { // 当前子树完全在 [ql, qr] 内<br>return t[node].val<br>}<br>t.spread(node, l, r)<br>m := (l + r) / 2<br>if qr <= m { // [ql, qr] 在左子树<br>return t.query(node*2, l, m, ql, qr)<br>}<br>if ql > m { // [ql, qr] 在右子树<br>return t.query(node*2+1, m+1, r, ql, qr)<br>}<br>lRes := t.query(node*2, l, m, ql, qr)<br>rRes := t.query(node*2+1, m+1, r, ql, qr)<br>return t.mergeVal(lRes, rRes)<br>}<br>```<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -7692,6 +7748,49 @@ export default{
                     "last_update": ""
                 },
                 {
+                    "title": "九、伸展树（Splay 树）",
+                    "summary": "",
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
+                        {
+                            "title": "2296. 设计一个文本编辑器",
+                            "summary": "",
+                            "src": "/design-a-text-editor/",
+                            "original_src": "https://leetcode.cn/problems/design-a-text-editor/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1911.8282317986,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3526. 范围异或查询与子数组反转",
+                            "summary": "",
+                            "src": "/range-xor-queries-with-subarray-reversals/",
+                            "original_src": "https://leetcode.cn/problems/range-xor-queries-with-subarray-reversals/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
+                        }
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
                     "title": "专题：离线算法",
                     "summary": "把询问**排序**，通过改变回答询问的顺序，使问题更容易处理。<br>> 相应的，**在线算法**就是按照 $\\textit{queries}$ 的顺序一个一个处理。<br>",
                     "src": "",
@@ -7859,6 +7958,20 @@ export default{
                     "nonLeafChild": [],
                     "isPremium": false,
                     "last_update": ""
+                },
+                {
+                    "title": "算法题单",
+                    "summary": "<a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题？</a><br>1. <a href=\"/lc-rating/list/sliding_window\">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a><br>2. <a href=\"/lc-rating/list/binary_search\">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a><br>3. <a href=\"/lc-rating/list/monotonic_stack\">单调栈（基础/矩形面积/贡献法/最小字典序）</a><br>4. <a href=\"/lc-rating/list/grid\">网格图（DFS/BFS/综合应用）</a><br>5. <a href=\"/lc-rating/list/bitwise_operations\">位运算（基础/性质/拆位/试填/恒等式/思维）</a><br>6. <a href=\"/lc-rating/list/graph\">图论算法（DFS/BFS/拓扑排序/基环树/最短路/最小生成树/网络流）</a><br>7. <a href=\"/lc-rating/list/dynamic_programming\">动态规划（入门/背包/划分/状态机/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a><br>8. <a href=\"/lc-rating/list/data_structure\">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a><br>9. <a href=\"/lc-rating/list/math\">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a><br>10. <a href=\"/lc-rating/list/greedy\">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a><br>11. <a href=\"/lc-rating/list/trees\">链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）</a><br>12. <a href=\"/lc-rating/list/string\">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a><br><a href=\"https://github.com/EndlessCheng/codeforces-go/blob/master/leetcode/SOLUTIONS.md\">我的题解精选（已分类）</a><br>欢迎关注 <a href=\"https://space.bilibili.com/206214\">B站@灵茶山艾府</a><br>如果你发现有题目可以补充进来，欢迎评论反馈。<br>",
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
             ],
             "isPremium": false,
@@ -7866,5 +7979,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-04-19 02:15:55"
+    "last_update": "2025-05-07 00:55:58"
 } as ProblemCategory;

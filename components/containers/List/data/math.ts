@@ -1,7 +1,7 @@
 import ProblemCategory from "@components/ProblemCatetory";
 
 export default{
-    "title": "分享丨【题单】数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）",
+    "title": "分享丨【算法题单】数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）",
     "summary": "",
     "src": "",
     "original_src": "https://leetcode.cn/circle/discuss/IYT3ss",
@@ -552,6 +552,34 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "2176. 统计数组中相等且可以被整除的数对",
+                                    "summary": "",
+                                    "src": "/count-equal-and-divisible-pairs-in-an-array/",
+                                    "original_src": "https://leetcode.cn/problems/count-equal-and-divisible-pairs-in-an-array/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1215.7827321325,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2183. 统计可以被 K 整除的下标对数目",
+                                    "summary": "",
+                                    "src": "/count-array-pairs-divisible-by-k/",
+                                    "original_src": "https://leetcode.cn/problems/count-array-pairs-divisible-by-k/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2246.0452639352,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "952. 按公因数计算最大组件大小",
                                     "summary": "",
                                     "src": "/largest-component-size-by-common-factor/",
@@ -813,20 +841,6 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2220.8257124139,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "2183. 统计可以被 K 整除的下标对数目",
-                                    "summary": "",
-                                    "src": "/count-array-pairs-divisible-by-k/",
-                                    "original_src": "https://leetcode.cn/problems/count-array-pairs-divisible-by-k/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 2246.0452639352,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1315,6 +1329,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "2316. 统计无向图中无法互相到达点对数",
+                                    "summary": "",
+                                    "src": "/count-unreachable-pairs-of-nodes-in-an-undirected-graph/",
+                                    "original_src": "https://leetcode.cn/problems/count-unreachable-pairs-of-nodes-in-an-undirected-graph/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1604.0695445163,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2550. 猴子碰撞的方法数",
                                     "summary": "",
                                     "src": "/count-collisions-of-monkeys-on-a-polygon/",
@@ -1610,6 +1638,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3519. 统计逐位非递减的整数",
+                                    "summary": "",
+                                    "src": "/count-numbers-with-non-decreasing-digits/",
+                                    "original_src": "https://leetcode.cn/problems/count-numbers-with-non-decreasing-digits/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2246.0622321942,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3405. 统计恰好有 K 个相等相邻元素的数组数目",
                                     "summary": "",
                                     "src": "/count-the-number-of-arrays-with-k-matching-adjacent-elements/",
@@ -1660,6 +1702,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2382.24900347,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3518. 最小回文排列 II",
+                                    "summary": "",
+                                    "src": "/smallest-palindromic-rearrangement-ii/",
+                                    "original_src": "https://leetcode.cn/problems/smallest-palindromic-rearrangement-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2375.0917527641,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -2239,7 +2295,7 @@ export default{
                 },
                 {
                     "title": "三、概率期望",
-                    "summary": "",
+                    "summary": "**随机情况下显著更快的算法**：<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -2371,6 +2427,20 @@ export default{
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": true,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3494. 酿造药水需要的最少总时间",
+                            "summary": "",
+                            "src": "/find-the-minimum-amount-of-time-to-brew-potions/",
+                            "original_src": "https://leetcode.cn/problems/find-the-minimum-amount-of-time-to-brew-potions/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2042.1113250604,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
                             "last_update": ""
                         }
                     ],
@@ -3076,6 +3146,34 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3494. 酿造药水需要的最少总时间",
+                                    "summary": "",
+                                    "src": "/find-the-minimum-amount-of-time-to-brew-potions/",
+                                    "original_src": "https://leetcode.cn/problems/find-the-minimum-amount-of-time-to-brew-potions/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2042.1113250604,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3500. 将数组分割为子数组的最小代价",
+                                    "summary": "",
+                                    "src": "/minimum-cost-to-divide-array-into-subarrays/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-cost-to-divide-array-into-subarrays/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2569.4068901457,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "LCP 15. 游乐园的迷宫",
                                     "summary": "",
                                     "src": "/you-le-yuan-de-mi-gong/",
@@ -3661,7 +3759,36 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "§7.5 其他",
+                            "title": "§7.5 快速沃尔什变换（FWT）",
+                            "summary": "",
+                            "src": "",
+                            "original_src": "",
+                            "sort": 0,
+                            "isLeaf": false,
+                            "solution": "",
+                            "score": 0,
+                            "leafChild": [
+                                {
+                                    "title": "3514. 不同 XOR 三元组的数目 II",
+                                    "summary": "",
+                                    "src": "/number-of-unique-xor-triplets-ii/",
+                                    "original_src": "https://leetcode.cn/problems/number-of-unique-xor-triplets-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1883.9947280403,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                }
+                            ],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "§7.6 其他",
                             "summary": "",
                             "src": "",
                             "original_src": "",
@@ -3819,6 +3946,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1588.4826339516,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2145. 统计隐藏数组数目",
+                                    "summary": "",
+                                    "src": "/count-the-hidden-sequences/",
+                                    "original_src": "https://leetcode.cn/problems/count-the-hidden-sequences/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1614.4877804672,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4154,6 +4295,20 @@ export default{
                     ],
                     "isPremium": false,
                     "last_update": ""
+                },
+                {
+                    "title": "算法题单",
+                    "summary": "<a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题？</a><br>1. <a href=\"/lc-rating/list/sliding_window\">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a><br>2. <a href=\"/lc-rating/list/binary_search\">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a><br>3. <a href=\"/lc-rating/list/monotonic_stack\">单调栈（基础/矩形面积/贡献法/最小字典序）</a><br>4. <a href=\"/lc-rating/list/grid\">网格图（DFS/BFS/综合应用）</a><br>5. <a href=\"/lc-rating/list/bitwise_operations\">位运算（基础/性质/拆位/试填/恒等式/思维）</a><br>6. <a href=\"/lc-rating/list/graph\">图论算法（DFS/BFS/拓扑排序/基环树/最短路/最小生成树/网络流）</a><br>7. <a href=\"/lc-rating/list/dynamic_programming\">动态规划（入门/背包/划分/状态机/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a><br>8. <a href=\"/lc-rating/list/data_structure\">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a><br>9. <a href=\"/lc-rating/list/math\">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a><br>10. <a href=\"/lc-rating/list/greedy\">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a><br>11. <a href=\"/lc-rating/list/trees\">链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）</a><br>12. <a href=\"/lc-rating/list/string\">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a><br><a href=\"https://github.com/EndlessCheng/codeforces-go/blob/master/leetcode/SOLUTIONS.md\">我的题解精选（已分类）</a><br>欢迎关注 <a href=\"https://space.bilibili.com/206214\">B站@灵茶山艾府</a><br>如果你发现有题目可以补充进来，欢迎评论反馈。<br>",
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
             ],
             "isPremium": false,
@@ -4161,5 +4316,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-03-20 04:18:50"
+    "last_update": "2025-04-25 03:31:37"
 } as ProblemCategory;

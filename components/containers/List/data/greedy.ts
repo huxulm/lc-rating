@@ -1,7 +1,7 @@
 import ProblemCategory from "@components/ProblemCatetory";
 
 export default{
-    "title": "分享丨【题单】贪心算法（基本贪心策略/反悔/区间/字典序/数学/思维/构造）",
+    "title": "分享丨【算法题单】贪心算法（基本贪心策略/反悔/区间/字典序/数学/思维/构造）",
     "summary": "",
     "src": "",
     "original_src": "https://leetcode.cn/circle/discuss/g6KTKL",
@@ -914,6 +914,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "2071. 你可以安排的最多任务数目",
+                                    "summary": "",
+                                    "src": "/maximum-number-of-tasks-you-can-assign/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-number-of-tasks-you-can-assign/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2648.1748409542,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2323. 完成所有工作的最短时间 II",
                                     "summary": "",
                                     "src": "/find-minimum-time-to-finish-all-jobs-ii/",
@@ -1497,7 +1511,7 @@ export default{
                         },
                         {
                             "title": "§1.7 交换论证法",
-                            "summary": "交换论证法（exchange argument）用于证明一类贪心算法的正确性，也可以用来启发思考。做法如下：<br>1. 对于题目，猜想按照「某种顺序」处理数据，可以得到最优解。<br>2. 交换顺序中的两个元素 $a_i$ 和 $a_j$，计算交换后的答案。<br>3. 对比交换前后的答案。如果交换后，答案没有变得更优，则说明猜想成立。<br>也可以不用猜想，而是计算「先 $a_i$ 后 $a_j$」和「先 $a_j$ 后 $a_i$」对应的答案，通过比较两个答案谁更优，来确定按照何种顺序处理数据。<br><a href=\"https://leetcode.cn/problems/minimum-processing-time/solution/tan-xin-pythonjavacgo-by-endlesscheng-8fzf/\">讲解（以 2895 题为例）</a><br>补充：<br>",
+                            "summary": "交换论证法（exchange argument）用于证明一类贪心算法的正确性，也可以用来启发思考。做法如下：<br>1. 对于题目，猜想按照「某种顺序」处理数据，可以得到最优解。<br>2. 交换顺序中的两个元素 $a_i$ 和 $a_j$，计算交换后的答案。<br>3. 对比交换前后的答案。如果交换后，答案没有变得更优，则说明猜想成立。<br>也可以不用猜想，而是计算「先 $a_i$ 后 $a_j$」和「先 $a_j$ 后 $a_i$」对应的答案，通过比较两个答案谁更优，来确定按照何种顺序处理数据。<br><a href=\"https://leetcode.cn/problems/minimum-processing-time/solution/tan-xin-pythonjavacgo-by-endlesscheng-8fzf/\">讲解（以 2895 题为例）</a><br>**思维扩展**：<br>**相似题目**：<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -1598,6 +1612,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1363.7443380057,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2412. 完成所有交易的初始最少钱数",
+                                    "summary": "",
+                                    "src": "/minimum-money-required-before-transactions/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-money-required-before-transactions/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2092.0222850837,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1710,7 +1738,7 @@ export default{
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2205.6094494046,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -2553,6 +2581,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3517. 最小回文排列 I",
+                                    "summary": "",
+                                    "src": "/smallest-palindromic-rearrangement-i/",
+                                    "original_src": "https://leetcode.cn/problems/smallest-palindromic-rearrangement-i/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1357.002392715,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1663. 具有给定数值的最小字符串",
                                     "summary": "",
                                     "src": "/smallest-string-with-a-given-numeric-value/",
@@ -2954,6 +2996,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3517. 最小回文排列 I",
+                                    "summary": "",
+                                    "src": "/smallest-palindromic-rearrangement-i/",
+                                    "original_src": "https://leetcode.cn/problems/smallest-palindromic-rearrangement-i/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1357.002392715,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4441,6 +4497,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3148. 矩阵中的最大得分",
+                                    "summary": "",
+                                    "src": "/maximum-difference-score-in-a-grid/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-difference-score-in-a-grid/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1819.6800324413,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2332. 坐上公交的最晚时间",
                                     "summary": "",
                                     "src": "/the-latest-time-to-catch-a-bus/",
@@ -4896,6 +4966,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3513. 不同 XOR 三元组的数目 I",
+                            "summary": "",
+                            "src": "/number-of-unique-xor-triplets-i/",
+                            "original_src": "https://leetcode.cn/problems/number-of-unique-xor-triplets-i/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1663.403653034,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "969. 煎饼排序",
                             "summary": "",
                             "src": "/pancake-sorting/",
@@ -5121,6 +5205,34 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "781. 森林中的兔子",
+                            "summary": "",
+                            "src": "/rabbits-in-forest/",
+                            "original_src": "https://leetcode.cn/problems/rabbits-in-forest/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1453.1833769825,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3523. 非递减数组的最大长度",
+                            "summary": "",
+                            "src": "/make-array-non-decreasing/",
+                            "original_src": "https://leetcode.cn/problems/make-array-non-decreasing/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "1864. 构成交替字符串需要的最小交换次数",
                             "summary": "",
                             "src": "/minimum-number-of-swaps-to-make-the-binary-string-alternating/",
@@ -5219,20 +5331,6 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "2412. 完成所有交易的初始最少钱数",
-                            "summary": "",
-                            "src": "/minimum-money-required-before-transactions/",
-                            "original_src": "https://leetcode.cn/problems/minimum-money-required-before-transactions/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 2092.0222850837,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "659. 分割数组为连续子序列",
                             "summary": "",
                             "src": "/split-array-into-consecutive-subsequences/",
@@ -5282,7 +5380,7 @@ export default{
                             "sort": 0,
                             "isLeaf": true,
                             "solution": null,
-                            "score": null,
+                            "score": 2763.6510278508,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -5404,6 +5502,20 @@ export default{
                     "nonLeafChild": [],
                     "isPremium": false,
                     "last_update": ""
+                },
+                {
+                    "title": "算法题单",
+                    "summary": "<a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题？</a><br>1. <a href=\"/lc-rating/list/sliding_window\">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a><br>2. <a href=\"/lc-rating/list/binary_search\">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a><br>3. <a href=\"/lc-rating/list/monotonic_stack\">单调栈（基础/矩形面积/贡献法/最小字典序）</a><br>4. <a href=\"/lc-rating/list/grid\">网格图（DFS/BFS/综合应用）</a><br>5. <a href=\"/lc-rating/list/bitwise_operations\">位运算（基础/性质/拆位/试填/恒等式/思维）</a><br>6. <a href=\"/lc-rating/list/graph\">图论算法（DFS/BFS/拓扑排序/基环树/最短路/最小生成树/网络流）</a><br>7. <a href=\"/lc-rating/list/dynamic_programming\">动态规划（入门/背包/划分/状态机/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a><br>8. <a href=\"/lc-rating/list/data_structure\">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a><br>9. <a href=\"/lc-rating/list/math\">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a><br>10. <a href=\"/lc-rating/list/greedy\">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a><br>11. <a href=\"/lc-rating/list/trees\">链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）</a><br>12. <a href=\"/lc-rating/list/string\">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a><br><a href=\"https://github.com/EndlessCheng/codeforces-go/blob/master/leetcode/SOLUTIONS.md\">我的题解精选（已分类）</a><br>欢迎关注 <a href=\"https://space.bilibili.com/206214\">B站@灵茶山艾府</a><br>如果你发现有题目可以补充进来，欢迎评论反馈。<br>",
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
             ],
             "isPremium": false,
@@ -5411,5 +5523,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-04-03 01:39:09"
+    "last_update": "2025-04-25 03:32:16"
 } as ProblemCategory;

@@ -1,7 +1,7 @@
 import ProblemCategory from "@components/ProblemCatetory";
 
 export default{
-    "title": "分享丨【题单】链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）",
+    "title": "分享丨【算法题单】链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）",
     "summary": "",
     "src": "",
     "original_src": "https://leetcode.cn/circle/discuss/K0n2gO",
@@ -516,7 +516,7 @@ export default{
                         },
                         {
                             "title": "§1.6 快慢指针",
-                            "summary": "<a href=\"https://www.bilibili.com/video/BV1KG4y1G7cu/\">视频讲解【基础算法精讲 07】</a><br>",
+                            "summary": "<a href=\"https://www.bilibili.com/video/BV1KG4y1G7cu/\">视频讲解【基础算法精讲 07】</a><br>**思维扩展**：<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -648,6 +648,20 @@ export default{
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "287. 寻找重复数",
+                                    "summary": "",
+                                    "src": "/find-the-duplicate-number/",
+                                    "original_src": "https://leetcode.cn/problems/find-the-duplicate-number/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
                                     "last_update": ""
                                 }
                             ],
@@ -3026,7 +3040,7 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "§2.13 BFS",
+                            "title": "§2.13 二叉树 BFS",
                             "summary": "<a href=\"https://www.bilibili.com/video/BV1hG4y1277i/\">视频讲解【基础算法精讲 13】</a><br>",
                             "src": "",
                             "original_src": "",
@@ -3246,20 +3260,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "863. 二叉树中所有距离为 K 的结点",
-                                    "summary": "",
-                                    "src": "/all-nodes-distance-k-in-binary-tree/",
-                                    "original_src": "https://leetcode.cn/problems/all-nodes-distance-k-in-binary-tree/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1663.1853149056,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "2641. 二叉树的堂兄弟节点 II",
                                     "summary": "",
                                     "src": "/cousins-in-binary-tree-ii/",
@@ -3288,20 +3288,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "331. 验证二叉树的前序序列化",
-                                    "summary": "",
-                                    "src": "/verify-preorder-serialization-of-a-binary-tree/",
-                                    "original_src": "https://leetcode.cn/problems/verify-preorder-serialization-of-a-binary-tree/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": null,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "958. 二叉树的完全性检验",
                                     "summary": "",
                                     "src": "/check-completeness-of-a-binary-tree/",
@@ -3310,6 +3296,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1702.8035923458,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "863. 二叉树中所有距离为 K 的结点",
+                                    "summary": "",
+                                    "src": "/all-nodes-distance-k-in-binary-tree/",
+                                    "original_src": "https://leetcode.cn/problems/all-nodes-distance-k-in-binary-tree/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1663.1853149056,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -3687,6 +3687,20 @@ export default{
                                     "summary": "",
                                     "src": "/serialize-and-deserialize-bst/",
                                     "original_src": "https://leetcode.cn/problems/serialize-and-deserialize-bst/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "331. 验证二叉树的前序序列化",
+                                    "summary": "",
+                                    "src": "/verify-preorder-serialization-of-a-binary-tree/",
+                                    "original_src": "https://leetcode.cn/problems/verify-preorder-serialization-of-a-binary-tree/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
@@ -4106,6 +4120,20 @@ export default{
                             "score": 0,
                             "leafChild": [
                                 {
+                                    "title": "3528. 单位转换 I",
+                                    "summary": "",
+                                    "src": "/unit-conversion-i/",
+                                    "original_src": "https://leetcode.cn/problems/unit-conversion-i/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1376. 通知所有员工所需的时间",
                                     "summary": "",
                                     "src": "/time-needed-to-inform-all-employees/",
@@ -4502,6 +4530,34 @@ export default{
                             "score": 0,
                             "leafChild": [
                                 {
+                                    "title": "3515. 带权树中的最短路径",
+                                    "summary": "",
+                                    "src": "/shortest-path-in-a-weighted-tree/",
+                                    "original_src": "https://leetcode.cn/problems/shortest-path-in-a-weighted-tree/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2312.2207190263,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "LCP 05. 发 LeetCoin",
+                                    "summary": "",
+                                    "src": "/coin-bonus/",
+                                    "original_src": "https://leetcode.cn/problems/coin-bonus/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2322. 从树中删除边的最小分数",
                                     "summary": "",
                                     "src": "/minimum-score-after-removals-on-a-tree/",
@@ -4578,7 +4634,7 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "§3.8 最近公共祖先（LCA）",
+                            "title": "§3.8 倍增算法、最近公共祖先（LCA）",
                             "summary": "<a href=\"https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/solution/mo-ban-jiang-jie-shu-shang-bei-zeng-suan-v3rw/\">讲解</a><br>**数组上的倍增**：<br>",
                             "src": "",
                             "original_src": "",
@@ -4627,6 +4683,20 @@ export default{
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3534. 针对图的路径存在性查询 II",
+                                    "summary": "",
+                                    "src": "/path-existence-queries-in-a-graph-ii/",
+                                    "original_src": "https://leetcode.cn/problems/path-existence-queries-in-a-graph-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
                                     "last_update": ""
                                 },
                                 {
@@ -4680,7 +4750,7 @@ export default{
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2924.5453871317,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -5521,6 +5591,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "2094. 找出 3 位偶数",
+                                    "summary": "",
+                                    "src": "/finding-3-digit-even-numbers/",
+                                    "original_src": "https://leetcode.cn/problems/finding-3-digit-even-numbers/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1454.7459647138,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1415. 长度为 n 的开心字符串中字典序第 k 小的字符串",
                                     "summary": "",
                                     "src": "/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/",
@@ -5759,6 +5843,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3509. 最大化交错和为 K 的子序列乘积",
+                                    "summary": "",
+                                    "src": "/maximum-product-of-subsequences-with-an-alternating-sum-equal-to-k/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-product-of-subsequences-with-an-alternating-sum-equal-to-k/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2702.6772838353,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "488. 祖玛游戏",
                                     "summary": "",
                                     "src": "/zuma-game/",
@@ -5963,6 +6061,49 @@ export default{
                     ],
                     "isPremium": false,
                     "last_update": ""
+                },
+                {
+                    "title": "五、其他递归/分治",
+                    "summary": "",
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
+                        {
+                            "title": "3537. 填充特殊网格",
+                            "summary": "",
+                            "src": "/fill-a-special-grid/",
+                            "original_src": "https://leetcode.cn/problems/fill-a-special-grid/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        }
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "算法题单",
+                    "summary": "<a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题？</a><br>1. <a href=\"/lc-rating/list/sliding_window\">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a><br>2. <a href=\"/lc-rating/list/binary_search\">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a><br>3. <a href=\"/lc-rating/list/monotonic_stack\">单调栈（基础/矩形面积/贡献法/最小字典序）</a><br>4. <a href=\"/lc-rating/list/grid\">网格图（DFS/BFS/综合应用）</a><br>5. <a href=\"/lc-rating/list/bitwise_operations\">位运算（基础/性质/拆位/试填/恒等式/思维）</a><br>6. <a href=\"/lc-rating/list/graph\">图论算法（DFS/BFS/拓扑排序/基环树/最短路/最小生成树/网络流）</a><br>7. <a href=\"/lc-rating/list/dynamic_programming\">动态规划（入门/背包/划分/状态机/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a><br>8. <a href=\"/lc-rating/list/data_structure\">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a><br>9. <a href=\"/lc-rating/list/math\">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a><br>10. <a href=\"/lc-rating/list/greedy\">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a><br>11. <a href=\"/lc-rating/list/trees\">链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）</a><br>12. <a href=\"/lc-rating/list/string\">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a><br><a href=\"https://github.com/EndlessCheng/codeforces-go/blob/master/leetcode/SOLUTIONS.md\">我的题解精选（已分类）</a><br>欢迎关注 <a href=\"https://space.bilibili.com/206214\">B站@灵茶山艾府</a><br>如果你发现有题目可以补充进来，欢迎评论反馈。<br>",
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
             ],
             "isPremium": false,
@@ -5970,5 +6111,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-04-04 14:52:48"
+    "last_update": "2025-05-09 12:03:20"
 } as ProblemCategory;

@@ -1,7 +1,7 @@
 import ProblemCategory from "@components/ProblemCatetory";
 
 export default{
-    "title": "分享丨【题单】滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）",
+    "title": "分享丨【算法题单】滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）",
     "summary": "",
     "src": "",
     "original_src": "https://leetcode.cn/circle/discuss/0viNMK",
@@ -561,7 +561,7 @@ export default{
                 },
                 {
                     "title": "二、不定长滑动窗口",
-                    "summary": "不定长滑动窗口主要分为三类：求最长子数组，求最短子数组，以及求子数组个数。<br>",
+                    "summary": "不定长滑动窗口主要分为三类：求最长子数组，求最短子数组，以及求子数组个数。<br>> **注**：滑动窗口相当于在维护一个**队列**。右指针的移动可以视作**入队**，左指针的移动可以视作**出队**。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -1387,7 +1387,7 @@ export default{
                                 },
                                 {
                                     "title": "§2.3.3 恰好型滑动窗口",
-                                    "summary": "例如，要计算有多少个元素和**恰好等于** $k$ 的子数组，可以把问题变成：<br>- 计算有多少个元素和 $\\ge k$ 的子数组。<br>- 计算有多少个元素和 $> k$，也就是 $\\ge k + 1$ 的子数组。<br>答案就是元素和 $\\ge k$ 的子数组个数，减去元素和 $\\ge k + 1$ 的子数组个数。这里把 $>$ 转换成 $\\ge$，从而可以把滑窗逻辑封装成一个函数 `f`，然后用 `f(k) - f(k + 1)` 计算，无需编写两份滑窗代码。<br>**总结**：「恰好」可以拆分成两个「至少」，也就是两个「越长越合法」的滑窗问题。<br>注：也可以把问题变成 $\\le k$ 减去 $\\le k-1$（两个至多）。可根据题目选择合适的变形方式。<br>注：也可以把两个滑动窗口合并起来，维护同一个右端点 $\\textit{right}$ 和两个左端点 $\\textit{left}_1$ 和 $\\textit{left}_2$，我把这种写法叫做**三指针滑动窗口**。<br>",
+                                    "summary": "例如，要计算有多少个元素和**恰好等于** $k$ 的子数组，可以把问题变成：<br>- 计算有多少个元素和 $\\ge k$ 的子数组。<br>- 计算有多少个元素和 $> k$，也就是 $\\ge k + 1$ 的子数组。<br>答案就是元素和 $\\ge k$ 的子数组个数，减去元素和 $\\ge k + 1$ 的子数组个数。这里把 $>$ 转换成 $\\ge$，从而可以把滑窗逻辑封装成一个函数 `f`，然后用 `f(k) - f(k + 1)` 计算，无需编写两份滑窗代码。<br>**总结**：「恰好」可以拆分成两个「至少」，也就是两个「越长越合法」的滑窗问题。<br>**注**：也可以把问题变成 $\\le k$ 减去 $\\le k-1$（两个至多）。可根据题目选择合适的变形方式。<br>**注**：也可以把两个滑动窗口合并起来，维护同一个右端点 $\\textit{right}$ 和两个左端点 $\\textit{left}_1$ 和 $\\textit{left}_2$，我把这种写法叫做**三指针滑动窗口**。<br>",
                                     "src": "",
                                     "original_src": "",
                                     "sort": 0,
@@ -2168,7 +2168,7 @@ export default{
                         },
                         {
                             "title": "§3.4 原地修改",
-                            "summary": "",
+                            "summary": "**思维扩展（选做）**：<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -2297,6 +2297,76 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1262.5890311992,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "1920. 基于排列构建数组",
+                                    "summary": "",
+                                    "src": "/build-array-from-permutation/",
+                                    "original_src": "https://leetcode.cn/problems/build-array-from-permutation/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1160.4439395369,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "442. 数组中重复的数据",
+                                    "summary": "",
+                                    "src": "/find-all-duplicates-in-an-array/",
+                                    "original_src": "https://leetcode.cn/problems/find-all-duplicates-in-an-array/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "448. 找到所有数组中消失的数字",
+                                    "summary": "",
+                                    "src": "/find-all-numbers-disappeared-in-an-array/",
+                                    "original_src": "https://leetcode.cn/problems/find-all-numbers-disappeared-in-an-array/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "41. 缺失的第一个正数",
+                                    "summary": "",
+                                    "src": "/first-missing-positive/",
+                                    "original_src": "https://leetcode.cn/problems/first-missing-positive/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "287. 寻找重复数",
+                                    "summary": "",
+                                    "src": "/find-the-duplicate-number/",
+                                    "original_src": "https://leetcode.cn/problems/find-the-duplicate-number/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -2778,7 +2848,7 @@ export default{
                 },
                 {
                     "title": "五、三指针",
-                    "summary": "注：部分题目已整理到「§2.3.3 恰好型滑动窗口」中。<br>**思维扩展**：<br>",
+                    "summary": "**注**：部分题目已整理到「§2.3.3 恰好型滑动窗口」中。<br>**思维扩展**：<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -3215,7 +3285,7 @@ export default{
                             "sort": 0,
                             "isLeaf": true,
                             "solution": null,
-                            "score": null,
+                            "score": 1729.1782719522,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -3323,6 +3393,20 @@ export default{
                     "nonLeafChild": [],
                     "isPremium": false,
                     "last_update": ""
+                },
+                {
+                    "title": "算法题单",
+                    "summary": "<a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题？</a><br>1. <a href=\"/lc-rating/list/sliding_window\">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a><br>2. <a href=\"/lc-rating/list/binary_search\">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a><br>3. <a href=\"/lc-rating/list/monotonic_stack\">单调栈（基础/矩形面积/贡献法/最小字典序）</a><br>4. <a href=\"/lc-rating/list/grid\">网格图（DFS/BFS/综合应用）</a><br>5. <a href=\"/lc-rating/list/bitwise_operations\">位运算（基础/性质/拆位/试填/恒等式/思维）</a><br>6. <a href=\"/lc-rating/list/graph\">图论算法（DFS/BFS/拓扑排序/基环树/最短路/最小生成树/网络流）</a><br>7. <a href=\"/lc-rating/list/dynamic_programming\">动态规划（入门/背包/划分/状态机/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a><br>8. <a href=\"/lc-rating/list/data_structure\">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a><br>9. <a href=\"/lc-rating/list/math\">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a><br>10. <a href=\"/lc-rating/list/greedy\">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a><br>11. <a href=\"/lc-rating/list/trees\">链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）</a><br>12. <a href=\"/lc-rating/list/string\">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a><br>如果你发现有题目可以补充进来，欢迎评论反馈。<br>",
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
             ],
             "isPremium": false,
@@ -3330,5 +3414,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-04-19 00:05:51"
+    "last_update": "2025-04-28 01:52:33"
 } as ProblemCategory;
