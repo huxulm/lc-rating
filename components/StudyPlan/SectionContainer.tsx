@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { StudyPlanData } from "@/types";
+import { marked } from 'marked';
 import React, { useEffect, useRef } from "react";
 import { ProblemList } from "./ProblemList";
 
@@ -32,13 +33,19 @@ const SectionContainer = React.memo(
       }
     }, [innerHtml]);
 
+    const createMarkup = (md: string) => {
+      return { __html: marked(md) };
+    };
+
+    const cardClasses = cn("scroll-mt-[70px]", {
+      "w-full": section.children.length,
+    }, level == 0 && section.children.length == 0? "w-1/2": "", section.isLeaf? "border": "", "h-fit");
+
     return (
       <Card
         id={`${section.title}`}
         // 导航栏高度是 60px
-        className={cn("scroll-mt-[70px]", {
-          "w-full": section.children.length,
-        })}
+        className={cardClasses}
       >
         <CardHeader>
           <CardTitle>{section.title}</CardTitle>
@@ -46,8 +53,8 @@ const SectionContainer = React.memo(
             <CardDescription>
               <p
                 ref={innerHtml}
-                className="p-4 rounded dark:bg-gray-800 rounded-lg text-pretty"
-                dangerouslySetInnerHTML={{ __html: section.summary }}
+                className="p-4 rounded dark:bg-gray-800 rounded-lg max-w-md"
+                dangerouslySetInnerHTML={createMarkup(section.summary)}
               />
             </CardDescription>
           ) : null}
@@ -75,3 +82,4 @@ const SectionContainer = React.memo(
 SectionContainer.displayName = "SectionContainer";
 
 export { SectionContainer };
+
