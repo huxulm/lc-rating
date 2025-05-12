@@ -68,6 +68,15 @@ const Navigator = React.memo(() => {
             <SettingsPanel show={show} onOpenChange={setShow} />
           </NavigationMenuItem>
         </NavigationMenuList>
+
+        <NavigationMenuItem>
+            <Button
+              variant="ghost"
+              className="cursor-pointer text-center text-base text-red-500 font-light"
+            >
+              <Link href={ROUTERS.v1.href}>{ROUTERS.v1.title}</Link>
+            </Button>
+        </NavigationMenuItem>
       </div>
       <div className="font-bold md:flex gap-1 hidden">
         <div>本页面所有题解来自</div>
@@ -97,3 +106,4 @@ const Navigator = React.memo(() => {
 
 Navigator.displayName = "Navigator";
 export { Navigator };
+
