@@ -1,3 +1,4 @@
+import { LCRE } from "@/components/common/LCRE";
 import { Navigator } from "@/components/common/Navigator";
 import { Provider } from "@/components/common/Provider";
 import { BASE_PATH } from "@/config/constants";
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="zh" className="scroll-smooth" suppressHydrationWarning>
       <body className="mt-[var(--navbar-height)]">
         <Provider>
+          <LCRE />
           <Navigator />
           {children}
         </Provider>
