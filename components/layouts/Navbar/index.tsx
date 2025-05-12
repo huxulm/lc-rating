@@ -74,8 +74,8 @@ export default function () {
   };
 
   return (
-    <Navbar expand="lg" sticky="top" className="p-0">
-      <Container className="navbar fw-bold px-2">
+    <Navbar sticky="top" className="p-0">
+      <Container className="">
         <Navbar.Brand>力扣竞赛题目</Navbar.Brand>
         <div className="d-flex flex-fill d-md-none d-lg-none justify-content-end pe-2">
           <span
@@ -188,10 +188,21 @@ export default function () {
                 </div>
               </Dropdown.Menu>
             </Dropdown>
-          </Nav>
 
+            <Link
+              href="../lc-rating-v2"
+              className="nav-link"
+              style={{
+                width: "fit-content",
+              }}
+            >
+              <Button id="nav-tr" className="fw-bold fs-6 p-1">
+                {`👉新版🎉`}
+              </Button>
+            </Link>
+          </Nav>
           <span className="navbar-brand fs-6 fw-semibold">
-            本页面所有题解来自{" "}
+            题解来自{" "}
             <Link
               href="https://space.bilibili.com/206214/"
               target="_blank"
