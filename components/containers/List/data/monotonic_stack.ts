@@ -23,7 +23,7 @@ export default{
             "leafChild": [],
             "nonLeafChild": [
                 {
-                    "title": "单调栈",
+                    "title": "一、单调栈",
                     "summary": "",
                     "src": "",
                     "original_src": "",
@@ -34,7 +34,7 @@ export default{
                     "leafChild": [],
                     "nonLeafChild": [
                         {
-                            "title": "基础",
+                            "title": "§1.1 基础",
                             "summary": "<a href=\"https://www.bilibili.com/video/BV1VN411J7S7/\">单调栈【基础算法精讲 26】</a><br>",
                             "src": "",
                             "original_src": "",
@@ -133,7 +133,7 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "进阶（选做）",
+                            "title": "§1.2 进阶（选做）",
                             "summary": "**思维扩展**：<br>",
                             "src": "",
                             "original_src": "",
@@ -367,6 +367,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3542. 将所有元素变为 0 的最少操作次数",
+                                    "summary": "",
+                                    "src": "/minimum-operations-to-convert-all-elements-to-zero/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-operations-to-convert-all-elements-to-zero/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1124. 表现良好的最长时间段",
                                     "summary": "",
                                     "src": "/longest-well-performing-interval/",
@@ -390,7 +404,7 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "矩形",
+                    "title": "二、矩形",
                     "summary": "",
                     "src": "",
                     "original_src": "",
@@ -489,7 +503,7 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "贡献法",
+                    "title": "三、贡献法",
                     "summary": "**思维扩展**：<br>",
                     "src": "",
                     "original_src": "",
@@ -630,7 +644,7 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "最小字典序",
+                    "title": "四、最小字典序",
                     "summary": "",
                     "src": "",
                     "original_src": "",
@@ -762,5 +776,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-05-09 03:32:53"
+    "last_update": "2025-05-19 05:16:33"
 } as ProblemCategory;

@@ -763,7 +763,7 @@ export default{
         },
         {
             "title": "三、背包",
-            "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV16Y411v7Y6/\">0-1 背包 完全背包</a><br>",
+            "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV16Y411v7Y6/\">0-1 背包 完全背包【基础算法精讲 18】</a><br>",
             "src": "",
             "original_src": "",
             "sort": 0,
@@ -1298,7 +1298,7 @@ export default{
             "nonLeafChild": [
                 {
                     "title": "§4.1 最长公共子序列（LCS）",
-                    "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV1TM4y1o7ug/\">最长公共子序列 编辑距离</a><br>一般定义 $f[i][j]$ 表示对 $(s[:i],t[:j])$ 的求解结果。<br>",
+                    "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV1TM4y1o7ug/\">最长公共子序列 编辑距离【基础算法精讲 19】</a><br>一般定义 $f[i][j]$ 表示对 $(s[:i],t[:j])$ 的求解结果。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -1553,7 +1553,7 @@ export default{
                 },
                 {
                     "title": "§4.2 最长递增子序列（LIS）",
-                    "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV1ub411Q7sB/\">最长递增子序列</a><br>做法有很多：<br>1. 枚举选哪个。（见讲解）<br>2. 二分。（见讲解）<br>3. 计算 $a$ 和把 $a$ 排序后的数组 $\\textit{sortedA}$ 的最长公共子序列。（用 LCS 求 LIS）<br>4. 数据结构优化。（见 <a href=\"https://leetcode.cn/problems/longest-increasing-subsequence-ii/\">2407 题</a>）<br>",
+                    "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV1ub411Q7sB/\">最长递增子序列【基础算法精讲 20】</a><br>做法有很多：<br>1. 枚举选哪个。（见讲解）<br>2. 二分。（见讲解）<br>3. 计算 $a$ 和把 $a$ 排序后的数组 $\\textit{sortedA}$ 的最长公共子序列。（用 LCS 求 LIS）<br>4. 数据结构优化。（见 <a href=\"https://leetcode.cn/problems/longest-increasing-subsequence-ii/\">2407 题</a>）<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -2429,7 +2429,7 @@ export default{
             "nonLeafChild": [
                 {
                     "title": "§6.1 买卖股票",
-                    "summary": "<a href=\"https://www.bilibili.com/video/BV1ho4y1W7QK/\">讲解</a><br>",
+                    "summary": "<a href=\"https://www.bilibili.com/video/BV1ho4y1W7QK/\">讲解【基础算法精讲 21】</a><br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -4585,7 +4585,7 @@ export default{
         },
         {
             "title": "八、区间 DP",
-            "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV1Gs4y1E7EU/\">区间 DP</a><br>从数组的左右两端不断缩短，求解关于某段下标区间的最优值。<br>一般定义 $f[i][j]$ 表示下标区间 $[i,j]$ 的最优值。<br>",
+            "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV1Gs4y1E7EU/\">区间 DP【基础算法精讲 22】</a><br>从数组的左右两端不断缩短，求解关于某段下标区间的最优值。<br>一般定义 $f[i][j]$ 表示下标区间 $[i,j]$ 的最优值。<br>",
             "src": "",
             "original_src": "",
             "sort": 0,
@@ -4846,8 +4846,8 @@ export default{
                         {
                             "title": "1039. 多边形三角剖分的最低得分",
                             "summary": "",
-                            "src": "/minimum-score-triangulation-of-polygon/solution/shi-pin-jiao-ni-yi-bu-bu-si-kao-dong-tai-aty6/",
-                            "original_src": "https://leetcode.cn/problems/minimum-score-triangulation-of-polygon/solution/shi-pin-jiao-ni-yi-bu-bu-si-kao-dong-tai-aty6/",
+                            "src": "/minimum-score-triangulation-of-polygon/",
+                            "original_src": "https://leetcode.cn/problems/minimum-score-triangulation-of-polygon/",
                             "sort": 0,
                             "isLeaf": true,
                             "solution": null,
@@ -5896,7 +5896,7 @@ export default{
         },
         {
             "title": "res %= MOD",
-            "summary": "def digitDP(low: int, high: int, target: int) -> int:<br>low_s = list(map(int, str(low)))  # 避免在 dfs 中频繁调用 int()<br>high_s = list(map(int, str(high)))<br>n = len(high_s)<br>diff_lh = n - len(low_s)<br>@cache<br>def dfs(i: int, cnt0: int, limit_low: bool, limit_high: bool) -> int:<br>if cnt0 > target:<br>return 0  # 不合法<br>if i == n:<br>return 1 if cnt0 == target else 0<br>lo = low_s[i - diff_lh] if limit_low and i >= diff_lh else 0<br>hi = high_s[i] if limit_high else 9<br>res = 0<br>d = lo<br>if limit_low and i < diff_lh:<br>res = dfs(i + 1, cnt0, True, False)<br>d = 1<br>for d in range(d, hi + 1):<br>res += dfs(i + 1,<br>cnt0 + (1 if d == 0 else 0),  # 统计 0 的个数<br>limit_low and d == lo,<br>limit_high and d == hi)<br>return res<br>return dfs(0, 0, True, True)<br>```<br>```java [sol-Java]<br>// 代码示例：返回 [low, high] 中的恰好包含 target 个 0 的数字个数<br>// 比如 digitDP(0, 10, 1) == 2<br>// 要点：我们统计的是 0 的个数，需要区分【前导零】和【数字中的零】，前导零不能计入，而数字中的零需要计入<br>class Solution {<br>public int digitDP(int low, int high, int target) {<br>char[] lowS = String.valueOf(low).toCharArray();<br>char[] highS = String.valueOf(high).toCharArray();<br>int n = highS.length;<br>int[][] memo = new int[n][target + 1];<br>for (int[] row : memo) {<br>Arrays.fill(row, -1);<br>}<br>return dfs(0, 0, true, true, lowS, highS, target, memo);<br>}<br>private int dfs(int i, int cnt0, boolean limitLow, boolean limitHigh, char[] lowS, char[] highS, int target, int[][] memo) {<br>if (cnt0 > target) {<br>return 0; // 不合法<br>}<br>if (i == highS.length) {<br>return cnt0 == target ? 1 : 0;<br>}<br>if (!limitLow && !limitHigh && memo[i][cnt0] >= 0) {<br>return memo[i][cnt0];<br>}<br>int diff = highS.length - lowS.length;<br>int lo = limitLow && i >= diff ? lowS[i - diff] - '0' : 0;<br>int hi = limitHigh ? highS[i] - '0' : 9;<br>int res = 0;<br>int d = lo;<br>// 通过 limitLow 和 i 可以判断能否不填数字，无需 isNum 参数<br>// 如果前导零不影响答案，去掉这个 if block<br>if (limitLow && i < diff) {<br>// 不填数字，上界不受约束<br>res = dfs(i + 1, cnt0, true, false, lowS, highS, target, memo);<br>d = 1;<br>}<br>for (; d <= hi; d++) {<br>res += dfs(i + 1,<br>cnt0 + (d == 0 ? 1 : 0), // 统计 0 的个数<br>limitLow && d == lo,<br>limitHigh && d == hi,<br>lowS, highS, target, memo);<br>// res %= MOD;<br>}<br>if (!limitLow && !limitHigh) {<br>memo[i][cnt0] = res;<br>}<br>return res;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>// 代码示例：返回 [low, high] 中的恰好包含 target 个 0 的数字个数<br>// 比如 digitDP(0, 10, 1) == 2<br>// 要点：我们统计的是 0 的个数，需要区分【前导零】和【数字中的零】，前导零不能计入，而数字中的零需要计入<br>int digitDP(int low, int high, int target) {<br>string low_s = to_string(low);<br>string high_s = to_string(high);<br>int n = high_s.size();<br>int diff_lh = n - low_s.size();<br>vector memo(n, vector<int>(target + 1, -1));<br>auto dfs = [&](this auto&& dfs, int i, int cnt0, bool limit_low, bool limit_high) -> int {<br>if (cnt0 > target) {<br>return 0; // 不合法<br>}<br>if (i == n) {<br>return cnt0 == target;<br>}<br>if (!limit_low && !limit_high && memo[i][cnt0] >= 0) {<br>return memo[i][cnt0];<br>}<br>int lo = limit_low && i >= diff_lh ? low_s[i - diff_lh] - '0' : 0;<br>int hi = limit_high ? high_s[i] - '0' : 9;<br>int res = 0;<br>int d = lo;<br>// 通过 limit_low 和 i 可以判断能否不填数字，无需 is_num 参数<br>// 如果前导零不影响答案，去掉这个 if block<br>if (limit_low && i < diff_lh) {<br>// 不填数字，上界不受约束<br>res = dfs(i + 1, cnt0, true, false);<br>d = 1;<br>}<br>for (; d <= hi; d++) {<br>// 统计 0 的个数<br>res += dfs(i + 1, cnt0 + (d == 0), limit_low && d == lo, limit_high && d == hi);<br>// res %= MOD;<br>}<br>if (!limit_low && !limit_high) {<br>memo[i][cnt0] = res;<br>}<br>return res;<br>};<br>int ans = dfs(0, 0, true, true);<br>return ans;<br>}<br>```<br>```go [sol-Go]<br>// 代码示例：返回 [low, high] 中的恰好包含 target 个 0 的数字个数<br>// 比如 digitDP(0, 10, 1) == 2<br>// 要点：我们统计的是 0 的个数，需要区分【前导零】和【数字中的零】，前导零不能计入，而数字中的零需要计入<br>func digitDP(low, high, target int) int {<br>lowS := strconv.Itoa(low)<br>highS := strconv.Itoa(high)<br>n := len(highS)<br>diffLH := n - len(lowS)<br>memo := make([][]int, n)<br>for i := range memo {<br>memo[i] = make([]int, target+1)<br>for j := range memo[i] {<br>memo[i][j] = -1<br>}<br>}<br>var dfs func(int, int, bool, bool) int<br>dfs = func(i, cnt0 int, limitLow, limitHigh bool) (res int) {<br>// 不合法<br>if cnt0 > target {<br>return 0<br>}<br>if i == n {<br>// 不合法<br>if cnt0 < target {<br>return 0<br>}<br>// 合法<br>return 1<br>}<br>if !limitLow && !limitHigh {<br>p := &memo[i][cnt0]<br>if *p >= 0 {<br>return *p<br>}<br>defer func() { *p = res }()<br>}<br>lo := 0<br>if limitLow && i >= diffLH {<br>lo = int(lowS[i-diffLH] - '0')<br>}<br>hi := 9<br>if limitHigh {<br>hi = int(highS[i] - '0')<br>}<br>d := lo<br>// 通过 limitLow 和 i 可以判断能否不填数字，无需 isNum 参数<br>// 如果前导零不影响答案，去掉这个 if block<br>if limitLow && i < diffLH {<br>// 不填数字，上界不受约束<br>res = dfs(i+1, cnt0, true, false)<br>d = 1<br>}<br>for ; d <= hi; d++ {<br>c0 := cnt0<br>if d == 0 {<br>c0++ // 统计 0 的个数<br>}<br>res += dfs(i+1, c0, limitLow && d == lo, limitHigh && d == hi)<br>// res %= mod<br>}<br>return<br>}<br>ans := dfs(0, 0, true, true)<br>return ans<br>}<br>```<br>**思维扩展**：<br>",
+            "summary": "def digitDP(low: int, high: int, target: int) -> int:<br>low_s = list(map(int, str(low)))  # 避免在 dfs 中频繁调用 int()<br>high_s = list(map(int, str(high)))<br>n = len(high_s)<br>diff_lh = n - len(low_s)<br>@cache<br>def dfs(i: int, cnt0: int, limit_low: bool, limit_high: bool) -> int:<br>if cnt0 > target:<br>return 0  # 不合法<br>if i == n:<br>return 1 if cnt0 == target else 0<br>lo = low_s[i - diff_lh] if limit_low and i >= diff_lh else 0<br>hi = high_s[i] if limit_high else 9<br>res = 0<br>d = lo<br>if limit_low and i < diff_lh:<br>res = dfs(i + 1, cnt0, True, False)<br>d = 1<br>for d in range(d, hi + 1):<br>res += dfs(i + 1,<br>cnt0 + (1 if d == 0 else 0),  # 统计 0 的个数<br>limit_low and d == lo,<br>limit_high and d == hi)<br>return res<br>return dfs(0, 0, True, True)<br>```<br>```java [sol-Java]<br>// 代码示例：返回 [low, high] 中的恰好包含 target 个 0 的数字个数<br>// 比如 digitDP(0, 10, 1) == 2<br>// 要点：我们统计的是 0 的个数，需要区分【前导零】和【数字中的零】，前导零不能计入，而数字中的零需要计入<br>class Solution {<br>public int digitDP(int low, int high, int target) {<br>char[] lowS = String.valueOf(low).toCharArray();<br>char[] highS = String.valueOf(high).toCharArray();<br>int n = highS.length;<br>int[][] memo = new int[n][target + 1];<br>for (int[] row : memo) {<br>Arrays.fill(row, -1);<br>}<br>return dfs(0, 0, true, true, lowS, highS, target, memo);<br>}<br>private int dfs(int i, int cnt0, boolean limitLow, boolean limitHigh, char[] lowS, char[] highS, int target, int[][] memo) {<br>if (cnt0 > target) {<br>return 0; // 不合法<br>}<br>if (i == highS.length) {<br>return cnt0 == target ? 1 : 0;<br>}<br>if (!limitLow && !limitHigh && memo[i][cnt0] >= 0) {<br>return memo[i][cnt0];<br>}<br>int diff = highS.length - lowS.length;<br>int lo = limitLow && i >= diff ? lowS[i - diff] - '0' : 0;<br>int hi = limitHigh ? highS[i] - '0' : 9;<br>int res = 0;<br>int d = lo;<br>// 通过 limitLow 和 i 可以判断能否不填数字，无需 isNum 参数<br>// 如果前导零不影响答案，去掉这个 if block<br>if (limitLow && i < diff) {<br>// 不填数字，上界不受约束<br>res = dfs(i + 1, cnt0, true, false, lowS, highS, target, memo);<br>d = 1;<br>}<br>for (; d <= hi; d++) {<br>res += dfs(i + 1,<br>cnt0 + (d == 0 ? 1 : 0), // 统计 0 的个数<br>limitLow && d == lo,<br>limitHigh && d == hi,<br>lowS, highS, target, memo);<br>// res %= MOD;<br>}<br>if (!limitLow && !limitHigh) {<br>memo[i][cnt0] = res;<br>}<br>return res;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>// 代码示例：返回 [low, high] 中的恰好包含 target 个 0 的数字个数<br>// 比如 digitDP(0, 10, 1) == 2<br>// 要点：我们统计的是 0 的个数，需要区分【前导零】和【数字中的零】，前导零不能计入，而数字中的零需要计入<br>int digitDP(int low, int high, int target) {<br>string low_s = to_string(low);<br>string high_s = to_string(high);<br>int n = high_s.size();<br>int diff_lh = n - low_s.size();<br>vector memo(n, vector<int>(target + 1, -1));<br>auto dfs = [&](this auto&& dfs, int i, int cnt0, bool limit_low, bool limit_high) -> int {<br>if (cnt0 > target) {<br>return 0; // 不合法<br>}<br>if (i == n) {<br>return cnt0 == target;<br>}<br>if (!limit_low && !limit_high && memo[i][cnt0] >= 0) {<br>return memo[i][cnt0];<br>}<br>int lo = limit_low && i >= diff_lh ? low_s[i - diff_lh] - '0' : 0;<br>int hi = limit_high ? high_s[i] - '0' : 9;<br>int res = 0;<br>int d = lo;<br>// 通过 limit_low 和 i 可以判断能否不填数字，无需 is_num 参数<br>// 如果前导零不影响答案，去掉这个 if block<br>if (limit_low && i < diff_lh) {<br>// 不填数字，上界不受约束<br>res = dfs(i + 1, cnt0, true, false);<br>d = 1;<br>}<br>for (; d <= hi; d++) {<br>// 统计 0 的个数<br>res += dfs(i + 1, cnt0 + (d == 0), limit_low && d == lo, limit_high && d == hi);<br>// res %= MOD;<br>}<br>if (!limit_low && !limit_high) {<br>memo[i][cnt0] = res;<br>}<br>return res;<br>};<br>return dfs(0, 0, true, true);<br>}<br>```<br>```go [sol-Go]<br>// 代码示例：返回 [low, high] 中的恰好包含 target 个 0 的数字个数<br>// 比如 digitDP(0, 10, 1) == 2<br>// 要点：我们统计的是 0 的个数，需要区分【前导零】和【数字中的零】，前导零不能计入，而数字中的零需要计入<br>func digitDP(low, high, target int) int {<br>lowS := strconv.Itoa(low)<br>highS := strconv.Itoa(high)<br>n := len(highS)<br>diffLH := n - len(lowS)<br>memo := make([][]int, n)<br>for i := range memo {<br>memo[i] = make([]int, target+1)<br>for j := range memo[i] {<br>memo[i][j] = -1<br>}<br>}<br>var dfs func(int, int, bool, bool) int<br>dfs = func(i, cnt0 int, limitLow, limitHigh bool) (res int) {<br>// 不合法<br>if cnt0 > target {<br>return 0<br>}<br>if i == n {<br>// 不合法<br>if cnt0 < target {<br>return 0<br>}<br>// 合法<br>return 1<br>}<br>if !limitLow && !limitHigh {<br>p := &memo[i][cnt0]<br>if *p >= 0 {<br>return *p<br>}<br>defer func() { *p = res }()<br>}<br>lo := 0<br>if limitLow && i >= diffLH {<br>lo = int(lowS[i-diffLH] - '0')<br>}<br>hi := 9<br>if limitHigh {<br>hi = int(highS[i] - '0')<br>}<br>d := lo<br>// 通过 limitLow 和 i 可以判断能否不填数字，无需 isNum 参数<br>// 如果前导零不影响答案，去掉这个 if block<br>if limitLow && i < diffLH {<br>// 不填数字，上界不受约束<br>res = dfs(i+1, cnt0, true, false)<br>d = 1<br>}<br>for ; d <= hi; d++ {<br>c0 := cnt0<br>if d == 0 {<br>c0++ // 统计 0 的个数<br>}<br>res += dfs(i+1, c0, limitLow && d == lo, limitHigh && d == hi)<br>// res %= mod<br>}<br>return<br>}<br>return dfs(0, 0, true, true)<br>}<br>```<br>**思维扩展**：<br>",
             "src": "",
             "original_src": "",
             "sort": 0,
@@ -7168,6 +7168,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "2318. 不同骰子序列的数目",
+                                    "summary": "",
+                                    "src": "/number-of-distinct-roll-sequences/",
+                                    "original_src": "https://leetcode.cn/problems/number-of-distinct-roll-sequences/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2090.4183788498,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3181. 执行操作可获得的最大总奖励 II",
                                     "summary": "",
                                     "src": "/maximum-total-reward-using-operations-ii/",
@@ -7262,7 +7276,7 @@ export default{
                 },
                 {
                     "title": "十二、树形 DP",
-                    "summary": "注：可能有同学觉得树形 DP 没有重复访问同一个状态（重叠子问题），并不能算作 DP，而是算作普通的递归。这么说也有一定道理，不过考虑到思维方式和 DP 是一样的自底向上，所以仍然叫做树形 DP。此外，如果是自顶向下的递归做法，是存在重叠子问题的，一般要结合记忆化搜索实现。<br>",
+                    "summary": "**注**：可能有同学觉得树形 DP 没有重复访问同一个状态（重叠子问题），并不能算作 DP，而是算作普通的递归。这么说也有一定道理，不过考虑到思维方式和 DP 是一样的自底向上，所以仍然叫做树形 DP。此外，如果是自顶向下的递归做法，是存在重叠子问题的，一般要结合记忆化搜索实现。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -7273,7 +7287,7 @@ export default{
                     "nonLeafChild": [
                         {
                             "title": "§12.1 树的直径",
-                            "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV17o4y187h1/\">树形 DP：树的直径</a><br>> 注：求直径也有两次 DFS 的做法。<br>",
+                            "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV17o4y187h1/\">树形 DP：树的直径【基础算法精讲 23】</a><br>> 注：求直径也有两次 DFS 的做法。<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -7442,7 +7456,7 @@ export default{
                         },
                         {
                             "title": "§12.2 树上最大独立集",
-                            "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV1vu4y1f7dn/\">树形 DP：打家劫舍III</a><br>",
+                            "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV1vu4y1f7dn/\">树形 DP：打家劫舍 III【基础算法精讲 24】</a><br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -7513,7 +7527,7 @@ export default{
                         },
                         {
                             "title": "§12.3 树上最小支配集",
-                            "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV1oF411U7qL/\">树形 DP：监控二叉树</a>，包含 968 的变形题。<br>",
+                            "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV1oF411U7qL/\">树形 DP：监控二叉树【基础算法精讲 25】</a>，包含 968 的变形题。<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -9506,5 +9520,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-05-13 00:11:15"
+    "last_update": "2025-05-21 23:00:51"
 } as ProblemCategory;

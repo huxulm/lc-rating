@@ -24,7 +24,7 @@ export default{
             "nonLeafChild": [
                 {
                     "title": "§1.1 DFS 基础",
-                    "summary": "找连通块、判断是否有环等。部分题目**做法不止一种**。<br>",
+                    "summary": "找连通块、判断是否有环等。部分题目**做法不止一种**。<br>**思维扩展**：<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -325,6 +325,20 @@ export default{
                             "nonLeafChild": [],
                             "isPremium": true,
                             "last_update": ""
+                        },
+                        {
+                            "title": "1298. 你能从盒子里获得的最大糖果数",
+                            "summary": "",
+                            "src": "/maximum-candies-you-can-get-from-boxes/",
+                            "original_src": "https://leetcode.cn/problems/maximum-candies-you-can-get-from-boxes/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1824.829446341,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         }
                     ],
                     "nonLeafChild": [],
@@ -384,20 +398,6 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "1298. 你能从盒子里获得的最大糖果数",
-                            "summary": "",
-                            "src": "/maximum-candies-you-can-get-from-boxes/",
-                            "original_src": "https://leetcode.cn/problems/maximum-candies-you-can-get-from-boxes/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1824.829446341,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "2039. 网络空闲的时刻",
                             "summary": "",
                             "src": "/the-time-when-the-network-becomes-idle/",
@@ -450,7 +450,7 @@ export default{
         },
         {
             "title": "二、拓扑排序",
-            "summary": "<img src=\"https://pic.leetcode.cn/1738131168-tWFNGZ-006-toposort.png\" alt=\"图论题单 图论算法 图论题目 LeetCode 力扣图论 灵茶山艾府\" style=\"width: 100%;\"><br>把拓扑排序想象成一个黑盒，给它一堆杂乱的先修课约束，它会给你一个井井有条的课程学习安排。<br>这一种在图上的「排序」，可以把杂乱的点排成一排。<br>前提条件是图中无环，从而保证每条边是从排在前面的点，指向排在后面的点。<br>",
+            "summary": "<img src=\"https://pic.leetcode.cn/1738131168-tWFNGZ-006-toposort.png\" alt=\"图论题单 图论算法 图论题目 LeetCode 力扣图论 灵茶山艾府\" style=\"width: 100%;\"><br>把拓扑排序想象成一个黑盒，给它一堆杂乱的先修课约束，它会给你一个井井有条的课程学习安排。<br>这一种在图上的「排序」，可以把杂乱的点排成一排。前提条件是图中无环，从而保证每条边都是从排在前面的点，指向排在后面的点。即对于任意有向边 $x\\to y$，$x$ 一定在 $y$ 之前。<br>",
             "src": "",
             "original_src": "",
             "sort": 0,
@@ -621,6 +621,20 @@ export default{
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3481. 应用替换",
+                            "summary": "",
+                            "src": "/apply-substitutions/",
+                            "original_src": "https://leetcode.cn/problems/apply-substitutions/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
                             "last_update": ""
                         },
                         {
@@ -885,7 +899,7 @@ export default{
             "nonLeafChild": [
                 {
                     "title": "§3.1 单源最短路：Dijkstra 算法",
-                    "summary": "<a href=\"https://leetcode.cn/problems/network-delay-time/solution/liang-chong-dijkstra-xie-fa-fu-ti-dan-py-ooe8/\">Dijkstra 算法介绍</a><br>",
+                    "summary": "<a href=\"https://leetcode.cn/problems/network-delay-time/solution/liang-chong-dijkstra-xie-fa-fu-ti-dan-py-ooe8/\">Dijkstra 算法介绍</a><br>**分层图最短路**：<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -1146,6 +1160,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "818. 赛车",
+                            "summary": "",
+                            "src": "/race-car/",
+                            "original_src": "https://leetcode.cn/problems/race-car/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2391.8086687918,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "1928. 规定时间内到达终点的最小花费",
                             "summary": "",
                             "src": "/minimum-cost-to-reach-destination-in-time/",
@@ -1182,20 +1210,6 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2873.9745576413,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "LCP 35. 电动车游城市",
-                            "summary": "",
-                            "src": "/DFPeFJ/",
-                            "original_src": "https://leetcode.cn/problems/DFPeFJ/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": null,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -1244,10 +1258,10 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "2714. 找到最短路径的 K 次跨越",
+                            "title": "2737. 找到最近的标记节点",
                             "summary": "",
-                            "src": "/find-shortest-path-with-k-hops/",
-                            "original_src": "https://leetcode.cn/problems/find-shortest-path-with-k-hops/",
+                            "src": "/find-the-closest-marked-node/",
+                            "original_src": "https://leetcode.cn/problems/find-the-closest-marked-node/",
                             "sort": 0,
                             "isLeaf": true,
                             "solution": null,
@@ -1258,10 +1272,24 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "2737. 找到最近的标记节点",
+                            "title": "LCP 35. 电动车游城市",
                             "summary": "",
-                            "src": "/find-the-closest-marked-node/",
-                            "original_src": "https://leetcode.cn/problems/find-the-closest-marked-node/",
+                            "src": "/DFPeFJ/",
+                            "original_src": "https://leetcode.cn/problems/DFPeFJ/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "2714. 找到 K 次跨越的最短路径",
+                            "summary": "",
+                            "src": "/find-shortest-path-with-k-hops/",
+                            "original_src": "https://leetcode.cn/problems/find-shortest-path-with-k-hops/",
                             "sort": 0,
                             "isLeaf": true,
                             "solution": null,
@@ -2101,7 +2129,7 @@ export default{
         },
         {
             "title": "算法题单",
-            "summary": "<a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题？</a><br>1. <a href=\"/lc-rating/list/sliding_window\">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a><br>2. <a href=\"/lc-rating/list/binary_search\">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a><br>3. <a href=\"/lc-rating/list/monotonic_stack\">单调栈（基础/矩形面积/贡献法/最小字典序）</a><br>4. <a href=\"/lc-rating/list/grid\">网格图（DFS/BFS/综合应用）</a><br>5. <a href=\"/lc-rating/list/bitwise_operations\">位运算（基础/性质/拆位/试填/恒等式/思维）</a><br>6. <a href=\"/lc-rating/list/graph\">图论算法（DFS/BFS/拓扑排序/最短路/最小生成树/二分图/基环树/欧拉路径）</a><br>7. <a href=\"/lc-rating/list/dynamic_programming\">动态规划（入门/背包/划分/状态机/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a><br>8. <a href=\"/lc-rating/list/data_structure\">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a><br>9. <a href=\"/lc-rating/list/math\">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a><br>10. <a href=\"/lc-rating/list/greedy\">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a><br>11. <a href=\"/lc-rating/list/trees\">链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）</a><br>12. <a href=\"/lc-rating/list/string\">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a><br>如果你发现有题目可以补充进来，欢迎评论反馈。<br>",
+            "summary": "<a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题？</a><br>1. <a href=\"/lc-rating/list/sliding_window\">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a><br>2. <a href=\"/lc-rating/list/binary_search\">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a><br>3. <a href=\"/lc-rating/list/monotonic_stack\">单调栈（基础/矩形面积/贡献法/最小字典序）</a><br>4. <a href=\"/lc-rating/list/grid\">网格图（DFS/BFS/综合应用）</a><br>5. <a href=\"/lc-rating/list/bitwise_operations\">位运算（基础/性质/拆位/试填/恒等式/思维）</a><br>6. <a href=\"/lc-rating/list/graph\">图论算法（DFS/BFS/拓扑排序/基环树/最短路/最小生成树/网络流）</a><br>7. <a href=\"/lc-rating/list/dynamic_programming\">动态规划（入门/背包/划分/状态机/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a><br>8. <a href=\"/lc-rating/list/data_structure\">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a><br>9. <a href=\"/lc-rating/list/math\">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a><br>10. <a href=\"/lc-rating/list/greedy\">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a><br>11. <a href=\"/lc-rating/list/trees\">链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）</a><br>12. <a href=\"/lc-rating/list/string\">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a><br>如果你发现有题目可以补充进来，欢迎评论反馈。<br>",
             "src": "",
             "original_src": "",
             "sort": 0,
@@ -2115,5 +2143,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-04-25 03:25:31"
+    "last_update": "2025-05-23 09:56:32"
 } as ProblemCategory;

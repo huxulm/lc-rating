@@ -2303,6 +2303,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "75. 颜色分类",
+                                    "summary": "",
+                                    "src": "/sort-colors/",
+                                    "original_src": "https://leetcode.cn/problems/sort-colors/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1920. 基于排列构建数组",
                                     "summary": "",
                                     "src": "/build-array-from-permutation/",
@@ -3152,6 +3166,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "2900. 最长相邻不相等子序列 I",
+                            "summary": "",
+                            "src": "/longest-unequal-adjacent-groups-subsequence-i/",
+                            "original_src": "https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-i/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1468.8739273624,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "1759. 统计同质子字符串的数目",
                             "summary": "",
                             "src": "/count-number-of-homogenous-substrings/",
@@ -3208,7 +3236,7 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "2765. 最长交替子序列",
+                            "title": "2765. 最长交替子数组",
                             "summary": "",
                             "src": "/longest-alternating-subarray/",
                             "original_src": "https://leetcode.cn/problems/longest-alternating-subarray/",
@@ -3258,6 +3286,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1217.0003384199,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "838. 推多米诺",
+                            "summary": "",
+                            "src": "/push-dominoes/",
+                            "original_src": "https://leetcode.cn/problems/push-dominoes/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1638.1281256708,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -3414,5 +3456,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-04-28 01:52:33"
+    "last_update": "2025-05-19 11:04:05"
 } as ProblemCategory;
