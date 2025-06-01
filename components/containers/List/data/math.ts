@@ -49,7 +49,7 @@ export default{
                     "nonLeafChild": [
                         {
                             "title": "§1.1 判断质数",
-                            "summary": "<a href=\"https://leetcode.cn/problems/prime-in-diagonal/solutions/2216347/pan-duan-zhi-shu-by-endlesscheng-m6nt/\">模板</a><br>",
+                            "summary": "<a href=\"https://leetcode.cn/problems/prime-in-diagonal/solutions/2216347/pan-duan-zhi-shu-by-endlesscheng-m6nt/\">模板</a><br><a href=\"https://leetcode.cn/problems/sum-of-largest-prime-substrings/solutions/3685356/pan-duan-zhi-shu-pythonjavacgo-by-endles-0w8f/\">更快的模板（写法二）</a><br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -94,6 +94,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1383.4424411643,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3556. 最大质数子字符串之和",
+                                    "summary": "",
+                                    "src": "/sum-of-largest-prime-substrings/",
+                                    "original_src": "https://leetcode.cn/problems/sum-of-largest-prime-substrings/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1568,6 +1582,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3558. 给边赋权值的方案数 I",
+                                    "summary": "",
+                                    "src": "/number-of-ways-to-assign-edge-weights-i/",
+                                    "original_src": "https://leetcode.cn/problems/number-of-ways-to-assign-edge-weights-i/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2514. 统计同位异构字符串数目",
                                     "summary": "",
                                     "src": "/count-anagrams/",
@@ -1800,6 +1828,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2799.5363565342,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3539. 魔法序列的数组乘积之和",
+                                    "summary": "",
+                                    "src": "/find-sum-of-array-product-of-magical-sequences/",
+                                    "original_src": "https://leetcode.cn/problems/find-sum-of-array-product-of-magical-sequences/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -3740,6 +3782,20 @@ export default{
                             "score": 0,
                             "leafChild": [
                                 {
+                                    "title": "3549. 两个多项式相乘",
+                                    "summary": "",
+                                    "src": "/multiply-two-polynomials/",
+                                    "original_src": "https://leetcode.cn/problems/multiply-two-polynomials/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3400. 右移后的最大匹配索引数",
                                     "summary": "",
                                     "src": "/maximum-number-of-matching-indices-after-right-shifts/",
@@ -4316,5 +4372,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-04-25 03:31:37"
+    "last_update": "2025-05-25 23:50:39"
 } as ProblemCategory;

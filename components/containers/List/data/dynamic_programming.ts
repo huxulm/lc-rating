@@ -1280,6 +1280,35 @@ export default{
                     "nonLeafChild": [],
                     "isPremium": false,
                     "last_update": ""
+                },
+                {
+                    "title": "§3.5 树上背包（选做）",
+                    "summary": "",
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
+                        {
+                            "title": "3562. 折扣价交易股票的最大利润",
+                            "summary": "",
+                            "src": "/maximum-profit-from-trading-stocks-with-discounts/",
+                            "original_src": "https://leetcode.cn/problems/maximum-profit-from-trading-stocks-with-discounts/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        }
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
             ],
             "isPremium": false,
@@ -4071,6 +4100,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3193. 统计逆序对的数目",
+                            "summary": "",
+                            "src": "/count-the-number-of-inversions/",
+                            "original_src": "https://leetcode.cn/problems/count-the-number-of-inversions/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2266.3248398876,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "1079. 活字印刷",
                             "summary": "",
                             "src": "/letter-tile-possibilities/",
@@ -4723,7 +4766,7 @@ export default{
                 },
                 {
                     "title": "§8.2 其他区间 DP",
-                    "summary": "",
+                    "summary": "对于类似合法括号字符串（RBS）的消除问题，通常根据题意，会有如下性质：<br>1. 可以消除相邻的匹配字符。<br>2. 相邻匹配字符消除后，原本不相邻的字符会变成相邻，可以继续消除。换句话说，设子串 $A = x + B + y$，如果 $x$ 和 $y$ 是匹配的（可以消除），且子串 $B$ 可以完全消除，那么子串 $A$ 可以完全消除。<br>3. 设子串 $A = B + C$，如果子串 $B$ 和 $C$ 可以完全消除，那么子串 $A$ 可以完全消除。<br>满足上述性质的题目（例如 3563 题），可以用区间 DP 解决。<br>定义 $f(i,j)$ 表示消除 $s[i]$ 到 $s[j]$ 的最优值。<br>- 根据性质 2，可以把 $f(i,j)$ 缩小成子问题 $f(i+1,j-1)$。<br>- 根据性质 3，可以枚举子串 $B$ 的右端点，即枚举 $k=i+1,i+3,i+5,\\ldots,j-2$，把 $f(i,j)$ 划分成子问题 $f(i,k)$ 和 $f(k+1,j)$。注意这里枚举 $k$ 的步长是 $2$，因为每次消除 $2$ 个字符，被消除的子串长度一定是偶数。<br>边界：$f(i+1,i)$，即空串。<br>答案：$f(0,n-1)$。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -4880,6 +4923,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2583.9006314254,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3563. 移除相邻字符后字典序最小的字符串",
+                            "summary": "",
+                            "src": "/lexicographically-smallest-string-after-adjacent-removals/",
+                            "original_src": "https://leetcode.cn/problems/lexicographically-smallest-string-after-adjacent-removals/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -7706,6 +7763,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3562. 折扣价交易股票的最大利润",
+                                    "summary": "",
+                                    "src": "/maximum-profit-from-trading-stocks-with-discounts/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-profit-from-trading-stocks-with-discounts/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3367. 移除边之后的权重最大和",
                                     "summary": "",
                                     "src": "/maximize-sum-of-weights-after-edge-removals/",
@@ -9520,5 +9591,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-05-21 23:00:51"
+    "last_update": "2025-05-25 12:23:24"
 } as ProblemCategory;

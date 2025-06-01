@@ -427,7 +427,7 @@ export default{
                             "nonLeafChild": [
                                 {
                                     "title": "答疑",
-                                    "summary": "**问**：如何把二分答案与数组上的二分查找联系起来？<br>**答**：假设范围是 $[2,3,4,5]$，我们相当于在一个**虚拟数组** $[\\texttt{check}(2),\\texttt{check}(3),\\texttt{check}(4),\\texttt{check}(5)]$ 中二分找第一个（或者最后一个）值为 $\\texttt{true}$ 的 $\\texttt{check}(i)$。这同样可以用红蓝染色法思考。<br>**问**：有些题目，明明 $m$ 可以是答案，但却不在初始二分区间中。比如闭区间二分初始化 $\\textit{right}=m-1$（或者开区间 $\\textit{right}=m$），这不会算错吗？<br>**答**：不会算错。想一想，如果二分的 $\\texttt{while}$ 循环每次更新的都是 $\\textit{left}$，那么最终答案是什么？正好就是 $m$。一般地，如果一开始就能确定 $m$ 一定可以满足题目要求，那么 $m$ 是不需要在二分区间中的。换句话说，二分区间是「尚未确定是否满足题目要求」的数的范围。那些在区间外面的数，都是已确定的满足（不满足）题目要求的数。<br>**问**：什么是循环不变量？<br>**答**：想一想，对于求最小的题目，**开区间二分**的写法，为什么最终返回的是 $\\textit{right}$，而不是别的数？在初始化（循环之前）、循环中、循环结束后，都时时刻刻保证 `check(right) == true` 和 `check(left) == false`，这就叫**循环不变量**。根据循环不变量，循环结束时 `left + 1 == right`，那么 $\\textit{right}$ 就是最小的满足要求的数（因为再 $-1$ 就不满足要求了），所以答案是 $\\textit{right}$。<br>**注**：部分题目可以优化二分边界，减少二分次数，从而减少代码运行时间。对于初次接触二分答案的同学，无需强求自己写出最优的代码，设定一个比较大的二分上界也是可以的。<br>**思维扩展**：<br>",
+                                    "summary": "**问**：如何把二分答案与数组上的二分查找联系起来？<br>**答**：假设答案在区间 $[2,5]$ 中，我们相当于在一个**虚拟数组** $[\\texttt{check}(2),\\texttt{check}(3),\\texttt{check}(4),\\texttt{check}(5)]$ 中二分找第一个（或者最后一个）值为 $\\texttt{true}$ 的 $\\texttt{check}(i)$。这同样可以用红蓝染色法思考。<br>**问**：有些题目，明明 $m$ 可以是答案，但却不在初始二分区间中。比如闭区间二分初始化 $\\textit{right}=m-1$（或者开区间 $\\textit{right}=m$），这不会算错吗？<br>**答**：不会算错。注意「答案所在区间」和「二分区间」是两个概念。想一想，如果二分的 $\\texttt{while}$ 循环每次更新的都是 $\\textit{left}$，那么最终答案是什么？正好就是 $m$。一般地，如果一开始就能确定 $m$ 一定可以满足题目要求，那么 $m$ 是不需要在二分区间中的。换句话说，二分区间是「尚未确定是否满足题目要求」的数的范围。那些在区间外面的数，都是已确定的满足（不满足）题目要求的数。<br>**问**：什么是循环不变量？<br>**答**：想一想，对于求最小的题目，**开区间二分**的写法，为什么最终返回的是 $\\textit{right}$，而不是别的数？在初始化（循环之前）、循环中、循环结束后，都时时刻刻保证 `check(right) == true` 和 `check(left) == false`，这就叫**循环不变量**。根据循环不变量，循环结束时 `left + 1 == right`，那么 $\\textit{right}$ 就是最小的满足要求的数（因为再 $-1$ 就不满足要求了），所以答案是 $\\textit{right}$。<br>**注**：部分题目可以优化二分边界，减少二分次数，从而减少代码运行时间。对于初次接触二分答案的同学，无需强求自己写出最优的代码，设定一个比较大的二分上界也是可以的。<br>**思维扩展**：<br>",
                                     "src": "",
                                     "original_src": "",
                                     "sort": 0,
@@ -1467,6 +1467,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3520. 逆序对计数的最小阈值",
+                                    "summary": "",
+                                    "src": "/minimum-threshold-for-inversion-pairs-count/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-threshold-for-inversion-pairs-count/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1918. 第 K 小的子数组和",
                                     "summary": "",
                                     "src": "/kth-smallest-subarray-sum/",
@@ -1884,7 +1898,7 @@ export default{
                 },
                 {
                     "title": "算法题单",
-                    "summary": "<a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题？</a><br>1. <a href=\"/lc-rating/list/sliding_window\">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a><br>2. <a href=\"/lc-rating/list/binary_search\">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a><br>3. <a href=\"/lc-rating/list/monotonic_stack\">单调栈（基础/矩形面积/贡献法/最小字典序）</a><br>4. <a href=\"/lc-rating/list/grid\">网格图（DFS/BFS/综合应用）</a><br>5. <a href=\"/lc-rating/list/bitwise_operations\">位运算（基础/性质/拆位/试填/恒等式/思维）</a><br>6. <a href=\"/lc-rating/list/graph\">图论算法（DFS/BFS/拓扑排序/最短路/最小生成树/二分图/基环树/欧拉路径）</a><br>7. <a href=\"/lc-rating/list/dynamic_programming\">动态规划（入门/背包/划分/状态机/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a><br>8. <a href=\"/lc-rating/list/data_structure\">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a><br>9. <a href=\"/lc-rating/list/math\">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a><br>10. <a href=\"/lc-rating/list/greedy\">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a><br>11. <a href=\"/lc-rating/list/trees\">链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）</a><br>12. <a href=\"/lc-rating/list/string\">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a><br><a href=\"https://github.com/EndlessCheng/codeforces-go/blob/master/leetcode/SOLUTIONS.md\">我的题解精选（已分类）</a><br>欢迎关注 <a href=\"https://space.bilibili.com/206214\">B站@灵茶山艾府</a><br>如果你发现有题目可以补充进来，欢迎评论反馈。<br>",
+                    "summary": "<a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题？</a><br>1. <a href=\"/lc-rating/list/sliding_window\">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a><br>2. <a href=\"/lc-rating/list/binary_search\">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a><br>3. <a href=\"/lc-rating/list/monotonic_stack\">单调栈（基础/矩形面积/贡献法/最小字典序）</a><br>4. <a href=\"/lc-rating/list/grid\">网格图（DFS/BFS/综合应用）</a><br>5. <a href=\"/lc-rating/list/bitwise_operations\">位运算（基础/性质/拆位/试填/恒等式/思维）</a><br>6. <a href=\"/lc-rating/list/graph\">图论算法（DFS/BFS/拓扑排序/基环树/最短路/最小生成树/网络流）</a><br>7. <a href=\"/lc-rating/list/dynamic_programming\">动态规划（入门/背包/划分/状态机/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a><br>8. <a href=\"/lc-rating/list/data_structure\">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a><br>9. <a href=\"/lc-rating/list/math\">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a><br>10. <a href=\"/lc-rating/list/greedy\">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a><br>11. <a href=\"/lc-rating/list/trees\">链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）</a><br>12. <a href=\"/lc-rating/list/string\">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a><br><a href=\"https://github.com/EndlessCheng/codeforces-go/blob/master/leetcode/SOLUTIONS.md\">我的题解精选（已分类）</a><br>欢迎关注 <a href=\"https://space.bilibili.com/206214\">B站@灵茶山艾府</a><br>如果你发现有题目可以补充进来，欢迎评论反馈。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -1902,5 +1916,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-04-25 02:50:11"
+    "last_update": "2025-05-27 07:58:58"
 } as ProblemCategory;
