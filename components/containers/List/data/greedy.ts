@@ -5226,7 +5226,7 @@ export default{
                             "sort": 0,
                             "isLeaf": true,
                             "solution": null,
-                            "score": null,
+                            "score": 1435.3952187057,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,

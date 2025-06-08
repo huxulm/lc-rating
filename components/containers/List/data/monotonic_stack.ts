@@ -374,7 +374,7 @@ export default{
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1889.8158281754,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
