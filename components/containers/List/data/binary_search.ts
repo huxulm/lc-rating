@@ -1542,20 +1542,6 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "240. 搜索二维矩阵 II",
-                            "summary": "",
-                            "src": "/search-a-2d-matrix-ii/",
-                            "original_src": "https://leetcode.cn/problems/search-a-2d-matrix-ii/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": null,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "2476. 二叉搜索树最近节点查询",
                             "summary": "",
                             "src": "/closest-nodes-queries-in-a-binary-search-tree/",
@@ -1916,5 +1902,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-05-27 07:58:58"
+    "last_update": "2025-06-13 22:29:37"
 } as ProblemCategory;
