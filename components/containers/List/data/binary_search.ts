@@ -1902,5 +1902,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-06-13 22:29:37"
+    "last_update": "2025-06-15 22:43:37"
 } as ProblemCategory;

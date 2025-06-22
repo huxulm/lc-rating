@@ -3484,5 +3484,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-06-01 22:33:13"
+    "last_update": "2025-06-15 22:43:17"
 } as ProblemCategory;

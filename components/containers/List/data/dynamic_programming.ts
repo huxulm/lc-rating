@@ -1282,8 +1282,8 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "§3.5 树上背包（选做）",
-                    "summary": "",
+                    "title": "§3.5 树形背包（选做）",
+                    "summary": "也叫树上背包、依赖背包等。<br>> 注：目前力扣只有无依赖的背包，时间复杂度为 $\\mathcal{O}(nW^2)$。如果有依赖，可以优化到 $\\mathcal{O}(nW)$。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -2100,6 +2100,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3578. 统计极差最大为 K 的分割方式数",
+                            "summary": "",
+                            "src": "/count-partitions-with-max-min-difference-at-most-k/",
+                            "original_src": "https://leetcode.cn/problems/count-partitions-with-max-min-difference-at-most-k/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "2430. 对字母串可执行的最大删除数",
                             "summary": "",
                             "src": "/maximum-deletions-on-a-string/",
@@ -2108,6 +2122,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2101.867342004,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3579. 字符串转换需要的最小操作数",
+                            "summary": "",
+                            "src": "/minimum-steps-to-convert-string-with-operations/",
+                            "original_src": "https://leetcode.cn/problems/minimum-steps-to-convert-string-with-operations/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -2367,6 +2395,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3538. 合并得到最小旅行时间",
+                            "summary": "",
+                            "src": "/merge-operations-for-minimum-travel-time/",
+                            "original_src": "https://leetcode.cn/problems/merge-operations-for-minimum-travel-time/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2461.4419978507,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "3505. 使 K 个子数组内元素相等的最少操作数",
                             "summary": "",
                             "src": "/minimum-operations-to-make-elements-within-k-subarrays-equal/",
@@ -2389,20 +2431,6 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2556.5072256577,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "3538. 合并得到最小旅行时间",
-                            "summary": "",
-                            "src": "/merge-operations-for-minimum-travel-time/",
-                            "original_src": "https://leetcode.cn/problems/merge-operations-for-minimum-travel-time/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 2461.4419978507,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -2513,6 +2541,20 @@ export default{
                             "summary": "",
                             "src": "/best-time-to-buy-and-sell-stock-iv/",
                             "original_src": "https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3573. 买卖股票的最佳时机 V",
+                            "summary": "",
+                            "src": "/best-time-to-buy-and-sell-stock-v/",
+                            "original_src": "https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-v/",
                             "sort": 0,
                             "isLeaf": true,
                             "solution": null,
@@ -3416,7 +3458,7 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "§7.4 合法子序列 DP（特殊子序列 DP）",
+                    "title": "§7.4 合法子序列 DP",
                     "summary": "计算合法子序列的最长长度、个数、元素和等。<br>一般定义 $f[x]$ 表示以元素 $x$ 结尾的合法子序列的最长长度/个数/元素和，从子序列的倒数第二个数转移过来。<br>注意这里的 $x$ 不是下标，是元素值。如果 $x$ 不是整数，或者值域范围很大，可以用哈希表代替数组。<br>**思维扩展**：<br>",
                     "src": "",
                     "original_src": "",
@@ -4765,7 +4807,7 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "§8.2 其他区间 DP",
+                    "title": "§8.2 区间 DP",
                     "summary": "对于类似合法括号字符串（RBS）的消除问题，通常根据题意，会有如下性质：<br>1. 可以消除相邻的匹配字符。<br>2. 相邻匹配字符消除后，原本不相邻的字符会变成相邻，可以继续消除。换句话说，设子串 $A = x + B + y$，如果 $x$ 和 $y$ 是匹配的（可以消除），且子串 $B$ 可以完全消除，那么子串 $A$ 可以完全消除。<br>3. 设子串 $A = B + C$，如果子串 $B$ 和 $C$ 可以完全消除，那么子串 $A$ 可以完全消除。<br>满足上述性质的题目（例如 3563 题），可以用区间 DP 解决。<br>定义 $f(i,j)$ 表示消除 $s[i]$ 到 $s[j]$ 的最优值。<br>- 根据性质 2，可以把 $f(i,j)$ 缩小成子问题 $f(i+1,j-1)$。<br>- 根据性质 3，可以枚举子串 $B$ 的右端点，即枚举 $k=i+1,i+3,i+5,\\ldots,j-2$，把 $f(i,j)$ 划分成子问题 $f(i,k)$ 和 $f(k+1,j)$。注意这里枚举 $k$ 的步长是 $2$，因为每次消除 $2$ 个字符，被消除的子串长度一定是偶数。<br>边界：$f(i+1,i)$，即空串。<br>答案：$f(0,n-1)$。<br>",
                     "src": "",
                     "original_src": "",
@@ -5127,20 +5169,6 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "3533. 判断连接可整除性",
-                            "summary": "",
-                            "src": "/concatenated-divisibility/",
-                            "original_src": "https://leetcode.cn/problems/concatenated-divisibility/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 2257.480554229,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "1879. 两个数组最小的异或值之和",
                             "summary": "",
                             "src": "/minimum-xor-sum-of-two-arrays/",
@@ -5191,6 +5219,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2072.7264178313,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3533. 判断连接可整除性",
+                            "summary": "",
+                            "src": "/concatenated-divisibility/",
+                            "original_src": "https://leetcode.cn/problems/concatenated-divisibility/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2257.480554229,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -5358,7 +5400,7 @@ export default{
                 },
                 {
                     "title": "§9.3 旅行商问题（TSP）",
-                    "summary": "本质上就是排列型 ②。<br>",
+                    "summary": "本质上就是排列型 ②。<br>**相似问题**：<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -5420,6 +5462,34 @@ export default{
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": true,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3568. 清理教室的最少移动",
+                            "summary": "",
+                            "src": "/minimum-moves-to-clean-the-classroom/",
+                            "original_src": "https://leetcode.cn/problems/minimum-moves-to-clean-the-classroom/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "864. 获取所有钥匙的最短路径",
+                            "summary": "",
+                            "src": "/shortest-path-to-get-all-keys/",
+                            "original_src": "https://leetcode.cn/problems/shortest-path-to-get-all-keys/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2258.6371797452,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
                             "last_update": ""
                         }
                     ],
@@ -5530,6 +5600,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2389.9634276167,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3575. 最大好子树分数",
+                            "summary": "",
+                            "src": "/maximum-good-subtree-score/",
+                            "original_src": "https://leetcode.cn/problems/maximum-good-subtree-score/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -6645,6 +6729,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3578. 统计极差最大为 K 的分割方式数",
+                                    "summary": "",
+                                    "src": "/count-partitions-with-max-min-difference-at-most-k/",
+                                    "original_src": "https://leetcode.cn/problems/count-partitions-with-max-min-difference-at-most-k/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "375. 猜数字大小 II",
                                     "summary": "",
                                     "src": "/guess-number-higher-or-lower-ii/",
@@ -7505,6 +7603,20 @@ export default{
                                     "nonLeafChild": [],
                                     "isPremium": true,
                                     "last_update": ""
+                                },
+                                {
+                                    "title": "3372. 连接两棵树后最大目标节点数目 I",
+                                    "summary": "",
+                                    "src": "/maximize-the-number-of-target-nodes-after-connecting-trees-i/",
+                                    "original_src": "https://leetcode.cn/problems/maximize-the-number-of-target-nodes-after-connecting-trees-i/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1926.7598451706,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
                                 }
                             ],
                             "nonLeafChild": [],
@@ -7690,6 +7802,20 @@ export default{
                                     "nonLeafChild": [],
                                     "isPremium": false,
                                     "last_update": ""
+                                },
+                                {
+                                    "title": "3372. 连接两棵树后最大目标节点数目 I",
+                                    "summary": "",
+                                    "src": "/maximize-the-number-of-target-nodes-after-connecting-trees-i/",
+                                    "original_src": "https://leetcode.cn/problems/maximize-the-number-of-target-nodes-after-connecting-trees-i/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1926.7598451706,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
                                 }
                             ],
                             "nonLeafChild": [],
@@ -7749,14 +7875,14 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "1916. 统计为蚁群构筑房间的不同顺序",
+                                    "title": "3575. 最大好子树分数",
                                     "summary": "",
-                                    "src": "/count-ways-to-build-rooms-in-an-ant-colony/",
-                                    "original_src": "https://leetcode.cn/problems/count-ways-to-build-rooms-in-an-ant-colony/",
+                                    "src": "/maximum-good-subtree-score/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-good-subtree-score/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": 2486.2339675701,
+                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -7771,6 +7897,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2458.2853259799,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "1916. 统计为蚁群构筑房间的不同顺序",
+                                    "summary": "",
+                                    "src": "/count-ways-to-build-rooms-in-an-ant-colony/",
+                                    "original_src": "https://leetcode.cn/problems/count-ways-to-build-rooms-in-an-ant-colony/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2486.2339675701,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -8415,20 +8555,6 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "3533. 判断连接可整除性",
-                            "summary": "",
-                            "src": "/concatenated-divisibility/",
-                            "original_src": "https://leetcode.cn/problems/concatenated-divisibility/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 2257.480554229,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "943. 最短超级串",
                             "summary": "",
                             "src": "/find-the-shortest-superstring/",
@@ -8451,6 +8577,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2250.9318291559,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3533. 判断连接可整除性",
+                            "summary": "",
+                            "src": "/concatenated-divisibility/",
+                            "original_src": "https://leetcode.cn/problems/concatenated-divisibility/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2257.480554229,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -8704,6 +8844,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1499.7136257352,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3583. 统计特殊三元组",
+                            "summary": "",
+                            "src": "/count-special-triplets/",
+                            "original_src": "https://leetcode.cn/problems/count-special-triplets/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -9591,5 +9745,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-05-25 12:23:24"
+    "last_update": "2025-06-15 23:01:48"
 } as ProblemCategory;

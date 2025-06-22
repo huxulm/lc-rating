@@ -4120,20 +4120,6 @@ export default{
                             "score": 0,
                             "leafChild": [
                                 {
-                                    "title": "3528. 单位转换 I",
-                                    "summary": "",
-                                    "src": "/unit-conversion-i/",
-                                    "original_src": "https://leetcode.cn/problems/unit-conversion-i/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1579.8019590229,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "1376. 通知所有员工所需的时间",
                                     "summary": "",
                                     "src": "/time-needed-to-inform-all-employees/",
@@ -4142,6 +4128,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1561.0553908973,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3528. 单位转换 I",
+                                    "summary": "",
+                                    "src": "/unit-conversion-i/",
+                                    "original_src": "https://leetcode.cn/problems/unit-conversion-i/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1579.8019590229,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4303,20 +4303,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "3558. 给边赋权值的方案数 I",
-                                    "summary": "",
-                                    "src": "/number-of-ways-to-assign-edge-weights-i/",
-                                    "original_src": "https://leetcode.cn/problems/number-of-ways-to-assign-edge-weights-i/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1845.3005046749,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "1519. 子树中标签相同的节点数",
                                     "summary": "",
                                     "src": "/number-of-nodes-in-the-sub-tree-with-the-same-label/",
@@ -4325,6 +4311,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1808.787108831,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3558. 给边赋权值的方案数 I",
+                                    "summary": "",
+                                    "src": "/number-of-ways-to-assign-edge-weights-i/",
+                                    "original_src": "https://leetcode.cn/problems/number-of-ways-to-assign-edge-weights-i/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1845.3005046749,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4663,7 +4663,7 @@ export default{
                         },
                         {
                             "title": "返回 x 到 y 的距离（最短路长度）",
-                            "summary": "<a href=\"https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/solution/mo-ban-jiang-jie-shu-shang-bei-zeng-suan-v3rw/\">讲解</a><br>带权树 LCA 模板（节点编号从 $0$ 开始）：<br>```py [sol-Python3]<br>class LcaBinaryLifting:<br>def __init__(self, edges: List[List[int]]):<br>n = len(edges) + 1<br>m = n.bit_length()<br>g = [[] for _ in range(n)]<br>for x, y, w in edges:<br>g[x].append((y, w))<br>g[y].append((x, w))<br>depth = [0] * n<br>dis = [0] * n  # 如果是无权树（边权为 1），dis 可以去掉，用 depth 代替<br>pa = [[-1] * m for _ in range(n)]<br>def dfs(x: int, fa: int) -> None:<br>pa[x][0] = fa<br>for y, w in g[x]:<br>if y != fa:<br>depth[y] = depth[x] + 1<br>dis[y] = dis[x] + w<br>dfs(y, x)<br>dfs(0, -1)<br>for i in range(m - 1):<br>for x in range(n):<br>if (p := pa[x][i]) != -1:<br>pa[x][i + 1] = pa[p][i]<br>self.depth = depth<br>self.dis = dis<br>self.pa = pa<br>def get_kth_ancestor(self, node: int, k: int) -> int:<br>for i in range(k.bit_length()):<br>if k >> i & 1:<br>node = self.pa[node][i]<br>return node<br>def get_lca(self, x: int, y: int) -> int:<br>if self.depth[x] > self.depth[y]:<br>x, y = y, x<br>y = self.get_kth_ancestor(y, self.depth[y] - self.depth[x])<br>if y == x:<br>return x<br>for i in range(len(self.pa[x]) - 1, -1, -1):<br>px, py = self.pa[x][i], self.pa[y][i]<br>if px != py:<br>x, y = px, py  # 同时往上跳 2**i 步<br>return self.pa[x][0]<br>def get_dis(self, x: int, y: int) -> int:<br>return self.dis[x] + self.dis[y] - self.dis[self.get_lca(x, y)] * 2<br>```<br>```java [sol-Java]<br>class LcaBinaryLifting {<br>private final int[] depth;<br>private final long[] dis; // 如果是无权树（边权为 1），dis 可以去掉，用 depth 代替<br>private final int[][] pa;<br>public LcaBinaryLifting(int[][] edges) {<br>int n = edges.length + 1;<br>int m = 32 - Integer.numberOfLeadingZeros(n); // n 的二进制长度<br>List<int[]>[] g = new ArrayList[n];<br>Arrays.setAll(g, e -> new ArrayList<>());<br>for (int[] e : edges) {<br>int x = e[0], y = e[1], w = e[2];<br>g[x].add(new int[]{y, w});<br>g[y].add(new int[]{x, w});<br>}<br>depth = new int[n];<br>dis = new long[n];<br>pa = new int[n][m];<br>dfs(g, 0, -1);<br>for (int i = 0; i < m - 1; i++) {<br>for (int x = 0; x < n; x++) {<br>int p = pa[x][i];<br>pa[x][i + 1] = p < 0 ? -1 : pa[p][i];<br>}<br>}<br>}<br>private void dfs(List<int[]>[] g, int x, int fa) {<br>pa[x][0] = fa;<br>for (int[] e : g[x]) {<br>int y = e[0];<br>if (y != fa) {<br>depth[y] = depth[x] + 1;<br>dis[y] = dis[x] + e[1];<br>dfs(g, y, x);<br>}<br>}<br>}<br>public int getKthAncestor(int node, int k) {<br>for (; k > 0; k &= k - 1) {<br>node = pa[node][Integer.numberOfTrailingZeros(k)];<br>}<br>return node;<br>}<br>// 返回 x 和 y 的最近公共祖先（节点编号从 0 开始）<br>public int getLCA(int x, int y) {<br>if (depth[x] > depth[y]) {<br>int tmp = y;<br>y = x;<br>x = tmp;<br>}<br>// 使 y 和 x 在同一深度<br>y = getKthAncestor(y, depth[y] - depth[x]);<br>if (y == x) {<br>return x;<br>}<br>for (int i = pa[x].length - 1; i >= 0; i--) {<br>int px = pa[x][i], py = pa[y][i];<br>if (px != py) {<br>x = px;<br>y = py; // 同时往上跳 2^i 步<br>}<br>}<br>return pa[x][0];<br>}<br>// 返回 x 到 y 的距离（最短路长度）<br>public long getDis(int x, int y) {<br>return dis[x] + dis[y] - dis[getLCA(x, y)] * 2;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>class LcaBinaryLifting {<br>vector<int> depth;<br>vector<long long> dis; // 如果是无权树（边权为 1），dis 可以去掉，用 depth 代替<br>vector<vector<int>> pa;<br>public:<br>LcaBinaryLifting(vector<vector<int>>& edges) {<br>int n = edges.size() + 1;<br>int m = bit_width((unsigned) n); // n 的二进制长度<br>vector<vector<pair<int, int>>> g(n);<br>for (auto& e : edges) {<br>int x = e[0], y = e[1], w = e[2];<br>g[x].emplace_back(y, w);<br>g[y].emplace_back(x, w);<br>}<br>depth.resize(n);<br>dis.resize(n);<br>pa.resize(n, vector<int>(m, -1));<br>auto dfs = [&](this auto&& dfs, int x, int fa) -> void {<br>pa[x][0] = fa;<br>for (auto& [y, w] : g[x]) {<br>if (y != fa) {<br>depth[y] = depth[x] + 1;<br>dis[y] = dis[x] + w;<br>dfs(y, x);<br>}<br>}<br>};<br>dfs(0, -1);<br>for (int i = 0; i < m - 1; i++) {<br>for (int x = 0; x < n; x++) {<br>if (int p = pa[x][i]; p != -1) {<br>pa[x][i + 1] = pa[p][i];<br>}<br>}<br>}<br>}<br>int get_kth_ancestor(int node, int k) {<br>for (; k; k &= k - 1) {<br>node = pa[node][countr_zero((unsigned) k)];<br>}<br>return node;<br>}<br>// 返回 x 和 y 的最近公共祖先（节点编号从 0 开始）<br>int get_lca(int x, int y) {<br>if (depth[x] > depth[y]) {<br>swap(x, y);<br>}<br>y = get_kth_ancestor(y, depth[y] - depth[x]); // 使 y 和 x 在同一深度<br>if (y == x) {<br>return x;<br>}<br>for (int i = pa[x].size() - 1; i >= 0; i--) {<br>int px = pa[x][i], py = pa[y][i];<br>if (px != py) {<br>x = px;<br>y = py; // 同时往上跳 2^i 步<br>}<br>}<br>return pa[x][0];<br>}<br>// 返回 x 到 y 的距离（最短路长度）<br>long long get_dis(int x, int y) {<br>return dis[x] + dis[y] - dis[get_lca(x, y)] * 2;<br>}<br>};<br>```<br>```go [sol-Go]<br>func minimumWeight(edges [][]int, queries [][]int) []int {<br>n := len(edges) + 1<br>type edge struct{ to, wt int }<br>g := make([][]edge, n)<br>for _, e := range edges {<br>x, y, wt := e[0], e[1], e[2]<br>g[x] = append(g[x], edge{y, wt})<br>g[y] = append(g[y], edge{x, wt})<br>}<br>const mx = 17 // bits.Len(uint(n))<br>pa := make([][mx]int, n)<br>dep := make([]int, n)<br>dis := make([]int, n) // 如果是无权树（边权为 1），dis 可以去掉，用 dep 代替<br>var dfs func(int, int)<br>dfs = func(x, p int) {<br>pa[x][0] = p<br>for _, e := range g[x] {<br>y := e.to<br>if y == p {<br>continue<br>}<br>dep[y] = dep[x] + 1<br>dis[y] = dis[x] + e.wt<br>dfs(y, x)<br>}<br>}<br>dfs(0, -1)<br>for i := range mx - 1 {<br>for x := range pa {<br>p := pa[x][i]<br>if p != -1 {<br>pa[x][i+1] = pa[p][i]<br>} else {<br>pa[x][i+1] = -1<br>}<br>}<br>}<br>uptoDep := func(x, d int) int {<br>for k := uint(dep[x] - d); k > 0; k &= k - 1 {<br>x = pa[x][bits.TrailingZeros(k)]<br>}<br>return x<br>}<br>// 返回 x 和 y 的最近公共祖先（节点编号从 0 开始）<br>getLCA := func(x, y int) int {<br>if dep[x] > dep[y] {<br>x, y = y, x<br>}<br>y = uptoDep(y, dep[x]) // 使 y 和 x 在同一深度<br>if y == x {<br>return x<br>}<br>for i := mx - 1; i >= 0; i-- {<br>if pv, pw := pa[x][i], pa[y][i]; pv != pw {<br>x, y = pv, pw // 同时往上跳 2^i 步<br>}<br>}<br>return pa[x][0]<br>}<br>// 返回 x 到 y 的距离（最短路长度）<br>getDis := func(x, y int) int { return dis[x] + dis[y] - dis[getLCA(x, y)]*2 }<br>// 以上是 LCA 模板<br>ans := make([]int, len(queries))<br>for i, q := range queries {<br>// ...<br>}<br>return ans<br>}<br>```<br>**数组上的倍增**：<br>",
+                            "summary": "<a href=\"https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/solution/mo-ban-jiang-jie-shu-shang-bei-zeng-suan-v3rw/\">讲解</a><br>带权树 LCA 模板（节点编号从 $0$ 开始）：<br>```py [sol-Python3]<br>class LcaBinaryLifting:<br>def __init__(self, edges: List[List[int]]):<br>n = len(edges) + 1<br>self.m = m = n.bit_length()<br>g = [[] for _ in range(n)]<br>for x, y, w in edges:<br>g[x].append((y, w))<br>g[y].append((x, w))<br>depth = [0] * n<br>dis = [0] * n  # 如果是无权树（边权为 1），dis 可以去掉，用 depth 代替<br>pa = [[-1] * m for _ in range(n)]<br>def dfs(x: int, fa: int) -> None:<br>pa[x][0] = fa<br>for y, w in g[x]:<br>if y != fa:<br>depth[y] = depth[x] + 1<br>dis[y] = dis[x] + w<br>dfs(y, x)<br>dfs(0, -1)<br>for i in range(m - 1):<br>for x in range(n):<br>if (p := pa[x][i]) != -1:<br>pa[x][i + 1] = pa[p][i]<br>self.depth = depth<br>self.dis = dis<br>self.pa = pa<br>def get_kth_ancestor(self, node: int, k: int) -> int:<br>for i in range(k.bit_length()):<br>if k >> i & 1:<br>node = self.pa[node][i]<br>return node<br>def get_lca(self, x: int, y: int) -> int:<br>if self.depth[x] > self.depth[y]:<br>x, y = y, x<br>y = self.get_kth_ancestor(y, self.depth[y] - self.depth[x])<br>if y == x:<br>return x<br>for i in range(self.m - 1, -1, -1):<br>px, py = self.pa[x][i], self.pa[y][i]<br>if px != py:<br>x, y = px, py  # 同时往上跳 2**i 步<br>return self.pa[x][0]<br>def get_dis(self, x: int, y: int) -> int:<br>return self.dis[x] + self.dis[y] - self.dis[self.get_lca(x, y)] * 2<br>```<br>```java [sol-Java]<br>class LcaBinaryLifting {<br>private final int[] depth;<br>private final long[] dis; // 如果是无权树（边权为 1），dis 可以去掉，用 depth 代替<br>private final int[][] pa;<br>public LcaBinaryLifting(int[][] edges) {<br>int n = edges.length + 1;<br>int m = 32 - Integer.numberOfLeadingZeros(n); // n 的二进制长度<br>List<int[]>[] g = new ArrayList[n];<br>Arrays.setAll(g, e -> new ArrayList<>());<br>for (int[] e : edges) {<br>int x = e[0], y = e[1], w = e[2];<br>g[x].add(new int[]{y, w});<br>g[y].add(new int[]{x, w});<br>}<br>depth = new int[n];<br>dis = new long[n];<br>pa = new int[n][m];<br>dfs(g, 0, -1);<br>for (int i = 0; i < m - 1; i++) {<br>for (int x = 0; x < n; x++) {<br>int p = pa[x][i];<br>pa[x][i + 1] = p < 0 ? -1 : pa[p][i];<br>}<br>}<br>}<br>private void dfs(List<int[]>[] g, int x, int fa) {<br>pa[x][0] = fa;<br>for (int[] e : g[x]) {<br>int y = e[0];<br>if (y != fa) {<br>depth[y] = depth[x] + 1;<br>dis[y] = dis[x] + e[1];<br>dfs(g, y, x);<br>}<br>}<br>}<br>public int getKthAncestor(int node, int k) {<br>for (; k > 0; k &= k - 1) {<br>node = pa[node][Integer.numberOfTrailingZeros(k)];<br>}<br>return node;<br>}<br>// 返回 x 和 y 的最近公共祖先（节点编号从 0 开始）<br>public int getLCA(int x, int y) {<br>if (depth[x] > depth[y]) {<br>int tmp = y;<br>y = x;<br>x = tmp;<br>}<br>// 使 y 和 x 在同一深度<br>y = getKthAncestor(y, depth[y] - depth[x]);<br>if (y == x) {<br>return x;<br>}<br>for (int i = pa[x].length - 1; i >= 0; i--) {<br>int px = pa[x][i], py = pa[y][i];<br>if (px != py) {<br>x = px;<br>y = py; // 同时往上跳 2^i 步<br>}<br>}<br>return pa[x][0];<br>}<br>// 返回 x 到 y 的距离（最短路长度）<br>public long getDis(int x, int y) {<br>return dis[x] + dis[y] - dis[getLCA(x, y)] * 2;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>class LcaBinaryLifting {<br>vector<int> depth;<br>vector<long long> dis; // 如果是无权树（边权为 1），dis 可以去掉，用 depth 代替<br>vector<vector<int>> pa;<br>public:<br>LcaBinaryLifting(vector<vector<int>>& edges) {<br>int n = edges.size() + 1;<br>int m = bit_width((unsigned) n); // n 的二进制长度<br>vector<vector<pair<int, int>>> g(n);<br>for (auto& e : edges) {<br>int x = e[0], y = e[1], w = e[2];<br>g[x].emplace_back(y, w);<br>g[y].emplace_back(x, w);<br>}<br>depth.resize(n);<br>dis.resize(n);<br>pa.resize(n, vector<int>(m, -1));<br>auto dfs = [&](this auto&& dfs, int x, int fa) -> void {<br>pa[x][0] = fa;<br>for (auto& [y, w] : g[x]) {<br>if (y != fa) {<br>depth[y] = depth[x] + 1;<br>dis[y] = dis[x] + w;<br>dfs(y, x);<br>}<br>}<br>};<br>dfs(0, -1);<br>for (int i = 0; i < m - 1; i++) {<br>for (int x = 0; x < n; x++) {<br>if (int p = pa[x][i]; p != -1) {<br>pa[x][i + 1] = pa[p][i];<br>}<br>}<br>}<br>}<br>int get_kth_ancestor(int node, int k) {<br>for (; k; k &= k - 1) {<br>node = pa[node][countr_zero((unsigned) k)];<br>}<br>return node;<br>}<br>// 返回 x 和 y 的最近公共祖先（节点编号从 0 开始）<br>int get_lca(int x, int y) {<br>if (depth[x] > depth[y]) {<br>swap(x, y);<br>}<br>y = get_kth_ancestor(y, depth[y] - depth[x]); // 使 y 和 x 在同一深度<br>if (y == x) {<br>return x;<br>}<br>for (int i = pa[x].size() - 1; i >= 0; i--) {<br>int px = pa[x][i], py = pa[y][i];<br>if (px != py) {<br>x = px;<br>y = py; // 同时往上跳 2^i 步<br>}<br>}<br>return pa[x][0];<br>}<br>// 返回 x 到 y 的距离（最短路长度）<br>long long get_dis(int x, int y) {<br>return dis[x] + dis[y] - dis[get_lca(x, y)] * 2;<br>}<br>};<br>```<br>```go [sol-Go]<br>func minimumWeight(edges [][]int, queries [][]int) []int {<br>n := len(edges) + 1<br>type edge struct{ to, wt int }<br>g := make([][]edge, n)<br>for _, e := range edges {<br>x, y, wt := e[0], e[1], e[2]<br>g[x] = append(g[x], edge{y, wt})<br>g[y] = append(g[y], edge{x, wt})<br>}<br>const mx = 17 // bits.Len(uint(n))<br>pa := make([][mx]int, n)<br>dep := make([]int, n)<br>dis := make([]int, n) // 如果是无权树（边权为 1），dis 可以去掉，用 dep 代替<br>var dfs func(int, int)<br>dfs = func(x, p int) {<br>pa[x][0] = p<br>for _, e := range g[x] {<br>y := e.to<br>if y == p {<br>continue<br>}<br>dep[y] = dep[x] + 1<br>dis[y] = dis[x] + e.wt<br>dfs(y, x)<br>}<br>}<br>dfs(0, -1)<br>for i := range mx - 1 {<br>for x := range pa {<br>p := pa[x][i]<br>if p != -1 {<br>pa[x][i+1] = pa[p][i]<br>} else {<br>pa[x][i+1] = -1<br>}<br>}<br>}<br>uptoDep := func(x, d int) int {<br>for k := uint(dep[x] - d); k > 0; k &= k - 1 {<br>x = pa[x][bits.TrailingZeros(k)]<br>}<br>return x<br>}<br>// 返回 x 和 y 的最近公共祖先（节点编号从 0 开始）<br>getLCA := func(x, y int) int {<br>if dep[x] > dep[y] {<br>x, y = y, x<br>}<br>y = uptoDep(y, dep[x]) // 使 y 和 x 在同一深度<br>if y == x {<br>return x<br>}<br>for i := mx - 1; i >= 0; i-- {<br>px, py := pa[x][i], pa[y][i]<br>if px != py {<br>x, y = px, py // 同时往上跳 2^i 步<br>}<br>}<br>return pa[x][0]<br>}<br>// 返回 x 到 y 的距离（最短路长度）<br>getDis := func(x, y int) int { return dis[x] + dis[y] - dis[getLCA(x, y)]*2 }<br>// 以上是 LCA 模板<br>ans := make([]int, len(queries))<br>for i, q := range queries {<br>// ...<br>}<br>return ans<br>}<br>```<br>**数组上的倍增**：<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -4708,6 +4708,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2410.8337079997,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3585. 树中找到带权中位节点",
+                                    "summary": "",
+                                    "src": "/find-weighted-median-node-in-tree/",
+                                    "original_src": "https://leetcode.cn/problems/find-weighted-median-node-in-tree/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4818,7 +4832,50 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "§3.10 点分治",
+                            "title": "§3.10 树上启发式合并",
+                            "summary": "",
+                            "src": "",
+                            "original_src": "",
+                            "sort": 0,
+                            "isLeaf": false,
+                            "solution": "",
+                            "score": 0,
+                            "leafChild": [
+                                {
+                                    "title": "2003. 每棵子树内缺失的最小基因值",
+                                    "summary": "",
+                                    "src": "/smallest-missing-genetic-value-in-each-subtree/",
+                                    "original_src": "https://leetcode.cn/problems/smallest-missing-genetic-value-in-each-subtree/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2415.0089731911,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3575. 最大好子树分数",
+                                    "summary": "",
+                                    "src": "/maximum-good-subtree-score/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-good-subtree-score/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                }
+                            ],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "§3.11 点分治",
                             "summary": "",
                             "src": "",
                             "original_src": "",
@@ -4847,7 +4904,7 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "§3.11 其他",
+                            "title": "§3.12 其他",
                             "summary": "另见 <a href=\"/lc-rating/list/dynamic_programming\">动态规划题单</a> 中的「树形 DP」。<br>",
                             "src": "",
                             "original_src": "",
@@ -4856,20 +4913,6 @@ export default{
                             "solution": "",
                             "score": 0,
                             "leafChild": [
-                                {
-                                    "title": "2003. 每棵子树内缺失的最小基因值",
-                                    "summary": "",
-                                    "src": "/smallest-missing-genetic-value-in-each-subtree/",
-                                    "original_src": "https://leetcode.cn/problems/smallest-missing-genetic-value-in-each-subtree/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 2415.0089731911,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
                                 {
                                     "title": "2867. 统计树中的合法路径数目",
                                     "summary": "",
@@ -5605,20 +5648,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "2014. 重复 K 次的最长子序列",
-                                    "summary": "",
-                                    "src": "/longest-subsequence-repeated-k-times/",
-                                    "original_src": "https://leetcode.cn/problems/longest-subsequence-repeated-k-times/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 2558.3297484354,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "3437. 全排列 III",
                                     "summary": "",
                                     "src": "/permutations-iii/",
@@ -5726,6 +5755,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1740.5014205942,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2014. 重复 K 次的最长子序列",
+                                    "summary": "",
+                                    "src": "/longest-subsequence-repeated-k-times/",
+                                    "original_src": "https://leetcode.cn/problems/longest-subsequence-repeated-k-times/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2558.3297484354,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -6337,5 +6380,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-06-01 11:16:03"
+    "last_update": "2025-06-19 22:36:32"
 } as ProblemCategory;

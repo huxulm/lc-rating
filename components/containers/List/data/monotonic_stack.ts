@@ -13,7 +13,7 @@ export default{
     "nonLeafChild": [
         {
             "title": "介绍",
-            "summary": "<img src=\"https://pic.leetcode.cn/1711714526-rMdiIh-t3-c.png\" alt=\"单调栈题单单调栈入门单调栈题目单调栈教程单调栈视频leetcode单调栈 灵茶山艾府 灵神 灵神题单\" style=\"width: 100%;\"><br>> 他向远方望去，无法看到高山背后的矮山，只看到一座座更高的山峰。<br>推荐先做做 <a href=\"/lc-rating/list/data_structure\">数据结构题单</a> 中的「枚举右，维护左」以及第三章「栈」的题目后，再来刷本题单。<br>",
+            "summary": "<img src=\"https://pic.leetcode.cn/1711714526-rMdiIh-t3-c.png\" alt=\"单调栈题单单调栈入门单调栈题目单调栈教程单调栈视频leetcode单调栈 灵茶山艾府 灵神 灵神题单\" style=\"width: 100%;\"><br>> 他向远方望去，无法看到高山背后的矮山，只看到一座座更高的山峰。<br>推荐先做做 <a href=\"/lc-rating/list/data_structure\">数据结构题单</a> 中的「枚举右，维护左」以及第三章「栈」的基础题目后，再来刷本题单。<br>",
             "src": "",
             "original_src": "",
             "sort": 0,
@@ -776,5 +776,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-05-19 05:16:33"
+    "last_update": "2025-06-15 22:45:33"
 } as ProblemCategory;

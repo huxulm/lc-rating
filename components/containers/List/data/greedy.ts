@@ -72,6 +72,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3545. 不同字符数量最多为 K 时的最少删除数",
+                                    "summary": "",
+                                    "src": "/minimum-deletions-for-at-most-k-distinct-characters/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-deletions-for-at-most-k-distinct-characters/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1210.9890626716,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2279. 装满石头的背包的最大数量",
                                     "summary": "",
                                     "src": "/maximum-bags-with-full-capacity-of-rocks/",
@@ -276,6 +290,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1416.0720873451,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2099. 找到和最大的长度为 K 的子序列",
+                                    "summary": "",
+                                    "src": "/find-subsequence-of-length-k-with-the-largest-sum/",
+                                    "original_src": "https://leetcode.cn/problems/find-subsequence-of-length-k-with-the-largest-sum/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1447.0268321102,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -615,6 +643,20 @@ export default{
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "LCS 02. 完成一半题目",
+                                    "summary": "",
+                                    "src": "/WqXACV/",
+                                    "original_src": "https://leetcode.cn/problems/WqXACV/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
                                     "last_update": ""
                                 },
                                 {
@@ -1027,6 +1069,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3576. 数组元素相等转换",
+                                    "summary": "",
+                                    "src": "/transform-array-to-all-equal-elements/",
+                                    "original_src": "https://leetcode.cn/problems/transform-array-to-all-equal-elements/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3111. 覆盖所有点的最少矩形数目",
                                     "summary": "",
                                     "src": "/minimum-rectangles-to-cover-points/",
@@ -1358,6 +1414,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1604.5128423093,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3557. 不相交子字符串的最大数量",
+                                    "summary": "",
+                                    "src": "/find-maximum-number-of-non-intersecting-substrings/",
+                                    "original_src": "https://leetcode.cn/problems/find-maximum-number-of-non-intersecting-substrings/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1719.8708287742,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1952,7 +2022,7 @@ export default{
                 },
                 {
                     "title": "二、区间贪心",
-                    "summary": "区间贪心有如下经典问题：<br>- **不相交区间**（单机器调度/活动安排）：给定一些区间，从中选出尽量多的两两互不相交的区间。<br>- **区间分组**（任务调度/会议室）：给定一些区间，把这些区间分成最少的组，使得每组内的区间互不相交。<br>- **区间选点**（射气球，Interval Stabbing）：给定一些区间，在数轴上放置最少的点，使得每个区间都包含至少一个点。最少要放置多少个点？<br>- **区间覆盖**（灌溉花园）：给定一些区间，从中选出尽量少的区间，覆盖一条指定线段 $[s,t]$。<br>**任务**：总结上述四种区间贪心问题的解法，尤其是排序的规则和理由，什么时候要按照左端点排序？什么时候要按照右端点排序？排序的目的是什么？欢迎在评论区分享你的总结笔记。<br>",
+                    "summary": "区间贪心有如下经典问题：<br>- **不相交区间**（单机器调度/活动安排）：给定一些区间，从中选出尽量多的两两互不相交的区间。<br>- **区间分组**（任务调度/会议室）：给定一些区间，把这些区间分成最少的组，使得每组内的区间互不相交。<br>- **区间选点**（射气球，Interval Stabbing）：给定一些区间，在数轴上放置最少的点，使得每个区间都包含至少一个点。最少要放置多少个点？<br>- **区间覆盖**（灌溉花园）：给定一些区间，从中选出尽量少的区间，覆盖一条指定线段 $[s,t]$。<br>一般来说，区间合并问题（2.5 节）是按左端点排序，其余大多数区间贪心是按右端点排序。请读者在做题后，仔细体会为什么要这样排序。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -2539,6 +2609,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3517. 最小回文排列 I",
+                                    "summary": "",
+                                    "src": "/smallest-palindromic-rearrangement-i/",
+                                    "original_src": "https://leetcode.cn/problems/smallest-palindromic-rearrangement-i/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1357.002392715,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1881. 插入后的最大值",
                                     "summary": "",
                                     "src": "/maximum-value-after-insertion/",
@@ -2567,6 +2651,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "1432. 改变一个整数能得到的最大差值",
+                                    "summary": "",
+                                    "src": "/max-difference-you-can-get-from-changing-an-integer/",
+                                    "original_src": "https://leetcode.cn/problems/max-difference-you-can-get-from-changing-an-integer/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1426.7384112327,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1946. 子字符串突变后可能得到的最大整数",
                                     "summary": "",
                                     "src": "/largest-number-after-mutating-substring/",
@@ -2575,20 +2673,6 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1445.3734269673,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "3517. 最小回文排列 I",
-                                    "summary": "",
-                                    "src": "/smallest-palindromic-rearrangement-i/",
-                                    "original_src": "https://leetcode.cn/problems/smallest-palindromic-rearrangement-i/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1357.002392715,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -2988,20 +3072,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "680. 验证回文串 II",
-                                    "summary": "",
-                                    "src": "/valid-palindrome-ii/",
-                                    "original_src": "https://leetcode.cn/problems/valid-palindrome-ii/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": null,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "3517. 最小回文排列 I",
                                     "summary": "",
                                     "src": "/smallest-palindromic-rearrangement-i/",
@@ -3010,6 +3080,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1357.002392715,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "680. 验证回文串 II",
+                                    "summary": "",
+                                    "src": "/valid-palindrome-ii/",
+                                    "original_src": "https://leetcode.cn/problems/valid-palindrome-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -3312,20 +3396,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "LCS 01. 下载插件",
-                                    "summary": "",
-                                    "src": "/Ju9Xwi/",
-                                    "original_src": "https://leetcode.cn/problems/Ju9Xwi/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": null,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "3091. 执行操作使数据元素之和大于等于 K",
                                     "summary": "",
                                     "src": "/apply-operations-to-make-sum-of-array-greater-than-or-equal-to-k/",
@@ -3334,6 +3404,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1521.7402232638,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "LCS 01. 下载插件",
+                                    "summary": "",
+                                    "src": "/Ju9Xwi/",
+                                    "original_src": "https://leetcode.cn/problems/Ju9Xwi/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -3403,7 +3487,7 @@ export default{
                         },
                         {
                             "title": "§4.3 排序不等式",
-                            "summary": "给定两个长度均为 $n$ 的数组 $a$ 和 $b$，可以交换同一数组内的元素，最小化/最大化<br>$$<br>a[0]\\cdot b[0] + a[1]\\cdot b[1] +\\cdots+ a[n-1]\\cdot b[n-1]<br>$$<br>把 $a$ 和 $b$ 都从小到大排序，可以最大化上式。<br>把 $a$ 从小到大排序，$b$ 从大到小排序，可以最小化上式。<br>",
+                            "summary": "给定两个长度均为 $n$ 的数组 $a$ 和 $b$，可以交换同一数组内的元素，最小化/最大化<br>$$<br>a[0]\\cdot b[0] + a[1]\\cdot b[1] +\\cdots+ a[n-1]\\cdot b[n-1]<br>$$<br>把 $a$ 和 $b$ 都从小到大排序，可以最大化上式。<br>把 $a$ 从小到大排序，$b$ 从大到小排序，可以最小化上式。<br>**思维扩展**：<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -3507,6 +3591,20 @@ export default{
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3547. 图中边值的最大和",
+                                    "summary": "",
+                                    "src": "/maximum-sum-of-edge-values-in-a-graph/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-sum-of-edge-values-in-a-graph/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2343.9866471772,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
                                     "last_update": ""
                                 }
                             ],
@@ -4441,6 +4539,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3577. 统计计算机解锁顺序排列数",
+                                    "summary": "",
+                                    "src": "/count-the-number-of-computer-unlocking-permutations/",
+                                    "original_src": "https://leetcode.cn/problems/count-the-number-of-computer-unlocking-permutations/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1145. 二叉树着色游戏",
                                     "summary": "",
                                     "src": "/binary-tree-coloring-game/",
@@ -4511,6 +4623,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "2311. 小于等于 K 的最长二进制子序列",
+                                    "summary": "",
+                                    "src": "/longest-binary-subsequence-less-than-or-equal-to-k/",
+                                    "original_src": "https://leetcode.cn/problems/longest-binary-subsequence-less-than-or-equal-to-k/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1839.9203623221,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2332. 坐上公交的最晚时间",
                                     "summary": "",
                                     "src": "/the-latest-time-to-catch-a-bus/",
@@ -4564,6 +4690,20 @@ export default{
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3496. 最大化配对删除后的得分",
+                                    "summary": "",
+                                    "src": "/maximize-score-after-pair-deletions/",
+                                    "original_src": "https://leetcode.cn/problems/maximize-score-after-pair-deletions/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
                                     "last_update": ""
                                 },
                                 {
@@ -4952,20 +5092,6 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "2182. 构造限制重复的字符串",
-                            "summary": "",
-                            "src": "/construct-string-with-repeat-limit/",
-                            "original_src": "https://leetcode.cn/problems/construct-string-with-repeat-limit/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1680.1353258588,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "3513. 不同 XOR 三元组的数目 I",
                             "summary": "",
                             "src": "/number-of-unique-xor-triplets-i/",
@@ -4974,6 +5100,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1663.403653034,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "2182. 构造限制重复的字符串",
+                            "summary": "",
+                            "src": "/construct-string-with-repeat-limit/",
+                            "original_src": "https://leetcode.cn/problems/construct-string-with-repeat-limit/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1680.1353258588,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -5205,20 +5345,6 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "781. 森林中的兔子",
-                            "summary": "",
-                            "src": "/rabbits-in-forest/",
-                            "original_src": "https://leetcode.cn/problems/rabbits-in-forest/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1453.1833769825,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "3523. 非递减数组的最大长度",
                             "summary": "",
                             "src": "/make-array-non-decreasing/",
@@ -5227,6 +5353,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1435.3952187057,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "781. 森林中的兔子",
+                            "summary": "",
+                            "src": "/rabbits-in-forest/",
+                            "original_src": "https://leetcode.cn/problems/rabbits-in-forest/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1453.1833769825,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -5283,20 +5423,6 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": null,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "2311. 小于等于 K 的最长二进制子序列",
-                            "summary": "",
-                            "src": "/longest-binary-subsequence-less-than-or-equal-to-k/",
-                            "original_src": "https://leetcode.cn/problems/longest-binary-subsequence-less-than-or-equal-to-k/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1839.9203623221,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -5415,6 +5541,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "LCP 03. 机器人大冒险",
+                            "summary": "",
+                            "src": "/programmable-robot/",
+                            "original_src": "https://leetcode.cn/problems/programmable-robot/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "LCP 26. 导航装置",
                             "summary": "",
                             "src": "/hSRGyL/",
@@ -5469,20 +5609,6 @@ export default{
                             "nonLeafChild": [],
                             "isPremium": true,
                             "last_update": ""
-                        },
-                        {
-                            "title": "LCS 02. 完成一半题目",
-                            "summary": "",
-                            "src": "/WqXACV/",
-                            "original_src": "https://leetcode.cn/problems/WqXACV/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": null,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
                         }
                     ],
                     "nonLeafChild": [],
@@ -5523,5 +5649,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-04-25 03:32:16"
+    "last_update": "2025-06-20 12:20:55"
 } as ProblemCategory;

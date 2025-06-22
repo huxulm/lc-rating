@@ -730,7 +730,7 @@ export default{
                 },
                 {
                     "title": "五、最小表示法",
-                    "summary": "定义**循环左移**操作：把字符串 $s$ 的第一个字符 $s[0]$ 移除，添加到 $s$ 的末尾。例如 $\\texttt{abcd}$ 操作一次后得到 $\\texttt{bcda}$。<br>问题：你可以执行任意次循环左移操作，计算你能得到的字典序最小的字符串。<br>推荐先完成 <a href=\"https://leetcode.cn/problems/last-substring-in-lexicographical-order/\">1163. 按字典序排在最后的子串</a>，再做下面这题。<br>注：和 1163 相似的题目，还有 <a href=\"https://leetcode.cn/problems/find-the-lexicographically-largest-string-from-the-box-i/\">3403. 从盒子中找出字典序最大的字符串 I</a>。<br>",
+                    "summary": "定义**循环左移**操作：把字符串 $s$ 的第一个字符 $s[0]$ 移除，添加到 $s$ 的末尾。例如 $\\texttt{abcd}$ 操作一次后得到 $\\texttt{bcda}$。<br>问题：你可以执行任意次循环左移操作，计算你能得到的字典序最小的字符串。<br>推荐先完成 <a href=\"https://leetcode.cn/problems/last-substring-in-lexicographical-order/\">1163. 按字典序排在最后的子串</a>。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -750,6 +750,34 @@ export default{
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3403. 从盒子中找出字典序最大的字符串 I",
+                            "summary": "",
+                            "src": "/find-the-lexicographically-largest-string-from-the-box-i/",
+                            "original_src": "https://leetcode.cn/problems/find-the-lexicographically-largest-string-from-the-box-i/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1761.8759092138,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3406. 从盒子中找出字典序最大的字符串 II",
+                            "summary": "",
+                            "src": "/find-the-lexicographically-largest-string-from-the-box-ii/",
+                            "original_src": "https://leetcode.cn/problems/find-the-lexicographically-largest-string-from-the-box-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
                             "last_update": ""
                         }
                     ],
@@ -832,6 +860,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2170.7313528632,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "2781. 最长合法子字符串的长度",
+                            "summary": "",
+                            "src": "/length-of-the-longest-valid-substring/",
+                            "original_src": "https://leetcode.cn/problems/length-of-the-longest-valid-substring/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2203.5694828019,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -1203,6 +1245,20 @@ export default{
                             "nonLeafChild": [],
                             "isPremium": false,
                             "last_update": ""
+                        },
+                        {
+                            "title": "466. 统计重复个数",
+                            "summary": "",
+                            "src": "/count-the-repetitions/",
+                            "original_src": "https://leetcode.cn/problems/count-the-repetitions/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         }
                     ],
                     "nonLeafChild": [],
@@ -1229,5 +1285,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-04-27 12:40:14"
+    "last_update": "2025-06-15 23:03:17"
 } as ProblemCategory;

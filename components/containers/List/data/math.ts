@@ -861,6 +861,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3574. 最大子数组 GCD 分数",
+                                    "summary": "",
+                                    "src": "/maximize-subarray-gcd-score/",
+                                    "original_src": "https://leetcode.cn/problems/maximize-subarray-gcd-score/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3312. 查询排序后的最大公约数",
                                     "summary": "",
                                     "src": "/sorted-gcd-pair-queries/",
@@ -1652,20 +1666,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "1569. 将子数组重新排序得到同一个二叉搜索树的方案数",
-                                    "summary": "",
-                                    "src": "/number-of-ways-to-reorder-array-to-get-same-bst/",
-                                    "original_src": "https://leetcode.cn/problems/number-of-ways-to-reorder-array-to-get-same-bst/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 2288.2117442123,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "3519. 统计逐位非递减的整数",
                                     "summary": "",
                                     "src": "/count-numbers-with-non-decreasing-digits/",
@@ -1674,6 +1674,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2246.0622321942,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "1569. 将子数组重新排序得到同一个二叉搜索树的方案数",
+                                    "summary": "",
+                                    "src": "/number-of-ways-to-reorder-array-to-get-same-bst/",
+                                    "original_src": "https://leetcode.cn/problems/number-of-ways-to-reorder-array-to-get-same-bst/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2288.2117442123,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1722,20 +1736,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "3272. 统计好整数的数目",
-                                    "summary": "",
-                                    "src": "/find-the-count-of-good-integers/",
-                                    "original_src": "https://leetcode.cn/problems/find-the-count-of-good-integers/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 2382.24900347,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "3518. 最小回文排列 II",
                                     "summary": "",
                                     "src": "/smallest-palindromic-rearrangement-ii/",
@@ -1744,6 +1744,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2375.0917527641,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3272. 统计好整数的数目",
+                                    "summary": "",
+                                    "src": "/find-the-count-of-good-integers/",
+                                    "original_src": "https://leetcode.cn/problems/find-the-count-of-good-integers/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2382.24900347,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1820,20 +1834,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "3395. 唯一中间众数子序列 I",
-                                    "summary": "",
-                                    "src": "/subsequences-with-a-unique-middle-mode-i/",
-                                    "original_src": "https://leetcode.cn/problems/subsequences-with-a-unique-middle-mode-i/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 2799.5363565342,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "3539. 魔法序列的数组乘积之和",
                                     "summary": "",
                                     "src": "/find-sum-of-array-product-of-magical-sequences/",
@@ -1842,6 +1842,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2693.8309245934,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3395. 唯一中间众数子序列 I",
+                                    "summary": "",
+                                    "src": "/subsequences-with-a-unique-middle-mode-i/",
+                                    "original_src": "https://leetcode.cn/problems/subsequences-with-a-unique-middle-mode-i/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2799.5363565342,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4372,5 +4386,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-05-25 23:50:39"
+    "last_update": "2025-06-15 23:02:16"
 } as ProblemCategory;
