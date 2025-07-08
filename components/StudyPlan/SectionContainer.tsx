@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { StudyPlanData } from "@/types";
-import { marked } from 'marked';
+import { marked } from "marked";
 import React, { useEffect, useRef } from "react";
 import { ProblemList } from "./ProblemList";
 
@@ -15,6 +15,10 @@ interface SectionContainerProps {
   section: StudyPlanData.Section;
   level?: number;
 }
+
+const createMarkup = (md: string) => {
+  return { __html: marked(md) };
+};
 
 const SectionContainer = React.memo(
   ({ section, level = 0 }: SectionContainerProps) => {
@@ -37,9 +41,15 @@ const SectionContainer = React.memo(
       return { __html: marked(md) };
     };
 
-    const cardClasses = cn("scroll-mt-[70px]", {
-      "w-full": section.children.length,
-    }, level == 0 && section.children.length == 0? "w-1/2": "", section.isLeaf? "border": "", "h-fit");
+    const cardClasses = cn(
+      "scroll-mt-[70px]",
+      {
+        "w-full": section.children.length,
+      },
+      level == 0 && section.children.length == 0 ? "w-1/2" : "",
+      section.isLeaf ? "border" : "",
+      "h-fit"
+    );
 
     return (
       <Card
@@ -60,19 +70,16 @@ const SectionContainer = React.memo(
           ) : null}
         </CardHeader>
         <CardContent>
-          {section.problems.length ? (
-            <ProblemList problems={section.problems} />
-          ) : (
-            <div className="flex flex-row flex-wrap p-1 gap-3">
-              {section.children.map((section) => (
-                <SectionContainer
-                  key={section.title}
-                  section={section}
-                  level={level + 1}
-                />
-              ))}
-            </div>
-          )}
+          <ProblemList problems={section.problems} />
+          <div className="flex flex-row flex-wrap p-1 gap-3">
+            {section.children.map((section) => (
+              <SectionContainer
+                key={section.title}
+                section={section}
+                level={level + 1}
+              />
+            ))}
+          </div>
         </CardContent>
       </Card>
     );
@@ -82,4 +89,3 @@ const SectionContainer = React.memo(
 SectionContainer.displayName = "SectionContainer";
 
 export { SectionContainer };
-
