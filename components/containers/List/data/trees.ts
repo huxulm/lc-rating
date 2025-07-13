@@ -4331,6 +4331,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3593. 使叶子路径成本相等的最小增量",
+                                    "summary": "",
+                                    "src": "/minimum-increments-to-equalize-leaf-paths/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-increments-to-equalize-leaf-paths/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2872. 可以被 K 整除连通块的最大数目",
                                     "summary": "",
                                     "src": "/maximum-number-of-k-divisible-components/",
@@ -4429,6 +4443,20 @@ export default{
                             "solution": "",
                             "score": 0,
                             "leafChild": [
+                                {
+                                    "title": "3593. 使叶子路径成本相等的最小增量",
+                                    "summary": "",
+                                    "src": "/minimum-increments-to-equalize-leaf-paths/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-increments-to-equalize-leaf-paths/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
                                 {
                                     "title": "3331. 修改后子树的大小",
                                     "summary": "",
@@ -4548,8 +4576,51 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "§3.6 DFS 时间戳",
+                            "title": "§3.6 树的拓扑排序",
                             "summary": "",
+                            "src": "",
+                            "original_src": "",
+                            "sort": 0,
+                            "isLeaf": false,
+                            "solution": "",
+                            "score": 0,
+                            "leafChild": [
+                                {
+                                    "title": "310. 最小高度树",
+                                    "summary": "",
+                                    "src": "/minimum-height-trees/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-height-trees/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2603. 收集树中金币",
+                                    "summary": "",
+                                    "src": "/collect-coins-in-a-tree/",
+                                    "original_src": "https://leetcode.cn/problems/collect-coins-in-a-tree/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2711.8717381409,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                }
+                            ],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "§3.7 DFS 时间戳",
+                            "summary": "可以把树上问题转化成数组问题，比如子树的操作转化成子数组的操作。通常要结合其他数据结构。<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -4612,45 +4683,16 @@ export default{
                                     "nonLeafChild": [],
                                     "isPremium": false,
                                     "last_update": ""
-                                }
-                            ],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "§3.7 树的拓扑排序",
-                            "summary": "",
-                            "src": "",
-                            "original_src": "",
-                            "sort": 0,
-                            "isLeaf": false,
-                            "solution": "",
-                            "score": 0,
-                            "leafChild": [
+                                },
                                 {
-                                    "title": "310. 最小高度树",
+                                    "title": "3590. 第 K 小的路径异或和",
                                     "summary": "",
-                                    "src": "/minimum-height-trees/",
-                                    "original_src": "https://leetcode.cn/problems/minimum-height-trees/",
+                                    "src": "/kth-smallest-path-xor-sum/",
+                                    "original_src": "https://leetcode.cn/problems/kth-smallest-path-xor-sum/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": null,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "2603. 收集树中金币",
-                                    "summary": "",
-                                    "src": "/collect-coins-in-a-tree/",
-                                    "original_src": "https://leetcode.cn/problems/collect-coins-in-a-tree/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 2711.8717381409,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4770,6 +4812,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "2836. 在传球游戏中最大化函数值",
+                                    "summary": "",
+                                    "src": "/maximize-value-of-function-in-a-ball-passing-game",
+                                    "original_src": "https://leetcode.cn/problems/maximize-value-of-function-in-a-ball-passing-game",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2768.8154223451,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3464. 正方形上的点之间的最大距离",
                                     "summary": "",
                                     "src": "/maximize-the-distance-between-points-on-a-square/",
@@ -4856,6 +4912,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3590. 第 K 小的路径异或和",
+                                    "summary": "",
+                                    "src": "/kth-smallest-path-xor-sum/",
+                                    "original_src": "https://leetcode.cn/problems/kth-smallest-path-xor-sum/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3575. 最大好子树分数",
                                     "summary": "",
                                     "src": "/maximum-good-subtree-score/",
@@ -4905,7 +4975,7 @@ export default{
                         },
                         {
                             "title": "§3.12 其他",
-                            "summary": "另见 <a href=\"/lc-rating/list/dynamic_programming\">动态规划题单</a> 中的「树形 DP」。<br>",
+                            "summary": "另见 <a href=\"/lc-rating/list/dynamic_programming\">动态规划题单</a> 中的「**树形 DP**」，包含换根 DP。<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -6380,5 +6450,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-06-19 22:36:32"
+    "last_update": "2025-07-05 03:04:13"
 } as ProblemCategory;

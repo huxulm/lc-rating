@@ -353,6 +353,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3555. 排序每个滑动窗口中最小的子数组",
+                                    "summary": "",
+                                    "src": "/smallest-subarray-to-sort-in-every-sliding-window/",
+                                    "original_src": "https://leetcode.cn/problems/smallest-subarray-to-sort-in-every-sliding-window/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "962. 最大宽度坡",
                                     "summary": "",
                                     "src": "/maximum-width-ramp/",
@@ -456,14 +470,14 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "1504. 统计全 1 子矩形",
+                            "title": "221. 最大正方形",
                             "summary": "",
-                            "src": "/count-submatrices-with-all-ones/",
-                            "original_src": "https://leetcode.cn/problems/count-submatrices-with-all-ones/",
+                            "src": "/maximal-square/",
+                            "original_src": "https://leetcode.cn/problems/maximal-square/",
                             "sort": 0,
                             "isLeaf": true,
                             "solution": null,
-                            "score": 1845.0428731248,
+                            "score": null,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -478,6 +492,34 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "1504. 统计全 1 子矩形",
+                            "summary": "",
+                            "src": "/count-submatrices-with-all-ones/",
+                            "original_src": "https://leetcode.cn/problems/count-submatrices-with-all-ones/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1845.0428731248,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "1277. 统计全为 1 的正方形子矩阵",
+                            "summary": "",
+                            "src": "/count-square-submatrices-with-all-ones/",
+                            "original_src": "https://leetcode.cn/problems/count-square-submatrices-with-all-ones/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1613.0429766636,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -776,5 +818,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-06-15 22:45:33"
+    "last_update": "2025-06-22 23:44:37"
 } as ProblemCategory;

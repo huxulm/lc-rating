@@ -991,20 +991,6 @@ export default{
                     "score": 0,
                     "leafChild": [
                         {
-                            "title": "3007. 价值和小于等于 K 的最大数字",
-                            "summary": "",
-                            "src": "/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/",
-                            "original_src": "https://leetcode.cn/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 2258.0069047781,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "421. 数组中两个数的最大异或值",
                             "summary": "",
                             "src": "/maximum-xor-of-two-numbers-in-an-array/",
@@ -1027,6 +1013,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2348.7273357105,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3007. 价值和小于等于 K 的最大数字",
+                            "summary": "",
+                            "src": "/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/",
+                            "original_src": "https://leetcode.cn/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2258.0069047781,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -1634,5 +1634,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-06-15 22:59:43"
+    "last_update": "2025-07-04 08:04:13"
 } as ProblemCategory;
