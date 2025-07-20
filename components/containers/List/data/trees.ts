@@ -1058,7 +1058,7 @@ export default{
                 },
                 {
                     "title": "二、二叉树",
-                    "summary": "<img src=\"https://pic.leetcode.cn/1724824379-UOsXIV-dfsbfsnew-c.png\" alt=\"DFS BFS\" style=\"width: 100%;\"><br>**学习递归，从二叉树开始。**<br>晕递归的同学，请先看视频讲解<a href=\"https://www.bilibili.com/video/BV1UD4y1Y769/\">【基础算法精讲 09】</a>，欢迎点赞~<br>带着问题去做下面的题目：<br>1. 一般来说，DFS 的递归边界是空节点。在什么情况下，要额外把**叶子节点**作为递归边界？<br>2. 在什么情况下，DFS 需要有返回值？什么情况下不需要有返回值？<br>3. 在什么情况下，题目更适合用**自顶向下**的方法解决？什么情况下更适合用**自底向上**的方法解决？<br>",
+                    "summary": "<img src=\"https://pic.leetcode.cn/1724824379-UOsXIV-dfsbfsnew-c.png\" alt=\"DFS BFS\" style=\"width: 100%;\"><br>**学习递归，从二叉树开始。**<br>晕递归的同学，请先看视频讲解<a href=\"https://www.bilibili.com/video/BV1UD4y1Y769/\">【基础算法精讲 09】</a>，欢迎点赞~<br>一般有三种遍历方式：<br>- **先序遍历**：见 §2.2 自顶向下 DFS。<br>- **中序遍历**：见 §2.9 二叉搜索树。<br>- **后序遍历**：见 §2.3 自底向上 DFS。<br>带着问题去做下面的题目：<br>1. 一般来说，DFS 的递归边界是空节点。在什么情况下，要额外把**叶子节点**作为递归边界？<br>2. 在什么情况下，DFS 需要有返回值？什么情况下不需要有返回值？<br>3. 在什么情况下，题目更适合用**自顶向下**的方法解决？什么情况下更适合用**自底向上**的方法解决？<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -1223,7 +1223,7 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "§2.2 自顶向下 DFS",
+                            "title": "§2.2 自顶向下 DFS（先序遍历）",
                             "summary": "在「递」的过程中维护值。<br>> 有些题目自顶向下和自底向上都可以做。有些题目也可以用 BFS 做。<br>",
                             "src": "",
                             "original_src": "",
@@ -1490,7 +1490,7 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "§2.3 自底向上 DFS",
+                            "title": "§2.3 自底向上 DFS（后序遍历）",
                             "summary": "在「归」的过程中计算。<br><a href=\"https://www.bilibili.com/video/BV18M411z7bb/\">如何灵活运用递归？【基础算法精讲 10】</a><br>",
                             "src": "",
                             "original_src": "",
@@ -2365,7 +2365,7 @@ export default{
                         },
                         {
                             "title": "§2.9 二叉搜索树",
-                            "summary": "<a href=\"https://www.bilibili.com/video/BV14G411P7C1/\">视频讲解【基础算法精讲 11】</a><br>",
+                            "summary": "一般是中序遍历。<br><a href=\"https://www.bilibili.com/video/BV14G411P7C1/\">视频讲解【基础算法精讲 11】</a><br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -6424,6 +6424,62 @@ export default{
                             "nonLeafChild": [],
                             "isPremium": false,
                             "last_update": ""
+                        },
+                        {
+                            "title": "3307. 找出第 K 个字符 II",
+                            "summary": "",
+                            "src": "/find-the-k-th-character-in-string-game-ii/",
+                            "original_src": "https://leetcode.cn/problems/find-the-k-th-character-in-string-game-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2232.067965725,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "880. 索引处的解码字符串",
+                            "summary": "",
+                            "src": "/decoded-string-at-index/",
+                            "original_src": "https://leetcode.cn/problems/decoded-string-at-index/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2010.5524756946,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3614. 用特殊操作处理字符串 II",
+                            "summary": "",
+                            "src": "/process-string-with-special-operations-ii/",
+                            "original_src": "https://leetcode.cn/problems/process-string-with-special-operations-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "1545. 找出第 N 个二进制字符串中的第 K 位",
+                            "summary": "",
+                            "src": "/find-kth-bit-in-nth-binary-string/",
+                            "original_src": "https://leetcode.cn/problems/find-kth-bit-in-nth-binary-string/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1479.4837595809,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         }
                     ],
                     "nonLeafChild": [],
@@ -6450,5 +6506,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-07-05 03:04:13"
+    "last_update": "2025-07-18 04:15:24"
 } as ProblemCategory;

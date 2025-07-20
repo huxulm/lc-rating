@@ -149,6 +149,20 @@ export default{
                     "last_update": ""
                 },
                 {
+                    "title": "2800. 包含三个字符串的最短字符串",
+                    "summary": "",
+                    "src": "/shortest-string-that-contains-three-strings/",
+                    "original_src": "https://leetcode.cn/problems/shortest-string-that-contains-three-strings/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 1855.561153694,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
                     "title": "3008. 找出数组中的美丽下标 II",
                     "summary": "",
                     "src": "/find-beautiful-indices-in-the-given-array-ii/",
@@ -405,8 +419,8 @@ export default{
             ],
             "nonLeafChild": [
                 {
-                    "title": "三、Manacher 算法",
-                    "summary": "Manacher 算法可以计算以 $s[i]$（或者 $s[i]$ 和 $s[i+1]$）为回文中心的最长回文子串的长度。<br>此外，还可以：<br>- 判断任意子串是否为回文串。<br>- 计算从 $s[i]$ 开始的最长回文子串的长度。<br>- 计算以 $s[i]$ 结尾的最长回文子串的长度。<br>> Z 函数和 Manacher 算法都会用到类似 Z-box 的概念，在学习时，可以对比体会。<br>",
+                    "title": "三、Manacher 算法（回文串）",
+                    "summary": "Manacher 算法可以计算以 $s[i]$（或者 $s[i]$ 和 $s[i+1]$）为回文中心的最长回文子串的长度。<br>此外，还可以：<br>- 判断任意子串是否为回文串。<br>- 计算从 $s[i]$ 开始的最长回文子串的长度。<br>- 计算以 $s[i]$ 结尾的最长回文子串的长度。<br>> Z 函数和 Manacher 算法都会用到类似 Z-box 的概念，在学习时，可以对比体会。<br><a href=\"https://leetcode.cn/problems/longest-palindromic-substring/solutions/2958179/mo-ban-on-manacher-suan-fa-pythonjavacgo-t6cx/\">模板代码</a><br>用到**中心扩展法**（及其思想）的算法题：<br><a href=\"https://leetcode.cn/problems/longest-palindromic-substring/solutions/2958179/mo-ban-on-manacher-suan-fa-pythonjavacgo-t6cx/\">模板代码</a><br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -507,6 +521,76 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2397.700544564,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "5. 最长回文子串",
+                            "summary": "",
+                            "src": "/longest-palindromic-substring/",
+                            "original_src": "https://leetcode.cn/problems/longest-palindromic-substring/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "2472. 不重叠回文子字符串的最大数目",
+                            "summary": "",
+                            "src": "/maximum-number-of-non-overlapping-palindrome-substrings/",
+                            "original_src": "https://leetcode.cn/problems/maximum-number-of-non-overlapping-palindrome-substrings/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2013.4354344791,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3504. 子字符串连接后的最长回文串 II",
+                            "summary": "",
+                            "src": "/longest-palindrome-after-substring-concatenation-ii/",
+                            "original_src": "https://leetcode.cn/problems/longest-palindrome-after-substring-concatenation-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2397.700544564,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3579. 字符串转换需要的最小操作数",
+                            "summary": "",
+                            "src": "/minimum-steps-to-convert-string-with-operations/",
+                            "original_src": "https://leetcode.cn/problems/minimum-steps-to-convert-string-with-operations/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3615. 图中的最长回文路径",
+                            "summary": "",
+                            "src": "/longest-palindromic-path-in-graph/",
+                            "original_src": "https://leetcode.cn/problems/longest-palindromic-path-in-graph/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -1285,5 +1369,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-06-15 23:03:17"
+    "last_update": "2025-07-13 12:50:01"
 } as ProblemCategory;

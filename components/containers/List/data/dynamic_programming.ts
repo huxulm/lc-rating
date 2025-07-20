@@ -13,7 +13,7 @@ export default{
     "nonLeafChild": [
         {
             "title": "前言",
-            "summary": "掌握动态规划（DP）是没有捷径的，咱们唯一能做的，就是投入时间猛猛刷题。好比学数学，只看书看视频而不做习题，是不能说学会的。<br>我能做的，是帮你节省找题的时间，并把这些题分类整理好。有着相同套路的题，一起做效率会更高，也更能领悟到 DP 的精髓。所以推荐按照专题刷。<br>题目已按照难度分排序（右侧数字为难度分）。如果遇到难度很大，题解都看不懂的题目，建议直接跳过，二刷的时候再来尝试。<br>",
+            "summary": "掌握动态规划（DP）是没有捷径的，咱们唯一能做的，就是投入时间猛猛刷题。好比学数学，只看书看视频而不做习题，是不能说学会的。<br>我能做的，是帮你节省找题的时间，并把这些题分类整理好。有着相同套路的题，一起做效率会更高，也更能领悟到 DP 的精髓。所以推荐按照专题刷。<br>题目已按照难度分排序（右侧数字为难度分）。如果遇到难度很大，题解都看不懂的题目，建议直接跳过，二刷的时候再来尝试。<br><img src=\"https://pic.leetcode.cn/1710769845-JRnIfA-dp-2.jpg\" alt=\"动态规划算法题DP题单动态规划题单入门动态规划题目动态规划新手教程力扣DP力扣动态规划leetcode动态规划leetcode dp 灵茶山艾府 灵神 灵神题单\" style=\"width: 100%;\"><br>**记忆化搜索**是新手村神器（甚至可以用到游戏后期），推荐先看 <a href=\"https://www.bilibili.com/video/BV1Xj411K7oF/\">动态规划入门：从记忆化搜索到递推</a>。<br>但记忆化搜索并不是万能的，某些题目只有写成递推，才能结合数据结构等来优化时间复杂度，多数题目还可以优化空间复杂度。所以尽量在写完记忆化搜索后，把递推的代码也写一下。熟练之后直接写递推也可以。<br>",
             "src": "",
             "original_src": "",
             "sort": 0,
@@ -27,7 +27,7 @@ export default{
         },
         {
             "title": "一、入门 DP",
-            "summary": "<img src=\"https://pic.leetcode.cn/1710769845-JRnIfA-dp-2.jpg\" alt=\"动态规划算法题DP题单动态规划题单入门动态规划题目动态规划新手教程力扣DP力扣动态规划leetcode动态规划leetcode dp 灵茶山艾府 灵神 灵神题单\" style=\"width: 100%;\"><br>**记忆化搜索**是新手村神器（甚至可以用到游戏后期），推荐先看 <a href=\"https://www.bilibili.com/video/BV1Xj411K7oF/\">动态规划入门：从记忆化搜索到递推</a>。<br>但记忆化搜索并不是万能的，某些题目只有写成递推，才能结合数据结构等来优化时间复杂度，多数题目还可以优化空间复杂度。所以尽量在写完记忆化搜索后，把递推的代码也写一下。熟练之后直接写递推也可以。<br>",
+            "summary": "",
             "src": "",
             "original_src": "",
             "sort": 0,
@@ -480,6 +480,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1573.2701790739,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3603. 交替方向的最小路径代价 II",
+                            "summary": "",
+                            "src": "/minimum-cost-path-with-alternating-directions-ii/",
+                            "original_src": "https://leetcode.cn/problems/minimum-cost-path-with-alternating-directions-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -5141,10 +5155,10 @@ export default{
                     "score": 0,
                     "leafChild": [
                         {
-                            "title": "教你一步步思考状压 DP：从记忆化搜索到递推",
+                            "title": "从集合论到位运算，常见位运算技巧分类总结",
                             "summary": "",
-                            "src": "/beautiful-arrangement/solution/jiao-ni-yi-bu-bu-si-kao-zhuang-ya-dpcong-c6kd/",
-                            "original_src": "https://leetcode.cn/problems/beautiful-arrangement/solution/jiao-ni-yi-bu-bu-si-kao-zhuang-ya-dpcong-c6kd/",
+                            "src": null,
+                            "original_src": "https://leetcode.cn/circle/discuss/CaOJ45/",
                             "sort": 0,
                             "isLeaf": true,
                             "solution": null,
@@ -5155,10 +5169,10 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "从集合论到位运算，常见位运算技巧分类总结",
+                            "title": "教你一步步思考状压 DP：从记忆化搜索到递推",
                             "summary": "",
-                            "src": null,
-                            "original_src": "https://leetcode.cn/circle/discuss/CaOJ45/",
+                            "src": "/beautiful-arrangement/solution/jiao-ni-yi-bu-bu-si-kao-zhuang-ya-dpcong-c6kd/",
+                            "original_src": "https://leetcode.cn/problems/beautiful-arrangement/solution/jiao-ni-yi-bu-bu-si-kao-zhuang-ya-dpcong-c6kd/",
                             "sort": 0,
                             "isLeaf": true,
                             "solution": null,
@@ -5402,6 +5416,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2473.2589317118,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3615. 图中的最长回文路径",
+                            "summary": "",
+                            "src": "/longest-palindromic-path-in-graph/",
+                            "original_src": "https://leetcode.cn/problems/longest-palindromic-path-in-graph/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -9801,5 +9829,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-07-01 23:20:07"
+    "last_update": "2025-07-14 22:57:20"
 } as ProblemCategory;
