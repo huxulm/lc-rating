@@ -13,7 +13,7 @@ export default{
     "nonLeafChild": [
         {
             "title": "前言",
-            "summary": "掌握动态规划（DP）是没有捷径的，咱们唯一能做的，就是投入时间猛猛刷题。好比学数学，只看书看视频而不做习题，是不能说学会的。<br>我能做的，是帮你节省找题的时间，并把这些题分类整理好。有着相同套路的题，一起做效率会更高，也更能领悟到 DP 的精髓。所以推荐按照专题刷。<br>题目已按照难度分排序（右侧数字为难度分）。如果遇到难度很大，题解都看不懂的题目，建议直接跳过，二刷的时候再来尝试。<br><img src=\"https://pic.leetcode.cn/1710769845-JRnIfA-dp-2.jpg\" alt=\"动态规划算法题DP题单动态规划题单入门动态规划题目动态规划新手教程力扣DP力扣动态规划leetcode动态规划leetcode dp 灵茶山艾府 灵神 灵神题单\" style=\"width: 100%;\"><br>**记忆化搜索**是新手村神器（甚至可以用到游戏后期），推荐先看 <a href=\"https://www.bilibili.com/video/BV1Xj411K7oF/\">动态规划入门：从记忆化搜索到递推</a>。<br>但记忆化搜索并不是万能的，某些题目只有写成递推，才能结合数据结构等来优化时间复杂度，多数题目还可以优化空间复杂度。所以尽量在写完记忆化搜索后，把递推的代码也写一下。熟练之后直接写递推也可以。<br>",
+            "summary": "掌握动态规划（DP）是没有捷径的，咱们唯一能做的，就是投入时间猛猛刷题。好比学数学，只看书看视频而不做习题，是不能说学会的。<br>我能做的，是帮你节省找题的时间，并把这些题分类整理好。有着相同套路的题，一起做效率会更高，也更能领悟到 DP 的精髓。所以推荐按照专题刷。<br>题目已按照难度分排序（右侧数字为难度分）。如果遇到难度很大，题解都看不懂的题目，建议直接跳过，二刷的时候再来尝试。<br><img src=\"https://pic.leetcode.cn/1710769845-JRnIfA-dp-2.jpg\" alt=\"动态规划算法题 DP题单 动态规划题单 入门动态规划题目 动态规划新手教程 力扣DP 力扣动态规划 leetcode动态规划 leetcode dp 灵茶山艾府 灵神 灵神题单\" style=\"width: 100%;\"><br>**记忆化搜索**是新手村神器（甚至可以用到游戏后期），推荐先看 <a href=\"https://www.bilibili.com/video/BV1Xj411K7oF/\">动态规划入门：从记忆化搜索到递推</a>。<br>但记忆化搜索并不是万能的，某些题目只有写成递推，才能结合数据结构等来优化时间复杂度，多数题目还可以优化空间复杂度。所以尽量在写完记忆化搜索后，把递推的代码也写一下。熟练之后直接写递推也可以。<br>",
             "src": "",
             "original_src": "",
             "sort": 0,
@@ -352,6 +352,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "1186. 删除一次得到子数组最大和",
+                            "summary": "",
+                            "src": "/maximum-subarray-sum-with-one-deletion/",
+                            "original_src": "https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1799.4635458535,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -1142,6 +1156,20 @@ export default{
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3610. 目标和所需的最小质数个数",
+                                    "summary": "",
+                                    "src": "/minimum-number-of-primes-to-sum-to-target/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-number-of-primes-to-sum-to-target/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
                                     "last_update": ""
                                 },
                                 {
@@ -5145,7 +5173,7 @@ export default{
             "leafChild": [],
             "nonLeafChild": [
                 {
-                    "title": "§9.1 排列型 ① 相邻无关",
+                    "title": "§9.1 排列型状压 DP ① 相邻无关",
                     "summary": "学习指南：<br>暴力做法是枚举所有排列，对每个排列计算和题目有关的值，时间复杂度（通常来说）是 $\\mathcal{O}(n!)$。可以解决 $n\\le 10$ 的问题。<br>状压 DP 可以把时间复杂度（通常来说）优化至 $\\mathcal{O}(n\\cdot 2^n)$。可以解决 $n\\le 20$ 的问题。<br>一般有两种定义方式：<br>1. 定义 $f[S]$ 表示已经排列好的元素（下标）集合为 $S$ 时，和题目有关的最优值。通过枚举当前位置要填的元素（下标）来转移。<br>2. 定义 $f[S]$ 表示可以选的元素（下标）集合为 $S$ 时，和题目有关的最优值。通过枚举当前位置要填的元素（下标）来转移。<br>> 注：部分题目由于暴搜+剪枝也能过，难度分仅供参考。<br>",
                     "src": "",
                     "original_src": "",
@@ -5356,8 +5384,8 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "§9.2 排列型 ② 相邻相关",
-                    "summary": "一般定义 $f[S][i]$ 表示未选（或者已选）的集合为 $S$，且上一个填的元素（下标）为 $i$ 时，和题目有关的最优值。通过枚举当前位置要填的元素（下标）来转移。<br>时间复杂度（通常来说）是 $\\mathcal{O}(n^2\\cdot 2^n)$。<br><a href=\"https://leetcode.cn/problems/find-the-minimum-cost-array-permutation/solution/zhuang-ya-dpcong-ji-yi-hua-sou-suo-dao-d-s9t5/\">讲解：从全排列到状压 DP</a><br>",
+                    "title": "§9.2 排列型状压 DP ② 相邻相关",
+                    "summary": "一般定义 $f[S][i]$ 表示未选（或者已选）的集合为 $S$，且上一个填的元素（下标）为 $i$ 时，和题目有关的最优值。通过枚举当前位置要填的元素（下标）来转移。<br>时间复杂度（通常来说）是 $\\mathcal{O}(n^2\\cdot 2^n)$。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -5365,20 +5393,6 @@ export default{
                     "solution": "",
                     "score": 0,
                     "leafChild": [
-                        {
-                            "title": "996. 平方数组的数目",
-                            "summary": "",
-                            "src": "/number-of-squareful-arrays/",
-                            "original_src": "https://leetcode.cn/problems/number-of-squareful-arrays/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1932.3730795204,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
                         {
                             "title": "2741. 特别的排列",
                             "summary": "",
@@ -5388,6 +5402,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2020.7095306378,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "996. 平方数组的数目",
+                            "summary": "",
+                            "src": "/number-of-squareful-arrays/",
+                            "original_src": "https://leetcode.cn/problems/number-of-squareful-arrays/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1932.3730795204,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -6320,6 +6348,20 @@ export default{
                     "isLeaf": true,
                     "solution": null,
                     "score": 2450.5982290839,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "3621. 位计数深度为 K 的整数数目 I",
+                    "summary": "",
+                    "src": "/number-of-integers-with-popcount-depth-equal-to-k-i/",
+                    "original_src": "https://leetcode.cn/problems/number-of-integers-with-popcount-depth-equal-to-k-i/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
                     "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
@@ -8104,6 +8146,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3620. 恢复网络路径",
+                            "summary": "",
+                            "src": "/network-recovery-pathways/",
+                            "original_src": "https://leetcode.cn/problems/network-recovery-pathways/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "1786. 从第一个节点出发到最后一个节点的受限路径数",
                             "summary": "",
                             "src": "/number-of-restricted-paths-from-first-to-last-node/",
@@ -9829,5 +9885,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-07-14 22:57:20"
+    "last_update": "2025-07-26 22:35:02"
 } as ProblemCategory;

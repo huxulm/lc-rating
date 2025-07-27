@@ -1660,6 +1660,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "2561. 重排水果",
+                                    "summary": "",
+                                    "src": "/rearranging-fruits/",
+                                    "original_src": "https://leetcode.cn/problems/rearranging-fruits/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2221.793185714,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "179. 最大数",
                                     "summary": "",
                                     "src": "/largest-number/",
@@ -3685,7 +3699,7 @@ export default{
                         },
                         {
                             "title": "§4.5 中位数贪心",
-                            "summary": "给定数组，每次操作可以把其中一个数加一/减一，把所有数都变成一样的，最少要操作多少次？<br>把所有数都变成数组的**中位数**是最优的。<br><a href=\"https://leetcode.cn/problems/5TxKeK/solution/zhuan-huan-zhong-wei-shu-tan-xin-dui-din-7r9b/\">两种证明方法</a><br>",
+                            "summary": "给定数组 $\\textit{nums}$，每次操作可以把其中一个数加一或者减一。把 $\\textit{nums}$ 的所有数都变成一样的，最少要操作多少次？<br>把所有数都变成 $\\textit{nums}$ 的**中位数**是最优的。<br><a href=\"https://zhuanlan.zhihu.com/p/1922938031687595039\">证明</a><br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -4693,6 +4707,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3596. 最小花费路径交替方向 I",
+                                    "summary": "",
+                                    "src": "/minimum-cost-path-with-alternating-directions-i/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-cost-path-with-alternating-directions-i/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3496. 最大化配对删除后的得分",
                                     "summary": "",
                                     "src": "/maximize-score-after-pair-deletions/",
@@ -4778,6 +4806,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3607. 电网维护",
+                                    "summary": "",
+                                    "src": "/power-grid-maintenance/",
+                                    "original_src": "https://leetcode.cn/problems/power-grid-maintenance/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "554. 砖墙",
                                     "summary": "",
                                     "src": "/brick-wall/",
@@ -4800,6 +4842,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1768.9138093037,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "780. 到达终点",
+                                    "summary": "",
+                                    "src": "/reaching-points/",
+                                    "original_src": "https://leetcode.cn/problems/reaching-points/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1897.3309169423,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4848,6 +4904,34 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3307. 找出第 K 个字符 II",
+                                    "summary": "",
+                                    "src": "/find-the-k-th-character-in-string-game-ii/",
+                                    "original_src": "https://leetcode.cn/problems/find-the-k-th-character-in-string-game-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2232.067965725,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3614. 用特殊操作处理字符串 II",
+                                    "summary": "",
+                                    "src": "/process-string-with-special-operations-ii/",
+                                    "original_src": "https://leetcode.cn/problems/process-string-with-special-operations-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3419. 图的最大边权的最小值",
                                     "summary": "",
                                     "src": "/minimize-the-maximum-edge-weight-of-graph/",
@@ -4856,6 +4940,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2243.2051062979,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3609. 到达目标点的最小移动次数",
+                                    "summary": "",
+                                    "src": "/minimum-moves-to-reach-target-in-grid/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-moves-to-reach-target-in-grid/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -5120,6 +5218,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3592. 硬币面值还原",
+                            "summary": "",
+                            "src": "/inverse-coin-change/",
+                            "original_src": "https://leetcode.cn/problems/inverse-coin-change/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "969. 煎饼排序",
                             "summary": "",
                             "src": "/pancake-sorting/",
@@ -5260,6 +5372,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "1900. 最佳运动员的比拼回合",
+                            "summary": "",
+                            "src": "/the-earliest-and-latest-rounds-where-players-compete/",
+                            "original_src": "https://leetcode.cn/problems/the-earliest-and-latest-rounds-where-players-compete/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2454.7653333657,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "280. 摆动排序",
                             "summary": "",
                             "src": "/wiggle-sort/",
@@ -5367,6 +5493,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1453.1833769825,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3587. 最小相邻交换至奇偶交替",
+                            "summary": "",
+                            "src": "/minimum-adjacent-swaps-to-alternate-parity/",
+                            "original_src": "https://leetcode.cn/problems/minimum-adjacent-swaps-to-alternate-parity/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -5493,20 +5633,6 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2619.7016189999,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "3480. 删除一个冲突对后最大子数组数目",
-                            "summary": "",
-                            "src": "/maximize-subarrays-after-removing-one-conflicting-pair/",
-                            "original_src": "https://leetcode.cn/problems/maximize-subarrays-after-removing-one-conflicting-pair/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 2763.6510278508,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -5649,5 +5775,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-06-20 12:20:55"
+    "last_update": "2025-07-26 01:14:10"
 } as ProblemCategory;
