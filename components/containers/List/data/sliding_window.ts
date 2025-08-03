@@ -495,6 +495,20 @@ export default{
                             "score": 0,
                             "leafChild": [
                                 {
+                                    "title": "2200. 找出数组中的所有 K 近邻下标",
+                                    "summary": "",
+                                    "src": "/find-all-k-distant-indices-in-an-array/",
+                                    "original_src": "https://leetcode.cn/problems/find-all-k-distant-indices-in-an-array/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1266.341468955,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2269. 找到一个数字的 K 美丽值",
                                     "summary": "",
                                     "src": "/find-the-k-beauty-of-a-number/",
@@ -561,7 +575,7 @@ export default{
                 },
                 {
                     "title": "二、不定长滑动窗口",
-                    "summary": "不定长滑动窗口主要分为三类：求最长子数组，求最短子数组，以及求子数组个数。<br>> **注**：滑动窗口相当于在维护一个**队列**。右指针的移动可以视作**入队**，左指针的移动可以视作**出队**。<br>",
+                    "summary": "不定长滑动窗口主要分为三类：求最长子数组，求最短子数组，求子数组个数。<br>> **注**：滑动窗口相当于在维护一个**队列**。右指针的移动可以视作**入队**，左指针的移动可以视作**出队**。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -571,7 +585,7 @@ export default{
                     "leafChild": [],
                     "nonLeafChild": [
                         {
-                            "title": "§2.1 求最长/最大",
+                            "title": "§2.1 越短越合法/求最长/最大",
                             "summary": "",
                             "src": "",
                             "original_src": "",
@@ -1036,7 +1050,7 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "§2.2 求最短/最小",
+                            "title": "§2.2 越长越合法/求最短/最小",
                             "summary": "",
                             "src": "",
                             "original_src": "",
@@ -1146,120 +1160,7 @@ export default{
                             "leafChild": [],
                             "nonLeafChild": [
                                 {
-                                    "title": "§2.3.1 越长越合法",
-                                    "summary": "一般要写 `ans += left`。<br>内层循环结束后，$[\\textit{left},\\textit{right}]$ 这个子数组是不满足题目要求的，但在退出循环之前的最后一轮循环，$[\\textit{left}-1,\\textit{right}]$ 是满足题目要求的。由于子数组越长，越能满足题目要求，所以除了 $[\\textit{left}-1,\\textit{right}]$，还有 $[\\textit{left}-2,\\textit{right}],[\\textit{left}-3,\\textit{right}],\\ldots,[0,\\textit{right}]$ 都是满足要求的。也就是说，当右端点**固定**在 $\\textit{right}$ 时，左端点在 $0,1,2,\\ldots,\\textit{left}-1$ 的所有子数组都是满足要求的，这一共有 $\\textit{left}$ 个。<br>",
-                                    "src": "",
-                                    "original_src": "",
-                                    "sort": 0,
-                                    "isLeaf": false,
-                                    "solution": "",
-                                    "score": 0,
-                                    "leafChild": [
-                                        {
-                                            "title": "1358. 包含所有三种字符的子字符串数目",
-                                            "summary": "",
-                                            "src": "/number-of-substrings-containing-all-three-characters/",
-                                            "original_src": "https://leetcode.cn/problems/number-of-substrings-containing-all-three-characters/",
-                                            "sort": 0,
-                                            "isLeaf": true,
-                                            "solution": null,
-                                            "score": 1646.1943237127,
-                                            "leafChild": [],
-                                            "nonLeafChild": [],
-                                            "isPremium": false,
-                                            "last_update": ""
-                                        },
-                                        {
-                                            "title": "2962. 统计最大元素出现至少 K 次的子数组",
-                                            "summary": "",
-                                            "src": "/count-subarrays-where-max-element-appears-at-least-k-times/",
-                                            "original_src": "https://leetcode.cn/problems/count-subarrays-where-max-element-appears-at-least-k-times/",
-                                            "sort": 0,
-                                            "isLeaf": true,
-                                            "solution": null,
-                                            "score": 1700.8505554268,
-                                            "leafChild": [],
-                                            "nonLeafChild": [],
-                                            "isPremium": false,
-                                            "last_update": ""
-                                        },
-                                        {
-                                            "title": "3325. 字符至少出现 K 次的子字符串 I",
-                                            "summary": "",
-                                            "src": "/count-substrings-with-k-frequency-characters-i/",
-                                            "original_src": "https://leetcode.cn/problems/count-substrings-with-k-frequency-characters-i/",
-                                            "sort": 0,
-                                            "isLeaf": true,
-                                            "solution": null,
-                                            "score": 1454.5936466211,
-                                            "leafChild": [],
-                                            "nonLeafChild": [],
-                                            "isPremium": false,
-                                            "last_update": ""
-                                        },
-                                        {
-                                            "title": "2799. 统计完全子数组的数目",
-                                            "summary": "",
-                                            "src": "/count-complete-subarrays-in-an-array/",
-                                            "original_src": "https://leetcode.cn/problems/count-complete-subarrays-in-an-array/",
-                                            "sort": 0,
-                                            "isLeaf": true,
-                                            "solution": null,
-                                            "score": 1397.9519549403,
-                                            "leafChild": [],
-                                            "nonLeafChild": [],
-                                            "isPremium": false,
-                                            "last_update": ""
-                                        },
-                                        {
-                                            "title": "2537. 统计好子数组的数目",
-                                            "summary": "",
-                                            "src": "/count-the-number-of-good-subarrays/",
-                                            "original_src": "https://leetcode.cn/problems/count-the-number-of-good-subarrays/",
-                                            "sort": 0,
-                                            "isLeaf": true,
-                                            "solution": null,
-                                            "score": 1891.8455273506,
-                                            "leafChild": [],
-                                            "nonLeafChild": [],
-                                            "isPremium": false,
-                                            "last_update": ""
-                                        },
-                                        {
-                                            "title": "3298. 统计重新排列后包含另一个字符串的子字符串数目 II",
-                                            "summary": "",
-                                            "src": "/count-substrings-that-can-be-rearranged-to-contain-a-string-ii/",
-                                            "original_src": "https://leetcode.cn/problems/count-substrings-that-can-be-rearranged-to-contain-a-string-ii/",
-                                            "sort": 0,
-                                            "isLeaf": true,
-                                            "solution": null,
-                                            "score": 1909.4931160071,
-                                            "leafChild": [],
-                                            "nonLeafChild": [],
-                                            "isPremium": false,
-                                            "last_update": ""
-                                        },
-                                        {
-                                            "title": "2495. 乘积为偶数的子数组数",
-                                            "summary": "",
-                                            "src": "/number-of-subarrays-having-even-product/",
-                                            "original_src": "https://leetcode.cn/problems/number-of-subarrays-having-even-product/",
-                                            "sort": 0,
-                                            "isLeaf": true,
-                                            "solution": null,
-                                            "score": null,
-                                            "leafChild": [],
-                                            "nonLeafChild": [],
-                                            "isPremium": true,
-                                            "last_update": ""
-                                        }
-                                    ],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "§2.3.2 越短越合法",
+                                    "title": "§2.3.1 越短越合法",
                                     "summary": "一般要写 `ans += right - left + 1`。<br>内层循环结束后，$[\\textit{left},\\textit{right}]$ 这个子数组是满足题目要求的。由于子数组越短，越能满足题目要求，所以除了 $[\\textit{left},\\textit{right}]$，还有 $[\\textit{left}+1,\\textit{right}],[\\textit{left}+2,\\textit{right}],\\ldots,[\\textit{right},\\textit{right}]$ 都是满足要求的。也就是说，当右端点**固定**在 $\\textit{right}$ 时，左端点在 $\\textit{left},\\textit{left}+1,\\textit{left}+2,\\ldots,\\textit{right}$ 的所有子数组都是满足要求的，这一共有 $\\textit{right}-\\textit{left}+1$ 个。<br>**思维扩展（选做）**<br>",
                                     "src": "",
                                     "original_src": "",
@@ -1378,6 +1279,119 @@ export default{
                                             "leafChild": [],
                                             "nonLeafChild": [],
                                             "isPremium": false,
+                                            "last_update": ""
+                                        }
+                                    ],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "§2.3.2 越长越合法",
+                                    "summary": "一般要写 `ans += left`。<br>内层循环结束后，$[\\textit{left},\\textit{right}]$ 这个子数组是不满足题目要求的，但在退出循环之前的最后一轮循环，$[\\textit{left}-1,\\textit{right}]$ 是满足题目要求的。由于子数组越长，越能满足题目要求，所以除了 $[\\textit{left}-1,\\textit{right}]$，还有 $[\\textit{left}-2,\\textit{right}],[\\textit{left}-3,\\textit{right}],\\ldots,[0,\\textit{right}]$ 都是满足要求的。也就是说，当右端点**固定**在 $\\textit{right}$ 时，左端点在 $0,1,2,\\ldots,\\textit{left}-1$ 的所有子数组都是满足要求的，这一共有 $\\textit{left}$ 个。<br>",
+                                    "src": "",
+                                    "original_src": "",
+                                    "sort": 0,
+                                    "isLeaf": false,
+                                    "solution": "",
+                                    "score": 0,
+                                    "leafChild": [
+                                        {
+                                            "title": "1358. 包含所有三种字符的子字符串数目",
+                                            "summary": "",
+                                            "src": "/number-of-substrings-containing-all-three-characters/",
+                                            "original_src": "https://leetcode.cn/problems/number-of-substrings-containing-all-three-characters/",
+                                            "sort": 0,
+                                            "isLeaf": true,
+                                            "solution": null,
+                                            "score": 1646.1943237127,
+                                            "leafChild": [],
+                                            "nonLeafChild": [],
+                                            "isPremium": false,
+                                            "last_update": ""
+                                        },
+                                        {
+                                            "title": "2962. 统计最大元素出现至少 K 次的子数组",
+                                            "summary": "",
+                                            "src": "/count-subarrays-where-max-element-appears-at-least-k-times/",
+                                            "original_src": "https://leetcode.cn/problems/count-subarrays-where-max-element-appears-at-least-k-times/",
+                                            "sort": 0,
+                                            "isLeaf": true,
+                                            "solution": null,
+                                            "score": 1700.8505554268,
+                                            "leafChild": [],
+                                            "nonLeafChild": [],
+                                            "isPremium": false,
+                                            "last_update": ""
+                                        },
+                                        {
+                                            "title": "3325. 字符至少出现 K 次的子字符串 I",
+                                            "summary": "",
+                                            "src": "/count-substrings-with-k-frequency-characters-i/",
+                                            "original_src": "https://leetcode.cn/problems/count-substrings-with-k-frequency-characters-i/",
+                                            "sort": 0,
+                                            "isLeaf": true,
+                                            "solution": null,
+                                            "score": 1454.5936466211,
+                                            "leafChild": [],
+                                            "nonLeafChild": [],
+                                            "isPremium": false,
+                                            "last_update": ""
+                                        },
+                                        {
+                                            "title": "2799. 统计完全子数组的数目",
+                                            "summary": "",
+                                            "src": "/count-complete-subarrays-in-an-array/",
+                                            "original_src": "https://leetcode.cn/problems/count-complete-subarrays-in-an-array/",
+                                            "sort": 0,
+                                            "isLeaf": true,
+                                            "solution": null,
+                                            "score": 1397.9519549403,
+                                            "leafChild": [],
+                                            "nonLeafChild": [],
+                                            "isPremium": false,
+                                            "last_update": ""
+                                        },
+                                        {
+                                            "title": "2537. 统计好子数组的数目",
+                                            "summary": "",
+                                            "src": "/count-the-number-of-good-subarrays/",
+                                            "original_src": "https://leetcode.cn/problems/count-the-number-of-good-subarrays/",
+                                            "sort": 0,
+                                            "isLeaf": true,
+                                            "solution": null,
+                                            "score": 1891.8455273506,
+                                            "leafChild": [],
+                                            "nonLeafChild": [],
+                                            "isPremium": false,
+                                            "last_update": ""
+                                        },
+                                        {
+                                            "title": "3298. 统计重新排列后包含另一个字符串的子字符串数目 II",
+                                            "summary": "",
+                                            "src": "/count-substrings-that-can-be-rearranged-to-contain-a-string-ii/",
+                                            "original_src": "https://leetcode.cn/problems/count-substrings-that-can-be-rearranged-to-contain-a-string-ii/",
+                                            "sort": 0,
+                                            "isLeaf": true,
+                                            "solution": null,
+                                            "score": 1909.4931160071,
+                                            "leafChild": [],
+                                            "nonLeafChild": [],
+                                            "isPremium": false,
+                                            "last_update": ""
+                                        },
+                                        {
+                                            "title": "2495. 乘积为偶数的子数组数",
+                                            "summary": "",
+                                            "src": "/number-of-subarrays-having-even-product/",
+                                            "original_src": "https://leetcode.cn/problems/number-of-subarrays-having-even-product/",
+                                            "sort": 0,
+                                            "isLeaf": true,
+                                            "solution": null,
+                                            "score": null,
+                                            "leafChild": [],
+                                            "nonLeafChild": [],
+                                            "isPremium": true,
                                             "last_update": ""
                                         }
                                     ],
@@ -2130,6 +2144,20 @@ export default{
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3555. 排序每个滑动窗口中最小的子数组",
+                                    "summary": "",
+                                    "src": "/smallest-subarray-to-sort-in-every-sliding-window/",
+                                    "original_src": "https://leetcode.cn/problems/smallest-subarray-to-sort-in-every-sliding-window/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
                                     "last_update": ""
                                 }
                             ],
@@ -3362,6 +3390,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "413. 等差数列划分",
+                            "summary": "",
+                            "src": "/arithmetic-slices/",
+                            "original_src": "https://leetcode.cn/problems/arithmetic-slices/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "2948. 交换得到字典序最小的数组",
                             "summary": "",
                             "src": "/make-lexicographically-smallest-array-by-swapping-elements/",
@@ -3484,5 +3526,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-06-15 22:43:17"
+    "last_update": "2025-07-31 05:31:52"
 } as ProblemCategory;

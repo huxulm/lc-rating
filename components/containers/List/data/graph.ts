@@ -671,6 +671,20 @@ export default{
                     "last_update": ""
                 },
                 {
+                    "title": "444. 序列重建",
+                    "summary": "",
+                    "src": "/sequence-reconstruction/",
+                    "original_src": "https://leetcode.cn/problems/sequence-reconstruction/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": true,
+                    "last_update": ""
+                },
+                {
                     "title": "3481. 应用替换",
                     "summary": "",
                     "src": "/apply-substitutions/",
@@ -699,20 +713,6 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "444. 序列重建",
-                    "summary": "",
-                    "src": "/sequence-reconstruction/",
-                    "original_src": "https://leetcode.cn/problems/sequence-reconstruction/",
-                    "sort": 0,
-                    "isLeaf": true,
-                    "solution": null,
-                    "score": null,
-                    "leafChild": [],
-                    "nonLeafChild": [],
-                    "isPremium": true,
-                    "last_update": ""
-                },
-                {
                     "title": "1059. 从始点到终点的所有路径",
                     "summary": "",
                     "src": "/all-paths-from-source-lead-to-destination/",
@@ -721,20 +721,6 @@ export default{
                     "isLeaf": true,
                     "solution": null,
                     "score": null,
-                    "leafChild": [],
-                    "nonLeafChild": [],
-                    "isPremium": true,
-                    "last_update": ""
-                },
-                {
-                    "title": "1136. 并行课程",
-                    "summary": "",
-                    "src": "/parallel-courses/",
-                    "original_src": "https://leetcode.cn/problems/parallel-courses/",
-                    "sort": 0,
-                    "isLeaf": true,
-                    "solution": null,
-                    "score": 1710.0787625377,
                     "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": true,
@@ -788,7 +774,7 @@ export default{
                             "sort": 0,
                             "isLeaf": true,
                             "solution": null,
-                            "score": null,
+                            "score": 1998.0432529701,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -820,6 +806,20 @@ export default{
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "1136. 并行课程",
+                            "summary": "",
+                            "src": "/parallel-courses/",
+                            "original_src": "https://leetcode.cn/problems/parallel-courses/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1710.0787625377,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
                             "last_update": ""
                         }
                     ],
@@ -1089,7 +1089,7 @@ export default{
                     "sort": 0,
                     "isLeaf": true,
                     "solution": null,
-                    "score": null,
+                    "score": 1844.6347254612,
                     "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
@@ -1439,7 +1439,7 @@ export default{
                     "sort": 0,
                     "isLeaf": true,
                     "solution": null,
-                    "score": null,
+                    "score": 1954.5247525411,
                     "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
@@ -1453,7 +1453,7 @@ export default{
                     "sort": 0,
                     "isLeaf": true,
                     "solution": null,
-                    "score": null,
+                    "score": 2604.0450098035,
                     "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
@@ -1765,7 +1765,7 @@ export default{
                     "sort": 0,
                     "isLeaf": true,
                     "solution": null,
-                    "score": null,
+                    "score": 2301.0381658933,
                     "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
@@ -2526,5 +2526,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-07-22 23:31:58"
+    "last_update": "2025-07-28 00:27:59"
 } as ProblemCategory;
