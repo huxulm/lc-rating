@@ -185,20 +185,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "1652. 拆炸弹",
-                                    "summary": "",
-                                    "src": "/defuse-the-bomb/",
-                                    "original_src": "https://leetcode.cn/problems/defuse-the-bomb/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1416.8961009909,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "1176. 健身计划评估",
                                     "summary": "",
                                     "src": "/diet-plan-performance/",
@@ -306,6 +292,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1748.4522689101,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "1652. 拆炸弹",
+                                    "summary": "",
+                                    "src": "/defuse-the-bomb/",
+                                    "original_src": "https://leetcode.cn/problems/defuse-the-bomb/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1416.8961009909,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -642,6 +642,20 @@ export default{
                                             "isLeaf": true,
                                             "solution": null,
                                             "score": 1423.0355763093,
+                                            "leafChild": [],
+                                            "nonLeafChild": [],
+                                            "isPremium": false,
+                                            "last_update": ""
+                                        },
+                                        {
+                                            "title": "3634. 使数组平衡的最少移除数目",
+                                            "summary": "",
+                                            "src": "/minimum-removals-to-balance-array/",
+                                            "original_src": "https://leetcode.cn/problems/minimum-removals-to-balance-array/",
+                                            "sort": 0,
+                                            "isLeaf": true,
+                                            "solution": null,
+                                            "score": 1453.11675841,
                                             "leafChild": [],
                                             "nonLeafChild": [],
                                             "isPremium": false,
@@ -1484,20 +1498,6 @@ export default{
                             "solution": "",
                             "score": 0,
                             "leafChild": [
-                                {
-                                    "title": "1438. 绝对差不超过限制的最长连续子数组",
-                                    "summary": "",
-                                    "src": "/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/",
-                                    "original_src": "https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1672.1678031263,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
                                 {
                                     "title": "825. 适龄的朋友",
                                     "summary": "",
@@ -3432,6 +3432,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3640. 三段式数组 II",
+                            "summary": "",
+                            "src": "/trionic-array-ii/",
+                            "original_src": "https://leetcode.cn/problems/trionic-array-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2277.5664098681,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "2393. 严格递增的子数组个数",
                             "summary": "",
                             "src": "/count-strictly-increasing-subarrays/",
@@ -3526,5 +3540,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-07-31 05:31:52"
+    "last_update": "2025-08-09 02:45:42"
 } as ProblemCategory;

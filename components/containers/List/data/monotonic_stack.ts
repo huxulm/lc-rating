@@ -34,8 +34,8 @@ export default{
                     "leafChild": [],
                     "nonLeafChild": [
                         {
-                            "title": "§1.1 基础",
-                            "summary": "<a href=\"https://www.bilibili.com/video/BV1VN411J7S7/\">单调栈【基础算法精讲 26】</a><br>",
+                            "title": "right[i] 是 nums[i] 右侧最近的严格大于 nums[i] 的数的下标，若不存在则为 n",
+                            "summary": "原理讲解：<a href=\"https://www.bilibili.com/video/BV1VN411J7S7/\">单调栈【基础算法精讲 26】</a><br>模板：<br>```py [sol-Python3]<br>def nearestGreater(nums: List[int]) -> Tuple[List[int], List[int]]:<br>n = len(nums)<br>left = [-1] * n<br>st = []<br>for i, x in enumerate(nums):<br>while st and nums[st[-1]] <= x:  # 如果求严格小于，改成 >=<br>st.pop()<br>if st:<br>left[i] = st[-1]<br>st.append(i)<br>right = [n] * n<br>st = []<br>for i in range(n - 1, -1, -1):<br>x = nums[i]<br>while st and nums[st[-1]] <= x:<br>st.pop()<br>if st:<br>right[i] = st[-1]<br>st.append(i)<br>return left, right<br>```<br>```java [sol-Java]<br>class Solution {<br>private int[][] nearestGreater(int[] nums) {<br>int n = nums.length;<br>// left[i] 是 nums[i] 左侧最近的严格大于 nums[i] 的数的下标，若不存在则为 -1<br>int[] left = new int[n];<br>Deque<Integer> st = new ArrayDeque<>();<br>st.push(-1); // 哨兵<br>for (int i = 0; i < n; i++) {<br>int x = nums[i];<br>while (st.size() > 1 && nums[st.peek()] <= x) { // 如果求严格小于，改成 >=<br>st.pop();<br>}<br>left[i] = st.peek();<br>st.push(i);<br>}<br>// right[i] 是 nums[i] 右侧最近的严格大于 nums[i] 的数的下标，若不存在则为 n<br>int[] right = new int[n];<br>st.clear();<br>st.push(n); // 哨兵<br>for (int i = n - 1; i >= 0; i--) {<br>int x = nums[i];<br>while (st.size() > 1 && nums[st.peek()] <= x) {<br>st.pop();<br>}<br>right[i] = st.peek();<br>st.push(i);<br>}<br>return new int[][]{left, right};<br>}<br>}<br>```<br>```cpp [sol-C++]<br>pair<vector<int>, vector<int>> nearestGreater(vector<int>& nums) {<br>int n = nums.size();<br>// left[i] 是 nums[i] 左侧最近的严格大于 nums[i] 的数的下标，若不存在则为 -1<br>vector<int> left(n);<br>vector<int> st{-1}; // 哨兵<br>for (int i = 0; i < n; i++) {<br>int x = nums[i];<br>while (st.size() > 1 && nums[st.back()] <= x) { // 如果求严格小于，改成 >=<br>st.pop_back();<br>}<br>left[i] = st.back();<br>st.push_back(i);<br>}<br>// right[i] 是 nums[i] 右侧最近的严格大于 nums[i] 的数的下标，若不存在则为 n<br>vector<int> right(n);<br>st = {n}; // 哨兵<br>for (int i = n - 1; i >= 0; i--) {<br>int x = nums[i];<br>while (st.size() > 1 && nums[st.back()] <= x) {<br>st.pop_back();<br>}<br>right[i] = st.back();<br>st.push_back(i);<br>}<br>return {left, right};<br>}<br>```<br>```go [sol-Go]<br>func nearestGreater(nums []int) ([]int, []int) {<br>n := len(nums)<br>// left[i] 是 nums[i] 左侧最近的严格大于 nums[i] 的数的下标，若不存在则为 -1<br>left := make([]int, n)<br>st := []int{-1} // 哨兵<br>for i, x := range nums {<br>for len(st) > 1 && nums[st[len(st)-1]] <= x { // 如果求严格小于，改成 >=<br>st = st[:len(st)-1]<br>}<br>left[i] = st[len(st)-1]<br>st = append(st, i)<br>}<br>// right[i] 是 nums[i] 右侧最近的严格大于 nums[i] 的数的下标，若不存在则为 n<br>right := make([]int, n)<br>st = []int{n} // 哨兵<br>for i := n - 1; i >= 0; i-- {<br>x := nums[i]<br>for len(st) > 1 && nums[st[len(st)-1]] <= x {<br>st = st[:len(st)-1]<br>}<br>right[i] = st[len(st)-1]<br>st = append(st, i)<br>}<br>return left, right<br>}<br>```<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -151,6 +151,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1570.8347522104,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "768. 最多能完成排序的块 II",
+                                    "summary": "",
+                                    "src": "/max-chunks-to-make-sorted-ii/",
+                                    "original_src": "https://leetcode.cn/problems/max-chunks-to-make-sorted-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1787.6346864268,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -277,6 +291,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2530.6905139914,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2736. 最大和查询",
+                                    "summary": "",
+                                    "src": "/maximum-sum-queries/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-sum-queries/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2533.2830157959,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -818,5 +846,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-06-22 23:44:37"
+    "last_update": "2025-08-05 01:28:01"
 } as ProblemCategory;

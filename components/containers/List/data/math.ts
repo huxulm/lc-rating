@@ -392,6 +392,20 @@ export default{
                     "last_update": ""
                 },
                 {
+                    "title": "3629. 通过质数传送到达终点的最少跳跃次数",
+                    "summary": "",
+                    "src": "/minimum-jumps-to-reach-end-via-prime-teleportation/",
+                    "original_src": "https://leetcode.cn/problems/minimum-jumps-to-reach-end-via-prime-teleportation/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2139.3079901181,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
                     "title": "2584. 分割数组使乘积互质",
                     "summary": "",
                     "src": "/split-the-array-to-make-coprime-products/",
@@ -414,20 +428,6 @@ export default{
                     "isLeaf": true,
                     "solution": null,
                     "score": 2171.9645269732,
-                    "leafChild": [],
-                    "nonLeafChild": [],
-                    "isPremium": false,
-                    "last_update": ""
-                },
-                {
-                    "title": "3629. 通过质数传送到达终点的最少跳跃次数",
-                    "summary": "",
-                    "src": "/minimum-jumps-to-reach-end-via-prime-teleportation/",
-                    "original_src": "https://leetcode.cn/problems/minimum-jumps-to-reach-end-via-prime-teleportation/",
-                    "sort": 0,
-                    "isLeaf": true,
-                    "solution": null,
-                    "score": 2139.3079901181,
                     "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
@@ -4516,5 +4516,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-07-27 12:06:09"
+    "last_update": "2025-08-09 00:21:38"
 } as ProblemCategory;

@@ -61,6 +61,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3619. 总价值可以被 K 整除的岛屿数目",
+                            "summary": "",
+                            "src": "/count-islands-with-total-value-divisible-by-k/",
+                            "original_src": "https://leetcode.cn/problems/count-islands-with-total-value-divisible-by-k/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1461.186679202,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "面试题 16.19. 水域大小",
                             "summary": "",
                             "src": "/pond-sizes-lcci/",
@@ -806,20 +820,6 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "1036. 逃离大迷宫",
-                            "summary": "",
-                            "src": "/escape-a-large-maze/",
-                            "original_src": "https://leetcode.cn/problems/escape-a-large-maze/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 2164.8287157213,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "3568. 清理教室的最少移动",
                             "summary": "",
                             "src": "/minimum-moves-to-clean-the-classroom/",
@@ -828,6 +828,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2143.028994471,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "1036. 逃离大迷宫",
+                            "summary": "",
+                            "src": "/escape-a-large-maze/",
+                            "original_src": "https://leetcode.cn/problems/escape-a-large-maze/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2164.8287157213,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -1054,5 +1068,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-07-16 09:11:54"
+    "last_update": "2025-08-09 00:20:02"
 } as ProblemCategory;

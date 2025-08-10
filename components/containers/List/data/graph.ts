@@ -767,20 +767,6 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "3620. 恢复网络路径",
-                            "summary": "",
-                            "src": "/network-recovery-pathways/",
-                            "original_src": "https://leetcode.cn/problems/network-recovery-pathways/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1998.0432529701,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "2050. 并行课程 III",
                             "summary": "",
                             "src": "/parallel-courses-iii/",
@@ -789,6 +775,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2084.1404698713,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3620. 恢复网络路径",
+                            "summary": "",
+                            "src": "/network-recovery-pathways/",
+                            "original_src": "https://leetcode.cn/problems/network-recovery-pathways/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1998.0432529701,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -1082,20 +1082,6 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "3604. 有向图中到达终点的最少时间",
-                    "summary": "",
-                    "src": "/minimum-time-to-reach-destination-in-directed-graph/",
-                    "original_src": "https://leetcode.cn/problems/minimum-time-to-reach-destination-in-directed-graph/",
-                    "sort": 0,
-                    "isLeaf": true,
-                    "solution": null,
-                    "score": 1844.6347254612,
-                    "leafChild": [],
-                    "nonLeafChild": [],
-                    "isPremium": false,
-                    "last_update": ""
-                },
-                {
                     "title": "2642. 设计可以求最短路径的图类",
                     "summary": "",
                     "src": "/design-graph-with-shortest-path-calculator/",
@@ -1104,6 +1090,20 @@ export default{
                     "isLeaf": true,
                     "solution": null,
                     "score": 1810.6470004623,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "3604. 有向图中到达终点的最少时间",
+                    "summary": "",
+                    "src": "/minimum-time-to-reach-destination-in-directed-graph/",
+                    "original_src": "https://leetcode.cn/problems/minimum-time-to-reach-destination-in-directed-graph/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 1844.6347254612,
                     "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
@@ -2526,5 +2526,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-07-28 00:27:59"
+    "last_update": "2025-08-09 00:21:07"
 } as ProblemCategory;

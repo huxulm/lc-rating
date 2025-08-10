@@ -4784,6 +4784,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "2646. 最小化旅行的价格总和",
+                                    "summary": "",
+                                    "src": "/minimize-the-total-price-of-the-trips/",
+                                    "original_src": "https://leetcode.cn/problems/minimize-the-total-price-of-the-trips/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2238.2830745228,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2277. 树中最接近路径的节点",
                                     "summary": "",
                                     "src": "/closest-node-to-path-in-tree/",
@@ -5141,6 +5155,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3566. 等积子集的划分方案",
+                                    "summary": "",
+                                    "src": "/partition-array-into-two-equal-product-subsets/",
+                                    "original_src": "https://leetcode.cn/problems/partition-array-into-two-equal-product-subsets/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1459.1307655664,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "494. 目标和",
                                     "summary": "",
                                     "src": "/target-sum/",
@@ -5163,20 +5191,6 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1567.6884942977,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "3566. 等积子集的划分方案",
-                                    "summary": "",
-                                    "src": "/partition-array-into-two-equal-product-subsets/",
-                                    "original_src": "https://leetcode.cn/problems/partition-array-into-two-equal-product-subsets/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1459.1307655664,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -6520,5 +6534,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-07-28 00:26:55"
+    "last_update": "2025-08-09 00:25:04"
 } as ProblemCategory;

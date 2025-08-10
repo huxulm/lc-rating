@@ -282,6 +282,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3627. 中位数之和的最大值",
+                                    "summary": "",
+                                    "src": "/maximum-median-sum-of-subsequences-of-size-3/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-median-sum-of-subsequences-of-size-3/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1262.1554079997,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3462. 提取至多 K 个元素的最大总和",
                                     "summary": "",
                                     "src": "/maximum-sum-with-at-most-k-elements/",
@@ -1069,20 +1083,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "3576. 数组元素相等转换",
-                                    "summary": "",
-                                    "src": "/transform-array-to-all-equal-elements/",
-                                    "original_src": "https://leetcode.cn/problems/transform-array-to-all-equal-elements/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1489.2529299032,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "3111. 覆盖所有点的最少矩形数目",
                                     "summary": "",
                                     "src": "/minimum-rectangles-to-cover-points/",
@@ -1125,6 +1125,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "1529. 最少的后缀翻转次数",
+                                    "summary": "",
+                                    "src": "/minimum-suffix-flips/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-suffix-flips/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1392.6601629182,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2789. 合并后数组中的最大元素",
                                     "summary": "",
                                     "src": "/largest-element-in-an-array-after-merge-operations/",
@@ -1139,14 +1153,14 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "1529. 最少的后缀翻转次数",
+                                    "title": "3576. 数组元素相等转换",
                                     "summary": "",
-                                    "src": "/minimum-suffix-flips/",
-                                    "original_src": "https://leetcode.cn/problems/minimum-suffix-flips/",
+                                    "src": "/transform-array-to-all-equal-elements/",
+                                    "original_src": "https://leetcode.cn/problems/transform-array-to-all-equal-elements/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": 1392.6601629182,
+                                    "score": 1489.2529299032,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -3608,6 +3622,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "2561. 重排水果",
+                                    "summary": "",
+                                    "src": "/rearranging-fruits/",
+                                    "original_src": "https://leetcode.cn/problems/rearranging-fruits/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2221.793185714,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3547. 图中边值的最大和",
                                     "summary": "",
                                     "src": "/maximum-sum-of-edge-values-in-a-graph/",
@@ -3856,6 +3884,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2764.5966131386,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "棋盘整理",
+                                    "summary": "",
+                                    "src": null,
+                                    "original_src": "https://leetcode.cn/contest/2025_pudong_ai/problems/1Hxnb6/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4371,6 +4413,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3638. 平衡装运的最大数量",
+                                    "summary": "",
+                                    "src": "/maximum-balanced-shipments/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-balanced-shipments/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1463.2825992167,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2419. 按位与最大的最长子数组",
                                     "summary": "",
                                     "src": "/longest-subarray-with-maximum-bitwise-and/",
@@ -4553,20 +4609,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "3577. 统计计算机解锁顺序排列数",
-                                    "summary": "",
-                                    "src": "/count-the-number-of-computer-unlocking-permutations/",
-                                    "original_src": "https://leetcode.cn/problems/count-the-number-of-computer-unlocking-permutations/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1749.7304862181,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "1145. 二叉树着色游戏",
                                     "summary": "",
                                     "src": "/binary-tree-coloring-game/",
@@ -4589,6 +4631,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1748.1523771585,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3577. 统计计算机解锁顺序排列数",
+                                    "summary": "",
+                                    "src": "/count-the-number-of-computer-unlocking-permutations/",
+                                    "original_src": "https://leetcode.cn/problems/count-the-number-of-computer-unlocking-permutations/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1749.7304862181,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4792,6 +4848,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "869. 重新排序得到 2 的幂",
+                                    "summary": "",
+                                    "src": "/reordered-power-of-2/",
+                                    "original_src": "https://leetcode.cn/problems/reordered-power-of-2/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1504.8237159326,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1558. 得到目标数组的最少函数调用次数",
                                     "summary": "",
                                     "src": "/minimum-numbers-of-function-calls-to-make-target-array/",
@@ -4806,20 +4876,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "3607. 电网维护",
-                                    "summary": "",
-                                    "src": "/power-grid-maintenance/",
-                                    "original_src": "https://leetcode.cn/problems/power-grid-maintenance/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1699.6848167364,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "554. 砖墙",
                                     "summary": "",
                                     "src": "/brick-wall/",
@@ -4828,20 +4884,6 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": null,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "2718. 查询后矩阵的和",
-                                    "summary": "",
-                                    "src": "/sum-of-matrix-after-queries/",
-                                    "original_src": "https://leetcode.cn/problems/sum-of-matrix-after-queries/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1768.9138093037,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4979,7 +5021,64 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "§5.4 等价转换",
+                            "title": "§5.4 时光倒流",
+                            "summary": "",
+                            "src": "",
+                            "original_src": "",
+                            "sort": 0,
+                            "isLeaf": false,
+                            "solution": "",
+                            "score": 0,
+                            "leafChild": [
+                                {
+                                    "title": "3607. 电网维护",
+                                    "summary": "",
+                                    "src": "/power-grid-maintenance/",
+                                    "original_src": "https://leetcode.cn/problems/power-grid-maintenance/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1699.6848167364,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2718. 查询后矩阵的和",
+                                    "summary": "",
+                                    "src": "/sum-of-matrix-after-queries/",
+                                    "original_src": "https://leetcode.cn/problems/sum-of-matrix-after-queries/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1768.9138093037,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3639. 变为活跃状态的最小时间",
+                                    "summary": "",
+                                    "src": "/minimum-time-to-activate-string/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-time-to-activate-string/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1853.2804713723,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                }
+                            ],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "§5.5 等价转换",
                             "summary": "",
                             "src": "",
                             "original_src": "",
@@ -5583,6 +5682,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3635. 最早完成陆地和水上游乐设施的时间 II",
+                            "summary": "",
+                            "src": "/earliest-finish-time-for-land-and-water-rides-ii/",
+                            "original_src": "https://leetcode.cn/problems/earliest-finish-time-for-land-and-water-rides-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1869.6387617474,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "3002. 移除后集合的最多元素数",
                             "summary": "",
                             "src": "/maximum-size-of-a-set-after-removals/",
@@ -5775,5 +5888,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-07-26 01:14:10"
+    "last_update": "2025-08-09 22:55:33"
 } as ProblemCategory;

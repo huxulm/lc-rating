@@ -569,20 +569,6 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "3579. 字符串转换需要的最小操作数",
-                            "summary": "",
-                            "src": "/minimum-steps-to-convert-string-with-operations/",
-                            "original_src": "https://leetcode.cn/problems/minimum-steps-to-convert-string-with-operations/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 2492.7039894164,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "3615. 图中的最长回文路径",
                             "summary": "",
                             "src": "/longest-palindromic-path-in-graph/",
@@ -591,6 +577,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2463.3702712563,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3579. 字符串转换需要的最小操作数",
+                            "summary": "",
+                            "src": "/minimum-steps-to-convert-string-with-operations/",
+                            "original_src": "https://leetcode.cn/problems/minimum-steps-to-convert-string-with-operations/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2492.7039894164,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -1369,5 +1369,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-07-13 12:50:01"
+    "last_update": "2025-08-09 00:25:34"
 } as ProblemCategory;

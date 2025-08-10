@@ -305,7 +305,7 @@ export default{
                 },
                 {
                     "title": "二、异或（XOR）的性质",
-                    "summary": "另见 <a href=\"/lc-rating/list/data_structure\">数据结构题单</a> 中的「0-1 字典树（异或字典树）」。<br>",
+                    "summary": "另见 <a href=\"/lc-rating/list/data_structure\">数据结构题单</a> 中的「**§6.4 0-1 字典树（异或字典树）**」。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -1735,5 +1735,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-07-29 05:46:46"
+    "last_update": "2025-08-09 00:20:29"
 } as ProblemCategory;
