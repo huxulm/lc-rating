@@ -25,7 +25,10 @@ const ProblemList = React.memo(({ problems }: ProblemListProps) => {
             <Separator />
             <div className="flex flex-row items-center text-pretty justify-between rounded p-1 m-1 dark:bg-gray-800">
               <Link
-                href={`${LC_HOST}/problems/${problem.slug}`}
+                href={`${LC_HOST}/problems/${problem.slug.replace(
+                  /(^\/)|(\/$)/g,
+                  ""
+                )}`}
                 target="_blank"
                 className="hover:underline"
               >

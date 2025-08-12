@@ -112,12 +112,9 @@ function ProblemSet() {
 
   const [similarties, setSimilarties] = useState<number[] | undefined>();
 
-  const handleSearch = useCallback(
-    (similarties: number[]) => {
-      setSimilarties(similarties);
-    },
-    []
-  );
+  const handleSearch = useCallback((similarties: number[]) => {
+    setSimilarties(similarties);
+  }, []);
 
   const searchedData = useMemo(() => {
     if (similarties === undefined) {
