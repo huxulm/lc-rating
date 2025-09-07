@@ -917,6 +917,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3652. 按策略买卖股票的最佳时机",
+                                    "summary": "",
+                                    "src": "/best-time-to-buy-and-sell-stock-using-strategy/",
+                                    "original_src": "https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-using-strategy/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1556.7777620299,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2389. 和有限的最长子序列",
                                     "summary": "",
                                     "src": "/longest-subsequence-with-limited-sum/",
@@ -2374,6 +2388,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2423.8553548566,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3655. 区间乘法查询后的异或 II",
+                                    "summary": "",
+                                    "src": "/xor-after-range-multiplication-queries-ii/",
+                                    "original_src": "https://leetcode.cn/problems/xor-after-range-multiplication-queries-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2453.8851399002,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -3968,7 +3996,7 @@ export default{
                     "nonLeafChild": [
                         {
                             "title": "§5.1 基础",
-                            "summary": "",
+                            "summary": "<a href=\"https://leetcode.cn/problems/take-gifts-from-the-richest-pile/solutions/2501655/yuan-di-dui-hua-o1-kong-jian-fu-ti-dan-p-fzdh/\">为什么堆化的时间复杂度是 O(n)？</a><br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -4333,7 +4361,7 @@ export default{
                         },
                         {
                             "title": "§5.2 进阶",
-                            "summary": "",
+                            "summary": "**有序集合**：<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -4745,6 +4773,34 @@ export default{
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "1348. 推文计数",
+                                    "summary": "",
+                                    "src": "/tweet-counts-per-frequency/",
+                                    "original_src": "https://leetcode.cn/problems/tweet-counts-per-frequency/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2036.7206020719,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "855. 考场就座",
+                                    "summary": "",
+                                    "src": "/exam-room/",
+                                    "original_src": "https://leetcode.cn/problems/exam-room/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2067.0643721733,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
                                     "last_update": ""
                                 }
                             ],
@@ -8019,7 +8075,7 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "十、莫队算法",
+                    "title": "十、根号算法",
                     "summary": "",
                     "src": "",
                     "original_src": "",
@@ -8027,37 +8083,95 @@ export default{
                     "isLeaf": false,
                     "solution": "",
                     "score": 0,
-                    "leafChild": [
+                    "leafChild": [],
+                    "nonLeafChild": [
                         {
-                            "title": "3636. 查询超过阈值频率最高元素",
+                            "title": "§8.1 根号分解（Sqrt Decomposition）",
                             "summary": "",
-                            "src": "/threshold-majority-queries/",
-                            "original_src": "https://leetcode.cn/problems/threshold-majority-queries/",
+                            "src": "",
+                            "original_src": "",
                             "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 2451.042823679,
-                            "leafChild": [],
+                            "isLeaf": false,
+                            "solution": "",
+                            "score": 0,
+                            "leafChild": [
+                                {
+                                    "title": "3655. 区间乘法查询后的异或 II",
+                                    "summary": "",
+                                    "src": "/xor-after-range-multiplication-queries-ii/",
+                                    "original_src": "https://leetcode.cn/problems/xor-after-range-multiplication-queries-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2453.8851399002,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "LCP 16. 游乐园的游览计划",
+                                    "summary": "",
+                                    "src": "/you-le-yuan-de-you-lan-ji-hua/",
+                                    "original_src": "https://leetcode.cn/problems/you-le-yuan-de-you-lan-ji-hua/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                }
+                            ],
                             "nonLeafChild": [],
                             "isPremium": false,
                             "last_update": ""
                         },
                         {
-                            "title": "3590. 第 K 小的路径异或和",
-                            "summary": "",
-                            "src": "/kth-smallest-path-xor-sum/",
-                            "original_src": "https://leetcode.cn/problems/kth-smallest-path-xor-sum/",
+                            "title": "§8.2 莫队算法",
+                            "summary": "属于离线算法的一种。<br>",
+                            "src": "",
+                            "original_src": "",
                             "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 2645.836955523,
-                            "leafChild": [],
+                            "isLeaf": false,
+                            "solution": "",
+                            "score": 0,
+                            "leafChild": [
+                                {
+                                    "title": "3636. 查询超过阈值频率最高元素",
+                                    "summary": "",
+                                    "src": "/threshold-majority-queries/",
+                                    "original_src": "https://leetcode.cn/problems/threshold-majority-queries/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2451.042823679,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3590. 第 K 小的路径异或和",
+                                    "summary": "",
+                                    "src": "/kth-smallest-path-xor-sum/",
+                                    "original_src": "https://leetcode.cn/problems/kth-smallest-path-xor-sum/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2645.836955523,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                }
+                            ],
                             "nonLeafChild": [],
                             "isPremium": false,
                             "last_update": ""
                         }
                     ],
-                    "nonLeafChild": [],
                     "isPremium": false,
                     "last_update": ""
                 },
@@ -8278,5 +8392,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-08-06 02:46:37"
+    "last_update": "2025-08-22 00:29:44"
 } as ProblemCategory;

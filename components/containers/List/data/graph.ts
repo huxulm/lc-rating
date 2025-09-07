@@ -1031,7 +1031,7 @@ export default{
         },
         {
             "title": "相同节点可能有多个不同的 new_dis_y，除了最小的 new_dis_y，其余值都会触发上面的 continue",
-            "summary": "def shortestPathDijkstra(n: int, edges: List[List[int]], start: int) -> List[int]:<br>g = [[] for _ in range(n)]  # 邻接表<br>for x, y, wt in edges:<br>g[x].append((y, wt))<br>dis = [inf] * n<br>dis[start] = 0  # 起点到自己的距离是 0<br>h = [(0, start)]  # 堆中保存 (起点到节点 x 的最短路长度，节点 x)<br>while h:<br>dis_x, x = heappop(h)<br>if dis_x > dis[x]:  # x 之前出堆过<br>continue<br>for y, wt in g[x]:<br>new_dis_y = dis_x + wt<br>if new_dis_y < dis[y]:<br>dis[y] = new_dis_y  # 更新 x 的邻居的最短路<br>heappush(h, (new_dis_y, y))<br>return dis<br>```<br>```java [sol-Java]<br>class Solution {<br>// 返回从起点 start 到每个点的最短路长度 dis，如果节点 x 不可达，则 dis[x] = Integer.MAX_VALUE<br>// 要求：没有负数边权<br>// 时间复杂度 O(n + mlogm)，注意堆中有 O(m) 个元素<br>private int[] shortestPathDijkstra(int n, int[][] edges, int start) {<br>// 注：如果节点编号从 1 开始（而不是从 0 开始），可以把 n 加一<br>List<int[]>[] g = new ArrayList[n]; // 邻接表<br>Arrays.setAll(g, _ -> new ArrayList<>());<br>for (int[] e : edges) {<br>int x = e[0];<br>int y = e[1];<br>int wt = e[2];<br>g[x].add(new int[]{y, wt});<br>// g[y].add(new int[]{x, wt}); // 无向图加上这行<br>}<br>int[] dis = new int[n]; // **如果数据范围大，改成 long[]**<br>Arrays.fill(dis, Integer.MAX_VALUE);<br>// 堆中保存 (起点到节点 x 的最短路长度，节点 x)<br>PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));<br>dis[start] = 0; // 起点到自己的距离是 0<br>pq.offer(new int[]{0, start});<br>while (!pq.isEmpty()) {<br>int[] p = pq.poll();<br>int disX = p[0];<br>int x = p[1];<br>if (disX > dis[x]) { // x 之前出堆过<br>continue;<br>}<br>for (int[] e : g[x]) {<br>int y = e[0];<br>int wt = e[1];<br>int newDisY = disX + wt;<br>if (newDisY < dis[y]) {<br>dis[y] = newDisY; // 更新 x 的邻居的最短路<br>// 懒更新堆：只插入数据，不更新堆中数据<br>// 相同节点可能有多个不同的 newDisY，除了最小的 newDisY，其余值都会触发上面的 continue<br>pq.offer(new int[]{newDisY, y});<br>}<br>}<br>}<br>return dis;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>// 返回从起点 start 到每个点的最短路长度 dis，如果节点 x 不可达，则 dis[x] = LLONG_MAX<br>// 要求：没有负数边权<br>// 时间复杂度 O(n + mlogm)，注意堆中有 O(m) 个元素<br>vector<long long> shortestPathDijkstra(int n, vector<vector<int>>& edges, int start) {<br>// 注：如果节点编号从 1 开始（而不是从 0 开始），可以把 n 加一<br>vector<vector<pair<int, int>>> g(n); // 邻接表<br>for (auto& e : edges) {<br>int x = e[0], y = e[1], wt = e[2];<br>g[x].emplace_back(y, wt);<br>// g[y].emplace_back(x, wt); // 无向图加上这行<br>}<br>vector<long long> dis(n, LLONG_MAX);<br>// 堆中保存 (起点到节点 x 的最短路长度，节点 x)<br>priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<>> pq;<br>dis[start] = 0; // 起点到自己的距离是 0<br>pq.emplace(0, start);<br>while (!pq.empty()) {<br>auto [dis_x, x] = pq.top();<br>pq.pop();<br>if (dis_x > dis[x]) { // x 之前出堆过<br>continue;<br>}<br>for (auto& [y, wt] : g[x]) {<br>auto new_dis_y = dis_x + wt;<br>if (new_dis_y < dis[y]) {<br>dis[y] = new_dis_y; // 更新 x 的邻居的最短路<br>// 懒更新堆：只插入数据，不更新堆中数据<br>// 相同节点可能有多个不同的 new_dis_y，除了最小的 new_dis_y，其余值都会触发上面的 continue<br>pq.emplace(new_dis_y, y);<br>}<br>}<br>}<br>return dis;<br>}<br>```<br>```go [sol-Go]<br>// 返回从起点 start 到每个点的最短路长度 dis，如果节点 x 不可达，则 dis[x] = math.MaxInt<br>// 要求：没有负数边权<br>// 时间复杂度 O(n + mlogm)，注意堆中有 O(m) 个元素<br>func shortestPathDijkstra(n int, edges [][]int, start int) []int {<br>// 注：如果节点编号从 1 开始（而不是从 0 开始），可以把 n 加一<br>type edge struct{ to, wt int }<br>g := make([][]edge, n) // 邻接表<br>for _, e := range edges {<br>x, y, wt := e[0], e[1], e[2]<br>g[x] = append(g[x], edge{y, wt})<br>// g[y] = append(g[y], edge{x, wt}) // 无向图加上这行<br>}<br>dis := make([]int, n)<br>for i := range dis {<br>dis[i] = math.MaxInt<br>}<br>dis[start] = 0 // 起点到自己的距离是 0<br>// 堆中保存 (起点到节点 x 的最短路长度，节点 x)<br>h := &hp{{0, start}}<br>for h.Len() > 0 {<br>p := heap.Pop(h).(pair)<br>disX, x := p.dis, p.x<br>if disX > dis[x] { // x 之前出堆过<br>continue<br>}<br>for _, e := range g[x] {<br>y := e.to<br>newDisY := disX + e.wt<br>if newDisY < dis[y] {<br>dis[y] = newDisY // 更新 x 的邻居的最短路<br>// 懒更新堆：只插入数据，不更新堆中数据<br>// 相同节点可能有多个不同的 newDisY，除了最小的 newDisY，其余值都会触发上面的 continue<br>heap.Push(h, pair{newDisY, y})<br>}<br>}<br>}<br>return dis<br>}<br>type pair struct{ dis, x int }<br>type hp []pair<br>func (h hp) Len() int           { return len(h) }<br>func (h hp) Less(i, j int) bool { return h[i].dis < h[j].dis }<br>func (h hp) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }<br>func (h *hp) Push(v any)        { *h = append(*h, v.(pair)) }<br>func (h *hp) Pop() (v any)      { a := *h; *h, v = a[:len(a)-1], a[len(a)-1]; return }<br>```<br>**分层图最短路**：<br>",
+            "summary": "def shortestPathDijkstra(n: int, edges: List[List[int]], start: int) -> List[int]:<br>g = [[] for _ in range(n)]  # 邻接表<br>for x, y, wt in edges:<br>g[x].append((y, wt))<br>dis = [inf] * n<br>dis[start] = 0  # 起点到自己的距离是 0<br>h = [(0, start)]  # 堆中保存 (起点到节点 x 的最短路长度，节点 x)<br>while h:<br>dis_x, x = heappop(h)<br>if dis_x > dis[x]:  # x 之前出堆过<br>continue<br>for y, wt in g[x]:<br>new_dis_y = dis_x + wt<br>if new_dis_y < dis[y]:<br>dis[y] = new_dis_y  # 更新 x 的邻居的最短路<br>heappush(h, (new_dis_y, y))<br>return dis<br>```<br>```java [sol-Java]<br>class Solution {<br>// 返回从起点 start 到每个点的最短路长度 dis，如果节点 x 不可达，则 dis[x] = Integer.MAX_VALUE<br>// 要求：没有负数边权<br>// 时间复杂度 O(n + mlogm)，注意堆中有 O(m) 个元素<br>private int[] shortestPathDijkstra(int n, int[][] edges, int start) {<br>// 注：如果节点编号从 1 开始（而不是从 0 开始），可以把 n 加一<br>List<int[]>[] g = new ArrayList[n]; // 邻接表<br>Arrays.setAll(g, _ -> new ArrayList<>());<br>for (int[] e : edges) {<br>int x = e[0];<br>int y = e[1];<br>int wt = e[2];<br>g[x].add(new int[]{y, wt});<br>// g[y].add(new int[]{x, wt}); // 无向图加上这行<br>}<br>int[] dis = new int[n]; // **如果数据范围大，改成 long[]**<br>Arrays.fill(dis, Integer.MAX_VALUE);<br>// 堆中保存 (起点到节点 x 的最短路长度，节点 x)<br>PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));<br>dis[start] = 0; // 起点到自己的距离是 0<br>pq.offer(new int[]{0, start});<br>while (!pq.isEmpty()) {<br>int[] p = pq.poll();<br>int disX = p[0];<br>int x = p[1];<br>if (disX > dis[x]) { // x 之前出堆过<br>continue;<br>}<br>for (int[] e : g[x]) {<br>int y = e[0];<br>int wt = e[1];<br>int newDisY = disX + wt;<br>if (newDisY < dis[y]) {<br>dis[y] = newDisY; // 更新 x 的邻居的最短路<br>// 懒更新堆：只插入数据，不更新堆中数据<br>// 相同节点可能有多个不同的 newDisY，除了最小的 newDisY，其余值都会触发上面的 continue<br>pq.offer(new int[]{newDisY, y});<br>}<br>}<br>}<br>return dis;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>// 返回从起点 start 到每个点的最短路长度 dis，如果节点 x 不可达，则 dis[x] = LLONG_MAX<br>// 要求：没有负数边权<br>// 时间复杂度 O(n + mlogm)，注意堆中有 O(m) 个元素<br>vector<long long> shortestPathDijkstra(int n, vector<vector<int>>& edges, int start) {<br>// 注：如果节点编号从 1 开始（而不是从 0 开始），可以把 n 加一<br>vector<vector<pair<int, int>>> g(n); // 邻接表<br>for (auto& e : edges) {<br>int x = e[0], y = e[1], wt = e[2];<br>g[x].emplace_back(y, wt);<br>// g[y].emplace_back(x, wt); // 无向图加上这行<br>}<br>vector<long long> dis(n, LLONG_MAX);<br>// 堆中保存 (起点到节点 x 的最短路长度，节点 x)<br>priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<>> pq;<br>dis[start] = 0; // 起点到自己的距离是 0<br>pq.emplace(0, start);<br>while (!pq.empty()) {<br>auto [dis_x, x] = pq.top();<br>pq.pop();<br>if (dis_x > dis[x]) { // x 之前出堆过<br>continue;<br>}<br>for (auto& [y, wt] : g[x]) {<br>auto new_dis_y = dis_x + wt;<br>if (new_dis_y < dis[y]) {<br>dis[y] = new_dis_y; // 更新 x 的邻居的最短路<br>// 懒更新堆：只插入数据，不更新堆中数据<br>// 相同节点可能有多个不同的 new_dis_y，除了最小的 new_dis_y，其余值都会触发上面的 continue<br>pq.emplace(new_dis_y, y);<br>}<br>}<br>}<br>return dis;<br>}<br>```<br>```go [sol-Go]<br>// 返回从起点 start 到每个点的最短路长度 dis，如果节点 x 不可达，则 dis[x] = math.MaxInt<br>// 要求：没有负数边权<br>// 时间复杂度 O(n + mlogm)，注意堆中有 O(m) 个元素<br>func shortestPathDijkstra(n int, edges [][]int, start int) []int {<br>// 注：如果节点编号从 1 开始（而不是从 0 开始），可以把 n 加一<br>type edge struct{ to, wt int }<br>g := make([][]edge, n) // 邻接表<br>for _, e := range edges {<br>x, y, wt := e[0], e[1], e[2]<br>g[x] = append(g[x], edge{y, wt})<br>// g[y] = append(g[y], edge{x, wt}) // 无向图加上这行<br>}<br>dis := make([]int, n)<br>for i := range dis {<br>dis[i] = math.MaxInt<br>}<br>dis[start] = 0 // 起点到自己的距离是 0<br>// 堆中保存 (起点到节点 x 的最短路长度，节点 x)<br>h := &hp{{0, start}}<br>for h.Len() > 0 {<br>p := heap.Pop(h).(pair)<br>disX, x := p.dis, p.x<br>if disX > dis[x] { // x 之前出堆过<br>continue<br>}<br>for _, e := range g[x] {<br>y := e.to<br>newDisY := disX + e.wt<br>if newDisY < dis[y] {<br>dis[y] = newDisY // 更新 x 的邻居的最短路<br>// 懒更新堆：只插入数据，不更新堆中数据<br>// 相同节点可能有多个不同的 newDisY，除了最小的 newDisY，其余值都会触发上面的 continue<br>heap.Push(h, pair{newDisY, y})<br>}<br>}<br>}<br>return dis<br>}<br>type pair struct{ dis, x int }<br>type hp []pair<br>func (h hp) Len() int           { return len(h) }<br>func (h hp) Less(i, j int) bool { return h[i].dis < h[j].dis }<br>func (h hp) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }<br>func (h *hp) Push(v any)        { *h = append(*h, v.(pair)) }<br>func (h *hp) Pop() (v any)      { a := *h; *h, v = a[:len(a)-1], a[len(a)-1]; return }<br>```<br>**分层图最短路**：<br>**SPFA 与差分约束**：<br>> 力扣上的 SPFA 题很少。<br>",
             "src": "",
             "original_src": "",
             "sort": 0,
@@ -1118,6 +1118,20 @@ export default{
                     "isLeaf": true,
                     "solution": null,
                     "score": 1846.4077077642,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "3650. 边反转的最小路径总成本",
+                    "summary": "",
+                    "src": "/minimum-cost-path-with-edge-reversals/",
+                    "original_src": "https://leetcode.cn/problems/minimum-cost-path-with-edge-reversals/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 1853.6535583817,
                     "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
@@ -1471,6 +1485,20 @@ export default{
                     "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": true,
+                    "last_update": ""
+                },
+                {
+                    "title": "2589. 完成所有任务的最少时间",
+                    "summary": "",
+                    "src": "/minimum-time-to-complete-all-tasks/",
+                    "original_src": "https://leetcode.cn/problems/minimum-time-to-complete-all-tasks/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2380.5983169295,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
                     "last_update": ""
                 }
             ],
@@ -2390,6 +2418,34 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3666. 使二进制字符串全为 1 的最少操作次数",
+                            "summary": "",
+                            "src": "/minimum-operations-to-equalize-binary-string/",
+                            "original_src": "https://leetcode.cn/problems/minimum-operations-to-equalize-binary-string/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2476.6133828534,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "2612. 最少翻转操作数",
+                            "summary": "",
+                            "src": "/minimum-reverse-operations/",
+                            "original_src": "https://leetcode.cn/problems/minimum-reverse-operations/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2824.4551372454,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "3435. 最短公共超序列的字母出现频率",
                             "summary": "",
                             "src": "/frequencies-of-shortest-supersequences/",
@@ -2486,6 +2542,20 @@ export default{
                             "nonLeafChild": [],
                             "isPremium": true,
                             "last_update": ""
+                        },
+                        {
+                            "title": "3656. 判断是否存在简单图",
+                            "summary": "",
+                            "src": "/determine-if-a-simple-graph-exists/",
+                            "original_src": "https://leetcode.cn/problems/determine-if-a-simple-graph-exists/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         }
                     ],
                     "nonLeafChild": [],
@@ -2526,5 +2596,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-08-09 00:21:07"
+    "last_update": "2025-09-06 00:59:11"
 } as ProblemCategory;

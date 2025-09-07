@@ -270,6 +270,20 @@ export default{
                             "score": 0,
                             "leafChild": [
                                 {
+                                    "title": "3652. 按策略买卖股票的最佳时机",
+                                    "summary": "",
+                                    "src": "/best-time-to-buy-and-sell-stock-using-strategy/",
+                                    "original_src": "https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-using-strategy/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1556.7777620299,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3439. 重新安排会议得到最多空余时间 I",
                                     "summary": "",
                                     "src": "/reschedule-meetings-for-maximum-free-time-i/",
@@ -757,6 +771,20 @@ export default{
                                             "leafChild": [],
                                             "nonLeafChild": [],
                                             "isPremium": false,
+                                            "last_update": ""
+                                        },
+                                        {
+                                            "title": "3641. 最长半重复子数组",
+                                            "summary": "",
+                                            "src": "/longest-semi-repeating-subarray/",
+                                            "original_src": "https://leetcode.cn/problems/longest-semi-repeating-subarray/",
+                                            "sort": 0,
+                                            "isLeaf": true,
+                                            "solution": null,
+                                            "score": null,
+                                            "leafChild": [],
+                                            "nonLeafChild": [],
+                                            "isPremium": true,
                                             "last_update": ""
                                         }
                                     ],
@@ -1415,7 +1443,7 @@ export default{
                                 },
                                 {
                                     "title": "§2.3.3 恰好型滑动窗口",
-                                    "summary": "例如，要计算有多少个元素和**恰好等于** $k$ 的子数组，可以把问题变成：<br>- 计算有多少个元素和 $\\ge k$ 的子数组。<br>- 计算有多少个元素和 $> k$，也就是 $\\ge k + 1$ 的子数组。<br>答案就是元素和 $\\ge k$ 的子数组个数，减去元素和 $\\ge k + 1$ 的子数组个数。这里把 $>$ 转换成 $\\ge$，从而可以把滑窗逻辑封装成一个函数 `f`，然后用 `f(k) - f(k + 1)` 计算，无需编写两份滑窗代码。<br>**总结**：「恰好」可以拆分成两个「至少」，也就是两个「越长越合法」的滑窗问题。<br>**注**：也可以把问题变成 $\\le k$ 减去 $\\le k-1$（两个至多）。可根据题目选择合适的变形方式。<br>**注**：也可以把两个滑动窗口合并起来，维护同一个右端点 $\\textit{right}$ 和两个左端点 $\\textit{left}_1$ 和 $\\textit{left}_2$，我把这种写法叫做**三指针滑动窗口**。<br>",
+                                    "summary": "例如，要计算有多少个元素和**恰好等于** $k$ 的子数组，可以把问题变成：<br>- 计算有多少个元素和 $\\ge k$ 的子数组。<br>- 计算有多少个元素和 $> k$，也就是 $\\ge k + 1$ 的子数组。<br>答案就是元素和 $\\ge k$ 的子数组个数，减去元素和 $\\ge k + 1$ 的子数组个数。这里把 $>$ 转换成 $\\ge$，从而可以把滑窗逻辑封装成一个函数 $\\texttt{solve}$，然后用 $\\texttt{solve}(k) - \\texttt{solve}(k+1)$ 计算，无需编写两份滑窗代码。<br>**总结**：「恰好」可以拆分成两个「至少」，也就是两个「越长越合法」的滑窗问题。<br>**注**：也可以把问题变成 $\\le k$ 减去 $\\le k-1$，即两个「至多」。可根据题目选择合适的变形方式。<br>**注**：也可以把两个滑动窗口合并起来，维护同一个右端点 $\\textit{right}$ 和两个左端点 $\\textit{left}_1$ 和 $\\textit{left}_2$，我把这种写法叫做**三指针滑动窗口**。<br>",
                                     "src": "",
                                     "original_src": "",
                                     "sort": 0,
@@ -1650,6 +1678,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3643. 垂直翻转子矩阵",
+                                    "summary": "",
+                                    "src": "/flip-square-submatrix-vertically/",
+                                    "original_src": "https://leetcode.cn/problems/flip-square-submatrix-vertically/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1234.9818183966,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -2057,6 +2099,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3649. 完美对的数目",
+                                    "summary": "",
+                                    "src": "/number-of-perfect-pairs/",
+                                    "original_src": "https://leetcode.cn/problems/number-of-perfect-pairs/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1715.6363607628,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -2904,7 +2960,7 @@ export default{
                 },
                 {
                     "title": "五、三指针",
-                    "summary": "**注**：部分题目已整理到「§2.3.3 恰好型滑动窗口」中。<br>**思维扩展**：<br>",
+                    "summary": "**思维扩展**：<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -3076,6 +3132,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1244.425108458,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "2348. 全 0 子数组的数目",
+                            "summary": "",
+                            "src": "/number-of-zero-filled-subarrays/",
+                            "original_src": "https://leetcode.cn/problems/number-of-zero-filled-subarrays/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1315.8569286597,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -3540,5 +3610,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-08-09 02:45:42"
+    "last_update": "2025-08-22 00:28:36"
 } as ProblemCategory;

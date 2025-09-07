@@ -13,7 +13,7 @@ export default{
     "nonLeafChild": [
         {
             "title": "介绍",
-            "summary": "<img src=\"https://pic.leetcode.cn/1711713491-SoiQWc-t2.png\" alt=\"二分题单 二分查找 二分算法 二分入门 二分题目 力扣二分 leetcode 二分\" style=\"width: 100%;\"><br>> 图：闭区间二分循环结束时的左右指针位置（查找第一个 $8$）<br>题目已按照难度分排序，右侧数字为难度分。<br>",
+            "summary": "<img src=\"https://pic.leetcode.cn/1711713491-SoiQWc-t2.png\" alt=\"二分题单 二分查找 二分算法 二分入门 二分题目 力扣二分 leetcode 二分\" style=\"width: 100%;\"><br>> 图：闭区间二分循环结束时的左右指针位置（查找第一个 $8$）<br>**刷题建议**：初次刷题可以只刷难度低于 $1700$ 分的题目。难度更高的题目常常结合其他算法（数据结构、图论等），等学会其他算法再来刷本题单。<br>",
             "src": "",
             "original_src": "",
             "sort": 0,
@@ -1972,5 +1972,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-08-09 00:19:23"
+    "last_update": "2025-08-15 23:47:07"
 } as ProblemCategory;

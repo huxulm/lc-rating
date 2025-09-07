@@ -5169,20 +5169,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "494. 目标和",
-                                    "summary": "",
-                                    "src": "/target-sum/",
-                                    "original_src": "https://leetcode.cn/problems/target-sum/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": null,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "2044. 统计按位或能得到最大值的子集数目",
                                     "summary": "",
                                     "src": "/count-number-of-maximum-bitwise-or-subsets/",
@@ -5746,6 +5732,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "37. 解数独",
+                                    "summary": "",
+                                    "src": "/sudoku-solver/",
+                                    "original_src": "https://leetcode.cn/problems/sudoku-solver/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3437. 全排列 III",
                                     "summary": "",
                                     "src": "/permutations-iii/",
@@ -5853,6 +5853,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1740.5014205942,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3646. 下一个特殊回文数",
+                                    "summary": "",
+                                    "src": "/next-special-palindrome-number/",
+                                    "original_src": "https://leetcode.cn/problems/next-special-palindrome-number/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2445.0201515301,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -6032,20 +6046,6 @@ export default{
                                     "summary": "",
                                     "src": "/word-search-ii/",
                                     "original_src": "https://leetcode.cn/problems/word-search-ii/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": null,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "37. 解数独",
-                                    "summary": "",
-                                    "src": "/sudoku-solver/",
-                                    "original_src": "https://leetcode.cn/problems/sudoku-solver/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
@@ -6379,6 +6379,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "956. 最高的广告牌",
+                                    "summary": "",
+                                    "src": "/tallest-billboard/",
+                                    "original_src": "https://leetcode.cn/problems/tallest-billboard/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2381.479024858,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2035. 将数组分成两个数组并最小化数组和的差",
                                     "summary": "",
                                     "src": "/partition-array-into-two-arrays-to-minimize-sum-difference/",
@@ -6534,5 +6548,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-08-09 00:25:04"
+    "last_update": "2025-08-30 03:48:31"
 } as ProblemCategory;

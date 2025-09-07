@@ -502,6 +502,20 @@ export default{
                     "nonLeafChild": [],
                     "isPremium": false,
                     "last_update": ""
+                },
+                {
+                    "title": "LCP 14. 切分数组",
+                    "summary": "",
+                    "src": "/qie-fen-shu-zu/",
+                    "original_src": "https://leetcode.cn/problems/qie-fen-shu-zu/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
             ],
             "nonLeafChild": [
@@ -812,6 +826,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3658. 奇数和与偶数和的最大公约数",
+                            "summary": "",
+                            "src": "/gcd-of-odd-and-even-sums/",
+                            "original_src": "https://leetcode.cn/problems/gcd-of-odd-and-even-sums/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1220.0626125523,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "2807. 在链表中插入最大公约数",
                             "summary": "",
                             "src": "/insert-greatest-common-divisors-in-linked-list/",
@@ -876,20 +904,6 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": null,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "858. 镜面反射",
-                            "summary": "",
-                            "src": "/mirror-reflection/",
-                            "original_src": "https://leetcode.cn/problems/mirror-reflection/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1880.7433591583,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -1022,20 +1036,6 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "LCP 14. 切分数组",
-                            "summary": "",
-                            "src": "/qie-fen-shu-zu/",
-                            "original_src": "https://leetcode.cn/problems/qie-fen-shu-zu/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": null,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "2436. 使子数组最大公约数大于一的最小分割数",
                             "summary": "",
                             "src": "/minimum-split-into-subarrays-with-gcd-greater-than-one/",
@@ -1115,6 +1115,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1518.7783368146,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "858. 镜面反射",
+                            "summary": "",
+                            "src": "/mirror-reflection/",
+                            "original_src": "https://leetcode.cn/problems/mirror-reflection/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1880.7433591583,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -3712,6 +3726,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3646. 下一个特殊回文数",
+                                    "summary": "",
+                                    "src": "/next-special-palindrome-number/",
+                                    "original_src": "https://leetcode.cn/problems/next-special-palindrome-number/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2445.0201515301,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "479. 最大回文数乘积",
                                     "summary": "",
                                     "src": "/largest-palindrome-product/",
@@ -3926,10 +3954,38 @@ export default{
                             "score": 0,
                             "leafChild": [
                                 {
+                                    "title": "835. 图像重叠",
+                                    "summary": "",
+                                    "src": "/image-overlap/",
+                                    "original_src": "https://leetcode.cn/problems/image-overlap/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1969.9845549158,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3549. 两个多项式相乘",
                                     "summary": "",
                                     "src": "/multiply-two-polynomials/",
                                     "original_src": "https://leetcode.cn/problems/multiply-two-polynomials/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3078. 矩阵中的字母数字模式匹配 I",
+                                    "summary": "",
+                                    "src": "/match-alphanumerical-pattern-in-matrix-i/",
+                                    "original_src": "https://leetcode.cn/problems/match-alphanumerical-pattern-in-matrix-i/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
@@ -4034,6 +4090,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1356.4450869217,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3648. 覆盖网格的最少传感器数目",
+                                    "summary": "",
+                                    "src": "/minimum-sensors-to-cover-grid/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-sensors-to-cover-grid/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1395.9815411672,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4216,6 +4286,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1697.8500495479,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3649. 完美对的数目",
+                                    "summary": "",
+                                    "src": "/number-of-perfect-pairs/",
+                                    "original_src": "https://leetcode.cn/problems/number-of-perfect-pairs/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1715.6363607628,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4516,5 +4600,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-08-09 00:21:38"
+    "last_update": "2025-08-28 23:49:40"
 } as ProblemCategory;

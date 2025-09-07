@@ -548,6 +548,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3645. 最优激活顺序得到的最大总和",
+                                    "summary": "",
+                                    "src": "/maximum-total-from-optimal-activation-order/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-total-from-optimal-activation-order/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2018.8785710598,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2141. 同时运行 N 台电脑的最长时间",
                                     "summary": "",
                                     "src": "/maximum-running-time-of-n-computers/",
@@ -1736,7 +1750,7 @@ export default{
                         },
                         {
                             "title": "§1.8 相邻不同",
-                            "summary": "给定正整数数组，每次操作，把数组中的两个数各减少一，并去掉变成 $0$ 的数。目标：使最后剩下的数最小，或者最大化操作次数。<br>由于每次操作的都是两个下标不同的数，把这些下标按顺序拼接，可以构造出一个相邻元素不同的序列。例如 $(1,2),(2,3),(3,4)$ 这三个操作，可以拼接成 $[1,2,3,2,3,4]$。<br><a href=\"https://leetcode.cn/problems/maximum-number-of-weeks-for-which-you-can-work/solution/tan-xin-ju-ti-gou-zao-fang-an-pythonjava-3xyq/\">证明</a><br><a href=\"https://leetcode.cn/problems/reorganize-string/solution/tan-xin-gou-zao-pai-xu-bu-pai-xu-liang-c-h9jg/\">输出具体构造</a><br>**扩展**：<br>",
+                            "summary": "以下问题，设 $n$ 是数组 $a$ 的长度，$m$ 是出现次数最多的元素的出现次数。<br>**问题一**：给定数组 $a$，能否重新排列其中的元素，使得所有相邻元素均不同？如果能，输出重排后的数组。<br>**答**：如果 $m\\le n-m+1$，则可以做到，否则无法做到。<br>**问题二**：给定数组 $a$，每次操作，删除 $a$ 中的两个不同元素。最多能操作多少次？<br>**答**：最多操作 $\\min\\left(\\left\\lfloor\\dfrac{n}{2}\\right\\rfloor,n-m\\right)$ 次。<br>**问题三**：给定数组 $a$，每次操作，删除 $a$ 中的**至多**两个不同元素。最少要操作多少次？<br>**答**：最少操作 $\\max\\left(\\left\\lceil\\dfrac{n}{2}\\right\\rceil,m\\right)$ 次。<br><a href=\"https://zhuanlan.zhihu.com/p/1945782212176909162\">证明+具体操作方案</a><br>**思维扩展**：<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -1759,6 +1773,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3659. 数组元素分组",
+                                    "summary": "",
+                                    "src": "/partition-array-into-k-distinct-groups/",
+                                    "original_src": "https://leetcode.cn/problems/partition-array-into-k-distinct-groups/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1439.8218998149,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1753. 移除石子的最大得分",
                                     "summary": "",
                                     "src": "/maximum-score-from-removing-stones/",
@@ -1767,6 +1795,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1487.5826663483,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "767. 重构字符串",
+                                    "summary": "",
+                                    "src": "/reorganize-string/",
+                                    "original_src": "https://leetcode.cn/problems/reorganize-string/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1681.3263732456,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1815,14 +1857,14 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "767. 重构字符串",
+                                    "title": "3664. 两个字母卡牌游戏",
                                     "summary": "",
-                                    "src": "/reorganize-string/",
-                                    "original_src": "https://leetcode.cn/problems/reorganize-string/",
+                                    "src": "/two-letter-card-game/",
+                                    "original_src": "https://leetcode.cn/problems/two-letter-card-game/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": 1681.3263732456,
+                                    "score": 2157.9393136944,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -3655,7 +3697,7 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "§4.4 基本不等式",
+                            "title": "§4.4 均值不等式",
                             "summary": "**栅栏问题**：长为 $n$ 米的篱笆栅栏，围成一个矩形，矩形面积最大是多少？<br>**变形**：长为 $n$ 米的栅栏分成 $k$ 份，每份围成一个正方形，面积之和最小是多少？<br>",
                             "src": "",
                             "original_src": "",
@@ -4216,6 +4258,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3660. 跳跃游戏 IX",
+                                    "summary": "",
+                                    "src": "/jump-game-ix/",
+                                    "original_src": "https://leetcode.cn/problems/jump-game-ix/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2187.3539422195,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "517. 超级洗衣机",
                                     "summary": "",
                                     "src": "/super-washing-machines/",
@@ -4497,6 +4553,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "463. 岛屿的周长",
+                                    "summary": "",
+                                    "src": "/island-perimeter/",
+                                    "original_src": "https://leetcode.cn/problems/island-perimeter/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2211. 统计道路上的碰撞次数",
                                     "summary": "",
                                     "src": "/count-collisions-on-a-road/",
@@ -4659,6 +4729,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1771.7317932329,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3644. 排序排列",
+                                    "summary": "",
+                                    "src": "/maximum-k-to-sort-a-permutation/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-k-to-sort-a-permutation/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1775.4474231706,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -5247,6 +5331,20 @@ export default{
                     "score": 0,
                     "leafChild": [
                         {
+                            "title": "1304. 和为零的 N 个不同整数",
+                            "summary": "",
+                            "src": "/find-n-unique-integers-sum-up-to-zero/",
+                            "original_src": "https://leetcode.cn/problems/find-n-unique-integers-sum-up-to-zero/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1167.1331831913,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "942. 增减字符串匹配",
                             "summary": "",
                             "src": "/di-string-match/",
@@ -5283,6 +5381,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1505.8669082864,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "1317. 将整数转换为两个无零整数的和",
+                            "summary": "",
+                            "src": "/convert-integer-to-the-sum-of-two-no-zero-integers/",
+                            "original_src": "https://leetcode.cn/problems/convert-integer-to-the-sum-of-two-no-zero-integers/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1277.8260125315,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -5888,5 +6000,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-08-09 22:55:33"
+    "last_update": "2025-09-06 00:53:31"
 } as ProblemCategory;
