@@ -1182,7 +1182,7 @@ export default{
                 },
                 {
                     "title": "由于每个位的基至多一个，所以每个位只需考虑异或一个基，若能变大，则异或之",
-                    "summary": "<a href=\"https://www.bilibili.com/video/BV1pm8vzAEXx/\">讲解</a><br>模板（最大异或和）：<br>```py [sol-Python3]<br>class XorBasis:<br>def __init__(self, n: int):<br>self.b = [0] * n<br>def insert(self, x: int) -> None:<br>b = self.b<br>for i in range(len(b) - 1, -1, -1):<br>if x >> i:  # 由于大于 i 的位都被我们异或成了 0，所以 x >> i 的结果只能是 0 或 1<br>if b[i] == 0:  # x 和之前的基是线性无关的<br>b[i] = x  # 新增一个基，最高位为 i<br>return<br>x ^= b[i]  # 保证每个基的二进制长度互不相同<br>def max_xor(self) -> int:<br>b = self.b<br>res = 0<br>for i in range(len(b) - 1, -1, -1):<br>if res ^ b[i] > res:  # 手写 max 更快<br>res ^= b[i]<br>return res<br>```<br>```java [sol-Java]<br>class XorBasis {<br>private final int[] b;<br>public XorBasis(int n) {<br>b = new int[n];<br>}<br>public void insert(int x) {<br>// 从高到低遍历，保证计算 maxXor 的时候，参与 XOR 的基的最高位（或者说二进制长度）是互不相同的<br>for (int i = b.length - 1; i >= 0; i--) {<br>if ((x >> i) > 0) { // 由于大于 i 的位都被我们异或成了 0，所以 x >> i 的结果只能是 0 或 1<br>if (b[i] == 0) { // x 和之前的基是线性无关的<br>b[i] = x; // 新增一个基，最高位为 i<br>return;<br>}<br>x ^= b[i]; // 保证每个基的二进制长度互不相同<br>}<br>}<br>// 正常循环结束，此时 x=0，说明一开始的 x 可以被已有基表出，不是一个线性无关基<br>}<br>public int maxXor() {<br>int res = 0;<br>// 从高到低贪心：越高的位，越必须是 1<br>// 由于每个位的基至多一个，所以每个位只需考虑异或一个基，若能变大，则异或之<br>for (int i = b.length - 1; i >= 0; i--) {<br>res = Math.max(res, res ^ b[i]);<br>}<br>return res;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>class XorBasis {<br>vector<int> b;<br>public:<br>XorBasis(int n) : b(n) {}<br>void insert(int x) {<br>// 从高到低遍历，保证计算 max_xor 的时候，参与 XOR 的基的最高位（或者说二进制长度）是互不相同的<br>for (int i = b.size() - 1; i >= 0; i--) {<br>if (x >> i) { // 由于大于 i 的位都被我们异或成了 0，所以 x >> i 的结果只能是 0 或 1<br>if (b[i] == 0) { // x 和之前的基是线性无关的<br>b[i] = x; // 新增一个基，最高位为 i<br>return;<br>}<br>x ^= b[i]; // 保证每个基的二进制长度互不相同<br>}<br>}<br>// 正常循环结束，此时 x=0，说明一开始的 x 可以被已有基表出，不是一个线性无关基<br>}<br>int max_xor() {<br>int res = 0;<br>// 从高到低贪心：越高的位，越必须是 1<br>// 由于每个位的基至多一个，所以每个位只需考虑异或一个基，若能变大，则异或之<br>for (int i = b.size() - 1; i >= 0; i--) {<br>res = max(res, res ^ b[i]);<br>}<br>return res;<br>}<br>};<br>```<br>```go [sol-Go]<br>type xorBasis []int<br>func (b xorBasis) insert(x int) {<br>// 从高到低遍历，保证计算 maxXor 的时候，参与 XOR 的基的最高位（或者说二进制长度）是互不相同的<br>for i := len(b) - 1; i >= 0; i-- {<br>if x>>i == 0 { // 由于大于 i 的位都被我们异或成了 0，所以 x>>i 的结果只能是 0 或 1<br>continue<br>}<br>if b[i] == 0 { // x 和之前的基是线性无关的<br>b[i] = x // 新增一个基，最高位为 i<br>return<br>}<br>x ^= b[i] // 保证每个基的二进制长度互不相同<br>}<br>// 正常循环结束，此时 x=0，说明一开始的 x 可以被已有基表出，不是一个线性无关基<br>}<br>func (b xorBasis) maxXor() (res int) {<br>// 从高到低贪心：越高的位，越必须是 1<br>// 由于每个位的基至多一个，所以每个位只需考虑异或一个基，若能变大，则异或之<br>for i := len(b) - 1; i >= 0; i-- {<br>res = max(res, res^b[i])<br>}<br>return<br>}<br>```<br>",
+                    "summary": "<a href=\"https://www.bilibili.com/video/BV1pm8vzAEXx/\">讲解</a><br>模板（最大异或和）：<br>```py [sol-Python3]<br>class XorBasis:<br>def __init__(self, n: int):<br>self.b = [0] * n<br>def insert(self, x: int) -> None:<br>b = self.b<br>for i in range(len(b) - 1, -1, -1):<br>if x >> i:  # 由于大于 i 的位都被我们异或成了 0，所以 x >> i 的结果只能是 0 或 1<br>if b[i] == 0:  # x 和之前的基是线性无关的<br>b[i] = x  # 新增一个基，最高位为 i<br>return<br>x ^= b[i]  # 保证每个基的二进制长度互不相同<br>def max_xor(self) -> int:<br>b = self.b<br>res = 0<br>for i in range(len(b) - 1, -1, -1):<br>if res ^ b[i] > res:  # 手写 max 更快<br>res ^= b[i]<br>return res<br>```<br>```java [sol-Java]<br>class XorBasis {<br>private final int[] b;<br>// n 为值域最大值 U 的二进制长度，例如 U=1e9 时 n=30<br>public XorBasis(int n) {<br>b = new int[n];<br>}<br>public void insert(int x) {<br>// 从高到低遍历，保证计算 maxXor 的时候，参与 XOR 的基的最高位（或者说二进制长度）是互不相同的<br>for (int i = b.length - 1; i >= 0; i--) {<br>if ((x >> i) > 0) { // 由于大于 i 的位都被我们异或成了 0，所以 x >> i 的结果只能是 0 或 1<br>if (b[i] == 0) { // x 和之前的基是线性无关的<br>b[i] = x; // 新增一个基，最高位为 i<br>return;<br>}<br>x ^= b[i]; // 保证每个基的二进制长度互不相同<br>}<br>}<br>// 正常循环结束，此时 x=0，说明一开始的 x 可以被已有基表出，不是一个线性无关基<br>}<br>public int maxXor() {<br>int res = 0;<br>// 从高到低贪心：越高的位，越必须是 1<br>// 由于每个位的基至多一个，所以每个位只需考虑异或一个基，若能变大，则异或之<br>for (int i = b.length - 1; i >= 0; i--) {<br>res = Math.max(res, res ^ b[i]);<br>}<br>return res;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>class XorBasis {<br>vector<int> b;<br>public:<br>// n 为值域最大值 U 的二进制长度，例如 U=1e9 时 n=30<br>XorBasis(int n) : b(n) {}<br>void insert(int x) {<br>// 从高到低遍历，保证计算 max_xor 的时候，参与 XOR 的基的最高位（或者说二进制长度）是互不相同的<br>for (int i = b.size() - 1; i >= 0; i--) {<br>if (x >> i) { // 由于大于 i 的位都被我们异或成了 0，所以 x >> i 的结果只能是 0 或 1<br>if (b[i] == 0) { // x 和之前的基是线性无关的<br>b[i] = x; // 新增一个基，最高位为 i<br>return;<br>}<br>x ^= b[i]; // 保证每个基的二进制长度互不相同<br>}<br>}<br>// 正常循环结束，此时 x=0，说明一开始的 x 可以被已有基表出，不是一个线性无关基<br>}<br>int max_xor() {<br>int res = 0;<br>// 从高到低贪心：越高的位，越必须是 1<br>// 由于每个位的基至多一个，所以每个位只需考虑异或一个基，若能变大，则异或之<br>for (int i = b.size() - 1; i >= 0; i--) {<br>res = max(res, res ^ b[i]);<br>}<br>return res;<br>}<br>};<br>```<br>```go [sol-Go]<br>type xorBasis []int<br>// n 为值域最大值 U 的二进制长度，例如 U=1e9 时 n=30<br>func newXorBasis(n int) xorBasis {<br>return make(xorBasis, n)<br>}<br>func (b xorBasis) insert(x int) {<br>// 从高到低遍历，保证计算 maxXor 的时候，参与 XOR 的基的最高位（或者说二进制长度）是互不相同的<br>for i := len(b) - 1; i >= 0; i-- {<br>if x>>i == 0 { // 由于大于 i 的位都被我们异或成了 0，所以 x>>i 的结果只能是 0 或 1<br>continue<br>}<br>if b[i] == 0 { // x 和之前的基是线性无关的<br>b[i] = x // 新增一个基，最高位为 i<br>return<br>}<br>x ^= b[i] // 保证每个基的二进制长度互不相同<br>}<br>// 正常循环结束，此时 x=0，说明一开始的 x 可以被已有基表出，不是一个线性无关基<br>}<br>func (b xorBasis) maxXor() (res int) {<br>// 从高到低贪心：越高的位，越必须是 1<br>// 由于每个位的基至多一个，所以每个位只需考虑异或一个基，若能变大，则异或之<br>for i := len(b) - 1; i >= 0; i-- {<br>res = max(res, res^b[i])<br>}<br>return<br>}<br>```<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -1190,6 +1190,20 @@ export default{
                     "solution": "",
                     "score": 0,
                     "leafChild": [
+                        {
+                            "title": "3681. 子序列最大 XOR 值",
+                            "summary": "",
+                            "src": "/maximum-xor-of-subsequences/",
+                            "original_src": "https://leetcode.cn/problems/maximum-xor-of-subsequences/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
                         {
                             "title": "3630. 划分数组得到最大异或运算和与运算之和",
                             "summary": "",
@@ -1284,6 +1298,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1754.1710323358,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3644. 排序排列",
+                            "summary": "",
+                            "src": "/maximum-k-to-sort-a-permutation/",
+                            "original_src": "https://leetcode.cn/problems/maximum-k-to-sort-a-permutation/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1775.4474231706,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -1735,5 +1763,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-08-09 00:20:29"
+    "last_update": "2025-09-13 23:49:55"
 } as ProblemCategory;
