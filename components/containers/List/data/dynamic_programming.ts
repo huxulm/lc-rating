@@ -1770,34 +1770,6 @@ export default{
                             "score": 0,
                             "leafChild": [
                                 {
-                                    "title": "1626. 无矛盾的最佳球队",
-                                    "summary": "",
-                                    "src": "/best-team-with-no-conflicts/",
-                                    "original_src": "https://leetcode.cn/problems/best-team-with-no-conflicts/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 2027.3839266711,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "673. 最长递增子序列的个数",
-                                    "summary": "",
-                                    "src": "/number-of-longest-increasing-subsequence/",
-                                    "original_src": "https://leetcode.cn/problems/number-of-longest-increasing-subsequence/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": null,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "354. 俄罗斯套娃信封问题",
                                     "summary": "",
                                     "src": "/russian-doll-envelopes/",
@@ -1806,6 +1778,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "1626. 无矛盾的最佳球队",
+                                    "summary": "",
+                                    "src": "/best-team-with-no-conflicts/",
+                                    "original_src": "https://leetcode.cn/problems/best-team-with-no-conflicts/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2027.3839266711,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1848,6 +1834,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2280.3143643878,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "673. 最长递增子序列的个数",
+                                    "summary": "",
+                                    "src": "/number-of-longest-increasing-subsequence/",
+                                    "original_src": "https://leetcode.cn/problems/number-of-longest-increasing-subsequence/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -5138,6 +5138,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "面试题 08.14. 布尔运算",
+                            "summary": "",
+                            "src": "/boolean-evaluation-lcci/",
+                            "original_src": "https://leetcode.cn/problems/boolean-evaluation-lcci/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "3563. 移除相邻字符后字典序最小的字符串",
                             "summary": "",
                             "src": "/lexicographically-smallest-string-after-adjacent-removals/",
@@ -6634,6 +6648,20 @@ export default{
                     "last_update": ""
                 },
                 {
+                    "title": "3677. 统计二进制回文数字的数目",
+                    "summary": "",
+                    "src": "/count-binary-palindromic-numbers/",
+                    "original_src": "https://leetcode.cn/problems/count-binary-palindromic-numbers/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2222.8219267536,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
                     "title": "3007. 价值和小于等于 K 的最大数字",
                     "summary": "",
                     "src": "/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/",
@@ -6699,20 +6727,6 @@ export default{
                             "score": 0,
                             "leafChild": [
                                 {
-                                    "title": "2327. 知道秘密的人数",
-                                    "summary": "",
-                                    "src": "/number-of-people-aware-of-a-secret/",
-                                    "original_src": "https://leetcode.cn/problems/number-of-people-aware-of-a-secret/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1893.5143805402,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "1871. 跳跃游戏 VII",
                                     "summary": "",
                                     "src": "/jump-game-vii/",
@@ -6721,6 +6735,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1896.1411567598,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2327. 知道秘密的人数",
+                                    "summary": "",
+                                    "src": "/number-of-people-aware-of-a-secret/",
+                                    "original_src": "https://leetcode.cn/problems/number-of-people-aware-of-a-secret/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1893.5143805402,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -10057,6 +10085,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "756. 金字塔转换矩阵",
+                            "summary": "",
+                            "src": "/pyramid-transition-matrix/",
+                            "original_src": "https://leetcode.cn/problems/pyramid-transition-matrix/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1990.2800994214,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "2930. 重新排列后包含指定子字符串的字符串数目",
                             "summary": "",
                             "src": "/number-of-strings-which-can-be-rearranged-to-contain-substring/",
@@ -10109,5 +10151,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-09-06 00:56:59"
+    "last_update": "2025-09-19 00:00:19"
 } as ProblemCategory;
