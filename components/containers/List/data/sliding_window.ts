@@ -171,14 +171,14 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "1052. 爱生气的书店老板",
+                                    "title": "3679. 使库存平衡的最少丢弃次数",
                                     "summary": "",
-                                    "src": "/grumpy-bookstore-owner/",
-                                    "original_src": "https://leetcode.cn/problems/grumpy-bookstore-owner/",
+                                    "src": "/minimum-discards-to-balance-inventory/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-discards-to-balance-inventory/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": 1418.1401949854,
+                                    "score": 1638.8790725205,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -269,6 +269,20 @@ export default{
                             "solution": "",
                             "score": 0,
                             "leafChild": [
+                                {
+                                    "title": "1052. 爱生气的书店老板",
+                                    "summary": "",
+                                    "src": "/grumpy-bookstore-owner/",
+                                    "original_src": "https://leetcode.cn/problems/grumpy-bookstore-owner/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1418.1401949854,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
                                 {
                                     "title": "3652. 按策略买卖股票的最佳时机",
                                     "summary": "",
@@ -449,6 +463,20 @@ export default{
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3672. 子数组中加权众数的总和",
+                                    "summary": "",
+                                    "src": "/sum-of-weighted-modes-in-subarrays/",
+                                    "original_src": "https://leetcode.cn/problems/sum-of-weighted-modes-in-subarrays/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
                                     "last_update": ""
                                 },
                                 {
@@ -1330,7 +1358,7 @@ export default{
                                 },
                                 {
                                     "title": "§2.3.2 越长越合法",
-                                    "summary": "一般要写 `ans += left`。<br>内层循环结束后，$[\\textit{left},\\textit{right}]$ 这个子数组是不满足题目要求的，但在退出循环之前的最后一轮循环，$[\\textit{left}-1,\\textit{right}]$ 是满足题目要求的。由于子数组越长，越能满足题目要求，所以除了 $[\\textit{left}-1,\\textit{right}]$，还有 $[\\textit{left}-2,\\textit{right}],[\\textit{left}-3,\\textit{right}],\\ldots,[0,\\textit{right}]$ 都是满足要求的。也就是说，当右端点**固定**在 $\\textit{right}$ 时，左端点在 $0,1,2,\\ldots,\\textit{left}-1$ 的所有子数组都是满足要求的，这一共有 $\\textit{left}$ 个。<br>",
+                                    "summary": "一般要写 `ans += left`。<br>内层循环结束后，$[\\textit{left},\\textit{right}]$ 这个子数组是不满足题目要求的，但在退出循环之前的最后一轮循环，$[\\textit{left}-1,\\textit{right}]$ 是满足题目要求的。由于子数组越长，越能满足题目要求，所以除了 $[\\textit{left}-1,\\textit{right}]$，还有 $[\\textit{left}-2,\\textit{right}],[\\textit{left}-3,\\textit{right}],\\ldots,[0,\\textit{right}]$ 都是满足要求的。也就是说，当右端点**固定**在 $\\textit{right}$ 时，左端点在 $0,1,2,\\ldots,\\textit{left}-1$ 的所有子数组都是满足要求的，这一共有 $\\textit{left}$ 个。<br>我们关注的是 $\\textit{left}-1$ 的合法性，而不是 $\\textit{left}$。<br>",
                                     "src": "",
                                     "original_src": "",
                                     "sort": 0,
@@ -1692,6 +1720,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1234.9818183966,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "345. 反转字符串中的元音字母",
+                                    "summary": "",
+                                    "src": "/reverse-vowels-of-a-string/",
+                                    "original_src": "https://leetcode.cn/problems/reverse-vowels-of-a-string/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -2244,6 +2286,20 @@ export default{
                                     "nonLeafChild": [],
                                     "isPremium": false,
                                     "last_update": ""
+                                },
+                                {
+                                    "title": "976. 三角形的最大周长",
+                                    "summary": "",
+                                    "src": "/largest-perimeter-triangle/",
+                                    "original_src": "https://leetcode.cn/problems/largest-perimeter-triangle/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1340.5559417151,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
                                 }
                             ],
                             "nonLeafChild": [],
@@ -2297,6 +2353,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3684. 至多 K 个不同元素的最大和",
+                                    "summary": "",
+                                    "src": "/maximize-sum-of-at-most-k-distinct-elements/",
+                                    "original_src": "https://leetcode.cn/problems/maximize-sum-of-at-most-k-distinct-elements/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1298.7710723173,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -3610,5 +3680,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-08-22 00:28:36"
+    "last_update": "2025-09-25 13:30:28"
 } as ProblemCategory;

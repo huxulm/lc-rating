@@ -24,7 +24,7 @@ export default{
             "nonLeafChild": [
                 {
                     "title": "一、网格图 DFS",
-                    "summary": "适用于需要计算连通块个数、大小的题目。<br>部分题目做法不止一种，也可以用 BFS 或并查集解决。<br>二叉树递归和网格图递归的区别：<br>|   | **二叉树**  |  **网格图** |<br>|---|---|---|<br>| **递归入口**  |  根节点  |  网格图的某个格子  |<br>| **递归方向**  |  左儿子和右儿子 |  一般为左右上下的相邻格子  |<br>| **递归边界**  |  空节点（或者叶节点） | 出界、遇到障碍或者已访问  |<br>",
+                    "summary": "适用于需要计算连通块个数、大小的题目。<br>部分题目做法不止一种，也可以用 BFS 或并查集解决。<br>二叉树 DFS 与网格图 DFS 的区别：<br>|   | **二叉树**  |  **网格图** |<br>|---|---|---|<br>| **递归入口**  |  根节点  |  网格图的某个格子  |<br>| **递归方向**  |  左儿子和右儿子 |  一般为左右上下的相邻格子  |<br>| **递归边界**  |  空节点（或者叶节点） | 出界、遇到障碍或者已访问  |<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -125,6 +125,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1489.7210915287,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "733. 图像渲染",
+                            "summary": "",
+                            "src": "/flood-fill/",
+                            "original_src": "https://leetcode.cn/problems/flood-fill/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -361,7 +375,7 @@ export default{
                 },
                 {
                     "title": "二、网格图 BFS",
-                    "summary": "适用于需要计算最短距离（最短路）的题目。<br>",
+                    "summary": "适用于需要计算最短距离（最短路）的题目。<br>DFS 是不撞南墙不回头；BFS 是先访问近的，再访问远的。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -532,6 +546,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "2812. 找出最安全路径",
+                            "summary": "",
+                            "src": "/find-the-safest-path-in-a-grid/",
+                            "original_src": "https://leetcode.cn/problems/find-the-safest-path-in-a-grid/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2153.5854429139,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -988,6 +1016,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "1778. 未知网格中的最短路径",
+                            "summary": "",
+                            "src": "/shortest-path-in-a-hidden-grid/",
+                            "original_src": "https://leetcode.cn/problems/shortest-path-in-a-hidden-grid/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
+                        },
+                        {
                             "title": "694. 不同岛屿的数量",
                             "summary": "",
                             "src": "/number-of-distinct-islands/",
@@ -1068,5 +1110,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-08-09 00:20:02"
+    "last_update": "2025-09-26 04:19:54"
 } as ProblemCategory;

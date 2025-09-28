@@ -3388,6 +3388,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "812. 最大三角形面积",
+                                    "summary": "",
+                                    "src": "/largest-triangle-area/",
+                                    "original_src": "https://leetcode.cn/problems/largest-triangle-area/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1542.5630367445,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "LCP 15. 游乐园的迷宫",
                                     "summary": "",
                                     "src": "/you-le-yuan-de-mi-gong/",
@@ -4054,6 +4068,34 @@ export default{
                             "score": 0,
                             "leafChild": [
                                 {
+                                    "title": "611. 有效三角形的个数",
+                                    "summary": "",
+                                    "src": "/valid-triangle-number/",
+                                    "original_src": "https://leetcode.cn/problems/valid-triangle-number/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "923. 三数之和的多种可能",
+                                    "summary": "",
+                                    "src": "/3sum-with-multiplicity/",
+                                    "original_src": "https://leetcode.cn/problems/3sum-with-multiplicity/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1710.9105378431,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "835. 图像重叠",
                                     "summary": "",
                                     "src": "/image-overlap/",
@@ -4072,6 +4114,20 @@ export default{
                                     "summary": "",
                                     "src": "/multiply-two-polynomials/",
                                     "original_src": "https://leetcode.cn/problems/multiply-two-polynomials/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "259. 较小的三数之和",
+                                    "summary": "",
+                                    "src": "/3sum-smaller/",
+                                    "original_src": "https://leetcode.cn/problems/3sum-smaller/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
@@ -4658,6 +4714,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "LCP 46. 志愿者调配",
+                                    "summary": "",
+                                    "src": "/05ZEDJ/",
+                                    "original_src": "https://leetcode.cn/problems/05ZEDJ/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "660. 移除 9",
                                     "summary": "",
                                     "src": "/remove-9/",
@@ -4728,5 +4798,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-09-15 03:01:25"
+    "last_update": "2025-09-26 23:05:31"
 } as ProblemCategory;
