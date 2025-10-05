@@ -259,6 +259,20 @@ export default{
                     "nonLeafChild": [],
                     "isPremium": true,
                     "last_update": ""
+                },
+                {
+                    "title": "3571. 最短超级串 II",
+                    "summary": "",
+                    "src": "/find-the-shortest-superstring-ii/",
+                    "original_src": "https://leetcode.cn/problems/find-the-shortest-superstring-ii/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": true,
+                    "last_update": ""
                 }
             ],
             "nonLeafChild": [
@@ -814,7 +828,7 @@ export default{
                 },
                 {
                     "title": "五、最小表示法",
-                    "summary": "定义**循环左移**操作：把字符串 $s$ 的第一个字符 $s[0]$ 移除，添加到 $s$ 的末尾。例如 $\\texttt{abcd}$ 操作一次后得到 $\\texttt{bcda}$。<br>问题：你可以执行任意次循环左移操作，计算你能得到的字典序最小的字符串。<br>推荐先完成 <a href=\"https://leetcode.cn/problems/last-substring-in-lexicographical-order/\">1163. 按字典序排在最后的子串</a>。<br>",
+                    "summary": "定义**循环左移**操作：把字符串 $s$ 的第一个字符 $s[0]$ 移除，添加到 $s$ 的末尾。例如 $\\texttt{abcd}$ 操作一次后得到 $\\texttt{bcda}$。<br>问题：你可以执行任意次循环左移操作，计算你能得到的字典序最小的字符串。<br>**注**：任意次循环左移操作后，得到的字符串叫做 $s$ 的**循环同构串**。<br>```go<br>// 返回 s 的字典序最小的循环同构串<br>// 时间复杂度 O(n)，证明见末尾<br>func smallestRepresentation(s string) string {<br>n := len(s)<br>s += s<br>// 注：如果要返回一个和原串不同的字符串，初始化 i=1, j=2<br>i := 0<br>for j := 1; j < n; {<br>// 暴力比较：是 i 开头的字典序小，还是 j 开头的字典序小？<br>// 相同就继续往后比，至多循环 n 次（如果循环 n 次，说明所有字母都相同，不用再比了）<br>k := 0<br>for k < n && s[i+k] == s[j+k] {<br>k++<br>}<br>if k >= n {<br>break<br>}<br>if s[i+k] < s[j+k] { // 注：如果求字典序最大，改成 ><br>// 从 i 开始比从 j 开始更小（排除 j）<br>// 此外：<br>// 从 i+1 开始比从 j+1 开始更小，所以从 j+1 开始不可能是答案，排除<br>// 从 i+2 开始比从 j+2 开始更小，所以从 j+2 开始不可能是答案，排除<br>// ……<br>// 从 i+k 开始比从 j+k 开始更小，所以从 j+k 开始不可能是答案，排除<br>// 所以下一个「可能是答案」的开始位置是 j+k+1<br>j += k + 1<br>} else {<br>// 从 j 开始比从 i 开始更小，更新 i=j（也意味着我们排除了 i）<br>// 此外：<br>// 从 j+1 开始比从 i+1 开始更小，所以从 i+1 开始不可能是答案，排除<br>// 从 j+2 开始比从 i+2 开始更小，所以从 i+2 开始不可能是答案，排除<br>// ……<br>// 从 j+k 开始比从 i+k 开始更小，所以从 i+k 开始不可能是答案，排除<br>// 所以把 j 跳到 i+k+1，不过这可能比 j+1 小，所以与 j+1 取 max<br>// 综上所述，下一个「可能是答案」的开始位置是 max(j+1, i+k+1)<br>i, j = j, max(j, i+k)+1<br>}<br>// 每次要么排除 k+1 个与 i 相关的位置（这样的位置至多 n 个），要么排除 k+1 个与 j 相关的位置（这样的位置至多 n 个）<br>// 所以上面关于 k 的循环，∑k <= 2n，所以二重循环的总循环次数是 O(n) 的<br>}<br>return s[i : i+n]<br>}<br>```<br>推荐先完成 <a href=\"https://leetcode.cn/problems/last-substring-in-lexicographical-order/\">1163. 按字典序排在最后的子串</a>。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -851,10 +865,38 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "1625. 执行操作后字典序最小的字符串",
+                            "summary": "",
+                            "src": "/lexicographically-smallest-string-after-applying-operations/",
+                            "original_src": "https://leetcode.cn/problems/lexicographically-smallest-string-after-applying-operations/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1992.0032292739,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "3406. 从盒子中找出字典序最大的字符串 II",
                             "summary": "",
                             "src": "/find-the-lexicographically-largest-string-from-the-box-ii/",
                             "original_src": "https://leetcode.cn/problems/find-the-lexicographically-largest-string-from-the-box-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "1708. 长度为 K 的最大子数组",
+                            "summary": "",
+                            "src": "/largest-subarray-length-k/",
+                            "original_src": "https://leetcode.cn/problems/largest-subarray-length-k/",
                             "sort": 0,
                             "isLeaf": true,
                             "solution": null,
@@ -1175,6 +1217,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "面试题 16.18. 模式匹配",
+                            "summary": "",
+                            "src": "/pattern-matching-lcci/",
+                            "original_src": "https://leetcode.cn/problems/pattern-matching-lcci/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "1698. 字符串的不同子字符串个数",
                             "summary": "",
                             "src": "/number-of-distinct-substrings-in-a-string/",
@@ -1343,6 +1399,20 @@ export default{
                             "nonLeafChild": [],
                             "isPremium": false,
                             "last_update": ""
+                        },
+                        {
+                            "title": "3491. 电话号码前缀",
+                            "summary": "",
+                            "src": "/phone-number-prefix/",
+                            "original_src": "https://leetcode.cn/problems/phone-number-prefix/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
+                            "last_update": ""
                         }
                     ],
                     "nonLeafChild": [],
@@ -1369,5 +1439,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-08-09 00:25:34"
+    "last_update": "2025-10-04 12:20:35"
 } as ProblemCategory;

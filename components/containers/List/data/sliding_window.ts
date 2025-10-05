@@ -2359,6 +2359,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "2273. 移除字母异位词后的结果数组",
+                                    "summary": "",
+                                    "src": "/find-resultant-array-after-removing-anagrams/",
+                                    "original_src": "https://leetcode.cn/problems/find-resultant-array-after-removing-anagrams/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1294.5800368625,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3684. 至多 K 个不同元素的最大和",
                                     "summary": "",
                                     "src": "/maximize-sum-of-at-most-k-distinct-elements/",
@@ -2978,6 +2992,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "1826. 有缺陷的传感器",
+                                    "summary": "",
+                                    "src": "/faulty-sensor/",
+                                    "original_src": "https://leetcode.cn/problems/faulty-sensor/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1898. 可移除字符的最大数目",
                                     "summary": "",
                                     "src": "/maximum-number-of-removable-characters/",
@@ -3208,6 +3236,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "2273. 移除字母异位词后的结果数组",
+                            "summary": "",
+                            "src": "/find-resultant-array-after-removing-anagrams/",
+                            "original_src": "https://leetcode.cn/problems/find-resultant-array-after-removing-anagrams/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1294.5800368625,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "2348. 全 0 子数组的数目",
                             "summary": "",
                             "src": "/number-of-zero-filled-subarrays/",
@@ -3240,6 +3282,20 @@ export default{
                             "summary": "",
                             "src": "/longest-continuous-increasing-subsequence/",
                             "original_src": "https://leetcode.cn/problems/longest-continuous-increasing-subsequence/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "696. 计数二进制子串",
+                            "summary": "",
+                            "src": "/count-binary-substrings/",
+                            "original_src": "https://leetcode.cn/problems/count-binary-substrings/",
                             "sort": 0,
                             "isLeaf": true,
                             "solution": null,
@@ -3474,20 +3530,6 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "135. 分发糖果",
-                            "summary": "",
-                            "src": "/candy/",
-                            "original_src": "https://leetcode.cn/problems/candy/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": null,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "838. 推多米诺",
                             "summary": "",
                             "src": "/push-dominoes/",
@@ -3534,6 +3576,20 @@ export default{
                             "summary": "",
                             "src": "/arithmetic-slices/",
                             "original_src": "https://leetcode.cn/problems/arithmetic-slices/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "135. 分发糖果",
+                            "summary": "",
+                            "src": "/candy/",
+                            "original_src": "https://leetcode.cn/problems/candy/",
                             "sort": 0,
                             "isLeaf": true,
                             "solution": null,
@@ -3680,5 +3736,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-09-25 13:30:28"
+    "last_update": "2025-10-01 23:46:52"
 } as ProblemCategory;

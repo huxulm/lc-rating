@@ -818,7 +818,7 @@ export default{
             "nonLeafChild": [
                 {
                     "title": "§1.6 最大公约数（GCD）",
-                    "summary": "部分语言的标准库没有 GCD 和 LCM，需要手写。推荐写迭代，比递归快一点。<br>```java [sol-Java]<br>class Solution {<br>private long gcd(long a, long b) {<br>while (a != 0) {<br>int tmp = a;<br>a = b % a;<br>b = tmp;<br>}<br>return b;<br>}<br>// 推荐先除后乘，尽量避免溢出<br>private long lcm(long a, long b) {<br>return a / gcd(a, b) * b;<br>}<br>}<br>```<br>```go [sol-Go]<br>func gcd(a, b int) int {<br>for a != 0 {<br>a, b = b%a, a<br>}<br>return b<br>}<br>// 推荐先除后乘，尽量避免溢出<br>func lcm(a, b int) int {<br>return a / gcd(a, b) * b<br>}<br>```<br>",
+                    "summary": "部分语言的标准库没有 GCD 和 LCM，需要手写。推荐写迭代，比递归快一点。<br>```java [sol-Java]<br>class Solution {<br>private long gcd(long a, long b) {<br>while (a != 0) {<br>long tmp = a;<br>a = b % a;<br>b = tmp;<br>}<br>return b;<br>}<br>// 推荐先除后乘，尽量避免溢出<br>private long lcm(long a, long b) {<br>return a / gcd(a, b) * b;<br>}<br>}<br>```<br>```go [sol-Go]<br>func gcd(a, b int) int {<br>for a != 0 {<br>a, b = b%a, a<br>}<br>return b<br>}<br>// 推荐先除后乘，尽量避免溢出<br>func lcm(a, b int) int {<br>return a / gcd(a, b) * b<br>}<br>```<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -1403,34 +1403,6 @@ export default{
                             "nonLeafChild": [],
                             "isPremium": false,
                             "last_update": ""
-                        },
-                        {
-                            "title": "2221. 数组的三角和",
-                            "summary": "",
-                            "src": "/find-triangular-sum-of-an-array/",
-                            "original_src": "https://leetcode.cn/problems/find-triangular-sum-of-an-array/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1317.2976846981,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "3463. 判断操作后字符串中的数字是否相等 II",
-                            "summary": "",
-                            "src": "/check-if-digits-are-equal-in-string-after-operations-ii/",
-                            "original_src": "https://leetcode.cn/problems/check-if-digits-are-equal-in-string-after-operations-ii/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 2286.2394574531,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
                         }
                     ],
                     "nonLeafChild": [],
@@ -1661,7 +1633,7 @@ export default{
                         },
                         {
                             "title": "§2.2 组合计数",
-                            "summary": "**思维扩展**：<br>",
+                            "summary": "关于生成函数的题目，见本题单的「**§2.6 生成函数**」。<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -1824,6 +1796,34 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "2221. 数组的三角和",
+                                    "summary": "",
+                                    "src": "/find-triangular-sum-of-an-array/",
+                                    "original_src": "https://leetcode.cn/problems/find-triangular-sum-of-an-array/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1317.2976846981,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3463. 判断操作后字符串中的数字是否相等 II",
+                                    "summary": "",
+                                    "src": "/check-if-digits-are-equal-in-string-after-operations-ii/",
+                                    "original_src": "https://leetcode.cn/problems/check-if-digits-are-equal-in-string-after-operations-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2286.2394574531,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3519. 统计逐位非递减的整数",
                                     "summary": "",
                                     "src": "/count-numbers-with-non-decreasing-digits/",
@@ -1930,6 +1930,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2413.5302827563,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3470. 全排列 IV",
+                                    "summary": "",
+                                    "src": "/permutations-iv/",
+                                    "original_src": "https://leetcode.cn/problems/permutations-iv/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2473.7239890264,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -2101,20 +2115,6 @@ export default{
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": true,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "3470. 全排列 IV",
-                                    "summary": "",
-                                    "src": "/permutations-iv/",
-                                    "original_src": "https://leetcode.cn/problems/permutations-iv/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 2473.7239890264,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
                                     "last_update": ""
                                 }
                             ],
@@ -2507,6 +2507,119 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2011.9703133514,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                }
+                            ],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "§2.6 生成函数（母函数）",
+                            "summary": "",
+                            "src": "",
+                            "original_src": "",
+                            "sort": 0,
+                            "isLeaf": false,
+                            "solution": "",
+                            "score": 0,
+                            "leafChild": [
+                                {
+                                    "title": "1155. 掷骰子等于目标和的方法数",
+                                    "summary": "",
+                                    "src": "/number-of-dice-rolls-with-target-sum/",
+                                    "original_src": "https://leetcode.cn/problems/number-of-dice-rolls-with-target-sum/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1653.7337081336,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "629. K 个逆序对数组",
+                                    "summary": "",
+                                    "src": "/k-inverse-pairs-array/",
+                                    "original_src": "https://leetcode.cn/problems/k-inverse-pairs-array/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3193. 统计逆序对的数目",
+                                    "summary": "",
+                                    "src": "/count-the-number-of-inversions/",
+                                    "original_src": "https://leetcode.cn/problems/count-the-number-of-inversions/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2266.3248398876,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3082. 求出所有子序列的能量和",
+                                    "summary": "",
+                                    "src": "/find-the-sum-of-the-power-of-all-subsequences/",
+                                    "original_src": "https://leetcode.cn/problems/find-the-sum-of-the-power-of-all-subsequences/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2241.6583403983,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2518. 好分区的数目",
+                                    "summary": "",
+                                    "src": "/number-of-great-partitions/",
+                                    "original_src": "https://leetcode.cn/problems/number-of-great-partitions/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2414.6227484407,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3333. 找到初始输入字符串 II",
+                                    "summary": "",
+                                    "src": "/find-the-original-typed-string-ii/",
+                                    "original_src": "https://leetcode.cn/problems/find-the-original-typed-string-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2628.6330409039,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3700. 锯齿形数组的总数 II",
+                                    "summary": "",
+                                    "src": "/number-of-zigzag-arrays-ii/",
+                                    "original_src": "https://leetcode.cn/problems/number-of-zigzag-arrays-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2435.1048370891,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4044,22 +4157,8 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "§7.4 线性基",
-                            "summary": "见 <a href=\"/lc-rating/list/bitwise_operations\">位运算题单</a>。<br>",
-                            "src": "",
-                            "original_src": "",
-                            "sort": 0,
-                            "isLeaf": false,
-                            "solution": "",
-                            "score": 0,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "§7.5 多项式卷积",
-                            "summary": "",
+                            "title": "§7.4 多项式",
+                            "summary": "另见本题单的「**§2.6 生成函数**」。<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -4171,7 +4270,7 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "§7.6 快速沃尔什变换（FWT）",
+                            "title": "§7.5 快速沃尔什变换（FWT）",
                             "summary": "",
                             "src": "",
                             "original_src": "",
@@ -4193,8 +4292,36 @@ export default{
                                     "nonLeafChild": [],
                                     "isPremium": false,
                                     "last_update": ""
+                                },
+                                {
+                                    "title": "1723. 完成所有工作的最短时间",
+                                    "summary": "",
+                                    "src": "/find-minimum-time-to-finish-all-jobs/",
+                                    "original_src": "https://leetcode.cn/problems/find-minimum-time-to-finish-all-jobs/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2284.4463940346,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
                                 }
                             ],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "§7.6 线性基",
+                            "summary": "见 <a href=\"/lc-rating/list/bitwise_operations\">位运算题单</a>。<br>",
+                            "src": "",
+                            "original_src": "",
+                            "sort": 0,
+                            "isLeaf": false,
+                            "solution": "",
+                            "score": 0,
+                            "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
                             "last_update": ""
@@ -4798,5 +4925,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-09-26 23:05:31"
+    "last_update": "2025-10-03 01:30:14"
 } as ProblemCategory;

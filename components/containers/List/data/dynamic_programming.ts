@@ -75,6 +75,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3693. 爬楼梯 II",
+                            "summary": "",
+                            "src": "/climbing-stairs-ii/",
+                            "original_src": "https://leetcode.cn/problems/climbing-stairs-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1560.2611098329,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "377. 组合总和 Ⅳ",
                             "summary": "",
                             "src": "/combination-sum-iv/",
@@ -923,6 +937,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3685. 含上限元素的子序列和",
+                            "summary": "",
+                            "src": "/subsequence-sum-after-capping-elements/",
+                            "original_src": "https://leetcode.cn/problems/subsequence-sum-after-capping-elements/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2073.3665301195,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "1049. 最后一块石头的重量 II",
                             "summary": "",
                             "src": "/last-stone-weight-ii/",
@@ -1029,6 +1057,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2545.108406046,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3181. 执行操作可获得的最大总奖励 II",
+                            "summary": "",
+                            "src": "/maximum-total-reward-using-operations-ii/",
+                            "original_src": "https://leetcode.cn/problems/maximum-total-reward-using-operations-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2688.2456356434,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -3713,6 +3755,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1911.1959516695,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3686. 稳定子序列的数量",
+                            "summary": "",
+                            "src": "/number-of-stable-subsequences/",
+                            "original_src": "https://leetcode.cn/problems/number-of-stable-subsequences/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1969.2668024554,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -6755,6 +6811,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3699. 锯齿形数组的总数 I",
+                                    "summary": "",
+                                    "src": "/number-of-zigzag-arrays-i/",
+                                    "original_src": "https://leetcode.cn/problems/number-of-zigzag-arrays-i/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2123.1049463895,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1997. 访问完所有房间的第一天",
                                     "summary": "",
                                     "src": "/first-day-where-you-have-been-in-all-the-rooms/",
@@ -7353,7 +7423,7 @@ export default{
                         },
                         {
                             "title": "§11.6 矩阵快速幂优化 DP",
-                            "summary": "<a href=\"https://leetcode.cn/problems/knight-dialer/solutions/3004116/jiao-ni-yi-bu-bu-si-kao-dpcong-ji-yi-hua-x06l/\">讲解</a><br>",
+                            "summary": "有两种类型的矩阵快速幂优化 DP：<br>1. 线性 DP（常系数齐次线性递推），转移系数写在第一行，其余行 $m_{i+1,i} = 1$，例如 <a href=\"https://leetcode.cn/problems/climbing-stairs/\">70</a>，<a href=\"https://leetcode.cn/problems/n-th-tribonacci-number/\">1137</a>。<a href=\"https://leetcode.cn/problems/climbing-stairs/solutions/2560716/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-7zm1/\">讲解</a>。<br>2. 多维 DP 或者状态机 DP，转移系数可表示为一个 $k\\times k$ 大小的矩阵，例如 <a href=\"https://leetcode.cn/problems/knight-dialer/\">935</a>。<a href=\"https://leetcode.cn/problems/knight-dialer/solutions/3004116/jiao-ni-yi-bu-bu-si-kao-dpcong-ji-yi-hua-x06l/\">讲解</a>。<br>部分题目可以用 <a href=\"https://oi-wiki.org/math/poly/linear-recurrence/#bostanmori-%E7%AE%97%E6%B3%95\">Bostan-Mori 算法</a> 和 <a href=\"https://oi-wiki.org/math/berlekamp-massey/\">Berlekamp-Massey 算法</a> 进一步优化。<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -7502,6 +7572,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3700. 锯齿形数组的总数 II",
+                                    "summary": "",
+                                    "src": "/number-of-zigzag-arrays-ii/",
+                                    "original_src": "https://leetcode.cn/problems/number-of-zigzag-arrays-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2435.1048370891,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2851. 字符串转换",
                                     "summary": "",
                                     "src": "/string-transformation/",
@@ -7567,6 +7651,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2569.4068901457,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3693. 爬楼梯 II",
+                                    "summary": "",
+                                    "src": "/climbing-stairs-ii/",
+                                    "original_src": "https://leetcode.cn/problems/climbing-stairs-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1560.2611098329,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -9312,6 +9410,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3698. 分割数组得到最小绝对差",
+                            "summary": "",
+                            "src": "/split-array-with-minimum-difference/",
+                            "original_src": "https://leetcode.cn/problems/split-array-with-minimum-difference/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1648.808948421,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "3598. 相邻字符串之间的最长公共前缀",
                             "summary": "",
                             "src": "/longest-common-prefix-between-adjacent-strings-after-removals/",
@@ -10151,5 +10263,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-09-19 00:00:19"
+    "last_update": "2025-10-04 00:27:05"
 } as ProblemCategory;
