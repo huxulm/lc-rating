@@ -24,7 +24,7 @@ export default{
             "nonLeafChild": [
                 {
                     "title": "一、基础题",
-                    "summary": "",
+                    "summary": "**用位运算代替数组操作**：<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -201,6 +201,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "面试题 05.01. 插入",
+                            "summary": "",
+                            "src": "/insert-into-bits-lcci/",
+                            "original_src": "https://leetcode.cn/problems/insert-into-bits-lcci/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "231. 2 的幂",
                             "summary": "",
                             "src": "/power-of-two/",
@@ -297,6 +311,20 @@ export default{
                             "nonLeafChild": [],
                             "isPremium": false,
                             "last_update": ""
+                        },
+                        {
+                            "title": "3690. 拆分合并数组",
+                            "summary": "",
+                            "src": "/split-and-merge-array-transformation/",
+                            "original_src": "https://leetcode.cn/problems/split-and-merge-array-transformation/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1982.4524895112,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         }
                     ],
                     "nonLeafChild": [],
@@ -305,7 +333,7 @@ export default{
                 },
                 {
                     "title": "二、异或（XOR）的性质",
-                    "summary": "另见 <a href=\"/lc-rating/list/data_structure\">数据结构题单</a> 中的「**§6.4 0-1 字典树（异或字典树）**」。<br>",
+                    "summary": "本质是模 $2$ 剩余系的加法。<br>另见 <a href=\"/lc-rating/list/data_structure\">数据结构题单</a> 中的「**§6.4 0-1 字典树（异或字典树）**」。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -558,7 +586,7 @@ export default{
                 },
                 {
                     "title": "三、与或（AND/OR）的性质",
-                    "summary": "AND 的数越多，结果越小。OR 的数越多，结果越大。<br>",
+                    "summary": "$\\text{AND}$ 的数越多，结果越小。<br>$\\text{OR}$ 的数越多，结果越大。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -1006,6 +1034,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3688. 偶数的按位或运算",
+                            "summary": "",
+                            "src": "/bitwise-or-of-even-numbers-in-an-array/",
+                            "original_src": "https://leetcode.cn/problems/bitwise-or-of-even-numbers-in-an-array/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1204.8779687384,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "2505. 所有子序列和的按位或",
                             "summary": "",
                             "src": "/bitwise-or-of-all-subsequence-sums/",
@@ -1130,6 +1172,20 @@ export default{
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3344. 最大尺寸数组",
+                            "summary": "",
+                            "src": "/maximum-sized-array/",
+                            "original_src": "https://leetcode.cn/problems/maximum-sized-array/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": true,
                             "last_update": ""
                         }
                     ],
@@ -1763,5 +1819,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-09-13 23:49:55"
+    "last_update": "2025-10-06 00:30:25"
 } as ProblemCategory;

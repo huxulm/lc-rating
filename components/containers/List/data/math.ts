@@ -341,7 +341,7 @@ export default{
         },
         {
             "title": "时间复杂度 O(log x)",
-            "summary": "def prime_factorization(x: int) -> List[Tuple[int, int]]:<br>res = []<br>while x > 1:<br>p = lpf[x]<br>e = 1<br>x //= p<br>while x % p == 0:<br>e += 1<br>x //= p<br>res.append((p, e))<br>return res<br>```<br>```java [sol-Java]<br>class Solution {<br>private static final int MX = 1_000_001;<br>private static final int[] lpf = new int[MX];<br>private static boolean initialized = false;<br>// 这样写比 static block 更快<br>private void init() {<br>if (initialized) {<br>return;<br>}<br>initialized = true;<br>for (int i = 2; i < MX; i++) {<br>if (lpf[i] == 0) { // i 是质数<br>for (int j = i; j < MX; j += i) {<br>if (lpf[j] == 0) { // 首次访问 j<br>lpf[j] = i;<br>}<br>}<br>}<br>}<br>}<br>// 质因数分解<br>// 例如 primeFactorization(45) = [[3, 2], [5, 1]]，表示 45 = 3^2 * 5^1<br>// 时间复杂度 O(log x)<br>private List<int[]> primeFactorization(int x) {<br>List<int[]> res = new ArrayList<>();<br>while (x > 1) {<br>int p = lpf[x];<br>int e = 1;<br>for (x /= p; x % p == 0; x /= p) {<br>e++;<br>}<br>res.add(new int[]{p, e});<br>}<br>return res;<br>}<br>public int solve(int[] nums) {<br>init(); // 记得初始化<br>}<br>}<br>```<br>```cpp [sol-C++]<br>const int MX = 1'000'001;<br>int lpf[MX];<br>int init = [] {<br>for (int i = 2; i < MX; i++) {<br>if (lpf[i] == 0) { // i 是质数<br>for (int j = i; j < MX; j += i) {<br>if (lpf[j] == 0) { // 首次访问 j<br>lpf[j] = i;<br>}<br>}<br>}<br>}<br>return 0;<br>}();<br>// 质因数分解<br>// 例如 prime_factorization(45) = {{3, 2}, {5, 1}}，表示 45 = 3^2 * 5^1<br>// 时间复杂度 O(log x)<br>vector<pair<int,int>> prime_factorization(int x) {<br>vector<pair<int,int>> res;<br>while (x > 1) {<br>int p = lpf[x];<br>int e = 1;<br>for (x /= p; x % p == 0; x /= p) {<br>e++;<br>}<br>res.emplace_back(p, e);<br>}<br>return res;<br>}<br>```<br>```go [sol-Go]<br>const mx = 1_000_001<br>var lpf = [mx]int{}<br>func init() {<br>for i := 2; i < mx; i++ {<br>if lpf[i] == 0 { // i 是质数<br>for j := i; j < mx; j += i {<br>if lpf[j] == 0 { // 首次访问 j<br>lpf[j] = i<br>}<br>}<br>}<br>}<br>}<br>// 质因数分解<br>// 例如 primeFactorization(45) = [[3, 2], [5, 1]]，表示 45 = 3^2 * 5^1<br>// 时间复杂度 O(log x)<br>func primeFactorization(x int) (res [][2]int) {<br>for x > 1 {<br>p := lpf[x]<br>e := 1<br>for x /= p; x%p == 0; x /= p {<br>e++<br>}<br>res = append(res, [2]int{p, e})<br>}<br>return<br>}<br>```<br>",
+            "summary": "def prime_factorization(x: int) -> List[Tuple[int, int]]:<br>res = []<br>while x > 1:<br>p = lpf[x]<br>e = 1<br>x //= p<br>while x % p == 0:<br>e += 1<br>x //= p<br>res.append((p, e))<br>return res<br>```<br>```java [sol-Java]<br>class Solution {<br>private static final int MX = 1_000_001;<br>private static final int[] lpf = new int[MX];<br>private static boolean initialized = false;<br>// 这样写比 static block 更快<br>private void init() {<br>if (initialized) {<br>return;<br>}<br>initialized = true;<br>for (int i = 2; i < MX; i++) {<br>if (lpf[i] == 0) { // i 是质数<br>for (int j = i; j < MX; j += i) {<br>if (lpf[j] == 0) { // 首次访问 j<br>lpf[j] = i;<br>}<br>}<br>}<br>}<br>}<br>// 质因数分解<br>// 例如 primeFactorization(45) = [[3, 2], [5, 1]]，表示 45 = 3^2 * 5^1<br>// 时间复杂度 O(log x)<br>private List<int[]> primeFactorization(int x) {<br>List<int[]> res = new ArrayList<>();<br>while (x > 1) {<br>int p = lpf[x];<br>int e = 1;<br>for (x /= p; x % p == 0; x /= p) {<br>e++;<br>}<br>res.add(new int[]{p, e});<br>}<br>return res;<br>}<br>public int solve(int[] nums) {<br>init(); // 记得初始化<br>}<br>}<br>```<br>```cpp [sol-C++]<br>const int MX = 1'000'001;<br>int lpf[MX];<br>int init = [] {<br>for (int i = 2; i < MX; i++) {<br>if (lpf[i] == 0) { // i 是质数<br>for (int j = i; j < MX; j += i) {<br>if (lpf[j] == 0) { // 首次访问 j<br>lpf[j] = i;<br>}<br>}<br>}<br>}<br>return 0;<br>}();<br>// 质因数分解<br>// 例如 prime_factorization(45) = {{3, 2}, {5, 1}}，表示 45 = 3^2 * 5^1<br>// 时间复杂度 O(log x)<br>vector<pair<int, int>> prime_factorization(int x) {<br>vector<pair<int, int>> res;<br>while (x > 1) {<br>int p = lpf[x];<br>int e = 1;<br>for (x /= p; x % p == 0; x /= p) {<br>e++;<br>}<br>res.emplace_back(p, e);<br>}<br>return res;<br>}<br>```<br>```go [sol-Go]<br>const mx = 1_000_001<br>var lpf = [mx]int{}<br>func init() {<br>for i := 2; i < mx; i++ {<br>if lpf[i] == 0 { // i 是质数<br>for j := i; j < mx; j += i {<br>if lpf[j] == 0 { // 首次访问 j<br>lpf[j] = i<br>}<br>}<br>}<br>}<br>}<br>// 质因数分解<br>// 例如 primeFactorization(45) = [[3, 2], [5, 1]]，表示 45 = 3^2 * 5^1<br>// 时间复杂度 O(log x)<br>func primeFactorization(x int) (res [][2]int) {<br>for x > 1 {<br>p := lpf[x]<br>e := 1<br>for x /= p; x%p == 0; x /= p {<br>e++<br>}<br>res = append(res, [2]int{p, e})<br>}<br>return<br>}<br>```<br>",
             "src": "",
             "original_src": "",
             "sort": 0,
@@ -961,6 +961,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "1625. 执行操作后字典序最小的字符串",
+                            "summary": "",
+                            "src": "/lexicographically-smallest-string-after-applying-operations/",
+                            "original_src": "https://leetcode.cn/problems/lexicographically-smallest-string-after-applying-operations/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1992.0032292739,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -2606,20 +2620,6 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2628.6330409039,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "3700. 锯齿形数组的总数 II",
-                                    "summary": "",
-                                    "src": "/number-of-zigzag-arrays-ii/",
-                                    "original_src": "https://leetcode.cn/problems/number-of-zigzag-arrays-ii/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 2435.1048370891,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4855,6 +4855,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "800. 相似 RGB 颜色",
+                                    "summary": "",
+                                    "src": "/similar-rgb-color/",
+                                    "original_src": "https://leetcode.cn/problems/similar-rgb-color/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1563.9451046163,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "660. 移除 9",
                                     "summary": "",
                                     "src": "/remove-9/",
@@ -4925,5 +4939,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-10-03 01:30:14"
+    "last_update": "2025-10-09 23:56:49"
 } as ProblemCategory;

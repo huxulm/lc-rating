@@ -171,20 +171,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "3679. 使库存平衡的最少丢弃次数",
-                                    "summary": "",
-                                    "src": "/minimum-discards-to-balance-inventory/",
-                                    "original_src": "https://leetcode.cn/problems/minimum-discards-to-balance-inventory/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1638.8790725205,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "1176. 健身计划评估",
                                     "summary": "",
                                     "src": "/diet-plan-performance/",
@@ -253,6 +239,20 @@ export default{
                                     "nonLeafChild": [],
                                     "isPremium": true,
                                     "last_update": ""
+                                },
+                                {
+                                    "title": "1989. 捉迷藏中可捕获的最大人数",
+                                    "summary": "",
+                                    "src": "/maximum-number-of-people-that-can-be-caught-in-tag/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-number-of-people-that-can-be-caught-in-tag/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
                                 }
                             ],
                             "nonLeafChild": [],
@@ -269,6 +269,20 @@ export default{
                             "solution": "",
                             "score": 0,
                             "leafChild": [
+                                {
+                                    "title": "3679. 使库存平衡的最少丢弃次数",
+                                    "summary": "",
+                                    "src": "/minimum-discards-to-balance-inventory/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-discards-to-balance-inventory/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1638.8790725205,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
                                 {
                                     "title": "1052. 爱生气的书店老板",
                                     "summary": "",
@@ -306,6 +320,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1728.8495630128,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3694. 删除子字符串后不同的终点",
+                                    "summary": "",
+                                    "src": "/distinct-points-reachable-after-substring-removal/",
+                                    "original_src": "https://leetcode.cn/problems/distinct-points-reachable-after-substring-removal/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1739.3005043887,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1639,6 +1667,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "LCR 180. 文件组合",
+                                    "summary": "",
+                                    "src": "/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/",
+                                    "original_src": "https://leetcode.cn/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1918. 第 K 小的子数组和",
                                     "summary": "",
                                     "src": "/kth-smallest-subarray-sum/",
@@ -2531,20 +2573,6 @@ export default{
                                     "summary": "",
                                     "src": "/first-missing-positive/",
                                     "original_src": "https://leetcode.cn/problems/first-missing-positive/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": null,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "287. 寻找重复数",
-                                    "summary": "",
-                                    "src": "/find-the-duplicate-number/",
-                                    "original_src": "https://leetcode.cn/problems/find-the-duplicate-number/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
@@ -3736,5 +3764,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-10-01 23:46:52"
+    "last_update": "2025-10-07 23:45:35"
 } as ProblemCategory;
