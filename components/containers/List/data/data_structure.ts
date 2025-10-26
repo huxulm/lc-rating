@@ -434,7 +434,7 @@ export default{
                                             "last_update": ""
                                         },
                                         {
-                                            "title": "1031. 两个非重叠子数组的最大和",
+                                            "title": "1031. 两个无重叠子数组的最大和",
                                             "summary": "",
                                             "src": "/maximum-sum-of-two-non-overlapping-subarrays/",
                                             "original_src": "https://leetcode.cn/problems/maximum-sum-of-two-non-overlapping-subarrays/",
@@ -582,6 +582,20 @@ export default{
                                             "isLeaf": true,
                                             "solution": null,
                                             "score": 2245.1397243876,
+                                            "leafChild": [],
+                                            "nonLeafChild": [],
+                                            "isPremium": false,
+                                            "last_update": ""
+                                        },
+                                        {
+                                            "title": "3713. 最长的平衡子串 I",
+                                            "summary": "",
+                                            "src": "/longest-balanced-substring-i/",
+                                            "original_src": "https://leetcode.cn/problems/longest-balanced-substring-i/",
+                                            "sort": 0,
+                                            "isLeaf": true,
+                                            "solution": null,
+                                            "score": 1490.1757703883,
                                             "leafChild": [],
                                             "nonLeafChild": [],
                                             "isPremium": false,
@@ -823,7 +837,7 @@ export default{
                         },
                         {
                             "title": "§0.3 遍历对角线",
-                            "summary": "",
+                            "summary": "**注**：有关**前后缀分解**的内容，见 <a href=\"/lc-rating/list/dynamic_programming\">动态规划题单</a> 的「专题：前后缀分解」。<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -1154,6 +1168,20 @@ export default{
                                     "nonLeafChild": [],
                                     "isPremium": false,
                                     "last_update": ""
+                                },
+                                {
+                                    "title": "3709. 设计考试分数记录器",
+                                    "summary": "",
+                                    "src": "/design-exam-scores-tracker/",
+                                    "original_src": "https://leetcode.cn/problems/design-exam-scores-tracker/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1647.51871302,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
                                 }
                             ],
                             "nonLeafChild": [],
@@ -1231,20 +1259,6 @@ export default{
                                     "summary": "",
                                     "src": "/continuous-subarray-sum/",
                                     "original_src": "https://leetcode.cn/problems/continuous-subarray-sum/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": null,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "437. 路径总和 III",
-                                    "summary": "",
-                                    "src": "/path-sum-iii/",
-                                    "original_src": "https://leetcode.cn/problems/path-sum-iii/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
@@ -1437,6 +1451,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3714. 最长的平衡子串 II",
+                                    "summary": "",
+                                    "src": "/longest-balanced-substring-ii/",
+                                    "original_src": "https://leetcode.cn/problems/longest-balanced-substring-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2201.8256032743,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2949. 统计美丽子字符串 II",
                                     "summary": "",
                                     "src": "/count-beautiful-substrings-ii/",
@@ -1539,6 +1567,20 @@ export default{
                                     "summary": "",
                                     "src": "/max-sum-of-rectangle-no-larger-than-k/",
                                     "original_src": "https://leetcode.cn/problems/max-sum-of-rectangle-no-larger-than-k/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "437. 路径总和 III",
+                                    "summary": "",
+                                    "src": "/path-sum-iii/",
+                                    "original_src": "https://leetcode.cn/problems/path-sum-iii/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
@@ -1790,6 +1832,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "2300. 咒语和药水的成功对数",
+                                    "summary": "",
+                                    "src": "/successful-pairs-of-spells-and-potions/",
+                                    "original_src": "https://leetcode.cn/problems/successful-pairs-of-spells-and-potions/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1476.9062320302,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1895. 最大的幻方",
                                     "summary": "",
                                     "src": "/largest-magic-square/",
@@ -1818,7 +1874,7 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "1031. 两个非重叠子数组的最大和",
+                                    "title": "1031. 两个无重叠子数组的最大和",
                                     "summary": "",
                                     "src": "/maximum-sum-of-two-non-overlapping-subarrays/",
                                     "original_src": "https://leetcode.cn/problems/maximum-sum-of-two-non-overlapping-subarrays/",
@@ -3186,14 +3242,14 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "735. 小行星碰撞",
+                                    "title": "3703. 移除K-平衡子字符串",
                                     "summary": "",
-                                    "src": "/asteroid-collision/",
-                                    "original_src": "https://leetcode.cn/problems/asteroid-collision/",
+                                    "src": "/remove-k-balanced-substrings/",
+                                    "original_src": "https://leetcode.cn/problems/remove-k-balanced-substrings/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1802.0481850881,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -3222,6 +3278,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2057.4788263111,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "735. 小行星碰撞",
+                                    "summary": "",
+                                    "src": "/asteroid-collision/",
+                                    "original_src": "https://leetcode.cn/problems/asteroid-collision/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4485,20 +4555,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "2931. 购买物品的最大开销",
-                                    "summary": "",
-                                    "src": "/maximum-spending-after-buying-items/",
-                                    "original_src": "https://leetcode.cn/problems/maximum-spending-after-buying-items/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1822.3170524016,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "1167. 连接木棍的最低费用",
                                     "summary": "",
                                     "src": "/minimum-cost-to-connect-sticks/",
@@ -4550,6 +4606,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2931. 购买物品的最大开销",
+                                    "summary": "",
+                                    "src": "/maximum-spending-after-buying-items/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-spending-after-buying-items/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1822.3170524016,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4802,20 +4872,6 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2286.1378742318,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "218. 天际线问题",
-                                    "summary": "",
-                                    "src": "/the-skyline-problem/",
-                                    "original_src": "https://leetcode.cn/problems/the-skyline-problem/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -5385,6 +5441,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3711. 不出现负余额的最大交易额",
+                                    "summary": "",
+                                    "src": "/maximum-transactions-without-negative-balance/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-transactions-without-negative-balance/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2599. 使前缀和数组非负",
                                     "summary": "",
                                     "src": "/make-the-prefix-sum-non-negative/",
@@ -5528,6 +5598,20 @@ export default{
                     "isLeaf": true,
                     "solution": null,
                     "score": 2109.9830154953,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "218. 天际线问题",
+                    "summary": "",
+                    "src": "/the-skyline-problem/",
+                    "original_src": "https://leetcode.cn/problems/the-skyline-problem/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
                     "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
@@ -6373,7 +6457,7 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "3632. 子数组异或至少为 K 的数目",
+                                    "title": "3632. 异或至少为 K 的子数组数目",
                                     "summary": "",
                                     "src": "/subarrays-with-xor-at-least-k/",
                                     "original_src": "https://leetcode.cn/problems/subarrays-with-xor-at-least-k/",
@@ -6449,6 +6533,20 @@ export default{
                     "score": 0,
                     "leafChild": [
                         {
+                            "title": "684. 冗余连接",
+                            "summary": "",
+                            "src": "/redundant-connection/",
+                            "original_src": "https://leetcode.cn/problems/redundant-connection/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "3493. 属性图",
                             "summary": "",
                             "src": "/properties-graph/",
@@ -6457,20 +6555,6 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1565.0047379604,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "3532. 针对图的路径存在性查询 I",
-                            "summary": "",
-                            "src": "/path-existence-queries-in-a-graph-i/",
-                            "original_src": "https://leetcode.cn/problems/path-existence-queries-in-a-graph-i/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1658.552255225,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -6499,6 +6583,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3532. 针对图的路径存在性查询 I",
+                            "summary": "",
+                            "src": "/path-existence-queries-in-a-graph-i/",
+                            "original_src": "https://leetcode.cn/problems/path-existence-queries-in-a-graph-i/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1658.552255225,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -6660,6 +6758,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "778. 水位上升的泳池中游泳",
+                            "summary": "",
+                            "src": "/swim-in-rising-water/",
+                            "original_src": "https://leetcode.cn/problems/swim-in-rising-water/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2096.6201393558,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "3695. 交换元素后的最大交替和",
                             "summary": "",
                             "src": "/maximize-alternating-sum-using-swaps/",
@@ -6682,20 +6794,6 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1999.1208076854,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "684. 冗余连接",
-                            "summary": "",
-                            "src": "/redundant-connection/",
-                            "original_src": "https://leetcode.cn/problems/redundant-connection/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": null,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -7228,48 +7326,77 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "§7.6 边权并查集",
-                    "summary": "",
+                    "title": "§7.6 带权并查集（边权并查集）",
+                    "summary": "模板：<br>```py [sol-Python3]<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
                     "isLeaf": false,
                     "solution": "",
                     "score": 0,
-                    "leafChild": [
-                        {
-                            "title": "399. 除法求值",
-                            "summary": "",
-                            "src": "/evaluate-division/",
-                            "original_src": "https://leetcode.cn/problems/evaluate-division/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": null,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "2307. 检查方程中的矛盾之处",
-                            "summary": "",
-                            "src": "/check-for-contradictions-in-equations/",
-                            "original_src": "https://leetcode.cn/problems/check-for-contradictions-in-equations/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": null,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": true,
-                            "last_update": ""
-                        }
-                    ],
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                }
+            ],
+            "isPremium": false,
+            "last_update": ""
+        },
+        {
+            "title": "所以 y-x = (to-from) + (y-to) - (x-from) = value + dis[to] - dis[from]",
+            "summary": "class UnionFind:<br>def __init__(self, n: int):<br>self.fa = list(range(n))  # 代表元<br>self.dis = [0] * n  # dis[x] 表示 x 到（x 所在集合的）代表元的距离<br>def find(self, x: int) -> int:<br>fa = self.fa<br>if fa[x] != x:<br>root = self.find(fa[x])<br>self.dis[x] += self.dis[fa[x]]  # 递归更新 x 到其代表元的距离<br>fa[x] = root<br>return fa[x]<br>def same(self, x: int, y: int) -> bool:<br>return self.find(x) == self.find(y)<br>def get_relative_distance(self, from_: int, to: int) -> int:<br>self.find(from_)<br>self.find(to)<br>return self.dis[from_] - self.dis[to]<br>def merge(self, from_: int, to: int, value: int) -> bool:<br>x, y = self.find(from_), self.find(to)<br>dis = self.dis<br>if x == y:  # from 和 to 在同一个集合，不做合并<br>return dis[from_] - dis[to] == value<br>dis[x] = value + dis[to] - dis[from_]  # 计算 x 到其代表元 y 的距离<br>self.fa[x] = y<br>return True<br>```<br>```java [sol-Java]<br>// 模板来源 https://leetcode.cn/circle/discuss/mOr1u6/<br>class UnionFind {<br>private final int[] fa; // 代表元<br>private final int[] dis; // dis[x] 表示 x 到（x 所在集合的）代表元的距离<br>// 注意数据范围，必要时使用 long[] dis<br>public UnionFind(int n) {<br>// 一开始有 n 个集合 {0}, {1}, ..., {n-1}<br>// 集合 i 的代表元是自己，自己到自己的距离是 0<br>fa = new int[n];<br>dis = new int[n];<br>for (int i = 0; i < n; i++) {<br>fa[i] = i;<br>}<br>}<br>// 返回 x 所在集合的代表元<br>// 同时做路径压缩<br>public int find(int x) {<br>if (fa[x] != x) {<br>int root = find(fa[x]);<br>dis[x] += dis[fa[x]]; // 递归更新 x 到其代表元的距离<br>fa[x] = root;<br>}<br>return fa[x];<br>}<br>// 判断 x 和 y 是否在同一个集合（同普通并查集）<br>public boolean same(int x, int y) {<br>return find(x) == find(y);<br>}<br>// 计算从 from 到 to 的相对距离<br>// 调用时需保证 from 和 to 在同一个集合中，否则返回值无意义<br>public int getRelativeDistance(int from, int to) {<br>find(from);<br>find(to);<br>// to-from = (x-from) - (x-to) = dis[from] - dis[to]<br>return dis[from] - dis[to];<br>}<br>// 合并 from 和 to，新增信息 to - from = value<br>// 其中 to 和 from 表示未知量，下文的 x 和 y 也表示未知量<br>// 如果 from 和 to 不在同一个集合，返回 true，否则返回是否与已知信息矛盾<br>public boolean merge(int from, int to, int value) {<br>int x = find(from), y = find(to);<br>if (x == y) { // from 和 to 在同一个集合，不做合并<br>// to-from = (x-from) - (x-to) = dis[from] - dis[to] = value<br>return dis[from] - dis[to] == value;<br>}<br>//    x --------- y<br>//   /           /<br>// from ------- to<br>// 已知 x-from = dis[from] 和 y-to = dis[to]，现在合并 from 和 to，新增信息 to-from = value<br>// 由于 y-from = (y-x) + (x-from) = (y-to) + (to-from)<br>// 所以 y-x = (to-from) + (y-to) - (x-from) = value + dis[to] - dis[from]<br>dis[x] = value + dis[to] - dis[from]; // 计算 x 到其代表元 y 的距离<br>fa[x] = y;<br>return true;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>// 模板来源 https://leetcode.cn/circle/discuss/mOr1u6/<br>// 根据题目用 UnionFind<int> uf(n) 或者 UnionFind<long long> uf(n) 初始化<br>template<typename T><br>class UnionFind {<br>public:<br>vector<int> fa; // 代表元<br>vector<T> dis; // dis[x] 表示 x 到（x 所在集合的）代表元的距离<br>UnionFind(int n) : fa(n), dis(n) {<br>// 一开始有 n 个集合 {0}, {1}, ..., {n-1}<br>// 集合 i 的代表元是自己，自己到自己的距离是 0<br>ranges::iota(fa, 0); // iota(fa.begin(), fa.end(), 0);<br>}<br>// 返回 x 所在集合的代表元<br>// 同时做路径压缩<br>int find(int x) {<br>if (fa[x] != x) {<br>int root = find(fa[x]);<br>dis[x] += dis[fa[x]]; // 递归更新 x 到其代表元的距离<br>fa[x] = root;<br>}<br>return fa[x];<br>}<br>// 判断 x 和 y 是否在同一个集合（同普通并查集）<br>bool same(int x, int y) {<br>return find(x) == find(y);<br>}<br>// 计算从 from 到 to 的相对距离<br>// 调用时需保证 from 和 to 在同一个集合中，否则返回值无意义<br>T get_relative_distance(int from, int to) {<br>find(from);<br>find(to);<br>// to-from = (x-from) - (x-to) = dis[from] - dis[to]<br>return dis[from] - dis[to];<br>}<br>// 合并 from 和 to，新增信息 to - from = value<br>// 其中 to 和 from 表示未知量，下文的 x 和 y 也表示未知量<br>// 如果 from 和 to 不在同一个集合，返回 true，否则返回是否与已知信息矛盾<br>bool merge(int from, int to, T value) {<br>int x = find(from), y = find(to);<br>if (x == y) { // from 和 to 在同一个集合，不做合并<br>// to-from = (x-from) - (x-to) = dis[from] - dis[to] = value<br>return dis[from] - dis[to] == value;<br>}<br>//    x --------- y<br>//   /           /<br>// from ------- to<br>// 已知 x-from = dis[from] 和 y-to = dis[to]，现在合并 from 和 to，新增信息 to-from = value<br>// 由于 y-from = (y-x) + (x-from) = (y-to) + (to-from)<br>// 所以 y-x = (to-from) + (y-to) - (x-from) = value + dis[to] - dis[from]<br>dis[x] = value + dis[to] - dis[from]; // 计算 x 到其代表元 y 的距离<br>fa[x] = y;<br>return true;<br>}<br>};<br>```<br>```go [sol-Go]<br>// 模板来源 https://leetcode.cn/circle/discuss/mOr1u6/<br>type unionFind struct {<br>fa  []int // 代表元<br>dis []int // dis[x] 表示 x 到（x 所在集合的）代表元的距离<br>}<br>func newUnionFind(n int) unionFind {<br>// 一开始有 n 个集合 {0}, {1}, ..., {n-1}<br>// 集合 i 的代表元是自己，自己到自己的距离是 0<br>fa := make([]int, n)<br>dis := make([]int, n)<br>for i := range fa {<br>fa[i] = i<br>}<br>return unionFind{fa, dis}<br>}<br>// 返回 x 所在集合的代表元<br>// 同时做路径压缩<br>func (u unionFind) find(x int) int {<br>if u.fa[x] != x {<br>root := u.find(u.fa[x])<br>u.dis[x] += u.dis[u.fa[x]] // 递归更新 x 到其代表元的距离<br>u.fa[x] = root<br>}<br>return u.fa[x]<br>}<br>// 判断 x 和 y 是否在同一个集合（同普通并查集）<br>func (u unionFind) same(x, y int) bool {<br>return u.find(x) == u.find(y)<br>}<br>// 计算从 from 到 to 的相对距离<br>// 调用时需保证 from 和 to 在同一个集合中，否则返回值无意义<br>func (u unionFind) getRelativeDistance(from, to int) int {<br>u.find(from)<br>u.find(to)<br>// to-from = (x-from) - (x-to) = dis[from] - dis[to]<br>return u.dis[from] - u.dis[to]<br>}<br>// 合并 from 和 to，新增信息 to - from = value<br>// 其中 to 和 from 表示未知量，下文的 x 和 y 也表示未知量<br>// 如果 from 和 to 不在同一个集合，返回 true，否则返回是否与已知信息矛盾<br>func (u unionFind) merge(from, to int, value int) bool {<br>x, y := u.find(from), u.find(to)<br>if x == y { // from 和 to 在同一个集合，不做合并<br>// to-from = (x-from) - (x-to) = dis[from] - dis[to] = value<br>return u.dis[from]-u.dis[to] == value<br>}<br>//    x --------- y<br>//   /           /<br>// from ------- to<br>// 已知 x-from = dis[from] 和 y-to = dis[to]，现在合并 from 和 to，新增信息 to-from = value<br>// 由于 y-from = (y-x) + (x-from) = (y-to) + (to-from)<br>// 所以 y-x = (to-from) + (y-to) - (x-from) = value + dis[to] - dis[from]<br>u.dis[x] = value + u.dis[to] - u.dis[from] // 计算 x 到其代表元 y 的距离<br>u.fa[x] = y<br>return true<br>}<br>```<br>附加模板题：<a href=\"https://codeforces.com/problemset/problem/1850/H\">CF1850H</a><br>",
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [
+                {
+                    "title": "399. 除法求值",
+                    "summary": "",
+                    "src": "/evaluate-division/",
+                    "original_src": "https://leetcode.cn/problems/evaluate-division/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
                     "last_update": ""
                 },
+                {
+                    "title": "3710. 最大划分因子",
+                    "summary": "",
+                    "src": "/maximum-partition-factor/",
+                    "original_src": "https://leetcode.cn/problems/maximum-partition-factor/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2135.1002785041,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "2307. 检查方程中的矛盾之处",
+                    "summary": "",
+                    "src": "/check-for-contradictions-in-equations/",
+                    "original_src": "https://leetcode.cn/problems/check-for-contradictions-in-equations/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": true,
+                    "last_update": ""
+                }
+            ],
+            "nonLeafChild": [
                 {
                     "title": "八、树状数组和线段树",
                     "summary": "能用树状数组解决的题目，也能用线段树解决（反过来不一定）。但树状数组实现简单，代码短。<br>为方便大家练习，我把适合用树状数组解决的题目分到树状数组中，其余分到线段树中。<br>",
@@ -8108,7 +8235,7 @@ export default{
         },
         {
             "title": "时间复杂度 O(log n)",
-            "summary": "class Node:<br>__slots__ = 'val', 'todo'<br>class LazySegmentTree:<br>_TODO_INIT = 0  # **根据题目修改**<br>def __init__(self, arr, default=0):<br>if isinstance(arr, int):<br>arr = [default] * arr<br>n = len(arr)<br>self._n = n<br>self._tree = [Node() for _ in range(2 << (n - 1).bit_length())]<br>self._build(arr, 1, 0, n - 1)<br>def _merge_val(self, a: int, b: int) -> int:<br>return a + b  # **根据题目修改**<br>def _merge_todo(self, a: int, b: int) -> int:<br>return a + b  # **根据题目修改**<br>def _apply(self, node: int, l: int, r: int, todo: int) -> None:<br>cur = self._tree[node]<br>cur.val += todo * (r - l + 1)  # **根据题目修改**<br>cur.todo = self._merge_todo(todo, cur.todo)<br>def _spread(self, node: int, l: int, r: int) -> None:<br>todo = self._tree[node].todo<br>if todo == self._TODO_INIT:  # 没有需要下传的信息<br>return<br>m = (l + r) // 2<br>self._apply(node * 2, l, m, todo)<br>self._apply(node * 2 + 1, m + 1, r, todo)<br>self._tree[node].todo = self._TODO_INIT  # 下传完毕<br>def _maintain(self, node: int) -> None:<br>self._tree[node].val = self._merge_val(self._tree[node * 2].val, self._tree[node * 2 + 1].val)<br>def _build(self, a: List[int], node: int, l: int, r: int) -> None:<br>self._tree[node].todo = self._TODO_INIT<br>if l == r:  # 叶子<br>self._tree[node].val = a[l]  # 初始化叶节点的值<br>return<br>m = (l + r) // 2<br>self._build(a, node * 2, l, m)  # 初始化左子树<br>self._build(a, node * 2 + 1, m + 1, r)  # 初始化右子树<br>self._maintain(node)<br>def _update(self, node: int, l: int, r: int, ql: int, qr: int, f: int) -> None:<br>if ql <= l and r <= qr:  # 当前子树完全在 [ql, qr] 内<br>self._apply(node, l, r, f)<br>return<br>self._spread(node, l, r)<br>m = (l + r) // 2<br>if ql <= m:  # 更新左子树<br>self._update(node * 2, l, m, ql, qr, f)<br>if qr > m:  # 更新右子树<br>self._update(node * 2 + 1, m + 1, r, ql, qr, f)<br>self._maintain(node)<br>def _query(self, node: int, l: int, r: int, ql: int, qr: int) -> int:<br>if ql <= l and r <= qr:  # 当前子树完全在 [ql, qr] 内<br>return self._tree[node].val<br>self._spread(node, l, r)<br>m = (l + r) // 2<br>if qr <= m:  # [ql, qr] 在左子树<br>return self._query(node * 2, l, m, ql, qr)<br>if ql > m:  # [ql, qr] 在右子树<br>return self._query(node * 2 + 1, m + 1, r, ql, qr)<br>l_res = self._query(node * 2, l, m, ql, qr)<br>r_res = self._query(node * 2 + 1, m + 1, r, ql, qr)<br>return self._merge_val(l_res, r_res)<br>def update(self, ql: int, qr: int, f: int) -> None:<br>self._update(1, 0, self._n - 1, ql, qr, f)<br>def query(self, ql: int, qr: int) -> int:<br>return self._query(1, 0, self._n - 1, ql, qr)<br>```<br>```java [sol-Java]<br>// 模板来源 https://leetcode.cn/circle/discuss/mOr1u6/<br>class LazySegmentTree {<br>// 懒标记初始值<br>private static final long TODO_INIT = 0; // **根据题目修改**<br>private static final class Node {<br>long val; // **根据题目修改**<br>long todo;<br>}<br>// 合并两个 val<br>private long mergeVal(long a, long b) {<br>return a + b; // **根据题目修改**<br>}<br>// 合并两个懒标记<br>private long mergeTodo(long a, long b) {<br>return a + b; // **根据题目修改**<br>}<br>// 把懒标记作用到 node 子树（本例为区间加）<br>private void apply(int node, int l, int r, long todo) {<br>Node cur = tree[node];<br>// 计算 tree[node] 区间的整体变化<br>cur.val += todo * (r - l + 1); // **根据题目修改**<br>cur.todo = mergeTodo(todo, cur.todo);<br>}<br>private final int n;<br>private final Node[] tree;<br>// 线段树维护一个长为 n 的数组（下标从 0 到 n-1），元素初始值为 initVal<br>public LazySegmentTree(int n, long initVal) {<br>this.n = n;<br>long[] a = new long[n];<br>Arrays.fill(a, initVal);<br>tree = new Node[2 << (32 - Integer.numberOfLeadingZeros(n - 1))];<br>build(a, 1, 0, n - 1);<br>}<br>// 线段树维护数组 a<br>public LazySegmentTree(long[] a) {<br>n = a.length;<br>tree = new Node[2 << (32 - Integer.numberOfLeadingZeros(n - 1))];<br>build(a, 1, 0, n - 1);<br>}<br>// 用 f 更新 [ql, qr] 中的每个 a[i]<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>public void update(int ql, int qr, long f) {<br>update(1, 0, n - 1, ql, qr, f);<br>}<br>// 返回用 mergeVal 合并所有 a[i] 的计算结果，其中 i 在闭区间 [ql, qr] 中<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>public long query(int ql, int qr) {<br>return query(1, 0, n - 1, ql, qr);<br>}<br>// 把当前节点的懒标记下传给左右儿子<br>private void spread(int node, int l, int r) {<br>long todo = tree[node].todo;<br>if (todo == TODO_INIT) { // 没有需要下传的信息<br>return;<br>}<br>int m = (l + r) / 2;<br>apply(node * 2, l, m, todo);<br>apply(node * 2 + 1, m + 1, r, todo);<br>tree[node].todo = TODO_INIT; // 下传完毕<br>}<br>// 合并左右儿子的 val 到当前节点的 val<br>private void maintain(int node) {<br>tree[node].val = mergeVal(tree[node * 2].val, tree[node * 2 + 1].val);<br>}<br>// 用 a 初始化线段树<br>// 时间复杂度 O(n)<br>private void build(long[] a, int node, int l, int r) {<br>tree[node] = new Node();<br>tree[node].todo = TODO_INIT;<br>if (l == r) { // 叶子<br>tree[node].val = a[l]; // 初始化叶节点的值<br>return;<br>}<br>int m = (l + r) / 2;<br>build(a, node * 2, l, m); // 初始化左子树<br>build(a, node * 2 + 1, m + 1, r); // 初始化右子树<br>maintain(node);<br>}<br>private void update(int node, int l, int r, int ql, int qr, long f) {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>apply(node, l, r, f);<br>return;<br>}<br>spread(node, l, r);<br>int m = (l + r) / 2;<br>if (ql <= m) { // 更新左子树<br>update(node * 2, l, m, ql, qr, f);<br>}<br>if (qr > m) { // 更新右子树<br>update(node * 2 + 1, m + 1, r, ql, qr, f);<br>}<br>maintain(node);<br>}<br>private long query(int node, int l, int r, int ql, int qr) {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>return tree[node].val;<br>}<br>spread(node, l, r);<br>int m = (l + r) / 2;<br>if (qr <= m) { // [ql, qr] 在左子树<br>return query(node * 2, l, m, ql, qr);<br>}<br>if (ql > m) { // [ql, qr] 在右子树<br>return query(node * 2 + 1, m + 1, r, ql, qr);<br>}<br>long lRes = query(node * 2, l, m, ql, qr);<br>long rRes = query(node * 2 + 1, m + 1, r, ql, qr);<br>return mergeVal(lRes, rRes);<br>}<br>}<br>```<br>```cpp [sol-C++]<br>// 模板来源 https://leetcode.cn/circle/discuss/mOr1u6/<br>template<typename T, typename F><br>class LazySegmentTree {<br>// 注：也可以去掉 template<typename T, typename F>，改在这里定义 T 和 F<br>// using T = pair<int, int>;<br>// using F = pair<int, int>;<br>// 懒标记初始值<br>const F TODO_INIT = 0; // **根据题目修改**<br>struct Node {<br>T val;<br>F todo;<br>};<br>int n;<br>vector<Node> tree;<br>// 合并两个 val<br>T merge_val(T a, T b) const {<br>return a + b; // **根据题目修改**<br>}<br>// 合并两个懒标记<br>F merge_todo(F a, F b) const {<br>return a + b; // **根据题目修改**<br>}<br>// 把懒标记作用到 node 子树（本例为区间加）<br>void apply(int node, int l, int r, F todo) {<br>Node& cur = tree[node];<br>// 计算 tree[node] 区间的整体变化<br>cur.val += todo * (r - l + 1); // **根据题目修改**<br>cur.todo = merge_todo(todo, cur.todo);<br>}<br>// 把当前节点的懒标记下传给左右儿子<br>void spread(int node, int l, int r) {<br>Node& cur = tree[node];<br>F todo = cur.todo;<br>if (todo == TODO_INIT) { // 没有需要下传的信息<br>return;<br>}<br>int m = (l + r) / 2;<br>apply(node * 2, l, m, todo);<br>apply(node * 2 + 1, m + 1, r, todo);<br>cur.todo = TODO_INIT; // 下传完毕<br>}<br>// 合并左右儿子的 val 到当前节点的 val<br>void maintain(int node) {<br>tree[node].val = merge_val(tree[node * 2].val, tree[node * 2 + 1].val);<br>}<br>// 用 a 初始化线段树<br>// 时间复杂度 O(n)<br>void build(const vector<T>& a, int node, int l, int r) {<br>Node& cur = tree[node];<br>cur.todo = TODO_INIT;<br>if (l == r) { // 叶子<br>cur.val = a[l]; // 初始化叶节点的值<br>return;<br>}<br>int m = (l + r) / 2;<br>build(a, node * 2, l, m); // 初始化左子树<br>build(a, node * 2 + 1, m + 1, r); // 初始化右子树<br>maintain(node);<br>}<br>void update(int node, int l, int r, int ql, int qr, F f) {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>apply(node, l, r, f);<br>return;<br>}<br>spread(node, l, r);<br>int m = (l + r) / 2;<br>if (ql <= m) { // 更新左子树<br>update(node * 2, l, m, ql, qr, f);<br>}<br>if (qr > m) { // 更新右子树<br>update(node * 2 + 1, m + 1, r, ql, qr, f);<br>}<br>maintain(node);<br>}<br>T query(int node, int l, int r, int ql, int qr) {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>return tree[node].val;<br>}<br>spread(node, l, r);<br>int m = (l + r) / 2;<br>if (qr <= m) { // [ql, qr] 在左子树<br>return query(node * 2, l, m, ql, qr);<br>}<br>if (ql > m) { // [ql, qr] 在右子树<br>return query(node * 2 + 1, m + 1, r, ql, qr);<br>}<br>T l_res = query(node * 2, l, m, ql, qr);<br>T r_res = query(node * 2 + 1, m + 1, r, ql, qr);<br>return merge_val(l_res, r_res);<br>}<br>public:<br>// 线段树维护一个长为 n 的数组（下标从 0 到 n-1），元素初始值为 init_val<br>LazySegmentTree(int n, T init_val = 0) : LazySegmentTree(vector<T>(n, init_val)) {}<br>// 线段树维护数组 a<br>LazySegmentTree(const vector<T>& a) : n(a.size()), tree(2 << bit_width(a.size() - 1)) {<br>build(a, 1, 0, n - 1);<br>}<br>// 用 f 更新 [ql, qr] 中的每个 a[i]<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>void update(int ql, int qr, F f) {<br>update(1, 0, n - 1, ql, qr, f);<br>}<br>// 返回用 merge_val 合并所有 a[i] 的计算结果，其中 i 在闭区间 [ql, qr] 中<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>T query(int ql, int qr) {<br>return query(1, 0, n - 1, ql, qr);<br>}<br>};<br>int main() {<br>LazySegmentTree<long long, long long> t(8); // 默认值为 0<br>t.update(3, 5, 100);<br>t.update(4, 6, 10);<br>cout << t.query(0, 7) << endl;<br>vector<long long> nums = {3, 1, 4, 1, 5, 9, 2, 6};<br>LazySegmentTree<long long, long long> t2(nums);<br>t2.update(3, 5, 1);<br>t2.update(4, 6, 1);<br>cout << t2.query(0, 7) << endl;<br>return 0;<br>}<br>```<br>```go [sol-Go]<br>// 模板来源 https://leetcode.cn/circle/discuss/mOr1u6/<br>// 懒标记初始值<br>const todoInit int = 0 // **根据题目修改**<br>type lazySeg []struct {<br>val  int // **根据题目修改**<br>todo int<br>}<br>// 合并两个 val<br>func (lazySeg) mergeVal(a, b int) int {<br>return a + b // **根据题目修改**<br>}<br>// 合并两个懒标记<br>func (lazySeg) mergeTodo(a, b int) int {<br>return a + b // **根据题目修改**<br>}<br>// 把懒标记作用到 node 子树（本例为区间加）<br>func (t lazySeg) apply(node, l, r int, todo int) {<br>cur := &t[node]<br>// 计算 tree[node] 区间的整体变化<br>cur.val += todo * (r - l + 1) // **根据题目修改**<br>cur.todo = t.mergeTodo(todo, cur.todo)<br>}<br>// 线段树维护一个长为 n 的数组（下标从 0 到 n-1），元素初始值为 initVal<br>func newLazySegmentTree(n int, initVal int) lazySeg {<br>a := make([]int, n)<br>for i := range a {<br>a[i] = initVal<br>}<br>return newLazySegmentTreeWithArray(a)<br>}<br>// 线段树维护数组 a<br>func newLazySegmentTreeWithArray(a []int) lazySeg {<br>n := len(a)<br>t := make(lazySeg, 2<<bits.Len(uint(n-1)))<br>t.build(a, 1, 0, n-1)<br>return t<br>}<br>// 把当前节点的懒标记下传给左右儿子<br>func (t lazySeg) spread(node, l, r int) {<br>// 类似「断点续传」，接着完成之前没完成的下传任务<br>todo := t[node].todo<br>if todo == todoInit { // 没有需要下传的信息<br>return<br>}<br>m := (l + r) / 2<br>t.apply(node*2, l, m, todo)<br>t.apply(node*2+1, m+1, r, todo)<br>t[node].todo = todoInit // 下传完毕<br>}<br>// 合并左右儿子的 val 到当前节点的 val<br>func (t lazySeg) maintain(node int) {<br>t[node].val = t.mergeVal(t[node*2].val, t[node*2+1].val)<br>}<br>// 用 a 初始化线段树<br>// 时间复杂度 O(n)<br>func (t lazySeg) build(a []int, node, l, r int) {<br>t[node].todo = todoInit<br>if l == r { // 叶子<br>t[node].val = a[l] // 初始化叶节点的值<br>return<br>}<br>m := (l + r) / 2<br>t.build(a, node*2, l, m) // 初始化左子树<br>t.build(a, node*2+1, m+1, r) // 初始化右子树<br>t.maintain(node)<br>}<br>// 用 f 更新 [ql, qr] 中的每个 a[i]<br>// 调用 t.update(1, 0, n-1, ql, qr, f)<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>func (t lazySeg) update(node, l, r, ql, qr int, f int) {<br>if ql <= l && r <= qr { // 当前子树完全在 [ql, qr] 内<br>t.apply(node, l, r, f)<br>return<br>}<br>t.spread(node, l, r)<br>m := (l + r) / 2<br>if ql <= m { // 更新左子树<br>t.update(node*2, l, m, ql, qr, f)<br>}<br>if qr > m { // 更新右子树<br>t.update(node*2+1, m+1, r, ql, qr, f)<br>}<br>t.maintain(node)<br>}<br>// 返回用 mergeVal 合并所有 a[i] 的计算结果，其中 i 在闭区间 [ql, qr] 中<br>// 调用 t.query(1, 0, n-1, ql, qr)<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>func (t lazySeg) query(node, l, r, ql, qr int) int {<br>if ql <= l && r <= qr { // 当前子树完全在 [ql, qr] 内<br>return t[node].val<br>}<br>t.spread(node, l, r)<br>m := (l + r) / 2<br>if qr <= m { // [ql, qr] 在左子树<br>return t.query(node*2, l, m, ql, qr)<br>}<br>if ql > m { // [ql, qr] 在右子树<br>return t.query(node*2+1, m+1, r, ql, qr)<br>}<br>lRes := t.query(node*2, l, m, ql, qr)<br>rRes := t.query(node*2+1, m+1, r, ql, qr)<br>return t.mergeVal(lRes, rRes)<br>}<br>```<br>",
+            "summary": "class Node:<br>__slots__ = 'val', 'todo'<br>class LazySegmentTree:<br>_TODO_INIT = 0  # **根据题目修改**<br>def __init__(self, arr, default=0):<br>if isinstance(arr, int):<br>arr = [default] * arr<br>n = len(arr)<br>self._n = n<br>self._tree = [Node() for _ in range(2 << (n - 1).bit_length())]<br>self._build(arr, 1, 0, n - 1)<br>def _merge_val(self, a: int, b: int) -> int:<br>return a + b  # **根据题目修改**<br>def _merge_todo(self, a: int, b: int) -> int:<br>return a + b  # **根据题目修改**<br>def _apply(self, node: int, l: int, r: int, todo: int) -> None:<br>cur = self._tree[node]<br>cur.val += todo * (r - l + 1)  # **根据题目修改**<br>cur.todo = self._merge_todo(todo, cur.todo)<br>def _spread(self, node: int, l: int, r: int) -> None:<br>todo = self._tree[node].todo<br>if todo == self._TODO_INIT:  # 没有需要下传的信息<br>return<br>m = (l + r) // 2<br>self._apply(node * 2, l, m, todo)<br>self._apply(node * 2 + 1, m + 1, r, todo)<br>self._tree[node].todo = self._TODO_INIT  # 下传完毕<br>def _maintain(self, node: int) -> None:<br>self._tree[node].val = self._merge_val(self._tree[node * 2].val, self._tree[node * 2 + 1].val)<br>def _build(self, a: List[int], node: int, l: int, r: int) -> None:<br>self._tree[node].todo = self._TODO_INIT<br>if l == r:  # 叶子<br>self._tree[node].val = a[l]  # 初始化叶节点的值<br>return<br>m = (l + r) // 2<br>self._build(a, node * 2, l, m)  # 初始化左子树<br>self._build(a, node * 2 + 1, m + 1, r)  # 初始化右子树<br>self._maintain(node)<br>def _update(self, node: int, l: int, r: int, ql: int, qr: int, f: int) -> None:<br>if ql <= l and r <= qr:  # 当前子树完全在 [ql, qr] 内<br>self._apply(node, l, r, f)<br>return<br>self._spread(node, l, r)<br>m = (l + r) // 2<br>if ql <= m:  # 更新左子树<br>self._update(node * 2, l, m, ql, qr, f)<br>if qr > m:  # 更新右子树<br>self._update(node * 2 + 1, m + 1, r, ql, qr, f)<br>self._maintain(node)<br>def _query(self, node: int, l: int, r: int, ql: int, qr: int) -> int:<br>if ql <= l and r <= qr:  # 当前子树完全在 [ql, qr] 内<br>return self._tree[node].val<br>self._spread(node, l, r)<br>m = (l + r) // 2<br>if qr <= m:  # [ql, qr] 在左子树<br>return self._query(node * 2, l, m, ql, qr)<br>if ql > m:  # [ql, qr] 在右子树<br>return self._query(node * 2 + 1, m + 1, r, ql, qr)<br>l_res = self._query(node * 2, l, m, ql, qr)<br>r_res = self._query(node * 2 + 1, m + 1, r, ql, qr)<br>return self._merge_val(l_res, r_res)<br>def update(self, ql: int, qr: int, f: int) -> None:<br>self._update(1, 0, self._n - 1, ql, qr, f)<br>def query(self, ql: int, qr: int) -> int:<br>return self._query(1, 0, self._n - 1, ql, qr)<br>```<br>```java [sol-Java]<br>// 模板来源 https://leetcode.cn/circle/discuss/mOr1u6/<br>class LazySegmentTree {<br>// 懒标记初始值<br>private static final long TODO_INIT = 0; // **根据题目修改**<br>private static final class Node {<br>long val; // **根据题目修改**<br>long todo;<br>}<br>// 合并两个 val<br>private long mergeVal(long a, long b) {<br>return a + b; // **根据题目修改**<br>}<br>// 合并两个懒标记<br>private long mergeTodo(long a, long b) {<br>return a + b; // **根据题目修改**<br>}<br>// 把懒标记作用到 node 子树（本例为区间加）<br>private void apply(int node, int l, int r, long todo) {<br>Node cur = tree[node];<br>// 计算 tree[node] 区间的整体变化<br>cur.val += todo * (r - l + 1); // **根据题目修改**<br>cur.todo = mergeTodo(todo, cur.todo);<br>}<br>private final int n;<br>private final Node[] tree;<br>// 线段树维护一个长为 n 的数组（下标从 0 到 n-1），元素初始值为 initVal<br>public LazySegmentTree(int n, long initVal) {<br>this.n = n;<br>long[] a = new long[n];<br>Arrays.fill(a, initVal);<br>tree = new Node[2 << (32 - Integer.numberOfLeadingZeros(n - 1))];<br>build(a, 1, 0, n - 1);<br>}<br>// 线段树维护数组 a<br>public LazySegmentTree(long[] a) {<br>n = a.length;<br>tree = new Node[2 << (32 - Integer.numberOfLeadingZeros(n - 1))];<br>build(a, 1, 0, n - 1);<br>}<br>// 用 f 更新 [ql, qr] 中的每个 a[i]<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>public void update(int ql, int qr, long f) {<br>update(1, 0, n - 1, ql, qr, f);<br>}<br>// 返回用 mergeVal 合并所有 a[i] 的计算结果，其中 i 在闭区间 [ql, qr] 中<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>public long query(int ql, int qr) {<br>return query(1, 0, n - 1, ql, qr);<br>}<br>// 把当前节点的懒标记下传给左右儿子<br>private void spread(int node, int l, int r) {<br>long todo = tree[node].todo;<br>if (todo == TODO_INIT) { // 没有需要下传的信息<br>return;<br>}<br>int m = (l + r) / 2;<br>apply(node * 2, l, m, todo);<br>apply(node * 2 + 1, m + 1, r, todo);<br>tree[node].todo = TODO_INIT; // 下传完毕<br>}<br>// 合并左右儿子的 val 到当前节点的 val<br>private void maintain(int node) {<br>tree[node].val = mergeVal(tree[node * 2].val, tree[node * 2 + 1].val);<br>}<br>// 用 a 初始化线段树<br>// 时间复杂度 O(n)<br>private void build(long[] a, int node, int l, int r) {<br>tree[node] = new Node();<br>tree[node].todo = TODO_INIT;<br>if (l == r) { // 叶子<br>tree[node].val = a[l]; // 初始化叶节点的值<br>return;<br>}<br>int m = (l + r) / 2;<br>build(a, node * 2, l, m); // 初始化左子树<br>build(a, node * 2 + 1, m + 1, r); // 初始化右子树<br>maintain(node);<br>}<br>private void update(int node, int l, int r, int ql, int qr, long f) {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>apply(node, l, r, f);<br>return;<br>}<br>spread(node, l, r);<br>int m = (l + r) / 2;<br>if (ql <= m) { // 更新左子树<br>update(node * 2, l, m, ql, qr, f);<br>}<br>if (qr > m) { // 更新右子树<br>update(node * 2 + 1, m + 1, r, ql, qr, f);<br>}<br>maintain(node);<br>}<br>private long query(int node, int l, int r, int ql, int qr) {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>return tree[node].val;<br>}<br>spread(node, l, r);<br>int m = (l + r) / 2;<br>if (qr <= m) { // [ql, qr] 在左子树<br>return query(node * 2, l, m, ql, qr);<br>}<br>if (ql > m) { // [ql, qr] 在右子树<br>return query(node * 2 + 1, m + 1, r, ql, qr);<br>}<br>long lRes = query(node * 2, l, m, ql, qr);<br>long rRes = query(node * 2 + 1, m + 1, r, ql, qr);<br>return mergeVal(lRes, rRes);<br>}<br>}<br>```<br>```cpp [sol-C++]<br>// 模板来源 https://leetcode.cn/circle/discuss/mOr1u6/<br>template<typename T, typename F><br>class LazySegmentTree {<br>// 注：也可以去掉 template<typename T, typename F>，改在这里定义 T 和 F<br>// using T = pair<int, int>;<br>// using F = pair<int, int>;<br>// 懒标记初始值<br>const F TODO_INIT = 0; // **根据题目修改**<br>struct Node {<br>T val;<br>F todo;<br>};<br>int n;<br>vector<Node> tree;<br>// 合并两个 val<br>T merge_val(const T& a, const T& b) const {<br>return a + b; // **根据题目修改**<br>}<br>// 合并两个懒标记<br>F merge_todo(const F& a, const F& b) const {<br>return a + b; // **根据题目修改**<br>}<br>// 把懒标记作用到 node 子树（本例为区间加）<br>void apply(int node, int l, int r, F todo) {<br>Node& cur = tree[node];<br>// 计算 tree[node] 区间的整体变化<br>cur.val += todo * (r - l + 1); // **根据题目修改**<br>cur.todo = merge_todo(todo, cur.todo);<br>}<br>// 把当前节点的懒标记下传给左右儿子<br>void spread(int node, int l, int r) {<br>Node& cur = tree[node];<br>F todo = cur.todo;<br>if (todo == TODO_INIT) { // 没有需要下传的信息<br>return;<br>}<br>int m = (l + r) / 2;<br>apply(node * 2, l, m, todo);<br>apply(node * 2 + 1, m + 1, r, todo);<br>cur.todo = TODO_INIT; // 下传完毕<br>}<br>// 合并左右儿子的 val 到当前节点的 val<br>void maintain(int node) {<br>tree[node].val = merge_val(tree[node * 2].val, tree[node * 2 + 1].val);<br>}<br>// 用 a 初始化线段树<br>// 时间复杂度 O(n)<br>void build(const vector<T>& a, int node, int l, int r) {<br>Node& cur = tree[node];<br>cur.todo = TODO_INIT;<br>if (l == r) { // 叶子<br>cur.val = a[l]; // 初始化叶节点的值<br>return;<br>}<br>int m = (l + r) / 2;<br>build(a, node * 2, l, m); // 初始化左子树<br>build(a, node * 2 + 1, m + 1, r); // 初始化右子树<br>maintain(node);<br>}<br>void update(int node, int l, int r, int ql, int qr, F f) {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>apply(node, l, r, f);<br>return;<br>}<br>spread(node, l, r);<br>int m = (l + r) / 2;<br>if (ql <= m) { // 更新左子树<br>update(node * 2, l, m, ql, qr, f);<br>}<br>if (qr > m) { // 更新右子树<br>update(node * 2 + 1, m + 1, r, ql, qr, f);<br>}<br>maintain(node);<br>}<br>T query(int node, int l, int r, int ql, int qr) {<br>if (ql <= l && r <= qr) { // 当前子树完全在 [ql, qr] 内<br>return tree[node].val;<br>}<br>spread(node, l, r);<br>int m = (l + r) / 2;<br>if (qr <= m) { // [ql, qr] 在左子树<br>return query(node * 2, l, m, ql, qr);<br>}<br>if (ql > m) { // [ql, qr] 在右子树<br>return query(node * 2 + 1, m + 1, r, ql, qr);<br>}<br>T l_res = query(node * 2, l, m, ql, qr);<br>T r_res = query(node * 2 + 1, m + 1, r, ql, qr);<br>return merge_val(l_res, r_res);<br>}<br>public:<br>// 线段树维护一个长为 n 的数组（下标从 0 到 n-1），元素初始值为 init_val<br>LazySegmentTree(int n, T init_val = 0) : LazySegmentTree(vector<T>(n, init_val)) {}<br>// 线段树维护数组 a<br>LazySegmentTree(const vector<T>& a) : n(a.size()), tree(2 << bit_width(a.size() - 1)) {<br>build(a, 1, 0, n - 1);<br>}<br>// 用 f 更新 [ql, qr] 中的每个 a[i]<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>void update(int ql, int qr, F f) {<br>update(1, 0, n - 1, ql, qr, f);<br>}<br>// 返回用 merge_val 合并所有 a[i] 的计算结果，其中 i 在闭区间 [ql, qr] 中<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>T query(int ql, int qr) {<br>return query(1, 0, n - 1, ql, qr);<br>}<br>};<br>int main() {<br>LazySegmentTree<long long, long long> t(8); // 默认值为 0<br>t.update(3, 5, 100);<br>t.update(4, 6, 10);<br>cout << t.query(0, 7) << endl;<br>vector<long long> nums = {3, 1, 4, 1, 5, 9, 2, 6};<br>LazySegmentTree<long long, long long> t2(nums);<br>t2.update(3, 5, 1);<br>t2.update(4, 6, 1);<br>cout << t2.query(0, 7) << endl;<br>return 0;<br>}<br>```<br>```go [sol-Go]<br>// 模板来源 https://leetcode.cn/circle/discuss/mOr1u6/<br>// 懒标记初始值<br>const todoInit int = 0 // **根据题目修改**<br>type lazySeg []struct {<br>val  int // **根据题目修改**<br>todo int<br>}<br>// 合并两个 val<br>func (lazySeg) mergeVal(a, b int) int {<br>return a + b // **根据题目修改**<br>}<br>// 合并两个懒标记<br>func (lazySeg) mergeTodo(a, b int) int {<br>return a + b // **根据题目修改**<br>}<br>// 把懒标记作用到 node 子树（本例为区间加）<br>func (t lazySeg) apply(node, l, r int, todo int) {<br>cur := &t[node]<br>// 计算 tree[node] 区间的整体变化<br>cur.val += todo * (r - l + 1) // **根据题目修改**<br>cur.todo = t.mergeTodo(todo, cur.todo)<br>}<br>// 线段树维护一个长为 n 的数组（下标从 0 到 n-1），元素初始值为 initVal<br>func newLazySegmentTree(n int, initVal int) lazySeg {<br>a := make([]int, n)<br>for i := range a {<br>a[i] = initVal<br>}<br>return newLazySegmentTreeWithArray(a)<br>}<br>// 线段树维护数组 a<br>func newLazySegmentTreeWithArray(a []int) lazySeg {<br>n := len(a)<br>t := make(lazySeg, 2<<bits.Len(uint(n-1)))<br>t.build(a, 1, 0, n-1)<br>return t<br>}<br>// 把当前节点的懒标记下传给左右儿子<br>func (t lazySeg) spread(node, l, r int) {<br>// 类似「断点续传」，接着完成之前没完成的下传任务<br>todo := t[node].todo<br>if todo == todoInit { // 没有需要下传的信息<br>return<br>}<br>m := (l + r) / 2<br>t.apply(node*2, l, m, todo)<br>t.apply(node*2+1, m+1, r, todo)<br>t[node].todo = todoInit // 下传完毕<br>}<br>// 合并左右儿子的 val 到当前节点的 val<br>func (t lazySeg) maintain(node int) {<br>t[node].val = t.mergeVal(t[node*2].val, t[node*2+1].val)<br>}<br>// 用 a 初始化线段树<br>// 时间复杂度 O(n)<br>func (t lazySeg) build(a []int, node, l, r int) {<br>t[node].todo = todoInit<br>if l == r { // 叶子<br>t[node].val = a[l] // 初始化叶节点的值<br>return<br>}<br>m := (l + r) / 2<br>t.build(a, node*2, l, m) // 初始化左子树<br>t.build(a, node*2+1, m+1, r) // 初始化右子树<br>t.maintain(node)<br>}<br>// 用 f 更新 [ql, qr] 中的每个 a[i]<br>// 调用 t.update(1, 0, n-1, ql, qr, f)<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>func (t lazySeg) update(node, l, r, ql, qr int, f int) {<br>if ql <= l && r <= qr { // 当前子树完全在 [ql, qr] 内<br>t.apply(node, l, r, f)<br>return<br>}<br>t.spread(node, l, r)<br>m := (l + r) / 2<br>if ql <= m { // 更新左子树<br>t.update(node*2, l, m, ql, qr, f)<br>}<br>if qr > m { // 更新右子树<br>t.update(node*2+1, m+1, r, ql, qr, f)<br>}<br>t.maintain(node)<br>}<br>// 返回用 mergeVal 合并所有 a[i] 的计算结果，其中 i 在闭区间 [ql, qr] 中<br>// 调用 t.query(1, 0, n-1, ql, qr)<br>// 0 <= ql <= qr <= n-1<br>// 时间复杂度 O(log n)<br>func (t lazySeg) query(node, l, r, ql, qr int) int {<br>if ql <= l && r <= qr { // 当前子树完全在 [ql, qr] 内<br>return t[node].val<br>}<br>t.spread(node, l, r)<br>m := (l + r) / 2<br>if qr <= m { // [ql, qr] 在左子树<br>return t.query(node*2, l, m, ql, qr)<br>}<br>if ql > m { // [ql, qr] 在右子树<br>return t.query(node*2+1, m+1, r, ql, qr)<br>}<br>lRes := t.query(node*2, l, m, ql, qr)<br>rRes := t.query(node*2+1, m+1, r, ql, qr)<br>return t.mergeVal(lRes, rRes)<br>}<br>```<br>",
             "src": "",
             "original_src": "",
             "sort": 0,
@@ -8847,5 +8974,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-10-02 23:23:03"
+    "last_update": "2025-10-23 07:27:19"
 } as ProblemCategory;

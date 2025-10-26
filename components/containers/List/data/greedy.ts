@@ -408,6 +408,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "1578. 使绳子变成彩色的最短时间",
+                                    "summary": "",
+                                    "src": "/minimum-time-to-make-rope-colorful/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-time-to-make-rope-colorful/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1574.0392121288,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2567. 修改两个元素的最小分数",
                                     "summary": "",
                                     "src": "/minimum-score-by-changing-two-elements/",
@@ -1018,7 +1032,7 @@ export default{
                         },
                         {
                             "title": "§1.4 从最左/最右开始贪心",
-                            "summary": "对于无法排序的题目，尝试从左到右/从右到左贪心。思考第一个数/最后一个数的贪心策略，把 $n$ 个数的原问题转换成 $n-1$ 个数（或更少）的子问题。<br>读者可以对比下面的题目和 <a href=\"/lc-rating/list/dynamic_programming\">动态规划题单</a> 中的线性 DP、状态机 DP 的区别，思考什么情况下只能 DP 不能贪心，从而加深对「局部最优」和「全局最优」的理解。<br>",
+                            "summary": "对于无法排序的题目，尝试从左到右/从右到左贪心。思考第一个数/最后一个数的贪心策略，把 $n$ 个数的原问题转换成 $n-1$ 个数（或更少）的子问题。<br>读者可以对比下面的题目和 <a href=\"/lc-rating/list/dynamic_programming\">动态规划题单</a> 中的线性 DP、状态机 DP 的区别，思考什么情况下只能 DP 不能贪心，从而加深对「局部最优」和「全局最优」的理解。<br>另见本题单的「**§3.1 字典序最小/最大**」。<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -1273,6 +1287,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1917.1049672432,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "1488. 避免洪水泛滥",
+                                    "summary": "",
+                                    "src": "/avoid-flood-in-the-city/",
+                                    "original_src": "https://leetcode.cn/problems/avoid-flood-in-the-city/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1973.7407637067,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -2065,6 +2093,20 @@ export default{
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3711. 不出现负余额的最大交易额",
+                                    "summary": "",
+                                    "src": "/maximum-transactions-without-negative-balance/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-transactions-without-negative-balance/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
                                     "last_update": ""
                                 },
                                 {
@@ -2973,6 +3015,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3720. 大于目标字符串的最小字典序排列",
+                                    "summary": "",
+                                    "src": "/lexicographically-smallest-permutation-greater-than-target/",
+                                    "original_src": "https://leetcode.cn/problems/lexicographically-smallest-permutation-greater-than-target/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1958.1499109036,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2948. 交换得到字典序最小的数组",
                                     "summary": "",
                                     "src": "/make-lexicographically-smallest-array-by-swapping-elements/",
@@ -3029,20 +3085,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "3302. 字典序最小的合法序列",
-                                    "summary": "",
-                                    "src": "/find-the-lexicographically-smallest-valid-sequence/",
-                                    "original_src": "https://leetcode.cn/problems/find-the-lexicographically-smallest-valid-sequence/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 2473.6778280303,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "3474. 字典序最小的生成字符串",
                                     "summary": "",
                                     "src": "/lexicographically-smallest-generated-string/",
@@ -3051,6 +3093,48 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2605.3698165497,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2048. 下一个更大的数值平衡数",
+                                    "summary": "",
+                                    "src": "/next-greater-numerically-balanced-number/",
+                                    "original_src": "https://leetcode.cn/problems/next-greater-numerically-balanced-number/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1734.0550202798,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3646. 下一个特殊回文数",
+                                    "summary": "",
+                                    "src": "/next-special-palindrome-number/",
+                                    "original_src": "https://leetcode.cn/problems/next-special-palindrome-number/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2445.0201515301,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3348. 最小可整除数位乘积 II",
+                                    "summary": "",
+                                    "src": "/smallest-divisible-digit-product-ii/",
+                                    "original_src": "https://leetcode.cn/problems/smallest-divisible-digit-product-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 3101.4829146106,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4216,20 +4300,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "1526. 形成目标数组的子数组最少增加次数",
-                                    "summary": "",
-                                    "src": "/minimum-number-of-increments-on-subarrays-to-form-a-target-array/",
-                                    "original_src": "https://leetcode.cn/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1872.0350138774,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "2350. 不可能得到的最短骰子序列",
                                     "summary": "",
                                     "src": "/shortest-impossible-sequence-of-rolls/",
@@ -4505,6 +4575,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1463.2825992167,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3702. 按位异或非零的最长子序列",
+                                    "summary": "",
+                                    "src": "/longest-subsequence-with-non-zero-bitwise-xor/",
+                                    "original_src": "https://leetcode.cn/problems/longest-subsequence-with-non-zero-bitwise-xor/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1489.4925546669,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -4875,6 +4959,34 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3353. 最小总操作数",
+                                    "summary": "",
+                                    "src": "/minimum-total-operations/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-total-operations/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "1708. 长度为 K 的最大子数组",
+                                    "summary": "",
+                                    "src": "/largest-subarray-length-k/",
+                                    "original_src": "https://leetcode.cn/problems/largest-subarray-length-k/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3596. 最小花费路径交替方向 I",
                                     "summary": "",
                                     "src": "/minimum-cost-path-with-alternating-directions-i/",
@@ -4954,6 +5066,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1417.3934930077,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3147. 从魔法师身上吸取的最大能量",
+                                    "summary": "",
+                                    "src": "/taking-maximum-energy-from-the-mystic-dungeon/",
+                                    "original_src": "https://leetcode.cn/problems/taking-maximum-energy-from-the-mystic-dungeon/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1460.3224820858,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -5058,6 +5184,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "2543. 判断一个点是否可以到达",
+                                    "summary": "",
+                                    "src": "/check-if-point-is-reachable/",
+                                    "original_src": "https://leetcode.cn/problems/check-if-point-is-reachable/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2220.8257124139,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3307. 找出第 K 个字符 II",
                                     "summary": "",
                                     "src": "/find-the-k-th-character-in-string-game-ii/",
@@ -5126,6 +5266,20 @@ export default{
                                     "nonLeafChild": [],
                                     "isPremium": false,
                                     "last_update": ""
+                                },
+                                {
+                                    "title": "3141. 最大汉明距离",
+                                    "summary": "",
+                                    "src": "/maximum-hamming-distances/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-hamming-distances/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
                                 }
                             ],
                             "nonLeafChild": [],
@@ -5134,7 +5288,7 @@ export default{
                         },
                         {
                             "title": "§5.4 时光倒流",
-                            "summary": "",
+                            "summary": "也是一种逆向思维，单独整理一节。<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -5179,6 +5333,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1853.2804713723,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "1970. 你能穿过矩阵的最后一天",
+                                    "summary": "",
+                                    "src": "/last-day-where-you-can-still-cross/",
+                                    "original_src": "https://leetcode.cn/problems/last-day-where-you-can-still-cross/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2123.5708982185,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -6351,5 +6519,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-09-26 04:40:45"
+    "last_update": "2025-10-24 23:45:54"
 } as ProblemCategory;

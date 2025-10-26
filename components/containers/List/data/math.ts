@@ -434,6 +434,20 @@ export default{
                     "last_update": ""
                 },
                 {
+                    "title": "3715. 完全平方数的祖先个数总和",
+                    "summary": "",
+                    "src": "/sum-of-perfect-square-ancestors/",
+                    "original_src": "https://leetcode.cn/problems/sum-of-perfect-square-ancestors/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2235.444767608,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
                     "title": "2862. 完全子集的最大元素和",
                     "summary": "",
                     "src": "/maximum-element-sum-of-a-complete-subset-of-indices/",
@@ -1444,20 +1458,6 @@ export default{
                             "solution": "",
                             "score": 0,
                             "leafChild": [
-                                {
-                                    "title": "2125. 银行中的激光束数量",
-                                    "summary": "",
-                                    "src": "/number-of-laser-beams-in-a-bank/",
-                                    "original_src": "https://leetcode.cn/problems/number-of-laser-beams-in-a-bank/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1280.2203734882,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
                                 {
                                     "title": "3128. 直角三角形",
                                     "summary": "",
@@ -4939,5 +4939,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-10-09 23:56:49"
+    "last_update": "2025-10-16 23:03:35"
 } as ProblemCategory;

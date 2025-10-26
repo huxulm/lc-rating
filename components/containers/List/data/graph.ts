@@ -24,7 +24,7 @@ export default{
             "nonLeafChild": [
                 {
                     "title": "计算每个连通块的大小",
-                    "summary": "找连通块、判断是否有环（如 207 题）等。部分题目**做法不止一种**。<br>模板（计算每个连通块的大小）：<br>```py [sol-Python3]<br>def solve(n: int, edges: List[List[int]]) -> List[int]:<br>g = [[] for _ in range(n)]<br>for x, y in edges:<br>g[x].append(y)<br>g[y].append(x)  # 无向图<br>vis = [False] * n<br>def dfs(x: int) -> int:<br>vis[x] = True  # 避免重复访问节点<br>size = 1<br>for y in g[x]:<br>if not vis[y]:<br>size += dfs(y)<br>return size<br>ans = []<br>for i, b in enumerate(vis):<br>if not b:  # i 没有访问过<br>size = dfs(i)<br>ans.append(size)<br>return ans<br>```<br>```java [sol-Java]<br>class Solution {<br>public List<Integer> solve(int n, int[][] edges) {<br>// 节点编号从 0 到 n-1<br>List<Integer>[] g = new ArrayList[n];<br>Arrays.setAll(g, _ -> new ArrayList<>());<br>for (int[] e : edges) {<br>int x = e[0];<br>int y = e[1];<br>g[x].add(y);<br>g[y].add(x); // 无向图<br>}<br>// 计算每个连通块的大小<br>List<Integer> ans = new ArrayList<>();<br>boolean[] vis = new boolean[n];<br>for (int i = 0; i < n; i++) {<br>if (!vis[i]) { // i 没有访问过<br>int size = dfs(i, vis, g);<br>ans.add(size);<br>}<br>}<br>return ans;<br>}<br>private int dfs(int x, boolean[] vis, List<Integer>[] g) {<br>vis[x] = true; // 避免重复访问节点<br>int size = 1;<br>for (int y : g[x]) {<br>if (!vis[y]) {<br>size += dfs(y, vis, g);<br>}<br>}<br>return size;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>vector<int> solve(int n, vector<vector<int>>& edges) {<br>// 节点编号从 0 到 n-1<br>vector<vector<int>> g(n);<br>for (auto& e : edges) {<br>int x = e[0], y = e[1];<br>g[x].push_back(y);<br>g[y].push_back(x); // 无向图<br>}<br>vector<int8_t> vis(n);<br>auto dfs = [&](this auto&& dfs, int x) -> int {<br>vis[x] = true; // 避免重复访问节点<br>int size = 1;<br>for (int y : g[x]) {<br>if (!vis[y]) {<br>size += dfs(y);<br>}<br>}<br>return size;<br>};<br>// 计算每个连通块的大小<br>vector<int> ans;<br>for (int i = 0; i < n; i++) {<br>if (!vis[i]) { // i 没有访问过<br>int size = dfs(i);<br>ans.push_back(size);<br>}<br>}<br>return ans;<br>}<br>```<br>```go [sol-Go]<br>func solve(n int, edges [][]int) (ans []int) {<br>// 节点编号从 0 到 n-1<br>g := make([][]int, n)<br>for _, e := range edges {<br>x, y := e[0], e[1]<br>g[x] = append(g[x], y)<br>g[y] = append(g[y], x) // 无向图<br>}<br>vis := make([]bool, n)<br>var dfs func(int) int<br>dfs = func(x int) int {<br>vis[x] = true // 避免重复访问节点<br>size := 1<br>for _, y := range g[x] {<br>if !vis[y] {<br>size += dfs(y)<br>}<br>}<br>return size<br>}<br>// 计算每个连通块的大小<br>for i, b := range vis {<br>if !b { // i 没有访问过<br>size := dfs(i)<br>ans = append(ans, size)<br>}<br>}<br>return<br>}<br>```<br>**思维扩展**：<br>",
+                    "summary": "找连通块、判断是否有环（如 207 题）等。部分题目**做法不止一种**。<br>模板（计算每个连通块的大小）：<br>```py [sol-Python3]<br>def solve(n: int, edges: List[List[int]]) -> List[int]:<br>g = [[] for _ in range(n)]<br>for x, y in edges:<br>g[x].append(y)<br>g[y].append(x)  # 无向图<br>vis = [False] * n<br>def dfs(x: int) -> int:<br>vis[x] = True  # 避免重复访问节点<br>size = 1<br>for y in g[x]:<br>if not vis[y]:<br>size += dfs(y)<br>return size<br>ans = []<br>for i, b in enumerate(vis):<br>if not b:  # i 没有访问过<br>size = dfs(i)<br>ans.append(size)<br>return ans<br>```<br>```java [sol-Java]<br>class Solution {<br>public List<Integer> solve(int n, int[][] edges) {<br>// 节点编号从 0 到 n-1<br>List<Integer>[] g = new ArrayList[n];<br>Arrays.setAll(g, _ -> new ArrayList<>());<br>for (int[] e : edges) {<br>int x = e[0];<br>int y = e[1];<br>g[x].add(y);<br>g[y].add(x); // 无向图<br>}<br>// 计算每个连通块的大小<br>List<Integer> ans = new ArrayList<>();<br>boolean[] vis = new boolean[n];<br>for (int i = 0; i < n; i++) {<br>if (!vis[i]) { // i 没有访问过<br>int size = dfs(i, vis, g);<br>ans.add(size);<br>}<br>}<br>return ans;<br>}<br>private int dfs(int x, boolean[] vis, List<Integer>[] g) {<br>vis[x] = true; // 避免重复访问节点<br>int size = 1;<br>for (int y : g[x]) {<br>if (!vis[y]) {<br>size += dfs(y, vis, g);<br>}<br>}<br>return size;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>vector<int> solve(int n, vector<vector<int>>& edges) {<br>// 节点编号从 0 到 n-1<br>vector<vector<int>> g(n);<br>for (auto& e : edges) {<br>int x = e[0], y = e[1];<br>g[x].push_back(y);<br>g[y].push_back(x); // 无向图<br>}<br>vector<int8_t> vis(n);<br>// lambda 递归<br>auto dfs = [&](this auto&& dfs, int x) -> int {<br>vis[x] = true; // 避免重复访问节点<br>int size = 1;<br>for (int y : g[x]) {<br>if (!vis[y]) {<br>size += dfs(y);<br>}<br>}<br>return size;<br>};<br>// 计算每个连通块的大小<br>vector<int> ans;<br>for (int i = 0; i < n; i++) {<br>if (!vis[i]) { // i 没有访问过<br>int size = dfs(i);<br>ans.push_back(size);<br>}<br>}<br>return ans;<br>}<br>```<br>```go [sol-Go]<br>func solve(n int, edges [][]int) (ans []int) {<br>// 节点编号从 0 到 n-1<br>g := make([][]int, n)<br>for _, e := range edges {<br>x, y := e[0], e[1]<br>g[x] = append(g[x], y)<br>g[y] = append(g[y], x) // 无向图<br>}<br>vis := make([]bool, n)<br>var dfs func(int) int<br>dfs = func(x int) int {<br>vis[x] = true // 避免重复访问节点<br>size := 1<br>for _, y := range g[x] {<br>if !vis[y] {<br>size += dfs(y)<br>}<br>}<br>return size<br>}<br>// 计算每个连通块的大小<br>for i, b := range vis {<br>if !b { // i 没有访问过<br>size := dfs(i)<br>ans = append(ans, size)<br>}<br>}<br>return<br>}<br>```<br>**思维扩展**：<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -265,6 +265,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1962.3314335449,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3695. 交换元素后的最大交替和",
+                            "summary": "",
+                            "src": "/maximize-alternating-sum-using-swaps/",
+                            "original_src": "https://leetcode.cn/problems/maximize-alternating-sum-using-swaps/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1984.157304677,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -1166,7 +1180,7 @@ export default{
                 },
                 {
                     "title": "§2.3 基环树",
-                    "summary": "<a href=\"https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/solution/nei-xiang-ji-huan-shu-tuo-bu-pai-xu-fen-c1i1b/\">基环树介绍</a><br>",
+                    "summary": "<a href=\"https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/solution/nei-xiang-ji-huan-shu-tuo-bu-pai-xu-fen-c1i1b/\">基环树介绍</a><br>**思维扩展**：<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -1298,6 +1312,20 @@ export default{
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": true,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "287. 寻找重复数",
+                            "summary": "",
+                            "src": "/find-the-duplicate-number/",
+                            "original_src": "https://leetcode.cn/problems/find-the-duplicate-number/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
                             "last_update": ""
                         }
                     ],
@@ -2324,47 +2352,118 @@ export default{
                 },
                 {
                     "title": "七、二分图染色",
-                    "summary": "关于二分图的最大匹配，见下面网络流的题目。其中标有「一对一」的题目也可以用带权二分图最大匹配做。<br>",
+                    "summary": "模板（交替染色法）：<br>```py [sol-Python3]<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
                     "isLeaf": false,
                     "solution": "",
                     "score": 0,
-                    "leafChild": [
-                        {
-                            "title": "785. 判断二分图",
-                            "summary": "",
-                            "src": "/is-graph-bipartite/",
-                            "original_src": "https://leetcode.cn/problems/is-graph-bipartite/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1624.9775945043,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "886. 可能的二分法",
-                            "summary": "",
-                            "src": "/possible-bipartition/",
-                            "original_src": "https://leetcode.cn/problems/possible-bipartition/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1794.5827898448,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        }
-                    ],
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                }
+            ],
+            "isPremium": false,
+            "last_update": ""
+        },
+        {
+            "title": "返回图的二染色",
+            "summary": "",
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [],
+            "nonLeafChild": [],
+            "isPremium": false,
+            "last_update": ""
+        },
+        {
+            "title": "如果是二分图，返回每个节点的颜色，用 1 和 2 表示两种颜色",
+            "summary": "",
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [],
+            "nonLeafChild": [],
+            "isPremium": false,
+            "last_update": ""
+        },
+        {
+            "title": "如果不是二分图，返回空列表",
+            "summary": "",
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [],
+            "nonLeafChild": [],
+            "isPremium": false,
+            "last_update": ""
+        },
+        {
+            "title": "从节点 i 开始递归，发现 i 所在连通块不是二分图",
+            "summary": "def colorBipartite(n: int, edges: List[List[int]]) -> List[int]:<br>g = [[] for _ in range(n)]<br>for x, y in edges:<br>g[x].append(y)<br>g[y].append(x)<br>colors = [0] * n<br>def dfs(x: int, c: int) -> bool:<br>colors[x] = c  # 节点 x 染成颜色 c<br>for y in g[x]:<br>if colors[y] == c or \\<br>colors[y] == 0 and not dfs(y, 3 - c):  # 1 和 2 交替染色<br>return False<br>return True<br>for i, c in enumerate(colors):<br>if c == 0 and not dfs(i, 1):<br>return []<br>return colors<br>```<br>```java [sol-Java]<br>class Solution {<br>// 返回图的二染色<br>// 如果是二分图，返回每个节点的颜色，用 1 和 2 表示两种颜色<br>// 如果不是二分图，返回空列表<br>// 时间复杂度 O(n+m)，n 是点数，m 是边数<br>private int[] colorBipartite(int n, int[][] edges) {<br>// 建图（节点编号从 0 到 n-1）<br>List<Integer>[] g = new ArrayList[n];<br>Arrays.setAll(g, _ -> new ArrayList<>());<br>for (int[] e : edges) {<br>int x = e[0], y = e[1];<br>g[x].add(y);<br>g[y].add(x);<br>}<br>// colors[i] = 0 表示未访问节点 i<br>// colors[i] = 1 表示节点 i 为红色<br>// colors[i] = 2 表示节点 i 为蓝色<br>int[] colors = new int[n];<br>for (int i = 0; i < n; i++) {<br>if (colors[i] == 0 && !dfs(i, 1, g, colors)) {<br>// 从节点 i 开始递归，发现 i 所在连通块不是二分图<br>return new int[]{};<br>}<br>}<br>return colors;<br>}<br>private boolean dfs(int x, int c, List<Integer>[] g, int[] colors) {<br>colors[x] = c; // 节点 x 染成颜色 c<br>for (int y : g[x]) {<br>// 邻居 y 的颜色与 x 的相同，说明不是二分图，返回 false<br>// 或者继续递归，发现不是二分图，返回 false<br>if (colors[y] == c ||<br>colors[y] == 0 && !dfs(y, 3 - c, g, colors)) { // 1 和 2 交替染色<br>return false;<br>}<br>}<br>return true;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>// 返回图的二染色<br>// 如果是二分图，返回每个节点的颜色，用 1 和 2 表示两种颜色<br>// 如果不是二分图，返回空列表<br>// 时间复杂度 O(n+m)，n 是点数，m 是边数<br>vector<int8_t> colorBipartite(int n, vector<vector<int>>& edges) {<br>// 建图（节点编号从 0 到 n-1）<br>vector<vector<int>> g(n);<br>for (auto& e : edges) {<br>int x = e[0], y = e[1];<br>g[x].push_back(y);<br>g[y].push_back(x);<br>}<br>// colors[i] = 0 表示未访问节点 i<br>// colors[i] = 1 表示节点 i 为红色<br>// colors[i] = 2 表示节点 i 为蓝色<br>vector<int8_t> colors(n);<br>// lambda 递归<br>auto dfs = [&](this auto&& dfs, int x, int8_t c) -> bool {<br>colors[x] = c; // 节点 x 染成颜色 c<br>for (int y : g[x]) {<br>// 邻居 y 的颜色与 x 的相同，说明不是二分图，返回 false<br>// 或者继续递归，发现不是二分图，返回 false<br>if (colors[y] == c ||<br>colors[y] == 0 && !dfs(y, 3 - c)) { // 1 和 2 交替染色<br>return false;<br>}<br>}<br>return true;<br>};<br>// 可能有多个连通块<br>for (int i = 0; i < n; i++) {<br>if (colors[i] == 0 && !dfs(i, 1)) {<br>// 从节点 i 开始递归，发现 i 所在连通块不是二分图<br>return {};<br>}<br>}<br>return colors;<br>}<br>```<br>```go [sol-Go]<br>// 返回图的二染色<br>// 如果是二分图，返回每个节点的颜色，用 1 和 2 表示两种颜色<br>// 如果不是二分图，返回空列表<br>// 时间复杂度 O(n+m)，n 是点数，m 是边数<br>func colorBipartite(n int, edges [][]int) []int8 {<br>// 建图（节点编号从 0 到 n-1）<br>g := make([][]int, n)<br>for _, e := range edges {<br>x, y := e[0], e[1]<br>g[x] = append(g[x], y)<br>g[y] = append(g[y], x)<br>}<br>// colors[i] = 0 表示未访问节点 i<br>// colors[i] = 1 表示节点 i 为红色<br>// colors[i] = 2 表示节点 i 为蓝色<br>colors := make([]int8, n)<br>var dfs func(int, int8) bool<br>dfs = func(x int, c int8) bool {<br>colors[x] = c // 节点 x 染成颜色 c<br>for _, y := range g[x] {<br>// 邻居 y 的颜色与 x 的相同，说明不是二分图，返回 false<br>// 或者继续递归，发现不是二分图，返回 false<br>if colors[y] == c ||<br>colors[y] == 0 && !dfs(y, 3-c) { // 1 和 2 交替染色<br>return false<br>}<br>}<br>return true<br>}<br>// 可能有多个连通块<br>for i, c := range colors {<br>if c == 0 && !dfs(i, 1) {<br>// 从节点 i 开始递归，发现 i 所在连通块不是二分图<br>return nil<br>}<br>}<br>return colors<br>}<br>```<br>关于二分图的最大匹配，见下面网络流的题目。其中标有「一对一」的题目也可以用带权二分图最大匹配做。<br>",
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [
+                {
+                    "title": "785. 判断二分图",
+                    "summary": "",
+                    "src": "/is-graph-bipartite/",
+                    "original_src": "https://leetcode.cn/problems/is-graph-bipartite/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 1624.9775945043,
+                    "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
                     "last_update": ""
                 },
+                {
+                    "title": "886. 可能的二分法",
+                    "summary": "",
+                    "src": "/possible-bipartition/",
+                    "original_src": "https://leetcode.cn/problems/possible-bipartition/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 1794.5827898448,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "3710. 最大划分因子",
+                    "summary": "",
+                    "src": "/maximum-partition-factor/",
+                    "original_src": "https://leetcode.cn/problems/maximum-partition-factor/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2135.1002785041,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                }
+            ],
+            "nonLeafChild": [
                 {
                     "title": "八、网络流",
                     "summary": "由于有其他做法（比如状压 DP），难度分仅供参考。<br>**模拟费用流**<br>",
@@ -2919,5 +3018,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-09-26 04:23:22"
+    "last_update": "2025-10-13 02:48:30"
 } as ProblemCategory;

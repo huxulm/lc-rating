@@ -298,20 +298,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "3652. 按策略买卖股票的最佳时机",
-                                    "summary": "",
-                                    "src": "/best-time-to-buy-and-sell-stock-using-strategy/",
-                                    "original_src": "https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-using-strategy/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1556.7777620299,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "3439. 重新安排会议得到最多空余时间 I",
                                     "summary": "",
                                     "src": "/reschedule-meetings-for-maximum-free-time-i/",
@@ -334,6 +320,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1739.3005043887,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3652. 按策略买卖股票的最佳时机",
+                                    "summary": "",
+                                    "src": "/best-time-to-buy-and-sell-stock-using-strategy/",
+                                    "original_src": "https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-using-strategy/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1556.7777620299,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1041,34 +1041,6 @@ export default{
                                             "last_update": ""
                                         },
                                         {
-                                            "title": "2968. 执行操作使频率分数最大",
-                                            "summary": "",
-                                            "src": "/apply-operations-to-maximize-frequency-score/",
-                                            "original_src": "https://leetcode.cn/problems/apply-operations-to-maximize-frequency-score/",
-                                            "sort": 0,
-                                            "isLeaf": true,
-                                            "solution": null,
-                                            "score": 2444.2791027022,
-                                            "leafChild": [],
-                                            "nonLeafChild": [],
-                                            "isPremium": false,
-                                            "last_update": ""
-                                        },
-                                        {
-                                            "title": "1040. 移动石子直到连续 II",
-                                            "summary": "",
-                                            "src": "/moving-stones-until-consecutive-ii/",
-                                            "original_src": "https://leetcode.cn/problems/moving-stones-until-consecutive-ii/",
-                                            "sort": 0,
-                                            "isLeaf": true,
-                                            "solution": null,
-                                            "score": 2455.8244137907,
-                                            "leafChild": [],
-                                            "nonLeafChild": [],
-                                            "isPremium": false,
-                                            "last_update": ""
-                                        },
-                                        {
                                             "title": "395. 至少有 K 个重复字符的最长子串",
                                             "summary": "",
                                             "src": "/longest-substring-with-at-least-k-repeating-characters/",
@@ -1091,6 +1063,34 @@ export default{
                                             "isLeaf": true,
                                             "solution": null,
                                             "score": 1521.7133617698,
+                                            "leafChild": [],
+                                            "nonLeafChild": [],
+                                            "isPremium": false,
+                                            "last_update": ""
+                                        },
+                                        {
+                                            "title": "2968. 执行操作使频率分数最大",
+                                            "summary": "",
+                                            "src": "/apply-operations-to-maximize-frequency-score/",
+                                            "original_src": "https://leetcode.cn/problems/apply-operations-to-maximize-frequency-score/",
+                                            "sort": 0,
+                                            "isLeaf": true,
+                                            "solution": null,
+                                            "score": 2444.2791027022,
+                                            "leafChild": [],
+                                            "nonLeafChild": [],
+                                            "isPremium": false,
+                                            "last_update": ""
+                                        },
+                                        {
+                                            "title": "1040. 移动石子直到连续 II",
+                                            "summary": "",
+                                            "src": "/moving-stones-until-consecutive-ii/",
+                                            "original_src": "https://leetcode.cn/problems/moving-stones-until-consecutive-ii/",
+                                            "sort": 0,
+                                            "isLeaf": true,
+                                            "solution": null,
+                                            "score": 2455.8244137907,
                                             "leafChild": [],
                                             "nonLeafChild": [],
                                             "isPremium": false,
@@ -3320,6 +3320,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3708. 最长斐波那契子数组",
+                            "summary": "",
+                            "src": "/longest-fibonacci-subarray/",
+                            "original_src": "https://leetcode.cn/problems/longest-fibonacci-subarray/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1380.867602471,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "696. 计数二进制子串",
                             "summary": "",
                             "src": "/count-binary-substrings/",
@@ -3764,5 +3778,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-10-07 23:45:35"
+    "last_update": "2025-10-20 23:05:24"
 } as ProblemCategory;
