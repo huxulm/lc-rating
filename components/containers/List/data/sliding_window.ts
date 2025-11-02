@@ -3292,6 +3292,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "1513. 仅含 1 的子串数",
+                            "summary": "",
+                            "src": "/number-of-substrings-with-only-1s/",
+                            "original_src": "https://leetcode.cn/problems/number-of-substrings-with-only-1s/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1351.4184681108,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "1957. 删除字符使字符串变好",
                             "summary": "",
                             "src": "/delete-characters-to-make-fancy-string/",
@@ -3778,5 +3792,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-10-20 23:05:24"
+    "last_update": "2025-10-31 22:54:56"
 } as ProblemCategory;

@@ -830,7 +830,7 @@ export default{
             "nonLeafChild": [
                 {
                     "title": "§3.1 0-1 背包",
-                    "summary": "每个物品只能选一次。<br>**进阶**：<br>",
+                    "summary": "每个物品只能选一次，即要么选，要么不选。<br>所以 0-1 背包是「选或不选」的代表。关于「枚举选哪个」的代表，见本题单的「§4.2 最长递增子序列」。<br>**进阶**：<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -1266,7 +1266,7 @@ export default{
                 },
                 {
                     "title": "§3.3 多重背包（选做）",
-                    "summary": "物品可以重复选，有个数限制。<br>**求方案数**<br>**二进制优化**<br>",
+                    "summary": "物品可以重复选，有个数限制。<br>**求方案数**<br>注意求方案数的题目不能用二进制优化。比如从 $6$ 个相同物品中选 $3$ 个，只有一种选法。但按照二进制优化，会把 $6$ 分解为 $1+2+3$，有 $1+2$ 和 $3$ 两种选法。<br>如果要优化，可以考虑用 <a href=\"https://leetcode.cn/problems/count-of-sub-multisets-with-bounded-sum/solutions/2482876/duo-zhong-bei-bao-fang-an-shu-cong-po-su-f5ay/\">同余前缀和</a> 优化。<br>**二进制优化**<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -6788,20 +6788,6 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "3646. 下一个特殊回文数",
-                    "summary": "",
-                    "src": "/next-special-palindrome-number/",
-                    "original_src": "https://leetcode.cn/problems/next-special-palindrome-number/",
-                    "sort": 0,
-                    "isLeaf": true,
-                    "solution": null,
-                    "score": 2445.0201515301,
-                    "leafChild": [],
-                    "nonLeafChild": [],
-                    "isPremium": false,
-                    "last_update": ""
-                },
-                {
                     "title": "3348. 最小可整除数位乘积 II",
                     "summary": "",
                     "src": "/smallest-divisible-digit-product-ii/",
@@ -7479,7 +7465,7 @@ export default{
                         },
                         {
                             "title": "§11.6 矩阵快速幂优化 DP",
-                            "summary": "有两种类型的矩阵快速幂优化 DP：<br>1. 线性 DP（常系数齐次线性递推），转移系数写在第一行，其余行 $m_{i+1,i} = 1$，例如 <a href=\"https://leetcode.cn/problems/climbing-stairs/\">70</a>，<a href=\"https://leetcode.cn/problems/n-th-tribonacci-number/\">1137</a>。<a href=\"https://leetcode.cn/problems/climbing-stairs/solutions/2560716/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-7zm1/\">讲解</a>。<br>2. 多维 DP 或者状态机 DP，转移系数可表示为一个 $k\\times k$ 大小的矩阵，例如 <a href=\"https://leetcode.cn/problems/knight-dialer/\">935</a>。<a href=\"https://leetcode.cn/problems/knight-dialer/solutions/3004116/jiao-ni-yi-bu-bu-si-kao-dpcong-ji-yi-hua-x06l/\">讲解</a>。<br>部分题目可以用 <a href=\"https://oi-wiki.org/math/poly/linear-recurrence/#bostanmori-%E7%AE%97%E6%B3%95\">Bostan-Mori 算法</a> 和 <a href=\"https://oi-wiki.org/math/berlekamp-massey/\">Berlekamp-Massey 算法</a> 进一步优化。<br>",
+                            "summary": "有两种类型的矩阵快速幂优化 DP：<br>1. 线性 DP（常系数齐次线性递推），转移系数写在第一行，其余行 $m_{i+1,i} = 1$，例如 <a href=\"https://leetcode.cn/problems/climbing-stairs/\">70</a>，<a href=\"https://leetcode.cn/problems/n-th-tribonacci-number/\">1137</a>。<a href=\"https://leetcode.cn/problems/climbing-stairs/solutions/2560716/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-7zm1/\">讲解</a>。<br>2. 多维 DP 或者状态机 DP，转移系数可表示为一个 $k\\times k$ 大小的矩阵，例如 <a href=\"https://leetcode.cn/problems/knight-dialer/\">935</a>。<a href=\"https://leetcode.cn/problems/knight-dialer/solutions/3004116/jiao-ni-yi-bu-bu-si-kao-dpcong-ji-yi-hua-x06l/\">讲解</a>。<br>时间复杂度一般为 $\\mathcal{O}(k^3\\log n)$。<br>**进阶做法**：先用 **Berlekamp-Massey 算法**找规律，得到线性递推式，然后用 **Kitamasa 算法**（或者 Bostan-Mori 算法）优化。<br>请看我的知乎科普文章：<br><a href=\"https://zhuanlan.zhihu.com/p/1966417899825665440\">Berlekamp-Massey 算法：如何预测数列的下一项？</a><br><a href=\"https://zhuanlan.zhihu.com/p/1964051212304364939\">Kitamasa 算法：更快地计算线性递推的第 n 项</a><br>具体例子见 3700 题 <a href=\"https://leetcode.cn/problems/number-of-zigzag-arrays-ii/solutions/3794101/ju-zhen-kuai-su-mi-you-hua-dppythonnumpy-77e7/\">我的题解的方法二</a>。<br>时间复杂度一般为 $\\mathcal{O}(k^2\\log n)$。<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -10333,5 +10319,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-10-18 23:42:39"
+    "last_update": "2025-10-28 00:49:58"
 } as ProblemCategory;

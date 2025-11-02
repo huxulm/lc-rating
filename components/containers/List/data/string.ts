@@ -617,7 +617,7 @@ export default{
                 },
                 {
                     "title": "四、字符串哈希",
-                    "summary": "本题单的大多数题目都可以用字符串哈希解决。<br>推荐先把 <a href=\"https://leetcode.cn/problems/find-substring-with-given-hash-value/\">2156. 查找给定哈希值的子串</a> 做了，对理解**多项式哈希**的计算方法有帮助。<br>**模板代码**见 <a href=\"https://leetcode.cn/problems/construct-string-with-minimum-cost/solutions/2833949/hou-zhui-shu-zu-by-endlesscheng-32h9/\">我的题解</a>，包含单模哈希和双模哈希。<br>",
+                    "summary": "本题单的大多数题目都可以用字符串哈希解决。<br>推荐先把 <a href=\"https://leetcode.cn/problems/find-substring-with-given-hash-value/\">2156. 查找给定哈希值的子串</a> 做了，对理解**多项式哈希**的计算方法有帮助。<br>**模板代码**见 <a href=\"https://leetcode.cn/problems/construct-string-with-minimum-cost/solutions/2833949/hou-zhui-shu-zu-by-endlesscheng-32h9/\">我的题解</a>，包含单模哈希和双模哈希。<br>**小技巧**：我们可以用字符串哈希比较两个子串的字典序大小。做法是二分长度，计算最长公共前缀（LCP），然后比较 LCP 的下一个字母。时间复杂度：$\\mathcal{O}(\\log n)$。见 3722 题。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -690,6 +690,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1724.394164934,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3722. 反转后字典序最小的字符串",
+                            "summary": "",
+                            "src": "/lexicographically-smallest-string-after-reverse/",
+                            "original_src": "https://leetcode.cn/problems/lexicographically-smallest-string-after-reverse/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1414.30097998,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -828,7 +842,7 @@ export default{
                 },
                 {
                     "title": "五、最小表示法",
-                    "summary": "定义**循环左移**操作：把字符串 $s$ 的第一个字符 $s[0]$ 移除，添加到 $s$ 的末尾。例如 $\\texttt{abcd}$ 操作一次后得到 $\\texttt{bcda}$。<br>问题：你可以执行任意次循环左移操作，计算你能得到的字典序最小的字符串。<br>**注**：任意次循环左移操作后，得到的字符串叫做 $s$ 的**循环同构串**。<br>```go<br>// 返回 s 的字典序最小的循环同构串<br>// 时间复杂度 O(n)，证明见末尾<br>func smallestRepresentation(s string) string {<br>n := len(s)<br>s += s<br>// 注：如果要返回一个和原串不同的字符串，初始化 i=1, j=2<br>i := 0<br>for j := 1; j < n; {<br>// 暴力比较：是 i 开头的字典序小，还是 j 开头的字典序小？<br>// 相同就继续往后比，至多循环 n 次（如果循环 n 次，说明所有字母都相同，不用再比了）<br>k := 0<br>for k < n && s[i+k] == s[j+k] {<br>k++<br>}<br>if k >= n {<br>break<br>}<br>if s[i+k] < s[j+k] { // 注：如果求字典序最大，改成 ><br>// 从 i 开始比从 j 开始更小（排除 j）<br>// 此外：<br>// 从 i+1 开始比从 j+1 开始更小，所以从 j+1 开始不可能是答案，排除<br>// 从 i+2 开始比从 j+2 开始更小，所以从 j+2 开始不可能是答案，排除<br>// ……<br>// 从 i+k 开始比从 j+k 开始更小，所以从 j+k 开始不可能是答案，排除<br>// 所以下一个「可能是答案」的开始位置是 j+k+1<br>j += k + 1<br>} else {<br>// 从 j 开始比从 i 开始更小，更新 i=j（也意味着我们排除了 i）<br>// 此外：<br>// 从 j+1 开始比从 i+1 开始更小，所以从 i+1 开始不可能是答案，排除<br>// 从 j+2 开始比从 i+2 开始更小，所以从 i+2 开始不可能是答案，排除<br>// ……<br>// 从 j+k 开始比从 i+k 开始更小，所以从 i+k 开始不可能是答案，排除<br>// 所以把 j 跳到 i+k+1，不过这可能比 j+1 小，所以与 j+1 取 max<br>// 综上所述，下一个「可能是答案」的开始位置是 max(j+1, i+k+1)<br>i, j = j, max(j, i+k)+1<br>}<br>// 每次要么排除 k+1 个与 i 相关的位置（这样的位置至多 n 个），要么排除 k+1 个与 j 相关的位置（这样的位置至多 n 个）<br>// 所以上面关于 k 的循环，∑k <= 2n，所以二重循环的总循环次数是 O(n) 的<br>}<br>return s[i : i+n]<br>}<br>```<br>推荐先完成 <a href=\"https://leetcode.cn/problems/last-substring-in-lexicographical-order/\">1163. 按字典序排在最后的子串</a>。<br>",
+                    "summary": "定义**循环左移**操作：把字符串 $s$ 的第一个字符 $s[0]$ 移除，添加到 $s$ 的末尾。例如 $\\texttt{abcd}$ 操作一次后得到 $\\texttt{bcda}$。<br>问题：你可以执行任意次循环左移操作，计算你能得到的字典序最小的字符串。<br>**注**：任意次循环左移操作后，得到的字符串叫做 $s$ 的**循环同构串**。<br>```go<br>// 返回 s 的字典序最小的循环同构串<br>// 时间复杂度 O(n)，证明见末尾<br>func smallestRepresentation(s string) string {<br>n := len(s)<br>s += s<br>// 注：如果要返回一个和原串不同的字符串，初始化 i=1, j=2<br>i := 0<br>for j := 1; j < n; {<br>// 暴力比较：是 i 开头的字典序小，还是 j 开头的字典序小？<br>// 相同就继续往后比，至多循环 n 次（如果循环 n 次，说明所有字母都相同，不用再比了）<br>k := 0<br>for k < n && s[i+k] == s[j+k] {<br>k++<br>}<br>if k >= n {<br>break<br>}<br>if s[i+k] < s[j+k] { // 注：如果求字典序最大，改成 ><br>// 从 i 开始比从 j 开始更小（排除 j）<br>// 此外：<br>// 从 i+1 开始比从 j+1 开始更小，所以从 j+1 开始不可能是答案，排除<br>// 从 i+2 开始比从 j+2 开始更小，所以从 j+2 开始不可能是答案，排除<br>// ……<br>// 从 i+k 开始比从 j+k 开始更小，所以从 j+k 开始不可能是答案，排除<br>// 所以下一个「可能是答案」的开始位置是 j+k+1<br>j += k + 1<br>} else {<br>// 从 j 开始比从 i 开始更小，更新 i=j（也意味着我们排除了 i）<br>// 此外：<br>// 从 j+1 开始比从 i+1 开始更小，所以从 i+1 开始不可能是答案，排除<br>// 从 j+2 开始比从 i+2 开始更小，所以从 i+2 开始不可能是答案，排除<br>// ……<br>// 从 j+k 开始比从 i+k 开始更小，所以从 i+k 开始不可能是答案，排除<br>// 所以把 j 跳到 i+k+1，不过这可能比 j+1 小，所以与 j+1 取 max<br>// 综上所述，下一个「可能是答案」的开始位置是 max(j+1, i+k+1)<br>i, j = j, max(j, i+k)+1<br>}<br>// 每次要么排除 k+1 个与 i 相关的位置（这样的位置至多 n 个），要么排除 k+1 个与 j 相关的位置（这样的位置至多 n 个）<br>// 所以上面关于 k 的循环，∑k <= 2n，所以二重循环的总循环次数是 O(n) 的<br>}<br>return s[i : i+n]<br>}<br>```<br>推荐先完成 <a href=\"https://leetcode.cn/problems/last-substring-in-lexicographical-order/\">1163. 按字典序排在最后的子串</a>，最小表示法是这题的环形版本。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -1077,6 +1091,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3722. 反转后字典序最小的字符串",
+                            "summary": "",
+                            "src": "/lexicographically-smallest-string-after-reverse/",
+                            "original_src": "https://leetcode.cn/problems/lexicographically-smallest-string-after-reverse/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1414.30097998,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "3213. 最小代价构造字符串",
                             "summary": "",
                             "src": "/construct-string-with-minimum-cost/",
@@ -1141,6 +1169,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 1223.3861903833,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3729. 统计有序数组中可被 K 整除的子数组数量",
+                            "summary": "",
+                            "src": "/count-distinct-subarrays-divisible-by-k-in-sorted-array/",
+                            "original_src": "https://leetcode.cn/problems/count-distinct-subarrays-divisible-by-k-in-sorted-array/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2248.0468276972,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -1439,5 +1481,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-10-04 12:20:35"
+    "last_update": "2025-10-30 23:34:05"
 } as ProblemCategory;
