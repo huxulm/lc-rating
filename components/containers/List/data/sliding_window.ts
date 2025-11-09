@@ -3642,6 +3642,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "68. 文本左右对齐",
+                            "summary": "",
+                            "src": "/text-justification/",
+                            "original_src": "https://leetcode.cn/problems/text-justification/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "135. 分发糖果",
                             "summary": "",
                             "src": "/candy/",
@@ -3792,5 +3806,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-10-31 22:54:56"
+    "last_update": "2025-11-05 22:57:22"
 } as ProblemCategory;

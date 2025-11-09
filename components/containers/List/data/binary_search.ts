@@ -24,7 +24,7 @@ export default{
             "nonLeafChild": [
                 {
                     "title": "一、二分查找",
-                    "summary": "",
+                    "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV1AP41137w7/\">二分查找 红蓝染色法【基础算法精讲 04】</a><br>设 $\\textit{nums}$ 为递增（非递减）数组，长为 $n$。<br>| **需求**  | **写法**  |  **如果不存在** |<br>|---|---|---|<br>| $\\ge x$ 的第一个元素的下标  | $\\texttt{lowerBound}(\\textit{nums},x)$  | 结果为 $n$ |<br>| $> x$ 的第一个元素的下标 | $\\texttt{lowerBound}(\\textit{nums},x+1)$  | 结果为 $n$ |<br>| $< x$ 的最后一个元素的下标  | $\\texttt{lowerBound}(\\textit{nums},x)-1$  | 结果为 $-1$ |<br>| $\\le x$ 的最后一个元素的下标  | $\\texttt{lowerBound}(\\textit{nums},x+1)-1$  | 结果为 $-1$ |<br>| **需求**  | **写法**  |<br>|---|---|<br>| $< x$ 的元素个数  | $\\texttt{lowerBound}(\\textit{nums},x)$  |<br>| $\\le x$ 的元素个数 | $\\texttt{lowerBound}(\\textit{nums},x+1)$  |<br>| $\\ge x$ 的元素个数  | $n - \\texttt{lowerBound}(\\textit{nums},x)$  |<br>| $> x$ 的元素个数  | $n - \\texttt{lowerBound}(\\textit{nums},x+1)$  |<br>注意 $< x$ 和 $\\ge x$ 互为补集，二者之和为 $n$。$\\le x$ 和 $> x$ 同理。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -35,7 +35,7 @@ export default{
                     "nonLeafChild": [
                         {
                             "title": "§1.1 基础",
-                            "summary": "请先学习：<a href=\"https://www.bilibili.com/video/BV1AP41137w7/\">二分查找 红蓝染色法【基础算法精讲 04】</a><br>",
+                            "summary": "",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -381,6 +381,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "2476. 二叉搜索树最近节点查询",
+                                    "summary": "",
+                                    "src": "/closest-nodes-queries-in-a-binary-search-tree/",
+                                    "original_src": "https://leetcode.cn/problems/closest-nodes-queries-in-a-binary-search-tree/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1596.9852244916,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1150. 检查一个数是否在数组中占绝大多数",
                                     "summary": "",
                                     "src": "/check-if-a-number-is-majority-element-in-a-sorted-array/",
@@ -427,7 +441,7 @@ export default{
                             "nonLeafChild": [
                                 {
                                     "title": "所以 right 就是最小的满足 check 的值",
-                                    "summary": "**问**：如何把二分答案与数组上的二分查找联系起来？<br>**答**：假设答案在区间 $[2,5]$ 中，我们相当于在一个**虚拟数组** $[\\texttt{check}(2),\\texttt{check}(3),\\texttt{check}(4),\\texttt{check}(5)]$ 中二分找第一个（或者最后一个）值为 $\\texttt{true}$ 的 $\\texttt{check}(i)$。这同样可以用红蓝染色法思考。<br>**问**：有些题目，明明 $m$ 可以是答案，但却不在初始二分区间中。比如闭区间二分初始化 $\\textit{right}=m-1$（或者开区间 $\\textit{right}=m$），这不会算错吗？<br>**答**：不会算错。注意「答案所在区间」和「二分区间」是两个概念。想一想，如果二分的 $\\texttt{while}$ 循环每次更新的都是 $\\textit{left}$，那么最终答案是什么？正好就是 $m$。一般地，如果一开始就能确定 $m$ 一定可以满足题目要求，那么 $m$ 是不需要在二分区间中的。换句话说，二分区间是「尚未确定是否满足题目要求」的数的范围。那些在区间外面的数，都是已确定的满足（不满足）题目要求的数。<br>**问**：什么是循环不变量？<br>**答**：想一想，对于求最小的题目，**开区间二分**的写法，为什么最终返回的是 $\\textit{right}$，而不是别的数？在初始化（循环之前）、循环中、循环结束后，都时时刻刻保证 `check(right) == true` 和 `check(left) == false`，这就叫**循环不变量**。根据循环不变量，循环结束时 `left + 1 == right`，那么 $\\textit{right}$ 就是最小的满足要求的数（因为再 $-1$ 就不满足要求了），所以答案是 $\\textit{right}$。<br>**注**：部分题目可以优化二分边界，减少二分次数，从而减少代码运行时间。对于初次接触二分答案的同学，无需强求自己写出最优的代码，设定一个比较大的二分上界也是可以的。<br>开区间二分模板（求最小）：<br>```py [sol-Python3]<br>class Solution:<br>def binarySearchMin(self, nums: List[int]) -> int:<br>def check(mid: int) -> bool:<br>left =   # 循环不变量：check(left) 恒为 False<br>right =   # 循环不变量：check(right) 恒为 True<br>while left + 1 < right:  # 开区间不为空<br>mid = (left + right) // 2<br>if check(mid):  # 说明 check(>= mid 的数) 均为 True<br>right = mid  # 接下来在 (left, mid) 中二分答案<br>else:  # 说明 check(<= mid 的数) 均为 False<br>left = mid  # 接下来在 (mid, right) 中二分答案<br>return right<br>```<br>```java [sol-Java]<br>class Solution {<br>// 计算满足 check(x) == true 的最小整数 x<br>public int binarySearchMin(int[] nums) {<br>int left = ; // 循环不变量：check(left) 恒为 false<br>int right = ; // 循环不变量：check(right) 恒为 true<br>while (left + 1 < right) { // 开区间不为空<br>int mid = left + (right - left) / 2;<br>if (check(mid, nums)) { // 说明 check(>= mid 的数) 均为 true<br>right = mid; // 接下来在 (left, mid) 中二分答案<br>} else { // 说明 check(<= mid 的数) 均为 false<br>left = mid; // 接下来在 (mid, right) 中二分答案<br>}<br>}<br>// 循环结束后 left+1 = right<br>// 此时 check(left) == false 而 check(left+1) == check(right) == true<br>// 所以 right 就是最小的满足 check 的值<br>return right;<br>}<br>// 二分猜答案：判断 mid 是否满足题目要求<br>private boolean check(int mid, int[] nums) {<br>}<br>}<br>```<br>```cpp [sol-C++]<br>class Solution {<br>public:<br>// 计算满足 check(x) == true 的最小整数 x<br>int binarySearchMin(vector<int>& nums) {<br>// 二分猜答案：判断 mid 是否满足题目要求<br>auto check = [&](int mid) -> bool {<br>};<br>int left = ; // 循环不变量：check(left) 恒为 false<br>int right = ; // 循环不变量：check(right) 恒为 true<br>while (left + 1 < right) { // 开区间不为空<br>int mid = left + (right - left) / 2;<br>if (check(mid)) { // 说明 check(>= mid 的数) 均为 true<br>right = mid; // 接下来在 (left, mid) 中二分答案<br>} else { // 说明 check(<= mid 的数) 均为 false<br>left = mid; // 接下来在 (mid, right) 中二分答案<br>}<br>}<br>// 循环结束后 left+1 = right<br>// 此时 check(left) == false 而 check(left+1) == check(right) == true<br>// 所以 right 就是最小的满足 check 的值<br>return right;<br>}<br>};<br>```<br>```go [sol-Go]<br>// 计算满足 check(x) == true 的最小整数 x<br>func binarySearchMin(nums []int) int {<br>// 二分猜答案：判断 mid 是否满足题目要求<br>check := func(mid int) bool {<br>}<br>left :=  // 循环不变量：check(left) 恒为 false<br>right :=  // 循环不变量：check(right) 恒为 true<br>for left+1 < right { // 开区间不为空<br>mid := left + (right-left)/2<br>if check(mid) { // 说明 check(>= mid 的数) 均为 true<br>right = mid // 接下来在 (left, mid) 中二分答案<br>} else { // 说明 check(<= mid 的数) 均为 false<br>left = mid // 接下来在 (mid, right) 中二分答案<br>}<br>}<br>// 循环结束后 left+1 = right<br>// 此时 check(left) == false 而 check(left+1) == check(right) == true<br>// 所以 right 就是最小的满足 check 的值<br>return right<br>}<br>```<br>**思维扩展**：<br>",
+                                    "summary": "**问**：如何把二分答案与数组上的二分查找联系起来？<br>**答**：假设答案在区间 $[2,5]$ 中，我们相当于在一个**虚拟数组** $[\\texttt{check}(2),\\texttt{check}(3),\\texttt{check}(4),\\texttt{check}(5)]$ 中二分找第一个（或者最后一个）值为 $\\texttt{true}$ 的 $\\texttt{check}(x)$。这同样可以用红蓝染色法思考。<br>**问**：有些题目，明明 $m$ 可以是答案，但却不在初始二分区间中。比如闭区间二分初始化 $\\textit{right}=m-1$（或者开区间 $\\textit{right}=m$），这不会算错吗？<br>**答**：不会算错。注意「答案所在区间」和「二分区间」是两个概念。想一想，如果二分的 $\\texttt{while}$ 循环每次更新的都是 $\\textit{left}$，那么最终答案是什么？正好就是 $m$。一般地，如果一开始就能确定 $m$ 一定可以满足题目要求，那么 $m$ 是不需要在二分区间中的。换句话说，二分区间是「尚未确定是否满足题目要求」的数的范围。那些在区间外面的数，都是已确定的满足（不满足）题目要求的数。<br>**问**：什么是循环不变量？<br>**答**：想一想，对于求最小的题目，**开区间二分**的写法，为什么最终返回的是 $\\textit{right}$，而不是别的数？在初始化（循环之前）、循环中、循环结束后，都时时刻刻保证 `check(right) == true` 和 `check(left) == false`，这就叫**循环不变量**。根据循环不变量，循环结束时 $\\textit{left}+1=\\textit{right}$，那么 $\\textit{right}$ 就是最小的满足要求的数（因为再 $-1$ 就不满足要求了），所以答案是 $\\textit{right}$。<br>**注**：部分题目可以优化二分边界，减少二分次数，从而减少代码运行时间。对于初次接触二分答案的同学，无需强求自己写出最优的代码，设定一个比较大的二分上界也是可以的。<br>开区间二分模板（求最小）：<br>```py [sol-Python3]<br>class Solution:<br>def binarySearchMin(self, nums: List[int]) -> int:<br>def check(mid: int) -> bool:<br>left =   # 循环不变量：check(left) 恒为 False<br>right =   # 循环不变量：check(right) 恒为 True<br>while left + 1 < right:  # 开区间不为空<br>mid = (left + right) // 2<br>if check(mid):  # 说明 check(>= mid 的数) 均为 True<br>right = mid  # 接下来在 (left, mid) 中二分答案<br>else:  # 说明 check(<= mid 的数) 均为 False<br>left = mid  # 接下来在 (mid, right) 中二分答案<br>return right<br>```<br>```java [sol-Java]<br>class Solution {<br>// 计算满足 check(x) == true 的最小整数 x<br>public int binarySearchMin(int[] nums) {<br>int left = ; // 循环不变量：check(left) 恒为 false<br>int right = ; // 循环不变量：check(right) 恒为 true<br>while (left + 1 < right) { // 开区间不为空<br>int mid = left + (right - left) / 2;<br>if (check(mid, nums)) { // 说明 check(>= mid 的数) 均为 true<br>right = mid; // 接下来在 (left, mid) 中二分答案<br>} else { // 说明 check(<= mid 的数) 均为 false<br>left = mid; // 接下来在 (mid, right) 中二分答案<br>}<br>}<br>// 循环结束后 left+1 = right<br>// 此时 check(left) == false 而 check(left+1) == check(right) == true<br>// 所以 right 就是最小的满足 check 的值<br>return right;<br>}<br>// 二分猜答案：判断 mid 是否满足题目要求<br>private boolean check(int mid, int[] nums) {<br>}<br>}<br>```<br>```cpp [sol-C++]<br>class Solution {<br>public:<br>// 计算满足 check(x) == true 的最小整数 x<br>int binarySearchMin(vector<int>& nums) {<br>// 二分猜答案：判断 mid 是否满足题目要求<br>auto check = [&](int mid) -> bool {<br>};<br>int left = ; // 循环不变量：check(left) 恒为 false<br>int right = ; // 循环不变量：check(right) 恒为 true<br>while (left + 1 < right) { // 开区间不为空<br>int mid = left + (right - left) / 2;<br>if (check(mid)) { // 说明 check(>= mid 的数) 均为 true<br>right = mid; // 接下来在 (left, mid) 中二分答案<br>} else { // 说明 check(<= mid 的数) 均为 false<br>left = mid; // 接下来在 (mid, right) 中二分答案<br>}<br>}<br>// 循环结束后 left+1 = right<br>// 此时 check(left) == false 而 check(left+1) == check(right) == true<br>// 所以 right 就是最小的满足 check 的值<br>return right;<br>}<br>};<br>```<br>```go [sol-Go]<br>// 计算满足 check(x) == true 的最小整数 x<br>func binarySearchMin(nums []int) int {<br>// 二分猜答案：判断 mid 是否满足题目要求<br>check := func(mid int) bool {<br>}<br>left :=  // 循环不变量：check(left) 恒为 false<br>right :=  // 循环不变量：check(right) 恒为 true<br>for left+1 < right { // 开区间不为空<br>mid := left + (right-left)/2<br>if check(mid) { // 说明 check(>= mid 的数) 均为 true<br>right = mid // 接下来在 (left, mid) 中二分答案<br>} else { // 说明 check(<= mid 的数) 均为 false<br>left = mid // 接下来在 (mid, right) 中二分答案<br>}<br>}<br>// 循环结束后 left+1 = right<br>// 此时 check(left) == false 而 check(left+1) == check(right) == true<br>// 所以 right 就是最小的满足 check 的值<br>return right<br>}<br>```<br>**思维扩展**：<br>",
                                     "src": "",
                                     "original_src": "",
                                     "sort": 0,
@@ -875,6 +889,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3344. 最大尺寸数组",
+                                    "summary": "",
+                                    "src": "/maximum-sized-array/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-sized-array/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "644. 子数组最大平均数 II",
                                     "summary": "",
                                     "src": "/maximum-average-subarray-ii/",
@@ -1101,6 +1129,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3733. 完成所有送货任务的最少时间",
+                                    "summary": "",
+                                    "src": "/minimum-time-to-complete-all-deliveries/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-time-to-complete-all-deliveries/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1972.7630060106,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3399. 字符相同的最短子字符串 II",
                                     "summary": "",
                                     "src": "/smallest-substring-with-identical-characters-ii/",
@@ -1222,6 +1264,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1919.7433862082,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3710. 最大划分因子",
+                                    "summary": "",
+                                    "src": "/maximum-partition-factor/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-partition-factor/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2135.1002785041,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1537,6 +1593,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3691. 最大子数组总值 II",
+                                    "summary": "",
+                                    "src": "/maximum-total-subarray-value-ii/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-total-subarray-value-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2469.013888267,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3520. 逆序对计数的最小阈值",
                                     "summary": "",
                                     "src": "/minimum-threshold-for-inversion-pairs-count/",
@@ -1574,7 +1644,36 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "三、其他",
+                    "title": "三、三分法",
+                    "summary": "",
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
+                        {
+                            "title": "1515. 服务中心的最佳位置",
+                            "summary": "",
+                            "src": "/best-position-for-a-service-centre/",
+                            "original_src": "https://leetcode.cn/problems/best-position-for-a-service-centre/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2156.9515428364,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        }
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "四、其他",
                     "summary": "",
                     "src": "",
                     "original_src": "",
@@ -1606,20 +1705,6 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": null,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "2476. 二叉搜索树最近节点查询",
-                            "summary": "",
-                            "src": "/closest-nodes-queries-in-a-binary-search-tree/",
-                            "original_src": "https://leetcode.cn/problems/closest-nodes-queries-in-a-binary-search-tree/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 1596.9852244916,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -1954,7 +2039,7 @@ export default{
                 },
                 {
                     "title": "算法题单",
-                    "summary": "<a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题？</a><br>1. <a href=\"/lc-rating/list/sliding_window\">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a><br>2. <a href=\"/lc-rating/list/binary_search\">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a><br>3. <a href=\"/lc-rating/list/monotonic_stack\">单调栈（基础/矩形面积/贡献法/最小字典序）</a><br>4. <a href=\"/lc-rating/list/grid\">网格图（DFS/BFS/综合应用）</a><br>5. <a href=\"/lc-rating/list/bitwise_operations\">位运算（基础/性质/拆位/试填/恒等式/思维）</a><br>6. <a href=\"/lc-rating/list/graph\">图论算法（DFS/BFS/拓扑排序/基环树/最短路/最小生成树/网络流）</a><br>7. <a href=\"/lc-rating/list/dynamic_programming\">动态规划（入门/背包/划分/状态机/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a><br>8. <a href=\"/lc-rating/list/data_structure\">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a><br>9. <a href=\"/lc-rating/list/math\">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a><br>10. <a href=\"/lc-rating/list/greedy\">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a><br>11. <a href=\"/lc-rating/list/trees\">链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）</a><br>12. <a href=\"/lc-rating/list/string\">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a><br><a href=\"https://github.com/EndlessCheng/codeforces-go/blob/master/leetcode/SOLUTIONS.md\">我的题解精选（已分类）</a><br>欢迎关注 <a href=\"https://space.bilibili.com/206214\">B站@灵茶山艾府</a><br>如果你发现有题目可以补充进来，欢迎评论反馈。<br>",
+                    "summary": "<a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题？</a><br>1. <a href=\"/lc-rating/list/sliding_window\">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a><br>2. <a href=\"/lc-rating/list/binary_search\">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a><br>3. <a href=\"/lc-rating/list/monotonic_stack\">单调栈（基础/矩形面积/贡献法/最小字典序）</a><br>4. <a href=\"/lc-rating/list/grid\">网格图（DFS/BFS/综合应用）</a><br>5. <a href=\"/lc-rating/list/bitwise_operations\">位运算（基础/性质/拆位/试填/恒等式/思维）</a><br>6. <a href=\"/lc-rating/list/graph\">图论算法（DFS/BFS/拓扑排序/基环树/最短路/最小生成树/网络流）</a><br>7. <a href=\"/lc-rating/list/dynamic_programming\">动态规划（入门/背包/划分/状态机/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a><br>8. <a href=\"/lc-rating/list/data_structure\">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a><br>9. <a href=\"/lc-rating/list/math\">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a><br>10. <a href=\"/lc-rating/list/greedy\">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a><br>11. <a href=\"/lc-rating/list/trees\">链表、树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA）</a><br>12. <a href=\"/lc-rating/list/string\">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a><br><a href=\"https://github.com/EndlessCheng/codeforces-go/blob/master/leetcode/SOLUTIONS.md\">我的题解精选（已分类）</a><br>欢迎关注 <a href=\"https://space.bilibili.com/206214\">B站@灵茶山艾府</a><br>如果你发现有题目可以补充进来，欢迎评论反馈。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -1972,5 +2057,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-08-15 23:47:07"
+    "last_update": "2025-11-07 23:47:26"
 } as ProblemCategory;

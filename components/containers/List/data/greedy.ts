@@ -366,6 +366,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3727. 最大交替平方和",
+                                    "summary": "",
+                                    "src": "/maximum-alternating-sum-of-squares/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-alternating-sum-of-squares/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1454.9306123736,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1647. 字符频次唯一的最小删除次数",
                                     "summary": "",
                                     "src": "/minimum-deletions-to-make-character-frequencies-unique/",
@@ -608,6 +622,20 @@ export default{
                                     "summary": "",
                                     "src": "/minimum-health-to-beat-game/",
                                     "original_src": "https://leetcode.cn/problems/minimum-health-to-beat-game/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3730. 跳跃燃烧的最大卡路里",
+                                    "summary": "",
+                                    "src": "/maximum-calories-burnt-from-jumps/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-calories-burnt-from-jumps/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
@@ -2670,7 +2698,7 @@ export default{
                     "nonLeafChild": [
                         {
                             "title": "§3.1 字典序最小/最大",
-                            "summary": "**字典序**的定义如下：<br>- 对于两个字符串 $a$ 和 $b$，从左到右依次比较字符 $a[i]$ 和 $b[i]$ 的 ASCII 值的大小。<br>- $a[i]\\ne b[i]$ 时，如果 $a[i]<b[i]$，那么 $a$ 的字典序更小，否则 $b$ 的字典序更小。<br>- 如果没有出现 $a[i]\\ne b[i]$，则短的字符串字典序更小。<br>- 如果两个字符串的长度和内容均相同，那么两个字符串的字典序一样。<br>字典序的定义也可以推广到数组上，按照上述方法比较两个数组的字典序。<br>",
+                            "summary": "**字典序**的定义如下：<br>- 对于两个字符串 $a$ 和 $b$，从左到右依次比较字符 $a[i]$ 和 $b[i]$ 的 ASCII 值的大小。<br>- $a[i]\\ne b[i]$ 时，如果 $a[i]<b[i]$，那么 $a$ 的字典序更小，否则 $b$ 的字典序更小。<br>- 如果没有出现 $a[i]\\ne b[i]$，则短的字符串字典序更小。<br>- 如果两个字符串的长度和内容均相同，那么两个字符串的字典序一样。<br>字典序的定义也可以推广到数组上，按照上述方法比较两个数组的字典序。<br>**倒序贪心**：<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -2875,6 +2903,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3723. 数位平方和的最大值",
+                                    "summary": "",
+                                    "src": "/maximize-sum-of-squares-of-digits/",
+                                    "original_src": "https://leetcode.cn/problems/maximize-sum-of-squares-of-digits/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1536.5526318546,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1053. 交换一次的先前排列",
                                     "summary": "",
                                     "src": "/previous-permutation-with-one-swap/",
@@ -3015,20 +3057,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "3720. 大于目标字符串的最小字典序排列",
-                                    "summary": "",
-                                    "src": "/lexicographically-smallest-permutation-greater-than-target/",
-                                    "original_src": "https://leetcode.cn/problems/lexicographically-smallest-permutation-greater-than-target/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1958.1499109036,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "2948. 交换得到字典序最小的数组",
                                     "summary": "",
                                     "src": "/make-lexicographically-smallest-array-by-swapping-elements/",
@@ -3071,20 +3099,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "2663. 字典序最小的美丽字符串",
-                                    "summary": "",
-                                    "src": "/lexicographically-smallest-beautiful-string/",
-                                    "original_src": "https://leetcode.cn/problems/lexicographically-smallest-beautiful-string/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 2415.7434855724,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "3474. 字典序最小的生成字符串",
                                     "summary": "",
                                     "src": "/lexicographically-smallest-generated-string/",
@@ -3093,6 +3107,76 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2605.3698165497,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "555. 分割连接字符串",
+                                    "summary": "",
+                                    "src": "/split-concatenated-strings/",
+                                    "original_src": "https://leetcode.cn/problems/split-concatenated-strings/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3088. 使字符串反回文",
+                                    "summary": "",
+                                    "src": "/make-string-anti-palindrome/",
+                                    "original_src": "https://leetcode.cn/problems/make-string-anti-palindrome/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3720. 大于目标字符串的最小字典序排列",
+                                    "summary": "",
+                                    "src": "/lexicographically-smallest-permutation-greater-than-target/",
+                                    "original_src": "https://leetcode.cn/problems/lexicographically-smallest-permutation-greater-than-target/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1958.1499109036,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3734. 大于目标字符串的最小字典序回文排列",
+                                    "summary": "",
+                                    "src": "/lexicographically-smallest-palindromic-permutation-greater-than-target/",
+                                    "original_src": "https://leetcode.cn/problems/lexicographically-smallest-palindromic-permutation-greater-than-target/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2330.0340161395,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2663. 字典序最小的美丽字符串",
+                                    "summary": "",
+                                    "src": "/lexicographically-smallest-beautiful-string/",
+                                    "original_src": "https://leetcode.cn/problems/lexicographically-smallest-beautiful-string/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2415.7434855724,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -3138,34 +3222,6 @@ export default{
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "555. 分割连接字符串",
-                                    "summary": "",
-                                    "src": "/split-concatenated-strings/",
-                                    "original_src": "https://leetcode.cn/problems/split-concatenated-strings/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": null,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": true,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "3088. 使字符串反回文",
-                                    "summary": "",
-                                    "src": "/make-string-anti-palindrome/",
-                                    "original_src": "https://leetcode.cn/problems/make-string-anti-palindrome/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": null,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": true,
                                     "last_update": ""
                                 }
                             ],
@@ -3360,6 +3416,34 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3734. 大于目标字符串的最小字典序回文排列",
+                                    "summary": "",
+                                    "src": "/lexicographically-smallest-palindromic-permutation-greater-than-target/",
+                                    "original_src": "https://leetcode.cn/problems/lexicographically-smallest-palindromic-permutation-greater-than-target/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2330.0340161395,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3646. 下一个特殊回文数",
+                                    "summary": "",
+                                    "src": "/next-special-palindrome-number/",
+                                    "original_src": "https://leetcode.cn/problems/next-special-palindrome-number/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2445.0201515301,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -3607,6 +3691,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3732. 一次替换后的三元素最大乘积",
+                                    "summary": "",
+                                    "src": "/maximum-product-of-three-elements-after-one-replacement/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-product-of-three-elements-after-one-replacement/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1529.058042147,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1567. 乘积为正数的最长子数组长度",
                                     "summary": "",
                                     "src": "/maximum-length-of-subarray-with-positive-product/",
@@ -3813,6 +3911,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2127.5100545681,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3723. 数位平方和的最大值",
+                                    "summary": "",
+                                    "src": "/maximize-sum-of-squares-of-digits/",
+                                    "original_src": "https://leetcode.cn/problems/maximize-sum-of-squares-of-digits/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1536.5526318546,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -6271,6 +6383,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "3724. 转换数组的最少操作次数",
+                            "summary": "",
+                            "src": "/minimum-operations-to-transform-array/",
+                            "original_src": "https://leetcode.cn/problems/minimum-operations-to-transform-array/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 1789.9076553122,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "134. 加油站",
                             "summary": "",
                             "src": "/gas-station/",
@@ -6363,6 +6489,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2239.7101856677,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "1611. 使整数变为 0 的最少操作次数",
+                            "summary": "",
+                            "src": "/minimum-one-bit-operations-to-make-integers-zero/",
+                            "original_src": "https://leetcode.cn/problems/minimum-one-bit-operations-to-make-integers-zero/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2345.3418191684,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -6501,7 +6641,7 @@ export default{
                 },
                 {
                     "title": "算法题单",
-                    "summary": "<a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题？</a><br>1. <a href=\"/lc-rating/list/sliding_window\">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a><br>2. <a href=\"/lc-rating/list/binary_search\">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a><br>3. <a href=\"/lc-rating/list/monotonic_stack\">单调栈（基础/矩形面积/贡献法/最小字典序）</a><br>4. <a href=\"/lc-rating/list/grid\">网格图（DFS/BFS/综合应用）</a><br>5. <a href=\"/lc-rating/list/bitwise_operations\">位运算（基础/性质/拆位/试填/恒等式/思维）</a><br>6. <a href=\"/lc-rating/list/graph\">图论算法（DFS/BFS/拓扑排序/基环树/最短路/最小生成树/网络流）</a><br>7. <a href=\"/lc-rating/list/dynamic_programming\">动态规划（入门/背包/划分/状态机/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a><br>8. <a href=\"/lc-rating/list/data_structure\">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a><br>9. <a href=\"/lc-rating/list/math\">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a><br>10. <a href=\"/lc-rating/list/greedy\">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a><br>11. <a href=\"/lc-rating/list/trees\">链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）</a><br>12. <a href=\"/lc-rating/list/string\">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a><br><a href=\"https://github.com/EndlessCheng/codeforces-go/blob/master/leetcode/SOLUTIONS.md\">我的题解精选（已分类）</a><br>欢迎关注 <a href=\"https://space.bilibili.com/206214\">B站@灵茶山艾府</a><br>如果你发现有题目可以补充进来，欢迎评论反馈。<br>",
+                    "summary": "<a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题？</a><br>1. <a href=\"/lc-rating/list/sliding_window\">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a><br>2. <a href=\"/lc-rating/list/binary_search\">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a><br>3. <a href=\"/lc-rating/list/monotonic_stack\">单调栈（基础/矩形面积/贡献法/最小字典序）</a><br>4. <a href=\"/lc-rating/list/grid\">网格图（DFS/BFS/综合应用）</a><br>5. <a href=\"/lc-rating/list/bitwise_operations\">位运算（基础/性质/拆位/试填/恒等式/思维）</a><br>6. <a href=\"/lc-rating/list/graph\">图论算法（DFS/BFS/拓扑排序/基环树/最短路/最小生成树/网络流）</a><br>7. <a href=\"/lc-rating/list/dynamic_programming\">动态规划（入门/背包/划分/状态机/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a><br>8. <a href=\"/lc-rating/list/data_structure\">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a><br>9. <a href=\"/lc-rating/list/math\">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a><br>10. <a href=\"/lc-rating/list/greedy\">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a><br>11. <a href=\"/lc-rating/list/trees\">链表、树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA）</a><br>12. <a href=\"/lc-rating/list/string\">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a><br><a href=\"https://github.com/EndlessCheng/codeforces-go/blob/master/leetcode/SOLUTIONS.md\">我的题解精选（已分类）</a><br>欢迎关注 <a href=\"https://space.bilibili.com/206214\">B站@灵茶山艾府</a><br>如果你发现有题目可以补充进来，欢迎评论反馈。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -6519,5 +6659,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-10-24 23:45:54"
+    "last_update": "2025-11-07 00:04:50"
 } as ProblemCategory;
