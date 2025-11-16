@@ -612,7 +612,7 @@ export default{
                         },
                         {
                             "title": "§0.2 枚举中间",
-                            "summary": "对于三个或者四个变量的问题，枚举中间的变量往往更好算。<br>为什么？比如问题有三个下标，需要满足 $0\\le i<j<k<n$，对比一下：<br>- 枚举 $i$，后续计算中还需保证 $j < k$。<br>- 枚举 $j$，那么 $i$ 和 $k$ 自动被 $j$ 隔开，互相独立，后续计算中无需关心 $i$ 和 $k$ 的位置关系。<br>所以枚举中间的变量更简单。<br>",
+                            "summary": "对于有三个或者四个变量的问题，枚举中间的变量往往更好算。<br>为什么？比如问题有三个下标，需要满足 $0\\le i<j<k<n$，对比一下：<br>- 枚举 $i$，后续计算中还需保证 $j < k$。<br>- 枚举 $j$，那么 $i$ 和 $k$ 自动被 $j$ 隔开，互相独立，后续计算中无需关心 $i$ 和 $k$ 的位置关系。<br>所以枚举中间的变量更简单。<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -1114,20 +1114,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "1989. 捉迷藏中可捕获的最大人数",
-                                    "summary": "",
-                                    "src": "/maximum-number-of-people-that-can-be-caught-in-tag/",
-                                    "original_src": "https://leetcode.cn/problems/maximum-number-of-people-that-can-be-caught-in-tag/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": null,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": true,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "3511. 构造正数组",
                                     "summary": "",
                                     "src": "/make-a-positive-array/",
@@ -1437,6 +1423,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3739. 统计主要元素子数组数目 II",
+                                    "summary": "",
+                                    "src": "/count-subarrays-with-majority-element-ii/",
+                                    "original_src": "https://leetcode.cn/problems/count-subarrays-with-majority-element-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2089.8733559225,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "1074. 元素和为目标值的子矩阵数量",
                                     "summary": "",
                                     "src": "/number-of-submatrices-that-sum-to-target/",
@@ -1577,6 +1577,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "2031. 1 比 0 多的子数组个数",
+                                    "summary": "",
+                                    "src": "/count-subarrays-with-more-ones-than-zeros/",
+                                    "original_src": "https://leetcode.cn/problems/count-subarrays-with-more-ones-than-zeros/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2950. 可整除子串的数量",
                                     "summary": "",
                                     "src": "/number-of-divisible-substrings/",
@@ -1616,6 +1630,34 @@ export default{
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3739. 统计主要元素子数组数目 II",
+                                    "summary": "",
+                                    "src": "/count-subarrays-with-majority-element-ii/",
+                                    "original_src": "https://leetcode.cn/problems/count-subarrays-with-majority-element-ii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2089.8733559225,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2031. 1 比 0 多的子数组个数",
+                                    "summary": "",
+                                    "src": "/count-subarrays-with-more-ones-than-zeros/",
+                                    "original_src": "https://leetcode.cn/problems/count-subarrays-with-more-ones-than-zeros/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
                                     "last_update": ""
                                 },
                                 {
@@ -3720,6 +3762,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "65. 有效数字",
+                                    "summary": "",
+                                    "src": "/valid-number/",
+                                    "original_src": "https://leetcode.cn/problems/valid-number/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "770. 基本计算器 IV",
                                     "summary": "",
                                     "src": "/basic-calculator-iv/",
@@ -4173,7 +4229,7 @@ export default{
         },
         {
             "title": "由于队首到队尾单调递减，所以窗口最大值就在队首",
-            "summary": "def maxSlidingWindow(nums: List[int], k: int) -> List[int]:<br>ans = [0] * (len(nums) - k + 1)  # 窗口个数<br>q = deque()  # 双端队列<br>for i, x in enumerate(nums):<br>while q and nums[q[-1]] <= x:<br>q.pop()  # 维护 q 的单调性<br>q.append(i)  # 注意保存的是下标，这样下面可以判断队首是否离开窗口<br>left = i - k + 1  # 窗口左端点<br>if q[0] < left:  # 队首离开窗口<br>q.popleft()<br>if left >= 0:<br>ans[left] = nums[q[0]]<br>return ans<br>```<br>```java [sol-Java]<br>class Solution {<br>// 计算 nums 的每个长为 k 的窗口的最大值<br>// 时间复杂度 O(n)，其中 n 是 nums 的长度<br>private int[] maxSlidingWindow(int[] nums, int k) {<br>int n = nums.length;<br>int[] ans = new int[n - k + 1]; // 窗口个数<br>Deque<Integer> q = new ArrayDeque<>();<br>for (int i = 0; i < n; i++) {<br>// 1. 右边入<br>while (!q.isEmpty() && nums[q.getLast()] <= nums[i]) {<br>q.removeLast(); // 维护 q 的单调性<br>}<br>q.addLast(i); // 注意保存的是下标，这样下面可以判断队首是否离开窗口<br>// 2. 左边出<br>int left = i - k + 1; // 窗口左端点<br>if (q.getFirst() < left) { // 队首离开窗口<br>q.removeFirst();<br>}<br>// 3. 在窗口左端点处记录答案<br>if (left >= 0) {<br>// 由于队首到队尾单调递减，所以窗口最大值就在队首<br>ans[left] = nums[q.getFirst()];<br>}<br>}<br>return ans;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>// 计算 nums 的每个长为 k 的窗口的最大值<br>// 时间复杂度 O(n)，其中 n 是 nums 的长度<br>vector<int> maxSlidingWindow(vector<int>& nums, int k) {<br>int n = nums.size();<br>vector<int> ans(n - k + 1); // 窗口个数<br>deque<int> q; // 双端队列<br>for (int i = 0; i < n; i++) {<br>// 1. 右边入<br>while (!q.empty() && nums[q.back()] <= nums[i]) {<br>q.pop_back(); // 维护 q 的单调性<br>}<br>q.push_back(i); // 注意保存的是下标，这样下面可以判断队首是否离开窗口<br>// 2. 左边出<br>int left = i - k + 1; // 窗口左端点<br>if (q.front() < left) { // 队首离开窗口<br>q.pop_front();<br>}<br>// 3. 在窗口左端点处记录答案<br>if (left >= 0) {<br>// 由于队首到队尾单调递减，所以窗口最大值就在队首<br>ans[left] = nums[q.front()];<br>}<br>}<br>return ans;<br>}<br>```<br>```go [sol-Go]<br>// 计算 nums 的每个长为 k 的窗口的最大值<br>// 时间复杂度 O(n)，其中 n 是 nums 的长度<br>func maxSlidingWindow(nums []int, k int) []int {<br>ans := make([]int, len(nums)-k+1) // 窗口个数<br>q := []int{}<br>for i, x := range nums {<br>// 1. 右边入<br>for len(q) > 0 && nums[q[len(q)-1]] <= x {<br>q = q[:len(q)-1] // 维护 q 的单调性<br>}<br>q = append(q, i) // 注意保存的是下标，这样下面可以判断队首是否离开窗口<br>// 2. 左边出<br>left := i - k + 1 // 窗口左端点<br>if q[0] < left {  // 队首离开窗口<br>q = q[1:] // Go 的切片是 O(1) 的<br>}<br>// 3. 在窗口左端点处记录答案<br>if left >= 0 {<br>// 由于队首到队尾单调递减，所以窗口最大值就在队首<br>ans[left] = nums[q[0]]<br>}<br>}<br>return ans<br>}<br>```<br>关于单调队列优化 DP，见 <a href=\"/lc-rating/list/dynamic_programming\">动态规划题单</a> 中的「§11.3 单调队列优化 DP」。<br>",
+            "summary": "def maxSlidingWindow(nums: List[int], k: int) -> List[int]:<br>ans = [0] * (len(nums) - k + 1)  # 窗口个数<br>q = deque()  # 双端队列<br>for i, x in enumerate(nums):<br>while q and nums[q[-1]] <= x:<br>q.pop()  # 维护 q 的单调性<br>q.append(i)  # 注意保存的是下标，这样下面可以判断队首是否离开窗口<br>left = i - k + 1  # 窗口左端点<br>if q[0] < left:  # 队首离开窗口<br>q.popleft()<br>if left >= 0:<br>ans[left] = nums[q[0]]<br>return ans<br>```<br>```java [sol-Java]<br>class Solution {<br>// 计算 nums 的每个长为 k 的窗口的最大值<br>// 时间复杂度 O(n)，其中 n 是 nums 的长度<br>private int[] maxSlidingWindow(int[] nums, int k) {<br>int n = nums.length;<br>int[] ans = new int[n - k + 1]; // 窗口个数<br>Deque<Integer> q = new ArrayDeque<>();<br>for (int i = 0; i < n; i++) {<br>// 1. 右边入<br>while (!q.isEmpty() && nums[q.getLast()] <= nums[i]) {<br>q.removeLast(); // 维护 q 的单调性<br>}<br>q.addLast(i); // 注意保存的是下标，这样下面可以判断队首是否离开窗口<br>// 2. 左边出<br>int left = i - k + 1; // 窗口左端点<br>if (q.getFirst() < left) { // 队首离开窗口<br>q.removeFirst();<br>}<br>// 3. 在窗口左端点处记录答案<br>if (left >= 0) {<br>// 由于队首到队尾单调递减，所以窗口最大值就在队首<br>ans[left] = nums[q.getFirst()];<br>}<br>}<br>return ans;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>// 计算 nums 的每个长为 k 的窗口的最大值<br>// 时间复杂度 O(n)，其中 n 是 nums 的长度<br>vector<int> maxSlidingWindow(const vector<int>& nums, int k) {<br>int n = nums.size();<br>vector<int> ans(n - k + 1); // 窗口个数<br>deque<int> q; // 双端队列<br>for (int i = 0; i < n; i++) {<br>// 1. 右边入<br>while (!q.empty() && nums[q.back()] <= nums[i]) {<br>q.pop_back(); // 维护 q 的单调性<br>}<br>q.push_back(i); // 注意保存的是下标，这样下面可以判断队首是否离开窗口<br>// 2. 左边出<br>int left = i - k + 1; // 窗口左端点<br>if (q.front() < left) { // 队首离开窗口<br>q.pop_front();<br>}<br>// 3. 在窗口左端点处记录答案<br>if (left >= 0) {<br>// 由于队首到队尾单调递减，所以窗口最大值就在队首<br>ans[left] = nums[q.front()];<br>}<br>}<br>return ans;<br>}<br>```<br>```go [sol-Go]<br>// 计算 nums 的每个长为 k 的窗口的最大值<br>// 时间复杂度 O(n)，其中 n 是 nums 的长度<br>func maxSlidingWindow(nums []int, k int) []int {<br>ans := make([]int, len(nums)-k+1) // 窗口个数<br>q := []int{}<br>for i, x := range nums {<br>// 1. 右边入<br>for len(q) > 0 && nums[q[len(q)-1]] <= x {<br>q = q[:len(q)-1] // 维护 q 的单调性<br>}<br>q = append(q, i) // 注意保存的是下标，这样下面可以判断队首是否离开窗口<br>// 2. 左边出<br>left := i - k + 1 // 窗口左端点<br>if q[0] < left {  // 队首离开窗口<br>q = q[1:] // Go 的切片是 O(1) 的<br>}<br>// 3. 在窗口左端点处记录答案<br>if left >= 0 {<br>// 由于队首到队尾单调递减，所以窗口最大值就在队首<br>ans[left] = nums[q[0]]<br>}<br>}<br>return ans<br>}<br>```<br>关于单调队列优化 DP，见 <a href=\"/lc-rating/list/dynamic_programming\">动态规划题单</a> 中的「§11.3 单调队列优化 DP」。<br>",
             "src": "",
             "original_src": "",
             "sort": 0,
@@ -9012,7 +9068,7 @@ export default{
                 },
                 {
                     "title": "专题：比较复杂的题目",
-                    "summary": "",
+                    "summary": "部分题目是模拟题。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -9219,7 +9275,7 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "Part B（模拟题）",
+                            "title": "Part B",
                             "summary": "另见本题单的「§3.5 表达式解析」。<br>",
                             "src": "",
                             "original_src": "",
@@ -9247,6 +9303,20 @@ export default{
                                     "summary": "",
                                     "src": "/text-justification/",
                                     "original_src": "https://leetcode.cn/problems/text-justification/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "13. 罗马数字转整数",
+                                    "summary": "",
+                                    "src": "/roman-to-integer/",
+                                    "original_src": "https://leetcode.cn/problems/roman-to-integer/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
@@ -9289,6 +9359,34 @@ export default{
                                     "summary": "",
                                     "src": "/strong-password-checker/",
                                     "original_src": "https://leetcode.cn/problems/strong-password-checker/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "8. 字符串转换整数 (atoi)",
+                                    "summary": "",
+                                    "src": "/string-to-integer-atoi/",
+                                    "original_src": "https://leetcode.cn/problems/string-to-integer-atoi/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "65. 有效数字",
+                                    "summary": "",
+                                    "src": "/valid-number/",
+                                    "original_src": "https://leetcode.cn/problems/valid-number/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
@@ -9355,5 +9453,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-11-04 23:17:34"
+    "last_update": "2025-11-14 22:34:34"
 } as ProblemCategory;
