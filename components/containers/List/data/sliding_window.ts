@@ -3208,6 +3208,20 @@ export default{
                     "score": 0,
                     "leafChild": [
                         {
+                            "title": "485. 最大连续 1 的个数",
+                            "summary": "",
+                            "src": "/max-consecutive-ones/description/",
+                            "original_src": "https://leetcode.cn/problems/max-consecutive-ones/description/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "1446. 连续字符",
                             "summary": "",
                             "src": "/consecutive-characters/",
@@ -3806,5 +3820,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-11-13 23:51:39"
+    "last_update": "2025-11-16 22:53:09"
 } as ProblemCategory;

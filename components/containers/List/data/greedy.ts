@@ -2322,6 +2322,34 @@ export default{
                                     "nonLeafChild": [],
                                     "isPremium": false,
                                     "last_update": ""
+                                },
+                                {
+                                    "title": "2589. 完成所有任务的最少时间",
+                                    "summary": "",
+                                    "src": "/minimum-time-to-complete-all-tasks/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-time-to-complete-all-tasks/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2380.5983169295,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "LCP 32. 批量处理任务",
+                                    "summary": "",
+                                    "src": "/t3fKg1/",
+                                    "original_src": "https://leetcode.cn/problems/t3fKg1/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
                                 }
                             ],
                             "nonLeafChild": [],
@@ -2657,20 +2685,6 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2015.7291888336,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "2589. 完成所有任务的最少时间",
-                                    "summary": "",
-                                    "src": "/minimum-time-to-complete-all-tasks/",
-                                    "original_src": "https://leetcode.cn/problems/minimum-time-to-complete-all-tasks/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 2380.5983169295,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -5161,7 +5175,7 @@ export default{
                         },
                         {
                             "title": "§5.3 逆向思维",
-                            "summary": "",
+                            "summary": "**时光倒流**：<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -5296,6 +5310,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "1354. 多次求和构造目标数组",
+                                    "summary": "",
+                                    "src": "/construct-target-array-with-multiple-sums/",
+                                    "original_src": "https://leetcode.cn/problems/construct-target-array-with-multiple-sums/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2014.7655493665,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2543. 判断一个点是否可以到达",
                                     "summary": "",
                                     "src": "/check-if-point-is-reachable/",
@@ -5352,6 +5380,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "1611. 使整数变为 0 的最少操作次数",
+                                    "summary": "",
+                                    "src": "/minimum-one-bit-operations-to-make-integers-zero/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-one-bit-operations-to-make-integers-zero/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2345.3418191684,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3609. 到达目标点的最小移动次数",
                                     "summary": "",
                                     "src": "/minimum-moves-to-reach-target-in-grid/",
@@ -5392,22 +5434,7 @@ export default{
                                     "nonLeafChild": [],
                                     "isPremium": true,
                                     "last_update": ""
-                                }
-                            ],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "§5.4 时光倒流",
-                            "summary": "也是一种逆向思维，单独整理一节。<br>",
-                            "src": "",
-                            "original_src": "",
-                            "sort": 0,
-                            "isLeaf": false,
-                            "solution": "",
-                            "score": 0,
-                            "leafChild": [
+                                },
                                 {
                                     "title": "3607. 电网维护",
                                     "summary": "",
@@ -5463,6 +5490,34 @@ export default{
                                     "nonLeafChild": [],
                                     "isPremium": false,
                                     "last_update": ""
+                                },
+                                {
+                                    "title": "2382. 删除操作后的最大子段和",
+                                    "summary": "",
+                                    "src": "/maximum-segment-sum-after-removals/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-segment-sum-after-removals/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2136.3013259524,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "803. 打砖块",
+                                    "summary": "",
+                                    "src": "/bricks-falling-when-hit/",
+                                    "original_src": "https://leetcode.cn/problems/bricks-falling-when-hit/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2765.2533837781,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
                                 }
                             ],
                             "nonLeafChild": [],
@@ -5470,7 +5525,7 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "§5.5 等价转换",
+                            "title": "§5.4 等价转换",
                             "summary": "",
                             "src": "",
                             "original_src": "",
@@ -5479,6 +5534,20 @@ export default{
                             "solution": "",
                             "score": 0,
                             "leafChild": [
+                                {
+                                    "title": "453. 最小操作次数使数组元素相等",
+                                    "summary": "",
+                                    "src": "/minimum-moves-to-equal-array-elements/",
+                                    "original_src": "https://leetcode.cn/problems/minimum-moves-to-equal-array-elements/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
                                 {
                                     "title": "3375. 使数组的值全部为 K 的最少操作次数",
                                     "summary": "",
@@ -6495,20 +6564,6 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "1611. 使整数变为 0 的最少操作次数",
-                            "summary": "",
-                            "src": "/minimum-one-bit-operations-to-make-integers-zero/",
-                            "original_src": "https://leetcode.cn/problems/minimum-one-bit-operations-to-make-integers-zero/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 2345.3418191684,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "2790. 长度递增组的最大数目",
                             "summary": "",
                             "src": "/maximum-number-of-groups-with-increasing-length/",
@@ -6659,5 +6714,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-11-07 00:04:50"
+    "last_update": "2025-11-19 23:15:19"
 } as ProblemCategory;

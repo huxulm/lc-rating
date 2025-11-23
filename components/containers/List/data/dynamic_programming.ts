@@ -13,7 +13,7 @@ export default{
     "nonLeafChild": [
         {
             "title": "前言",
-            "summary": "掌握动态规划（DP）是没有捷径的，咱们唯一能做的，就是投入时间猛猛刷题。好比学数学，只看书看视频而不做习题，是不能说学会的。<br>我能做的，是帮你节省找题的时间，并把这些题分类整理好。有着相同套路的题，一起做效率会更高，也更能领悟到 DP 的精髓。所以推荐按照专题刷。<br>题目已按照难度分排序（右侧数字为难度分）。如果遇到难度很大，题解都看不懂的题目，建议直接跳过，二刷的时候再来尝试。<br><img src=\"https://pic.leetcode.cn/1710769845-JRnIfA-dp-2.jpg\" alt=\"动态规划算法题 DP题单 动态规划题单 入门动态规划题目 动态规划新手教程 力扣DP 力扣动态规划 leetcode动态规划 leetcode dp 灵茶山艾府 灵神 灵神题单\" style=\"width: 100%;\"><br>**记忆化搜索**是新手村神器（甚至可以用到游戏后期），推荐先看 <a href=\"https://www.bilibili.com/video/BV1Xj411K7oF/\">动态规划入门：从记忆化搜索到递推</a>。<br>但记忆化搜索并不是万能的，某些题目只有写成递推，才能结合数据结构等来优化时间复杂度，多数题目还可以优化空间复杂度。所以尽量在写完记忆化搜索后，把递推的代码也写一下。熟练之后直接写递推也可以。<br>",
+            "summary": "掌握动态规划（DP）是没有捷径的，咱们唯一能做的，就是投入时间猛猛刷题。好比学数学，只看书看视频而不做习题，是不能说学会的。<br>我能做的，是帮你节省找题的时间，并把这些题分类整理好。有着相同套路的题，一起做效率会更高，也更能领悟到 DP 的精髓。每个小节的题目已按照难度分排序（右侧数字为难度分）。<br><img src=\"https://pic.leetcode.cn/1710769845-JRnIfA-dp-2.jpg\" alt=\"动态规划算法题 DP题单 动态规划题单 入门动态规划题目 动态规划新手教程 力扣DP 力扣动态规划 leetcode动态规划 leetcode dp 灵茶山艾府 灵神 灵神题单\" style=\"width: 100%;\"><br>**记忆化搜索**是新手村神器（甚至可以用到游戏后期），推荐先看 <a href=\"https://www.bilibili.com/video/BV1Xj411K7oF/\">动态规划入门：从记忆化搜索到递推</a>。<br>但记忆化搜索并不是万能的，某些题目只有写成递推，才能结合数据结构等来优化时间复杂度，多数题目还可以优化空间复杂度。所以尽量在写完记忆化搜索后，把递推的代码也写一下。熟练之后直接写递推也可以。<br>",
             "src": "",
             "original_src": "",
             "sort": 0,
@@ -4011,6 +4011,20 @@ export default{
                             "nonLeafChild": [],
                             "isPremium": false,
                             "last_update": ""
+                        },
+                        {
+                            "title": "730. 统计不同回文子序列",
+                            "summary": "",
+                            "src": "/count-different-palindromic-subsequences/",
+                            "original_src": "https://leetcode.cn/problems/count-different-palindromic-subsequences/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
                         }
                     ],
                     "nonLeafChild": [],
@@ -5053,20 +5067,6 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "730. 统计不同回文子序列",
-                            "summary": "",
-                            "src": "/count-different-palindromic-subsequences/",
-                            "original_src": "https://leetcode.cn/problems/count-different-palindromic-subsequences/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": null,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
                             "title": "1312. 让字符串成为回文串的最少插入次数",
                             "summary": "",
                             "src": "/minimum-insertion-steps-to-make-a-string-palindrome/",
@@ -5103,6 +5103,20 @@ export default{
                             "isLeaf": true,
                             "solution": null,
                             "score": 2182.054452981,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "730. 统计不同回文子序列",
+                            "summary": "",
+                            "src": "/count-different-palindromic-subsequences/",
+                            "original_src": "https://leetcode.cn/problems/count-different-palindromic-subsequences/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -6499,7 +6513,7 @@ export default{
         },
         {
             "title": "res %= MOD",
-            "summary": "def digitDP(low: int, high: int, target: int) -> int:<br>low_s = list(map(int, str(low)))  # 避免在 dfs 中频繁调用 int()<br>high_s = list(map(int, str(high)))<br>n = len(high_s)<br>diff_lh = n - len(low_s)<br>@cache<br>def dfs(i: int, cnt0: int, limit_low: bool, limit_high: bool) -> int:<br>if cnt0 > target:<br>return 0  # 不合法<br>if i == n:<br>return 1 if cnt0 == target else 0<br>lo = low_s[i - diff_lh] if limit_low and i >= diff_lh else 0<br>hi = high_s[i] if limit_high else 9<br>res = 0<br>d = lo<br>if limit_low and i < diff_lh:<br>res = dfs(i + 1, cnt0, True, False)<br>d = 1<br>for d in range(d, hi + 1):<br>res += dfs(i + 1,<br>cnt0 + (1 if d == 0 else 0),  # 统计 0 的个数<br>limit_low and d == lo,<br>limit_high and d == hi)<br>return res<br>return dfs(0, 0, True, True)<br>```<br>```java [sol-Java]<br>// 代码示例：返回 [low, high] 中的恰好包含 target 个 0 的数字个数<br>// 比如 digitDP(0, 10, 1) == 2<br>// 要点：我们统计的是 0 的个数，需要区分【前导零】和【数字中的零】，前导零不能计入，而数字中的零需要计入<br>class Solution {<br>public int digitDP(int low, int high, int target) {<br>char[] lowS = String.valueOf(low).toCharArray();<br>char[] highS = String.valueOf(high).toCharArray();<br>int n = highS.length;<br>int[][] memo = new int[n][target + 1];<br>for (int[] row : memo) {<br>Arrays.fill(row, -1);<br>}<br>return dfs(0, 0, true, true, lowS, highS, target, memo);<br>}<br>private int dfs(int i, int cnt0, boolean limitLow, boolean limitHigh, char[] lowS, char[] highS, int target, int[][] memo) {<br>if (cnt0 > target) {<br>return 0; // 不合法<br>}<br>if (i == highS.length) {<br>return cnt0 == target ? 1 : 0;<br>}<br>if (!limitLow && !limitHigh && memo[i][cnt0] >= 0) {<br>return memo[i][cnt0];<br>}<br>int diff = highS.length - lowS.length;<br>int lo = limitLow && i >= diff ? lowS[i - diff] - '0' : 0;<br>int hi = limitHigh ? highS[i] - '0' : 9;<br>int res = 0;<br>int d = lo;<br>// 通过 limitLow 和 i 可以判断能否不填数字，无需 isNum 参数<br>// 如果前导零不影响答案，去掉这个 if block<br>if (limitLow && i < diff) {<br>// 不填数字，上界不受约束<br>res = dfs(i + 1, cnt0, true, false, lowS, highS, target, memo);<br>d = 1;<br>}<br>for (; d <= hi; d++) {<br>res += dfs(i + 1,<br>cnt0 + (d == 0 ? 1 : 0), // 统计 0 的个数<br>limitLow && d == lo,<br>limitHigh && d == hi,<br>lowS, highS, target, memo);<br>// res %= MOD;<br>}<br>if (!limitLow && !limitHigh) {<br>memo[i][cnt0] = res;<br>}<br>return res;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>// 代码示例：返回 [low, high] 中的恰好包含 target 个 0 的数字个数<br>// 比如 digitDP(0, 10, 1) == 2<br>// 要点：我们统计的是 0 的个数，需要区分【前导零】和【数字中的零】，前导零不能计入，而数字中的零需要计入<br>int digitDP(int low, int high, int target) {<br>string low_s = to_string(low);<br>string high_s = to_string(high);<br>int n = high_s.size();<br>int diff_lh = n - low_s.size();<br>vector memo(n, vector<int>(target + 1, -1));<br>auto dfs = [&](this auto&& dfs, int i, int cnt0, bool limit_low, bool limit_high) -> int {<br>if (cnt0 > target) {<br>return 0; // 不合法<br>}<br>if (i == n) {<br>return cnt0 == target;<br>}<br>if (!limit_low && !limit_high && memo[i][cnt0] >= 0) {<br>return memo[i][cnt0];<br>}<br>int lo = limit_low && i >= diff_lh ? low_s[i - diff_lh] - '0' : 0;<br>int hi = limit_high ? high_s[i] - '0' : 9;<br>int res = 0;<br>int d = lo;<br>// 通过 limit_low 和 i 可以判断能否不填数字，无需 is_num 参数<br>// 如果前导零不影响答案，去掉这个 if block<br>if (limit_low && i < diff_lh) {<br>// 不填数字，上界不受约束<br>res = dfs(i + 1, cnt0, true, false);<br>d = 1;<br>}<br>for (; d <= hi; d++) {<br>// 统计 0 的个数<br>res += dfs(i + 1, cnt0 + (d == 0), limit_low && d == lo, limit_high && d == hi);<br>// res %= MOD;<br>}<br>if (!limit_low && !limit_high) {<br>memo[i][cnt0] = res;<br>}<br>return res;<br>};<br>return dfs(0, 0, true, true);<br>}<br>```<br>```go [sol-Go]<br>// 代码示例：返回 [low, high] 中的恰好包含 target 个 0 的数字个数<br>// 比如 digitDP(0, 10, 1) == 2<br>// 要点：我们统计的是 0 的个数，需要区分【前导零】和【数字中的零】，前导零不能计入，而数字中的零需要计入<br>func digitDP(low, high, target int) int {<br>lowS := strconv.Itoa(low)<br>highS := strconv.Itoa(high)<br>n := len(highS)<br>diffLH := n - len(lowS)<br>memo := make([][]int, n)<br>for i := range memo {<br>memo[i] = make([]int, target+1)<br>for j := range memo[i] {<br>memo[i][j] = -1<br>}<br>}<br>var dfs func(int, int, bool, bool) int<br>dfs = func(i, cnt0 int, limitLow, limitHigh bool) (res int) {<br>// 不合法<br>if cnt0 > target {<br>return 0<br>}<br>if i == n {<br>// 不合法<br>if cnt0 < target {<br>return 0<br>}<br>// 合法<br>return 1<br>}<br>if !limitLow && !limitHigh {<br>p := &memo[i][cnt0]<br>if *p >= 0 {<br>return *p<br>}<br>defer func() { *p = res }()<br>}<br>lo := 0<br>if limitLow && i >= diffLH {<br>lo = int(lowS[i-diffLH] - '0')<br>}<br>hi := 9<br>if limitHigh {<br>hi = int(highS[i] - '0')<br>}<br>d := lo<br>// 通过 limitLow 和 i 可以判断能否不填数字，无需 isNum 参数<br>// 如果前导零不影响答案，去掉这个 if block<br>if limitLow && i < diffLH {<br>// 不填数字，上界不受约束<br>res = dfs(i+1, cnt0, true, false)<br>d = 1<br>}<br>for ; d <= hi; d++ {<br>c0 := cnt0<br>if d == 0 {<br>c0++ // 统计 0 的个数<br>}<br>res += dfs(i+1, c0, limitLow && d == lo, limitHigh && d == hi)<br>// res %= mod<br>}<br>return<br>}<br>return dfs(0, 0, true, true)<br>}<br>```<br>**从低到高**：<br>**思维扩展**：<br>",
+            "summary": "def digitDP(low: int, high: int, target: int) -> int:<br>low_s = list(map(int, str(low)))  # 避免在 dfs 中频繁调用 int()<br>high_s = list(map(int, str(high)))<br>n = len(high_s)<br>diff_lh = n - len(low_s)<br>@cache<br>def dfs(i: int, cnt0: int, limit_low: bool, limit_high: bool) -> int:<br>if cnt0 > target:<br>return 0  # 不合法<br>if i == n:<br>return 1 if cnt0 == target else 0<br>lo = low_s[i - diff_lh] if limit_low and i >= diff_lh else 0<br>hi = high_s[i] if limit_high else 9<br>res = 0<br>start = lo<br>if limit_low and i < diff_lh:<br>res = dfs(i + 1, cnt0, True, False)<br>start = 1<br>for d in range(start, hi + 1):<br>res += dfs(i + 1,<br>cnt0 + (1 if d == 0 else 0),  # 统计 0 的个数<br>limit_low and d == lo,<br>limit_high and d == hi)<br>return res<br>return dfs(0, 0, True, True)<br>```<br>```java [sol-Java]<br>// 代码示例：返回 [low, high] 中的恰好包含 target 个 0 的数字个数<br>// 比如 digitDP(0, 10, 1) == 2<br>// 要点：我们统计的是 0 的个数，需要区分【前导零】和【数字中的零】，前导零不能计入，而数字中的零需要计入<br>class Solution {<br>public long digitDP(long low, long high, int target) {<br>char[] lowS = String.valueOf(low).toCharArray();<br>char[] highS = String.valueOf(high).toCharArray();<br>int n = highS.length;<br>long[][] memo = new long[n][target + 1];<br>for (long[] row : memo) {<br>Arrays.fill(row, -1);<br>}<br>return dfs(0, 0, true, true, lowS, highS, target, memo);<br>}<br>private long dfs(int i, int cnt0, boolean limitLow, boolean limitHigh, char[] lowS, char[] highS, int target, long[][] memo) {<br>if (cnt0 > target) {<br>return 0; // 不合法<br>}<br>if (i == highS.length) {<br>return cnt0 == target ? 1 : 0;<br>}<br>if (!limitLow && !limitHigh && memo[i][cnt0] >= 0) {<br>return memo[i][cnt0];<br>}<br>int diff = highS.length - lowS.length;<br>int lo = limitLow && i >= diff ? lowS[i - diff] - '0' : 0;<br>int hi = limitHigh ? highS[i] - '0' : 9;<br>long res = 0;<br>int d = lo;<br>// 通过 limitLow 和 i 可以判断能否不填数字，无需 isNum 参数<br>// 如果前导零不影响答案，去掉这个 if block<br>if (limitLow && i < diff) {<br>// 不填数字，上界不受约束<br>res = dfs(i + 1, cnt0, true, false, lowS, highS, target, memo);<br>d = 1;<br>}<br>for (; d <= hi; d++) {<br>res += dfs(i + 1,<br>cnt0 + (d == 0 ? 1 : 0), // 统计 0 的个数<br>limitLow && d == lo,<br>limitHigh && d == hi,<br>lowS, highS, target, memo);<br>// res %= MOD;<br>}<br>if (!limitLow && !limitHigh) {<br>memo[i][cnt0] = res;<br>}<br>return res;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>// 代码示例：返回 [low, high] 中的恰好包含 target 个 0 的数字个数<br>// 比如 digitDP(0, 10, 1) == 2<br>// 要点：我们统计的是 0 的个数，需要区分【前导零】和【数字中的零】，前导零不能计入，而数字中的零需要计入<br>long long digitDP(long long low, long long high, int target) {<br>string low_s = to_string(low);<br>string high_s = to_string(high);<br>int n = high_s.size();<br>int diff_lh = n - low_s.size();<br>vector memo(n, vector<long long>(target + 1, -1));<br>auto dfs = [&](this auto&& dfs, int i, int cnt0, bool limit_low, bool limit_high) -> long long {<br>if (cnt0 > target) {<br>return 0; // 不合法<br>}<br>if (i == n) {<br>return cnt0 == target;<br>}<br>if (!limit_low && !limit_high && memo[i][cnt0] >= 0) {<br>return memo[i][cnt0];<br>}<br>int lo = limit_low && i >= diff_lh ? low_s[i - diff_lh] - '0' : 0;<br>int hi = limit_high ? high_s[i] - '0' : 9;<br>long long res = 0;<br>int d = lo;<br>// 通过 limit_low 和 i 可以判断能否不填数字，无需 is_num 参数<br>// 如果前导零不影响答案，去掉这个 if block<br>if (limit_low && i < diff_lh) {<br>// 不填数字，上界不受约束<br>res = dfs(i + 1, cnt0, true, false);<br>d = 1;<br>}<br>for (; d <= hi; d++) {<br>// 统计 0 的个数<br>res += dfs(i + 1, cnt0 + (d == 0), limit_low && d == lo, limit_high && d == hi);<br>// res %= MOD;<br>}<br>if (!limit_low && !limit_high) {<br>memo[i][cnt0] = res;<br>}<br>return res;<br>};<br>return dfs(0, 0, true, true);<br>}<br>```<br>```go [sol-Go]<br>// 代码示例：返回 [low, high] 中的恰好包含 target 个 0 的数字个数<br>// 比如 digitDP(0, 10, 1) == 2<br>// 要点：我们统计的是 0 的个数，需要区分【前导零】和【数字中的零】，前导零不能计入，而数字中的零需要计入<br>func digitDP(low, high, target int) int {<br>lowS := strconv.Itoa(low)<br>highS := strconv.Itoa(high)<br>n := len(highS)<br>diffLH := n - len(lowS)<br>memo := make([][]int, n)<br>for i := range memo {<br>memo[i] = make([]int, target+1)<br>for j := range memo[i] {<br>memo[i][j] = -1<br>}<br>}<br>var dfs func(int, int, bool, bool) int<br>dfs = func(i, cnt0 int, limitLow, limitHigh bool) (res int) {<br>// 不合法<br>if cnt0 > target {<br>return 0<br>}<br>if i == n {<br>// 不合法<br>if cnt0 < target {<br>return 0<br>}<br>// 合法<br>return 1<br>}<br>if !limitLow && !limitHigh {<br>p := &memo[i][cnt0]<br>if *p >= 0 {<br>return *p<br>}<br>defer func() { *p = res }()<br>}<br>lo := 0<br>if limitLow && i >= diffLH {<br>lo = int(lowS[i-diffLH] - '0')<br>}<br>hi := 9<br>if limitHigh {<br>hi = int(highS[i] - '0')<br>}<br>d := lo<br>// 通过 limitLow 和 i 可以判断能否不填数字，无需 isNum 参数<br>// 如果前导零不影响答案，去掉这个 if block<br>if limitLow && i < diffLH {<br>// 不填数字，上界不受约束<br>res = dfs(i+1, cnt0, true, false)<br>d = 1<br>}<br>for ; d <= hi; d++ {<br>c0 := cnt0<br>if d == 0 {<br>c0++ // 统计 0 的个数<br>}<br>res += dfs(i+1, c0, limitLow && d == lo, limitHigh && d == hi)<br>// res %= mod<br>}<br>return<br>}<br>return dfs(0, 0, true, true)<br>}<br>```<br>**从低到高**：<br>**思维扩展**：<br>",
             "src": "",
             "original_src": "",
             "sort": 0,
@@ -6507,6 +6521,20 @@ export default{
             "solution": "",
             "score": 0,
             "leafChild": [
+                {
+                    "title": "3747. 统计移除零后不同整数的数目",
+                    "summary": "",
+                    "src": "/count-distinct-integers-after-removing-zeros/",
+                    "original_src": "https://leetcode.cn/problems/count-distinct-integers-after-removing-zeros/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 1848.1765176884,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
                 {
                     "title": "2719. 统计整数数目",
                     "summary": "",
@@ -7803,7 +7831,7 @@ export default{
                         },
                         {
                             "title": "§11.8 WQS 二分优化 DP",
-                            "summary": "把最多选 $k$ 个物品的问题（时间复杂度高）转换成选任意个物品的问题（时间复杂度低）。<br>",
+                            "summary": "把最多选 $k$ 个物品的问题（时间复杂度高）转换成选任意个物品的问题（时间复杂度低）。<br>一般时间复杂度为 $\\mathcal{O}(n\\log U)$ 或者 $\\mathcal{O}(n\\log n)$。<br>此外「§5.3 约束划分个数」的部分题目也可以用 WQS 二分优化。<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -7826,6 +7854,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "3573. 买卖股票的最佳时机 V",
+                                    "summary": "",
+                                    "src": "/best-time-to-buy-and-sell-stock-v/",
+                                    "original_src": "https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-v/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1777.1347057233,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "2209. 用地毯覆盖后的最少白色砖块",
                                     "summary": "",
                                     "src": "/minimum-white-tiles-after-covering-with-carpets/",
@@ -7834,6 +7876,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2105.8582288624,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3743. 循环划分的最大得分",
+                                    "summary": "",
+                                    "src": "/maximize-cyclic-partition-score/",
+                                    "original_src": "https://leetcode.cn/problems/maximize-cyclic-partition-score/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 3124.5016688063,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -10459,5 +10515,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-11-14 22:32:27"
+    "last_update": "2025-11-21 06:58:37"
 } as ProblemCategory;
