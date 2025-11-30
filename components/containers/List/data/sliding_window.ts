@@ -1754,6 +1754,34 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "541. 反转字符串 II",
+                                    "summary": "",
+                                    "src": "/reverse-string-ii/description/",
+                                    "original_src": "https://leetcode.cn/problems/reverse-string-ii/description/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "557. 反转字符串中的单词 III",
+                                    "summary": "",
+                                    "src": "/reverse-words-in-a-string-iii/",
+                                    "original_src": "https://leetcode.cn/problems/reverse-words-in-a-string-iii/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "345. 反转字符串中的元音字母",
                                     "summary": "",
                                     "src": "/reverse-vowels-of-a-string/",
@@ -1762,6 +1790,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "917. 仅仅反转字母",
+                                    "summary": "",
+                                    "src": "/reverse-only-letters/",
+                                    "original_src": "https://leetcode.cn/problems/reverse-only-letters/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1228.630993648,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -3820,5 +3862,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-11-16 22:53:09"
+    "last_update": "2025-11-23 22:48:15"
 } as ProblemCategory;

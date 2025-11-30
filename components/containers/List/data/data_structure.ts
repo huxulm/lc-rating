@@ -434,6 +434,20 @@ export default{
                                             "last_update": ""
                                         },
                                         {
+                                            "title": "1497. 检查数组对是否可以被 k 整除",
+                                            "summary": "",
+                                            "src": "/check-if-array-pairs-are-divisible-by-k/",
+                                            "original_src": "https://leetcode.cn/problems/check-if-array-pairs-are-divisible-by-k/",
+                                            "sort": 0,
+                                            "isLeaf": true,
+                                            "solution": null,
+                                            "score": 1787.2310751136,
+                                            "leafChild": [],
+                                            "nonLeafChild": [],
+                                            "isPremium": false,
+                                            "last_update": ""
+                                        },
+                                        {
                                             "title": "1031. 两个无重叠子数组的最大和",
                                             "summary": "",
                                             "src": "/maximum-sum-of-two-non-overlapping-subarrays/",
@@ -951,7 +965,7 @@ export default{
                     "nonLeafChild": [
                         {
                             "title": "§1.1 基础",
-                            "summary": "<a href=\"https://leetcode.cn/problems/range-sum-query-immutable/solution/qian-zhui-he-ji-qi-kuo-zhan-fu-ti-dan-py-vaar/\">讲解</a><br>**左闭右开公式**：下标为左闭右开区间 $[\\textit{left},\\textit{right})$ 的元素和就是 $\\textit{sum}[\\textit{right}] - \\textit{sum}[\\textit{left}]$。<br>**思维扩展**：<br>",
+                            "summary": "<a href=\"https://leetcode.cn/problems/range-sum-query-immutable/solution/qian-zhui-he-ji-qi-kuo-zhan-fu-ti-dan-py-vaar/\">讲解</a><br>**左闭右开公式**：子数组 $[\\textit{left},\\textit{right})$ 的元素和为 $\\textit{sum}[\\textit{right}] - \\textit{sum}[\\textit{left}]$。把下标区间定义成左闭右开，就不需要加一减一了。<br>**思维扩展**：<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -1002,6 +1016,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "1310. 子数组异或查询",
+                                    "summary": "",
+                                    "src": "/xor-queries-of-a-subarray/",
+                                    "original_src": "https://leetcode.cn/problems/xor-queries-of-a-subarray/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1459.8208951847,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3152. 特殊数组 II",
                                     "summary": "",
                                     "src": "/special-array-ii/",
@@ -1030,6 +1058,20 @@ export default{
                                     "last_update": ""
                                 },
                                 {
+                                    "title": "53. 最大子数组和",
+                                    "summary": "",
+                                    "src": "/maximum-subarray/",
+                                    "original_src": "https://leetcode.cn/problems/maximum-subarray/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
                                     "title": "3652. 按策略买卖股票的最佳时机",
                                     "summary": "",
                                     "src": "/best-time-to-buy-and-sell-stock-using-strategy/",
@@ -1044,20 +1086,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "2389. 和有限的最长子序列",
-                                    "summary": "",
-                                    "src": "/longest-subsequence-with-limited-sum/",
-                                    "original_src": "https://leetcode.cn/problems/longest-subsequence-with-limited-sum/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1387.7347071166,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "3361. 两个字符串的切换距离",
                                     "summary": "",
                                     "src": "/shift-distance-between-two-strings/",
@@ -1066,48 +1094,6 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1553.2232121523,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "2055. 蜡烛之间的盘子",
-                                    "summary": "",
-                                    "src": "/plates-between-candles/",
-                                    "original_src": "https://leetcode.cn/problems/plates-between-candles/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1819.3068421506,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "1744. 你能在你最喜欢的那天吃到你最喜欢的糖果吗？",
-                                    "summary": "",
-                                    "src": "/can-you-eat-your-favorite-candy-on-your-favorite-day/",
-                                    "original_src": "https://leetcode.cn/problems/can-you-eat-your-favorite-candy-on-your-favorite-day/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1858.9581916885,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "53. 最大子数组和",
-                                    "summary": "",
-                                    "src": "/maximum-subarray/",
-                                    "original_src": "https://leetcode.cn/problems/maximum-subarray/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": null,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1150,20 +1136,6 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1209.3722198224,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "3709. 设计考试分数记录器",
-                                    "summary": "",
-                                    "src": "/design-exam-scores-tracker/",
-                                    "original_src": "https://leetcode.cn/problems/design-exam-scores-tracker/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1647.51871302,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1878,7 +1850,7 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "§1.5 其他一维前缀和",
+                            "title": "§1.5 进阶",
                             "summary": "**思维扩展**：<br>",
                             "src": "",
                             "original_src": "",
@@ -1888,28 +1860,28 @@ export default{
                             "score": 0,
                             "leafChild": [
                                 {
-                                    "title": "1310. 子数组异或查询",
+                                    "title": "2389. 和有限的最长子序列",
                                     "summary": "",
-                                    "src": "/xor-queries-of-a-subarray/",
-                                    "original_src": "https://leetcode.cn/problems/xor-queries-of-a-subarray/",
+                                    "src": "/longest-subsequence-with-limited-sum/",
+                                    "original_src": "https://leetcode.cn/problems/longest-subsequence-with-limited-sum/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": 1459.8208951847,
+                                    "score": 1387.7347071166,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "2300. 咒语和药水的成功对数",
+                                    "title": "3709. 设计考试分数记录器",
                                     "summary": "",
-                                    "src": "/successful-pairs-of-spells-and-potions/",
-                                    "original_src": "https://leetcode.cn/problems/successful-pairs-of-spells-and-potions/",
+                                    "src": "/design-exam-scores-tracker/",
+                                    "original_src": "https://leetcode.cn/problems/design-exam-scores-tracker/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
-                                    "score": 1476.9062320302,
+                                    "score": 1647.51871302,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1924,6 +1896,34 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1781.3664141686,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2055. 蜡烛之间的盘子",
+                                    "summary": "",
+                                    "src": "/plates-between-candles/",
+                                    "original_src": "https://leetcode.cn/problems/plates-between-candles/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1819.3068421506,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "1744. 你能在你最喜欢的那天吃到你最喜欢的糖果吗？",
+                                    "summary": "",
+                                    "src": "/can-you-eat-your-favorite-candy-on-your-favorite-day/",
+                                    "original_src": "https://leetcode.cn/problems/can-you-eat-your-favorite-candy-on-your-favorite-day/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1858.9581916885,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -1994,6 +1994,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 2170.1079846744,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3748. 统计稳定子数组的数目",
+                                    "summary": "",
+                                    "src": "/count-stable-subarrays/",
+                                    "original_src": "https://leetcode.cn/problems/count-stable-subarrays/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 2209.0960361447,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -2081,6 +2095,20 @@ export default{
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "2300. 咒语和药水的成功对数",
+                                    "summary": "",
+                                    "src": "/successful-pairs-of-spells-and-potions/",
+                                    "original_src": "https://leetcode.cn/problems/successful-pairs-of-spells-and-potions/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1476.9062320302,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
                                     "last_update": ""
                                 },
                                 {
@@ -2231,7 +2259,7 @@ export default{
                     "leafChild": [],
                     "nonLeafChild": [
                         {
-                            "title": "§2.1 一维差分（扫描线）",
+                            "title": "§2.1 一维差分",
                             "summary": "差分与前缀和的关系，类似**导数**与**积分**的关系。<br>数组 $a$ 的差分的前缀和就是数组 $a$（不变）。<br><a href=\"https://leetcode.cn/problems/car-pooling/solution/suan-fa-xiao-ke-tang-chai-fen-shu-zu-fu-9d4ra/\">原理讲解</a><br>",
                             "src": "",
                             "original_src": "",
@@ -3794,6 +3822,20 @@ export default{
                                     "summary": "",
                                     "src": "/ternary-expression-parser/",
                                     "original_src": "https://leetcode.cn/problems/ternary-expression-parser/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": true,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "3749. 计算有效表达式",
+                                    "summary": "",
+                                    "src": "/evaluate-valid-expressions/",
+                                    "original_src": "https://leetcode.cn/problems/evaluate-valid-expressions/",
                                     "sort": 0,
                                     "isLeaf": true,
                                     "solution": null,
@@ -7377,6 +7419,20 @@ export default{
                     "score": 0,
                     "leafChild": [
                         {
+                            "title": "3244. 新增道路查询后的最短距离 II",
+                            "summary": "",
+                            "src": "/shortest-distance-after-road-addition-queries-ii/",
+                            "original_src": "https://leetcode.cn/problems/shortest-distance-after-road-addition-queries-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2270.2002503611,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "1851. 包含每个查询的最小区间",
                             "summary": "",
                             "src": "/minimum-interval-to-include-each-query/",
@@ -7391,14 +7447,14 @@ export default{
                             "last_update": ""
                         },
                         {
-                            "title": "3244. 新增道路查询后的最短距离 II",
+                            "title": "LCP 52. 二叉搜索树染色",
                             "summary": "",
-                            "src": "/shortest-distance-after-road-addition-queries-ii/",
-                            "original_src": "https://leetcode.cn/problems/shortest-distance-after-road-addition-queries-ii/",
+                            "src": "/QO5KpG/",
+                            "original_src": "https://leetcode.cn/problems/QO5KpG/",
                             "sort": 0,
                             "isLeaf": true,
                             "solution": null,
-                            "score": 2270.2002503611,
+                            "score": null,
                             "leafChild": [],
                             "nonLeafChild": [],
                             "isPremium": false,
@@ -8480,6 +8536,20 @@ export default{
                     "nonLeafChild": [],
                     "isPremium": false,
                     "last_update": ""
+                },
+                {
+                    "title": "LCP 52. 二叉搜索树染色",
+                    "summary": "",
+                    "src": "/QO5KpG/",
+                    "original_src": "https://leetcode.cn/problems/QO5KpG/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": null,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
                 }
             ],
             "nonLeafChild": [
@@ -9453,5 +9523,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-11-14 22:34:34"
+    "last_update": "2025-11-24 22:53:11"
 } as ProblemCategory;

@@ -1345,20 +1345,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "1457. 二叉树中的伪回文路径",
-                                    "summary": "",
-                                    "src": "/pseudo-palindromic-paths-in-a-binary-tree/",
-                                    "original_src": "https://leetcode.cn/problems/pseudo-palindromic-paths-in-a-binary-tree/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1405.0021415178,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "1315. 祖父节点值为偶数的节点和",
                                     "summary": "",
                                     "src": "/sum-of-nodes-with-even-valued-grandparent/",
@@ -2240,6 +2226,20 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": null,
+                                    "leafChild": [],
+                                    "nonLeafChild": [],
+                                    "isPremium": false,
+                                    "last_update": ""
+                                },
+                                {
+                                    "title": "1457. 二叉树中的伪回文路径",
+                                    "summary": "",
+                                    "src": "/pseudo-palindromic-paths-in-a-binary-tree/",
+                                    "original_src": "https://leetcode.cn/problems/pseudo-palindromic-paths-in-a-binary-tree/",
+                                    "sort": 0,
+                                    "isLeaf": true,
+                                    "solution": null,
+                                    "score": 1405.0021415178,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -3921,20 +3921,6 @@ export default{
                                     "last_update": ""
                                 },
                                 {
-                                    "title": "LCP 52. 二叉搜索树染色",
-                                    "summary": "",
-                                    "src": "/QO5KpG/",
-                                    "original_src": "https://leetcode.cn/problems/QO5KpG/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": null,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
                                     "title": "LCP 60. 力扣泡泡龙",
                                     "summary": "",
                                     "src": "/WInSav/",
@@ -4747,7 +4733,7 @@ export default{
                         },
                         {
                             "title": "返回 x 到 y 的距离（最短路长度）",
-                            "summary": "<a href=\"https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/solution/mo-ban-jiang-jie-shu-shang-bei-zeng-suan-v3rw/\">讲解</a><br>带权树 LCA 模板（节点编号从 $0$ 开始）：<br>```py [sol-Python3]<br>class LcaBinaryLifting:<br>def __init__(self, edges: List[List[int]]):<br>n = len(edges) + 1<br>m = n.bit_length()<br>g = [[] for _ in range(n)]<br>for x, y, w in edges:<br>g[x].append((y, w))<br>g[y].append((x, w))<br>depth = [0] * n<br>dis = [0] * n  # 如果是无权树（边权为 1），dis 可以去掉，用 depth 代替<br>pa = [[-1] * n for _ in range(m)]<br>def dfs(x: int, fa: int) -> None:<br>pa[0][x] = fa<br>for y, w in g[x]:<br>if y != fa:<br>depth[y] = depth[x] + 1<br>dis[y] = dis[x] + w<br>dfs(y, x)<br>dfs(0, -1)<br>for i in range(m - 1):<br>for x in range(n):<br>if (p := pa[i][x]) != -1:<br>pa[i + 1][x] = pa[i][p]<br>self.depth = depth<br>self.dis = dis<br>self.pa = pa<br>def get_kth_ancestor(self, node: int, k: int) -> int:<br>pa = self.pa<br>for i in range(k.bit_length()):<br>if k >> i & 1:<br>node = pa[i][node]<br>if node < 0:<br>return -1<br>return node<br>def get_lca(self, x: int, y: int) -> int:<br>if self.depth[x] > self.depth[y]:<br>x, y = y, x<br>y = self.get_kth_ancestor(y, self.depth[y] - self.depth[x])<br>if y == x:<br>return x<br>pa = self.pa<br>for i in range(len(pa) - 1, -1, -1):<br>px, py = pa[i][x], pa[i][y]<br>if px != py:<br>x, y = px, py  # 同时往上跳 2**i 步<br>return pa[0][x]<br>def get_dis(self, x: int, y: int) -> int:<br>return self.dis[x] + self.dis[y] - self.dis[self.get_lca(x, y)] * 2<br>```<br>```java [sol-Java]<br>class LcaBinaryLifting {<br>private final int[] depth;<br>private final long[] dis; // 如果是无权树（边权为 1），dis 可以去掉，用 depth 代替<br>private final int[][] pa;<br>public LcaBinaryLifting(int[][] edges) {<br>int n = edges.length + 1;<br>int m = 32 - Integer.numberOfLeadingZeros(n); // n 的二进制长度<br>List<int[]>[] g = new ArrayList[n];<br>Arrays.setAll(g, e -> new ArrayList<>());<br>for (int[] e : edges) {<br>// 如果题目的节点编号从 1 开始，改成 x=e[0]-1 和 y=e[1]-1<br>int x = e[0], y = e[1], w = e[2];<br>g[x].add(new int[]{y, w});<br>g[y].add(new int[]{x, w});<br>}<br>depth = new int[n];<br>dis = new long[n];<br>pa = new int[m][n];<br>dfs(g, 0, -1);<br>for (int i = 0; i < m - 1; i++) {<br>for (int x = 0; x < n; x++) {<br>int p = pa[i][x];<br>pa[i + 1][x] = p < 0 ? -1 : pa[i][p];<br>}<br>}<br>}<br>private void dfs(List<int[]>[] g, int x, int fa) {<br>pa[0][x] = fa;<br>for (int[] e : g[x]) {<br>int y = e[0];<br>if (y != fa) {<br>depth[y] = depth[x] + 1;<br>dis[y] = dis[x] + e[1];<br>dfs(g, y, x);<br>}<br>}<br>}<br>// 返回 node 的第 k 个祖先节点<br>// 如果不存在，返回 -1<br>public int getKthAncestor(int node, int k) {<br>for (; k > 0 && node >= 0; k &= k - 1) {<br>node = pa[Integer.numberOfTrailingZeros(k)][node];<br>}<br>return node;<br>}<br>// 返回 x 和 y 的最近公共祖先（节点编号从 0 开始）<br>public int getLCA(int x, int y) {<br>if (depth[x] > depth[y]) {<br>int tmp = y;<br>y = x;<br>x = tmp;<br>}<br>// 使 y 和 x 在同一深度<br>y = getKthAncestor(y, depth[y] - depth[x]);<br>if (y == x) {<br>return x;<br>}<br>for (int i = pa.length - 1; i >= 0; i--) {<br>int px = pa[i][x], py = pa[i][y];<br>if (px != py) {<br>x = px;<br>y = py; // 同时往上跳 2^i 步<br>}<br>}<br>return pa[0][x];<br>}<br>// 返回 x 到 y 的距离（最短路长度）<br>public long getDis(int x, int y) {<br>return dis[x] + dis[y] - dis[getLCA(x, y)] * 2;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>class LcaBinaryLifting {<br>vector<int> depth;<br>vector<long long> dis; // 如果是无权树（边权为 1），dis 可以去掉，用 depth 代替<br>vector<vector<int>> pa;<br>public:<br>LcaBinaryLifting(vector<vector<int>>& edges) {<br>int n = edges.size() + 1;<br>int m = bit_width((unsigned) n); // n 的二进制长度<br>vector<vector<pair<int, int>>> g(n);<br>for (auto& e : edges) {<br>// 如果题目的节点编号从 1 开始，改成 x=e[0]-1 和 y=e[1]-1<br>int x = e[0], y = e[1], w = e[2];<br>g[x].emplace_back(y, w);<br>g[y].emplace_back(x, w);<br>}<br>depth.resize(n);<br>dis.resize(n);<br>pa.resize(m, vector<int>(n, -1));<br>auto dfs = [&](this auto&& dfs, int x, int fa) -> void {<br>pa[0][x] = fa;<br>for (auto& [y, w] : g[x]) {<br>if (y != fa) {<br>depth[y] = depth[x] + 1;<br>dis[y] = dis[x] + w;<br>dfs(y, x);<br>}<br>}<br>};<br>dfs(0, -1);<br>for (int i = 0; i < m - 1; i++) {<br>for (int x = 0; x < n; x++) {<br>if (int p = pa[i][x]; p != -1) {<br>pa[i + 1][x] = pa[i][p];<br>}<br>}<br>}<br>}<br>// 返回 node 的第 k 个祖先节点<br>// 如果不存在，返回 -1<br>int get_kth_ancestor(int node, int k) {<br>for (; k > 0 && node >= 0; k &= k - 1) {<br>node = pa[countr_zero((unsigned) k)][node];<br>}<br>return node;<br>}<br>// 返回 x 和 y 的最近公共祖先（节点编号从 0 开始）<br>int get_lca(int x, int y) {<br>if (depth[x] > depth[y]) {<br>swap(x, y);<br>}<br>y = get_kth_ancestor(y, depth[y] - depth[x]); // 使 y 和 x 在同一深度<br>if (y == x) {<br>return x;<br>}<br>for (int i = pa.size() - 1; i >= 0; i--) {<br>int px = pa[i][x], py = pa[i][y];<br>if (px != py) {<br>x = px;<br>y = py; // 同时往上跳 2^i 步<br>}<br>}<br>return pa[0][x];<br>}<br>// 返回 x 到 y 的距离（最短路长度）<br>long long get_dis(int x, int y) {<br>return dis[x] + dis[y] - dis[get_lca(x, y)] * 2;<br>}<br>};<br>```<br>```go [sol-Go]<br>func minimumWeight(edges [][]int, queries [][]int) []int {<br>n := len(edges) + 1<br>type edge struct{ to, wt int }<br>g := make([][]edge, n)<br>for _, e := range edges {<br>// 如果题目的节点编号从 1 开始，改成 x=e[0]-1 和 y=e[1]-1<br>x, y, wt := e[0], e[1], e[2]<br>g[x] = append(g[x], edge{y, wt})<br>g[y] = append(g[y], edge{x, wt})<br>}<br>const mx = 17 // bits.Len(uint(n))<br>pa := make([][mx]int, n)<br>dep := make([]int, n)<br>dis := make([]int, n) // 如果是无权树（边权为 1），dis 可以去掉，用 dep 代替<br>var dfs func(int, int)<br>dfs = func(x, p int) {<br>pa[x][0] = p<br>for _, e := range g[x] {<br>y := e.to<br>if y == p {<br>continue<br>}<br>dep[y] = dep[x] + 1<br>dis[y] = dis[x] + e.wt<br>dfs(y, x)<br>}<br>}<br>dfs(0, -1)<br>for i := range mx - 1 {<br>for x := range pa {<br>p := pa[x][i]<br>if p != -1 {<br>pa[x][i+1] = pa[p][i]<br>} else {<br>pa[x][i+1] = -1<br>}<br>}<br>}<br>uptoDep := func(x, d int) int {<br>for k := uint(dep[x] - d); k > 0; k &= k - 1 {<br>x = pa[x][bits.TrailingZeros(k)]<br>}<br>return x<br>}<br>// 返回 x 和 y 的最近公共祖先（节点编号从 0 开始）<br>getLCA := func(x, y int) int {<br>if dep[x] > dep[y] {<br>x, y = y, x<br>}<br>y = uptoDep(y, dep[x]) // 使 y 和 x 在同一深度<br>if y == x {<br>return x<br>}<br>for i := mx - 1; i >= 0; i-- {<br>px, py := pa[x][i], pa[y][i]<br>if px != py {<br>x, y = px, py // 同时往上跳 2^i 步<br>}<br>}<br>return pa[x][0]<br>}<br>// 返回 x 到 y 的距离（最短路长度）<br>getDis := func(x, y int) int { return dis[x] + dis[y] - dis[getLCA(x, y)]*2 }<br>// 以上是 LCA 模板<br>ans := make([]int, len(queries))<br>for i, q := range queries {<br>// ...<br>}<br>return ans<br>}<br>```<br>**数组上的倍增**：<br>",
+                            "summary": "<a href=\"https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/solution/mo-ban-jiang-jie-shu-shang-bei-zeng-suan-v3rw/\">讲解</a><br>带权树 LCA 模板（节点编号从 $0$ 开始）：<br>```py [sol-Python3]<br>class LcaBinaryLifting:<br>def __init__(self, edges: List[List[int]]):<br>n = len(edges) + 1<br>m = n.bit_length()<br>g = [[] for _ in range(n)]<br>for x, y, w in edges:<br>g[x].append((y, w))<br>g[y].append((x, w))<br>depth = [0] * n<br>dis = [0] * n  # 如果是无权树（边权为 1），dis 可以去掉，用 depth 代替<br>pa = [[-1] * n for _ in range(m)]<br>def dfs(x: int, fa: int) -> None:<br>pa[0][x] = fa<br>for y, w in g[x]:<br>if y != fa:<br>depth[y] = depth[x] + 1<br>dis[y] = dis[x] + w<br>dfs(y, x)<br>dfs(0, -1)<br>for i in range(m - 1):<br>for x in range(n):<br>if (p := pa[i][x]) != -1:<br>pa[i + 1][x] = pa[i][p]<br>self.depth = depth<br>self.dis = dis<br>self.pa = pa<br>def get_kth_ancestor(self, node: int, k: int) -> int:<br>pa = self.pa<br>for i in range(k.bit_length()):<br>if k >> i & 1:<br>node = pa[i][node]<br>if node < 0:<br>return -1<br>return node<br>def get_lca(self, x: int, y: int) -> int:<br>if self.depth[x] > self.depth[y]:<br>x, y = y, x<br>y = self.get_kth_ancestor(y, self.depth[y] - self.depth[x])<br>if y == x:<br>return x<br>pa = self.pa<br>for i in range(len(pa) - 1, -1, -1):<br>px, py = pa[i][x], pa[i][y]<br>if px != py:<br>x, y = px, py  # 同时往上跳 2**i 步<br>return pa[0][x]<br>def get_dis(self, x: int, y: int) -> int:<br>return self.dis[x] + self.dis[y] - self.dis[self.get_lca(x, y)] * 2<br>```<br>```java [sol-Java]<br>class LcaBinaryLifting {<br>private final int[] depth;<br>private final long[] dis; // 如果是无权树（边权为 1），dis 可以去掉，用 depth 代替<br>private final int[][] pa;<br>public LcaBinaryLifting(int[][] edges) {<br>int n = edges.length + 1;<br>int m = 32 - Integer.numberOfLeadingZeros(n); // n 的二进制长度<br>List<int[]>[] g = new ArrayList[n];<br>Arrays.setAll(g, e -> new ArrayList<>());<br>for (int[] e : edges) {<br>// 如果题目的节点编号从 1 开始，改成 x=e[0]-1 和 y=e[1]-1<br>int x = e[0], y = e[1], w = e[2];<br>g[x].add(new int[]{y, w});<br>g[y].add(new int[]{x, w});<br>}<br>depth = new int[n];<br>dis = new long[n];<br>pa = new int[m][n];<br>dfs(g, 0, -1);<br>for (int i = 0; i < m - 1; i++) {<br>for (int x = 0; x < n; x++) {<br>int p = pa[i][x];<br>pa[i + 1][x] = p < 0 ? -1 : pa[i][p];<br>}<br>}<br>}<br>private void dfs(List<int[]>[] g, int x, int fa) {<br>pa[0][x] = fa;<br>for (int[] e : g[x]) {<br>int y = e[0];<br>if (y != fa) {<br>depth[y] = depth[x] + 1;<br>dis[y] = dis[x] + e[1];<br>dfs(g, y, x);<br>}<br>}<br>}<br>// 返回 node 的第 k 个祖先节点<br>// 如果不存在，返回 -1<br>public int getKthAncestor(int node, int k) {<br>for (; k > 0 && node >= 0; k &= k - 1) {<br>node = pa[Integer.numberOfTrailingZeros(k)][node];<br>}<br>return node;<br>}<br>// 返回 x 和 y 的最近公共祖先（节点编号从 0 开始）<br>public int getLCA(int x, int y) {<br>if (depth[x] > depth[y]) {<br>int tmp = y;<br>y = x;<br>x = tmp;<br>}<br>// 使 y 和 x 在同一深度<br>y = getKthAncestor(y, depth[y] - depth[x]);<br>if (y == x) {<br>return x;<br>}<br>for (int i = pa.length - 1; i >= 0; i--) {<br>int px = pa[i][x], py = pa[i][y];<br>if (px != py) {<br>x = px;<br>y = py; // 同时往上跳 2^i 步<br>}<br>}<br>return pa[0][x];<br>}<br>// 返回 x 到 y 的距离（最短路长度）<br>public long getDis(int x, int y) {<br>return dis[x] + dis[y] - dis[getLCA(x, y)] * 2;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>class LcaBinaryLifting {<br>vector<int> depth;<br>vector<long long> dis; // 如果是无权树（边权为 1），dis 可以去掉，用 depth 代替<br>vector<vector<int>> pa;<br>public:<br>LcaBinaryLifting(vector<vector<int>>& edges) {<br>int n = edges.size() + 1;<br>int m = bit_width((unsigned) n); // n 的二进制长度<br>vector<vector<pair<int, int>>> g(n);<br>for (auto& e : edges) {<br>// 如果题目的节点编号从 1 开始，改成 x=e[0]-1 和 y=e[1]-1<br>int x = e[0], y = e[1], w = e[2];<br>g[x].emplace_back(y, w);<br>g[y].emplace_back(x, w);<br>}<br>depth.resize(n);<br>dis.resize(n);<br>pa.resize(m, vector<int>(n, -1));<br>auto dfs = [&](this auto&& dfs, int x, int fa) -> void {<br>pa[0][x] = fa;<br>for (auto& [y, w] : g[x]) {<br>if (y != fa) {<br>depth[y] = depth[x] + 1;<br>dis[y] = dis[x] + w;<br>dfs(y, x);<br>}<br>}<br>};<br>dfs(0, -1);<br>for (int i = 0; i < m - 1; i++) {<br>for (int x = 0; x < n; x++) {<br>if (int p = pa[i][x]; p != -1) {<br>pa[i + 1][x] = pa[i][p];<br>}<br>}<br>}<br>}<br>// 返回 node 的第 k 个祖先节点<br>// 如果不存在，返回 -1<br>int get_kth_ancestor(int node, int k) {<br>for (; k > 0 && node >= 0; k &= k - 1) {<br>node = pa[countr_zero((unsigned) k)][node];<br>}<br>return node;<br>}<br>// 返回 x 和 y 的最近公共祖先（节点编号从 0 开始）<br>int get_lca(int x, int y) {<br>if (depth[x] > depth[y]) {<br>swap(x, y);<br>}<br>y = get_kth_ancestor(y, depth[y] - depth[x]); // 使 y 和 x 在同一深度<br>if (y == x) {<br>return x;<br>}<br>for (int i = pa.size() - 1; i >= 0; i--) {<br>int px = pa[i][x], py = pa[i][y];<br>if (px != py) {<br>x = px;<br>y = py; // 同时往上跳 2^i 步<br>}<br>}<br>return pa[0][x];<br>}<br>// 返回 x 到 y 的距离（最短路长度）<br>long long get_dis(int x, int y) {<br>return dis[x] + dis[y] - dis[get_lca(x, y)] * 2;<br>}<br>};<br>```<br>```go [sol-Go]<br>func minimumWeight(edges [][]int, queries [][]int) []int {<br>n := len(edges) + 1<br>type edge struct{ to, wt int }<br>g := make([][]edge, n)<br>for _, e := range edges {<br>// 如果题目的节点编号从 1 开始，改成 x=e[0]-1 和 y=e[1]-1<br>x, y, wt := e[0], e[1], e[2]<br>g[x] = append(g[x], edge{y, wt})<br>g[y] = append(g[y], edge{x, wt})<br>}<br>const mx = 17 // bits.Len(uint(n))<br>pa := make([][mx]int, n)<br>dep := make([]int, n)<br>dis := make([]int, n) // 如果是无权树（边权为 1），dis 可以去掉，用 dep 代替<br>var dfs func(int, int)<br>dfs = func(x, p int) {<br>pa[x][0] = p<br>for _, e := range g[x] {<br>y := e.to<br>if y == p {<br>continue<br>}<br>dep[y] = dep[x] + 1<br>dis[y] = dis[x] + e.wt<br>dfs(y, x)<br>}<br>}<br>dfs(0, -1)<br>for i := range mx - 1 {<br>for x := range pa {<br>p := pa[x][i]<br>if p != -1 {<br>pa[x][i+1] = pa[p][i]<br>} else {<br>pa[x][i+1] = -1<br>}<br>}<br>}<br>uptoDep := func(x, d int) int {<br>for k := uint32(dep[x] - d); k > 0; k &= k - 1 {<br>x = pa[x][bits.TrailingZeros32(k)]<br>}<br>return x<br>}<br>// 返回 x 和 y 的最近公共祖先（节点编号从 0 开始）<br>getLCA := func(x, y int) int {<br>if dep[x] > dep[y] {<br>x, y = y, x<br>}<br>y = uptoDep(y, dep[x]) // 使 y 和 x 在同一深度<br>if y == x {<br>return x<br>}<br>for i := mx - 1; i >= 0; i-- {<br>px, py := pa[x][i], pa[y][i]<br>if px != py {<br>x, y = px, py // 同时往上跳 2^i 步<br>}<br>}<br>return pa[x][0]<br>}<br>// 返回 x 到 y 的距离（最短路长度）<br>getDis := func(x, y int) int { return dis[x] + dis[y] - dis[getLCA(x, y)]*2 }<br>// 以上是 LCA 模板<br>ans := make([]int, len(queries))<br>for i, q := range queries {<br>// ...<br>}<br>return ans<br>}<br>```<br>**数组上的倍增**：<br>",
                             "src": "",
                             "original_src": "",
                             "sort": 0,
@@ -5500,34 +5486,6 @@ export default{
                                     "isLeaf": true,
                                     "solution": null,
                                     "score": 1746.8757919578,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "306. 累加数",
-                                    "summary": "",
-                                    "src": "/additive-number/",
-                                    "original_src": "https://leetcode.cn/problems/additive-number/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": null,
-                                    "leafChild": [],
-                                    "nonLeafChild": [],
-                                    "isPremium": false,
-                                    "last_update": ""
-                                },
-                                {
-                                    "title": "842. 将数组拆分成斐波那契序列",
-                                    "summary": "",
-                                    "src": "/split-array-into-fibonacci-sequence/",
-                                    "original_src": "https://leetcode.cn/problems/split-array-into-fibonacci-sequence/",
-                                    "sort": 0,
-                                    "isLeaf": true,
-                                    "solution": null,
-                                    "score": 1779.9495819318,
                                     "leafChild": [],
                                     "nonLeafChild": [],
                                     "isPremium": false,
@@ -6524,6 +6482,20 @@ export default{
                             "last_update": ""
                         },
                         {
+                            "title": "912. 排序数组",
+                            "summary": "",
+                            "src": "/sort-an-array/",
+                            "original_src": "https://leetcode.cn/problems/sort-an-array/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": null,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
                             "title": "880. 索引处的解码字符串",
                             "summary": "",
                             "src": "/decoded-string-at-index/",
@@ -6600,7 +6572,7 @@ export default{
                 },
                 {
                     "title": "算法题单",
-                    "summary": "<a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题？</a><br>1. <a href=\"/lc-rating/list/sliding_window\">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a><br>2. <a href=\"/lc-rating/list/binary_search\">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a><br>3. <a href=\"/lc-rating/list/monotonic_stack\">单调栈（基础/矩形面积/贡献法/最小字典序）</a><br>4. <a href=\"/lc-rating/list/grid\">网格图（DFS/BFS/综合应用）</a><br>5. <a href=\"/lc-rating/list/bitwise_operations\">位运算（基础/性质/拆位/试填/恒等式/思维）</a><br>6. <a href=\"/lc-rating/list/graph\">图论算法（DFS/BFS/拓扑排序/基环树/最短路/最小生成树/网络流）</a><br>7. <a href=\"/lc-rating/list/dynamic_programming\">动态规划（入门/背包/划分/状态机/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a><br>8. <a href=\"/lc-rating/list/data_structure\">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a><br>9. <a href=\"/lc-rating/list/math\">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a><br>10. <a href=\"/lc-rating/list/greedy\">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a><br>11. <a href=\"/lc-rating/list/trees\">链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）</a><br>12. <a href=\"/lc-rating/list/string\">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a><br><a href=\"https://github.com/EndlessCheng/codeforces-go/blob/master/leetcode/SOLUTIONS.md\">我的题解精选（已分类）</a><br>欢迎关注 <a href=\"https://space.bilibili.com/206214\">B站@灵茶山艾府</a><br>如果你发现有题目可以补充进来，欢迎评论反馈。<br>",
+                    "summary": "<a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题？</a><br>1. <a href=\"/lc-rating/list/sliding_window\">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a><br>2. <a href=\"/lc-rating/list/binary_search\">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a><br>3. <a href=\"/lc-rating/list/monotonic_stack\">单调栈（基础/矩形面积/贡献法/最小字典序）</a><br>4. <a href=\"/lc-rating/list/grid\">网格图（DFS/BFS/综合应用）</a><br>5. <a href=\"/lc-rating/list/bitwise_operations\">位运算（基础/性质/拆位/试填/恒等式/思维）</a><br>6. <a href=\"/lc-rating/list/graph\">图论算法（DFS/BFS/拓扑排序/基环树/最短路/最小生成树/网络流）</a><br>7. <a href=\"/lc-rating/list/dynamic_programming\">动态规划（入门/背包/划分/状态机/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a><br>8. <a href=\"/lc-rating/list/data_structure\">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a><br>9. <a href=\"/lc-rating/list/math\">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a><br>10. <a href=\"/lc-rating/list/greedy\">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a><br>11. <a href=\"/lc-rating/list/trees\">链表、树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA）</a><br>12. <a href=\"/lc-rating/list/string\">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a><br><a href=\"https://github.com/EndlessCheng/codeforces-go/blob/master/leetcode/SOLUTIONS.md\">我的题解精选（已分类）</a><br>欢迎关注 <a href=\"https://space.bilibili.com/206214\">B站@灵茶山艾府</a><br>如果你发现有题目可以补充进来，欢迎评论反馈。<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
@@ -6618,5 +6590,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-09-29 03:27:44"
+    "last_update": "2025-11-23 22:46:39"
 } as ProblemCategory;

@@ -6143,47 +6143,160 @@ export default{
                 },
                 {
                     "title": "§9.5 SOS DP",
-                    "summary": "子集和 DP（Sum Over Subsets DP，SOS DP），国内算法竞赛圈一般叫高维前缀和。<br>",
+                    "summary": "子集和 DP（Sum Over Subsets DP，SOS DP），国内算法竞赛圈一般叫高维前缀和。<br><a href=\"https://leetcode.cn/problems/maximum-product-of-two-integers-with-no-common-bits/solutions/3768219/mo-ban-gao-wei-qian-zhui-he-sos-dppython-78fz/\">原理讲解（方法二）</a><br>模板（从子集转移过来）：<br>```py [sol-Python3]<br>",
                     "src": "",
                     "original_src": "",
                     "sort": 0,
                     "isLeaf": false,
                     "solution": "",
                     "score": 0,
-                    "leafChild": [
-                        {
-                            "title": "3670. 没有公共位的整数最大乘积",
-                            "summary": "",
-                            "src": "/maximum-product-of-two-integers-with-no-common-bits/",
-                            "original_src": "https://leetcode.cn/problems/maximum-product-of-two-integers-with-no-common-bits/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 2233.8134907095,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        },
-                        {
-                            "title": "2732. 找到矩阵中的好子集",
-                            "summary": "",
-                            "src": "/find-a-good-subset-of-the-matrix/",
-                            "original_src": "https://leetcode.cn/problems/find-a-good-subset-of-the-matrix/",
-                            "sort": 0,
-                            "isLeaf": true,
-                            "solution": null,
-                            "score": 2239.7101856677,
-                            "leafChild": [],
-                            "nonLeafChild": [],
-                            "isPremium": false,
-                            "last_update": ""
-                        }
-                    ],
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                }
+            ],
+            "isPremium": false,
+            "last_update": ""
+        },
+        {
+            "title": "设 w 为 a[i] 的二进制最大长度",
+            "summary": "",
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [],
+            "nonLeafChild": [],
+            "isPremium": false,
+            "last_update": ""
+        },
+        {
+            "title": "返回一个长为 2^w 的数组 f，其中 f[S] 表示 a 中是 S 的子集的元素个数（把二进制数视作集合）",
+            "summary": "",
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [],
+            "nonLeafChild": [],
+            "isPremium": false,
+            "last_update": ""
+        },
+        {
+            "title": "时间复杂度 O(n + U log U)，其中 U = max(a)",
+            "summary": "def sos_dp(a: List[int]) -> List[int]:<br>mx = max(a)<br>w = mx.bit_length()  # 二进制长度上限<br>u = 1 << w<br>f = [0] * u<br>for x in a:<br>f[x] += 1  # 初始值<br>for i in range(w):<br>bit = 1 << i<br>s = 0<br>while s < u:<br>s |= bit  # 优化：快速跳到 i 位是 1 的 s<br>f[s] += f[s ^ bit]<br>s += 1<br>return f<br>```<br>```java [sol-Java]<br>class Solution {<br>// 设 w 为 a[i] 的二进制最大长度<br>// 返回一个长为 2^w 的数组 f，其中 f[S] 表示 a 中是 S 的子集的元素个数（把二进制数视作集合）<br>// 时间复杂度 O(n + U log U)，其中 U = max(a)<br>public int[] sosDP(int[] a) {<br>int mx = 0;<br>for (int x : a) {<br>mx = Math.max(mx, x);<br>}<br>int w = 32 - Integer.numberOfLeadingZeros(mx); // 二进制长度上限<br>int[] f = new int[1 << w];<br>for (int x : a) {<br>f[x]++; // 初始值<br>}<br>for (int i = 0; i < w; i++) {<br>for (int s = 0; s < (1 << w); s++) {<br>s |= 1 << i; // 优化：快速跳到 i 位是 1 的 s<br>f[s] += f[s ^ (1 << i)];<br>}<br>}<br>return f;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>// 设 w 为 a[i] 的二进制最大长度<br>// 返回一个长为 2^w 的数组 f，其中 f[S] 表示 a 中是 S 的子集的元素个数（把二进制数视作集合）<br>// 时间复杂度 O(n + U log U)，其中 U = max(a)<br>vector<int> sos_dp(vector<int>& a) {<br>int mx = ranges::max(a);<br>int w = bit_width((uint32_t) mx); // 二进制长度上限<br>vector<int> f(1 << w);<br>for (int x : a) {<br>f[x]++; // 初始值<br>}<br>for (int i = 0; i < w; i++) {<br>for (int s = 0; s < (1 << w); s++) {<br>s |= 1 << i; // 优化：快速跳到 i 位是 1 的 s<br>f[s] += f[s ^ (1 << i)];<br>}<br>}<br>return f;<br>}<br>```<br>```go [sol-Go]<br>// 设 w 为 a[i] 的二进制最大长度<br>// 返回一个长为 2^w 的数组 f，其中 f[S] 表示 a 中是 S 的子集的元素个数（把二进制数视作集合）<br>// 时间复杂度 O(n + U log U)，其中 U = max(a)<br>func sosDP(a []int) []int {<br>mx := slices.Max(a)<br>w := bits.Len(uint(mx)) // 二进制长度上限<br>f := make([]int, 1<<w)<br>for _, x := range a {<br>f[x]++ // 初始值<br>}<br>for i := range w {<br>for s := 0; s < 1<<w; s++ {<br>s |= 1 << i // 优化：快速跳到 i 位是 1 的 s<br>f[s] += f[s^1<<i]<br>}<br>}<br>return f<br>}<br>```<br>模板（从超集转移过来）：<br>```py [sol-Python3]<br>",
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [],
+            "nonLeafChild": [],
+            "isPremium": false,
+            "last_update": ""
+        },
+        {
+            "title": "设 w 为 a[i] 的二进制最大长度",
+            "summary": "",
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [],
+            "nonLeafChild": [],
+            "isPremium": false,
+            "last_update": ""
+        },
+        {
+            "title": "返回一个长为 2^w 的数组 f，其中 f[S] 表示 a 中是 S 的超集的元素个数（把二进制数视作集合）",
+            "summary": "",
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [],
+            "nonLeafChild": [],
+            "isPremium": false,
+            "last_update": ""
+        },
+        {
+            "title": "时间复杂度 O(n + U log U)，其中 U = max(a)",
+            "summary": "def sos_dp(a: List[int]) -> List[int]:<br>mx = max(a)<br>w = mx.bit_length()  # 二进制长度上限<br>u = 1 << w<br>f = [0] * u<br>for x in a:<br>f[x] += 1  # 初始值<br>for i in range(w):<br>bit = 1 << i<br>s = 0<br>while s < u:<br>s |= bit  # 优化：快速跳到 i 位是 1 的 s<br>f[s ^ bit] += f[s]<br>s += 1<br>return f<br>```<br>```java [sol-Java]<br>class Solution {<br>// 设 w 为 a[i] 的二进制最大长度<br>// 返回一个长为 2^w 的数组 f，其中 f[S] 表示 a 中是 S 的超集的元素个数（把二进制数视作集合）<br>// 时间复杂度 O(n + U log U)，其中 U = max(a)<br>public int[] sosDP(int[] a) {<br>int mx = 0;<br>for (int x : a) {<br>mx = Math.max(mx, x);<br>}<br>int w = 32 - Integer.numberOfLeadingZeros(mx); // 二进制长度上限<br>int[] f = new int[1 << w];<br>for (int x : a) {<br>f[x]++; // 初始值<br>}<br>for (int i = 0; i < w; i++) {<br>for (int s = 0; s < (1 << w); s++) {<br>s |= 1 << i; // 优化：快速跳到 i 位是 1 的 s<br>f[s ^ (1 << i)] += f[s];<br>}<br>}<br>return f;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>// 设 w 为 a[i] 的二进制最大长度<br>// 返回一个长为 2^w 的数组 f，其中 f[S] 表示 a 中是 S 的超集的元素个数（把二进制数视作集合）<br>// 时间复杂度 O(n + U log U)，其中 U = max(a)<br>vector<int> sos_dp(vector<int>& a) {<br>int mx = ranges::max(a);<br>int w = bit_width((uint32_t) mx); // 二进制长度上限<br>vector<int> f(1 << w);<br>for (int x : a) {<br>f[x]++; // 初始值<br>}<br>for (int i = 0; i < w; i++) {<br>for (int s = 0; s < (1 << w); s++) {<br>s |= 1 << i; // 优化：快速跳到 i 位是 1 的 s<br>f[s ^ (1 << i)] += f[s];<br>}<br>}<br>return f;<br>}<br>```<br>```go [sol-Go]<br>// 设 w 为 a[i] 的二进制最大长度<br>// 返回一个长为 2^w 的数组 f，其中 f[S] 表示 a 中是 S 的超集的元素个数（把二进制数视作集合）<br>// 时间复杂度 O(n + U log U)，其中 U = max(a)<br>func sosDP(a []int) []int {<br>mx := slices.Max(a)<br>w := bits.Len(uint(mx)) // 二进制长度上限<br>f := make([]int, 1<<w)<br>for _, x := range a {<br>f[x]++ // 初始值<br>}<br>for i := range w {<br>for s := 0; s < 1<<w; s++ {<br>s |= 1 << i // 优化：快速跳到 i 位是 1 的 s<br>f[s^1<<i] += f[s]<br>}<br>}<br>return f<br>}<br>```<br>",
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [
+                {
+                    "title": "3670. 没有公共位的整数最大乘积",
+                    "summary": "",
+                    "src": "/maximum-product-of-two-integers-with-no-common-bits/",
+                    "original_src": "https://leetcode.cn/problems/maximum-product-of-two-integers-with-no-common-bits/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2233.8134907095,
+                    "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
                     "last_update": ""
                 },
+                {
+                    "title": "2044. 统计按位或能得到最大值的子集数目",
+                    "summary": "",
+                    "src": "/count-number-of-maximum-bitwise-or-subsets/",
+                    "original_src": "https://leetcode.cn/problems/count-number-of-maximum-bitwise-or-subsets/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 1567.6884942977,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "2732. 找到矩阵中的好子集",
+                    "summary": "",
+                    "src": "/find-a-good-subset-of-the-matrix/",
+                    "original_src": "https://leetcode.cn/problems/find-a-good-subset-of-the-matrix/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2239.7101856677,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
+                {
+                    "title": "3757. 有效子序列的数量",
+                    "summary": "",
+                    "src": "/number-of-effective-subsequences/",
+                    "original_src": "https://leetcode.cn/problems/number-of-effective-subsequences/",
+                    "sort": 0,
+                    "isLeaf": true,
+                    "solution": null,
+                    "score": 2519.499932424,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                }
+            ],
+            "nonLeafChild": [
                 {
                     "title": "§9.6 其他状压 DP",
                     "summary": "",
@@ -6464,22 +6577,37 @@ export default{
                     "nonLeafChild": [],
                     "isPremium": false,
                     "last_update": ""
+                },
+                {
+                    "title": "十、数位 DP",
+                    "summary": "",
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [],
+                    "nonLeafChild": [
+                        {
+                            "title": "§10.1 统计合法元素的数目",
+                            "summary": "<a href=\"https://www.bilibili.com/video/BV1rS4y1s721/?t=19m36s\">数位 DP v1.0 模板讲解</a><br><a href=\"https://www.bilibili.com/video/BV1Fg4y1Q7wv/?t=31m28s\">数位 DP v2.0 模板讲解</a>（上下界数位 DP）<br>下面是数位 DP v2.1 模板。相比 v2.0，不需要写 $\\textit{isNum}$ 参数。<br>> 注：只有上界约束的题目，相当于 $\\textit{low}=0$ 或者 $\\textit{low}=1$。<br>```py [sol-Python3]<br>",
+                            "src": "",
+                            "original_src": "",
+                            "sort": 0,
+                            "isLeaf": false,
+                            "solution": "",
+                            "score": 0,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        }
+                    ],
+                    "isPremium": false,
+                    "last_update": ""
                 }
             ],
-            "isPremium": false,
-            "last_update": ""
-        },
-        {
-            "title": "十、数位 DP",
-            "summary": "<a href=\"https://www.bilibili.com/video/BV1rS4y1s721/?t=19m36s\">数位 DP v1.0 模板讲解</a><br><a href=\"https://www.bilibili.com/video/BV1Fg4y1Q7wv/?t=31m28s\">数位 DP v2.0 模板讲解</a> 上下界数位 DP<br>下面是数位 DP v2.1 模板。相比 v2.0，不需要写 $\\textit{isNum}$ 参数。<br>> 注：只有上界约束的题目，相当于 $\\textit{low}=0$ 或者 $\\textit{low}=1$。<br>```py [sol-Python3]<br>",
-            "src": "",
-            "original_src": "",
-            "sort": 0,
-            "isLeaf": false,
-            "solution": "",
-            "score": 0,
-            "leafChild": [],
-            "nonLeafChild": [],
             "isPremium": false,
             "last_update": ""
         },
@@ -6513,7 +6641,7 @@ export default{
         },
         {
             "title": "res %= MOD",
-            "summary": "def digitDP(low: int, high: int, target: int) -> int:<br>low_s = list(map(int, str(low)))  # 避免在 dfs 中频繁调用 int()<br>high_s = list(map(int, str(high)))<br>n = len(high_s)<br>diff_lh = n - len(low_s)<br>@cache<br>def dfs(i: int, cnt0: int, limit_low: bool, limit_high: bool) -> int:<br>if cnt0 > target:<br>return 0  # 不合法<br>if i == n:<br>return 1 if cnt0 == target else 0<br>lo = low_s[i - diff_lh] if limit_low and i >= diff_lh else 0<br>hi = high_s[i] if limit_high else 9<br>res = 0<br>start = lo<br>if limit_low and i < diff_lh:<br>res = dfs(i + 1, cnt0, True, False)<br>start = 1<br>for d in range(start, hi + 1):<br>res += dfs(i + 1,<br>cnt0 + (1 if d == 0 else 0),  # 统计 0 的个数<br>limit_low and d == lo,<br>limit_high and d == hi)<br>return res<br>return dfs(0, 0, True, True)<br>```<br>```java [sol-Java]<br>// 代码示例：返回 [low, high] 中的恰好包含 target 个 0 的数字个数<br>// 比如 digitDP(0, 10, 1) == 2<br>// 要点：我们统计的是 0 的个数，需要区分【前导零】和【数字中的零】，前导零不能计入，而数字中的零需要计入<br>class Solution {<br>public long digitDP(long low, long high, int target) {<br>char[] lowS = String.valueOf(low).toCharArray();<br>char[] highS = String.valueOf(high).toCharArray();<br>int n = highS.length;<br>long[][] memo = new long[n][target + 1];<br>for (long[] row : memo) {<br>Arrays.fill(row, -1);<br>}<br>return dfs(0, 0, true, true, lowS, highS, target, memo);<br>}<br>private long dfs(int i, int cnt0, boolean limitLow, boolean limitHigh, char[] lowS, char[] highS, int target, long[][] memo) {<br>if (cnt0 > target) {<br>return 0; // 不合法<br>}<br>if (i == highS.length) {<br>return cnt0 == target ? 1 : 0;<br>}<br>if (!limitLow && !limitHigh && memo[i][cnt0] >= 0) {<br>return memo[i][cnt0];<br>}<br>int diff = highS.length - lowS.length;<br>int lo = limitLow && i >= diff ? lowS[i - diff] - '0' : 0;<br>int hi = limitHigh ? highS[i] - '0' : 9;<br>long res = 0;<br>int d = lo;<br>// 通过 limitLow 和 i 可以判断能否不填数字，无需 isNum 参数<br>// 如果前导零不影响答案，去掉这个 if block<br>if (limitLow && i < diff) {<br>// 不填数字，上界不受约束<br>res = dfs(i + 1, cnt0, true, false, lowS, highS, target, memo);<br>d = 1;<br>}<br>for (; d <= hi; d++) {<br>res += dfs(i + 1,<br>cnt0 + (d == 0 ? 1 : 0), // 统计 0 的个数<br>limitLow && d == lo,<br>limitHigh && d == hi,<br>lowS, highS, target, memo);<br>// res %= MOD;<br>}<br>if (!limitLow && !limitHigh) {<br>memo[i][cnt0] = res;<br>}<br>return res;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>// 代码示例：返回 [low, high] 中的恰好包含 target 个 0 的数字个数<br>// 比如 digitDP(0, 10, 1) == 2<br>// 要点：我们统计的是 0 的个数，需要区分【前导零】和【数字中的零】，前导零不能计入，而数字中的零需要计入<br>long long digitDP(long long low, long long high, int target) {<br>string low_s = to_string(low);<br>string high_s = to_string(high);<br>int n = high_s.size();<br>int diff_lh = n - low_s.size();<br>vector memo(n, vector<long long>(target + 1, -1));<br>auto dfs = [&](this auto&& dfs, int i, int cnt0, bool limit_low, bool limit_high) -> long long {<br>if (cnt0 > target) {<br>return 0; // 不合法<br>}<br>if (i == n) {<br>return cnt0 == target;<br>}<br>if (!limit_low && !limit_high && memo[i][cnt0] >= 0) {<br>return memo[i][cnt0];<br>}<br>int lo = limit_low && i >= diff_lh ? low_s[i - diff_lh] - '0' : 0;<br>int hi = limit_high ? high_s[i] - '0' : 9;<br>long long res = 0;<br>int d = lo;<br>// 通过 limit_low 和 i 可以判断能否不填数字，无需 is_num 参数<br>// 如果前导零不影响答案，去掉这个 if block<br>if (limit_low && i < diff_lh) {<br>// 不填数字，上界不受约束<br>res = dfs(i + 1, cnt0, true, false);<br>d = 1;<br>}<br>for (; d <= hi; d++) {<br>// 统计 0 的个数<br>res += dfs(i + 1, cnt0 + (d == 0), limit_low && d == lo, limit_high && d == hi);<br>// res %= MOD;<br>}<br>if (!limit_low && !limit_high) {<br>memo[i][cnt0] = res;<br>}<br>return res;<br>};<br>return dfs(0, 0, true, true);<br>}<br>```<br>```go [sol-Go]<br>// 代码示例：返回 [low, high] 中的恰好包含 target 个 0 的数字个数<br>// 比如 digitDP(0, 10, 1) == 2<br>// 要点：我们统计的是 0 的个数，需要区分【前导零】和【数字中的零】，前导零不能计入，而数字中的零需要计入<br>func digitDP(low, high, target int) int {<br>lowS := strconv.Itoa(low)<br>highS := strconv.Itoa(high)<br>n := len(highS)<br>diffLH := n - len(lowS)<br>memo := make([][]int, n)<br>for i := range memo {<br>memo[i] = make([]int, target+1)<br>for j := range memo[i] {<br>memo[i][j] = -1<br>}<br>}<br>var dfs func(int, int, bool, bool) int<br>dfs = func(i, cnt0 int, limitLow, limitHigh bool) (res int) {<br>// 不合法<br>if cnt0 > target {<br>return 0<br>}<br>if i == n {<br>// 不合法<br>if cnt0 < target {<br>return 0<br>}<br>// 合法<br>return 1<br>}<br>if !limitLow && !limitHigh {<br>p := &memo[i][cnt0]<br>if *p >= 0 {<br>return *p<br>}<br>defer func() { *p = res }()<br>}<br>lo := 0<br>if limitLow && i >= diffLH {<br>lo = int(lowS[i-diffLH] - '0')<br>}<br>hi := 9<br>if limitHigh {<br>hi = int(highS[i] - '0')<br>}<br>d := lo<br>// 通过 limitLow 和 i 可以判断能否不填数字，无需 isNum 参数<br>// 如果前导零不影响答案，去掉这个 if block<br>if limitLow && i < diffLH {<br>// 不填数字，上界不受约束<br>res = dfs(i+1, cnt0, true, false)<br>d = 1<br>}<br>for ; d <= hi; d++ {<br>c0 := cnt0<br>if d == 0 {<br>c0++ // 统计 0 的个数<br>}<br>res += dfs(i+1, c0, limitLow && d == lo, limitHigh && d == hi)<br>// res %= mod<br>}<br>return<br>}<br>return dfs(0, 0, true, true)<br>}<br>```<br>**从低到高**：<br>**思维扩展**：<br>",
+            "summary": "def digitDP(low: int, high: int, target: int) -> int:<br>low_s = list(map(int, str(low)))  # 避免在 dfs 中频繁调用 int()<br>high_s = list(map(int, str(high)))<br>n = len(high_s)<br>diff_lh = n - len(low_s)<br>@cache<br>def dfs(i: int, cnt0: int, limit_low: bool, limit_high: bool) -> int:<br>if cnt0 > target:<br>return 0  # 不合法<br>if i == n:<br>return 1 if cnt0 == target else 0<br>lo = low_s[i - diff_lh] if limit_low and i >= diff_lh else 0<br>hi = high_s[i] if limit_high else 9<br>res = 0<br>start = lo<br>if limit_low and i < diff_lh:<br>res = dfs(i + 1, 0, True, False)<br>start = 1<br>for d in range(start, hi + 1):<br>res += dfs(i + 1,<br>cnt0 + (1 if d == 0 else 0),  # 统计 0 的个数<br>limit_low and d == lo,<br>limit_high and d == hi)<br>return res<br>return dfs(0, 0, True, True)<br>```<br>```java [sol-Java]<br>// 代码示例：返回 [low, high] 中的恰好包含 target 个 0 的数字个数<br>// 比如 digitDP(0, 10, 1) == 2<br>// 要点：我们统计的是 0 的个数，需要区分【前导零】和【数字中的零】，前导零不能计入，而数字中的零需要计入<br>class Solution {<br>public long digitDP(long low, long high, int target) {<br>char[] lowS = String.valueOf(low).toCharArray();<br>char[] highS = String.valueOf(high).toCharArray();<br>int n = highS.length;<br>long[][] memo = new long[n][target + 1];<br>for (long[] row : memo) {<br>Arrays.fill(row, -1);<br>}<br>return dfs(0, 0, true, true, lowS, highS, target, memo);<br>}<br>private long dfs(int i, int cnt0, boolean limitLow, boolean limitHigh, char[] lowS, char[] highS, int target, long[][] memo) {<br>if (cnt0 > target) {<br>return 0; // 不合法<br>}<br>if (i == highS.length) {<br>return cnt0 == target ? 1 : 0;<br>}<br>if (!limitLow && !limitHigh && memo[i][cnt0] >= 0) {<br>return memo[i][cnt0];<br>}<br>int diff = highS.length - lowS.length;<br>int lo = limitLow && i >= diff ? lowS[i - diff] - '0' : 0;<br>int hi = limitHigh ? highS[i] - '0' : 9;<br>long res = 0;<br>int d = lo;<br>// 通过 limitLow 和 i 可以判断能否不填数字，无需 isNum 参数<br>// 如果前导零不影响答案，去掉这个 if block<br>if (limitLow && i < diff) {<br>// 不填数字，上界不受约束<br>res = dfs(i + 1, 0, true, false, lowS, highS, target, memo);<br>d = 1;<br>}<br>for (; d <= hi; d++) {<br>res += dfs(i + 1,<br>cnt0 + (d == 0 ? 1 : 0), // 统计 0 的个数<br>limitLow && d == lo,<br>limitHigh && d == hi,<br>lowS, highS, target, memo);<br>// res %= MOD;<br>}<br>if (!limitLow && !limitHigh) {<br>memo[i][cnt0] = res;<br>}<br>return res;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>// 代码示例：返回 [low, high] 中的恰好包含 target 个 0 的数字个数<br>// 比如 digitDP(0, 10, 1) == 2<br>// 要点：我们统计的是 0 的个数，需要区分【前导零】和【数字中的零】，前导零不能计入，而数字中的零需要计入<br>long long digitDP(long long low, long long high, int target) {<br>string low_s = to_string(low);<br>string high_s = to_string(high);<br>int n = high_s.size();<br>int diff_lh = n - low_s.size();<br>vector memo(n, vector<long long>(target + 1, -1));<br>auto dfs = [&](this auto&& dfs, int i, int cnt0, bool limit_low, bool limit_high) -> long long {<br>if (cnt0 > target) {<br>return 0; // 不合法<br>}<br>if (i == n) {<br>return cnt0 == target;<br>}<br>if (!limit_low && !limit_high && memo[i][cnt0] >= 0) {<br>return memo[i][cnt0];<br>}<br>int lo = limit_low && i >= diff_lh ? low_s[i - diff_lh] - '0' : 0;<br>int hi = limit_high ? high_s[i] - '0' : 9;<br>long long res = 0;<br>int d = lo;<br>// 通过 limit_low 和 i 可以判断能否不填数字，无需 is_num 参数<br>// 如果前导零不影响答案，去掉这个 if block<br>if (limit_low && i < diff_lh) {<br>// 不填数字，上界不受约束<br>res = dfs(i + 1, 0, true, false);<br>d = 1;<br>}<br>for (; d <= hi; d++) {<br>// 统计 0 的个数<br>res += dfs(i + 1, cnt0 + (d == 0), limit_low && d == lo, limit_high && d == hi);<br>// res %= MOD;<br>}<br>if (!limit_low && !limit_high) {<br>memo[i][cnt0] = res;<br>}<br>return res;<br>};<br>return dfs(0, 0, true, true);<br>}<br>```<br>```go [sol-Go]<br>// 代码示例：返回 [low, high] 中的恰好包含 target 个 0 的数字个数<br>// 比如 digitDP(0, 10, 1) == 2<br>// 要点：我们统计的是 0 的个数，需要区分【前导零】和【数字中的零】，前导零不能计入，而数字中的零需要计入<br>func digitDP(low, high int, target int) int {<br>lowS := strconv.Itoa(low)<br>highS := strconv.Itoa(high)<br>n := len(highS)<br>diffLH := n - len(lowS)<br>memo := make([][]int, n)<br>for i := range memo {<br>memo[i] = make([]int, target+1)<br>for j := range memo[i] {<br>memo[i][j] = -1<br>}<br>}<br>var dfs func(int, int, bool, bool) int<br>dfs = func(i, cnt0 int, limitLow, limitHigh bool) (res int) {<br>// 不合法<br>if cnt0 > target {<br>return 0<br>}<br>if i == n {<br>// 不合法<br>if cnt0 < target {<br>return 0<br>}<br>// 合法<br>return 1<br>}<br>if !limitLow && !limitHigh {<br>p := &memo[i][cnt0]<br>if *p >= 0 {<br>return *p<br>}<br>defer func() { *p = res }()<br>}<br>lo := 0<br>if limitLow && i >= diffLH {<br>lo = int(lowS[i-diffLH] - '0')<br>}<br>hi := 9<br>if limitHigh {<br>hi = int(highS[i] - '0')<br>}<br>d := lo<br>// 通过 limitLow 和 i 可以判断能否不填数字，无需 isNum 参数<br>// 如果前导零不影响答案，去掉这个 if block<br>if limitLow && i < diffLH {<br>// 不填数字，上界不受约束<br>res = dfs(i+1, 0, true, false)<br>d = 1<br>}<br>for ; d <= hi; d++ {<br>c0 := cnt0<br>if d == 0 {<br>c0++ // 统计 0 的个数<br>}<br>res += dfs(i+1, c0, limitLow && d == lo, limitHigh && d == hi)<br>// res %= mod<br>}<br>return<br>}<br>return dfs(0, 0, true, true)<br>}<br>```<br>**从低到高**：<br>",
             "src": "",
             "original_src": "",
             "sort": 0,
@@ -6842,7 +6970,37 @@ export default{
                     "nonLeafChild": [],
                     "isPremium": false,
                     "last_update": ""
-                },
+                }
+            ],
+            "nonLeafChild": [
+                {
+                    "title": "§10.2 统计合法元素的价值总和",
+                    "summary": "每个元素 $x$ 都有一个相应的价值 $f(x)$，计算 $[\\textit{low},\\textit{high}]$ 中的满足题目约束的元素的价值总和。<br>例如 $f(x) = x$ 是计算满足题目约束的元素和，$f(x) = \\text{digsum}(x)$ 是计算满足题目约束的元素的数位和。<br>模板（数位和）：<br>```py [sol-Python3]<br>",
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                }
+            ],
+            "isPremium": false,
+            "last_update": ""
+        },
+        {
+            "title": "cnt %= MOD; res %= MOD",
+            "summary": "def digitDPContribution(low: int, high: int, k: int) -> int:<br>low_s = list(map(int, str(low)))  # 避免在 dfs 中频繁调用 int()<br>high_s = list(map(int, str(high)))<br>n = len(high_s)<br>diff_lh = n - len(low_s)<br>@cache<br>def dfs(i: int, mask: int, limit_low: bool, limit_high: bool) -> Tuple[int, int]:<br>if i == n:<br>return 1, 0<br>lo = low_s[i - diff_lh] if limit_low and i >= diff_lh else 0<br>hi = high_s[i] if limit_high else 9<br>cnt = res = 0<br>start = lo<br>if limit_low and i < diff_lh:<br>cnt, res = dfs(i + 1, 0, True, False)<br>start = 1<br>for d in range(start, hi + 1):<br>new_mask = mask | 1 << d<br>if new_mask.bit_count() > k:  # 不满足要求<br>continue<br>sub_cnt, sub_sum = dfs(i + 1,<br>new_mask,<br>limit_low and d == lo,<br>limit_high and d == hi)<br>cnt += sub_cnt  # 累加子树的合法数字个数<br>res += sub_sum  # 累加子树的数位总和<br>res += d * sub_cnt  # d 会出现在 sub_cnt 个数中（贡献法）<br>return cnt, res<br>return dfs(0, 0, True, True)[1]<br>```<br>```java [sol-Java]<br>// 计算在 [low, high] 中的整数 x 的数位和，满足 x 中的不同数字个数不超过 k<br>class Solution {<br>public long digitDPContribution(long low, long high, int k) {<br>char[] lowS = String.valueOf(low).toCharArray();<br>char[] highS = String.valueOf(high).toCharArray();<br>int n = highS.length;<br>long[][][] memo = new long[n][1 << 10][];<br>return dfs(0, 0, true, true, lowS, highS, k, memo)[1];<br>}<br>// dfs 返回两个数：子树合法数字个数，子树数位总和<br>private long[] dfs(int i, int mask, boolean limitLow, boolean limitHigh, char[] lowS, char[] highS, int k, long[][][] memo) {<br>if (i == highS.length) {<br>// 如果没有特殊约束，那么能递归到终点的都是合法数字<br>return new long[]{1, 0};<br>}<br>if (!limitLow && !limitHigh && memo[i][mask] != null) {<br>return memo[i][mask];<br>}<br>int diff = highS.length - lowS.length;<br>int lo = limitLow && i >= diff ? lowS[i - diff] - '0' : 0;<br>int hi = limitHigh ? highS[i] - '0' : 9;<br>long cnt = 0;<br>long sum = 0;<br>int d = lo;<br>// 如果前导零不影响答案，去掉这个 if block<br>if (limitLow && i < diff) {<br>// 不填数字，上界不受约束<br>long[] sub = dfs(i + 1, 0, true, false, lowS, highS, k, memo);<br>cnt = sub[0];<br>sum = sub[1];<br>d = 1;<br>}<br>for (; d <= hi; d++) {<br>int newMask = mask | 1 << d;<br>if (Integer.bitCount(newMask) > k) { // 不满足要求<br>continue;<br>}<br>long[] sub = dfs(i + 1,<br>newMask,<br>limitLow && d == lo,<br>limitHigh && d == hi,<br>lowS, highS, k, memo);<br>cnt += sub[0]; // 累加子树的合法数字个数<br>sum += sub[1]; // 累加子树的数位总和<br>sum += d * sub[0]; // d 会出现在 sub[0] 个数中（贡献法）<br>// cnt %= MOD; sum %= MOD;<br>}<br>long[] res = new long[]{cnt, sum};<br>if (!limitLow && !limitHigh) {<br>memo[i][mask] = res;<br>}<br>return res;<br>}<br>}<br>```<br>```cpp [sol-C++]<br>// 计算在 [low, high] 中的整数 x 的数位和，满足 x 中的不同数字个数不超过 k<br>long long digitDPContribution(long long low, long long high, int k) {<br>string low_s = to_string(low);<br>string high_s = to_string(high);<br>int n = high_s.size();<br>int diff_lh = n - low_s.size();<br>vector memo(n, vector<pair<long long, long long>>(1 << 10, {-1, -1}));<br>// dfs 返回两个数：子树合法数字个数，子树数位总和<br>auto dfs = [&](this auto&& dfs, int i, int mask, bool limit_low, bool limit_high) -> pair<long long, long long> {<br>if (i == n) {<br>// 如果没有特殊约束，那么能递归到终点的都是合法数字<br>return {1, 0};<br>}<br>if (!limit_low && !limit_high && memo[i][mask].first >= 0) {<br>return memo[i][mask];<br>}<br>int lo = limit_low && i >= diff_lh ? low_s[i - diff_lh] - '0' : 0;<br>int hi = limit_high ? high_s[i] - '0' : 9;<br>long long cnt = 0, sum = 0;<br>int d = lo;<br>// 如果前导零不影响答案，去掉这个 if block<br>if (limit_low && i < diff_lh) {<br>// 不填数字，上界不受约束<br>tie(cnt, sum) = dfs(i + 1, 0, true, false);<br>d = 1;<br>}<br>for (; d <= hi; d++) {<br>int new_mask = mask | 1 << d;<br>if (popcount((uint32_t) new_mask) > k) { // 不满足要求<br>continue;<br>}<br>auto [sub_cnt, sub_sum] = dfs(i + 1, new_mask, limit_low && d == lo, limit_high && d == hi);<br>cnt += sub_cnt; // 累加子树的合法数字个数<br>sum += sub_sum; // 累加子树的数位总和<br>sum += d * sub_cnt; // d 会出现在 sub_cnt 个数中（贡献法）<br>// cnt %= MOD; sum %= MOD;<br>}<br>pair<long long, long long> res = {cnt, sum};<br>if (!limit_low && !limit_high) {<br>memo[i][mask] = res;<br>}<br>return res;<br>};<br>return dfs(0, 0, true, true).second;<br>}<br>```<br>```go [sol-Go]<br>// 计算在 [low, high] 中的整数 x 的数位和，满足 x 中的不同数字个数不超过 k<br>func digitDPContribution(low, high int, k int) int {<br>lowS := strconv.Itoa(low)<br>highS := strconv.Itoa(high)<br>n := len(highS)<br>diffLH := n - len(lowS)<br>type pair struct{ cnt, sum int }<br>memo := make([][1 << 10]pair, n)<br>for i := range memo {<br>for j := range memo[i] {<br>memo[i][j].cnt = -1<br>}<br>}<br>// dfs 返回两个数：子树合法数字个数，子树数位总和<br>var dfs func(int, int, bool, bool) pair<br>dfs = func(i, mask int, limitLow, limitHigh bool) (res pair) {<br>if i == n {<br>// 如果没有特殊约束，那么能递归到终点的都是合法数字<br>return pair{1, 0}<br>}<br>if !limitLow && !limitHigh {<br>p := &memo[i][mask]<br>if p.cnt >= 0 {<br>return *p<br>}<br>defer func() { *p = res }()<br>}<br>lo := 0<br>if limitLow && i >= diffLH {<br>lo = int(lowS[i-diffLH] - '0')<br>}<br>hi := 9<br>if limitHigh {<br>hi = int(highS[i] - '0')<br>}<br>d := lo<br>// 如果前导零不影响答案，可以去掉这个 if block<br>if limitLow && i < diffLH {<br>// 不填数字，上界不受约束<br>res = dfs(i+1, 0, true, false)<br>d = 1<br>}<br>for ; d <= hi; d++ {<br>newMask := mask | 1<<d<br>if bits.OnesCount(uint(newMask)) > k { // 不满足要求<br>continue<br>}<br>sub := dfs(i+1, newMask, limitLow && d == lo, limitHigh && d == hi)<br>res.cnt += sub.cnt     // 累加子树的合法数字个数<br>res.sum += sub.sum     // 累加子树的数位总和<br>res.sum += d * sub.cnt // d 会出现在 sub.cnt 个数中（贡献法）<br>// res.cnt %= mod; res.sum %= mod<br>}<br>return<br>}<br>return dfs(0, 0, true, true).sum<br>}<br>```<br>",
+            "src": "",
+            "original_src": "",
+            "sort": 0,
+            "isLeaf": false,
+            "solution": "",
+            "score": 0,
+            "leafChild": [
                 {
                     "title": "233. 数字 1 的个数",
                     "summary": "",
@@ -6872,20 +7030,6 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "3677. 统计二进制回文数字的数目",
-                    "summary": "",
-                    "src": "/count-binary-palindromic-numbers/",
-                    "original_src": "https://leetcode.cn/problems/count-binary-palindromic-numbers/",
-                    "sort": 0,
-                    "isLeaf": true,
-                    "solution": null,
-                    "score": 2222.8219267536,
-                    "leafChild": [],
-                    "nonLeafChild": [],
-                    "isPremium": false,
-                    "last_update": ""
-                },
-                {
                     "title": "3007. 价值和小于等于 K 的最大数字",
                     "summary": "",
                     "src": "/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/",
@@ -6900,14 +7044,14 @@ export default{
                     "last_update": ""
                 },
                 {
-                    "title": "3348. 最小可整除数位乘积 II",
+                    "title": "3753. 范围内总波动值 II",
                     "summary": "",
-                    "src": "/smallest-divisible-digit-product-ii/",
-                    "original_src": "https://leetcode.cn/problems/smallest-divisible-digit-product-ii/",
+                    "src": "/total-waviness-of-numbers-in-range-ii/",
+                    "original_src": "https://leetcode.cn/problems/total-waviness-of-numbers-in-range-ii/",
                     "sort": 0,
                     "isLeaf": true,
                     "solution": null,
-                    "score": 3101.4829146106,
+                    "score": 2296.6278785716,
                     "leafChild": [],
                     "nonLeafChild": [],
                     "isPremium": false,
@@ -6915,6 +7059,49 @@ export default{
                 }
             ],
             "nonLeafChild": [
+                {
+                    "title": "§10.3 其他数位 DP",
+                    "summary": "",
+                    "src": "",
+                    "original_src": "",
+                    "sort": 0,
+                    "isLeaf": false,
+                    "solution": "",
+                    "score": 0,
+                    "leafChild": [
+                        {
+                            "title": "3677. 统计二进制回文数字的数目",
+                            "summary": "",
+                            "src": "/count-binary-palindromic-numbers/",
+                            "original_src": "https://leetcode.cn/problems/count-binary-palindromic-numbers/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 2222.8219267536,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        },
+                        {
+                            "title": "3348. 最小可整除数位乘积 II",
+                            "summary": "",
+                            "src": "/smallest-divisible-digit-product-ii/",
+                            "original_src": "https://leetcode.cn/problems/smallest-divisible-digit-product-ii/",
+                            "sort": 0,
+                            "isLeaf": true,
+                            "solution": null,
+                            "score": 3101.4829146106,
+                            "leafChild": [],
+                            "nonLeafChild": [],
+                            "isPremium": false,
+                            "last_update": ""
+                        }
+                    ],
+                    "nonLeafChild": [],
+                    "isPremium": false,
+                    "last_update": ""
+                },
                 {
                     "title": "十一、优化 DP",
                     "summary": "",
@@ -10515,5 +10702,5 @@ export default{
         }
     ],
     "isPremium": false,
-    "last_update": "2025-11-21 06:58:37"
+    "last_update": "2025-11-25 22:31:04"
 } as ProblemCategory;
