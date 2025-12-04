@@ -182,10 +182,10 @@ python 0x3f_discuss.py --uuid <讨论UUID> --o <输出路径>
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/AutJ">
-        <img src="https://github.com/AutJ.png" width="80px;" alt="AutJ"/>
+      <a href="https://github.com/Autumnal-Joy">
+        <img src="https://github.com/Autumnal-Joy.png" width="80px;" alt="AutJ"/>
         <br />
-        <sub><b>AutJ</b></sub>
+        <sub><b>Autumnal-Joy</b></sub>
       </a>
     </td>
     <td align="center">
