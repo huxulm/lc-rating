@@ -1,28 +1,58 @@
-# LC-Rating
-<p align="center">
-  <img alt="GitHub" src="https://img.shields.io/github/license/huxulm/lc-rating">
-  <img alt="GitHub commit activity (branch)" src="https://img.shields.io/github/commit-activity/m/huxulm/lc-rating?label=commit&labelColor=purple&color=grey">
-  <img alt="GitHub package.json version (branch)" src="https://img.shields.io/github/package-json/v/huxulm/lc-rating/main?label=version&labelColor=blue">
-  <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/huxulm/lc-rating/workflow.yml">
-</p>
+# Turborepo Tailwind CSS starter
 
-## 介绍
-本项目基于[灵茶山艾府](https://leetcode.cn/u/endlesscheng/)的文章[如何科学刷题？](https://leetcode.cn/circle/discuss/RvFUtj/)而构建的一个刷题用网站。 主要使用 **[React](https://react.dev/)** + **[NextJS](https://nextjs.org/)** 构建。
+This Turborepo starter is maintained by the Turborepo core team.
 
-## 特性和使用方法
-本项目有4种使用方法:
-1. 力扣竞赛题目列表，含分数展示，可以让想自己mock contest的用户快速直达并了解题目的难度
-2. 难度训练，对不同难度的题目进行了划分，让用户更好的了解自己的水准。算法新手和老手想在力扣周赛上分的都可以使用此功能。此外还添加了进度标注，并可以对进度进行同步。 同时用户可以在设置中选择自己想刷的tag，也可以隐藏tag, 以及选择自己的进度。
-3. 题解搜索, 支持根据题目、题解标题、算法模板名称、标签等过滤，纯本地化+缓存优化，速度飞快。题解链接（来源：[@灵茶山艾府](https://space.bilibili.com/206214)）
-4. 整合了灵茶山艾府列出的题单，标注了分数同时也添加了进度标注。用于突击训练特定知识点，掌握常用算法套路。
+## Using this example
 
-## Screenshot
-<div style="text-align: center;dispaly: grid;gap: 2rem;">
-  <img style="max-width: 400px;" src="./screenshot0.png"></img>
-  <img style="max-width: 400px;" src="./screenshot1.png"></img>
-</div>
+Run the following command:
 
-## 数据来源
-- 基础 - 【[leetcode.cn](https://leetcode.cn/)】
-- 题目难度 - 【[leetcode_problem_rating](https://raw.githubusercontent.com/zerotrac/leetcode_problem_rating/main/data.json)】
+```sh
+npx create-turbo@latest -e with-tailwind
+```
 
+## What's inside?
+
+This Turborepo includes the following packages/apps:
+
+### Apps and Packages
+
+- `docs`: a [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
+- `web`: another [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
+- `ui`: a stub React component library with [Tailwind CSS](https://tailwindcss.com/) shared by both `web` and `docs` applications
+- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+
+Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+
+### Building packages/ui
+
+This example is set up to produce compiled styles for `ui` components into the `dist` directory. The component `.tsx` files are consumed by the Next.js apps directly using `transpilePackages` in `next.config.ts`. This was chosen for several reasons:
+
+- Make sharing one `tailwind.config.ts` to apps and packages as easy as possible.
+- Make package compilation simple by only depending on the Next.js Compiler and `tailwindcss`.
+- Ensure Tailwind classes do not overwrite each other. The `ui` package uses a `ui-` prefix for it's classes.
+- Maintain clear package export boundaries.
+
+Another option is to consume `packages/ui` directly from source without building. If using this option, you will need to update the `tailwind.config.ts` in your apps to be aware of your package locations, so it can find all usages of the `tailwindcss` class names for CSS compilation.
+
+For example, in [tailwind.config.ts](packages/tailwind-config/tailwind.config.ts):
+
+```js
+  content: [
+    // app content
+    `src/**/*.{js,ts,jsx,tsx}`,
+    // include packages if not transpiling
+    "../../packages/ui/*.{js,ts,jsx,tsx}",
+  ],
+```
+
+If you choose this strategy, you can remove the `tailwindcss` and `autoprefixer` dependencies from the `ui` package.
+
+### Utilities
+
+This Turborepo has some additional tools already setup for you:
+
+- [Tailwind CSS](https://tailwindcss.com/) for styles
+- [TypeScript](https://www.typescriptlang.org/) for static type checking
+- [ESLint](https://eslint.org/) for code linting
+- [Prettier](https://prettier.io) for code formatting

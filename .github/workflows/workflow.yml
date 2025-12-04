@@ -3,15 +3,12 @@ name: Node.js CI
 on:
   push:
     branches: ["main"]
+
   workflow_dispatch:
-    branches: ["main"]
+
   workflow_run:
     workflows:
-      [
-        "Weekly Problem List Update",
-        "Public Data Updater",
-        "Rating Solution Updater",
-      ]
+      ["StudyPlan Updater", "Problemset Updater", "Rating Solution Updater"]
     types:
       - completed
 
@@ -34,12 +31,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: npm install
-      - run: CI=false npm run build --if-present
+      - run: npm install -g pnpm
+      - run: pnpm install
+      - run: pnpm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build/
+          path: build/apps/web/
 
   deploy:
     # Add a dependency to the build job
