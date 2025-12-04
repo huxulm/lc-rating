@@ -283,6 +283,9 @@ importers:
       debounce:
         specifier: ^2.2.0
         version: 2.2.0
+      fuse.js:
+        specifier: ^7.1.0
+        version: 7.1.0
       lucide-react:
         specifier: ^0.477.0
         version: 0.477.0(react@19.2.0)
