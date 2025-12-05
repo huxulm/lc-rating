@@ -60,19 +60,16 @@ const SectionContainer = React.memo(
           ) : null}
         </CardHeader>
         <CardContent>
-          {section.problems.length ? (
-            <ProblemList problems={section.problems} />
-          ) : (
-            <div className="flex flex-row flex-wrap p-1 gap-3">
-              {section.children.map((section) => (
-                <SectionContainer
-                  key={section.title}
-                  section={section}
-                  level={level + 1}
-                />
-              ))}
-            </div>
-          )}
+          <div className="flex flex-row flex-wrap p-1 gap-3">
+            {section.problems.length ? <ProblemList problems={section.problems} /> : null}
+            {section.children.map((section) => (
+              <SectionContainer
+                key={section.title}
+                section={section}
+                level={level + 1}
+              />
+            ))}
+          </div>
         </CardContent>
       </Card>
     );

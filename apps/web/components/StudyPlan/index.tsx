@@ -39,6 +39,8 @@ function StudyPlan({ plan }: StudyPlanProps) {
     );
   }, [studyPlan, plan]);
 
+  console.log("StudyPlan render", { studyPlan, toc });
+
   return (
     <SidebarProvider>
       {toc && <TableOfContent toc={toc} />}
