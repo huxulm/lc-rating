@@ -190,7 +190,7 @@ export default function () {
             </Dropdown>
 
             <Link
-              href="/lc-rating"
+              href="https://huxulm.github.io/lc-rating"
               className="nav-link"
               style={{
                 width: "fit-content",
