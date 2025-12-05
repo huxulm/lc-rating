@@ -1,0 +1,367 @@
+@import "./bs";
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+:root {
+  --bs-link-decoration: none;
+}
+
+.contest {
+  padding: 0 3.5rem;
+  width: fit-content;
+}
+
+.col-contest {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.row-selected {
+  background: rgba(156, 238, 161, 1);
+  font-weight: 900;
+}
+
+:root {
+  --bs-link-decoration: none;
+}
+
+.contest-table {
+  padding: 0;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+  text-align: center;
+}
+
+.right-side {
+  position: fixed;
+  left: calc(100vw - .9rem);
+  background: rgba(0, 0, 0, 0.01);
+  width: 100vh;
+  height: 2.5rem;
+  top: 0;
+  z-index: 1000;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.select-none {
+  user-select: none;
+}
+
+@include media-breakpoint-down(sm) {
+  .right-side {
+    position: inherit;
+    background: rgba(0, 0, 0, 0.01);
+    width: 100vw;
+    height: 2.5rem;
+    transform: rotate(0);
+    transform-origin: top left;
+  }
+}
+// navbar style
+#nav-cl {
+  color: #8ef2e9;
+}
+#nav-tr {
+  color: #513ff7;
+}
+#nav-0x3f {
+  color: #a41eae;
+}
+#nav-pg {
+  color: #ffa246;
+}
+#nav-pl {
+  color:#EA3323;
+}
+
+#nav-cl,#nav-tr,#nav-0x3f,#nav-pg,#nav-pl {
+  font-weight: 700;
+  background: white;
+}
+
+// resizer style
+.resizer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: col-resize;
+  user-select: none;
+  touch-action: none;
+}
+
+.resizer.isResizing {
+  background: blue;
+  opacity: 1;
+}
+
+@media (hover: hover) {
+  .resizer {
+    opacity: 0;
+  }
+
+  *:hover>.resizer {
+    opacity: 1;
+  }
+}
+
+.contest {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.row-selected {
+  background: rgba(156, 238, 161, 0.5);
+  font-weight: 900;
+}
+
+.right-side::after {
+  right: 0;
+}
+
+.th-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.backtop {
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 5px;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  display: block;
+}
+
+table>thead {
+  z-index: 10;
+}
+
+table,
+.divTable {
+  border: 1px solid lightgray;
+  width: fit-content;
+  table-layout: fixed;
+  display: table;
+}
+
+.tr {
+  display: flex;
+}
+
+tr,
+.tr {
+  width: fit-content;
+  height: 30px;
+}
+
+th,
+.th,
+td,
+.td {
+  box-shadow: inset 0 0 0 1px lightgray;
+  padding: 0.2rem;
+  overflow: hidden;
+}
+
+th,
+.th {
+  padding: 2px 4px;
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+
+td,
+.td {
+  height: 30px;
+}
+
+.tb-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+
+  .fr-wrapper {
+    top: .5rem;
+    right: 0.5rem;
+    position: absolute;
+  }
+
+  .fr {
+    position: relative;
+    right: 0;
+    color: rgb(49, 200, 49);
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+  }
+}
+
+
+.ans {
+  color: black!important;
+  font-size: 1.5rem!important;
+  font-weight: normal;
+  text-decoration: none;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.link {
+  text-decoration: underline!important;
+  text-underline-offset: 3px;
+}
+
+// scrollbar
+/*
+ *  STYLE 2
+ */
+ ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(143, 143, 143, 0.3);
+  border-radius: 4px;
+  background-color: #eaeaea;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+// horizontal scrollbar width set to 6px
+::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #a6a6a6;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(143, 143, 143, 0.3);
+  border-radius: 4px;
+  background-color: #eaeaea;
+}
+
+[data-bs-theme] {
+  --rating-color-0: #848484;
+  --rating-color-1: #595959;
+  --rating-color-2: #4BA59E;
+  --rating-color-3: #1B01F5;
+  --rating-color-4: #9B1EA4;
+  --rating-color-5: #F09235;
+  --rating-color-6: #EA3323;
+  --rating-color-7: #EA3323;
+}
+
+[data-bs-theme=dark] {
+  color-scheme: dark;
+  --rating-color-0: #c5c4c4;
+  --rating-color-1: #ffffff;
+  --rating-color-2: #74fff3;
+  --rating-color-3: #6857ff;
+  --rating-color-4: #ec60f6;
+  --rating-color-5: #f8a95b;
+  --rating-color-6: #f35041;
+  --rating-color-7: #f35041;
+}
+
+.topcoder-like-circle {
+  cursor: pointer;
+  display: inline-block;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.rating-circle {
+  display: inline-block;
+  position: relative;
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  margin-top: 2px;
+  background: transparent;
+}
+.inner-circle {
+  display: block;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 1.5px;
+  width: 100%;
+  height: 100%;
+}
+.inner-circle[data="top"] {
+  border-color: var(--rating-color-6)!important;
+}
+.inner-circle__plus {
+  position: absolute;
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: red;
+  top: 5px;
+  left: 5px;
+}
+.ff-st {
+  font-family: 'SimSun', 'STSong', '宋体', 'sans-serif';
+}
+.ff-ht {
+  font-family: '黑体', '微软雅黑';
+}
+.rating-color-0,.rating-color-1,.rating-color-2,.rating-color-3,.rating-color-4,.rating-color-5,.rating-color-6 {
+  font-weight: bold;
+}
+
+.rating-color-0 {
+  color: var(--rating-color-0)
+}
+.rating-color-1 {
+  color: var(--rating-color-1)
+}
+.rating-color-2 {
+  color: var(--rating-color-2)
+}
+.rating-color-3 {
+  color: var(--rating-color-3)
+}
+.rating-color-4 {
+  color: var(--rating-color-4)
+}
+.rating-color-5 {
+  color: var(--rating-color-5)
+}
+.rating-color-6 {
+  color: var(--rating-color-6)
+}
+.rating-color-7 {
+  color: var(--rating-color-7);
+  font-weight: 900;
+}

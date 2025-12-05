@@ -1,0 +1,63 @@
+.zen-container {
+  min-width: 60%;
+}
+
+.zen-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  gap: 1rem;
+}
+
+.zen-table-row {
+  :hover {
+    cursor: pointer;
+  }
+  td {
+    vertical-align: middle;
+    text-align: center;
+    padding: 0.25rem!important;
+  }
+
+  .zen-spinner-td {
+    text-align: center;
+  }
+
+  .zen-ans {
+    float: right;
+
+    a {
+      color: black!important;
+      font-size: 1.5rem!important;
+      font-weight: normal;
+      text-decoration: none;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.zen-table-header {
+  .zen-table-header-no {
+    width: 100px;
+  }
+
+  .zen-table-header-question {
+    width: 400px;
+  }
+
+  .zen-table-header-progress {
+    width: 250px;
+  }
+}
+
+.zen-filter-dialog {
+  margin-top: 5%!important;
+
+  .zen-filter-tag {
+    .active {
+      background: plum;
+    }
+  }
+}

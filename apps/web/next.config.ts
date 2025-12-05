@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  basePath: BASE_PATH,
+  basePath: process.env.NODE_ENV === "development" ? "" : BASE_PATH,
   output: "export",
   distDir: "../../build/apps/web",
 };
