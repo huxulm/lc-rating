@@ -43,5 +43,5 @@ export const ROUTERS = {
       []
     ),
   },
-  v2: { title: "👉旧版", href: `/lc-rating/v0` },
+  v2: { title: "👉旧版", href: `/v0` },
 };
