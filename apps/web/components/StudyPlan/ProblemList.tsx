@@ -29,12 +29,12 @@ const ProblemList = React.memo(({ problems }: ProblemListProps) => {
                 target="_blank"
                 className="hover:underline"
               >
-                {problem.title}
+                {problem.id}. {problem.title}
               </Link>
               <div className="flex flex-row items-center gap-2">
                 {problem.score ? (
                   <div className="flex flex-row items-center">
-                    <RatingCircle rating={problem.score} {...info} />
+                    <RatingCircle rating={Number(problem.score || 0)} {...info} />
                     <span>{problem.score?.toFixed(0)} </span>
                   </div>
                 ) : null}

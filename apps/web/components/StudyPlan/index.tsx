@@ -9,6 +9,14 @@ import { TableOfContent } from "./TableOfContent";
 import { TOC } from "./types";
 
 function generateToc(sub: StudyPlanData.Section, level: number = 1): TOC {
+  if (!sub.children || sub.children.length === 0) {
+    return {
+      title: sub.title,
+      count: 0,
+      level,
+      children: [],
+    };
+  }
   const children = sub.children.map((child) => generateToc(child, level + 1));
   const count = children.reduce((acc, child) => acc + child.count, 0);
   return {
@@ -47,7 +55,7 @@ function StudyPlan({ plan }: StudyPlanProps) {
       <div className="flex flex-col">
         {/* 导航栏高度是60px */}
         <SidebarTrigger className="fixed top-[var(--navbar-height)]" />
-        <div className="flex flex-col gap-8 px-8">
+        <div className="flex flex-row flex-wrap gap-8 px-8">
           {studyPlan?.children.map((section) => (
             <SectionContainer key={section.title} section={section} />
           ))}
