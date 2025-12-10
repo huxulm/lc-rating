@@ -38,8 +38,8 @@ const SectionContainer = React.memo(
     };
 
     const cardClasses = cn("scroll-mt-[70px]", {
-      "w-full": section.children.length,
-    }, level == 0 && section.children.length == 0? "w-1/2": "", section.isLeaf? "border": "", "h-fit");
+      "w-full": section.children && section.children.length > 0,
+    }, section.isLeaf? "border": "", "h-fit");
 
     return (
       <Card
@@ -49,20 +49,20 @@ const SectionContainer = React.memo(
       >
         <CardHeader>
           <CardTitle>{section.title}</CardTitle>
-          {section.summary ? (
+          {(section.summary || section.content) ? (
             <CardDescription>
               <p
                 ref={innerHtml}
-                className="p-4 rounded dark:bg-gray-800 rounded-lg max-w-md"
-                dangerouslySetInnerHTML={createMarkup(section.summary)}
+                className="p-4 rounded dark:bg-gray-800 rounded-lg max-w-md overflow-x-auto"
+                dangerouslySetInnerHTML={createMarkup(section.summary || section.content || "")}
               />
             </CardDescription>
           ) : null}
         </CardHeader>
         <CardContent>
           <div className="flex flex-row flex-wrap p-1 gap-3">
-            {section.problems.length ? <ProblemList problems={section.problems} /> : null}
-            {section.children.map((section) => (
+            {section.problems && section.problems.length ? <ProblemList problems={section.problems} /> : null}
+            { section.children && section.children.map((section) => (
               <SectionContainer
                 key={section.title}
                 section={section}

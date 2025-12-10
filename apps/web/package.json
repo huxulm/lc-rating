@@ -8,9 +8,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --max-warnings 0",
-    "check-types": "next typegen && tsc --noEmit"
+    "check-types": "next typegen && tsc --noEmit",
+    "parser:extract": "tsx ./lc-parser/extract_html2md.ts",
+    "parser:process": "tsx ./lc-parser/process.ts",
+    "test": "PROXY=http://127.0.0.1:8889 tsx ./lc-parser/gemini_test.ts"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^2.0.80",
+    "@ai-sdk/openai-compatible": "^1.0.28",
     "@hookform/resolvers": "^4.1.3",
     "@huxulm/ui": "workspace:*",
     "@radix-ui/react-checkbox": "^1.3.3",
@@ -30,6 +35,7 @@
     "@tanstack/react-query": "^5.90.11",
     "@tanstack/react-query-devtools": "^5.91.1",
     "@tanstack/react-table": "^8.21.3",
+    "ai": "^5.0.108",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "1.0.0",
@@ -50,18 +56,31 @@
     "zustand": "^5.0.9"
   },
   "devDependencies": {
+    "@ai-sdk/provider-utils": "^3.0.18",
     "@huxulm/eslint-config": "workspace:*",
     "@huxulm/tailwind-config": "workspace:*",
     "@huxulm/typescript-config": "workspace:*",
+    "@joplin/turndown-plugin-gfm": "^1.0.64",
     "@next/eslint-plugin-next": "^15.4.6",
     "@tailwindcss/postcss": "^4.1.5",
+    "@types/cheerio": "^1.0.0",
     "@types/node": "^22.15.30",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.1",
+    "@types/turndown": "^5.0.6",
     "autoprefixer": "^10.4.20",
+    "axios": "1.7.7",
+    "cheerio": "^1.1.2",
+    "dotenv": "^17.2.3",
     "eslint": "^9.39.1",
+    "glob": "^13.0.0",
+    "https-proxy-agent": "^7.0.6",
+    "node-fetch": "^3.3.2",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.5",
-    "typescript": "5.9.2"
+    "tsx": "^4.21.0",
+    "turndown": "^7.2.2",
+    "typescript": "5.9.2",
+    "undici": "^7.16.0"
   }
 }
