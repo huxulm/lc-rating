@@ -3,7 +3,6 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { useStudyPlan } from "@/hooks/useStudyPlan";
 import { StudyPlanData } from "@/types";
-// import "highlight.js/styles/github-dark.css";
 import { useMemo } from "react";
 import { SectionContainer } from "./SectionContainer";
 import { TableOfContent } from "./TableOfContent";
