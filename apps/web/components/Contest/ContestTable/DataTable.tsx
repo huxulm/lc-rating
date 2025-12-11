@@ -80,7 +80,7 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map((header) => (
-                <TableHead key={header.id} className="border border-gray-200">
+                <TableHead key={header.id} className="border border-muted-foreground">
                   <div
                     className={cn(
                       "flex items-center justify-center font-extrabold",
@@ -105,12 +105,9 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
         <TableBody>
           {table.getRowModel().rows?.length ? (
             table.getRowModel().rows.map((row) => (
-              <TableRow
-                key={row.id}
-                data-state={row.getIsSelected() && "selected"}
-              >
+              <TableRow key={row.id} data-state={row.getIsSelected() && "selected"}>
                 {row.getVisibleCells().map((cell) => (
-                  <TableCell key={cell.id} className="border border-gray-200">
+                  <TableCell key={cell.id} className="border border-muted-foreground/50">
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </TableCell>
                 ))}

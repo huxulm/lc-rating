@@ -1,15 +1,13 @@
+import { Button } from "@/components/ui-customized/button";
 import {
   Pagination,
   PaginationContent,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
+  PaginationItem
 } from "@/components/ui/pagination";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import React, { useCallback } from "react";
 import { PageJumper } from "./PageJumper";
 import { PageResizer } from "./PageResizer";
-import { Button } from "@/components/ui-customized/button";
 
 interface PaginationControlsProps {
   pageIndex: number;
@@ -58,7 +56,7 @@ const PageControl = React.memo(
             每页显示
           </span>
           <PageResizer
-            options={[20, 30, 50, 100, 200]}
+            options={[20, 30, 50, 100, 200, 500, 1000]}
             onValueChange={handleSelectChange}
           />
         </div>

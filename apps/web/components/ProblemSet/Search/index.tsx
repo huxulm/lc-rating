@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/collapsible";
 import { Separator } from "@/components/ui/separator";
 import { ChevronsDownUp, ChevronsUpDown } from "lucide-react";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { TableCol } from "../ProblemTable/types";
 import { RatingFilter } from "./RatingFilter";
 import { TagFilter } from "./TagFilter";
@@ -23,6 +23,7 @@ const Search = React.memo(({ data, onSearch }: SearchProps) => {
     Record<string, number[]>
   >({});
   const [resets, setResets] = useState<Record<string, () => void>>({});
+  const handleConfirmRef = useRef<(() => void) | null>(null);
 
   const updateIndices = useCallback(
     (name: string, newSimilarties: number[]) => {
@@ -58,6 +59,16 @@ const Search = React.memo(({ data, onSearch }: SearchProps) => {
 
     onSearch(results);
   }, [similartiesMap, data.length, onSearch]);
+
+  useEffect(() => {
+    handleConfirmRef.current = handleConfirm;
+  }, [handleConfirm]);
+
+  const debouncedConfirm = useCallback(() => {
+    if (handleConfirmRef.current) {
+      handleConfirmRef.current();
+    }
+  }, []);
 
   const handleReset = useCallback(() => {
     Object.values(resets).forEach((fn) => fn?.());
@@ -100,6 +111,7 @@ const Search = React.memo(({ data, onSearch }: SearchProps) => {
             data={data}
             registerReset={updateReset}
             onChange={updateIndices}
+            onDebouncedConfirm={debouncedConfirm}
           />
           <Separator />
           <TagFilter
