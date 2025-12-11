@@ -126,3 +126,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Markdown 内容样式 */
+[data-slot="card-description"] table {
+  @apply border-collapse border-border mb-2;
+}
+[data-slot="card-description"] th,
+[data-slot="card-description"] td {
+  @apply border border-border px-4 py-2;
+}
+[data-slot="card-description"] th {
+  @apply bg-muted text-muted-foreground;
+}
+[data-slot="card-description"] tr:nth-child(even) {
+  @apply bg-muted/50;
+}
+[data-slot="card-description"] p {
+  @apply mb-2 last:mb-0;
+}
+
+@import "./hl.css";

@@ -300,7 +300,7 @@ ${lastChars}
 
 // 主函数：顺序处理所有 md 文件
 async function main() {
-  const files = globSync('dist/dynamic_programming.md');
+  const files = globSync('dist/graph.md');
   console.log(`\n📚 找到 ${files.length} 个文件待处理\n`);
   const skipFiles = ['string.md', 'trees.md', 'sliding_window.md', 'monotonic_stack.md', 'grid.md'];
   for (let i = 0; i < files.length; i++) {
@@ -333,21 +333,6 @@ async function main() {
 
 // 执行主函数
 main().catch(console.error);
-
-// const result = streamText({
-//   model: createOpenAICompatible({
-//     baseURL: process.env.BASE_URL!,
-//     apiKey: process.env.MY_API_KEY!,
-//     name: 'qwen',
-//   })('qwen-plus-latest'),
-//   messages: [
-//     { role: 'user', content: '你好' }
-//   ],
-// });
-
-// for await (const delta of result.textStream) {
-//   process.stdout.write(delta);
-// }
 
 
 
