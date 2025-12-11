@@ -1,5 +1,4 @@
 import { PageControl } from "@/components/common/PageControl";
-import { Separator } from "@/components/ui/separator";
 import {
   Table,
   TableBody,
@@ -84,7 +83,7 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map((header) => (
-                <TableHead key={header.id} className="border border-gray-200">
+                <TableHead key={header.id} className="border border-muted-foreground">
                   <div
                     className={cn("flex items-center justify-center", {
                       "cursor-pointer": header.column.getCanSort(),
@@ -122,7 +121,7 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
                 data-state={row.getIsSelected() && "selected"}
               >
                 {row.getVisibleCells().map((cell) => (
-                  <TableCell key={cell.id} className="border border-gray-200">
+                  <TableCell key={cell.id} className="border border-muted-foreground/30">
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </TableCell>
                 ))}

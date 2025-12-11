@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui-customized/button";
 import { Slider } from "@/components/ui/slider";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { TableCol } from "../ProblemTable/types";
 
 const buttons = [
@@ -20,14 +20,16 @@ interface RatingFilterProps {
   data: TableCol[];
   onChange: (idx: string, similarties: number[]) => void;
   registerReset: (idx: string, reset: () => void) => void;
+  onDebouncedConfirm?: () => void;
 }
 
 const RatingFilter = React.memo(
-  ({ name, data, onChange, registerReset }: RatingFilterProps) => {
+  ({ name, data, onChange, registerReset, onDebouncedConfirm }: RatingFilterProps) => {
     const [range, setRange] = useState<{ min: number; max: number }>({
       min: 0,
       max: 4000,
     });
+    const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
 
     useEffect(() => {
       const onReset = () => {
@@ -44,7 +46,26 @@ const RatingFilter = React.memo(
         Number(row.rating >= range.min && row.rating < range.max)
       );
       onChange(name, results);
-    }, [data, range, onChange, name]);
+
+      // 防抖调用确认
+      if (onDebouncedConfirm) {
+        if (debounceTimerRef.current) {
+          clearTimeout(debounceTimerRef.current);
+        }
+        debounceTimerRef.current = setTimeout(() => {
+          onDebouncedConfirm();
+        }, 200);
+      }
+    }, [data, range, onChange, name, onDebouncedConfirm]);
+
+    // 清理定时器
+    useEffect(() => {
+      return () => {
+        if (debounceTimerRef.current) {
+          clearTimeout(debounceTimerRef.current);
+        }
+      };
+    }, []);
 
     const handleButtonClick = useCallback(
       (nextMin: number, nextMax: number) => {
