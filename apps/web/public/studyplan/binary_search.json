@@ -1,1 +1,1281 @@
-{"title": "分享丨【算法题单】二分算法（二分答案/最小化最大值/最大化最小值/第K小）", "src": "https://leetcode.cn/circle/discuss/SqopEo", "last_update": "2025-11-07T23:47:26.098808+00:00", "children": [{"title": "介绍", "summary": "<img src=\"https://pic.leetcode.cn/1711713491-SoiQWc-t2.png\" alt=\"二分题单 二分查找 二分算法 二分入门 二分题目 力扣二分 leetcode 二分\" style=\"width: 100%;\"><br>> 图：闭区间二分循环结束时的左右指针位置（查找第一个 $8$）<br>**刷题建议**：初次刷题可以只刷难度低于 $1700$ 分的题目。难度更高的题目常常结合其他算法（数据结构、图论等），等学会其他算法再来刷本题单。<br>", "isLeaf": false, "children": [{"title": "一、二分查找", "summary": "讲解：<a href=\"https://www.bilibili.com/video/BV1AP41137w7/\">二分查找 红蓝染色法【基础算法精讲 04】</a><br>设 $\\textit{nums}$ 为递增（非递减）数组，长为 $n$。<br>| **需求**  | **写法**  |  **如果不存在** |<br>|---|---|---|<br>| $\\ge x$ 的第一个元素的下标  | $\\texttt{lowerBound}(\\textit{nums},x)$  | 结果为 $n$ |<br>| $> x$ 的第一个元素的下标 | $\\texttt{lowerBound}(\\textit{nums},x+1)$  | 结果为 $n$ |<br>| $< x$ 的最后一个元素的下标  | $\\texttt{lowerBound}(\\textit{nums},x)-1$  | 结果为 $-1$ |<br>| $\\le x$ 的最后一个元素的下标  | $\\texttt{lowerBound}(\\textit{nums},x+1)-1$  | 结果为 $-1$ |<br>| **需求**  | **写法**  |<br>|---|---|<br>| $< x$ 的元素个数  | $\\texttt{lowerBound}(\\textit{nums},x)$  |<br>| $\\le x$ 的元素个数 | $\\texttt{lowerBound}(\\textit{nums},x+1)$  |<br>| $\\ge x$ 的元素个数  | $n - \\texttt{lowerBound}(\\textit{nums},x)$  |<br>| $> x$ 的元素个数  | $n - \\texttt{lowerBound}(\\textit{nums},x+1)$  |<br>注意 $< x$ 和 $\\ge x$ 互为补集，二者之和为 $n$。$\\le x$ 和 $> x$ 同理。<br>", "isLeaf": false, "children": [{"title": "§1.1 基础", "summary": "", "isLeaf": true, "children": [], "problems": [{"id": 34, "title": "34. 在排序数组中查找元素的第一个和最后一个位置", "slug": "/find-first-and-last-position-of-element-in-sorted-array/", "src": "https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/", "solution": null, "score": null, "isPremium": false}, {"id": 35, "title": "35. 搜索插入位置", "slug": "/search-insert-position/", "src": "https://leetcode.cn/problems/search-insert-position/", "solution": null, "score": null, "isPremium": false}, {"id": 704, "title": "704. 二分查找", "slug": "/binary-search/", "src": "https://leetcode.cn/problems/binary-search/", "solution": null, "score": null, "isPremium": false}, {"id": 744, "title": "744. 寻找比目标字母大的最小字母", "slug": "/find-smallest-letter-greater-than-target/", "src": "https://leetcode.cn/problems/find-smallest-letter-greater-than-target/", "solution": null, "score": null, "isPremium": false}, {"id": 2529, "title": "2529. 正整数和负整数的最大计数", "slug": "/maximum-count-of-positive-integer-and-negative-integer/", "src": "https://leetcode.cn/problems/maximum-count-of-positive-integer-and-negative-integer/", "solution": null, "score": 1195.9731842298, "isPremium": false}]}, {"title": "§1.2 进阶", "summary": "部分题目需要先排序，然后在有序数组上二分查找。<br>**思维扩展**：<br>", "isLeaf": true, "children": [], "problems": [{"id": 2300, "title": "2300. 咒语和药水的成功对数", "slug": "/successful-pairs-of-spells-and-potions/", "src": "https://leetcode.cn/problems/successful-pairs-of-spells-and-potions/", "solution": null, "score": 1476.9062320302, "isPremium": false}, {"id": 1385, "title": "1385. 两个数组间的距离值", "slug": "/find-the-distance-value-between-two-arrays/", "src": "https://leetcode.cn/problems/find-the-distance-value-between-two-arrays/", "solution": null, "score": 1234.8049089605, "isPremium": false}, {"id": 2389, "title": "2389. 和有限的最长子序列", "slug": "/longest-subsequence-with-limited-sum/", "src": "https://leetcode.cn/problems/longest-subsequence-with-limited-sum/", "solution": null, "score": 1387.7347071166, "isPremium": false}, {"id": 1170, "title": "1170. 比较字符串最小字母出现频次", "slug": "/compare-strings-by-frequency-of-the-smallest-character/", "src": "https://leetcode.cn/problems/compare-strings-by-frequency-of-the-smallest-character/", "solution": null, "score": 1431.6864980883, "isPremium": false}, {"id": 2080, "title": "2080. 区间内查询数字的频率", "slug": "/range-frequency-queries/", "src": "https://leetcode.cn/problems/range-frequency-queries/", "solution": null, "score": 1702.4387527636, "isPremium": false}, {"id": 3488, "title": "3488. 距离最小相等元素查询", "slug": "/closest-equal-element-queries/", "src": "https://leetcode.cn/problems/closest-equal-element-queries/", "solution": null, "score": 1699.1071481616, "isPremium": false}, {"id": 2563, "title": "2563. 统计公平数对的数目", "slug": "/count-the-number-of-fair-pairs/", "src": "https://leetcode.cn/problems/count-the-number-of-fair-pairs/", "solution": null, "score": 1720.7470612766, "isPremium": false}, {"id": 2070, "title": "2070. 每一个查询的最大美丽值", "slug": "/most-beautiful-item-for-each-query/", "src": "https://leetcode.cn/problems/most-beautiful-item-for-each-query/", "solution": null, "score": 1724.1545485476, "isPremium": false}, {"id": 1146, "title": "1146. 快照数组", "slug": "/snapshot-array/", "src": "https://leetcode.cn/problems/snapshot-array/", "solution": null, "score": 1770.8924569497, "isPremium": false}, {"id": 981, "title": "981. 基于时间的键值存储", "slug": "/time-based-key-value-store/", "src": "https://leetcode.cn/problems/time-based-key-value-store/", "solution": null, "score": 1574.7542247682, "isPremium": false}, {"id": 3508, "title": "3508. 设计路由器", "slug": "/implement-router/", "src": "https://leetcode.cn/problems/implement-router/", "solution": null, "score": 1851.1720518145, "isPremium": false}, {"id": 658, "title": "658. 找到 K 个最接近的元素", "slug": "/find-k-closest-elements/", "src": "https://leetcode.cn/problems/find-k-closest-elements/", "solution": null, "score": null, "isPremium": false}, {"id": 1818, "title": "1818. 绝对差值和", "slug": "/minimum-absolute-sum-difference/", "src": "https://leetcode.cn/problems/minimum-absolute-sum-difference/", "solution": null, "score": 1934.3556201811, "isPremium": false}, {"id": 911, "title": "911. 在线选举", "slug": "/online-election/", "src": "https://leetcode.cn/problems/online-election/", "solution": null, "score": 2000.8021428612, "isPremium": false}, {"id": "LCP 08", "title": "LCP 08. 剧情触发时间", "slug": "/ju-qing-hong-fa-shi-jian/", "src": "https://leetcode.cn/problems/ju-qing-hong-fa-shi-jian/", "solution": null, "score": null, "isPremium": false}, {"id": 1182, "title": "1182. 与目标颜色间的最短距离", "slug": "/shortest-distance-to-target-color/", "src": "https://leetcode.cn/problems/shortest-distance-to-target-color/", "solution": null, "score": 1626.6740430119, "isPremium": true}, {"id": 2819, "title": "2819. 购买巧克力后的最小相对损失", "slug": "/minimum-relative-loss-after-buying-chocolates/", "src": "https://leetcode.cn/problems/minimum-relative-loss-after-buying-chocolates/", "solution": null, "score": null, "isPremium": true}, {"id": 1287, "title": "1287. 有序数组中出现次数超过 25% 的元素", "slug": "/element-appearing-more-than-25-in-sorted-array/", "src": "https://leetcode.cn/problems/element-appearing-more-than-25-in-sorted-array/", "solution": null, "score": 1179.1495967491, "isPremium": false}, {"id": 2476, "title": "2476. 二叉搜索树最近节点查询", "slug": "/closest-nodes-queries-in-a-binary-search-tree/", "src": "https://leetcode.cn/problems/closest-nodes-queries-in-a-binary-search-tree/", "solution": null, "score": 1596.9852244916, "isPremium": false}, {"id": 1150, "title": "1150. 检查一个数是否在数组中占绝大多数", "slug": "/check-if-a-number-is-majority-element-in-a-sorted-array/", "src": "https://leetcode.cn/problems/check-if-a-number-is-majority-element-in-a-sorted-array/", "solution": null, "score": 1249.9947800752, "isPremium": true}]}], "problems": []}, {"title": "二、二分答案", "summary": "> “花费一个 $\\log$ 的时间，增加了一个条件。” —— 二分答案<br>", "isLeaf": false, "children": [{"title": "§2.1 求最小", "summary": "题目求什么，就二分什么。<br>", "isLeaf": false, "children": [{"title": "所以 right 就是最小的满足 check 的值", "summary": "**问**：如何把二分答案与数组上的二分查找联系起来？<br>**答**：假设答案在区间 $[2,5]$ 中，我们相当于在一个**虚拟数组** $[\\texttt{check}(2),\\texttt{check}(3),\\texttt{check}(4),\\texttt{check}(5)]$ 中二分找第一个（或者最后一个）值为 $\\texttt{true}$ 的 $\\texttt{check}(x)$。这同样可以用红蓝染色法思考。<br>**问**：有些题目，明明 $m$ 可以是答案，但却不在初始二分区间中。比如闭区间二分初始化 $\\textit{right}=m-1$（或者开区间 $\\textit{right}=m$），这不会算错吗？<br>**答**：不会算错。注意「答案所在区间」和「二分区间」是两个概念。想一想，如果二分的 $\\texttt{while}$ 循环每次更新的都是 $\\textit{left}$，那么最终答案是什么？正好就是 $m$。一般地，如果一开始就能确定 $m$ 一定可以满足题目要求，那么 $m$ 是不需要在二分区间中的。换句话说，二分区间是「尚未确定是否满足题目要求」的数的范围。那些在区间外面的数，都是已确定的满足（不满足）题目要求的数。<br>**问**：什么是循环不变量？<br>**答**：想一想，对于求最小的题目，**开区间二分**的写法，为什么最终返回的是 $\\textit{right}$，而不是别的数？在初始化（循环之前）、循环中、循环结束后，都时时刻刻保证 `check(right) == true` 和 `check(left) == false`，这就叫**循环不变量**。根据循环不变量，循环结束时 $\\textit{left}+1=\\textit{right}$，那么 $\\textit{right}$ 就是最小的满足要求的数（因为再 $-1$ 就不满足要求了），所以答案是 $\\textit{right}$。<br>**注**：部分题目可以优化二分边界，减少二分次数，从而减少代码运行时间。对于初次接触二分答案的同学，无需强求自己写出最优的代码，设定一个比较大的二分上界也是可以的。<br>开区间二分模板（求最小）：<br>```py [sol-Python3]<br>class Solution:<br>def binarySearchMin(self, nums: List[int]) -> int:<br>def check(mid: int) -> bool:<br>left =   # 循环不变量：check(left) 恒为 False<br>right =   # 循环不变量：check(right) 恒为 True<br>while left + 1 < right:  # 开区间不为空<br>mid = (left + right) // 2<br>if check(mid):  # 说明 check(>= mid 的数) 均为 True<br>right = mid  # 接下来在 (left, mid) 中二分答案<br>else:  # 说明 check(<= mid 的数) 均为 False<br>left = mid  # 接下来在 (mid, right) 中二分答案<br>return right<br>```<br>```java [sol-Java]<br>class Solution {<br>// 计算满足 check(x) == true 的最小整数 x<br>public int binarySearchMin(int[] nums) {<br>int left = ; // 循环不变量：check(left) 恒为 false<br>int right = ; // 循环不变量：check(right) 恒为 true<br>while (left + 1 < right) { // 开区间不为空<br>int mid = left + (right - left) / 2;<br>if (check(mid, nums)) { // 说明 check(>= mid 的数) 均为 true<br>right = mid; // 接下来在 (left, mid) 中二分答案<br>} else { // 说明 check(<= mid 的数) 均为 false<br>left = mid; // 接下来在 (mid, right) 中二分答案<br>}<br>}<br>// 循环结束后 left+1 = right<br>// 此时 check(left) == false 而 check(left+1) == check(right) == true<br>// 所以 right 就是最小的满足 check 的值<br>return right;<br>}<br>// 二分猜答案：判断 mid 是否满足题目要求<br>private boolean check(int mid, int[] nums) {<br>}<br>}<br>```<br>```cpp [sol-C++]<br>class Solution {<br>public:<br>// 计算满足 check(x) == true 的最小整数 x<br>int binarySearchMin(vector<int>& nums) {<br>// 二分猜答案：判断 mid 是否满足题目要求<br>auto check = [&](int mid) -> bool {<br>};<br>int left = ; // 循环不变量：check(left) 恒为 false<br>int right = ; // 循环不变量：check(right) 恒为 true<br>while (left + 1 < right) { // 开区间不为空<br>int mid = left + (right - left) / 2;<br>if (check(mid)) { // 说明 check(>= mid 的数) 均为 true<br>right = mid; // 接下来在 (left, mid) 中二分答案<br>} else { // 说明 check(<= mid 的数) 均为 false<br>left = mid; // 接下来在 (mid, right) 中二分答案<br>}<br>}<br>// 循环结束后 left+1 = right<br>// 此时 check(left) == false 而 check(left+1) == check(right) == true<br>// 所以 right 就是最小的满足 check 的值<br>return right;<br>}<br>};<br>```<br>```go [sol-Go]<br>// 计算满足 check(x) == true 的最小整数 x<br>func binarySearchMin(nums []int) int {<br>// 二分猜答案：判断 mid 是否满足题目要求<br>check := func(mid int) bool {<br>}<br>left :=  // 循环不变量：check(left) 恒为 false<br>right :=  // 循环不变量：check(right) 恒为 true<br>for left+1 < right { // 开区间不为空<br>mid := left + (right-left)/2<br>if check(mid) { // 说明 check(>= mid 的数) 均为 true<br>right = mid // 接下来在 (left, mid) 中二分答案<br>} else { // 说明 check(<= mid 的数) 均为 false<br>left = mid // 接下来在 (mid, right) 中二分答案<br>}<br>}<br>// 循环结束后 left+1 = right<br>// 此时 check(left) == false 而 check(left+1) == check(right) == true<br>// 所以 right 就是最小的满足 check 的值<br>return right<br>}<br>```<br>**思维扩展**：<br>", "isLeaf": true, "children": [], "problems": [{"id": 1283, "title": "1283. 使结果不超过阈值的最小除数", "slug": "/find-the-smallest-divisor-given-a-threshold/", "src": "https://leetcode.cn/problems/find-the-smallest-divisor-given-a-threshold/", "solution": null, "score": 1541.7840320661, "isPremium": false}, {"id": 2187, "title": "2187. 完成旅途的最少时间", "slug": "/minimum-time-to-complete-trips/", "src": "https://leetcode.cn/problems/minimum-time-to-complete-trips/", "solution": null, "score": 1640.9591585343, "isPremium": false}, {"id": 1011, "title": "1011. 在 D 天内送达包裹的能力", "slug": "/capacity-to-ship-packages-within-d-days/", "src": "https://leetcode.cn/problems/capacity-to-ship-packages-within-d-days/", "solution": null, "score": 1725.4481937307, "isPremium": false}, {"id": 875, "title": "875. 爱吃香蕉的珂珂", "slug": "/koko-eating-bananas/", "src": "https://leetcode.cn/problems/koko-eating-bananas/", "solution": null, "score": 1765.5654059263, "isPremium": false}, {"id": 3296, "title": "3296. 移山所需的最少秒数", "slug": "/minimum-number-of-seconds-to-make-mountain-height-zero/", "src": "https://leetcode.cn/problems/minimum-number-of-seconds-to-make-mountain-height-zero/", "solution": null, "score": 1694.7320914942, "isPremium": false}, {"id": 3639, "title": "3639. 变为活跃状态的最小时间", "slug": "/minimum-time-to-activate-string/", "src": "https://leetcode.cn/problems/minimum-time-to-activate-string/", "solution": null, "score": 1853.2804713723, "isPremium": false}, {"id": 475, "title": "475. 供暖器", "slug": "/heaters/", "src": "https://leetcode.cn/problems/heaters/", "solution": null, "score": null, "isPremium": false}, {"id": 2594, "title": "2594. 修车的最少时间", "slug": "/minimum-time-to-repair-cars/", "src": "https://leetcode.cn/problems/minimum-time-to-repair-cars/", "solution": null, "score": 1915.2628132733, "isPremium": false}, {"id": 1482, "title": "1482. 制作 m 束花所需的最少天数", "slug": "/minimum-number-of-days-to-make-m-bouquets/", "src": "https://leetcode.cn/problems/minimum-number-of-days-to-make-m-bouquets/", "solution": null, "score": 1945.5095833982, "isPremium": false}, {"id": 3048, "title": "3048. 标记所有下标的最早秒数 I", "slug": "/earliest-second-to-mark-indices-i/", "src": "https://leetcode.cn/problems/earliest-second-to-mark-indices-i/", "solution": null, "score": 2262.5641910108, "isPremium": false}, {"id": 2604, "title": "2604. 吃掉所有谷子的最短时间", "slug": "/minimum-time-to-eat-all-grains/", "src": "https://leetcode.cn/problems/minimum-time-to-eat-all-grains/", "solution": null, "score": null, "isPremium": true}, {"id": 2702, "title": "2702. 使数字变为非正数的最小操作次数", "slug": "/minimum-operations-to-make-numbers-non-positive/", "src": "https://leetcode.cn/problems/minimum-operations-to-make-numbers-non-positive/", "solution": null, "score": null, "isPremium": true}, {"id": 1870, "title": "1870. 准时到达的列车最小时速", "slug": "/minimum-speed-to-arrive-on-time/", "src": "https://leetcode.cn/problems/minimum-speed-to-arrive-on-time/", "solution": null, "score": 1675.761234741, "isPremium": false}, {"id": 3453, "title": "3453. 分割正方形 I", "slug": "/separate-squares-i/", "src": "https://leetcode.cn/problems/separate-squares-i/", "solution": null, "score": 1735.4106121238, "isPremium": false}]}], "problems": []}, {"title": "所以 left 就是最大的满足 check 的值", "summary": "<a href=\"https://leetcode.cn/problems/h-index-ii/solution/tu-jie-yi-tu-zhang-wo-er-fen-da-an-si-ch-d15k/\">一图掌握二分答案！四种写法！</a><br>在练习时，请注意「求最小」和「求最大」的二分写法上的区别。<br>前面的「求最小」和二分查找求「排序数组中某元素的第一个位置」是类似的，按照红蓝染色法，左边是不满足要求的（红色），右边则是满足要求的（蓝色）。<br>「求最大」的题目则相反，左边是满足要求的（蓝色），右边是不满足要求的（红色）。这会导致二分写法和上面的「求最小」有一些区别。<br>以开区间二分为例：<br>- 求最小：`check(mid) == true` 时更新 `right = mid`，反之更新 `left = mid`，最后返回 `right`。<br>- 求最大：`check(mid) == true` 时更新 `left = mid`，反之更新 `right = mid`，最后返回 `left`。<br>对于开区间写法，简单来说 `check(mid) == true` 时更新的是谁，最后就返回谁。相比其他二分写法，开区间写法不需要思考加一减一等细节，**推荐使用开区间写二分**。<br>开区间二分模板（求最大）：<br>```py [sol-Python3]<br>class Solution:<br>def binarySearchMax(self, nums: List[int]) -> int:<br>def check(mid: int) -> bool:<br>left =   # 循环不变量：check(left) 恒为 True<br>right =   # 循环不变量：check(right) 恒为 False<br>while left + 1 < right:<br>mid = (left + right) // 2<br>if check(mid):<br>left = mid  # 注意这里更新的是 left，和上面的模板反过来<br>else:<br>right = mid<br>return left  # check 更新的是谁，最终就返回谁<br>```<br>```java [sol-Java]<br>class Solution {<br>// 计算满足 check(x) == true 的最大整数 x<br>public int binarySearchMax(int[] nums) {<br>int left = ; // 循环不变量：check(left) 恒为 true<br>int right = ; // 循环不变量：check(right) 恒为 false<br>while (left + 1 < right) {<br>int mid = left + (right - left) / 2;<br>if (check(mid, nums)) {<br>left = mid; // 注意这里更新的是 left，和上面的模板反过来<br>} else {<br>right = mid;<br>}<br>}<br>// 循环结束后 left+1 = right<br>// 此时 check(left) == true 而 check(left+1) == check(right) == false<br>// 所以 left 就是最大的满足 check 的值<br>return left; // check 更新的是谁，最终就返回谁<br>}<br>// 二分猜答案：判断 mid 是否满足题目要求<br>private boolean check(int mid, int[] nums) {<br>}<br>}<br>```<br>```cpp [sol-C++]<br>class Solution {<br>public:<br>// 计算满足 check(x) == true 的最大整数 x<br>int binarySearchMax(vector<int>& nums) {<br>// 二分猜答案：判断 mid 是否满足题目要求<br>auto check = [&](int mid) -> bool {<br>};<br>int left = ; // 循环不变量：check(left) 恒为 true<br>int right = ; // 循环不变量：check(right) 恒为 false<br>while (left + 1 < right) {<br>int mid = left + (right - left) / 2;<br>if (check(mid)) {<br>left = mid; // 注意这里更新的是 left，和上面的模板反过来<br>} else {<br>right = mid;<br>}<br>}<br>// 循环结束后 left+1 = right<br>// 此时 check(left) == true 而 check(left+1) == check(right) == false<br>// 所以 left 就是最大的满足 check 的值<br>return left; // check 更新的是谁，最终就返回谁<br>}<br>};<br>```<br>```go [sol-Go]<br>// 计算满足 check(x) == true 的最大整数 x<br>func binarySearchMax(nums []int) int {<br>// 二分猜答案：判断 mid 是否满足题目要求<br>check := func(mid int) bool {<br>}<br>left :=  // 循环不变量：check(left) 恒为 true<br>right :=  // 循环不变量：check(right) 恒为 false<br>for left+1 < right {<br>mid := left + (right-left)/2<br>if check(mid) {<br>left = mid // 注意这里更新的是 left，和上面的模板反过来<br>} else {<br>right = mid<br>}<br>}<br>// 循环结束后 left+1 = right<br>// 此时 check(left) == true 而 check(left+1) == check(right) == false<br>// 所以 left 就是最大的满足 check 的值<br>return left // check 更新的是谁，最终就返回谁<br>}<br>```<br>", "isLeaf": true, "children": [], "problems": [{"id": 275, "title": "275. H 指数 II", "slug": "/h-index-ii/", "src": "https://leetcode.cn/problems/h-index-ii/", "solution": null, "score": null, "isPremium": false}, {"id": 2226, "title": "2226. 每个小孩最多能分到多少糖果", "slug": "/maximum-candies-allocated-to-k-children/", "src": "https://leetcode.cn/problems/maximum-candies-allocated-to-k-children/", "solution": null, "score": 1646.1765343383, "isPremium": false}, {"id": 2982, "title": "2982. 找出出现至少三次的最长特殊子字符串 II", "slug": "/find-longest-special-substring-that-occurs-thrice-ii/", "src": "https://leetcode.cn/problems/find-longest-special-substring-that-occurs-thrice-ii/", "solution": null, "score": 1772.9528456848, "isPremium": false}, {"id": 2576, "title": "2576. 求出最多标记下标", "slug": "/find-the-maximum-number-of-marked-indices/", "src": "https://leetcode.cn/problems/find-the-maximum-number-of-marked-indices/", "solution": null, "score": 1843.2383664194, "isPremium": false}, {"id": 1898, "title": "1898. 可移除字符的最大数目", "slug": "/maximum-number-of-removable-characters/", "src": "https://leetcode.cn/problems/maximum-number-of-removable-characters/", "solution": null, "score": 1912.8440554296, "isPremium": false}, {"id": 1802, "title": "1802. 有界数组中指定下标处的最大值", "slug": "/maximum-value-at-a-given-index-in-a-bounded-array/", "src": "https://leetcode.cn/problems/maximum-value-at-a-given-index-in-a-bounded-array/", "solution": null, "score": 1929.3184180196, "isPremium": false}, {"id": 1642, "title": "1642. 可以到达的最远建筑", "slug": "/furthest-building-you-can-reach/", "src": "https://leetcode.cn/problems/furthest-building-you-can-reach/", "solution": null, "score": 1962.2005269503, "isPremium": false}, {"id": 2861, "title": "2861. 最大合金数", "slug": "/maximum-number-of-alloys/", "src": "https://leetcode.cn/problems/maximum-number-of-alloys/", "solution": null, "score": 1981.3072959787, "isPremium": false}, {"id": 3007, "title": "3007. 价值和小于等于 K 的最大数字", "slug": "/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/", "src": "https://leetcode.cn/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/", "solution": null, "score": 2258.0069047781, "isPremium": false}, {"id": 2141, "title": "2141. 同时运行 N 台电脑的最长时间", "slug": "/maximum-running-time-of-n-computers/", "src": "https://leetcode.cn/problems/maximum-running-time-of-n-computers/", "solution": null, "score": 2265.2118886972, "isPremium": false}, {"id": 2258, "title": "2258. 逃离火灾", "slug": "/escape-the-spreading-fire/", "src": "https://leetcode.cn/problems/escape-the-spreading-fire/", "solution": null, "score": 2346.5717839654, "isPremium": false}, {"id": 2071, "title": "2071. 你可以安排的最多任务数目", "slug": "/maximum-number-of-tasks-you-can-assign/", "src": "https://leetcode.cn/problems/maximum-number-of-tasks-you-can-assign/", "solution": null, "score": 2648.1748409542, "isPremium": false}, {"id": "LCP 78", "title": "LCP 78. 城墙防线", "slug": "/Nsibyl/", "src": "https://leetcode.cn/problems/Nsibyl/", "solution": null, "score": null, "isPremium": false}, {"id": 1618, "title": "1618. 找出适应屏幕的最大字号", "slug": "/maximum-font-to-fit-a-sentence-in-a-screen/", "src": "https://leetcode.cn/problems/maximum-font-to-fit-a-sentence-in-a-screen/", "solution": null, "score": null, "isPremium": true}, {"id": 1891, "title": "1891. 割绳子", "slug": "/cutting-ribbons/", "src": "https://leetcode.cn/problems/cutting-ribbons/", "solution": null, "score": null, "isPremium": true}, {"id": 2137, "title": "2137. 通过倒水操作让所有的水桶所含水量相等", "slug": "/pour-water-between-buckets-to-make-water-levels-equal/", "src": "https://leetcode.cn/problems/pour-water-between-buckets-to-make-water-levels-equal/", "solution": null, "score": null, "isPremium": true}, {"id": 3344, "title": "3344. 最大尺寸数组", "slug": "/maximum-sized-array/", "src": "https://leetcode.cn/problems/maximum-sized-array/", "solution": null, "score": null, "isPremium": true}, {"id": 644, "title": "644. 子数组最大平均数 II", "slug": "/maximum-average-subarray-ii/", "src": "https://leetcode.cn/problems/maximum-average-subarray-ii/", "solution": null, "score": null, "isPremium": true}]}, {"title": "§2.3 二分间接值", "summary": "二分的不是答案，而是一个和答案有关的值（间接值）。<br>", "isLeaf": true, "children": [], "problems": [{"id": 3143, "title": "3143. 正方形中的最多点数", "slug": "/maximum-points-inside-the-square/", "src": "https://leetcode.cn/problems/maximum-points-inside-the-square/", "solution": null, "score": 1696.9464414997, "isPremium": false}, {"id": 1648, "title": "1648. 销售价值减少的颜色球", "slug": "/sell-diminishing-valued-colored-balls/", "src": "https://leetcode.cn/problems/sell-diminishing-valued-colored-balls/", "solution": null, "score": 2050.2553211463, "isPremium": false}]}, {"title": "§2.4 最小化最大值", "summary": "本质是二分答案求最小。二分的 $\\textit{mid}$ 表示上界。<br>好比用一个盖子（上界）去压住最大值，看看能否压住（$\\texttt{check}$ 函数）。<br>", "isLeaf": true, "children": [], "problems": [{"id": 410, "title": "410. 分割数组的最大值", "slug": "/split-array-largest-sum/", "src": "https://leetcode.cn/problems/split-array-largest-sum/", "solution": null, "score": null, "isPremium": false}, {"id": 2064, "title": "2064. 分配给商店的最多商品的最小值", "slug": "/minimized-maximum-of-products-distributed-to-any-store/", "src": "https://leetcode.cn/problems/minimized-maximum-of-products-distributed-to-any-store/", "solution": null, "score": 1885.9015646531, "isPremium": false}, {"id": 3613, "title": "3613. 最小化连通分量的最大成本", "slug": "/minimize-maximum-component-cost/", "src": "https://leetcode.cn/problems/minimize-maximum-component-cost/", "solution": null, "score": 1641.5473375118, "isPremium": false}, {"id": 1760, "title": "1760. 袋子里最少数目的球", "slug": "/minimum-limit-of-balls-in-a-bag/", "src": "https://leetcode.cn/problems/minimum-limit-of-balls-in-a-bag/", "solution": null, "score": 1939.9323330472, "isPremium": false}, {"id": 1631, "title": "1631. 最小体力消耗路径", "slug": "/path-with-minimum-effort/", "src": "https://leetcode.cn/problems/path-with-minimum-effort/", "solution": null, "score": 1947.5013967785, "isPremium": false}, {"id": 2439, "title": "2439. 最小化数组中的最大值", "slug": "/minimize-maximum-of-array/", "src": "https://leetcode.cn/problems/minimize-maximum-of-array/", "solution": null, "score": 1965.1266122355, "isPremium": false}, {"id": 2560, "title": "2560. 打家劫舍 IV", "slug": "/house-robber-iv/", "src": "https://leetcode.cn/problems/house-robber-iv/", "solution": null, "score": 2081.1880297942, "isPremium": false}, {"id": 778, "title": "778. 水位上升的泳池中游泳", "slug": "/swim-in-rising-water/", "src": "https://leetcode.cn/problems/swim-in-rising-water/", "solution": null, "score": 2096.6201393558, "isPremium": false}, {"id": 2616, "title": "2616. 最小化数对的最大差值", "slug": "/minimize-the-maximum-difference-of-pairs/", "src": "https://leetcode.cn/problems/minimize-the-maximum-difference-of-pairs/", "solution": null, "score": 2155.3424932408, "isPremium": false}, {"id": 3419, "title": "3419. 图的最大边权的最小值", "slug": "/minimize-the-maximum-edge-weight-of-graph/", "src": "https://leetcode.cn/problems/minimize-the-maximum-edge-weight-of-graph/", "solution": null, "score": 2243.2051062979, "isPremium": false}, {"id": 2513, "title": "2513. 最小化两个数组中的最大值", "slug": "/minimize-the-maximum-of-two-arrays/", "src": "https://leetcode.cn/problems/minimize-the-maximum-of-two-arrays/", "solution": null, "score": 2302.4005640818, "isPremium": false}, {"id": 3733, "title": "3733. 完成所有送货任务的最少时间", "slug": "/minimum-time-to-complete-all-deliveries/", "src": "https://leetcode.cn/problems/minimum-time-to-complete-all-deliveries/", "solution": null, "score": 1972.7630060106, "isPremium": false}, {"id": 3399, "title": "3399. 字符相同的最短子字符串 II", "slug": "/smallest-substring-with-identical-characters-ii/", "src": "https://leetcode.cn/problems/smallest-substring-with-identical-characters-ii/", "solution": null, "score": 2375.9062896615, "isPremium": false}, {"id": 3605, "title": "3605. 数组的最小稳定性因子", "slug": "/minimum-stability-factor-of-array/", "src": "https://leetcode.cn/problems/minimum-stability-factor-of-array/", "solution": null, "score": 2409.954556053, "isPremium": false}, {"id": "LCP 12", "title": "LCP 12. 小张刷题计划", "slug": "/xiao-zhang-shua-ti-ji-hua/", "src": "https://leetcode.cn/problems/xiao-zhang-shua-ti-ji-hua/", "solution": null, "score": null, "isPremium": false}, {"id": 774, "title": "774. 最小化去加油站的最大距离", "slug": "/minimize-max-distance-to-gas-station/", "src": "https://leetcode.cn/problems/minimize-max-distance-to-gas-station/", "solution": null, "score": 2084.2010769193, "isPremium": true}]}, {"title": "§2.5 最大化最小值", "summary": "本质是二分答案求最大。二分的 $\\textit{mid}$ 表示下界。<br>", "isLeaf": true, "children": [], "problems": [{"id": 3281, "title": "3281. 范围内整数的最大得分", "slug": "/maximize-score-of-numbers-in-ranges/", "src": "https://leetcode.cn/problems/maximize-score-of-numbers-in-ranges/", "solution": null, "score": 1768.0010478389, "isPremium": false}, {"id": 3620, "title": "3620. 恢复网络路径", "slug": "/network-recovery-pathways/", "src": "https://leetcode.cn/problems/network-recovery-pathways/", "solution": null, "score": 1998.0432529701, "isPremium": false}, {"id": 2517, "title": "2517. 礼盒的最大甜蜜度", "slug": "/maximum-tastiness-of-candy-basket/", "src": "https://leetcode.cn/problems/maximum-tastiness-of-candy-basket/", "solution": null, "score": 2020.6775180586, "isPremium": false}, {"id": 1552, "title": "1552. 两球之间的磁力", "slug": "/magnetic-force-between-two-balls/", "src": "https://leetcode.cn/problems/magnetic-force-between-two-balls/", "solution": null, "score": 1919.7433862082, "isPremium": false}, {"id": 3710, "title": "3710. 最大划分因子", "slug": "/maximum-partition-factor/", "src": "https://leetcode.cn/problems/maximum-partition-factor/", "solution": null, "score": 2135.1002785041, "isPremium": false}, {"id": 2812, "title": "2812. 找出最安全路径", "slug": "/find-the-safest-path-in-a-grid/", "src": "https://leetcode.cn/problems/find-the-safest-path-in-a-grid/", "solution": null, "score": 2153.5854429139, "isPremium": false}, {"id": 2528, "title": "2528. 最大化城市的最小电量", "slug": "/maximize-the-minimum-powered-city/", "src": "https://leetcode.cn/problems/maximize-the-minimum-powered-city/", "solution": null, "score": 2235.5784618885, "isPremium": false}, {"id": 3600, "title": "3600. 升级后最大生成树稳定性", "slug": "/maximize-spanning-tree-stability-with-upgrades/", "src": "https://leetcode.cn/problems/maximize-spanning-tree-stability-with-upgrades/", "solution": null, "score": 2301.0381658933, "isPremium": false}, {"id": 3449, "title": "3449. 最大化游戏分数的最小值", "slug": "/maximize-the-minimum-game-score/", "src": "https://leetcode.cn/problems/maximize-the-minimum-game-score/", "solution": null, "score": 2748.125042961, "isPremium": false}, {"id": 3464, "title": "3464. 正方形上的点之间的最大距离", "slug": "/maximize-the-distance-between-points-on-a-square/", "src": "https://leetcode.cn/problems/maximize-the-distance-between-points-on-a-square/", "solution": null, "score": 2805.990278358, "isPremium": false}, {"id": 1102, "title": "1102. 得分最高的路径", "slug": "/path-with-maximum-minimum-value/", "src": "https://leetcode.cn/problems/path-with-maximum-minimum-value/", "solution": null, "score": 2011.3542735398, "isPremium": true}, {"id": 1231, "title": "1231. 分享巧克力", "slug": "/divide-chocolate/", "src": "https://leetcode.cn/problems/divide-chocolate/", "solution": null, "score": 2029.1301557536, "isPremium": true}]}, {"title": "§2.6 第 K 小/大", "summary": "例如数组 $[1,1,1,2,2]$，其中第 $1$ 小、第 $2$ 小和第 $3$ 小的数都是 $1$，第 $4$ 小和第 $5$ 小的数都是 $2$。<br>- 第 $k$ 小等价于：求**最小**的 $x$，满足 $\\le x$ 的数**至少**有 $k$ 个。<br>- 第 $k$ 大等价于：求**最大**的 $x$，满足 $\\ge x$ 的数**至少**有 $k$ 个。<br>> 注 1：一般规定 $k$ 从 $1$ 开始，而不是像数组下标那样从 $0$ 开始。<br>><br>> 注 2：部分题目也可以用堆解决。<br>", "isLeaf": true, "children": [], "problems": [{"id": 668, "title": "668. 乘法表中第 K 小的数", "slug": "/kth-smallest-number-in-multiplication-table/", "src": "https://leetcode.cn/problems/kth-smallest-number-in-multiplication-table/", "solution": null, "score": null, "isPremium": false}, {"id": 378, "title": "378. 有序矩阵中第 K 小的元素", "slug": "/kth-smallest-element-in-a-sorted-matrix/", "src": "https://leetcode.cn/problems/kth-smallest-element-in-a-sorted-matrix/", "solution": null, "score": null, "isPremium": false}, {"id": 719, "title": "719. 找出第 K 小的数对距离", "slug": "/find-k-th-smallest-pair-distance/", "src": "https://leetcode.cn/problems/find-k-th-smallest-pair-distance/", "solution": null, "score": null, "isPremium": false}, {"id": 878, "title": "878. 第 N 个神奇数字", "slug": "/nth-magical-number/", "src": "https://leetcode.cn/problems/nth-magical-number/", "solution": null, "score": 1896.7975214446, "isPremium": false}, {"id": 1201, "title": "1201. 丑数 III", "slug": "/ugly-number-iii/", "src": "https://leetcode.cn/problems/ugly-number-iii/", "solution": null, "score": 2039.110874689, "isPremium": false}, {"id": 793, "title": "793. 阶乘函数后 K 个零", "slug": "/preimage-size-of-factorial-zeroes-function/", "src": "https://leetcode.cn/problems/preimage-size-of-factorial-zeroes-function/", "solution": null, "score": 2100.3248877105, "isPremium": false}, {"id": 373, "title": "373. 查找和最小的 K 对数字", "slug": "/find-k-pairs-with-smallest-sums/", "src": "https://leetcode.cn/problems/find-k-pairs-with-smallest-sums/", "solution": null, "score": null, "isPremium": false}, {"id": 1439, "title": "1439. 有序矩阵中的第 k 个最小数组和", "slug": "/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/", "src": "https://leetcode.cn/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/", "solution": null, "score": 2133.9592509012, "isPremium": false}, {"id": 786, "title": "786. 第 K 个最小的质数分数", "slug": "/k-th-smallest-prime-fraction/", "src": "https://leetcode.cn/problems/k-th-smallest-prime-fraction/", "solution": null, "score": 2168.7531235448, "isPremium": false}, {"id": 3116, "title": "3116. 单面值组合的第 K 小金额", "slug": "/kth-smallest-amount-with-single-denomination-combination/", "src": "https://leetcode.cn/problems/kth-smallest-amount-with-single-denomination-combination/", "solution": null, "score": 2387.9289198649, "isPremium": false}, {"id": 3134, "title": "3134. 找出唯一性数组的中位数", "slug": "/find-the-median-of-the-uniqueness-array/", "src": "https://leetcode.cn/problems/find-the-median-of-the-uniqueness-array/", "solution": null, "score": 2451.1558771446, "isPremium": false}, {"id": 2040, "title": "2040. 两个有序数组的第 K 小乘积", "slug": "/kth-smallest-product-of-two-sorted-arrays/", "src": "https://leetcode.cn/problems/kth-smallest-product-of-two-sorted-arrays/", "solution": null, "score": 2517.6829964848, "isPremium": false}, {"id": 2386, "title": "2386. 找出数组的第 K 大和", "slug": "/find-the-k-sum-of-an-array/", "src": "https://leetcode.cn/problems/find-the-k-sum-of-an-array/", "solution": null, "score": 2647.8258771458, "isPremium": false}, {"id": 1508, "title": "1508. 子数组和排序后的区间和", "slug": "/range-sum-of-sorted-subarray-sums/", "src": "https://leetcode.cn/problems/range-sum-of-sorted-subarray-sums/", "solution": null, "score": 1402.0863615706, "isPremium": false}, {"id": 3691, "title": "3691. 最大子数组总值 II", "slug": "/maximum-total-subarray-value-ii/", "src": "https://leetcode.cn/problems/maximum-total-subarray-value-ii/", "solution": null, "score": 2469.013888267, "isPremium": false}, {"id": 3520, "title": "3520. 逆序对计数的最小阈值", "slug": "/minimum-threshold-for-inversion-pairs-count/", "src": "https://leetcode.cn/problems/minimum-threshold-for-inversion-pairs-count/", "solution": null, "score": null, "isPremium": true}, {"id": 1918, "title": "1918. 第 K 小的子数组和", "slug": "/kth-smallest-subarray-sum/", "src": "https://leetcode.cn/problems/kth-smallest-subarray-sum/", "solution": null, "score": null, "isPremium": true}]}], "problems": []}, {"title": "三、三分法", "summary": "", "isLeaf": true, "children": [], "problems": [{"id": 1515, "title": "1515. 服务中心的最佳位置", "slug": "/best-position-for-a-service-centre/", "src": "https://leetcode.cn/problems/best-position-for-a-service-centre/", "solution": null, "score": 2156.9515428364, "isPremium": false}]}, {"title": "四、其他", "summary": "", "isLeaf": true, "children": [], "problems": [{"id": 69, "title": "69. x 的平方根", "slug": "/sqrtx/", "src": "https://leetcode.cn/problems/sqrtx/", "solution": null, "score": null, "isPremium": false}, {"id": 74, "title": "74. 搜索二维矩阵", "slug": "/search-a-2d-matrix/", "src": "https://leetcode.cn/problems/search-a-2d-matrix/", "solution": null, "score": null, "isPremium": false}, {"id": 278, "title": "278. 第一个错误的版本", "slug": "/first-bad-version/", "src": "https://leetcode.cn/problems/first-bad-version/", "solution": null, "score": null, "isPremium": false}, {"id": 374, "title": "374. 猜数字大小", "slug": "/guess-number-higher-or-lower/", "src": "https://leetcode.cn/problems/guess-number-higher-or-lower/", "solution": null, "score": null, "isPremium": false}, {"id": 162, "title": "162. 寻找峰值", "slug": "/find-peak-element/", "src": "https://leetcode.cn/problems/find-peak-element/", "solution": null, "score": null, "isPremium": false}, {"id": 1901, "title": "1901. 寻找峰值 II", "slug": "/find-a-peak-element-ii/", "src": "https://leetcode.cn/problems/find-a-peak-element-ii/", "solution": null, "score": null, "isPremium": false}, {"id": 852, "title": "852. 山脉数组的峰顶索引", "slug": "/peak-index-in-a-mountain-array/", "src": "https://leetcode.cn/problems/peak-index-in-a-mountain-array/", "solution": null, "score": 1181.5839867359, "isPremium": false}, {"id": 1095, "title": "1095. 山脉数组中查找目标值", "slug": "/find-in-mountain-array/", "src": "https://leetcode.cn/problems/find-in-mountain-array/", "solution": null, "score": 1827.090740222, "isPremium": false}, {"id": 153, "title": "153. 寻找旋转排序数组中的最小值", "slug": "/find-minimum-in-rotated-sorted-array/", "src": "https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/", "solution": null, "score": null, "isPremium": false}, {"id": 154, "title": "154. 寻找旋转排序数组中的最小值 II", "slug": "/find-minimum-in-rotated-sorted-array-ii/", "src": "https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array-ii/", "solution": null, "score": null, "isPremium": false}, {"id": 33, "title": "33. 搜索旋转排序数组", "slug": "/search-in-rotated-sorted-array/", "src": "https://leetcode.cn/problems/search-in-rotated-sorted-array/", "solution": null, "score": null, "isPremium": false}, {"id": 81, "title": "81. 搜索旋转排序数组 II", "slug": "/search-in-rotated-sorted-array-ii/", "src": "https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/", "solution": null, "score": null, "isPremium": false}, {"id": 222, "title": "222. 完全二叉树的节点个数", "slug": "/count-complete-tree-nodes/", "src": "https://leetcode.cn/problems/count-complete-tree-nodes/", "solution": null, "score": null, "isPremium": false}, {"id": 1539, "title": "1539. 第 k 个缺失的正整数", "slug": "/kth-missing-positive-number/", "src": "https://leetcode.cn/problems/kth-missing-positive-number/", "solution": null, "score": 1295.4970938463, "isPremium": false}, {"id": 540, "title": "540. 有序数组中的单一元素", "slug": "/single-element-in-a-sorted-array/", "src": "https://leetcode.cn/problems/single-element-in-a-sorted-array/", "solution": null, "score": null, "isPremium": false}, {"id": 4, "title": "4. 寻找两个正序数组的中位数", "slug": "/median-of-two-sorted-arrays/", "src": "https://leetcode.cn/problems/median-of-two-sorted-arrays/", "solution": null, "score": null, "isPremium": false}, {"id": 1064, "title": "1064. 不动点", "slug": "/fixed-point/", "src": "https://leetcode.cn/problems/fixed-point/", "solution": null, "score": 1307.9800903088, "isPremium": true}, {"id": 702, "title": "702. 搜索长度未知的有序数组", "slug": "/search-in-a-sorted-array-of-unknown-size/", "src": "https://leetcode.cn/problems/search-in-a-sorted-array-of-unknown-size/", "solution": null, "score": null, "isPremium": true}, {"id": 2936, "title": "2936. 包含相等值数字块的数量", "slug": "/number-of-equal-numbers-blocks/", "src": "https://leetcode.cn/problems/number-of-equal-numbers-blocks/", "solution": null, "score": null, "isPremium": true}, {"id": 1060, "title": "1060. 有序数组中的缺失元素", "slug": "/missing-element-in-sorted-array/", "src": "https://leetcode.cn/problems/missing-element-in-sorted-array/", "solution": null, "score": null, "isPremium": true}, {"id": 1198, "title": "1198. 找出所有行中最小公共元素", "slug": "/find-smallest-common-element-in-all-rows/", "src": "https://leetcode.cn/problems/find-smallest-common-element-in-all-rows/", "solution": null, "score": 1401.2246983038, "isPremium": true}, {"id": 1428, "title": "1428. 至少有一个 1 的最左端列", "slug": "/leftmost-column-with-at-least-a-one/", "src": "https://leetcode.cn/problems/leftmost-column-with-at-least-a-one/", "solution": null, "score": null, "isPremium": true}, {"id": 1533, "title": "1533. 找到最大整数的索引", "slug": "/find-the-index-of-the-large-integer/", "src": "https://leetcode.cn/problems/find-the-index-of-the-large-integer/", "solution": null, "score": null, "isPremium": true}, {"id": 2387, "title": "2387. 行排序矩阵的中位数", "slug": "/median-of-a-row-wise-sorted-matrix/", "src": "https://leetcode.cn/problems/median-of-a-row-wise-sorted-matrix/", "solution": null, "score": null, "isPremium": true}, {"id": 302, "title": "302. 包含全部黑色像素的最小矩形", "slug": "/smallest-rectangle-enclosing-black-pixels/", "src": "https://leetcode.cn/problems/smallest-rectangle-enclosing-black-pixels/", "solution": null, "score": null, "isPremium": true}]}, {"title": "算法题单", "summary": "<a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题？</a><br>1. <a href=\"/lc-rating/list/sliding_window\">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a><br>2. <a href=\"/lc-rating/list/binary_search\">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a><br>3. <a href=\"/lc-rating/list/monotonic_stack\">单调栈（基础/矩形面积/贡献法/最小字典序）</a><br>4. <a href=\"/lc-rating/list/grid\">网格图（DFS/BFS/综合应用）</a><br>5. <a href=\"/lc-rating/list/bitwise_operations\">位运算（基础/性质/拆位/试填/恒等式/思维）</a><br>6. <a href=\"/lc-rating/list/graph\">图论算法（DFS/BFS/拓扑排序/基环树/最短路/最小生成树/网络流）</a><br>7. <a href=\"/lc-rating/list/dynamic_programming\">动态规划（入门/背包/划分/状态机/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a><br>8. <a href=\"/lc-rating/list/data_structure\">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a><br>9. <a href=\"/lc-rating/list/math\">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a><br>10. <a href=\"/lc-rating/list/greedy\">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a><br>11. <a href=\"/lc-rating/list/trees\">链表、树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA）</a><br>12. <a href=\"/lc-rating/list/string\">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a><br><a href=\"https://github.com/EndlessCheng/codeforces-go/blob/master/leetcode/SOLUTIONS.md\">我的题解精选（已分类）</a><br>欢迎关注 <a href=\"https://space.bilibili.com/206214\">B站@灵茶山艾府</a><br>如果你发现有题目可以补充进来，欢迎评论反馈。<br>", "isLeaf": false, "children": [], "problems": []}], "problems": []}]}
+{
+  "title": "【算法题单】二分算法（二分答案/最小化最大值/最大化最小值/第K小）",
+  "src": "https://leetcode.cn/circle/discuss/SqopEo/",
+  "summary": "![二分题单 二分查找 二分算法 二分入门 二分题目 力扣二分 leetcode 二分](https://pic.leetcode.cn/1711713491-SoiQWc-t2.png)\n\n> 图：闭区间二分循环结束时的左右指针位置（查找第一个 8）\n\n**刷题建议**：初次刷题可以只刷难度低于 1700 分的题目。难度更高的题目常常结合其他算法（数据结构、图论等），等学会其他算法再来刷本题单。",
+  "children": [
+    {
+      "title": "一、二分查找",
+      "src": null,
+      "summary": "讲解：[二分查找 红蓝染色法【基础算法精讲 04】](/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1AP41137w7%2F)\n\n设 nums 为递增（非递减）数组，长为 n。\n\n| **需求** | **写法** | **如果不存在** |\n| --- | --- | --- |\n| ≥x 的第一个元素的下标 | lowerBound(nums,x) | 结果为 n |\n| >x 的第一个元素的下标 | lowerBound(nums,x+1) | 结果为 n |\n| <x 的最后一个元素的下标 | lowerBound(nums,x)−1 | 结果为 −1 |\n| ≤x 的最后一个元素的下标 | lowerBound(nums,x+1)−1 | 结果为 −1 |\n\n| **需求** | **写法** |\n| --- | --- |\n| <x 的元素个数 | lowerBound(nums,x) |\n| ≤x 的元素个数 | lowerBound(nums,x+1) |\n| ≥x 的元素个数 | n−lowerBound(nums,x) |\n| >x 的元素个数 | n−lowerBound(nums,x+1) |\n\n注意 <x 和 ≥x 互为补集，二者之和为 n。≤x 和 >x 同理。",
+      "children": [
+        {
+          "title": "§1.1 基础",
+          "src": null,
+          "summary": null,
+          "problems": [
+            {
+              "id": "34",
+              "title": "在排序数组中查找元素的第一个和最后一个位置",
+              "slug": "find-first-and-last-position-of-element-in-sorted-array",
+              "src": "https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "35",
+              "title": "搜索插入位置",
+              "slug": "search-insert-position",
+              "src": "https://leetcode.cn/problems/search-insert-position/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "704",
+              "title": "二分查找",
+              "slug": "binary-search",
+              "src": "https://leetcode.cn/problems/binary-search/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "744",
+              "title": "寻找比目标字母大的最小字母",
+              "slug": "find-smallest-letter-greater-than-target",
+              "src": "https://leetcode.cn/problems/find-smallest-letter-greater-than-target/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "2529",
+              "title": "正整数和负整数的最大计数",
+              "slug": "maximum-count-of-positive-integer-and-negative-integer",
+              "src": "https://leetcode.cn/problems/maximum-count-of-positive-integer-and-negative-integer/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            }
+          ],
+          "children": []
+        },
+        {
+          "title": "§1.2 进阶",
+          "src": null,
+          "summary": "部分题目需要先排序，然后在有序数组上二分查找。",
+          "problems": [
+            {
+              "id": "2300",
+              "title": "咒语和药水的成功对数",
+              "slug": "successful-pairs-of-spells-and-potions",
+              "src": "https://leetcode.cn/problems/successful-pairs-of-spells-and-potions/",
+              "solution": null,
+              "score": 1477,
+              "isPremium": false
+            },
+            {
+              "id": "1385",
+              "title": "两个数组间的距离值",
+              "slug": "find-the-distance-value-between-two-arrays",
+              "src": "https://leetcode.cn/problems/find-the-distance-value-between-two-arrays/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "2389",
+              "title": "和有限的最长子序列",
+              "slug": "longest-subsequence-with-limited-sum",
+              "src": "https://leetcode.cn/problems/longest-subsequence-with-limited-sum/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "1170",
+              "title": "比较字符串最小字母出现频次",
+              "slug": "compare-strings-by-frequency-of-the-smallest-character",
+              "src": "https://leetcode.cn/problems/compare-strings-by-frequency-of-the-smallest-character/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "2080",
+              "title": "区间内查询数字的频率",
+              "slug": "range-frequency-queries",
+              "src": "https://leetcode.cn/problems/range-frequency-queries/",
+              "solution": null,
+              "score": 1702,
+              "isPremium": false
+            },
+            {
+              "id": "3488",
+              "title": "距离最小相等元素查询",
+              "slug": "closest-equal-element-queries",
+              "src": "https://leetcode.cn/problems/closest-equal-element-queries/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "2563",
+              "title": "统计公平数对的数目",
+              "slug": "count-the-number-of-fair-pairs",
+              "src": "https://leetcode.cn/problems/count-the-number-of-fair-pairs/",
+              "solution": null,
+              "score": 1721,
+              "isPremium": false
+            },
+            {
+              "id": "2070",
+              "title": "每一个查询的最大美丽值",
+              "slug": "most-beautiful-item-for-each-query",
+              "src": "https://leetcode.cn/problems/most-beautiful-item-for-each-query/",
+              "solution": null,
+              "score": 1724,
+              "isPremium": false
+            },
+            {
+              "id": "1146",
+              "title": "快照数组",
+              "slug": "snapshot-array",
+              "src": "https://leetcode.cn/problems/snapshot-array/",
+              "solution": null,
+              "score": 1771,
+              "isPremium": false
+            },
+            {
+              "id": "981",
+              "title": "基于时间的键值存储",
+              "slug": "time-based-key-value-store",
+              "src": "https://leetcode.cn/problems/time-based-key-value-store/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "3508",
+              "title": "设计路由器",
+              "slug": "implement-router",
+              "src": "https://leetcode.cn/problems/implement-router/",
+              "solution": null,
+              "score": 1851,
+              "isPremium": false
+            },
+            {
+              "id": "658",
+              "title": "找到 K 个最接近的元素",
+              "slug": "find-k-closest-elements",
+              "src": "https://leetcode.cn/problems/find-k-closest-elements/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "1818",
+              "title": "绝对差值和",
+              "slug": "minimum-absolute-sum-difference",
+              "src": "https://leetcode.cn/problems/minimum-absolute-sum-difference/",
+              "solution": null,
+              "score": 1934,
+              "isPremium": false
+            },
+            {
+              "id": "911",
+              "title": "在线选举",
+              "slug": "online-election",
+              "src": "https://leetcode.cn/problems/online-election/",
+              "solution": null,
+              "score": 2001,
+              "isPremium": false
+            },
+            {
+              "id": "LCP 08",
+              "title": "剧情触发时间",
+              "slug": "ju-qing-hong-fa-shi-jian",
+              "src": "https://leetcode.cn/problems/ju-qing-hong-fa-shi-jian/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "1182",
+              "title": "与目标颜色间的最短距离",
+              "slug": "shortest-distance-to-target-color",
+              "src": "https://leetcode.cn/problems/shortest-distance-to-target-color/",
+              "solution": null,
+              "score": 0,
+              "isPremium": true
+            },
+            {
+              "id": "2819",
+              "title": "购买巧克力后的最小相对损失",
+              "slug": "minimum-relative-loss-after-buying-chocolates",
+              "src": "https://leetcode.cn/problems/minimum-relative-loss-after-buying-chocolates/",
+              "solution": null,
+              "score": 0,
+              "isPremium": true
+            },
+            {
+              "id": "1287",
+              "title": "有序数组中出现次数超过 25% 的元素",
+              "slug": "element-appearing-more-than-25-in-sorted-array",
+              "src": "https://leetcode.cn/problems/element-appearing-more-than-25-in-sorted-array/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "2476",
+              "title": "二叉搜索树最近节点查询",
+              "slug": "closest-nodes-queries-in-a-binary-search-tree",
+              "src": "https://leetcode.cn/problems/closest-nodes-queries-in-a-binary-search-tree/",
+              "solution": null,
+              "score": 1597,
+              "isPremium": false
+            },
+            {
+              "id": "1150",
+              "title": "检查一个数是否在数组中占绝大多数",
+              "slug": "check-if-a-number-is-majority-element-in-a-sorted-array",
+              "src": "https://leetcode.cn/problems/check-if-a-number-is-majority-element-in-a-sorted-array/",
+              "solution": null,
+              "score": 0,
+              "isPremium": true
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "二、二分答案",
+      "src": null,
+      "summary": "> “花费一个 log 的时间，增加了一个条件。” —— 二分答案",
+      "problems": [],
+      "children": [
+        {
+          "title": "§2.1 求最小",
+          "src": null,
+          "summary": "题目求什么，就二分什么。\n\n#### 答疑\n\n**问**：如何把二分答案与数组上的二分查找联系起来？\n\n**答**：假设答案在区间 [2,5] 中，我们相当于在一个**虚拟数组** [check(2),check(3),check(4),check(5)] 中二分找第一个（或者最后一个）值为 true 的 check(x)。这同样可以用红蓝染色法思考。\n\n**问**：有些题目，明明 m 可以是答案，但却不在初始二分区间中。比如闭区间二分初始化 right=m−1（或者开区间 right=m），这不会算错吗？\n\n**答**：不会算错。注意「答案所在区间」和「二分区间」是两个概念。想一想，如果二分的 while 循环每次更新的都是 left，那么最终答案是什么？正好就是 m。一般地，如果一开始就能确定 m 一定可以满足题目要求，那么 m 是不需要在二分区间中的。换句话说，二分区间是「尚未确定是否满足题目要求」的数的范围。那些在区间外面的数，都是已确定的满足（不满足）题目要求的数。\n\n**问**：什么是循环不变量？\n\n**答**：想一想，对于求最小的题目，**开区间二分**的写法，为什么最终返回的是 right，而不是别的数？在初始化（循环之前）、循环中、循环结束后，都时时刻刻保证 `check(right) == true` 和 `check(left) == false`，这就叫**循环不变量**。根据循环不变量，循环结束时 left+1=right，那么 right 就是最小的满足要求的数（因为再 −1 就不满足要求了），所以答案是 right。\n\n**注**：部分题目可以优化二分边界，减少二分次数，从而减少代码运行时间。对于初次接触二分答案的同学，无需强求自己写出最优的代码，设定一个比较大的二分上界也是可以的。\n\n开区间二分模板（求最小）：",
+          "problems": [
+            {
+              "id": "1283",
+              "title": "使结果不超过阈值的最小除数",
+              "slug": "find-the-smallest-divisor-given-a-threshold",
+              "src": "https://leetcode.cn/problems/find-the-smallest-divisor-given-a-threshold/",
+              "solution": null,
+              "score": 1542,
+              "isPremium": false
+            },
+            {
+              "id": "2187",
+              "title": "完成旅途的最少时间",
+              "slug": "minimum-time-to-complete-trips",
+              "src": "https://leetcode.cn/problems/minimum-time-to-complete-trips/",
+              "solution": null,
+              "score": 1641,
+              "isPremium": false
+            },
+            {
+              "id": "1011",
+              "title": "在 D 天内送达包裹的能力",
+              "slug": "capacity-to-ship-packages-within-d-days",
+              "src": "https://leetcode.cn/problems/capacity-to-ship-packages-within-d-days/",
+              "solution": null,
+              "score": 1725,
+              "isPremium": false
+            },
+            {
+              "id": "875",
+              "title": "爱吃香蕉的珂珂",
+              "slug": "koko-eating-bananas",
+              "src": "https://leetcode.cn/problems/koko-eating-bananas/",
+              "solution": null,
+              "score": 1766,
+              "isPremium": false
+            },
+            {
+              "id": "3296",
+              "title": "移山所需的最少秒数",
+              "slug": "minimum-number-of-seconds-to-make-mountain-height-zero",
+              "src": "https://leetcode.cn/problems/minimum-number-of-seconds-to-make-mountain-height-zero/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "3639",
+              "title": "变为活跃状态的最小时间",
+              "slug": "minimum-time-to-activate-string",
+              "src": "https://leetcode.cn/problems/minimum-time-to-activate-string/",
+              "solution": null,
+              "score": 1853,
+              "isPremium": false
+            },
+            {
+              "id": "475",
+              "title": "供暖器",
+              "slug": "heaters",
+              "src": "https://leetcode.cn/problems/heaters/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "2594",
+              "title": "修车的最少时间",
+              "slug": "minimum-time-to-repair-cars",
+              "src": "https://leetcode.cn/problems/minimum-time-to-repair-cars/",
+              "solution": null,
+              "score": 1915,
+              "isPremium": false
+            },
+            {
+              "id": "1482",
+              "title": "制作 m 束花所需的最少天数",
+              "slug": "minimum-number-of-days-to-make-m-bouquets",
+              "src": "https://leetcode.cn/problems/minimum-number-of-days-to-make-m-bouquets/",
+              "solution": null,
+              "score": 1946,
+              "isPremium": false
+            },
+            {
+              "id": "3048",
+              "title": "标记所有下标的最早秒数 I",
+              "slug": "earliest-second-to-mark-indices-i",
+              "src": "https://leetcode.cn/problems/earliest-second-to-mark-indices-i/",
+              "solution": null,
+              "score": 2263,
+              "isPremium": false
+            },
+            {
+              "id": "2604",
+              "title": "吃掉所有谷子的最短时间",
+              "slug": "minimum-time-to-eat-all-grains",
+              "src": "https://leetcode.cn/problems/minimum-time-to-eat-all-grains/",
+              "solution": null,
+              "score": 0,
+              "isPremium": true
+            },
+            {
+              "id": "2702",
+              "title": "使数字变为非正数的最小操作次数",
+              "slug": "minimum-operations-to-make-numbers-non-positive",
+              "src": "https://leetcode.cn/problems/minimum-operations-to-make-numbers-non-positive/",
+              "solution": null,
+              "score": 0,
+              "isPremium": true
+            }
+          ],
+          "children": [
+            {
+              "title": "思维扩展",
+              "src": null,
+              "summary": null,
+              "problems": [
+                {
+                  "id": "1870",
+                  "title": "准时到达的列车最小时速",
+                  "slug": "minimum-speed-to-arrive-on-time",
+                  "src": "https://leetcode.cn/problems/minimum-speed-to-arrive-on-time/",
+                  "solution": null,
+                  "score": 1676,
+                  "isPremium": false
+                },
+                {
+                  "id": "3453",
+                  "title": "分割正方形 I",
+                  "slug": "separate-squares-i",
+                  "src": "https://leetcode.cn/problems/separate-squares-i/",
+                  "solution": null,
+                  "score": 1735,
+                  "isPremium": false
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "§2.2 求最大",
+          "src": null,
+          "summary": "[一图掌握二分答案！四种写法！](https://leetcode.cn/problems/h-index-ii/solution/tu-jie-yi-tu-zhang-wo-er-fen-da-an-si-ch-d15k/)\n\n在练习时，请注意「求最小」和「求最大」的二分写法上的区别。\n\n前面的「求最小」和二分查找求「排序数组中某元素的第一个位置」是类似的，按照红蓝染色法，左边是不满足要求的（红色），右边则是满足要求的（蓝色）。\n\n「求最大」的题目则相反，左边是满足要求的（蓝色），右边是不满足要求的（红色）。这会导致二分写法和上面的「求最小」有一些区别。\n\n以开区间二分为例：\n\n*   求最小：`check(mid) == true` 时更新 `right = mid`，反之更新 `left = mid`，最后返回 `right`。\n*   求最大：`check(mid) == true` 时更新 `left = mid`，反之更新 `right = mid`，最后返回 `left`。\n\n对于开区间写法，简单来说 `check(mid) == true` 时更新的是谁，最后就返回谁。相比其他二分写法，开区间写法不需要思考加一减一等细节，**推荐使用开区间写二分**。\n\n开区间二分模板（求最大）：",
+          "problems": [
+            {
+              "id": "275",
+              "title": "H 指数 II",
+              "slug": "h-index-ii",
+              "src": "https://leetcode.cn/problems/h-index-ii/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "2226",
+              "title": "每个小孩最多能分到多少糖果",
+              "slug": "maximum-candies-allocated-to-k-children",
+              "src": "https://leetcode.cn/problems/maximum-candies-allocated-to-k-children/",
+              "solution": null,
+              "score": 1646,
+              "isPremium": false
+            },
+            {
+              "id": "2982",
+              "title": "找出出现至少三次的最长特殊子字符串 II",
+              "slug": "find-longest-special-substring-that-occurs-thrice-ii",
+              "src": "https://leetcode.cn/problems/find-longest-special-substring-that-occurs-thrice-ii/",
+              "solution": null,
+              "score": 1773,
+              "isPremium": false
+            },
+            {
+              "id": "2576",
+              "title": "求出最多标记下标",
+              "slug": "find-the-maximum-number-of-marked-indices",
+              "src": "https://leetcode.cn/problems/find-the-maximum-number-of-marked-indices/",
+              "solution": null,
+              "score": 1843,
+              "isPremium": false
+            },
+            {
+              "id": "1898",
+              "title": "可移除字符的最大数目",
+              "slug": "maximum-number-of-removable-characters",
+              "src": "https://leetcode.cn/problems/maximum-number-of-removable-characters/",
+              "solution": null,
+              "score": 1913,
+              "isPremium": false
+            },
+            {
+              "id": "1802",
+              "title": "有界数组中指定下标处的最大值",
+              "slug": "maximum-value-at-a-given-index-in-a-bounded-array",
+              "src": "https://leetcode.cn/problems/maximum-value-at-a-given-index-in-a-bounded-array/",
+              "solution": null,
+              "score": 1929,
+              "isPremium": false
+            },
+            {
+              "id": "1642",
+              "title": "可以到达的最远建筑",
+              "slug": "furthest-building-you-can-reach",
+              "src": "https://leetcode.cn/problems/furthest-building-you-can-reach/",
+              "solution": null,
+              "score": 1962,
+              "isPremium": false
+            },
+            {
+              "id": "2861",
+              "title": "最大合金数",
+              "slug": "maximum-number-of-alloys",
+              "src": "https://leetcode.cn/problems/maximum-number-of-alloys/",
+              "solution": null,
+              "score": 1981,
+              "isPremium": false
+            },
+            {
+              "id": "3007",
+              "title": "价值和小于等于 K 的最大数字",
+              "slug": "maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k",
+              "src": "https://leetcode.cn/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/",
+              "solution": null,
+              "score": 2258,
+              "isPremium": false
+            },
+            {
+              "id": "2141",
+              "title": "同时运行 N 台电脑的最长时间",
+              "slug": "maximum-running-time-of-n-computers",
+              "src": "https://leetcode.cn/problems/maximum-running-time-of-n-computers/",
+              "solution": null,
+              "score": 2265,
+              "isPremium": false
+            },
+            {
+              "id": "2258",
+              "title": "逃离火灾",
+              "slug": "escape-the-spreading-fire",
+              "src": "https://leetcode.cn/problems/escape-the-spreading-fire/",
+              "solution": null,
+              "score": 2347,
+              "isPremium": false
+            },
+            {
+              "id": "2071",
+              "title": "你可以安排的最多任务数目",
+              "slug": "maximum-number-of-tasks-you-can-assign",
+              "src": "https://leetcode.cn/problems/maximum-number-of-tasks-you-can-assign/",
+              "solution": null,
+              "score": 2648,
+              "isPremium": false
+            },
+            {
+              "id": "LCP 78",
+              "title": "城墙防线",
+              "slug": "Nsibyl",
+              "src": "https://leetcode.cn/problems/Nsibyl/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "1618",
+              "title": "找出适应屏幕的最大字号",
+              "slug": "maximum-font-to-fit-a-sentence-in-a-screen",
+              "src": "https://leetcode.cn/problems/maximum-font-to-fit-a-sentence-in-a-screen/",
+              "solution": null,
+              "score": 0,
+              "isPremium": true
+            },
+            {
+              "id": "1891",
+              "title": "割绳子",
+              "slug": "cutting-ribbons",
+              "src": "https://leetcode.cn/problems/cutting-ribbons/",
+              "solution": null,
+              "score": 0,
+              "isPremium": true
+            },
+            {
+              "id": "2137",
+              "title": "通过倒水操作让所有的水桶所含水量相等",
+              "slug": "pour-water-between-buckets-to-make-water-levels-equal",
+              "src": "https://leetcode.cn/problems/pour-water-between-buckets-to-make-water-levels-equal/",
+              "solution": null,
+              "score": 0,
+              "isPremium": true
+            },
+            {
+              "id": "3344",
+              "title": "最大尺寸数组",
+              "slug": "maximum-sized-array",
+              "src": "https://leetcode.cn/problems/maximum-sized-array/",
+              "solution": null,
+              "score": 0,
+              "isPremium": true
+            },
+            {
+              "id": "644",
+              "title": "子数组最大平均数 II",
+              "slug": "maximum-average-subarray-ii",
+              "src": "https://leetcode.cn/problems/maximum-average-subarray-ii/",
+              "solution": null,
+              "score": 0,
+              "isPremium": true
+            }
+          ],
+          "children": []
+        },
+        {
+          "title": "§2.3 二分间接值",
+          "src": null,
+          "summary": "二分的不是答案，而是一个和答案有关的值（间接值）。",
+          "problems": [
+            {
+              "id": "3143",
+              "title": "正方形中的最多点数",
+              "slug": "maximum-points-inside-the-square",
+              "src": "https://leetcode.cn/problems/maximum-points-inside-the-square/",
+              "solution": null,
+              "score": 1697,
+              "isPremium": false
+            },
+            {
+              "id": "1648",
+              "title": "销售价值减少的颜色球",
+              "slug": "sell-diminishing-valued-colored-balls",
+              "src": "https://leetcode.cn/problems/sell-diminishing-valued-colored-balls/",
+              "solution": null,
+              "score": 2050,
+              "isPremium": false
+            }
+          ],
+          "children": []
+        },
+        {
+          "title": "§2.4 最小化最大值",
+          "src": null,
+          "summary": "本质是二分答案求最小。二分的 mid 表示上界。\n\n好比用一个盖子（上界）去压住最大值，看看能否压住（check 函数）。",
+          "problems": [
+            {
+              "id": "410",
+              "title": "分割数组的最大值",
+              "slug": "split-array-largest-sum",
+              "src": "https://leetcode.cn/problems/split-array-largest-sum/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "2064",
+              "title": "分配给商店的最多商品的最小值",
+              "slug": "minimized-maximum-of-products-distributed-to-any-store",
+              "src": "https://leetcode.cn/problems/minimized-maximum-of-products-distributed-to-any-store/",
+              "solution": null,
+              "score": 1886,
+              "isPremium": false
+            },
+            {
+              "id": "3613",
+              "title": "最小化连通分量的最大成本",
+              "slug": "minimize-maximum-component-cost",
+              "src": "https://leetcode.cn/problems/minimize-maximum-component-cost/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "1760",
+              "title": "袋子里最少数目的球",
+              "slug": "minimum-limit-of-balls-in-a-bag",
+              "src": "https://leetcode.cn/problems/minimum-limit-of-balls-in-a-bag/",
+              "solution": null,
+              "score": 1940,
+              "isPremium": false
+            },
+            {
+              "id": "1631",
+              "title": "最小体力消耗路径",
+              "slug": "path-with-minimum-effort",
+              "src": "https://leetcode.cn/problems/path-with-minimum-effort/",
+              "solution": null,
+              "score": 1948,
+              "isPremium": false
+            },
+            {
+              "id": "2439",
+              "title": "最小化数组中的最大值",
+              "slug": "minimize-maximum-of-array",
+              "src": "https://leetcode.cn/problems/minimize-maximum-of-array/",
+              "solution": null,
+              "score": 1965,
+              "isPremium": false
+            },
+            {
+              "id": "2560",
+              "title": "打家劫舍 IV",
+              "slug": "house-robber-iv",
+              "src": "https://leetcode.cn/problems/house-robber-iv/",
+              "solution": null,
+              "score": 2081,
+              "isPremium": false
+            },
+            {
+              "id": "778",
+              "title": "水位上升的泳池中游泳",
+              "slug": "swim-in-rising-water",
+              "src": "https://leetcode.cn/problems/swim-in-rising-water/",
+              "solution": null,
+              "score": 2097,
+              "isPremium": false
+            },
+            {
+              "id": "2616",
+              "title": "最小化数对的最大差值",
+              "slug": "minimize-the-maximum-difference-of-pairs",
+              "src": "https://leetcode.cn/problems/minimize-the-maximum-difference-of-pairs/",
+              "solution": null,
+              "score": 2155,
+              "isPremium": false
+            },
+            {
+              "id": "3419",
+              "title": "图的最大边权的最小值",
+              "slug": "minimize-the-maximum-edge-weight-of-graph",
+              "src": "https://leetcode.cn/problems/minimize-the-maximum-edge-weight-of-graph/",
+              "solution": null,
+              "score": 2243,
+              "isPremium": false
+            },
+            {
+              "id": "2513",
+              "title": "最小化两个数组中的最大值",
+              "slug": "minimize-the-maximum-of-two-arrays",
+              "src": "https://leetcode.cn/problems/minimize-the-maximum-of-two-arrays/",
+              "solution": null,
+              "score": 2302,
+              "isPremium": false
+            },
+            {
+              "id": "3733",
+              "title": "完成所有送货任务的最少时间",
+              "slug": "minimum-time-to-complete-all-deliveries",
+              "src": "https://leetcode.cn/problems/minimum-time-to-complete-all-deliveries/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "3399",
+              "title": "字符相同的最短子字符串 II",
+              "slug": "smallest-substring-with-identical-characters-ii",
+              "src": "https://leetcode.cn/problems/smallest-substring-with-identical-characters-ii/",
+              "solution": null,
+              "score": 2376,
+              "isPremium": false
+            },
+            {
+              "id": "3605",
+              "title": "数组的最小稳定性因子",
+              "slug": "minimum-stability-factor-of-array",
+              "src": "https://leetcode.cn/problems/minimum-stability-factor-of-array/",
+              "solution": null,
+              "score": 2410,
+              "isPremium": false
+            },
+            {
+              "id": "LCP 12",
+              "title": "小张刷题计划",
+              "slug": "xiao-zhang-shua-ti-ji-hua",
+              "src": "https://leetcode.cn/problems/xiao-zhang-shua-ti-ji-hua/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "774",
+              "title": "最小化去加油站的最大距离",
+              "slug": "minimize-max-distance-to-gas-station",
+              "src": "https://leetcode.cn/problems/minimize-max-distance-to-gas-station/",
+              "solution": null,
+              "score": 0,
+              "isPremium": true
+            }
+          ],
+          "children": []
+        },
+        {
+          "title": "§2.5 最大化最小值",
+          "src": null,
+          "summary": "本质是二分答案求最大。二分的 mid 表示下界。",
+          "problems": [
+            {
+              "id": "3281",
+              "title": "范围内整数的最大得分",
+              "slug": "maximize-score-of-numbers-in-ranges",
+              "src": "https://leetcode.cn/problems/maximize-score-of-numbers-in-ranges/",
+              "solution": null,
+              "score": 1768,
+              "isPremium": false
+            },
+            {
+              "id": "3620",
+              "title": "恢复网络路径",
+              "slug": "network-recovery-pathways",
+              "src": "https://leetcode.cn/problems/network-recovery-pathways/",
+              "solution": null,
+              "score": 1998,
+              "isPremium": false
+            },
+            {
+              "id": "2517",
+              "title": "礼盒的最大甜蜜度",
+              "slug": "maximum-tastiness-of-candy-basket",
+              "src": "https://leetcode.cn/problems/maximum-tastiness-of-candy-basket/",
+              "solution": null,
+              "score": 2021,
+              "isPremium": false
+            },
+            {
+              "id": "1552",
+              "title": "两球之间的磁力",
+              "slug": "magnetic-force-between-two-balls",
+              "src": "https://leetcode.cn/problems/magnetic-force-between-two-balls/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "3710",
+              "title": "最大划分因子",
+              "slug": "maximum-partition-factor",
+              "src": "https://leetcode.cn/problems/maximum-partition-factor/",
+              "solution": null,
+              "score": 2135,
+              "isPremium": false
+            },
+            {
+              "id": "2812",
+              "title": "找出最安全路径",
+              "slug": "find-the-safest-path-in-a-grid",
+              "src": "https://leetcode.cn/problems/find-the-safest-path-in-a-grid/",
+              "solution": null,
+              "score": 2154,
+              "isPremium": false
+            },
+            {
+              "id": "2528",
+              "title": "最大化城市的最小电量",
+              "slug": "maximize-the-minimum-powered-city",
+              "src": "https://leetcode.cn/problems/maximize-the-minimum-powered-city/",
+              "solution": null,
+              "score": 2236,
+              "isPremium": false
+            },
+            {
+              "id": "3600",
+              "title": "升级后最大生成树稳定性",
+              "slug": "maximize-spanning-tree-stability-with-upgrades",
+              "src": "https://leetcode.cn/problems/maximize-spanning-tree-stability-with-upgrades/",
+              "solution": null,
+              "score": 2301,
+              "isPremium": false
+            },
+            {
+              "id": "3449",
+              "title": "最大化游戏分数的最小值",
+              "slug": "maximize-the-minimum-game-score",
+              "src": "https://leetcode.cn/problems/maximize-the-minimum-game-score/",
+              "solution": null,
+              "score": 2748,
+              "isPremium": false
+            },
+            {
+              "id": "3464",
+              "title": "正方形上的点之间的最大距离",
+              "slug": "maximize-the-distance-between-points-on-a-square",
+              "src": "https://leetcode.cn/problems/maximize-the-distance-between-points-on-a-square/",
+              "solution": null,
+              "score": 2806,
+              "isPremium": false
+            },
+            {
+              "id": "1102",
+              "title": "得分最高的路径",
+              "slug": "path-with-maximum-minimum-value",
+              "src": "https://leetcode.cn/problems/path-with-maximum-minimum-value/",
+              "solution": null,
+              "score": 0,
+              "isPremium": true
+            },
+            {
+              "id": "1231",
+              "title": "分享巧克力",
+              "slug": "divide-chocolate",
+              "src": "https://leetcode.cn/problems/divide-chocolate/",
+              "solution": null,
+              "score": 0,
+              "isPremium": true
+            }
+          ],
+          "children": []
+        },
+        {
+          "title": "§2.6 第 K 小/大",
+          "src": null,
+          "summary": "例如数组 [1,1,1,2,2]，其中第 1 小、第 2 小和第 3 小的数都是 1，第 4 小和第 5 小的数都是 2。\n\n*   第 k 小等价于：求**最小**的 x，满足 ≤x 的数**至少**有 k 个。\n*   第 k 大等价于：求**最大**的 x，满足 ≥x 的数**至少**有 k 个。\n\n> 注 1：一般规定 k 从 1 开始，而不是像数组下标那样从 0 开始。\n> \n> 注 2：部分题目也可以用堆解决。",
+          "problems": [
+            {
+              "id": "668",
+              "title": "乘法表中第 K 小的数",
+              "slug": "kth-smallest-number-in-multiplication-table",
+              "src": "https://leetcode.cn/problems/kth-smallest-number-in-multiplication-table/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "378",
+              "title": "有序矩阵中第 K 小的元素",
+              "slug": "kth-smallest-element-in-a-sorted-matrix",
+              "src": "https://leetcode.cn/problems/kth-smallest-element-in-a-sorted-matrix/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "719",
+              "title": "找出第 K 小的数对距离",
+              "slug": "find-k-th-smallest-pair-distance",
+              "src": "https://leetcode.cn/problems/find-k-th-smallest-pair-distance/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "878",
+              "title": "第 N 个神奇数字",
+              "slug": "nth-magical-number",
+              "src": "https://leetcode.cn/problems/nth-magical-number/",
+              "solution": null,
+              "score": 1897,
+              "isPremium": false
+            },
+            {
+              "id": "1201",
+              "title": "丑数 III",
+              "slug": "ugly-number-iii",
+              "src": "https://leetcode.cn/problems/ugly-number-iii/",
+              "solution": null,
+              "score": 2039,
+              "isPremium": false
+            },
+            {
+              "id": "793",
+              "title": "阶乘函数后 K 个零",
+              "slug": "preimage-size-of-factorial-zeroes-function",
+              "src": "https://leetcode.cn/problems/preimage-size-of-factorial-zeroes-function/",
+              "solution": null,
+              "score": 2100,
+              "isPremium": false
+            },
+            {
+              "id": "373",
+              "title": "查找和最小的 K 对数字",
+              "slug": "find-k-pairs-with-smallest-sums",
+              "src": "https://leetcode.cn/problems/find-k-pairs-with-smallest-sums/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "1439",
+              "title": "有序矩阵中的第 k 个最小数组和",
+              "slug": "find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows",
+              "src": "https://leetcode.cn/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/",
+              "solution": null,
+              "score": 2134,
+              "isPremium": false
+            },
+            {
+              "id": "786",
+              "title": "第 K 个最小的质数分数",
+              "slug": "k-th-smallest-prime-fraction",
+              "src": "https://leetcode.cn/problems/k-th-smallest-prime-fraction/",
+              "solution": null,
+              "score": 2169,
+              "isPremium": false
+            },
+            {
+              "id": "3116",
+              "title": "单面值组合的第 K 小金额",
+              "slug": "kth-smallest-amount-with-single-denomination-combination",
+              "src": "https://leetcode.cn/problems/kth-smallest-amount-with-single-denomination-combination/",
+              "solution": null,
+              "score": 2387,
+              "isPremium": false
+            },
+            {
+              "id": "3134",
+              "title": "找出唯一性数组的中位数",
+              "slug": "find-the-median-of-the-uniqueness-array",
+              "src": "https://leetcode.cn/problems/find-the-median-of-the-uniqueness-array/",
+              "solution": null,
+              "score": 2451,
+              "isPremium": false
+            },
+            {
+              "id": "2040",
+              "title": "两个有序数组的第 K 小乘积",
+              "slug": "kth-smallest-product-of-two-sorted-arrays",
+              "src": "https://leetcode.cn/problems/kth-smallest-product-of-two-sorted-arrays/",
+              "solution": null,
+              "score": 2518,
+              "isPremium": false
+            },
+            {
+              "id": "2386",
+              "title": "找出数组的第 K 大和",
+              "slug": "find-the-k-sum-of-an-array",
+              "src": "https://leetcode.cn/problems/find-the-k-sum-of-an-array/",
+              "solution": null,
+              "score": 2648,
+              "isPremium": false
+            },
+            {
+              "id": "1508",
+              "title": "子数组和排序后的区间和",
+              "slug": "range-sum-of-sorted-subarray-sums",
+              "src": "https://leetcode.cn/problems/range-sum-of-sorted-subarray-sums/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "3691",
+              "title": "最大子数组总值 II",
+              "slug": "maximum-total-subarray-value-ii",
+              "src": "https://leetcode.cn/problems/maximum-total-subarray-value-ii/",
+              "solution": null,
+              "score": 0,
+              "isPremium": false
+            },
+            {
+              "id": "3520",
+              "title": "逆序对计数的最小阈值",
+              "slug": "minimum-threshold-for-inversion-pairs-count",
+              "src": "https://leetcode.cn/problems/minimum-threshold-for-inversion-pairs-count/",
+              "solution": null,
+              "score": 0,
+              "isPremium": true
+            },
+            {
+              "id": "1918",
+              "title": "第 K 小的子数组和",
+              "slug": "kth-smallest-subarray-sum",
+              "src": "https://leetcode.cn/problems/kth-smallest-subarray-sum/",
+              "solution": null,
+              "score": 0,
+              "isPremium": true
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "三、三分法",
+      "src": null,
+      "summary": null,
+      "problems": [
+        {
+          "id": "1515",
+          "title": "服务中心的最佳位置",
+          "slug": "best-position-for-a-service-centre",
+          "src": "https://leetcode.cn/problems/best-position-for-a-service-centre/",
+          "solution": null,
+          "score": 2157,
+          "isPremium": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "title": "四、其他",
+      "src": null,
+      "summary": null,
+      "problems": [
+        {
+          "id": "69",
+          "title": "x 的平方根",
+          "slug": "sqrtx",
+          "src": "https://leetcode.cn/problems/sqrtx/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "74",
+          "title": "搜索二维矩阵",
+          "slug": "search-a-2d-matrix",
+          "src": "https://leetcode.cn/problems/search-a-2d-matrix/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "278",
+          "title": "第一个错误的版本",
+          "slug": "first-bad-version",
+          "src": "https://leetcode.cn/problems/first-bad-version/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "374",
+          "title": "猜数字大小",
+          "slug": "guess-number-higher-or-lower",
+          "src": "https://leetcode.cn/problems/guess-number-higher-or-lower/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "162",
+          "title": "寻找峰值",
+          "slug": "find-peak-element",
+          "src": "https://leetcode.cn/problems/find-peak-element/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "1901",
+          "title": "寻找峰值 II",
+          "slug": "find-a-peak-element-ii",
+          "src": "https://leetcode.cn/problems/find-a-peak-element-ii/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "852",
+          "title": "山脉数组的峰顶索引",
+          "slug": "peak-index-in-a-mountain-array",
+          "src": "https://leetcode.cn/problems/peak-index-in-a-mountain-array/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "1095",
+          "title": "山脉数组中查找目标值",
+          "slug": "find-in-mountain-array",
+          "src": "https://leetcode.cn/problems/find-in-mountain-array/",
+          "solution": null,
+          "score": 1827,
+          "isPremium": false
+        },
+        {
+          "id": "153",
+          "title": "寻找旋转排序数组中的最小值",
+          "slug": "find-minimum-in-rotated-sorted-array",
+          "src": "https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "154",
+          "title": "寻找旋转排序数组中的最小值 II",
+          "slug": "find-minimum-in-rotated-sorted-array-ii",
+          "src": "https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array-ii/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "33",
+          "title": "搜索旋转排序数组",
+          "slug": "search-in-rotated-sorted-array",
+          "src": "https://leetcode.cn/problems/search-in-rotated-sorted-array/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "81",
+          "title": "搜索旋转排序数组 II",
+          "slug": "search-in-rotated-sorted-array-ii",
+          "src": "https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "222",
+          "title": "完全二叉树的节点个数",
+          "slug": "count-complete-tree-nodes",
+          "src": "https://leetcode.cn/problems/count-complete-tree-nodes/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "1539",
+          "title": "第 k 个缺失的正整数",
+          "slug": "kth-missing-positive-number",
+          "src": "https://leetcode.cn/problems/kth-missing-positive-number/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "540",
+          "title": "有序数组中的单一元素",
+          "slug": "single-element-in-a-sorted-array",
+          "src": "https://leetcode.cn/problems/single-element-in-a-sorted-array/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "4",
+          "title": "寻找两个正序数组的中位数",
+          "slug": "median-of-two-sorted-arrays",
+          "src": "https://leetcode.cn/problems/median-of-two-sorted-arrays/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "1064",
+          "title": "不动点",
+          "slug": "fixed-point",
+          "src": "https://leetcode.cn/problems/fixed-point/",
+          "solution": null,
+          "score": 0,
+          "isPremium": true
+        },
+        {
+          "id": "702",
+          "title": "搜索长度未知的有序数组",
+          "slug": "search-in-a-sorted-array-of-unknown-size",
+          "src": "https://leetcode.cn/problems/search-in-a-sorted-array-of-unknown-size/",
+          "solution": null,
+          "score": 0,
+          "isPremium": true
+        },
+        {
+          "id": "2936",
+          "title": "包含相等值数字块的数量",
+          "slug": "number-of-equal-numbers-blocks",
+          "src": "https://leetcode.cn/problems/number-of-equal-numbers-blocks/",
+          "solution": null,
+          "score": 0,
+          "isPremium": true
+        },
+        {
+          "id": "1060",
+          "title": "有序数组中的缺失元素",
+          "slug": "missing-element-in-sorted-array",
+          "src": "https://leetcode.cn/problems/missing-element-in-sorted-array/",
+          "solution": null,
+          "score": 0,
+          "isPremium": true
+        },
+        {
+          "id": "1198",
+          "title": "找出所有行中最小公共元素",
+          "slug": "find-smallest-common-element-in-all-rows",
+          "src": "https://leetcode.cn/problems/find-smallest-common-element-in-all-rows/",
+          "solution": null,
+          "score": 0,
+          "isPremium": true
+        },
+        {
+          "id": "1428",
+          "title": "至少有一个 1 的最左端列",
+          "slug": "leftmost-column-with-at-least-a-one",
+          "src": "https://leetcode.cn/problems/leftmost-column-with-at-least-a-one/",
+          "solution": null,
+          "score": 0,
+          "isPremium": true
+        },
+        {
+          "id": "1533",
+          "title": "找到最大整数的索引",
+          "slug": "find-the-index-of-the-large-integer",
+          "src": "https://leetcode.cn/problems/find-the-index-of-the-large-integer/",
+          "solution": null,
+          "score": 0,
+          "isPremium": true
+        },
+        {
+          "id": "2387",
+          "title": "行排序矩阵的中位数",
+          "slug": "median-of-a-row-wise-sorted-matrix",
+          "src": "https://leetcode.cn/problems/median-of-a-row-wise-sorted-matrix/",
+          "solution": null,
+          "score": 0,
+          "isPremium": true
+        },
+        {
+          "id": "302",
+          "title": "包含全部黑色像素的最小矩形",
+          "slug": "smallest-rectangle-enclosing-black-pixels",
+          "src": "https://leetcode.cn/problems/smallest-rectangle-enclosing-black-pixels/",
+          "solution": null,
+          "score": 0,
+          "isPremium": true
+        }
+      ],
+      "children": []
+    }
+  ]
+}

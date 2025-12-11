@@ -7,9 +7,22 @@ import {
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { StudyPlanData } from "@/types";
-import { marked } from 'marked';
+import hljs from 'highlight.js';
+import { Marked } from 'marked';
+import { markedHighlight } from "marked-highlight";
 import React, { useEffect, useRef } from "react";
 import { ProblemList } from "./ProblemList";
+
+const marked = new Marked(
+  markedHighlight({
+	emptyLangClass: 'hljs',
+    langPrefix: 'hljs language-',
+    highlight(code, lang, info) {
+      const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+      return hljs.highlight(code, { language }).value;
+    }
+  })
+);
 
 interface SectionContainerProps {
   section: StudyPlanData.Section;
@@ -34,12 +47,16 @@ const SectionContainer = React.memo(
     }, [innerHtml]);
 
     const createMarkup = (md: string) => {
-      return { __html: marked(md) };
+      return { __html: marked.parse(md) };
     };
 
     const cardClasses = cn("scroll-mt-[70px]", {
       "w-full": section.children && section.children.length > 0,
     }, section.isLeaf? "border": "", "h-fit");
+
+    const contentClasses = cn("flex flex-row flex-wrap p-1 gap-3", {
+      "rounded dark:bg-muted/30": (section.problems && section.problems.length > 0),
+    });
 
     return (
       <Card
@@ -60,7 +77,7 @@ const SectionContainer = React.memo(
           ) : null}
         </CardHeader>
         <CardContent>
-          <div className="flex flex-row flex-wrap p-1 gap-3">
+          <div className={contentClasses}>
             {section.problems && section.problems.length ? <ProblemList problems={section.problems} /> : null}
             { section.children && section.children.map((section) => (
               <SectionContainer
