@@ -5444,131 +5444,123 @@
       "title": "十三、图 DP",
       "src": null,
       "summary": "",
-      "children": [
+      "problems": [
         {
-          "title": "图 DP",
-          "src": null,
-          "summary": "",
-          "problems": [
-            {
-              "id": "3243",
-              "title": "新增道路查询后的最短距离 I",
-              "slug": "shortest-distance-after-road-addition-queries-i",
-              "src": "https://leetcode.cn/problems/shortest-distance-after-road-addition-queries-i/",
-              "solution": null,
-              "score": 1568,
-              "isPremium": false
-            },
-            {
-              "id": "787",
-              "title": "K 站中转内最便宜的航班",
-              "slug": "cheapest-flights-within-k-stops",
-              "src": "https://leetcode.cn/problems/cheapest-flights-within-k-stops/",
-              "solution": null,
-              "score": 1786,
-              "isPremium": false
-            },
-            {
-              "id": "1786",
-              "title": "从第一个节点出发到最后一个节点的受限路径数",
-              "slug": "number-of-restricted-paths-from-first-to-last-node",
-              "src": "https://leetcode.cn/problems/number-of-restricted-paths-from-first-to-last-node/",
-              "solution": null,
-              "score": 2079,
-              "isPremium": false
-            },
-            {
-              "id": "2050",
-              "title": "并行课程 III",
-              "slug": "parallel-courses-iii",
-              "src": "https://leetcode.cn/problems/parallel-courses-iii/",
-              "solution": null,
-              "score": 2084,
-              "isPremium": false
-            },
-            {
-              "id": "3620",
-              "title": "恢复网络路径",
-              "slug": "network-recovery-pathways",
-              "src": "https://leetcode.cn/problems/network-recovery-pathways/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "1976",
-              "title": "到达目的地的方案数",
-              "slug": "number-of-ways-to-arrive-at-destination",
-              "src": "https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination/",
-              "solution": null,
-              "score": 2095,
-              "isPremium": false
-            },
-            {
-              "id": "3543",
-              "title": "K 条边路径的最大边权和",
-              "slug": "maximum-weighted-k-edge-path",
-              "src": "https://leetcode.cn/problems/maximum-weighted-k-edge-path/",
-              "solution": null,
-              "score": 2110,
-              "isPremium": false
-            },
-            {
-              "id": "1857",
-              "title": "有向图中最大颜色值",
-              "slug": "largest-color-value-in-a-directed-graph",
-              "src": "https://leetcode.cn/problems/largest-color-value-in-a-directed-graph/",
-              "solution": null,
-              "score": 2313,
-              "isPremium": false
-            },
-            {
-              "id": "1928",
-              "title": "规定时间内到达终点的最小花费",
-              "slug": "minimum-cost-to-reach-destination-in-time",
-              "src": "https://leetcode.cn/problems/minimum-cost-to-reach-destination-in-time/",
-              "solution": null,
-              "score": 2413,
-              "isPremium": false
-            },
-            {
-              "id": "913",
-              "title": "猫和老鼠",
-              "slug": "cat-and-mouse",
-              "src": "https://leetcode.cn/problems/cat-and-mouse/",
-              "solution": null,
-              "score": 2800,
-              "isPremium": false
-            },
-            {
-              "id": "1728",
-              "title": "猫和老鼠 II",
-              "slug": "cat-and-mouse-ii",
-              "src": "https://leetcode.cn/problems/cat-and-mouse-ii/",
-              "solution": null,
-              "score": 2849,
-              "isPremium": false
-            },
-            {
-              "id": "LCP 07",
-              "title": "传递信息",
-              "slug": "chuan-di-xin-xi",
-              "src": "https://leetcode.cn/problems/chuan-di-xin-xi/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "1548",
-              "title": "图中最相似的路径",
-              "slug": "the-most-similar-path-in-a-graph",
-              "src": "https://leetcode.cn/problems/the-most-similar-path-in-a-graph/",
-              "solution": null,
-              "score": 0,
-              "isPremium": true
-            }
-          ],
-          "children": []
+          "id": "3243",
+          "title": "新增道路查询后的最短距离 I",
+          "slug": "shortest-distance-after-road-addition-queries-i",
+          "src": "https://leetcode.cn/problems/shortest-distance-after-road-addition-queries-i/",
+          "solution": null,
+          "score": 1568,
+          "isPremium": false
+        },
+        {
+          "id": "787",
+          "title": "K 站中转内最便宜的航班",
+          "slug": "cheapest-flights-within-k-stops",
+          "src": "https://leetcode.cn/problems/cheapest-flights-within-k-stops/",
+          "solution": null,
+          "score": 1786,
+          "isPremium": false
+        },
+        {
+          "id": "1786",
+          "title": "从第一个节点出发到最后一个节点的受限路径数",
+          "slug": "number-of-restricted-paths-from-first-to-last-node",
+          "src": "https://leetcode.cn/problems/number-of-restricted-paths-from-first-to-last-node/",
+          "solution": null,
+          "score": 2079,
+          "isPremium": false
+        },
+        {
+          "id": "2050",
+          "title": "并行课程 III",
+          "slug": "parallel-courses-iii",
+          "src": "https://leetcode.cn/problems/parallel-courses-iii/",
+          "solution": null,
+          "score": 2084,
+          "isPremium": false
+        },
+        {
+          "id": "3620",
+          "title": "恢复网络路径",
+          "slug": "network-recovery-pathways",
+          "src": "https://leetcode.cn/problems/network-recovery-pathways/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "1976",
+          "title": "到达目的地的方案数",
+          "slug": "number-of-ways-to-arrive-at-destination",
+          "src": "https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination/",
+          "solution": null,
+          "score": 2095,
+          "isPremium": false
+        },
+        {
+          "id": "3543",
+          "title": "K 条边路径的最大边权和",
+          "slug": "maximum-weighted-k-edge-path",
+          "src": "https://leetcode.cn/problems/maximum-weighted-k-edge-path/",
+          "solution": null,
+          "score": 2110,
+          "isPremium": false
+        },
+        {
+          "id": "1857",
+          "title": "有向图中最大颜色值",
+          "slug": "largest-color-value-in-a-directed-graph",
+          "src": "https://leetcode.cn/problems/largest-color-value-in-a-directed-graph/",
+          "solution": null,
+          "score": 2313,
+          "isPremium": false
+        },
+        {
+          "id": "1928",
+          "title": "规定时间内到达终点的最小花费",
+          "slug": "minimum-cost-to-reach-destination-in-time",
+          "src": "https://leetcode.cn/problems/minimum-cost-to-reach-destination-in-time/",
+          "solution": null,
+          "score": 2413,
+          "isPremium": false
+        },
+        {
+          "id": "913",
+          "title": "猫和老鼠",
+          "slug": "cat-and-mouse",
+          "src": "https://leetcode.cn/problems/cat-and-mouse/",
+          "solution": null,
+          "score": 2800,
+          "isPremium": false
+        },
+        {
+          "id": "1728",
+          "title": "猫和老鼠 II",
+          "slug": "cat-and-mouse-ii",
+          "src": "https://leetcode.cn/problems/cat-and-mouse-ii/",
+          "solution": null,
+          "score": 2849,
+          "isPremium": false
+        },
+        {
+          "id": "LCP 07",
+          "title": "传递信息",
+          "slug": "chuan-di-xin-xi",
+          "src": "https://leetcode.cn/problems/chuan-di-xin-xi/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "1548",
+          "title": "图中最相似的路径",
+          "slug": "the-most-similar-path-in-a-graph",
+          "src": "https://leetcode.cn/problems/the-most-similar-path-in-a-graph/",
+          "solution": null,
+          "score": 0,
+          "isPremium": true
         }
       ]
     },
@@ -5576,131 +5568,123 @@
       "title": "十四、博弈 DP",
       "src": null,
       "summary": "",
-      "children": [
+      "problems": [
         {
-          "title": "博弈 DP",
-          "src": null,
-          "summary": "",
-          "problems": [
-            {
-              "id": "1025",
-              "title": "除数博弈",
-              "slug": "divisor-game",
-              "src": "https://leetcode.cn/problems/divisor-game/",
-              "solution": null,
-              "score": 1435,
-              "isPremium": false
-            },
-            {
-              "id": "877",
-              "title": "石子游戏",
-              "slug": "stone-game",
-              "src": "https://leetcode.cn/problems/stone-game/",
-              "solution": null,
-              "score": 1590,
-              "isPremium": false
-            },
-            {
-              "id": "486",
-              "title": "预测赢家",
-              "slug": "predict-the-winner",
-              "src": "https://leetcode.cn/problems/predict-the-winner/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "1510",
-              "title": "石子游戏 IV",
-              "slug": "stone-game-iv",
-              "src": "https://leetcode.cn/problems/stone-game-iv/",
-              "solution": null,
-              "score": 1787,
-              "isPremium": false
-            },
-            {
-              "id": "1690",
-              "title": "石子游戏 VII",
-              "slug": "stone-game-vii",
-              "src": "https://leetcode.cn/problems/stone-game-vii/",
-              "solution": null,
-              "score": 1951,
-              "isPremium": false
-            },
-            {
-              "id": "1406",
-              "title": "石子游戏 III",
-              "slug": "stone-game-iii",
-              "src": "https://leetcode.cn/problems/stone-game-iii/",
-              "solution": null,
-              "score": 2027,
-              "isPremium": false
-            },
-            {
-              "id": "1140",
-              "title": "石子游戏 II",
-              "slug": "stone-game-ii",
-              "src": "https://leetcode.cn/problems/stone-game-ii/",
-              "solution": null,
-              "score": 2035,
-              "isPremium": false
-            },
-            {
-              "id": "1563",
-              "title": "石子游戏 V",
-              "slug": "stone-game-v",
-              "src": "https://leetcode.cn/problems/stone-game-v/",
-              "solution": null,
-              "score": 2087,
-              "isPremium": false
-            },
-            {
-              "id": "464",
-              "title": "我能赢吗",
-              "slug": "can-i-win",
-              "src": "https://leetcode.cn/problems/can-i-win/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "1872",
-              "title": "石子游戏 VIII",
-              "slug": "stone-game-viii",
-              "src": "https://leetcode.cn/problems/stone-game-viii/",
-              "solution": null,
-              "score": 2440,
-              "isPremium": false
-            },
-            {
-              "id": "913",
-              "title": "猫和老鼠",
-              "slug": "cat-and-mouse",
-              "src": "https://leetcode.cn/problems/cat-and-mouse/",
-              "solution": null,
-              "score": 2800,
-              "isPremium": false
-            },
-            {
-              "id": "1728",
-              "title": "猫和老鼠 II",
-              "slug": "cat-and-mouse-ii",
-              "src": "https://leetcode.cn/problems/cat-and-mouse-ii/",
-              "solution": null,
-              "score": 2849,
-              "isPremium": false
-            },
-            {
-              "id": "294",
-              "title": "翻转游戏 II",
-              "slug": "flip-game-ii",
-              "src": "https://leetcode.cn/problems/flip-game-ii/",
-              "solution": null,
-              "score": 0,
-              "isPremium": true
-            }
-          ],
-          "children": []
+          "id": "1025",
+          "title": "除数博弈",
+          "slug": "divisor-game",
+          "src": "https://leetcode.cn/problems/divisor-game/",
+          "solution": null,
+          "score": 1435,
+          "isPremium": false
+        },
+        {
+          "id": "877",
+          "title": "石子游戏",
+          "slug": "stone-game",
+          "src": "https://leetcode.cn/problems/stone-game/",
+          "solution": null,
+          "score": 1590,
+          "isPremium": false
+        },
+        {
+          "id": "486",
+          "title": "预测赢家",
+          "slug": "predict-the-winner",
+          "src": "https://leetcode.cn/problems/predict-the-winner/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "1510",
+          "title": "石子游戏 IV",
+          "slug": "stone-game-iv",
+          "src": "https://leetcode.cn/problems/stone-game-iv/",
+          "solution": null,
+          "score": 1787,
+          "isPremium": false
+        },
+        {
+          "id": "1690",
+          "title": "石子游戏 VII",
+          "slug": "stone-game-vii",
+          "src": "https://leetcode.cn/problems/stone-game-vii/",
+          "solution": null,
+          "score": 1951,
+          "isPremium": false
+        },
+        {
+          "id": "1406",
+          "title": "石子游戏 III",
+          "slug": "stone-game-iii",
+          "src": "https://leetcode.cn/problems/stone-game-iii/",
+          "solution": null,
+          "score": 2027,
+          "isPremium": false
+        },
+        {
+          "id": "1140",
+          "title": "石子游戏 II",
+          "slug": "stone-game-ii",
+          "src": "https://leetcode.cn/problems/stone-game-ii/",
+          "solution": null,
+          "score": 2035,
+          "isPremium": false
+        },
+        {
+          "id": "1563",
+          "title": "石子游戏 V",
+          "slug": "stone-game-v",
+          "src": "https://leetcode.cn/problems/stone-game-v/",
+          "solution": null,
+          "score": 2087,
+          "isPremium": false
+        },
+        {
+          "id": "464",
+          "title": "我能赢吗",
+          "slug": "can-i-win",
+          "src": "https://leetcode.cn/problems/can-i-win/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "1872",
+          "title": "石子游戏 VIII",
+          "slug": "stone-game-viii",
+          "src": "https://leetcode.cn/problems/stone-game-viii/",
+          "solution": null,
+          "score": 2440,
+          "isPremium": false
+        },
+        {
+          "id": "913",
+          "title": "猫和老鼠",
+          "slug": "cat-and-mouse",
+          "src": "https://leetcode.cn/problems/cat-and-mouse/",
+          "solution": null,
+          "score": 2800,
+          "isPremium": false
+        },
+        {
+          "id": "1728",
+          "title": "猫和老鼠 II",
+          "slug": "cat-and-mouse-ii",
+          "src": "https://leetcode.cn/problems/cat-and-mouse-ii/",
+          "solution": null,
+          "score": 2849,
+          "isPremium": false
+        },
+        {
+          "id": "294",
+          "title": "翻转游戏 II",
+          "slug": "flip-game-ii",
+          "src": "https://leetcode.cn/problems/flip-game-ii/",
+          "solution": null,
+          "score": 0,
+          "isPremium": true
         }
       ]
     },
@@ -5708,77 +5692,69 @@
       "title": "十五、概率/期望 DP",
       "src": null,
       "summary": "",
-      "children": [
+      "problems": [
         {
-          "title": "概率/期望 DP",
-          "src": null,
-          "summary": "",
-          "problems": [
-            {
-              "id": "688",
-              "title": "骑士在棋盘上的概率",
-              "slug": "knight-probability-in-chessboard",
-              "src": "https://leetcode.cn/problems/knight-probability-in-chessboard/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "837",
-              "title": "新 21 点",
-              "slug": "new-21-game",
-              "src": "https://leetcode.cn/problems/new-21-game/",
-              "solution": null,
-              "score": 2350,
-              "isPremium": false
-            },
-            {
-              "id": "1467",
-              "title": "两个盒子中球的颜色数相同的概率",
-              "slug": "probability-of-a-two-boxes-having-the-same-number-of-distinct-balls",
-              "src": "https://leetcode.cn/problems/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls/",
-              "solution": null,
-              "score": 2357,
-              "isPremium": false
-            },
-            {
-              "id": "808",
-              "title": "分汤",
-              "slug": "soup-servings",
-              "src": "https://leetcode.cn/problems/soup-servings/",
-              "solution": null,
-              "score": 2397,
-              "isPremium": false
-            },
-            {
-              "id": "LCR 185",
-              "title": "统计结果概率",
-              "slug": "nge-tou-zi-de-dian-shu-lcof",
-              "src": "https://leetcode.cn/problems/nge-tou-zi-de-dian-shu-lcof/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "九坤-04",
-              "title": "筹码游戏",
-              "slug": "I3Gm2h",
-              "src": "https://leetcode.cn/contest/ubiquant2022/problems/I3Gm2h/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "1230",
-              "title": "抛掷硬币",
-              "slug": "toss-strange-coins",
-              "src": "https://leetcode.cn/problems/toss-strange-coins/",
-              "solution": null,
-              "score": 0,
-              "isPremium": true
-            }
-          ],
-          "children": []
+          "id": "688",
+          "title": "骑士在棋盘上的概率",
+          "slug": "knight-probability-in-chessboard",
+          "src": "https://leetcode.cn/problems/knight-probability-in-chessboard/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "837",
+          "title": "新 21 点",
+          "slug": "new-21-game",
+          "src": "https://leetcode.cn/problems/new-21-game/",
+          "solution": null,
+          "score": 2350,
+          "isPremium": false
+        },
+        {
+          "id": "1467",
+          "title": "两个盒子中球的颜色数相同的概率",
+          "slug": "probability-of-a-two-boxes-having-the-same-number-of-distinct-balls",
+          "src": "https://leetcode.cn/problems/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls/",
+          "solution": null,
+          "score": 2357,
+          "isPremium": false
+        },
+        {
+          "id": "808",
+          "title": "分汤",
+          "slug": "soup-servings",
+          "src": "https://leetcode.cn/problems/soup-servings/",
+          "solution": null,
+          "score": 2397,
+          "isPremium": false
+        },
+        {
+          "id": "LCR 185",
+          "title": "统计结果概率",
+          "slug": "nge-tou-zi-de-dian-shu-lcof",
+          "src": "https://leetcode.cn/problems/nge-tou-zi-de-dian-shu-lcof/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "九坤-04",
+          "title": "筹码游戏",
+          "slug": "I3Gm2h",
+          "src": "https://leetcode.cn/contest/ubiquant2022/problems/I3Gm2h/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "1230",
+          "title": "抛掷硬币",
+          "slug": "toss-strange-coins",
+          "src": "https://leetcode.cn/problems/toss-strange-coins/",
+          "solution": null,
+          "score": 0,
+          "isPremium": true
         }
       ]
     },
@@ -5786,131 +5762,123 @@
       "title": "专题：输出具体方案（打印方案）",
       "src": null,
       "summary": "注意这些题目和回溯的区别，某些回溯题目要求输出**所有**方案，这里只要求输出**一个**。\n\n[讲解](https://leetcode.cn/problems/shortest-common-supersequence/solution/cong-di-gui-dao-di-tui-jiao-ni-yi-bu-bu-auy8z/)",
-      "children": [
+      "problems": [
         {
-          "title": "输出具体方案（打印方案）",
-          "src": null,
-          "summary": "注意这些题目和回溯的区别，某些回溯题目要求输出**所有**方案，这里只要求输出**一个**。\n\n[讲解](https://leetcode.cn/problems/shortest-common-supersequence/solution/cong-di-gui-dao-di-tui-jiao-ni-yi-bu-bu-auy8z/)",
-          "problems": [
-            {
-              "id": "368",
-              "title": "最大整除子集",
-              "slug": "largest-divisible-subset",
-              "src": "https://leetcode.cn/problems/largest-divisible-subset/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "1363",
-              "title": "形成三的最大倍数",
-              "slug": "largest-multiple-of-three",
-              "src": "https://leetcode.cn/problems/largest-multiple-of-three/",
-              "solution": null,
-              "score": 1823,
-              "isPremium": false
-            },
-            {
-              "id": "1449",
-              "title": "数位成本和为目标值的最大数字",
-              "slug": "form-largest-integer-with-digits-that-add-up-to-target",
-              "src": "https://leetcode.cn/problems/form-largest-integer-with-digits-that-add-up-to-target/",
-              "solution": null,
-              "score": 1927,
-              "isPremium": false
-            },
-            {
-              "id": "1092",
-              "title": "最短公共超序列",
-              "slug": "shortest-common-supersequence",
-              "src": "https://leetcode.cn/problems/shortest-common-supersequence/",
-              "solution": null,
-              "score": 1977,
-              "isPremium": false
-            },
-            {
-              "id": "943",
-              "title": "最短超级串",
-              "slug": "find-the-shortest-superstring",
-              "src": "https://leetcode.cn/problems/find-the-shortest-superstring/",
-              "solution": null,
-              "score": 2186,
-              "isPremium": false
-            },
-            {
-              "id": "1125",
-              "title": "最小的必要团队",
-              "slug": "smallest-sufficient-team",
-              "src": "https://leetcode.cn/problems/smallest-sufficient-team/",
-              "solution": null,
-              "score": 2251,
-              "isPremium": false
-            },
-            {
-              "id": "3533",
-              "title": "判断连接可整除性",
-              "slug": "concatenated-divisibility",
-              "src": "https://leetcode.cn/problems/concatenated-divisibility/",
-              "solution": null,
-              "score": 2257,
-              "isPremium": false
-            },
-            {
-              "id": "3260",
-              "title": "找出最大的 N 位 K 回文数",
-              "slug": "find-the-largest-palindrome-divisible-by-k",
-              "src": "https://leetcode.cn/problems/find-the-largest-palindrome-divisible-by-k/",
-              "solution": null,
-              "score": 2370,
-              "isPremium": false
-            },
-            {
-              "id": "3149",
-              "title": "找出分数最低的排列",
-              "slug": "find-the-minimum-cost-array-permutation",
-              "src": "https://leetcode.cn/problems/find-the-minimum-cost-array-permutation/",
-              "solution": null,
-              "score": 2642,
-              "isPremium": false
-            },
-            {
-              "id": "3441",
-              "title": "变成好标题的最少代价",
-              "slug": "minimum-cost-good-caption",
-              "src": "https://leetcode.cn/problems/minimum-cost-good-caption/",
-              "solution": null,
-              "score": 2765,
-              "isPremium": false
-            },
-            {
-              "id": "3348",
-              "title": "最小可整除数位乘积 II",
-              "slug": "smallest-divisible-digit-product-ii",
-              "src": "https://leetcode.cn/problems/smallest-divisible-digit-product-ii/",
-              "solution": null,
-              "score": 3101,
-              "isPremium": false
-            },
-            {
-              "id": "656",
-              "title": "金币路径",
-              "slug": "coin-path",
-              "src": "https://leetcode.cn/problems/coin-path/",
-              "solution": null,
-              "score": 0,
-              "isPremium": true
-            },
-            {
-              "id": "471",
-              "title": "编码最短长度的字符串",
-              "slug": "encode-string-with-shortest-length",
-              "src": "https://leetcode.cn/problems/encode-string-with-shortest-length/",
-              "solution": null,
-              "score": 0,
-              "isPremium": true
-            }
-          ],
-          "children": []
+          "id": "368",
+          "title": "最大整除子集",
+          "slug": "largest-divisible-subset",
+          "src": "https://leetcode.cn/problems/largest-divisible-subset/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "1363",
+          "title": "形成三的最大倍数",
+          "slug": "largest-multiple-of-three",
+          "src": "https://leetcode.cn/problems/largest-multiple-of-three/",
+          "solution": null,
+          "score": 1823,
+          "isPremium": false
+        },
+        {
+          "id": "1449",
+          "title": "数位成本和为目标值的最大数字",
+          "slug": "form-largest-integer-with-digits-that-add-up-to-target",
+          "src": "https://leetcode.cn/problems/form-largest-integer-with-digits-that-add-up-to-target/",
+          "solution": null,
+          "score": 1927,
+          "isPremium": false
+        },
+        {
+          "id": "1092",
+          "title": "最短公共超序列",
+          "slug": "shortest-common-supersequence",
+          "src": "https://leetcode.cn/problems/shortest-common-supersequence/",
+          "solution": null,
+          "score": 1977,
+          "isPremium": false
+        },
+        {
+          "id": "943",
+          "title": "最短超级串",
+          "slug": "find-the-shortest-superstring",
+          "src": "https://leetcode.cn/problems/find-the-shortest-superstring/",
+          "solution": null,
+          "score": 2186,
+          "isPremium": false
+        },
+        {
+          "id": "1125",
+          "title": "最小的必要团队",
+          "slug": "smallest-sufficient-team",
+          "src": "https://leetcode.cn/problems/smallest-sufficient-team/",
+          "solution": null,
+          "score": 2251,
+          "isPremium": false
+        },
+        {
+          "id": "3533",
+          "title": "判断连接可整除性",
+          "slug": "concatenated-divisibility",
+          "src": "https://leetcode.cn/problems/concatenated-divisibility/",
+          "solution": null,
+          "score": 2257,
+          "isPremium": false
+        },
+        {
+          "id": "3260",
+          "title": "找出最大的 N 位 K 回文数",
+          "slug": "find-the-largest-palindrome-divisible-by-k",
+          "src": "https://leetcode.cn/problems/find-the-largest-palindrome-divisible-by-k/",
+          "solution": null,
+          "score": 2370,
+          "isPremium": false
+        },
+        {
+          "id": "3149",
+          "title": "找出分数最低的排列",
+          "slug": "find-the-minimum-cost-array-permutation",
+          "src": "https://leetcode.cn/problems/find-the-minimum-cost-array-permutation/",
+          "solution": null,
+          "score": 2642,
+          "isPremium": false
+        },
+        {
+          "id": "3441",
+          "title": "变成好标题的最少代价",
+          "slug": "minimum-cost-good-caption",
+          "src": "https://leetcode.cn/problems/minimum-cost-good-caption/",
+          "solution": null,
+          "score": 2765,
+          "isPremium": false
+        },
+        {
+          "id": "3348",
+          "title": "最小可整除数位乘积 II",
+          "slug": "smallest-divisible-digit-product-ii",
+          "src": "https://leetcode.cn/problems/smallest-divisible-digit-product-ii/",
+          "solution": null,
+          "score": 3101,
+          "isPremium": false
+        },
+        {
+          "id": "656",
+          "title": "金币路径",
+          "slug": "coin-path",
+          "src": "https://leetcode.cn/problems/coin-path/",
+          "solution": null,
+          "score": 0,
+          "isPremium": true
+        },
+        {
+          "id": "471",
+          "title": "编码最短长度的字符串",
+          "slug": "encode-string-with-shortest-length",
+          "src": "https://leetcode.cn/problems/encode-string-with-shortest-length/",
+          "solution": null,
+          "score": 0,
+          "isPremium": true
         }
       ]
     },
@@ -5918,490 +5886,483 @@
       "title": "专题：前后缀分解",
       "src": null,
       "summary": "部分题目也可以用状态机 DP 解决。\n\n如果涉及到的只是若干元素，而不是前缀/后缀这样的一段元素，也可以用「枚举右，维护左」思考，详见数据结构题单。\n\n*   [724\\. 寻找数组的中心下标](https://leetcode.cn/problems/find-pivot-index/) 做到 O(n)\n*   [1991\\. 找到数组的中间位置](https://leetcode.cn/problems/find-the-middle-index-in-array/) 同 724 题\n*   [3707\\. 相等子字符串分数](https://leetcode.cn/problems/equal-score-substrings/) 1262\n*   [2270\\. 分割数组的方案数](https://leetcode.cn/problems/number-of-ways-to-split-array/) 1334\n*   [2256\\. 最小平均差](https://leetcode.cn/problems/minimum-average-difference/) 1395\n*   [1422\\. 分割字符串的最大得分](https://leetcode.cn/problems/maximum-score-after-splitting-a-string/) 做到 O(n)\n*   [238\\. 除自身以外数组的乘积](https://leetcode.cn/problems/product-of-array-except-self/) \n*   [1493\\. 删掉一个元素以后全为 1 的最长子数组](https://leetcode.cn/problems/longest-subarray-of-1s-after-deleting-one-element/) 1423\n*   [845\\. 数组中的最长山脉](https://leetcode.cn/problems/longest-mountain-in-array/) 1437 也可以分组循环\n*   [2012\\. 数组美丽值求和](https://leetcode.cn/problems/sum-of-beauty-in-the-array/) 1468\n*   [2909\\. 元素和最小的山形三元组 II](https://leetcode.cn/problems/minimum-sum-of-mountain-triplets-ii/) 1479\n*   [2483\\. 商店的最少代价](https://leetcode.cn/problems/minimum-penalty-for-a-shop/) 1495\n*   [1525\\. 字符串的好分割数目](https://leetcode.cn/problems/number-of-good-ways-to-split-a-string/) 1500\n*   [3583\\. 统计特殊三元组](https://leetcode.cn/problems/count-special-triplets/) 1510\n*   [3354\\. 使数组元素等于零](https://leetcode.cn/problems/make-array-elements-equal-to-zero/) 做到 O(n)\n*   [1930\\. 长度为 3 的不同回文子序列](https://leetcode.cn/problems/unique-length-3-palindromic-subsequences/) 1533\n*   [2874\\. 有序三元组中的最大值 II](https://leetcode.cn/problems/maximum-value-of-an-ordered-triplet-ii/) 1583\n*   [1664\\. 生成平衡数组的方案数](https://leetcode.cn/problems/ways-to-make-a-fair-array/) 1590\n*   [123\\. 买卖股票的最佳时机 III](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/) 拆分成两个 121 题\n*   [3698\\. 分割数组得到最小绝对差](https://leetcode.cn/problems/split-array-with-minimum-difference/) 1649\n*   [3598\\. 相邻字符串之间的最长公共前缀](https://leetcode.cn/problems/longest-common-prefix-between-adjacent-strings-after-removals/) 1655\n*   [2222\\. 选择建筑的方案数](https://leetcode.cn/problems/number-of-ways-to-select-buildings/) 1657\n*   [1031\\. 两个无重叠子数组的最大和](https://leetcode.cn/problems/maximum-sum-of-two-non-overlapping-subarrays/) 1680\n*   [689\\. 三个无重叠子数组的最大和](https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays/) \n*   [2420\\. 找到所有好下标](https://leetcode.cn/problems/find-all-good-indices/) 1695\n*   [2100\\. 适合野炊的日子](https://leetcode.cn/problems/find-good-days-to-rob-the-bank/) 1702\n*   [926\\. 将字符串翻转到单调递增](https://leetcode.cn/problems/flip-string-to-monotone-increasing/) \n*   [334\\. 递增的三元子序列](https://leetcode.cn/problems/increasing-triplet-subsequence/) \n*   [1653\\. 使字符串平衡的最少删除次数](https://leetcode.cn/problems/minimum-deletions-to-make-string-balanced/) 1794\n*   [1186\\. 删除一次得到子数组最大和](https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/) 1799\n*   [3738\\. 替换至多一个元素后最长非递减子数组](https://leetcode.cn/problems/longest-non-decreasing-subarray-after-replacing-at-most-one-element/) 1811\n*   [42\\. 接雨水](https://leetcode.cn/problems/trapping-rain-water/)（[讲解](/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1Qg411q7ia%2F%3Ft%3D3m05s)）\n*   [2711\\. 对角线上不同值的数量差](https://leetcode.cn/problems/difference-of-number-of-distinct-values-on-diagonals/) 做到 O(mn)\n*   [1477\\. 找两个和为目标值且不重叠的子数组](https://leetcode.cn/problems/find-two-non-overlapping-sub-arrays-each-with-target-sum/) 1851\n*   [2680\\. 最大或值](https://leetcode.cn/problems/maximum-or/) 1912\n*   [1671\\. 得到山形数组的最少删除次数](https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array/) 1913\n*   [2906\\. 构造乘积矩阵](https://leetcode.cn/problems/construct-product-matrix/) 2075\n*   [3334\\. 数组的最大因子得分](https://leetcode.cn/problems/find-the-maximum-factor-score-of-array/) 非暴力做法\n*   [2167\\. 移除所有载有违禁货物车厢所需的最少时间](https://leetcode.cn/problems/minimum-time-to-remove-all-cars-containing-illegal-goods/) 2219\n*   [2484\\. 统计回文子序列数目](https://leetcode.cn/problems/count-palindromic-subsequences/) 2223\n*   [2163\\. 删除元素后和的最小差值](https://leetcode.cn/problems/minimum-difference-in-sums-after-removal-of-elements/) 2225\n*   [2565\\. 最少得分子序列](https://leetcode.cn/problems/subsequence-with-the-minimum-score/) 2432\n*   [1995\\. 统计特殊四元组](https://leetcode.cn/problems/count-special-quadruplets/) 四个数\n*   [2552\\. 统计上升四元组](https://leetcode.cn/problems/count-increasing-quadruplets/) 2433 四个数\n*   [3302\\. 字典序最小的合法序列](https://leetcode.cn/problems/find-the-lexicographically-smallest-valid-sequence/) 2474 第 2565 题的进阶版本\n*   [3404\\. 统计特殊子序列的数目](https://leetcode.cn/problems/count-special-subsequences/) 2445 四个数\n*   [3303\\. 第一个几乎相等子字符串的下标](https://leetcode.cn/problems/find-the-occurrence-of-first-almost-equal-substring/) 2509\n*   [3287\\. 求出数组中最大序列值](https://leetcode.cn/problems/find-the-maximum-sequence-value-of-array/) 2545\n*   [3257\\. 放三个车的价值之和最大 II](https://leetcode.cn/problems/maximum-value-sum-by-placing-three-rooks-ii/) 2553\n*   [3410\\. 删除所有值为某个元素后的最大子数组和](https://leetcode.cn/problems/maximize-subarray-sum-after-removing-all-occurrences-of-one-element/) 2844\n*   [3003\\. 执行操作后的最大分割数量](https://leetcode.cn/problems/maximize-the-number-of-partitions-after-operations/) 3039\n*   [487\\. 最大连续 1 的个数 II](https://leetcode.cn/problems/max-consecutive-ones-ii/)（会员题）\n*   [1746\\. 经过一次操作后的最大子数组和](https://leetcode.cn/problems/maximum-subarray-sum-after-one-operation/)（会员题）\n\n补充题目：\n\n*   输入一个长为 n 的 prices 数组，你需要返回一个长为 n 的 answer 数组，其中 answer[i] 表示删除 prices[i]，也就是禁止在第 i 天买卖股票，在此约束下 [121\\. 买卖股票的最佳时机](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/) 的答案。",
-      "children": [
+      "problems": [
         {
-          "title": "前后缀分解",
-          "src": null,
-          "summary": "部分题目也可以用状态机 DP 解决。\n\n如果涉及到的只是若干元素，而不是前缀/后缀这样的一段元素，也可以用「枚举右，维护左」思考，详见数据结构题单。",
-          "problems": [
-            {
-              "id": "724",
-              "title": "寻找数组的中心下标",
-              "slug": "find-pivot-index",
-              "src": "https://leetcode.cn/problems/find-pivot-index/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "1991",
-              "title": "找到数组的中间位置",
-              "slug": "find-the-middle-index-in-array",
-              "src": "https://leetcode.cn/problems/find-the-middle-index-in-array/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "3707",
-              "title": "相等子字符串分数",
-              "slug": "equal-score-substrings",
-              "src": "https://leetcode.cn/problems/equal-score-substrings/",
-              "solution": null,
-              "score": 1262,
-              "isPremium": false
-            },
-            {
-              "id": "2270",
-              "title": "分割数组的方案数",
-              "slug": "number-of-ways-to-split-array",
-              "src": "https://leetcode.cn/problems/number-of-ways-to-split-array/",
-              "solution": null,
-              "score": 1334,
-              "isPremium": false
-            },
-            {
-              "id": "2256",
-              "title": "最小平均差",
-              "slug": "minimum-average-difference",
-              "src": "https://leetcode.cn/problems/minimum-average-difference/",
-              "solution": null,
-              "score": 1395,
-              "isPremium": false
-            },
-            {
-              "id": "1422",
-              "title": "分割字符串的最大得分",
-              "slug": "maximum-score-after-splitting-a-string",
-              "src": "https://leetcode.cn/problems/maximum-score-after-splitting-a-string/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "238",
-              "title": "除自身以外数组的乘积",
-              "slug": "product-of-array-except-self",
-              "src": "https://leetcode.cn/problems/product-of-array-except-self/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "1493",
-              "title": "删掉一个元素以后全为 1 的最长子数组",
-              "slug": "longest-subarray-of-1s-after-deleting-one-element",
-              "src": "https://leetcode.cn/problems/longest-subarray-of-1s-after-deleting-one-element/",
-              "solution": null,
-              "score": 1423,
-              "isPremium": false
-            },
-            {
-              "id": "845",
-              "title": "数组中的最长山脉",
-              "slug": "longest-mountain-in-array",
-              "src": "https://leetcode.cn/problems/longest-mountain-in-array/",
-              "solution": null,
-              "score": 1437,
-              "isPremium": false
-            },
-            {
-              "id": "2012",
-              "title": "数组美丽值求和",
-              "slug": "sum-of-beauty-in-the-array",
-              "src": "https://leetcode.cn/problems/sum-of-beauty-in-the-array/",
-              "solution": null,
-              "score": 1468,
-              "isPremium": false
-            },
-            {
-              "id": "2909",
-              "title": "元素和最小的山形三元组 II",
-              "slug": "minimum-sum-of-mountain-triplets-ii",
-              "src": "https://leetcode.cn/problems/minimum-sum-of-mountain-triplets-ii/",
-              "solution": null,
-              "score": 1479,
-              "isPremium": false
-            },
-            {
-              "id": "2483",
-              "title": "商店的最少代价",
-              "slug": "minimum-penalty-for-a-shop",
-              "src": "https://leetcode.cn/problems/minimum-penalty-for-a-shop/",
-              "solution": null,
-              "score": 1495,
-              "isPremium": false
-            },
-            {
-              "id": "1525",
-              "title": "字符串的好分割数目",
-              "slug": "number-of-good-ways-to-split-a-string",
-              "src": "https://leetcode.cn/problems/number-of-good-ways-to-split-a-string/",
-              "solution": null,
-              "score": 1500,
-              "isPremium": false
-            },
-            {
-              "id": "3583",
-              "title": "统计特殊三元组",
-              "slug": "count-special-triplets",
-              "src": "https://leetcode.cn/problems/count-special-triplets/",
-              "solution": null,
-              "score": 1510,
-              "isPremium": false
-            },
-            {
-              "id": "3354",
-              "title": "使数组元素等于零",
-              "slug": "make-array-elements-equal-to-zero",
-              "src": "https://leetcode.cn/problems/make-array-elements-equal-to-zero/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "1930",
-              "title": "长度为 3 的不同回文子序列",
-              "slug": "unique-length-3-palindromic-subsequences",
-              "src": "https://leetcode.cn/problems/unique-length-3-palindromic-subsequences/",
-              "solution": null,
-              "score": 1533,
-              "isPremium": false
-            },
-            {
-              "id": "2874",
-              "title": "有序三元组中的最大值 II",
-              "slug": "maximum-value-of-an-ordered-triplet-ii",
-              "src": "https://leetcode.cn/problems/maximum-value-of-an-ordered-triplet-ii/",
-              "solution": null,
-              "score": 1583,
-              "isPremium": false
-            },
-            {
-              "id": "1664",
-              "title": "生成平衡数组的方案数",
-              "slug": "ways-to-make-a-fair-array",
-              "src": "https://leetcode.cn/problems/ways-to-make-a-fair-array/",
-              "solution": null,
-              "score": 1590,
-              "isPremium": false
-            },
-            {
-              "id": "123",
-              "title": "买卖股票的最佳时机 III",
-              "slug": "best-time-to-buy-and-sell-stock-iii",
-              "src": "https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "3698",
-              "title": "分割数组得到最小绝对差",
-              "slug": "split-array-with-minimum-difference",
-              "src": "https://leetcode.cn/problems/split-array-with-minimum-difference/",
-              "solution": null,
-              "score": 1649,
-              "isPremium": false
-            },
-            {
-              "id": "3598",
-              "title": "相邻字符串之间的最长公共前缀",
-              "slug": "longest-common-prefix-between-adjacent-strings-after-removals",
-              "src": "https://leetcode.cn/problems/longest-common-prefix-between-adjacent-strings-after-removals/",
-              "solution": null,
-              "score": 1655,
-              "isPremium": false
-            },
-            {
-              "id": "2222",
-              "title": "选择建筑的方案数",
-              "slug": "number-of-ways-to-select-buildings",
-              "src": "https://leetcode.cn/problems/number-of-ways-to-select-buildings/",
-              "solution": null,
-              "score": 1657,
-              "isPremium": false
-            },
-            {
-              "id": "1031",
-              "title": "两个无重叠子数组的最大和",
-              "slug": "maximum-sum-of-two-non-overlapping-subarrays",
-              "src": "https://leetcode.cn/problems/maximum-sum-of-two-non-overlapping-subarrays/",
-              "solution": null,
-              "score": 1680,
-              "isPremium": false
-            },
-            {
-              "id": "689",
-              "title": "三个无重叠子数组的最大和",
-              "slug": "maximum-sum-of-3-non-overlapping-subarrays",
-              "src": "https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "2420",
-              "title": "找到所有好下标",
-              "slug": "find-all-good-indices",
-              "src": "https://leetcode.cn/problems/find-all-good-indices/",
-              "solution": null,
-              "score": 1695,
-              "isPremium": false
-            },
-            {
-              "id": "2100",
-              "title": "适合野炊的日子",
-              "slug": "find-good-days-to-rob-the-bank",
-              "src": "https://leetcode.cn/problems/find-good-days-to-rob-the-bank/",
-              "solution": null,
-              "score": 1702,
-              "isPremium": false
-            },
-            {
-              "id": "926",
-              "title": "将字符串翻转到单调递增",
-              "slug": "flip-string-to-monotone-increasing",
-              "src": "https://leetcode.cn/problems/flip-string-to-monotone-increasing/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "334",
-              "title": "递增的三元子序列",
-              "slug": "increasing-triplet-subsequence",
-              "src": "https://leetcode.cn/problems/increasing-triplet-subsequence/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "1653",
-              "title": "使字符串平衡的最少删除次数",
-              "slug": "minimum-deletions-to-make-string-balanced",
-              "src": "https://leetcode.cn/problems/minimum-deletions-to-make-string-balanced/",
-              "solution": null,
-              "score": 1794,
-              "isPremium": false
-            },
-            {
-              "id": "1186",
-              "title": "删除一次得到子数组最大和",
-              "slug": "maximum-subarray-sum-with-one-deletion",
-              "src": "https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/",
-              "solution": null,
-              "score": 1799,
-              "isPremium": false
-            },
-            {
-              "id": "3738",
-              "title": "替换至多一个元素后最长非递减子数组",
-              "slug": "longest-non-decreasing-subarray-after-replacing-at-most-one-element",
-              "src": "https://leetcode.cn/problems/longest-non-decreasing-subarray-after-replacing-at-most-one-element/",
-              "solution": null,
-              "score": 1811,
-              "isPremium": false
-            },
-            {
-              "id": "42",
-              "title": "接雨水",
-              "slug": "trapping-rain-water",
-              "src": "https://leetcode.cn/problems/trapping-rain-water/",
-              "solution": "https://leetcode.cn/problems/trapping-rain-water/solutions/3045828/jiao-ni-yi-bu-bu-si-kao-dpcong-ji-yi-hua-zfb2/",
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "2711",
-              "title": "对角线上不同值的数量差",
-              "slug": "difference-of-number-of-distinct-values-on-diagonals",
-              "src": "https://leetcode.cn/problems/difference-of-number-of-distinct-values-on-diagonals/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "1477",
-              "title": "找两个和为目标值且不重叠的子数组",
-              "slug": "find-two-non-overlapping-sub-arrays-each-with-target-sum",
-              "src": "https://leetcode.cn/problems/find-two-non-overlapping-sub-arrays-each-with-target-sum/",
-              "solution": null,
-              "score": 1851,
-              "isPremium": false
-            },
-            {
-              "id": "2680",
-              "title": "最大或值",
-              "slug": "maximum-or",
-              "src": "https://leetcode.cn/problems/maximum-or/",
-              "solution": null,
-              "score": 1912,
-              "isPremium": false
-            },
-            {
-              "id": "1671",
-              "title": "得到山形数组的最少删除次数",
-              "slug": "minimum-number-of-removals-to-make-mountain-array",
-              "src": "https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array/",
-              "solution": null,
-              "score": 1913,
-              "isPremium": false
-            },
-            {
-              "id": "2906",
-              "title": "构造乘积矩阵",
-              "slug": "construct-product-matrix",
-              "src": "https://leetcode.cn/problems/construct-product-matrix/",
-              "solution": null,
-              "score": 2075,
-              "isPremium": false
-            },
-            {
-              "id": "3334",
-              "title": "数组的最大因子得分",
-              "slug": "find-the-maximum-factor-score-of-array",
-              "src": "https://leetcode.cn/problems/find-the-maximum-factor-score-of-array/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "2167",
-              "title": "移除所有载有违禁货物车厢所需的最少时间",
-              "slug": "minimum-time-to-remove-all-cars-containing-illegal-goods",
-              "src": "https://leetcode.cn/problems/minimum-time-to-remove-all-cars-containing-illegal-goods/",
-              "solution": null,
-              "score": 2219,
-              "isPremium": false
-            },
-            {
-              "id": "2484",
-              "title": "统计回文子序列数目",
-              "slug": "count-palindromic-subsequences",
-              "src": "https://leetcode.cn/problems/count-palindromic-subsequences/",
-              "solution": null,
-              "score": 2223,
-              "isPremium": false
-            },
-            {
-              "id": "2163",
-              "title": "删除元素后和的最小差值",
-              "slug": "minimum-difference-in-sums-after-removal-of-elements",
-              "src": "https://leetcode.cn/problems/minimum-difference-in-sums-after-removal-of-elements/",
-              "solution": null,
-              "score": 2225,
-              "isPremium": false
-            },
-            {
-              "id": "2565",
-              "title": "最少得分子序列",
-              "slug": "subsequence-with-the-minimum-score",
-              "src": "https://leetcode.cn/problems/subsequence-with-the-minimum-score/",
-              "solution": null,
-              "score": 2432,
-              "isPremium": false
-            },
-            {
-              "id": "1995",
-              "title": "统计特殊四元组",
-              "slug": "count-special-quadruplets",
-              "src": "https://leetcode.cn/problems/count-special-quadruplets/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "2552",
-              "title": "统计上升四元组",
-              "slug": "count-increasing-quadruplets",
-              "src": "https://leetcode.cn/problems/count-increasing-quadruplets/",
-              "solution": null,
-              "score": 2433,
-              "isPremium": false
-            },
-            {
-              "id": "3302",
-              "title": "字典序最小的合法序列",
-              "slug": "find-the-lexicographically-smallest-valid-sequence",
-              "src": "https://leetcode.cn/problems/find-the-lexicographically-smallest-valid-sequence/",
-              "solution": null,
-              "score": 2474,
-              "isPremium": false
-            },
-            {
-              "id": "3404",
-              "title": "统计特殊子序列的数目",
-              "slug": "count-special-subsequences",
-              "src": "https://leetcode.cn/problems/count-special-subsequences/",
-              "solution": null,
-              "score": 2445,
-              "isPremium": false
-            },
-            {
-              "id": "3303",
-              "title": "第一个几乎相等子字符串的下标",
-              "slug": "find-the-occurrence-of-first-almost-equal-substring",
-              "src": "https://leetcode.cn/problems/find-the-occurrence-of-first-almost-equal-substring/",
-              "solution": null,
-              "score": 2509,
-              "isPremium": false
-            },
-            {
-              "id": "3287",
-              "title": "求出数组中最大序列值",
-              "slug": "find-the-maximum-sequence-value-of-array",
-              "src": "https://leetcode.cn/problems/find-the-maximum-sequence-value-of-array/",
-              "solution": null,
-              "score": 2545,
-              "isPremium": false
-            },
-            {
-              "id": "3257",
-              "title": "放三个车的价值之和最大 II",
-              "slug": "maximum-value-sum-by-placing-three-rooks-ii",
-              "src": "https://leetcode.cn/problems/maximum-value-sum-by-placing-three-rooks-ii/",
-              "solution": null,
-              "score": 2553,
-              "isPremium": false
-            },
-            {
-              "id": "3410",
-              "title": "删除所有值为某个元素后的最大子数组和",
-              "slug": "maximize-subarray-sum-after-removing-all-occurrences-of-one-element",
-              "src": "https://leetcode.cn/problems/maximize-subarray-sum-after-removing-all-occurrences-of-one-element/",
-              "solution": null,
-              "score": 2844,
-              "isPremium": false
-            },
-            {
-              "id": "3003",
-              "title": "执行操作后的最大分割数量",
-              "slug": "maximize-the-number-of-partitions-after-operations",
-              "src": "https://leetcode.cn/problems/maximize-the-number-of-partitions-after-operations/",
-              "solution": null,
-              "score": 3039,
-              "isPremium": false
-            },
-            {
-              "id": "487",
-              "title": "最大连续 1 的个数 II",
-              "slug": "max-consecutive-ones-ii",
-              "src": "https://leetcode.cn/problems/max-consecutive-ones-ii/",
-              "solution": null,
-              "score": 0,
-              "isPremium": true
-            },
-            {
-              "id": "1746",
-              "title": "经过一次操作后的最大子数组和",
-              "slug": "maximum-subarray-sum-after-one-operation",
-              "src": "https://leetcode.cn/problems/maximum-subarray-sum-after-one-operation/",
-              "solution": null,
-              "score": 0,
-              "isPremium": true
-            }
-          ]
+          "id": "724",
+          "title": "寻找数组的中心下标",
+          "slug": "find-pivot-index",
+          "src": "https://leetcode.cn/problems/find-pivot-index/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "1991",
+          "title": "找到数组的中间位置",
+          "slug": "find-the-middle-index-in-array",
+          "src": "https://leetcode.cn/problems/find-the-middle-index-in-array/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "3707",
+          "title": "相等子字符串分数",
+          "slug": "equal-score-substrings",
+          "src": "https://leetcode.cn/problems/equal-score-substrings/",
+          "solution": null,
+          "score": 1262,
+          "isPremium": false
+        },
+        {
+          "id": "2270",
+          "title": "分割数组的方案数",
+          "slug": "number-of-ways-to-split-array",
+          "src": "https://leetcode.cn/problems/number-of-ways-to-split-array/",
+          "solution": null,
+          "score": 1334,
+          "isPremium": false
+        },
+        {
+          "id": "2256",
+          "title": "最小平均差",
+          "slug": "minimum-average-difference",
+          "src": "https://leetcode.cn/problems/minimum-average-difference/",
+          "solution": null,
+          "score": 1395,
+          "isPremium": false
+        },
+        {
+          "id": "1422",
+          "title": "分割字符串的最大得分",
+          "slug": "maximum-score-after-splitting-a-string",
+          "src": "https://leetcode.cn/problems/maximum-score-after-splitting-a-string/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "238",
+          "title": "除自身以外数组的乘积",
+          "slug": "product-of-array-except-self",
+          "src": "https://leetcode.cn/problems/product-of-array-except-self/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "1493",
+          "title": "删掉一个元素以后全为 1 的最长子数组",
+          "slug": "longest-subarray-of-1s-after-deleting-one-element",
+          "src": "https://leetcode.cn/problems/longest-subarray-of-1s-after-deleting-one-element/",
+          "solution": null,
+          "score": 1423,
+          "isPremium": false
+        },
+        {
+          "id": "845",
+          "title": "数组中的最长山脉",
+          "slug": "longest-mountain-in-array",
+          "src": "https://leetcode.cn/problems/longest-mountain-in-array/",
+          "solution": null,
+          "score": 1437,
+          "isPremium": false
+        },
+        {
+          "id": "2012",
+          "title": "数组美丽值求和",
+          "slug": "sum-of-beauty-in-the-array",
+          "src": "https://leetcode.cn/problems/sum-of-beauty-in-the-array/",
+          "solution": null,
+          "score": 1468,
+          "isPremium": false
+        },
+        {
+          "id": "2909",
+          "title": "元素和最小的山形三元组 II",
+          "slug": "minimum-sum-of-mountain-triplets-ii",
+          "src": "https://leetcode.cn/problems/minimum-sum-of-mountain-triplets-ii/",
+          "solution": null,
+          "score": 1479,
+          "isPremium": false
+        },
+        {
+          "id": "2483",
+          "title": "商店的最少代价",
+          "slug": "minimum-penalty-for-a-shop",
+          "src": "https://leetcode.cn/problems/minimum-penalty-for-a-shop/",
+          "solution": null,
+          "score": 1495,
+          "isPremium": false
+        },
+        {
+          "id": "1525",
+          "title": "字符串的好分割数目",
+          "slug": "number-of-good-ways-to-split-a-string",
+          "src": "https://leetcode.cn/problems/number-of-good-ways-to-split-a-string/",
+          "solution": null,
+          "score": 1500,
+          "isPremium": false
+        },
+        {
+          "id": "3583",
+          "title": "统计特殊三元组",
+          "slug": "count-special-triplets",
+          "src": "https://leetcode.cn/problems/count-special-triplets/",
+          "solution": null,
+          "score": 1510,
+          "isPremium": false
+        },
+        {
+          "id": "3354",
+          "title": "使数组元素等于零",
+          "slug": "make-array-elements-equal-to-zero",
+          "src": "https://leetcode.cn/problems/make-array-elements-equal-to-zero/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "1930",
+          "title": "长度为 3 的不同回文子序列",
+          "slug": "unique-length-3-palindromic-subsequences",
+          "src": "https://leetcode.cn/problems/unique-length-3-palindromic-subsequences/",
+          "solution": null,
+          "score": 1533,
+          "isPremium": false
+        },
+        {
+          "id": "2874",
+          "title": "有序三元组中的最大值 II",
+          "slug": "maximum-value-of-an-ordered-triplet-ii",
+          "src": "https://leetcode.cn/problems/maximum-value-of-an-ordered-triplet-ii/",
+          "solution": null,
+          "score": 1583,
+          "isPremium": false
+        },
+        {
+          "id": "1664",
+          "title": "生成平衡数组的方案数",
+          "slug": "ways-to-make-a-fair-array",
+          "src": "https://leetcode.cn/problems/ways-to-make-a-fair-array/",
+          "solution": null,
+          "score": 1590,
+          "isPremium": false
+        },
+        {
+          "id": "123",
+          "title": "买卖股票的最佳时机 III",
+          "slug": "best-time-to-buy-and-sell-stock-iii",
+          "src": "https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "3698",
+          "title": "分割数组得到最小绝对差",
+          "slug": "split-array-with-minimum-difference",
+          "src": "https://leetcode.cn/problems/split-array-with-minimum-difference/",
+          "solution": null,
+          "score": 1649,
+          "isPremium": false
+        },
+        {
+          "id": "3598",
+          "title": "相邻字符串之间的最长公共前缀",
+          "slug": "longest-common-prefix-between-adjacent-strings-after-removals",
+          "src": "https://leetcode.cn/problems/longest-common-prefix-between-adjacent-strings-after-removals/",
+          "solution": null,
+          "score": 1655,
+          "isPremium": false
+        },
+        {
+          "id": "2222",
+          "title": "选择建筑的方案数",
+          "slug": "number-of-ways-to-select-buildings",
+          "src": "https://leetcode.cn/problems/number-of-ways-to-select-buildings/",
+          "solution": null,
+          "score": 1657,
+          "isPremium": false
+        },
+        {
+          "id": "1031",
+          "title": "两个无重叠子数组的最大和",
+          "slug": "maximum-sum-of-two-non-overlapping-subarrays",
+          "src": "https://leetcode.cn/problems/maximum-sum-of-two-non-overlapping-subarrays/",
+          "solution": null,
+          "score": 1680,
+          "isPremium": false
+        },
+        {
+          "id": "689",
+          "title": "三个无重叠子数组的最大和",
+          "slug": "maximum-sum-of-3-non-overlapping-subarrays",
+          "src": "https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "2420",
+          "title": "找到所有好下标",
+          "slug": "find-all-good-indices",
+          "src": "https://leetcode.cn/problems/find-all-good-indices/",
+          "solution": null,
+          "score": 1695,
+          "isPremium": false
+        },
+        {
+          "id": "2100",
+          "title": "适合野炊的日子",
+          "slug": "find-good-days-to-rob-the-bank",
+          "src": "https://leetcode.cn/problems/find-good-days-to-rob-the-bank/",
+          "solution": null,
+          "score": 1702,
+          "isPremium": false
+        },
+        {
+          "id": "926",
+          "title": "将字符串翻转到单调递增",
+          "slug": "flip-string-to-monotone-increasing",
+          "src": "https://leetcode.cn/problems/flip-string-to-monotone-increasing/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "334",
+          "title": "递增的三元子序列",
+          "slug": "increasing-triplet-subsequence",
+          "src": "https://leetcode.cn/problems/increasing-triplet-subsequence/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "1653",
+          "title": "使字符串平衡的最少删除次数",
+          "slug": "minimum-deletions-to-make-string-balanced",
+          "src": "https://leetcode.cn/problems/minimum-deletions-to-make-string-balanced/",
+          "solution": null,
+          "score": 1794,
+          "isPremium": false
+        },
+        {
+          "id": "1186",
+          "title": "删除一次得到子数组最大和",
+          "slug": "maximum-subarray-sum-with-one-deletion",
+          "src": "https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/",
+          "solution": null,
+          "score": 1799,
+          "isPremium": false
+        },
+        {
+          "id": "3738",
+          "title": "替换至多一个元素后最长非递减子数组",
+          "slug": "longest-non-decreasing-subarray-after-replacing-at-most-one-element",
+          "src": "https://leetcode.cn/problems/longest-non-decreasing-subarray-after-replacing-at-most-one-element/",
+          "solution": null,
+          "score": 1811,
+          "isPremium": false
+        },
+        {
+          "id": "42",
+          "title": "接雨水",
+          "slug": "trapping-rain-water",
+          "src": "https://leetcode.cn/problems/trapping-rain-water/",
+          "solution": "https://leetcode.cn/problems/trapping-rain-water/solutions/3045828/jiao-ni-yi-bu-bu-si-kao-dpcong-ji-yi-hua-zfb2/",
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "2711",
+          "title": "对角线上不同值的数量差",
+          "slug": "difference-of-number-of-distinct-values-on-diagonals",
+          "src": "https://leetcode.cn/problems/difference-of-number-of-distinct-values-on-diagonals/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "1477",
+          "title": "找两个和为目标值且不重叠的子数组",
+          "slug": "find-two-non-overlapping-sub-arrays-each-with-target-sum",
+          "src": "https://leetcode.cn/problems/find-two-non-overlapping-sub-arrays-each-with-target-sum/",
+          "solution": null,
+          "score": 1851,
+          "isPremium": false
+        },
+        {
+          "id": "2680",
+          "title": "最大或值",
+          "slug": "maximum-or",
+          "src": "https://leetcode.cn/problems/maximum-or/",
+          "solution": null,
+          "score": 1912,
+          "isPremium": false
+        },
+        {
+          "id": "1671",
+          "title": "得到山形数组的最少删除次数",
+          "slug": "minimum-number-of-removals-to-make-mountain-array",
+          "src": "https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array/",
+          "solution": null,
+          "score": 1913,
+          "isPremium": false
+        },
+        {
+          "id": "2906",
+          "title": "构造乘积矩阵",
+          "slug": "construct-product-matrix",
+          "src": "https://leetcode.cn/problems/construct-product-matrix/",
+          "solution": null,
+          "score": 2075,
+          "isPremium": false
+        },
+        {
+          "id": "3334",
+          "title": "数组的最大因子得分",
+          "slug": "find-the-maximum-factor-score-of-array",
+          "src": "https://leetcode.cn/problems/find-the-maximum-factor-score-of-array/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "2167",
+          "title": "移除所有载有违禁货物车厢所需的最少时间",
+          "slug": "minimum-time-to-remove-all-cars-containing-illegal-goods",
+          "src": "https://leetcode.cn/problems/minimum-time-to-remove-all-cars-containing-illegal-goods/",
+          "solution": null,
+          "score": 2219,
+          "isPremium": false
+        },
+        {
+          "id": "2484",
+          "title": "统计回文子序列数目",
+          "slug": "count-palindromic-subsequences",
+          "src": "https://leetcode.cn/problems/count-palindromic-subsequences/",
+          "solution": null,
+          "score": 2223,
+          "isPremium": false
+        },
+        {
+          "id": "2163",
+          "title": "删除元素后和的最小差值",
+          "slug": "minimum-difference-in-sums-after-removal-of-elements",
+          "src": "https://leetcode.cn/problems/minimum-difference-in-sums-after-removal-of-elements/",
+          "solution": null,
+          "score": 2225,
+          "isPremium": false
+        },
+        {
+          "id": "2565",
+          "title": "最少得分子序列",
+          "slug": "subsequence-with-the-minimum-score",
+          "src": "https://leetcode.cn/problems/subsequence-with-the-minimum-score/",
+          "solution": null,
+          "score": 2432,
+          "isPremium": false
+        },
+        {
+          "id": "1995",
+          "title": "统计特殊四元组",
+          "slug": "count-special-quadruplets",
+          "src": "https://leetcode.cn/problems/count-special-quadruplets/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "2552",
+          "title": "统计上升四元组",
+          "slug": "count-increasing-quadruplets",
+          "src": "https://leetcode.cn/problems/count-increasing-quadruplets/",
+          "solution": null,
+          "score": 2433,
+          "isPremium": false
+        },
+        {
+          "id": "3302",
+          "title": "字典序最小的合法序列",
+          "slug": "find-the-lexicographically-smallest-valid-sequence",
+          "src": "https://leetcode.cn/problems/find-the-lexicographically-smallest-valid-sequence/",
+          "solution": null,
+          "score": 2474,
+          "isPremium": false
+        },
+        {
+          "id": "3404",
+          "title": "统计特殊子序列的数目",
+          "slug": "count-special-subsequences",
+          "src": "https://leetcode.cn/problems/count-special-subsequences/",
+          "solution": null,
+          "score": 2445,
+          "isPremium": false
+        },
+        {
+          "id": "3303",
+          "title": "第一个几乎相等子字符串的下标",
+          "slug": "find-the-occurrence-of-first-almost-equal-substring",
+          "src": "https://leetcode.cn/problems/find-the-occurrence-of-first-almost-equal-substring/",
+          "solution": null,
+          "score": 2509,
+          "isPremium": false
+        },
+        {
+          "id": "3287",
+          "title": "求出数组中最大序列值",
+          "slug": "find-the-maximum-sequence-value-of-array",
+          "src": "https://leetcode.cn/problems/find-the-maximum-sequence-value-of-array/",
+          "solution": null,
+          "score": 2545,
+          "isPremium": false
+        },
+        {
+          "id": "3257",
+          "title": "放三个车的价值之和最大 II",
+          "slug": "maximum-value-sum-by-placing-three-rooks-ii",
+          "src": "https://leetcode.cn/problems/maximum-value-sum-by-placing-three-rooks-ii/",
+          "solution": null,
+          "score": 2553,
+          "isPremium": false
+        },
+        {
+          "id": "3410",
+          "title": "删除所有值为某个元素后的最大子数组和",
+          "slug": "maximize-subarray-sum-after-removing-all-occurrences-of-one-element",
+          "src": "https://leetcode.cn/problems/maximize-subarray-sum-after-removing-all-occurrences-of-one-element/",
+          "solution": null,
+          "score": 2844,
+          "isPremium": false
+        },
+        {
+          "id": "3003",
+          "title": "执行操作后的最大分割数量",
+          "slug": "maximize-the-number-of-partitions-after-operations",
+          "src": "https://leetcode.cn/problems/maximize-the-number-of-partitions-after-operations/",
+          "solution": null,
+          "score": 3039,
+          "isPremium": false
+        },
+        {
+          "id": "487",
+          "title": "最大连续 1 的个数 II",
+          "slug": "max-consecutive-ones-ii",
+          "src": "https://leetcode.cn/problems/max-consecutive-ones-ii/",
+          "solution": null,
+          "score": 0,
+          "isPremium": true
+        },
+        {
+          "id": "1746",
+          "title": "经过一次操作后的最大子数组和",
+          "slug": "maximum-subarray-sum-after-one-operation",
+          "src": "https://leetcode.cn/problems/maximum-subarray-sum-after-one-operation/",
+          "solution": null,
+          "score": 0,
+          "isPremium": true
         }
       ]
     },
@@ -6409,177 +6370,165 @@
       "title": "专题：把 X 变成 Y",
       "src": null,
       "summary": "部分题目也可以用 BFS 解决。",
-      "children": [
+      "problems": [
         {
-          "title": "基础",
-          "src": null,
-          "problems": [
-            {
-              "id": "397",
-              "title": "整数替换",
-              "slug": "integer-replacement",
-              "src": "https://leetcode.cn/problems/integer-replacement/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "2998",
-              "title": "使 X 和 Y 相等的最少操作次数",
-              "slug": "minimum-number-of-operations-to-make-x-and-y-equal",
-              "src": "https://leetcode.cn/problems/minimum-number-of-operations-to-make-x-and-y-equal/",
-              "solution": null,
-              "score": 1795,
-              "isPremium": false
-            },
-            {
-              "id": "2059",
-              "title": "转化数字的最小运算数",
-              "slug": "minimum-operations-to-convert-number",
-              "src": "https://leetcode.cn/problems/minimum-operations-to-convert-number/",
-              "solution": null,
-              "score": 1850,
-              "isPremium": false
-            },
-            {
-              "id": "991",
-              "title": "坏了的计算器",
-              "slug": "broken-calculator",
-              "src": "https://leetcode.cn/problems/broken-calculator/",
-              "solution": null,
-              "score": 1909,
-              "isPremium": false
-            },
-            {
-              "id": "1553",
-              "title": "吃掉 N 个橘子的最少天数",
-              "slug": "minimum-number-of-days-to-eat-n-oranges",
-              "src": "https://leetcode.cn/problems/minimum-number-of-days-to-eat-n-oranges/",
-              "solution": null,
-              "score": 2048,
-              "isPremium": false
-            }
-          ]
+          "id": "397",
+          "title": "整数替换",
+          "slug": "integer-replacement",
+          "src": "https://leetcode.cn/problems/integer-replacement/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "2998",
+          "title": "使 X 和 Y 相等的最少操作次数",
+          "slug": "minimum-number-of-operations-to-make-x-and-y-equal",
+          "src": "https://leetcode.cn/problems/minimum-number-of-operations-to-make-x-and-y-equal/",
+          "solution": null,
+          "score": 1795,
+          "isPremium": false
+        },
+        {
+          "id": "2059",
+          "title": "转化数字的最小运算数",
+          "slug": "minimum-operations-to-convert-number",
+          "src": "https://leetcode.cn/problems/minimum-operations-to-convert-number/",
+          "solution": null,
+          "score": 1850,
+          "isPremium": false
+        },
+        {
+          "id": "991",
+          "title": "坏了的计算器",
+          "slug": "broken-calculator",
+          "src": "https://leetcode.cn/problems/broken-calculator/",
+          "solution": null,
+          "score": 1909,
+          "isPremium": false
+        },
+        {
+          "id": "1553",
+          "title": "吃掉 N 个橘子的最少天数",
+          "slug": "minimum-number-of-days-to-eat-n-oranges",
+          "src": "https://leetcode.cn/problems/minimum-number-of-days-to-eat-n-oranges/",
+          "solution": null,
+          "score": 2048,
+          "isPremium": false
         }
       ]
     },
     {
       "title": "专题：跳跃游戏",
       "src": null,
-      "children": [
+      "problems": [
         {
-          "title": "基础",
-          "src": null,
-          "problems": [
-            {
-              "id": "1306",
-              "title": "跳跃游戏 III",
-              "slug": "jump-game-iii",
-              "src": "https://leetcode.cn/problems/jump-game-iii/",
-              "solution": null,
-              "score": 1397,
-              "isPremium": false
-            },
-            {
-              "id": "2770",
-              "title": "达到末尾下标所需的最大跳跃次数",
-              "slug": "maximum-number-of-jumps-to-reach-the-last-index",
-              "src": "https://leetcode.cn/problems/maximum-number-of-jumps-to-reach-the-last-index/",
-              "solution": null,
-              "score": 1533,
-              "isPremium": false
-            },
-            {
-              "id": "403",
-              "title": "青蛙过河",
-              "slug": "frog-jump",
-              "src": "https://leetcode.cn/problems/frog-jump/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "1340",
-              "title": "跳跃游戏 V",
-              "slug": "jump-game-v",
-              "src": "https://leetcode.cn/problems/jump-game-v/",
-              "solution": null,
-              "score": 1866,
-              "isPremium": false
-            },
-            {
-              "id": "1871",
-              "title": "跳跃游戏 VII",
-              "slug": "jump-game-vii",
-              "src": "https://leetcode.cn/problems/jump-game-vii/",
-              "solution": null,
-              "score": 1896,
-              "isPremium": false
-            },
-            {
-              "id": "1696",
-              "title": "跳跃游戏 VI",
-              "slug": "jump-game-vi",
-              "src": "https://leetcode.cn/problems/jump-game-vi/",
-              "solution": null,
-              "score": 1954,
-              "isPremium": false
-            },
-            {
-              "id": "975",
-              "title": "奇偶跳",
-              "slug": "odd-even-jump",
-              "src": "https://leetcode.cn/problems/odd-even-jump/",
-              "solution": null,
-              "score": 2079,
-              "isPremium": false
-            },
-            {
-              "id": "1654",
-              "title": "到家的最少跳跃次数",
-              "slug": "minimum-jumps-to-reach-home",
-              "src": "https://leetcode.cn/problems/minimum-jumps-to-reach-home/",
-              "solution": null,
-              "score": 2124,
-              "isPremium": false
-            },
-            {
-              "id": "LCP 09",
-              "title": "最小跳跃次数",
-              "slug": "zui-xiao-tiao-yue-ci-shu",
-              "src": "https://leetcode.cn/problems/zui-xiao-tiao-yue-ci-shu/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "LCP 20",
-              "title": "快速公交",
-              "slug": "meChtZ",
-              "src": "https://leetcode.cn/problems/meChtZ/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
-            },
-            {
-              "id": "656",
-              "title": "金币路径",
-              "slug": "coin-path",
-              "src": "https://leetcode.cn/problems/coin-path/",
-              "solution": null,
-              "score": 0,
-              "isPremium": true
-            },
-            {
-              "id": "2297",
-              "title": "跳跃游戏 VIII",
-              "slug": "jump-game-viii",
-              "src": "https://leetcode.cn/problems/jump-game-viii/",
-              "solution": null,
-              "score": 0,
-              "isPremium": true
-            }
-          ]
+          "id": "1306",
+          "title": "跳跃游戏 III",
+          "slug": "jump-game-iii",
+          "src": "https://leetcode.cn/problems/jump-game-iii/",
+          "solution": null,
+          "score": 1397,
+          "isPremium": false
+        },
+        {
+          "id": "2770",
+          "title": "达到末尾下标所需的最大跳跃次数",
+          "slug": "maximum-number-of-jumps-to-reach-the-last-index",
+          "src": "https://leetcode.cn/problems/maximum-number-of-jumps-to-reach-the-last-index/",
+          "solution": null,
+          "score": 1533,
+          "isPremium": false
+        },
+        {
+          "id": "403",
+          "title": "青蛙过河",
+          "slug": "frog-jump",
+          "src": "https://leetcode.cn/problems/frog-jump/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "1340",
+          "title": "跳跃游戏 V",
+          "slug": "jump-game-v",
+          "src": "https://leetcode.cn/problems/jump-game-v/",
+          "solution": null,
+          "score": 1866,
+          "isPremium": false
+        },
+        {
+          "id": "1871",
+          "title": "跳跃游戏 VII",
+          "slug": "jump-game-vii",
+          "src": "https://leetcode.cn/problems/jump-game-vii/",
+          "solution": null,
+          "score": 1896,
+          "isPremium": false
+        },
+        {
+          "id": "1696",
+          "title": "跳跃游戏 VI",
+          "slug": "jump-game-vi",
+          "src": "https://leetcode.cn/problems/jump-game-vi/",
+          "solution": null,
+          "score": 1954,
+          "isPremium": false
+        },
+        {
+          "id": "975",
+          "title": "奇偶跳",
+          "slug": "odd-even-jump",
+          "src": "https://leetcode.cn/problems/odd-even-jump/",
+          "solution": null,
+          "score": 2079,
+          "isPremium": false
+        },
+        {
+          "id": "1654",
+          "title": "到家的最少跳跃次数",
+          "slug": "minimum-jumps-to-reach-home",
+          "src": "https://leetcode.cn/problems/minimum-jumps-to-reach-home/",
+          "solution": null,
+          "score": 2124,
+          "isPremium": false
+        },
+        {
+          "id": "LCP 09",
+          "title": "最小跳跃次数",
+          "slug": "zui-xiao-tiao-yue-ci-shu",
+          "src": "https://leetcode.cn/problems/zui-xiao-tiao-yue-ci-shu/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "LCP 20",
+          "title": "快速公交",
+          "slug": "meChtZ",
+          "src": "https://leetcode.cn/problems/meChtZ/",
+          "solution": null,
+          "score": 0,
+          "isPremium": false
+        },
+        {
+          "id": "656",
+          "title": "金币路径",
+          "slug": "coin-path",
+          "src": "https://leetcode.cn/problems/coin-path/",
+          "solution": null,
+          "score": 0,
+          "isPremium": true
+        },
+        {
+          "id": "2297",
+          "title": "跳跃游戏 VIII",
+          "slug": "jump-game-viii",
+          "src": "https://leetcode.cn/problems/jump-game-viii/",
+          "solution": null,
+          "score": 0,
+          "isPremium": true
         }
       ]
     },
