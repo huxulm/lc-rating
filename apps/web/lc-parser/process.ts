@@ -1,4 +1,4 @@
-import { createGoogleGenerativeAI } from '@ai-sdk/google';
+// import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
 import { streamText } from 'ai';
 import "dotenv/config";
@@ -47,10 +47,10 @@ const openai = createOpenAICompatible({
   name: 'qwen'
 });
 
-const google = createGoogleGenerativeAI({
-  apiKey: process.env.GOOGLE_API_KEY!,
-  fetch: proxyFetch,
-});
+// const google = createGoogleGenerativeAI({
+//   apiKey: process.env.GOOGLE_API_KEY!,
+//   fetch: proxyFetch,
+// });
 
 // const model_id='qwen-plus-latest';
 const model_id=process.env.MODEL_ID!;
