@@ -4345,7 +4345,7 @@
     {
       "title": "十一、优化 DP",
       "src": null,
-      "summary": "### §11.1 前缀和优化 DP\n\n### §11.2 单调栈优化 DP\n\n前置题单：[单调栈（矩形系列/字典序最小/贡献法）](https://leetcode.cn/circle/discuss/9oZFK9/)\n\n### §11.3 单调队列优化 DP\n\n一般用来维护一段转移来源的最值。\n\n1.  前提：区间右端点变大时，左端点也在变大（同滑动窗口）。\n2.  转移前，去掉队首无用数据。\n3.  计算转移（直接从队首转移）。\n4.  把数据（一般是 f[i]）插入队尾前，去掉队尾无用数据。\n\n### §11.4 树状数组/线段树优化 DP\n\n### §11.5 字典树优化 DP\n\n### §11.6 矩阵快速幂优化 DP\n\n有两种类型的矩阵快速幂优化 DP：\n\n1.  线性 DP（常系数齐次线性递推），转移系数写在第一行，其余行 mi+1,i\\=1，例如 [70](https://leetcode.cn/problems/climbing-stairs/)，[1137](https://leetcode.cn/problems/n-th-tribonacci-number/)。[讲解](https://leetcode.cn/problems/climbing-stairs/solutions/2560716/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-7zm1/)。\n2.  多维 DP 或者状态机 DP，转移系数可表示为一个 k×k 大小的矩阵，例如 [935](https://leetcode.cn/problems/knight-dialer/)。[讲解](https://leetcode.cn/problems/knight-dialer/solutions/3004116/jiao-ni-yi-bu-bu-si-kao-dpcong-ji-yi-hua-x06l/)。\n\n时间复杂度一般为 O(k3logn)。\n\n**进阶做法**：先用 **Berlekamp-Massey 算法**找规律，得到线性递推式，然后用 **Kitamasa 算法**（或者 Bostan-Mori 算法）优化。\n\n请看我的知乎科普文章：\n\n[Berlekamp-Massey 算法：如何预测数列的下一项？](/link/?target=https%3A%2F%2Fzhuanlan.zhihu.com%2Fp%2F1966417899825665440)\n\n[Kitamasa 算法：更快地计算线性递推的第 n 项](/link/?target=https%3A%2F%2Fzhuanlan.zhihu.com%2Fp%2F1964051212304364939)\n\n具体例子见 3700 题 [我的题解的方法二](https://leetcode.cn/problems/number-of-zigzag-arrays-ii/solutions/3794101/ju-zhen-kuai-su-mi-you-hua-dppythonnumpy-77e7/)。\n\n时间复杂度一般为 O(k2logn)。\n\n### §11.7 斜率优化 DP\n\n也叫凸包优化/凸壳优化（CHT，Convex Hull Trick）。\n\n### §11.8 WQS 二分优化 DP\n\n把最多选 k 个物品的问题（时间复杂度高）转换成选任意个物品的问题（时间复杂度低）。\n\n一般时间复杂度为 O(nlogU) 或者 O(nlogn)。\n\n此外「§5.3 约束划分个数」的部分题目也可以用 WQS 二分优化。\n\n### §11.9 其他优化 DP",
+      "summary": "",
       "children": [
         {
           "title": "§11.1 前缀和优化 DP",
