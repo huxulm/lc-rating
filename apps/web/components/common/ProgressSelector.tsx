@@ -64,7 +64,7 @@ const ProgressSelector = React.memo(({ problemId }: ProgressSelectorProps) => {
         style={{ color: optValue.color }}
       >
         <span className="truncate">{optValue.label}</span>
-        <ChevronsUpDown size={16} className="opacity-80 absolute right-1 dark:muted/30 dark:muted-foreground/20" />
+        <ChevronsUpDown size={16} className="opacity-80 absolute right-1 dark:bg-muted/30 dark:text-muted-foreground/20" />
       </SelectTrigger>
       {selectGroup}
       {!optionKeys.includes(optValue.key) && (

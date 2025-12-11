@@ -21,7 +21,6 @@ const ProblemList = React.memo(({ problems }: ProblemListProps) => {
         const info = ratingInfo(problem.score || 0);
         return (
           <div key={problem.title}>
-            {/* <Separator /> */}
             <div className="flex flex-row items-center text-pretty justify-between rounded p-1 m-1 bg-muted/50">
               <Link
                 href={`${LC_HOST}/problems/${problem.slug}`}
