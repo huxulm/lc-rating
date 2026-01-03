@@ -2,7 +2,7 @@ name: Rating Solution Updater
 
 on:
   schedule:
-    - cron: "0 1 * * 1" # 每周一 UTC 时间 01:00 / Beijing 时间 09:00 执行
+    - cron: "0 5 * * 1" # 每周一 UTC 时间 05:00 / Beijing 时间 13:00 执行
   workflow_dispatch:
 
 jobs:
