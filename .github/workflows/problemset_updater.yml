@@ -2,7 +2,7 @@ name: Problemset Updater
 
 on:
   schedule:
-    - cron: "0 9 * * 1" # 每周一 UTC 时间 09:00 / Beijing 时间 17:00 执行
+    - cron: "0 2 * * 1" # 每周一 UTC 时间 02:00 / Beijing 时间 10:00 执行
   workflow_dispatch:
 
 jobs:
