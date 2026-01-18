@@ -190,7 +190,10 @@ export default function () {
             </Dropdown>
 
             <Link
-              href="https://huxulm.github.io/lc-rating"
+              href={
+                process.env.NEXT_PUBLIC_NEW_SITE_URL ??
+                "https://wnykuang.github.io/lc-rating/contest/"
+              }
               className="nav-link"
               style={{
                 width: "fit-content",

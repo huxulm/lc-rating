@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   },
   // basePath: process.env.NODE_ENV === "development" ? "" : BASE_PATH,
   basePath: "/lc-rating",
+  trailingSlash: true,
   output: "export",
   distDir: "../../build/apps/web",
 };
