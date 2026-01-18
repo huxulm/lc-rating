@@ -6,9 +6,14 @@ export const LC_HOST_EN = `https://leetcode.com`;
 export const LC_RATING_GLOBAL_SETTING_KEY = "lc-rating-global-settings";
 export const LC_RATING_PROGRESS_KEY = "lc-rating-progress";
 export const LC_RATING_OPTION_KEY = "lc-rating-option";
+export const LC_RATING_AUTH_TOKEN_KEY = "lc-rating-auth-token";
 export const LC_RATING_PROBLEMSET_TABLE_KEY =
   "lc-rating-problemset-table-state";
 export const STORAGE_VERSION = 0;
+
+export const API_BASE =
+  process.env.NEXT_PUBLIC_API_BASE ??
+  "https://lc-rating-backend.kuangwinnie.workers.dev";
 
 export const BILIBILI_0X3F_SPACE = {
   url: "https://space.bilibili.com/206214/",
