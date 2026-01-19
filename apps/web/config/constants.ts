@@ -7,6 +7,7 @@ export const LC_RATING_GLOBAL_SETTING_KEY = "lc-rating-global-settings";
 export const LC_RATING_PROGRESS_KEY = "lc-rating-progress";
 export const LC_RATING_OPTION_KEY = "lc-rating-option";
 export const LC_RATING_AUTH_TOKEN_KEY = "lc-rating-auth-token";
+export const LC_RATING_LAST_SYNC_AT_KEY = "lc-rating-last-sync-at";
 export const LC_RATING_PROBLEMSET_TABLE_KEY =
   "lc-rating-problemset-table-state";
 export const STORAGE_VERSION = 0;

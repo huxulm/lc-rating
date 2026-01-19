@@ -1,6 +1,7 @@
 import { Navigator } from "@/components/common/Navigator";
 import { Provider } from "@/components/common/Provider";
 import { AuthTokenHandler } from "@/components/common/AuthTokenHandler";
+import { FloatingSyncButton } from "@/components/common/FloatingSyncButton";
 import { BASE_PATH } from "@/config/constants";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -22,6 +23,7 @@ export default function RootLayout({
           <AuthTokenHandler />
           <Navigator />
           {children}
+          <FloatingSyncButton />
         </Provider>
       </body>
     </html>

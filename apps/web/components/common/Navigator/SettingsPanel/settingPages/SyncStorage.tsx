@@ -97,13 +97,22 @@ export default function SyncStorage() {
 
       const rows = data?.result?.results ?? data?.result ?? [];
       const progress: Record<string, string> = {};
-      rows.forEach((row: { problem_id?: string; progress?: string }) => {
-        if (row.problem_id && row.progress) {
-          progress[row.problem_id] = row.progress;
+      const progressUpdatedAt: Record<string, number> = {};
+      rows.forEach(
+        (row: { problem_id?: string; progress?: string; updated_at?: string }) => {
+          if (row.problem_id && row.progress) {
+            progress[row.problem_id] = row.progress;
+            if (row.updated_at) {
+              const timestamp = Date.parse(row.updated_at);
+              if (!Number.isNaN(timestamp)) {
+                progressUpdatedAt[row.problem_id] = timestamp;
+              }
+            }
+          }
         }
-      });
+      );
 
-      setAllProgress(progress);
+      setAllProgress(progress, progressUpdatedAt);
       toast(<span className="text-green-500">云端同步成功</span>, {
         icon: <ThumbsUp className="text-green-500 size-full" />,
       });
@@ -131,7 +140,10 @@ export default function SyncStorage() {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(siteStorage.progress),
+        body: JSON.stringify({
+          progress: siteStorage.progress,
+          progressUpdatedAt: siteStorage.progressUpdatedAt ?? {},
+        }),
       });
       const data = await response.json();
       if (!data?.success) {
