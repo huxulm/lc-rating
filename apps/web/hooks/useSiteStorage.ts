@@ -13,7 +13,7 @@ export function useSiteStorage() {
     setPremium,
   } = useGlobalSettingsStore();
   const { options, setOptions } = useOptions();
-  const { progress, setAllProgress } = useProgressStore();
+  const { progress, progressUpdatedAt, setAllProgress } = useProgressStore();
 
   const siteStorage = useMemo(
     () => ({
@@ -22,8 +22,9 @@ export function useSiteStorage() {
       premium,
       options,
       progress,
+      progressUpdatedAt,
     }),
-    [tagLanguage, linkLanguage, premium, options, progress]
+    [tagLanguage, linkLanguage, premium, options, progress, progressUpdatedAt]
   );
 
   const setSiteStorage = useCallback(
@@ -33,12 +34,13 @@ export function useSiteStorage() {
       premium: boolean;
       options: Options;
       progress: Record<string, string>;
+      progressUpdatedAt?: Record<string, number>;
     }) => {
       setTagLanguage(siteStorage.tagLanguage);
       setLinkLanguage(siteStorage.linkLanguage);
       setPremium(siteStorage.premium);
       setOptions(siteStorage.options);
-      setAllProgress(siteStorage.progress);
+      setAllProgress(siteStorage.progress, siteStorage.progressUpdatedAt);
     },
     []
   );

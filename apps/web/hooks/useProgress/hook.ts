@@ -22,6 +22,7 @@ export const useProgressStore = create<ProgressStore>()(
     persist(
       (set, get) => ({
         ...migrateFromLocalStorage(),
+        progressUpdatedAt: {},
 
         setProgress: (id, value) =>
           set((state) => ({
@@ -29,23 +30,37 @@ export const useProgressStore = create<ProgressStore>()(
               ...state.progress,
               [id]: value,
             },
+            progressUpdatedAt: {
+              ...state.progressUpdatedAt,
+              [id]: Date.now(),
+            },
           })),
 
         delProgress: (id) =>
           set((state) => {
             const progress = { ...state.progress };
             delete progress[id];
+            const progressUpdatedAt = { ...state.progressUpdatedAt };
+            delete progressUpdatedAt[id];
             return {
               progress,
+              progressUpdatedAt,
             };
           }),
 
-        setAllProgress: (progress: Record<string, OptionKey>) => {
+        setAllProgress: (
+          progress: Record<string, OptionKey>,
+          progressUpdatedAt: Record<string, number> = {}
+        ) => {
           set((state) => {
             return {
               progress: {
                 ...state.progress,
                 ...progress,
+              },
+              progressUpdatedAt: {
+                ...state.progressUpdatedAt,
+                ...progressUpdatedAt,
               },
             };
           });
