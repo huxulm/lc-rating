@@ -167,6 +167,7 @@ python 0x3f_discuss.py --uuid <讨论UUID> --o <输出路径>
 - [zerotrac](https://github.com/zerotrac/leetcode_problem_rating) - 题目难度评分数据
 - [灵茶山艾府(0x3F)](https://space.bilibili.com/206214/) - 算法题单内容
 - [LeetCode](https://leetcode.cn/) - 题目数据来源
+- [支持云端数据的后端](https://wnykuang.github.io/lc-rating/contest/) - 提供云端数据支持
 
 ## 👥 贡献者
 
