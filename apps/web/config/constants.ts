@@ -18,21 +18,26 @@ const getApiBase = () => {
     return process.env.NEXT_PUBLIC_API_BASE;
   }
 
-  // Server-side: default to huxulm's backend
+  // Server-side: default to prod backend (for huxulm)
   if (typeof window === "undefined") {
-    return "https://lc-rating-backend.kuangwinnie.workers.dev";
+    return "https://lc-rating-backend-prod.kuangwinnie.workers.dev";
   }
 
   // Client-side: detect domain
   const hostname = window.location.hostname;
 
-  // Wenyi's deployment uses wenyi environment
+  // Wenyi's deployment uses default worker
   if (hostname.includes("wnykuang")) {
-    return "https://lc-rating-backend-wenyi.kuangwinnie.workers.dev";
+    return "https://lc-rating-backend.kuangwinnie.workers.dev";
   }
 
-  // Huxulm or default uses main deployment
-  return "https://lc-rating-backend.kuangwinnie.workers.dev";
+  // Huxulm uses prod worker
+  if (hostname.includes("huxulm") || hostname.includes("huxu")) {
+    return "https://lc-rating-backend-prod.kuangwinnie.workers.dev";
+  }
+
+  // Default to prod worker
+  return "https://lc-rating-backend-prod.kuangwinnie.workers.dev";
 };
 
 export const API_BASE = getApiBase();
