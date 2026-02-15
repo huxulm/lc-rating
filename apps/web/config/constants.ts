@@ -12,9 +12,35 @@ export const LC_RATING_PROBLEMSET_TABLE_KEY =
   "lc-rating-problemset-table-state";
 export const STORAGE_VERSION = 0;
 
-export const API_BASE =
-  process.env.NEXT_PUBLIC_API_BASE ??
-  "https://lc-rating-backend.kuangwinnie.workers.dev";
+// Auto-detect backend based on deployment domain
+const getApiBase = () => {
+  if (process.env.NEXT_PUBLIC_API_BASE) {
+    return process.env.NEXT_PUBLIC_API_BASE;
+  }
+
+  // Server-side: default to prod backend (for huxulm)
+  if (typeof window === "undefined") {
+    return "https://lc-rating-backend-prod.kuangwinnie.workers.dev";
+  }
+
+  // Client-side: detect domain
+  const hostname = window.location.hostname;
+
+  // Wenyi's deployment uses default worker
+  if (hostname.includes("wnykuang")) {
+    return "https://lc-rating-backend.kuangwinnie.workers.dev";
+  }
+
+  // Huxulm uses prod worker
+  if (hostname.includes("huxulm") || hostname.includes("huxu")) {
+    return "https://lc-rating-backend-prod.kuangwinnie.workers.dev";
+  }
+
+  // Default to prod worker
+  return "https://lc-rating-backend-prod.kuangwinnie.workers.dev";
+};
+
+export const API_BASE = getApiBase();
 
 export const BILIBILI_0X3F_SPACE = {
   url: "https://space.bilibili.com/206214/",
