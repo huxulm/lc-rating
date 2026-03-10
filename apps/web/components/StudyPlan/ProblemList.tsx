@@ -23,11 +23,11 @@ const ProblemList = React.memo(({ problems }: ProblemListProps) => {
           <div key={problem.title}>
             <div className="flex flex-row items-center text-pretty justify-between rounded p-1 m-1 bg-muted/50">
               <Link
-                href={`${LC_HOST}/problems/${problem.slug}`}
+                href={`${LC_HOST}/problems/${problem.slug.replace(/^\/|\/$/g, "")}`}
                 target="_blank"
                 className="hover:underline"
               >
-                {problem.id}. {problem.title}
+                {problem.title}
               </Link>
               <div className="flex flex-row items-center gap-2">
                 {problem.score ? (
