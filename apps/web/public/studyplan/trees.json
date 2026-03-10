@@ -19,7 +19,7 @@
                             "slug": "/convert-binary-number-in-a-linked-list-to-integer/",
                             "src": "https://leetcode.cn/problems/convert-binary-number-in-a-linked-list-to-integer/",
                             "solution": null,
-                            "score": null,
+                            "score": 1151.3534799042,
                             "isPremium": false
                         },
                         {
@@ -28,7 +28,7 @@
                             "slug": "/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/",
                             "src": "https://leetcode.cn/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/",
                             "solution": null,
-                            "score": null,
+                            "score": 1310.9129840277,
                             "isPremium": false
                         },
                         {
@@ -37,7 +37,7 @@
                             "slug": "/merge-nodes-in-between-zeros/",
                             "src": "https://leetcode.cn/problems/merge-nodes-in-between-zeros/",
                             "solution": null,
-                            "score": null,
+                            "score": 1333.192050397,
                             "isPremium": false
                         },
                         {
@@ -55,7 +55,7 @@
                             "slug": "/linked-list-components/",
                             "src": "https://leetcode.cn/problems/linked-list-components/",
                             "solution": null,
-                            "score": null,
+                            "score": 1428.712905903,
                             "isPremium": false
                         },
                         {
@@ -117,7 +117,7 @@
                             "slug": "/delete-nodes-from-linked-list-present-in-array/",
                             "src": "https://leetcode.cn/problems/delete-nodes-from-linked-list-present-in-array/",
                             "solution": null,
-                            "score": null,
+                            "score": 1341.7231008143,
                             "isPremium": false
                         },
                         {
@@ -153,7 +153,7 @@
                             "slug": "/merge-in-between-linked-lists/",
                             "src": "https://leetcode.cn/problems/merge-in-between-linked-lists/",
                             "solution": null,
-                            "score": null,
+                            "score": 1428.1443796872,
                             "isPremium": false
                         },
                         {
@@ -162,7 +162,7 @@
                             "slug": "/remove-nodes-from-linked-list/",
                             "src": "https://leetcode.cn/problems/remove-nodes-from-linked-list/",
                             "solution": null,
-                            "score": null,
+                            "score": 1454.5942017003,
                             "isPremium": false
                         },
                         {
@@ -188,7 +188,7 @@
                             "slug": "/insert-greatest-common-divisors-in-linked-list/",
                             "src": "https://leetcode.cn/problems/insert-greatest-common-divisors-in-linked-list/",
                             "solution": null,
-                            "score": null,
+                            "score": 1279.0301521682,
                             "isPremium": false
                         },
                         {
@@ -277,7 +277,7 @@
                             "slug": "/reverse-nodes-in-even-length-groups/",
                             "src": "https://leetcode.cn/problems/reverse-nodes-in-even-length-groups/",
                             "solution": null,
-                            "score": null,
+                            "score": 1685.3599641299,
                             "isPremium": false
                         }
                     ],
@@ -312,7 +312,7 @@
                             "slug": "/swapping-nodes-in-a-linked-list/",
                             "src": "https://leetcode.cn/problems/swapping-nodes-in-a-linked-list/",
                             "solution": null,
-                            "score": null,
+                            "score": 1386.9203620297,
                             "isPremium": false
                         },
                         {
@@ -338,7 +338,7 @@
                             "slug": "/middle-of-the-linked-list/",
                             "src": "https://leetcode.cn/problems/middle-of-the-linked-list/",
                             "solution": null,
-                            "score": null,
+                            "score": 1231.6157956848,
                             "isPremium": false
                         },
                         {
@@ -347,7 +347,7 @@
                             "slug": "/delete-the-middle-node-of-a-linked-list/",
                             "src": "https://leetcode.cn/problems/delete-the-middle-node-of-a-linked-list/",
                             "solution": null,
-                            "score": null,
+                            "score": 1324.3520304377,
                             "isPremium": false
                         },
                         {
@@ -365,7 +365,7 @@
                             "slug": "/maximum-twin-sum-of-a-linked-list/",
                             "src": "https://leetcode.cn/problems/maximum-twin-sum-of-a-linked-list/",
                             "solution": null,
-                            "score": null,
+                            "score": 1317.9207508583,
                             "isPremium": false
                         },
                         {
@@ -480,7 +480,7 @@
                             "slug": "/double-a-number-represented-as-a-linked-list/",
                             "src": "https://leetcode.cn/problems/double-a-number-represented-as-a-linked-list/",
                             "solution": null,
-                            "score": null,
+                            "score": 1393.7857353048,
                             "isPremium": false
                         },
                         {
@@ -550,7 +550,7 @@
                             "slug": "/next-greater-node-in-linked-list/",
                             "src": "https://leetcode.cn/problems/next-greater-node-in-linked-list/",
                             "solution": null,
-                            "score": null,
+                            "score": 1570.8347522104,
                             "isPremium": false
                         },
                         {
@@ -559,7 +559,7 @@
                             "slug": "/remove-zero-sum-consecutive-nodes-from-linked-list/",
                             "src": "https://leetcode.cn/problems/remove-zero-sum-consecutive-nodes-from-linked-list/",
                             "solution": null,
-                            "score": null,
+                            "score": 1782.3312212058,
                             "isPremium": false
                         },
                         {
@@ -655,8 +655,7 @@
                     "isLeaf": false,
                     "children": []
                 }
-            ],
-            "isLeaf": false
+            ]
         },
         {
             "title": "二、二叉树",
@@ -700,7 +699,7 @@
                             "slug": "/leaf-similar-trees/",
                             "src": "https://leetcode.cn/problems/leaf-similar-trees/",
                             "solution": null,
-                            "score": null,
+                            "score": 1287.8970301681,
                             "isPremium": false
                         },
                         {
@@ -745,7 +744,7 @@
                             "slug": "/two-sum-bsts/",
                             "src": "https://leetcode.cn/problems/two-sum-bsts/",
                             "solution": null,
-                            "score": null,
+                            "score": 1389.0328392117,
                             "isPremium": true
                         },
                         {
@@ -816,7 +815,7 @@
                             "slug": "/count-good-nodes-in-binary-tree/",
                             "src": "https://leetcode.cn/problems/count-good-nodes-in-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1360.2184128413,
                             "isPremium": false
                         },
                         {
@@ -825,7 +824,7 @@
                             "slug": "/sum-of-nodes-with-even-valued-grandparent/",
                             "src": "https://leetcode.cn/problems/sum-of-nodes-with-even-valued-grandparent/",
                             "solution": null,
-                            "score": null,
+                            "score": 1426.948379305,
                             "isPremium": false
                         },
                         {
@@ -834,7 +833,7 @@
                             "slug": "/smallest-string-starting-from-leaf/",
                             "src": "https://leetcode.cn/problems/smallest-string-starting-from-leaf/",
                             "solution": null,
-                            "score": null,
+                            "score": 1429.1878389249,
                             "isPremium": false
                         },
                         {
@@ -843,7 +842,7 @@
                             "slug": "/maximum-difference-between-node-and-ancestor/",
                             "src": "https://leetcode.cn/problems/maximum-difference-between-node-and-ancestor/",
                             "solution": null,
-                            "score": null,
+                            "score": 1446.4280778775,
                             "isPremium": false
                         },
                         {
@@ -852,7 +851,7 @@
                             "slug": "/sum-of-root-to-leaf-binary-numbers/",
                             "src": "https://leetcode.cn/problems/sum-of-root-to-leaf-binary-numbers/",
                             "solution": null,
-                            "score": null,
+                            "score": 1462.4423844498,
                             "isPremium": false
                         },
                         {
@@ -870,7 +869,7 @@
                             "slug": "/longest-zigzag-path-in-a-binary-tree/",
                             "src": "https://leetcode.cn/problems/longest-zigzag-path-in-a-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1713.2768268466,
                             "isPremium": false
                         },
                         {
@@ -879,7 +878,7 @@
                             "slug": "/flip-binary-tree-to-match-preorder-traversal/",
                             "src": "https://leetcode.cn/problems/flip-binary-tree-to-match-preorder-traversal/",
                             "solution": null,
-                            "score": null,
+                            "score": 1786.5491561897,
                             "isPremium": false
                         },
                         {
@@ -950,7 +949,7 @@
                             "slug": "/univalued-binary-tree/",
                             "src": "https://leetcode.cn/problems/univalued-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1177.5660617941,
                             "isPremium": false
                         },
                         {
@@ -977,7 +976,7 @@
                             "slug": "/flip-equivalent-binary-trees/",
                             "src": "https://leetcode.cn/problems/flip-equivalent-binary-trees/",
                             "solution": null,
-                            "score": null,
+                            "score": 1477.4844514104,
                             "isPremium": false
                         },
                         {
@@ -1022,7 +1021,7 @@
                             "slug": "/evaluate-boolean-binary-tree/",
                             "src": "https://leetcode.cn/problems/evaluate-boolean-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1303.5594588137,
                             "isPremium": false
                         },
                         {
@@ -1058,7 +1057,7 @@
                             "slug": "/count-nodes-equal-to-average-of-subtree/",
                             "src": "https://leetcode.cn/problems/count-nodes-equal-to-average-of-subtree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1472.7864965062,
                             "isPremium": false
                         },
                         {
@@ -1067,7 +1066,7 @@
                             "slug": "/maximum-difference-between-node-and-ancestor/",
                             "src": "https://leetcode.cn/problems/maximum-difference-between-node-and-ancestor/",
                             "solution": null,
-                            "score": null,
+                            "score": 1446.4280778775,
                             "isPremium": false
                         },
                         {
@@ -1076,7 +1075,7 @@
                             "slug": "/k-th-largest-perfect-subtree-size-in-binary-tree/",
                             "src": "https://leetcode.cn/problems/k-th-largest-perfect-subtree-size-in-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1603.252304506,
                             "isPremium": false
                         },
                         {
@@ -1085,7 +1084,7 @@
                             "slug": "/maximum-product-of-splitted-binary-tree/",
                             "src": "https://leetcode.cn/problems/maximum-product-of-splitted-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1674.9985842835,
                             "isPremium": false
                         },
                         {
@@ -1094,7 +1093,7 @@
                             "slug": "/longest-zigzag-path-in-a-binary-tree/",
                             "src": "https://leetcode.cn/problems/longest-zigzag-path-in-a-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1713.2768268466,
                             "isPremium": false
                         },
                         {
@@ -1103,7 +1102,7 @@
                             "slug": "/binary-tree-coloring-game/",
                             "src": "https://leetcode.cn/problems/binary-tree-coloring-game/",
                             "solution": null,
-                            "score": null,
+                            "score": 1741.4527995252,
                             "isPremium": false
                         },
                         {
@@ -1121,7 +1120,7 @@
                             "slug": "/number-of-good-leaf-nodes-pairs/",
                             "src": "https://leetcode.cn/problems/number-of-good-leaf-nodes-pairs/",
                             "solution": null,
-                            "score": null,
+                            "score": 1745.6580748712,
                             "isPremium": false
                         },
                         {
@@ -1175,7 +1174,7 @@
                             "slug": "/maximum-average-subtree/",
                             "src": "https://leetcode.cn/problems/maximum-average-subtree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1361.8801013336,
                             "isPremium": true
                         },
                         {
@@ -1237,7 +1236,7 @@
                             "slug": "/binary-tree-pruning/",
                             "src": "https://leetcode.cn/problems/binary-tree-pruning/",
                             "solution": null,
-                            "score": null,
+                            "score": 1380.1541980647,
                             "isPremium": false
                         },
                         {
@@ -1246,7 +1245,7 @@
                             "slug": "/delete-leaves-with-a-given-value/",
                             "src": "https://leetcode.cn/problems/delete-leaves-with-a-given-value/",
                             "solution": null,
-                            "score": null,
+                            "score": 1407.1322366299,
                             "isPremium": false
                         },
                         {
@@ -1255,7 +1254,7 @@
                             "slug": "/delete-nodes-and-return-forest/",
                             "src": "https://leetcode.cn/problems/delete-nodes-and-return-forest/",
                             "solution": null,
-                            "score": null,
+                            "score": 1511.3725353467,
                             "isPremium": false
                         }
                     ],
@@ -1281,7 +1280,7 @@
                             "slug": "/binary-search-tree-to-greater-sum-tree/",
                             "src": "https://leetcode.cn/problems/binary-search-tree-to-greater-sum-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1374.6755455786,
                             "isPremium": false
                         },
                         {
@@ -1290,7 +1289,7 @@
                             "slug": "/smallest-subtree-with-all-the-deepest-nodes/",
                             "src": "https://leetcode.cn/problems/smallest-subtree-with-all-the-deepest-nodes/",
                             "solution": null,
-                            "score": null,
+                            "score": 1534.325005151,
                             "isPremium": false
                         },
                         {
@@ -1299,7 +1298,7 @@
                             "slug": "/insufficient-nodes-in-root-to-leaf-paths/",
                             "src": "https://leetcode.cn/problems/insufficient-nodes-in-root-to-leaf-paths/",
                             "solution": null,
-                            "score": null,
+                            "score": 1804.5783242151,
                             "isPremium": false
                         }
                     ],
@@ -1343,7 +1342,7 @@
                             "slug": "/amount-of-time-for-binary-tree-to-be-infected/",
                             "src": "https://leetcode.cn/problems/amount-of-time-for-binary-tree-to-be-infected/",
                             "solution": null,
-                            "score": null,
+                            "score": 1711.4873176824,
                             "isPremium": false
                         },
                         {
@@ -1387,7 +1386,7 @@
                             "slug": "/pseudo-palindromic-paths-in-a-binary-tree/",
                             "src": "https://leetcode.cn/problems/pseudo-palindromic-paths-in-a-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1405.0021415178,
                             "isPremium": false
                         },
                         {
@@ -1431,7 +1430,7 @@
                             "slug": "/lowest-common-ancestor-of-deepest-leaves/",
                             "src": "https://leetcode.cn/problems/lowest-common-ancestor-of-deepest-leaves/",
                             "solution": null,
-                            "score": null,
+                            "score": 1607.0005715974,
                             "isPremium": false
                         },
                         {
@@ -1440,7 +1439,7 @@
                             "slug": "/step-by-step-directions-from-a-binary-tree-node-to-another/",
                             "src": "https://leetcode.cn/problems/step-by-step-directions-from-a-binary-tree-node-to-another/",
                             "solution": null,
-                            "score": null,
+                            "score": 1804.5283324227,
                             "isPremium": false
                         },
                         {
@@ -1511,7 +1510,7 @@
                             "slug": "/minimum-distance-between-bst-nodes/",
                             "src": "https://leetcode.cn/problems/minimum-distance-between-bst-nodes/",
                             "solution": null,
-                            "score": null,
+                            "score": 1303.3201984827,
                             "isPremium": false
                         },
                         {
@@ -1520,7 +1519,7 @@
                             "slug": "/range-sum-of-bst/",
                             "src": "https://leetcode.cn/problems/range-sum-of-bst/",
                             "solution": null,
-                            "score": null,
+                            "score": 1335.0295688697,
                             "isPremium": false
                         },
                         {
@@ -1556,7 +1555,7 @@
                             "slug": "/all-elements-in-two-binary-search-trees/",
                             "src": "https://leetcode.cn/problems/all-elements-in-two-binary-search-trees/",
                             "solution": null,
-                            "score": null,
+                            "score": 1260.1755576607,
                             "isPremium": false
                         },
                         {
@@ -1574,7 +1573,7 @@
                             "slug": "/increasing-order-search-tree/",
                             "src": "https://leetcode.cn/problems/increasing-order-search-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1473.2523136772,
                             "isPremium": false
                         },
                         {
@@ -1583,7 +1582,7 @@
                             "slug": "/closest-nodes-queries-in-a-binary-search-tree/",
                             "src": "https://leetcode.cn/problems/closest-nodes-queries-in-a-binary-search-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1596.9852244916,
                             "isPremium": false
                         },
                         {
@@ -1601,7 +1600,7 @@
                             "slug": "/maximum-sum-bst-in-binary-tree/",
                             "src": "https://leetcode.cn/problems/maximum-sum-bst-in-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1913.6704728453,
                             "isPremium": false
                         },
                         {
@@ -1610,7 +1609,7 @@
                             "slug": "/merge-bsts-to-create-single-bst/",
                             "src": "https://leetcode.cn/problems/merge-bsts-to-create-single-bst/",
                             "solution": null,
-                            "score": null,
+                            "score": 2483.9435767299,
                             "isPremium": false
                         },
                         {
@@ -1699,7 +1698,7 @@
                             "slug": "/maximum-binary-tree-ii/",
                             "src": "https://leetcode.cn/problems/maximum-binary-tree-ii/",
                             "solution": null,
-                            "score": null,
+                            "score": 1497.8880991093,
                             "isPremium": false
                         },
                         {
@@ -1708,7 +1707,7 @@
                             "slug": "/construct-binary-search-tree-from-preorder-traversal/",
                             "src": "https://leetcode.cn/problems/construct-binary-search-tree-from-preorder-traversal/",
                             "solution": null,
-                            "score": null,
+                            "score": 1562.9802666517,
                             "isPremium": false
                         },
                         {
@@ -1717,7 +1716,7 @@
                             "slug": "/balance-a-binary-search-tree/",
                             "src": "https://leetcode.cn/problems/balance-a-binary-search-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1540.5750839091,
                             "isPremium": false
                         },
                         {
@@ -1726,7 +1725,7 @@
                             "slug": "/create-binary-tree-from-descriptions/",
                             "src": "https://leetcode.cn/problems/create-binary-tree-from-descriptions/",
                             "solution": null,
-                            "score": null,
+                            "score": 1643.5283095007,
                             "isPremium": false
                         },
                         {
@@ -1753,7 +1752,7 @@
                             "slug": "/construct-binary-tree-from-preorder-and-postorder-traversal/",
                             "src": "https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-postorder-traversal/",
                             "solution": null,
-                            "score": null,
+                            "score": 1731.5555445321,
                             "isPremium": false
                         },
                         {
@@ -1762,7 +1761,7 @@
                             "slug": "/recover-a-tree-from-preorder-traversal/",
                             "src": "https://leetcode.cn/problems/recover-a-tree-from-preorder-traversal/",
                             "solution": null,
-                            "score": null,
+                            "score": 1797.4917663632,
                             "isPremium": false
                         },
                         {
@@ -1833,7 +1832,7 @@
                             "slug": "/split-bst/",
                             "src": "https://leetcode.cn/problems/split-bst/",
                             "solution": null,
-                            "score": null,
+                            "score": 1809.5579156134,
                             "isPremium": true
                         },
                         {
@@ -1868,7 +1867,7 @@
                             "slug": "/binary-tree-cameras/",
                             "src": "https://leetcode.cn/problems/binary-tree-cameras/",
                             "solution": null,
-                            "score": null,
+                            "score": 2124.1329592058,
                             "isPremium": false
                         },
                         {
@@ -1984,7 +1983,7 @@
                             "slug": "/maximum-level-sum-of-a-binary-tree/",
                             "src": "https://leetcode.cn/problems/maximum-level-sum-of-a-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1249.9086403595,
                             "isPremium": false
                         },
                         {
@@ -1993,7 +1992,7 @@
                             "slug": "/cousins-in-binary-tree/",
                             "src": "https://leetcode.cn/problems/cousins-in-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1287.9002757199,
                             "isPremium": false
                         },
                         {
@@ -2002,7 +2001,7 @@
                             "slug": "/kth-largest-sum-in-a-binary-tree/",
                             "src": "https://leetcode.cn/problems/kth-largest-sum-in-a-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1374.3527967199,
                             "isPremium": false
                         },
                         {
@@ -2011,7 +2010,7 @@
                             "slug": "/deepest-leaves-sum/",
                             "src": "https://leetcode.cn/problems/deepest-leaves-sum/",
                             "solution": null,
-                            "score": null,
+                            "score": 1387.9431104106,
                             "isPremium": false
                         },
                         {
@@ -2020,7 +2019,7 @@
                             "slug": "/reverse-odd-levels-of-binary-tree/",
                             "src": "https://leetcode.cn/problems/reverse-odd-levels-of-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1431.0523656241,
                             "isPremium": false
                         },
                         {
@@ -2029,7 +2028,7 @@
                             "slug": "/even-odd-tree/",
                             "src": "https://leetcode.cn/problems/even-odd-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1438.223135905,
                             "isPremium": false
                         },
                         {
@@ -2047,7 +2046,7 @@
                             "slug": "/minimum-number-of-operations-to-sort-a-binary-tree-by-level/",
                             "src": "https://leetcode.cn/problems/minimum-number-of-operations-to-sort-a-binary-tree-by-level/",
                             "solution": null,
-                            "score": null,
+                            "score": 1635.1520858279,
                             "isPremium": false
                         },
                         {
@@ -2056,7 +2055,7 @@
                             "slug": "/cousins-in-binary-tree-ii/",
                             "src": "https://leetcode.cn/problems/cousins-in-binary-tree-ii/",
                             "solution": null,
-                            "score": null,
+                            "score": 1676.5007365375,
                             "isPremium": false
                         },
                         {
@@ -2065,7 +2064,7 @@
                             "slug": "/complete-binary-tree-inserter/",
                             "src": "https://leetcode.cn/problems/complete-binary-tree-inserter/",
                             "solution": null,
-                            "score": null,
+                            "score": 1690.9043557462,
                             "isPremium": false
                         },
                         {
@@ -2074,7 +2073,7 @@
                             "slug": "/check-completeness-of-a-binary-tree/",
                             "src": "https://leetcode.cn/problems/check-completeness-of-a-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1702.8035923458,
                             "isPremium": false
                         },
                         {
@@ -2083,7 +2082,7 @@
                             "slug": "/all-nodes-distance-k-in-binary-tree/",
                             "src": "https://leetcode.cn/problems/all-nodes-distance-k-in-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1663.1853149056,
                             "isPremium": false
                         },
                         {
@@ -2154,7 +2153,7 @@
                             "slug": "/linked-list-in-binary-tree/",
                             "src": "https://leetcode.cn/problems/linked-list-in-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1649.9728054796,
                             "isPremium": false
                         },
                         {
@@ -2314,7 +2313,7 @@
                             "slug": "/find-elements-in-a-contaminated-binary-tree/",
                             "src": "https://leetcode.cn/problems/find-elements-in-a-contaminated-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1439.5656079032,
                             "isPremium": false
                         },
                         {
@@ -2323,7 +2322,7 @@
                             "slug": "/path-in-zigzag-labelled-binary-tree/",
                             "src": "https://leetcode.cn/problems/path-in-zigzag-labelled-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1544.8391626032,
                             "isPremium": false
                         },
                         {
@@ -2332,7 +2331,7 @@
                             "slug": "/vertical-order-traversal-of-a-binary-tree/",
                             "src": "https://leetcode.cn/problems/vertical-order-traversal-of-a-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1675.9610355975,
                             "isPremium": false
                         },
                         {
@@ -2350,7 +2349,7 @@
                             "slug": "/distribute-coins-in-binary-tree/",
                             "src": "https://leetcode.cn/problems/distribute-coins-in-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1709.1461451873,
                             "isPremium": false
                         },
                         {
@@ -2413,7 +2412,7 @@
                             "slug": "/count-nodes-with-the-highest-score/",
                             "src": "https://leetcode.cn/problems/count-nodes-with-the-highest-score/",
                             "solution": null,
-                            "score": null,
+                            "score": 1911.7063530593,
                             "isPremium": false
                         },
                         {
@@ -2422,7 +2421,7 @@
                             "slug": "/make-costs-of-paths-equal-in-a-binary-tree/",
                             "src": "https://leetcode.cn/problems/make-costs-of-paths-equal-in-a-binary-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1917.1049672432,
                             "isPremium": false
                         },
                         {
@@ -2431,7 +2430,7 @@
                             "slug": "/cycle-length-queries-in-a-tree/",
                             "src": "https://leetcode.cn/problems/cycle-length-queries-in-a-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1948.489500779,
                             "isPremium": false
                         },
                         {
@@ -2440,7 +2439,7 @@
                             "slug": "/height-of-binary-tree-after-subtree-removal-queries/",
                             "src": "https://leetcode.cn/problems/height-of-binary-tree-after-subtree-removal-queries/",
                             "solution": null,
-                            "score": null,
+                            "score": 2298.6242048519,
                             "isPremium": false
                         },
                         {
@@ -2449,7 +2448,7 @@
                             "slug": "/hSRGyL/",
                             "src": "https://leetcode.cn/problems/hSRGyL/",
                             "solution": null,
-                            "score": null,
+                            "score": 1917.1049672432,
                             "isPremium": false
                         },
                         {
@@ -2537,8 +2536,7 @@
                     "isLeaf": false,
                     "children": []
                 }
-            ],
-            "isLeaf": false
+            ]
         },
         {
             "title": "三、一般树",
@@ -2555,7 +2553,7 @@
                             "slug": "/reachable-nodes-with-restrictions/",
                             "src": "https://leetcode.cn/problems/reachable-nodes-with-restrictions/",
                             "solution": null,
-                            "score": null,
+                            "score": 1476.9118898539,
                             "isPremium": false
                         },
                         {
@@ -2564,7 +2562,7 @@
                             "slug": "/reorder-routes-to-make-all-paths-lead-to-the-city-zero/",
                             "src": "https://leetcode.cn/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/",
                             "solution": null,
-                            "score": null,
+                            "score": 1633.6202302555,
                             "isPremium": false
                         },
                         {
@@ -2590,7 +2588,7 @@
                             "slug": "/time-needed-to-inform-all-employees/",
                             "src": "https://leetcode.cn/problems/time-needed-to-inform-all-employees/",
                             "solution": null,
-                            "score": null,
+                            "score": 1561.0553908973,
                             "isPremium": false
                         },
                         {
@@ -2599,7 +2597,7 @@
                             "slug": "/unit-conversion-i/",
                             "src": "https://leetcode.cn/problems/unit-conversion-i/",
                             "solution": null,
-                            "score": null,
+                            "score": 1579.8019590229,
                             "isPremium": false
                         },
                         {
@@ -2608,7 +2606,7 @@
                             "slug": "/minimum-time-to-collect-all-apples-in-a-tree/",
                             "src": "https://leetcode.cn/problems/minimum-time-to-collect-all-apples-in-a-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 1682.8882177724,
                             "isPremium": false
                         },
                         {
@@ -2617,7 +2615,7 @@
                             "slug": "/frog-position-after-t-seconds/",
                             "src": "https://leetcode.cn/problems/frog-position-after-t-seconds/",
                             "solution": null,
-                            "score": null,
+                            "score": 1823.8779711373,
                             "isPremium": false
                         },
                         {
@@ -2626,7 +2624,7 @@
                             "slug": "/count-pairs-of-connectable-servers-in-a-weighted-tree-network/",
                             "src": "https://leetcode.cn/problems/count-pairs-of-connectable-servers-in-a-weighted-tree-network/",
                             "solution": null,
-                            "score": null,
+                            "score": 1908.9411092109,
                             "isPremium": false
                         },
                         {
@@ -2635,7 +2633,7 @@
                             "slug": "/maximize-the-number-of-target-nodes-after-connecting-trees-i/",
                             "src": "https://leetcode.cn/problems/maximize-the-number-of-target-nodes-after-connecting-trees-i/",
                             "solution": null,
-                            "score": null,
+                            "score": 1926.7598451706,
                             "isPremium": false
                         },
                         {
@@ -2644,7 +2642,7 @@
                             "slug": "/most-profitable-path-in-a-tree/",
                             "src": "https://leetcode.cn/problems/most-profitable-path-in-a-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 2053.354609292,
                             "isPremium": false
                         },
                         {
@@ -2653,7 +2651,7 @@
                             "slug": "/maximize-the-number-of-target-nodes-after-connecting-trees-ii/",
                             "src": "https://leetcode.cn/problems/maximize-the-number-of-target-nodes-after-connecting-trees-ii/",
                             "solution": null,
-                            "score": null,
+                            "score": 2161.6248796745,
                             "isPremium": false
                         },
                         {
@@ -2662,7 +2660,7 @@
                             "slug": "/tree-of-coprimes/",
                             "src": "https://leetcode.cn/problems/tree-of-coprimes/",
                             "solution": null,
-                            "score": null,
+                            "score": 2231.8099102949,
                             "isPremium": false
                         },
                         {
@@ -2671,7 +2669,7 @@
                             "slug": "/count-paths-that-can-form-a-palindrome-in-a-tree/",
                             "src": "https://leetcode.cn/problems/count-paths-that-can-form-a-palindrome-in-a-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 2677.1682592316,
                             "isPremium": false
                         },
                         {
@@ -2706,7 +2704,7 @@
                             "slug": "/count-the-number-of-good-nodes/",
                             "src": "https://leetcode.cn/problems/count-the-number-of-good-nodes/",
                             "solution": null,
-                            "score": null,
+                            "score": 1565.8040286471,
                             "isPremium": false
                         },
                         {
@@ -2715,7 +2713,7 @@
                             "slug": "/number-of-nodes-in-the-sub-tree-with-the-same-label/",
                             "src": "https://leetcode.cn/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/",
                             "solution": null,
-                            "score": null,
+                            "score": 1808.787108831,
                             "isPremium": false
                         },
                         {
@@ -2724,7 +2722,7 @@
                             "slug": "/number-of-ways-to-assign-edge-weights-i/",
                             "src": "https://leetcode.cn/problems/number-of-ways-to-assign-edge-weights-i/",
                             "solution": null,
-                            "score": null,
+                            "score": 1845.3005046749,
                             "isPremium": false
                         },
                         {
@@ -2733,7 +2731,7 @@
                             "slug": "/minimum-increments-to-equalize-leaf-paths/",
                             "src": "https://leetcode.cn/problems/minimum-increments-to-equalize-leaf-paths/",
                             "solution": null,
-                            "score": null,
+                            "score": 1959.1438732568,
                             "isPremium": false
                         },
                         {
@@ -2742,7 +2740,7 @@
                             "slug": "/maximum-number-of-k-divisible-components/",
                             "src": "https://leetcode.cn/problems/maximum-number-of-k-divisible-components/",
                             "solution": null,
-                            "score": null,
+                            "score": 1967.5589835406,
                             "isPremium": false
                         },
                         {
@@ -2751,7 +2749,7 @@
                             "slug": "/minimum-fuel-cost-to-report-to-the-capital/",
                             "src": "https://leetcode.cn/problems/minimum-fuel-cost-to-report-to-the-capital/",
                             "solution": null,
-                            "score": null,
+                            "score": 2011.9703133514,
                             "isPremium": false
                         },
                         {
@@ -2760,7 +2758,7 @@
                             "slug": "/find-number-of-coins-to-place-in-tree-nodes/",
                             "src": "https://leetcode.cn/problems/find-number-of-coins-to-place-in-tree-nodes/",
                             "solution": null,
-                            "score": null,
+                            "score": 2276.9256951751,
                             "isPremium": false
                         },
                         {
@@ -2769,7 +2767,7 @@
                             "slug": "/create-components-with-same-value/",
                             "src": "https://leetcode.cn/problems/create-components-with-same-value/",
                             "solution": null,
-                            "score": null,
+                            "score": 2460.3152437576,
                             "isPremium": false
                         },
                         {
@@ -2778,7 +2776,7 @@
                             "slug": "/delete-tree-nodes/",
                             "src": "https://leetcode.cn/problems/delete-tree-nodes/",
                             "solution": null,
-                            "score": null,
+                            "score": 1732.7813534239,
                             "isPremium": true
                         },
                         {
@@ -2804,7 +2802,7 @@
                             "slug": "/minimum-increments-to-equalize-leaf-paths/",
                             "src": "https://leetcode.cn/problems/minimum-increments-to-equalize-leaf-paths/",
                             "solution": null,
-                            "score": null,
+                            "score": 1959.1438732568,
                             "isPremium": false
                         },
                         {
@@ -2813,7 +2811,7 @@
                             "slug": "/find-subtree-sizes-after-changes/",
                             "src": "https://leetcode.cn/problems/find-subtree-sizes-after-changes/",
                             "solution": null,
-                            "score": null,
+                            "score": 2045.9921455749,
                             "isPremium": false
                         }
                     ],
@@ -2830,7 +2828,7 @@
                             "slug": "/longest-path-with-different-adjacent-characters/",
                             "src": "https://leetcode.cn/problems/longest-path-with-different-adjacent-characters/",
                             "solution": null,
-                            "score": null,
+                            "score": 2126.3922279277,
                             "isPremium": false
                         },
                         {
@@ -2839,7 +2837,7 @@
                             "slug": "/find-minimum-diameter-after-merging-two-trees/",
                             "src": "https://leetcode.cn/problems/find-minimum-diameter-after-merging-two-trees/",
                             "solution": null,
-                            "score": null,
+                            "score": 2266.0997671519,
                             "isPremium": false
                         },
                         {
@@ -2848,7 +2846,7 @@
                             "slug": "/count-subtrees-with-max-distance-between-cities/",
                             "src": "https://leetcode.cn/problems/count-subtrees-with-max-distance-between-cities/",
                             "solution": null,
-                            "score": null,
+                            "score": 2308.6545905335,
                             "isPremium": false
                         },
                         {
@@ -2857,7 +2855,7 @@
                             "slug": "/difference-between-maximum-and-minimum-price-sum/",
                             "src": "https://leetcode.cn/problems/difference-between-maximum-and-minimum-price-sum/",
                             "solution": null,
-                            "score": null,
+                            "score": 2397.9722495587,
                             "isPremium": false
                         },
                         {
@@ -2866,7 +2864,7 @@
                             "slug": "/tree-diameter/",
                             "src": "https://leetcode.cn/problems/tree-diameter/",
                             "solution": null,
-                            "score": null,
+                            "score": 1792.076794537,
                             "isPremium": true
                         },
                         {
@@ -2901,7 +2899,7 @@
                             "slug": "/collect-coins-in-a-tree/",
                             "src": "https://leetcode.cn/problems/collect-coins-in-a-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 2711.8717381409,
                             "isPremium": false
                         }
                     ],
@@ -2918,7 +2916,7 @@
                             "slug": "/shortest-path-in-a-weighted-tree/",
                             "src": "https://leetcode.cn/problems/shortest-path-in-a-weighted-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 2312.2207190263,
                             "isPremium": false
                         },
                         {
@@ -2936,7 +2934,7 @@
                             "slug": "/minimum-score-after-removals-on-a-tree/",
                             "src": "https://leetcode.cn/problems/minimum-score-after-removals-on-a-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 2391.657270733,
                             "isPremium": false
                         },
                         {
@@ -2945,7 +2943,7 @@
                             "slug": "/check-if-dfs-strings-are-palindromes/",
                             "src": "https://leetcode.cn/problems/check-if-dfs-strings-are-palindromes/",
                             "solution": null,
-                            "score": null,
+                            "score": 2454.1900261902,
                             "isPremium": false
                         },
                         {
@@ -2954,7 +2952,7 @@
                             "slug": "/kth-smallest-path-xor-sum/",
                             "src": "https://leetcode.cn/problems/kth-smallest-path-xor-sum/",
                             "solution": null,
-                            "score": null,
+                            "score": 2645.836955523,
                             "isPremium": false
                         }
                     ],
@@ -2971,7 +2969,7 @@
                             "slug": "/kth-ancestor-of-a-tree-node/",
                             "src": "https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/",
                             "solution": null,
-                            "score": null,
+                            "score": 2115.0911494487,
                             "isPremium": false
                         },
                         {
@@ -2980,7 +2978,7 @@
                             "slug": "/number-of-ways-to-assign-edge-weights-ii/",
                             "src": "https://leetcode.cn/problems/number-of-ways-to-assign-edge-weights-ii/",
                             "solution": null,
-                            "score": null,
+                            "score": 2146.2256599416,
                             "isPremium": false
                         },
                         {
@@ -2989,7 +2987,7 @@
                             "slug": "/minimum-weighted-subgraph-with-the-required-paths-ii/",
                             "src": "https://leetcode.cn/problems/minimum-weighted-subgraph-with-the-required-paths-ii/",
                             "solution": null,
-                            "score": null,
+                            "score": 2410.8337079997,
                             "isPremium": false
                         },
                         {
@@ -2998,7 +2996,7 @@
                             "slug": "/find-weighted-median-node-in-tree/",
                             "src": "https://leetcode.cn/problems/find-weighted-median-node-in-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 2428.6733108929,
                             "isPremium": false
                         },
                         {
@@ -3007,7 +3005,7 @@
                             "slug": "/minimum-edge-weight-equilibrium-queries-in-a-tree/",
                             "src": "https://leetcode.cn/problems/minimum-edge-weight-equilibrium-queries-in-a-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 2507.9960044659,
                             "isPremium": false
                         },
                         {
@@ -3016,7 +3014,7 @@
                             "slug": "/minimize-the-total-price-of-the-trips/",
                             "src": "https://leetcode.cn/problems/minimize-the-total-price-of-the-trips/",
                             "solution": null,
-                            "score": null,
+                            "score": 2238.2830745228,
                             "isPremium": false
                         },
                         {
@@ -3042,7 +3040,7 @@
                             "slug": "/longest-special-path/",
                             "src": "https://leetcode.cn/problems/longest-special-path/",
                             "solution": null,
-                            "score": null,
+                            "score": 2434.6549114916,
                             "isPremium": false
                         },
                         {
@@ -3051,7 +3049,7 @@
                             "slug": "/longest-special-path-ii/",
                             "src": "https://leetcode.cn/problems/longest-special-path-ii/",
                             "solution": null,
-                            "score": null,
+                            "score": 2924.5453871317,
                             "isPremium": false
                         }
                     ],
@@ -3068,7 +3066,7 @@
                             "slug": "/smallest-missing-genetic-value-in-each-subtree/",
                             "src": "https://leetcode.cn/problems/smallest-missing-genetic-value-in-each-subtree/",
                             "solution": null,
-                            "score": null,
+                            "score": 2415.0089731911,
                             "isPremium": false
                         },
                         {
@@ -3077,7 +3075,7 @@
                             "slug": "/kth-smallest-path-xor-sum/",
                             "src": "https://leetcode.cn/problems/kth-smallest-path-xor-sum/",
                             "solution": null,
-                            "score": null,
+                            "score": 2645.836955523,
                             "isPremium": false
                         },
                         {
@@ -3086,7 +3084,7 @@
                             "slug": "/maximum-good-subtree-score/",
                             "src": "https://leetcode.cn/problems/maximum-good-subtree-score/",
                             "solution": null,
-                            "score": null,
+                            "score": 2359.6837796886,
                             "isPremium": false
                         }
                     ],
@@ -3103,7 +3101,7 @@
                             "slug": "/maximize-the-number-of-target-nodes-after-connecting-trees-i/",
                             "src": "https://leetcode.cn/problems/maximize-the-number-of-target-nodes-after-connecting-trees-i/",
                             "solution": null,
-                            "score": null,
+                            "score": 1926.7598451706,
                             "isPremium": false
                         }
                     ],
@@ -3120,7 +3118,7 @@
                             "slug": "/count-valid-paths-in-a-tree/",
                             "src": "https://leetcode.cn/problems/count-valid-paths-in-a-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 2428.3242593838,
                             "isPremium": false
                         },
                         {
@@ -3129,7 +3127,7 @@
                             "slug": "/number-of-good-paths/",
                             "src": "https://leetcode.cn/problems/number-of-good-paths/",
                             "solution": null,
-                            "score": null,
+                            "score": 2444.6660756903,
                             "isPremium": false
                         },
                         {
@@ -3138,7 +3136,7 @@
                             "slug": "/number-of-ways-to-reconstruct-a-tree/",
                             "src": "https://leetcode.cn/problems/number-of-ways-to-reconstruct-a-tree/",
                             "solution": null,
-                            "score": null,
+                            "score": 3018.4940165727,
                             "isPremium": false
                         },
                         {
@@ -3154,8 +3152,7 @@
                     "isLeaf": false,
                     "children": []
                 }
-            ],
-            "isLeaf": false
+            ]
         },
         {
             "title": "四、回溯",
@@ -3198,7 +3195,7 @@
                             "slug": "/sum-of-all-subset-xor-totals/",
                             "src": "https://leetcode.cn/problems/sum-of-all-subset-xor-totals/",
                             "solution": null,
-                            "score": null,
+                            "score": 1372.1152262488,
                             "isPremium": false
                         },
                         {
@@ -3207,7 +3204,7 @@
                             "slug": "/letter-case-permutation/",
                             "src": "https://leetcode.cn/problems/letter-case-permutation/",
                             "solution": null,
-                            "score": null,
+                            "score": 1341.5076441361,
                             "isPremium": false
                         },
                         {
@@ -3216,7 +3213,7 @@
                             "slug": "/partition-array-into-two-equal-product-subsets/",
                             "src": "https://leetcode.cn/problems/partition-array-into-two-equal-product-subsets/",
                             "solution": null,
-                            "score": null,
+                            "score": 1459.1307655664,
                             "isPremium": false
                         },
                         {
@@ -3225,7 +3222,7 @@
                             "slug": "/count-number-of-maximum-bitwise-or-subsets/",
                             "src": "https://leetcode.cn/problems/count-number-of-maximum-bitwise-or-subsets/",
                             "solution": null,
-                            "score": null,
+                            "score": 1567.6884942977,
                             "isPremium": false
                         },
                         {
@@ -3243,7 +3240,7 @@
                             "slug": "/maximum-rows-covered-by-columns/",
                             "src": "https://leetcode.cn/problems/maximum-rows-covered-by-columns/",
                             "solution": null,
-                            "score": null,
+                            "score": 1718.8256321624,
                             "isPremium": false
                         },
                         {
@@ -3252,7 +3249,7 @@
                             "slug": "/maximum-length-of-a-concatenated-string-with-unique-characters/",
                             "src": "https://leetcode.cn/problems/maximum-length-of-a-concatenated-string-with-unique-characters/",
                             "solution": null,
-                            "score": null,
+                            "score": 1719.945199874,
                             "isPremium": false
                         },
                         {
@@ -3261,7 +3258,7 @@
                             "slug": "/maximum-points-in-an-archery-competition/",
                             "src": "https://leetcode.cn/problems/maximum-points-in-an-archery-competition/",
                             "solution": null,
-                            "score": null,
+                            "score": 1868.9864493463,
                             "isPremium": false
                         },
                         {
@@ -3270,7 +3267,7 @@
                             "slug": "/maximum-score-words-formed-by-letters/",
                             "src": "https://leetcode.cn/problems/maximum-score-words-formed-by-letters/",
                             "solution": null,
-                            "score": null,
+                            "score": 1881.6810367589,
                             "isPremium": false
                         },
                         {
@@ -3279,7 +3276,7 @@
                             "slug": "/maximum-good-people-based-on-statements/",
                             "src": "https://leetcode.cn/problems/maximum-good-people-based-on-statements/",
                             "solution": null,
-                            "score": null,
+                            "score": 1979.9454101467,
                             "isPremium": false
                         },
                         {
@@ -3288,7 +3285,7 @@
                             "slug": "/the-number-of-beautiful-subsets/",
                             "src": "https://leetcode.cn/problems/the-number-of-beautiful-subsets/",
                             "solution": null,
-                            "score": null,
+                            "score": 2023.4303440211,
                             "isPremium": false
                         },
                         {
@@ -3297,7 +3294,7 @@
                             "slug": "/number-of-possible-sets-of-closing-branches/",
                             "src": "https://leetcode.cn/problems/number-of-possible-sets-of-closing-branches/",
                             "solution": null,
-                            "score": null,
+                            "score": 2077.4738459704,
                             "isPremium": false
                         },
                         {
@@ -3306,7 +3303,7 @@
                             "slug": "/maximum-number-of-achievable-transfer-requests/",
                             "src": "https://leetcode.cn/problems/maximum-number-of-achievable-transfer-requests/",
                             "solution": null,
-                            "score": null,
+                            "score": 2118.7923652824,
                             "isPremium": false
                         },
                         {
@@ -3315,7 +3312,7 @@
                             "slug": "/count-subtrees-with-max-distance-between-cities/",
                             "src": "https://leetcode.cn/problems/count-subtrees-with-max-distance-between-cities/",
                             "solution": null,
-                            "score": null,
+                            "score": 2308.6545905335,
                             "isPremium": false
                         },
                         {
@@ -3368,7 +3365,7 @@
                             "slug": "/find-the-punishment-number-of-an-integer/",
                             "src": "https://leetcode.cn/problems/find-the-punishment-number-of-an-integer/",
                             "solution": null,
-                            "score": null,
+                            "score": 1678.6245760413,
                             "isPremium": false
                         },
                         {
@@ -3377,7 +3374,7 @@
                             "slug": "/split-a-string-into-the-max-number-of-unique-substrings/",
                             "src": "https://leetcode.cn/problems/split-a-string-into-the-max-number-of-unique-substrings/",
                             "solution": null,
-                            "score": null,
+                            "score": 1739.5831401172,
                             "isPremium": false
                         },
                         {
@@ -3386,7 +3383,7 @@
                             "slug": "/splitting-a-string-into-descending-consecutive-values/",
                             "src": "https://leetcode.cn/problems/splitting-a-string-into-descending-consecutive-values/",
                             "solution": null,
-                            "score": null,
+                            "score": 1746.8757919578,
                             "isPremium": false
                         },
                         {
@@ -3448,7 +3445,7 @@
                             "slug": "/iterator-for-combination/",
                             "src": "https://leetcode.cn/problems/iterator-for-combination/",
                             "solution": null,
-                            "score": null,
+                            "score": 1591.4725328821,
                             "isPremium": false
                         },
                         {
@@ -3492,7 +3489,7 @@
                             "slug": "/minimum-time-to-break-locks-i/",
                             "src": "https://leetcode.cn/problems/minimum-time-to-break-locks-i/",
                             "solution": null,
-                            "score": null,
+                            "score": 1793.2112436729,
                             "isPremium": false
                         },
                         {
@@ -3519,7 +3516,7 @@
                             "slug": "/minimum-moves-to-spread-stones-over-grid/",
                             "src": "https://leetcode.cn/problems/minimum-moves-to-spread-stones-over-grid/",
                             "solution": null,
-                            "score": null,
+                            "score": 2001.4515854273,
                             "isPremium": false
                         },
                         {
@@ -3528,7 +3525,7 @@
                             "slug": "/construct-the-lexicographically-largest-valid-sequence/",
                             "src": "https://leetcode.cn/problems/construct-the-lexicographically-largest-valid-sequence/",
                             "solution": null,
-                            "score": null,
+                            "score": 2080.0425875741,
                             "isPremium": false
                         },
                         {
@@ -3537,7 +3534,7 @@
                             "slug": "/verbal-arithmetic-puzzle/",
                             "src": "https://leetcode.cn/problems/verbal-arithmetic-puzzle/",
                             "solution": null,
-                            "score": null,
+                            "score": 2250.0454791316,
                             "isPremium": false
                         },
                         {
@@ -3617,7 +3614,7 @@
                             "slug": "/letter-tile-possibilities/",
                             "src": "https://leetcode.cn/problems/letter-tile-possibilities/",
                             "solution": null,
-                            "score": null,
+                            "score": 1740.5014205942,
                             "isPremium": false
                         },
                         {
@@ -3626,7 +3623,7 @@
                             "slug": "/next-special-palindrome-number/",
                             "src": "https://leetcode.cn/problems/next-special-palindrome-number/",
                             "solution": null,
-                            "score": null,
+                            "score": 2445.0201515301,
                             "isPremium": false
                         },
                         {
@@ -3635,7 +3632,7 @@
                             "slug": "/longest-subsequence-repeated-k-times/",
                             "src": "https://leetcode.cn/problems/longest-subsequence-repeated-k-times/",
                             "solution": null,
-                            "score": null,
+                            "score": 2558.3297484354,
                             "isPremium": false
                         }
                     ],
@@ -3652,7 +3649,7 @@
                             "slug": "/generate-binary-strings-without-adjacent-zeros/",
                             "src": "https://leetcode.cn/problems/generate-binary-strings-without-adjacent-zeros/",
                             "solution": null,
-                            "score": null,
+                            "score": 1352.5455214631,
                             "isPremium": false
                         },
                         {
@@ -3661,7 +3658,7 @@
                             "slug": "/numbers-with-same-consecutive-differences/",
                             "src": "https://leetcode.cn/problems/numbers-with-same-consecutive-differences/",
                             "solution": null,
-                            "score": null,
+                            "score": 1432.9593207076,
                             "isPremium": false
                         },
                         {
@@ -3670,7 +3667,7 @@
                             "slug": "/finding-3-digit-even-numbers/",
                             "src": "https://leetcode.cn/problems/finding-3-digit-even-numbers/",
                             "solution": null,
-                            "score": null,
+                            "score": 1454.7459647138,
                             "isPremium": false
                         },
                         {
@@ -3679,7 +3676,7 @@
                             "slug": "/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/",
                             "src": "https://leetcode.cn/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/",
                             "solution": null,
-                            "score": null,
+                            "score": 1575.6324598387,
                             "isPremium": false
                         },
                         {
@@ -3688,7 +3685,7 @@
                             "slug": "/path-with-maximum-gold/",
                             "src": "https://leetcode.cn/problems/path-with-maximum-gold/",
                             "solution": null,
-                            "score": null,
+                            "score": 1663.2612318917,
                             "isPremium": false
                         },
                         {
@@ -3706,7 +3703,7 @@
                             "slug": "/unique-paths-iii/",
                             "src": "https://leetcode.cn/problems/unique-paths-iii/",
                             "solution": null,
-                            "score": null,
+                            "score": 1830.3165569278,
                             "isPremium": false
                         },
                         {
@@ -3715,7 +3712,7 @@
                             "slug": "/maximum-product-of-the-length-of-two-palindromic-subsequences/",
                             "src": "https://leetcode.cn/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/",
                             "solution": null,
-                            "score": null,
+                            "score": 1869.402439128,
                             "isPremium": false
                         },
                         {
@@ -3724,7 +3721,7 @@
                             "slug": "/maximum-score-words-formed-by-letters/",
                             "src": "https://leetcode.cn/problems/maximum-score-words-formed-by-letters/",
                             "solution": null,
-                            "score": null,
+                            "score": 1881.6810367589,
                             "isPremium": false
                         },
                         {
@@ -3733,7 +3730,7 @@
                             "slug": "/balanced-k-factor-decomposition/",
                             "src": "https://leetcode.cn/problems/balanced-k-factor-decomposition/",
                             "solution": null,
-                            "score": null,
+                            "score": 1917.0816751666,
                             "isPremium": false
                         },
                         {
@@ -3787,7 +3784,7 @@
                             "slug": "/number-of-valid-move-combinations-on-chessboard/",
                             "src": "https://leetcode.cn/problems/number-of-valid-move-combinations-on-chessboard/",
                             "solution": null,
-                            "score": null,
+                            "score": 2610.9906730644,
                             "isPremium": false
                         },
                         {
@@ -3796,7 +3793,7 @@
                             "slug": "/find-the-k-sum-of-an-array/",
                             "src": "https://leetcode.cn/problems/find-the-k-sum-of-an-array/",
                             "solution": null,
-                            "score": null,
+                            "score": 2647.8258771458,
                             "isPremium": false
                         },
                         {
@@ -3805,7 +3802,7 @@
                             "slug": "/maximum-product-of-subsequences-with-an-alternating-sum-equal-to-k/",
                             "src": "https://leetcode.cn/problems/maximum-product-of-subsequences-with-an-alternating-sum-equal-to-k/",
                             "solution": null,
-                            "score": null,
+                            "score": 2702.6772838353,
                             "isPremium": false
                         },
                         {
@@ -3886,7 +3883,7 @@
                             "slug": "/confusing-number-ii/",
                             "src": "https://leetcode.cn/problems/confusing-number-ii/",
                             "solution": null,
-                            "score": null,
+                            "score": 2076.8975497986,
                             "isPremium": true
                         }
                     ],
@@ -3903,7 +3900,7 @@
                             "slug": "/split-array-with-same-average/",
                             "src": "https://leetcode.cn/problems/split-array-with-same-average/",
                             "solution": null,
-                            "score": null,
+                            "score": 1982.5085994817,
                             "isPremium": false
                         },
                         {
@@ -3921,7 +3918,7 @@
                             "slug": "/partition-array-into-two-equal-product-subsets/",
                             "src": "https://leetcode.cn/problems/partition-array-into-two-equal-product-subsets/",
                             "solution": null,
-                            "score": null,
+                            "score": 1459.1307655664,
                             "isPremium": false
                         },
                         {
@@ -3930,7 +3927,7 @@
                             "slug": "/closest-subsequence-sum/",
                             "src": "https://leetcode.cn/problems/closest-subsequence-sum/",
                             "solution": null,
-                            "score": null,
+                            "score": 2363.5096568214,
                             "isPremium": false
                         },
                         {
@@ -3939,7 +3936,7 @@
                             "slug": "/tallest-billboard/",
                             "src": "https://leetcode.cn/problems/tallest-billboard/",
                             "solution": null,
-                            "score": null,
+                            "score": 2381.479024858,
                             "isPremium": false
                         },
                         {
@@ -3948,7 +3945,7 @@
                             "slug": "/partition-array-into-two-arrays-to-minimize-sum-difference/",
                             "src": "https://leetcode.cn/problems/partition-array-into-two-arrays-to-minimize-sum-difference/",
                             "solution": null,
-                            "score": null,
+                            "score": 2489.6652421066,
                             "isPremium": false
                         },
                         {
@@ -3957,7 +3954,7 @@
                             "slug": "/count-almost-equal-pairs-ii/",
                             "src": "https://leetcode.cn/problems/count-almost-equal-pairs-ii/",
                             "solution": null,
-                            "score": null,
+                            "score": 2545.1080433595,
                             "isPremium": false
                         },
                         {
@@ -3973,8 +3970,7 @@
                     "isLeaf": false,
                     "children": []
                 }
-            ],
-            "isLeaf": false
+            ]
         },
         {
             "title": "五、其他递归/分治",
@@ -3991,7 +3987,7 @@
                             "slug": "/fill-a-special-grid/",
                             "src": "https://leetcode.cn/problems/fill-a-special-grid/",
                             "solution": null,
-                            "score": null,
+                            "score": 1541.5352218724,
                             "isPremium": false
                         },
                         {
@@ -4009,7 +4005,7 @@
                             "slug": "/decoded-string-at-index/",
                             "src": "https://leetcode.cn/problems/decoded-string-at-index/",
                             "solution": null,
-                            "score": null,
+                            "score": 2010.5524756946,
                             "isPremium": false
                         },
                         {
@@ -4018,7 +4014,7 @@
                             "slug": "/find-the-k-th-character-in-string-game-ii/",
                             "src": "https://leetcode.cn/problems/find-the-k-th-character-in-string-game-ii/",
                             "solution": null,
-                            "score": null,
+                            "score": 2232.067965725,
                             "isPremium": false
                         },
                         {
@@ -4027,7 +4023,7 @@
                             "slug": "/find-kth-bit-in-nth-binary-string/",
                             "src": "https://leetcode.cn/problems/find-kth-bit-in-nth-binary-string/",
                             "solution": null,
-                            "score": null,
+                            "score": 1479.4837595809,
                             "isPremium": false
                         },
                         {
@@ -4036,7 +4032,7 @@
                             "slug": "/process-string-with-special-operations-ii/",
                             "src": "https://leetcode.cn/problems/process-string-with-special-operations-ii/",
                             "solution": null,
-                            "score": null,
+                            "score": 2010.6191768155,
                             "isPremium": false
                         },
                         {
@@ -4045,15 +4041,14 @@
                             "slug": "/beautiful-array/",
                             "src": "https://leetcode.cn/problems/beautiful-array/",
                             "solution": null,
-                            "score": null,
+                            "score": 2294.0981174197,
                             "isPremium": false
                         }
                     ],
                     "isLeaf": false,
                     "children": []
                 }
-            ],
-            "isLeaf": false
+            ]
         }
     ]
 }

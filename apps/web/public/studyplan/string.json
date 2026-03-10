@@ -33,7 +33,7 @@
                                     "slug": "/rotate-string/",
                                     "src": "https://leetcode.cn/problems/rotate-string/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1167.0749837258,
                                     "isPremium": false
                                 },
                                 {
@@ -42,7 +42,7 @@
                                     "slug": "/longest-happy-prefix/",
                                     "src": "https://leetcode.cn/problems/longest-happy-prefix/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1876.146019008,
                                     "isPremium": false
                                 },
                                 {
@@ -51,7 +51,7 @@
                                     "slug": "/number-of-subarrays-that-match-a-pattern-ii/",
                                     "src": "https://leetcode.cn/problems/number-of-subarrays-that-match-a-pattern-ii/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1894.5496928891,
                                     "isPremium": true
                                 },
                                 {
@@ -60,7 +60,7 @@
                                     "slug": "/form-array-by-concatenating-subarrays-of-another-array/",
                                     "src": "https://leetcode.cn/problems/form-array-by-concatenating-subarrays-of-another-array/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1588.3835994255,
                                     "isPremium": false
                                 },
                                 {
@@ -69,7 +69,7 @@
                                     "slug": "/maximum-repeating-substring/",
                                     "src": "https://leetcode.cn/problems/maximum-repeating-substring/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1395.5132479177,
                                     "isPremium": false
                                 },
                                 {
@@ -87,7 +87,7 @@
                                     "slug": "/shortest-string-that-contains-three-strings/",
                                     "src": "https://leetcode.cn/problems/shortest-string-that-contains-three-strings/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1855.561153694,
                                     "isPremium": false
                                 },
                                 {
@@ -96,7 +96,7 @@
                                     "slug": "/find-beautiful-indices-in-the-given-array-ii/",
                                     "src": "https://leetcode.cn/problems/find-beautiful-indices-in-the-given-array-ii/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2016.2085876254,
                                     "isPremium": true
                                 },
                                 {
@@ -114,7 +114,7 @@
                                     "slug": "/count-cells-in-overlapping-horizontal-and-vertical-substrings/",
                                     "src": "https://leetcode.cn/problems/count-cells-in-overlapping-horizontal-and-vertical-substrings/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2105.0143242092,
                                     "isPremium": false
                                 },
                                 {
@@ -132,7 +132,7 @@
                                     "slug": "/shortest-matching-substring/",
                                     "src": "https://leetcode.cn/problems/shortest-matching-substring/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2303.1891955206,
                                     "isPremium": false
                                 },
                                 {
@@ -141,7 +141,7 @@
                                     "slug": "/find-all-good-strings/",
                                     "src": "https://leetcode.cn/problems/find-all-good-strings/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2666.668150845,
                                     "isPremium": true
                                 },
                                 {
@@ -182,7 +182,7 @@
                                     "slug": "/sum-of-scores-of-built-strings/",
                                     "src": "https://leetcode.cn/problems/sum-of-scores-of-built-strings/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2220.0903365738,
                                     "isPremium": false
                                 },
                                 {
@@ -191,7 +191,7 @@
                                     "slug": "/minimum-time-to-revert-word-to-initial-state-ii/",
                                     "src": "https://leetcode.cn/problems/minimum-time-to-revert-word-to-initial-state-ii/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2277.9557248587,
                                     "isPremium": true
                                 },
                                 {
@@ -200,7 +200,7 @@
                                     "slug": "/count-prefix-and-suffix-pairs-ii/",
                                     "src": "https://leetcode.cn/problems/count-prefix-and-suffix-pairs-ii/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2327.5726642605,
                                     "isPremium": true
                                 },
                                 {
@@ -209,7 +209,7 @@
                                     "slug": "/find-the-occurrence-of-first-almost-equal-substring/",
                                     "src": "https://leetcode.cn/problems/find-the-occurrence-of-first-almost-equal-substring/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2509.3686325754,
                                     "isPremium": true
                                 },
                                 {
@@ -218,7 +218,7 @@
                                     "slug": "/minimum-number-of-valid-strings-to-form-target-ii/",
                                     "src": "https://leetcode.cn/problems/minimum-number-of-valid-strings-to-form-target-ii/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2661.736901362,
                                     "isPremium": true
                                 },
                                 {
@@ -227,7 +227,7 @@
                                     "slug": "/lexicographically-smallest-generated-string/",
                                     "src": "https://leetcode.cn/problems/lexicographically-smallest-generated-string/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2605.3698165497,
                                     "isPremium": false
                                 }
                             ],
@@ -243,7 +243,7 @@
                                     "slug": "/maximum-deletions-on-a-string/",
                                     "src": "https://leetcode.cn/problems/maximum-deletions-on-a-string/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2101.867342004,
                                     "isPremium": false
                                 },
                                 {
@@ -252,7 +252,7 @@
                                     "slug": "/count-beautiful-splits-in-an-array/",
                                     "src": "https://leetcode.cn/problems/count-beautiful-splits-in-an-array/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2364.6818184488,
                                     "isPremium": true
                                 },
                                 {
@@ -261,7 +261,7 @@
                                     "slug": "/number-of-ways-to-separate-numbers/",
                                     "src": "https://leetcode.cn/problems/number-of-ways-to-separate-numbers/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2817.267212602,
                                     "isPremium": true
                                 }
                             ],
@@ -311,7 +311,7 @@
                                     "slug": "/check-if-dfs-strings-are-palindromes/",
                                     "src": "https://leetcode.cn/problems/check-if-dfs-strings-are-palindromes/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2454.1900261902,
                                     "isPremium": true
                                 },
                                 {
@@ -320,7 +320,7 @@
                                     "slug": "/palindrome-partitioning-iv/",
                                     "src": "https://leetcode.cn/problems/palindrome-partitioning-iv/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1924.964639491,
                                     "isPremium": false
                                 },
                                 {
@@ -329,7 +329,7 @@
                                     "slug": "/maximum-product-of-the-length-of-two-palindromic-substrings/",
                                     "src": "https://leetcode.cn/problems/maximum-product-of-the-length-of-two-palindromic-substrings/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2690.5859406179,
                                     "isPremium": true
                                 },
                                 {
@@ -338,7 +338,7 @@
                                     "slug": "/longest-palindrome-after-substring-concatenation-ii/",
                                     "src": "https://leetcode.cn/problems/longest-palindrome-after-substring-concatenation-ii/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2397.700544564,
                                     "isPremium": true
                                 }
                             ],
@@ -363,7 +363,7 @@
                                     "slug": "/maximum-number-of-non-overlapping-palindrome-substrings/",
                                     "src": "https://leetcode.cn/problems/maximum-number-of-non-overlapping-palindrome-substrings/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2013.4354344791,
                                     "isPremium": false
                                 },
                                 {
@@ -372,7 +372,7 @@
                                     "slug": "/longest-palindrome-after-substring-concatenation-ii/",
                                     "src": "https://leetcode.cn/problems/longest-palindrome-after-substring-concatenation-ii/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2397.700544564,
                                     "isPremium": true
                                 },
                                 {
@@ -381,7 +381,7 @@
                                     "slug": "/longest-palindromic-path-in-graph/",
                                     "src": "https://leetcode.cn/problems/longest-palindromic-path-in-graph/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2463.3702712563,
                                     "isPremium": true
                                 },
                                 {
@@ -390,7 +390,7 @@
                                     "slug": "/minimum-steps-to-convert-string-with-operations/",
                                     "src": "https://leetcode.cn/problems/minimum-steps-to-convert-string-with-operations/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2492.7039894164,
                                     "isPremium": true
                                 }
                             ],
@@ -431,7 +431,7 @@
                                     "slug": "/distinct-echo-substrings/",
                                     "src": "https://leetcode.cn/problems/distinct-echo-substrings/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1836.536348078,
                                     "isPremium": false
                                 },
                                 {
@@ -440,7 +440,7 @@
                                     "slug": "/maximum-number-of-occurrences-of-a-substring/",
                                     "src": "https://leetcode.cn/problems/maximum-number-of-occurrences-of-a-substring/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1748.1523771585,
                                     "isPremium": false
                                 },
                                 {
@@ -449,7 +449,7 @@
                                     "slug": "/k-divisible-elements-subarrays/",
                                     "src": "https://leetcode.cn/problems/k-divisible-elements-subarrays/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1724.394164934,
                                     "isPremium": false
                                 },
                                 {
@@ -458,7 +458,7 @@
                                     "slug": "/lexicographically-smallest-string-after-reverse/",
                                     "src": "https://leetcode.cn/problems/lexicographically-smallest-string-after-reverse/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1414.30097998,
                                     "isPremium": true
                                 },
                                 {
@@ -467,7 +467,7 @@
                                     "slug": "/construct-string-with-minimum-cost/",
                                     "src": "https://leetcode.cn/problems/construct-string-with-minimum-cost/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2170.7313528632,
                                     "isPremium": true
                                 },
                                 {
@@ -476,7 +476,7 @@
                                     "slug": "/linked-list-in-binary-tree/",
                                     "src": "https://leetcode.cn/problems/linked-list-in-binary-tree/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1649.9728054796,
                                     "isPremium": false
                                 },
                                 {
@@ -485,7 +485,7 @@
                                     "slug": "/longest-duplicate-substring/",
                                     "src": "https://leetcode.cn/problems/longest-duplicate-substring/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2428.7985254341,
                                     "isPremium": false
                                 },
                                 {
@@ -503,7 +503,7 @@
                                     "slug": "/longest-common-subpath/",
                                     "src": "https://leetcode.cn/problems/longest-common-subpath/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2661.0670044656,
                                     "isPremium": true
                                 },
                                 {
@@ -512,7 +512,7 @@
                                     "slug": "/minimum-number-of-valid-strings-to-form-target-ii/",
                                     "src": "https://leetcode.cn/problems/minimum-number-of-valid-strings-to-form-target-ii/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2661.736901362,
                                     "isPremium": true
                                 },
                                 {
@@ -562,7 +562,7 @@
                                     "slug": "/orderly-queue/",
                                     "src": "https://leetcode.cn/problems/orderly-queue/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2096.6098086765,
                                     "isPremium": false
                                 },
                                 {
@@ -571,7 +571,7 @@
                                     "slug": "/find-the-lexicographically-largest-string-from-the-box-i/",
                                     "src": "https://leetcode.cn/problems/find-the-lexicographically-largest-string-from-the-box-i/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1761.8759092138,
                                     "isPremium": true
                                 },
                                 {
@@ -580,7 +580,7 @@
                                     "slug": "/lexicographically-smallest-string-after-applying-operations/",
                                     "src": "https://leetcode.cn/problems/lexicographically-smallest-string-after-applying-operations/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1992.0032292739,
                                     "isPremium": false
                                 },
                                 {
@@ -626,7 +626,7 @@
                                     "slug": "/stream-of-characters/",
                                     "src": "https://leetcode.cn/problems/stream-of-characters/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1970.4608098164,
                                     "isPremium": false
                                 },
                                 {
@@ -644,7 +644,7 @@
                                     "slug": "/string-matching-in-an-array/",
                                     "src": "https://leetcode.cn/problems/string-matching-in-an-array/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1223.3861903833,
                                     "isPremium": false
                                 },
                                 {
@@ -653,7 +653,7 @@
                                     "slug": "/construct-string-with-minimum-cost/",
                                     "src": "https://leetcode.cn/problems/construct-string-with-minimum-cost/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2170.7313528632,
                                     "isPremium": true
                                 },
                                 {
@@ -662,7 +662,7 @@
                                     "slug": "/length-of-the-longest-valid-substring/",
                                     "src": "https://leetcode.cn/problems/length-of-the-longest-valid-substring/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2203.5694828019,
                                     "isPremium": false
                                 },
                                 {
@@ -671,7 +671,7 @@
                                     "slug": "/minimum-number-of-valid-strings-to-form-target-ii/",
                                     "src": "https://leetcode.cn/problems/minimum-number-of-valid-strings-to-form-target-ii/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2661.736901362,
                                     "isPremium": true
                                 }
                             ],
@@ -694,7 +694,7 @@
                                     "slug": "/last-substring-in-lexicographical-order/",
                                     "src": "https://leetcode.cn/problems/last-substring-in-lexicographical-order/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1864.0948676111,
                                     "isPremium": false
                                 },
                                 {
@@ -703,7 +703,7 @@
                                     "slug": "/largest-merge-of-two-strings/",
                                     "src": "https://leetcode.cn/problems/largest-merge-of-two-strings/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1828.6438563573,
                                     "isPremium": false
                                 },
                                 {
@@ -712,7 +712,7 @@
                                     "slug": "/shortest-and-lexicographically-smallest-beautiful-string/",
                                     "src": "https://leetcode.cn/problems/shortest-and-lexicographically-smallest-beautiful-string/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1483.3041242255,
                                     "isPremium": true
                                 },
                                 {
@@ -721,7 +721,7 @@
                                     "slug": "/lexicographically-smallest-string-after-reverse/",
                                     "src": "https://leetcode.cn/problems/lexicographically-smallest-string-after-reverse/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1414.30097998,
                                     "isPremium": true
                                 },
                                 {
@@ -730,7 +730,7 @@
                                     "slug": "/construct-string-with-minimum-cost/",
                                     "src": "https://leetcode.cn/problems/construct-string-with-minimum-cost/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2170.7313528632,
                                     "isPremium": true
                                 },
                                 {
@@ -739,7 +739,7 @@
                                     "slug": "/longest-duplicate-substring/",
                                     "src": "https://leetcode.cn/problems/longest-duplicate-substring/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2428.7985254341,
                                     "isPremium": false
                                 },
                                 {
@@ -757,7 +757,7 @@
                                     "slug": "/longest-common-subpath/",
                                     "src": "https://leetcode.cn/problems/longest-common-subpath/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2661.0670044656,
                                     "isPremium": true
                                 },
                                 {
@@ -766,7 +766,7 @@
                                     "slug": "/string-matching-in-an-array/",
                                     "src": "https://leetcode.cn/problems/string-matching-in-an-array/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1223.3861903833,
                                     "isPremium": false
                                 },
                                 {
@@ -775,7 +775,7 @@
                                     "slug": "/count-distinct-subarrays-divisible-by-k-in-sorted-array/",
                                     "src": "https://leetcode.cn/problems/count-distinct-subarrays-divisible-by-k-in-sorted-array/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2248.0468276972,
                                     "isPremium": true
                                 },
                                 {
@@ -784,7 +784,7 @@
                                     "slug": "/shortest-uncommon-substring-in-an-array/",
                                     "src": "https://leetcode.cn/problems/shortest-uncommon-substring-in-an-array/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1635.1802054842,
                                     "isPremium": true
                                 },
                                 {
@@ -793,7 +793,7 @@
                                     "slug": "/longest-palindrome-after-substring-concatenation-ii/",
                                     "src": "https://leetcode.cn/problems/longest-palindrome-after-substring-concatenation-ii/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2397.700544564,
                                     "isPremium": true
                                 },
                                 {
@@ -802,7 +802,7 @@
                                     "slug": "/distinct-echo-substrings/",
                                     "src": "https://leetcode.cn/problems/distinct-echo-substrings/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1836.536348078,
                                     "isPremium": false
                                 },
                                 {
@@ -811,7 +811,7 @@
                                     "slug": "/count-beautiful-splits-in-an-array/",
                                     "src": "https://leetcode.cn/problems/count-beautiful-splits-in-an-array/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2364.6818184488,
                                     "isPremium": true
                                 },
                                 {
@@ -820,7 +820,7 @@
                                     "slug": "/substring-xor-queries/",
                                     "src": "https://leetcode.cn/problems/substring-xor-queries/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1959.2696201953,
                                     "isPremium": true
                                 },
                                 {
@@ -861,7 +861,7 @@
                                     "slug": "/number-of-matching-subsequences/",
                                     "src": "https://leetcode.cn/problems/number-of-matching-subsequences/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 1695.3076664977,
                                     "isPremium": false
                                 },
                                 {
@@ -879,7 +879,7 @@
                                     "slug": "/longest-subsequence-repeated-k-times/",
                                     "src": "https://leetcode.cn/problems/longest-subsequence-repeated-k-times/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2558.3297484354,
                                     "isPremium": true
                                 },
                                 {
@@ -920,7 +920,7 @@
                                     "slug": "/longest-common-prefix-of-k-strings-after-removal/",
                                     "src": "https://leetcode.cn/problems/longest-common-prefix-of-k-strings-after-removal/",
                                     "solution": null,
-                                    "score": null,
+                                    "score": 2289.6436758228,
                                     "isPremium": true
                                 },
                                 {
