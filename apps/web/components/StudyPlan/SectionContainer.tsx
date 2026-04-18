@@ -37,6 +37,26 @@ const SectionContainer = React.memo(
     const { getOption } = useOptions();
     const todoKey = getOption().key;
 
+    const stats = React.useMemo(() => {
+      const calculate = (sec: StudyPlanData.Section): { total: number; undone: number } => {
+        let total = sec.problems?.length || 0;
+        let undone = sec.problems?.filter((p) => {
+          const problemId = p.title.split(". ")[0];
+          if (!problemId) return true;
+          const pProgress = progress[problemId];
+          return !pProgress || pProgress === todoKey;
+        }).length || 0;
+
+        sec.children?.forEach((child) => {
+          const childStats = calculate(child);
+          total += childStats.total;
+          undone += childStats.undone;
+        });
+        return { total, undone };
+      };
+      return calculate(section);
+    }, [section, progress, todoKey]);
+
     const innerHtml = useRef<HTMLParagraphElement>(null);
     useEffect(() => {
       if (innerHtml.current) {
@@ -56,14 +76,6 @@ const SectionContainer = React.memo(
       return { __html: marked.parse(md) };
     };
 
-    const totalProblems = section.problems?.length || 0;
-    const undoneCount = section.problems?.filter((p) => {
-      const problemId = p.title.split(". ")[0];
-      if (!problemId) return true;
-      const pProgress = progress[problemId];
-      return !pProgress || pProgress === todoKey;
-    }).length || 0;
-
     const cardClasses = cn("scroll-mt-[70px]", {
       "w-full": section.children && section.children.length > 0,
     }, section.isLeaf ? "border" : "", "h-fit");
@@ -79,7 +91,22 @@ const SectionContainer = React.memo(
         className={cardClasses}
       >
         <CardHeader>
-          <CardTitle>{section.title}</CardTitle>
+          <div className="flex items-center justify-between">
+            <CardTitle>{section.title}</CardTitle>
+            {stats.total > 0 && (
+              <div className="text-xs bg-muted/50 px-2 py-1 rounded-md border">
+                {stats.undone === 0 ? (
+                  <span className="text-green-600 dark:text-green-400 flex items-center gap-1">
+                    <span>✓</span> 已完成 {stats.total} 题
+                  </span>
+                ) : (
+                  <span>
+                    进度 <span className="text-foreground">{stats.total - stats.undone}</span>/{stats.total}
+                  </span>
+                )}
+              </div>
+            )}
+          </div>
           {(section.summary || section.content) ? (
             <CardDescription>
               <p
@@ -94,14 +121,6 @@ const SectionContainer = React.memo(
           <div className={contentClasses}>
             {section.problems && section.problems.length ? (
               <div className="w-full flex-col">
-                <div className="mb-2 text-sm text-muted-foreground flex justify-between items-center px-2 py-1 border-b">
-                  <span>共 {totalProblems} 题</span>
-                  {undoneCount === 0 ? (
-                    <span className="text-green-600 dark:text-green-500 px-2">🎉 全部完成</span>
-                  ) : (
-                    <span className="px-2">还有 <span className="text-foreground font-semibold">{undoneCount}</span> 题未做</span>
-                  )}
-                </div>
                 <ProblemList problems={section.problems} />
               </div>
             ) : null}
