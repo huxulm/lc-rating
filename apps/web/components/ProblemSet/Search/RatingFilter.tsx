@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui-customized/button";
+import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { TableCol } from "../ProblemTable/types";
@@ -87,31 +88,66 @@ const RatingFilter = React.memo(
       });
     }, []);
 
+    const handleMinInputChange = useCallback(
+      (e: React.ChangeEvent<HTMLInputElement>) => {
+        let val = parseInt(e.target.value);
+        if (isNaN(val)) val = 0;
+        setRange((prev) => ({ ...prev, min: val }));
+      },
+      []
+    );
+
+    const handleMaxInputChange = useCallback(
+      (e: React.ChangeEvent<HTMLInputElement>) => {
+        let val = parseInt(e.target.value);
+        if (isNaN(val)) val = 0;
+        setRange((prev) => ({ ...prev, max: val }));
+      },
+      []
+    );
+
     return (
-      <div className="flex flex-wrap gap-2">
-        {buttons.map((button, i) => (
-          <Button
-            key={i}
-            variant={
-              range.min === button.min && range.max === button.max
-                ? "default"
-                : "outline"
-            }
-            onClick={() => {
-              handleButtonClick(button.min, button.max);
-            }}
-          >
-            {button.label}
-          </Button>
-        ))}
-        <Slider
-          value={[range.min, range.max]}
-          onValueChange={handleRangeChange}
-          min={1000}
-          max={4000}
-          step={1}
-          minStepsBetweenThumbs={1}
-        />
+      <div className="flex w-full flex-col gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          {buttons.map((button, i) => (
+            <Button
+              key={i}
+              variant={
+                range.min === button.min && range.max === button.max
+                  ? "default"
+                  : "outline"
+              }
+              onClick={() => {
+                handleButtonClick(button.min, button.max);
+              }}
+            >
+              {button.label}
+            </Button>
+          ))}
+        </div>
+        <div className="flex w-full items-center gap-4 text-sm">
+          <Input
+            type="number"
+            className="h-8 w-20 text-center"
+            value={range.min}
+            onChange={handleMinInputChange}
+          />
+          <Slider
+            className="flex-1"
+            value={[range.min, range.max]}
+            onValueChange={handleRangeChange}
+            min={1000}
+            max={4000}
+            step={1}
+            minStepsBetweenThumbs={1}
+          />
+          <Input
+            type="number"
+            className="h-8 w-20 text-center"
+            value={range.max}
+            onChange={handleMaxInputChange}
+          />
+        </div>
       </div>
     );
   }
