@@ -41,7 +41,7 @@ const SectionContainer = React.memo(
       const calculate = (sec: StudyPlanData.Section): { total: number; undone: number } => {
         let total = sec.problems?.length || 0;
         let undone = sec.problems?.filter((p) => {
-          const problemId = p.title.split(". ")[0];
+          const problemId = p.id;
           if (!problemId) return true;
           const pProgress = progress[problemId];
           return !pProgress || pProgress === todoKey;
