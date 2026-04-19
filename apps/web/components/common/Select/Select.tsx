@@ -1,11 +1,9 @@
 import { cn } from "@/lib/utils";
-import { Trigger } from "@radix-ui/react-navigation-menu";
+import * as Popover from "@radix-ui/react-popover";
 import {
   cloneElement,
   useCallback,
-  useEffect,
   useMemo,
-  useRef,
   useState,
 } from "react";
 import { SelectContext } from "./context";
@@ -32,7 +30,6 @@ const Select = ({
 }: SelectProps) => {
   const [internalValue, setInternalValue] = useState(value || "");
   const [isOpen, setIsOpen] = useState(false);
-  const wrapperRef = useRef<HTMLDivElement>(null);
 
   const actualValue = value !== undefined ? value : internalValue;
 
@@ -84,47 +81,33 @@ const Select = ({
     [actualValue, handleSelect, isOpen, displayLabel]
   );
 
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (
-        wrapperRef.current &&
-        e.target instanceof Node &&
-        !wrapperRef.current.contains(e.target)
-      ) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
   return (
     <SelectContext.Provider value={contextValue}>
-      <div
-        ref={wrapperRef}
-        className={cn("relative w-fit", className)}
-        style={style}
-      >
-        {trigger ?? <Trigger />}
-
-        <div
-          className={cn(
-            "absolute z-10 top-full left-1/2 -translate-x-1/2 translate-y-1",
-            "bg-white border rounded-sm shadow-sm p-1",
-            {
-              "transition-all duration-200 ease-in-out": true,
-              "-translate-y-1/2 scale-y-0 opacity-0": !isOpen,
-            }
-          )}
-        >
-          {optionsChildren.map((child) =>
-            cloneElement(child, {
-              key: child.props.value,
-            })
-          )}
-        </div>
-      </div>
+      <Popover.Root open={isOpen} onOpenChange={setIsOpen}>
+        <Popover.Trigger asChild>
+          <div
+            className={cn("relative w-fit", className)}
+            style={style}
+          >
+            {trigger}
+          </div>
+        </Popover.Trigger>
+        <Popover.Portal>
+          <Popover.Content
+            sideOffset={4}
+            className={cn(
+              "z-50 min-w",
+              "bg-white dark:bg-black border rounded-sm shadow-md p-1",
+            )}
+          >
+            {optionsChildren.map((child) =>
+              cloneElement(child, {
+                key: child.props.value,
+              })
+            )}
+          </Popover.Content>
+        </Popover.Portal>
+      </Popover.Root>
     </SelectContext.Provider>
   );
 };

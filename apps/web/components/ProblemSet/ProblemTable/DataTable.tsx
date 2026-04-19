@@ -19,10 +19,14 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 import { ArrowDownUp, MoveDown, MoveUp } from "lucide-react";
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { columnInitialTableState, getColumns } from "./columns";
 import { TableCol } from "./types";
 import { VisibilityControl } from "./VisibilityControl";
+import { useOptions } from "@/hooks/useOptions";
+import { useProgress } from "@/hooks/useProgress";
+import { Button } from "@/components/ui-customized/button";
+import { ProgressSelector } from "@/components/common/ProgressSelector";
 
 const { useTableState, setState } = createTableStore({
   key: LC_RATING_PROBLEMSET_TABLE_KEY,
@@ -44,6 +48,11 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
 }: DataTableProps<TData>) {
   const columns = useMemo(() => getColumns(), []);
 
+  const { getOption } = useOptions();
+  const { progress, setProgress, delProgress } = useProgress();
+  const [isMultiSelect, setIsMultiSelect] = useState(false);
+  const [lastSelectedIndex, setLastSelectedIndex] = useState<number | null>(null);
+
   const table = useReactTable({
     data,
     columns,
@@ -53,9 +62,30 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
     getSortedRowModel: getSortedRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     columnResizeMode: "onChange",
+    enableRowSelection: true,
   });
 
   const tableState = table.getState();
+
+  const handleApplyProgress = () => {
+    const selectedRows = table.getSelectedRowModel().rows;
+    if (selectedRows.length === 0) return;
+
+    const activeProgress = progress[""];
+    const todoOption = getOption();
+
+    selectedRows.forEach(row => {
+      const problemId = row.original.problem.id;
+      if (!activeProgress || activeProgress === todoOption.key) {
+        delProgress(problemId);
+      } else {
+        setProgress(problemId, activeProgress);
+      }
+    });
+
+    table.resetRowSelection();
+    delProgress("");
+  };
 
   useEffect(() => {
     table.resetSorting();
@@ -63,19 +93,44 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
 
   return (
     <div>
-      <div className="flex items-center justify-center p-2">
-        <PageControl
-          pageSize={tableState.pagination.pageSize}
-          onPageSizeChange={table.setPageSize}
-          pageIndex={tableState.pagination.pageIndex}
-          pageCount={table.getPageCount()}
-          onPageChange={table.setPageIndex}
-          canPreviousPage={table.getCanPreviousPage()}
-          canNextPage={table.getCanNextPage()}
-          previousPage={table.previousPage}
-          nextPage={table.nextPage}
-        />
-        <VisibilityControl table={table} />
+      <div className="flex flex-wrap items-center justify-between gap-2 p-2">
+        <div className="flex items-center gap-2">
+          <Button
+            variant={isMultiSelect ? "default" : "outline"}
+            onClick={() => {
+              const nextState = !isMultiSelect;
+              setIsMultiSelect(nextState);
+              if (!nextState) {
+                table.resetRowSelection();
+                setLastSelectedIndex(null);
+              }
+            }}
+          >
+            多选
+          </Button>
+          {isMultiSelect && (
+            <>
+              <div className="[&_.absolute]:min-w-max">
+                <ProgressSelector problemId="" />
+              </div>
+              <Button onClick={handleApplyProgress} variant="default">应用</Button>
+            </>
+          )}
+        </div>
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          <PageControl
+            pageSize={tableState.pagination.pageSize}
+            onPageSizeChange={table.setPageSize}
+            pageIndex={tableState.pagination.pageIndex}
+            pageCount={table.getPageCount()}
+            onPageChange={table.setPageIndex}
+            canPreviousPage={table.getCanPreviousPage()}
+            canNextPage={table.getCanNextPage()}
+            previousPage={table.previousPage}
+            nextPage={table.nextPage}
+          />
+          <VisibilityControl table={table} />
+        </div>
       </div>
 
       <Table>
@@ -93,9 +148,9 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
                     {header.isPlaceholder
                       ? null
                       : flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
-                        )}
+                        header.column.columnDef.header,
+                        header.getContext()
+                      )}
                     {(() => {
                       if (!header.column.getCanSort()) {
                         return null;
@@ -115,10 +170,31 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
         </TableHeader>
         <TableBody>
           {table.getRowModel().rows?.length ? (
-            table.getRowModel().rows.map((row) => (
+            table.getRowModel().rows.map((row, index) => (
               <TableRow
                 key={row.id}
-                data-state={row.getIsSelected() && "selected"}
+                data-state={row.getIsSelected() ? "selected" : undefined}
+                className={cn({ "cursor-pointer select-none": isMultiSelect })}
+                onClick={(e) => {
+                  if (!isMultiSelect) return;
+                  if (e.shiftKey && lastSelectedIndex !== null) {
+                    window.getSelection()?.removeAllRanges();
+                    const start = Math.min(lastSelectedIndex, index);
+                    const end = Math.max(lastSelectedIndex, index);
+                    const rows = table.getRowModel().rows;
+                    const newSelection = { ...table.getState().rowSelection };
+                    for (let i = start; i <= end; i++) {
+                      const currentRow = rows[i];
+                      if (currentRow) {
+                        newSelection[currentRow.id] = true;
+                      }
+                    }
+                    table.setRowSelection(newSelection);
+                  } else {
+                    row.toggleSelected();
+                    setLastSelectedIndex(index);
+                  }
+                }}
               >
                 {row.getVisibleCells().map((cell) => (
                   <TableCell key={cell.id} className="border border-muted-foreground/30">
