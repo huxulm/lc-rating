@@ -9,6 +9,7 @@ import { ChevronsDownUp, ChevronsUpDown } from "lucide-react";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { TableCol } from "../ProblemTable/types";
 import { RatingFilter } from "./RatingFilter";
+import { ProgressFilter } from "./ProgressFilter";
 import { TagFilter } from "./TagFilter";
 import { WordFilter } from "./WordFilter";
 
@@ -112,6 +113,13 @@ const Search = React.memo(({ data, onSearch }: SearchProps) => {
             registerReset={updateReset}
             onChange={updateIndices}
             onDebouncedConfirm={debouncedConfirm}
+          />
+          <Separator />
+          <ProgressFilter
+            name={"ProgressFilter"}
+            data={data}
+            registerReset={updateReset}
+            onChange={updateIndices}
           />
           <Separator />
           <TagFilter
