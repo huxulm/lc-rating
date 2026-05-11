@@ -16,13 +16,16 @@ const ProblemList = React.memo(({ problems }: ProblemListProps) => {
   const LC_HOST = linkLanguage === "zh" ? LC_HOST_ZH : LC_HOST_EN;
 
   useEffect(() => {
-    // 兼容迁移：以前存储使用的是 problem.title.split(". ")[0] 做 key
+    // 兼容迁移：以前存储使用的是 problem.title.split(". ")[0], 即problem.id做key
+    // 但title之前并未统一. 有 id. xxx 也有直接的 xxx 的情况
     // 现在改成了 problem.id，在首次渲染时将旧记录转移并删掉
     const { getProgress, setProgress, delProgress } = useProgressStore.getState();
     problems.forEach((problem) => {
       const newId = problem.id;
       if (!newId) return;
-      const oldId = problem.title.split(". ")[0];
+      const titleSplit = problem.title.split(".");
+      if (titleSplit.length > 1) return;
+      const oldId = titleSplit[0];
       if (oldId && oldId !== newId) {
         const pProgress = getProgress(oldId);
         if (pProgress && !getProgress(newId)) {
@@ -39,6 +42,8 @@ const ProblemList = React.memo(({ problems }: ProblemListProps) => {
     <div className="flex flex-col flex-1">
       {problems.map((problem) => {
         const problemId = problem.id;
+        const titleSplit = problem.title.split(". ");
+        const problemTitle = titleSplit.length === 2 ? titleSplit[1] : problem.title;
         const info = ratingInfo(problem.score || 0);
         return (
           <div key={problem.title}>
@@ -48,7 +53,7 @@ const ProblemList = React.memo(({ problems }: ProblemListProps) => {
                 target="_blank"
                 className="hover:underline"
               >
-                {problem.id + ". " + problem.title}
+                {problem.id + ". " + problemTitle}
               </Link>
               <div className="flex flex-row items-center gap-2">
                 {problem.score ? (
