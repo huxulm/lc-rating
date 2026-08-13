@@ -213,11 +213,11 @@ python 0x3f_discuss.py --uuid <讨论UUID> --o <输出路径>
 
 ## 📈 Star History
 
-<a href="https://star-history.com/#huxulm/lc-rating&Date">
+<a href="https://star-history.dera.page/#huxulm/lc-rating&Date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=huxulm/lc-rating&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=huxulm/lc-rating&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=huxulm/lc-rating&type=Date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://star-history.dera.page/svg?repos=huxulm/lc-rating&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://star-history.dera.page/svg?repos=huxulm/lc-rating&type=Date" />
+    <img alt="Star History Chart" src="https://star-history.dera.page/svg?repos=huxulm/lc-rating&type=Date" />
   </picture>
 </a>
 
