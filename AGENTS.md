@@ -25,7 +25,7 @@ Run from repo root unless noted.
 
 ## Testing Guidelines
 - There is no general test suite; rely on `pnpm lint` and `pnpm check-types` for CI safety.
-- Study plan parser tests: `pnpm --filter web test` (Node test runner via `tsx --test`, files `apps/web/scripts/studyplan/*.test.ts`).
+- Unit tests: `pnpm --filter web test` (Node test runner via `tsx --test`): study plan parser (`apps/web/scripts/studyplan/*.test.ts`) and problemset filters (`apps/web/components/ProblemSet/Search/*.test.ts`).
 - If you add automated tests, document how to run them in this file.
 
 ## Commit & Pull Request Guidelines

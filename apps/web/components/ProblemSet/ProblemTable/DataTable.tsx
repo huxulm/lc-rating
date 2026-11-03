@@ -87,8 +87,10 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
     delProgress("");
   };
 
+  // 筛选结果变化：清除排序（保留关键词相关度顺序）并回到第一页
   useEffect(() => {
     table.resetSorting();
+    table.setPageIndex(0);
   }, [data, table]);
 
   return (
