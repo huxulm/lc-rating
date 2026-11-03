@@ -50,7 +50,7 @@ const PageControl = React.memo(
     }, [canNextPage, nextPage]);
 
     return (
-      <div className="flex gap-4 flex-col md:flex-row items-center justify-between">
+      <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
         <div className="flex flex-row justify-center items-center space-x-2">
           <span className="text-sm text-muted-foreground text-nowrap">
             每页显示
@@ -77,7 +77,7 @@ const PageControl = React.memo(
             </PaginationItem>
 
             <PaginationItem>
-              <div>第 {`${pageIndex + 1} / ${pageCount}`} 页</div>
+              <div className="px-1 text-sm tabular-nums text-muted-foreground">第 <span className="font-medium text-foreground">{pageIndex + 1}</span> / {pageCount} 页</div>
             </PaginationItem>
 
             <PaginationItem>

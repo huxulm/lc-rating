@@ -83,29 +83,44 @@ const Search = React.memo(({ data, onSearch }: SearchProps) => {
       onOpenChange={setIsOpen}
       className="space-y-2 m-auto"
     >
-      <div className="flex justify-between space-x-4 px-4">
-        <WordFilter
-          name={"WordFilter"}
-          data={data}
-          registerReset={updateReset}
-          onChange={updateIndices}
-        />
-        <CollapsibleTrigger asChild>
-          {isOpen ? (
-            <Button variant="outline" size="sm">
-              <ChevronsDownUp className="h-4 w-4" />
-              <span>收起</span>
+      <div className="flex flex-col gap-3 md:flex-row md:items-start">
+        <div className="min-w-0 flex-1">
+          <WordFilter
+            name={"WordFilter"}
+            data={data}
+            registerReset={updateReset}
+            onChange={updateIndices}
+          />
+        </div>
+        <div className="flex shrink-0 items-center gap-2">
+          <CollapsibleTrigger asChild>
+            <Button variant="ghost" className="text-muted-foreground">
+              {isOpen ? (
+                <ChevronsDownUp className="h-4 w-4" />
+              ) : (
+                <ChevronsUpDown className="h-4 w-4" />
+              )}
+              <span>{isOpen ? "收起筛选" : "更多筛选"}</span>
             </Button>
-          ) : (
-            <Button variant="outline" size="sm">
-              <ChevronsUpDown className="h-4 w-4" />
-              <span>展开</span>
-            </Button>
-          )}
-        </CollapsibleTrigger>
+          </CollapsibleTrigger>
+          <Button
+            onClick={handleReset}
+            variant="outline"
+            className="cursor-pointer"
+          >
+            重置
+          </Button>
+          <Button
+            onClick={handleConfirm}
+            variant="default"
+            className="cursor-pointer"
+          >
+            确认
+          </Button>
+        </div>
       </div>
       <CollapsibleContent className="space-y-2">
-        <div className="flex flex-col items-start gap-4 p-4">
+        <div className="flex flex-col items-start gap-4 pt-2">
           <Separator />
           <RatingFilter
             name={"RatingFilter"}
@@ -130,22 +145,6 @@ const Search = React.memo(({ data, onSearch }: SearchProps) => {
           />
         </div>
       </CollapsibleContent>
-      <div className="flex justify-center gap-4">
-        <Button
-          onClick={handleConfirm}
-          variant="default"
-          className="cursor-pointer"
-        >
-          确认
-        </Button>
-        <Button
-          onClick={handleReset}
-          variant="destructive"
-          className="cursor-pointer"
-        >
-          重置
-        </Button>
-      </div>
     </Collapsible>
   );
 });

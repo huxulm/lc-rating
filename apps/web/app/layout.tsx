@@ -2,6 +2,7 @@ import { Navigator } from "@/components/common/Navigator";
 import { Provider } from "@/components/common/Provider";
 import { AuthTokenHandler } from "@/components/common/AuthTokenHandler";
 import { FloatingSyncButton } from "@/components/common/FloatingSyncButton";
+import { SiteFooter } from "@/components/common/SiteFooter";
 import { BASE_PATH } from "@/config/constants";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -18,11 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh" className="scroll-smooth" suppressHydrationWarning>
-      <body className="mt-[var(--navbar-height)]">
+      <body className="flex min-h-screen flex-col pt-[var(--navbar-height)] antialiased">
         <Provider>
           <AuthTokenHandler />
           <Navigator />
           {children}
+          <SiteFooter />
           <FloatingSyncButton />
         </Provider>
       </body>

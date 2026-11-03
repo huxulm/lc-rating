@@ -63,7 +63,7 @@ const generate = (
                 }));
               }}
               onClick={(e) => e.stopPropagation()}
-              className="h-8 w-20 text-xs"
+              className="h-7 w-16 bg-background px-2 text-xs md:text-xs"
             />
             <Input
               type="number"
@@ -78,7 +78,7 @@ const generate = (
                 }));
               }}
               onClick={(e) => e.stopPropagation()}
-              className="h-8 w-20 text-xs"
+              className="h-7 w-16 bg-background px-2 text-xs md:text-xs"
             />
           </div>
         </div>
@@ -89,8 +89,8 @@ const generate = (
       const rating = Q1.problem.rating;
       const info = ratingInfo(rating);
       return (
-        <div className="flex items-center justify-between">
-          <div className="flex flex-row justify-left items-center  gap-1">
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex min-w-0 flex-row items-center gap-1.5">
             <RatingCircle
               rating={rating}
               color={info.color}
@@ -99,6 +99,8 @@ const generate = (
             <I18NLink
               link={Q1.problem.link}
               title={`${Q1.problem.id}. ${Q1.problem.title}`}
+              tooltip={`${Q1.problem.id}. ${Q1.problem.title}`}
+              className="block max-w-[15rem] truncate 2xl:max-w-[19rem]"
               style={{
                 color: info.color,
               }}
@@ -108,7 +110,8 @@ const generate = (
             <I18NLink
               link={Q1.solution?.link}
               title={`🎈`}
-              className="text-xl hover:no-underline"
+              tooltip="查看 0x3F 题解"
+              className="shrink-0 text-lg transition-transform hover:scale-110 hover:no-underline"
             />
           ) : null}
         </div>

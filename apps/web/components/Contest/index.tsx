@@ -1,4 +1,5 @@
 "use client";
+import { PageContainer, PageHeader } from "@/components/common/PageHeader";
 import { LC_HOST_EN, LC_HOST_ZH } from "@/config/constants";
 import { useContests } from "@/hooks/useContests";
 import { useProblems } from "@/hooks/useProblems";
@@ -104,11 +105,13 @@ function ProblemSet() {
   }, [isPending]);
 
   return (
-    <div className="p-8 flex flex-col gap-4 font-song font-bold">
-      <div className="w-full m-auto">
-        <ProblemsTable tableData={tableData} isPending={isPending} />
-      </div>
-    </div>
+    <PageContainer>
+      <PageHeader
+        title="竞赛题目"
+        description="按场次浏览力扣周赛 / 双周赛题目，颜色与圆环代表难度分，🎈 链接到 0x3F 题解。"
+      />
+      <ProblemsTable tableData={tableData} isPending={isPending} />
+    </PageContainer>
   );
 }
 

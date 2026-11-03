@@ -7,7 +7,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
   --font-mono: var(--font-geist-mono);
   --font-song: "宋体", "Songti SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
   --color-sidebar-ring: var(--sidebar-ring);
@@ -80,7 +83,10 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --navbar-height: 64px; /* 导航栏高度 */
+  --navbar-height: 56px; /* 导航栏高度 */
+  --content-max-width: 1680px; /* 内容区最大宽度（竞赛表 4 列需要较宽）；改成 100% 即铺满窗口 */
+  --brand: oklch(0.68 0.17 52);
+  --brand-foreground: oklch(0.99 0 0);
 }
 
 .dark {
@@ -116,6 +122,8 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
+  --brand: oklch(0.76 0.15 58);
+  --brand-foreground: oklch(0.2 0 0);
 }
 
 @layer base {

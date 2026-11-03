@@ -9,7 +9,7 @@ interface ProblemsTableProps {
 
 export function ProblemsTable({ tableData, isPending }: ProblemsTableProps) {
   return (
-    <div className="rounded-md border">
+    <div className="overflow-hidden rounded-xl border bg-card shadow-xs">
       {isPending ? (
         <div className="space-y-2 p-4">
           <Skeleton className="h-8 w-1/1" />
