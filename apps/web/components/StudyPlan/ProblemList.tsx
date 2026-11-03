@@ -127,8 +127,9 @@ export const ProblemList = React.memo(({ problems }: ProblemListProps) => {
             </div>
           )}
           <ul className="grid grid-cols-[minmax(0,1fr)] gap-x-4 gap-y-0.5 xl:grid-cols-[repeat(2,minmax(0,1fr))]">
-            {g.items.map((p) => (
-              <ProblemRow key={`${p.id}-${p.slug}`} problem={p} host={host} />
+            {/* 原帖同一小节内偶有重复列出的题目，key 需带上位置避免冲突 */}
+            {g.items.map((p, idx) => (
+              <ProblemRow key={`${p.id}-${idx}`} problem={p} host={host} />
             ))}
           </ul>
         </div>
