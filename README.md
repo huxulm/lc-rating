@@ -1,228 +1,178 @@
+<div align="center">
+
 # LC-Rating
 
-<p align="center">
-  <a href="https://github.com/huxulm/lc-rating/stargazers">
-    <img src="https://img.shields.io/github/stars/huxulm/lc-rating?style=social" alt="GitHub stars">
-  </a>
-  <a href="https://github.com/huxulm/lc-rating/network/members">
-    <img src="https://img.shields.io/github/forks/huxulm/lc-rating?style=social" alt="GitHub forks">
-  </a>
-  <a href="https://github.com/huxulm/lc-rating/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/huxulm/lc-rating" alt="License">
-  </a>
-</p>
+**按难度分刷力扣：竞赛题分级 · 0x3F 算法题单 · 进度追踪**
 
-**为算法学习者打造的 LeetCode 刷题助手**
+[![在线访问](https://img.shields.io/badge/在线访问-huxulm.github.io%2Flc--rating-f97316?style=flat-square)](https://huxulm.github.io/lc-rating/)
+[![Release](https://img.shields.io/github/v/release/huxulm/lc-rating?style=flat-square&color=0ea5e9)](https://github.com/huxulm/lc-rating/releases)
+[![Stars](https://img.shields.io/github/stars/huxulm/lc-rating?style=flat-square&color=eab308)](https://github.com/huxulm/lc-rating/stargazers)
+[![License](https://img.shields.io/github/license/huxulm/lc-rating?style=flat-square)](LICENSE)
 
-一个专为算法新手和进阶者设计的 LeetCode 题目浏览与学习平台。通过科学的难度分级、系统化的题单分类和完善的进度跟踪，帮助你建立扎实的算法基础，从入门到精通，循序渐进提升解题能力。
+[**🚀 立即使用**](https://huxulm.github.io/lc-rating/) · [竞赛题目](https://huxulm.github.io/lc-rating/contest/) · [题库](https://huxulm.github.io/lc-rating/problemset/) · [算法题单](https://huxulm.github.io/lc-rating/studyplan/sliding_window/) · [更新日志](https://github.com/huxulm/lc-rating/releases)
 
-## 🎓 为什么选择 LC-Rating？
+<img src="docs/screenshots/contest.png" alt="竞赛题目" width="900" />
 
-### 适合算法新手的理由
+</div>
 
-- **🎯 精准难度评分** - 基于真实竞赛数据的难度评分系统，帮助你准确评估题目难度，避免盲目挑战过难题目而打击信心
-- **📚 系统化学习路径** - 集成灵茶山艾府(0x3F)精心整理的算法题单，按知识点分类，从基础到进阶循序渐进
-- **✅ 进度可视化** - 实时跟踪做题进度，清晰了解每个知识点的掌握情况，让学习成果一目了然
-- **🏷️ 智能标签分类** - 按算法类型快速筛选题目，帮助你专注于特定领域的刷题训练
-- **📊 竞赛题目分级** - 通过 Q1-Q4 的分级展示，了解不同难度层次的题目特点，为参加竞赛做准备
+## 这是什么
 
-## ✨ 核心功能
+LC-Rating 是一个面向算法学习者的力扣（LeetCode）刷题辅助站点。它把**周赛 / 双周赛题目**按真实竞赛数据得出的**难度分**整理出来，集成了**灵茶山艾府（0x3F）** 的全部算法题单，并帮你记录每道题的完成进度。
 
-- **📊 竞赛题目浏览**
-  - 查看历届 LeetCode 周赛/双周赛题目
-  - 按 Q1-Q4 分级展示，了解竞赛题目难度分布
-  - 帮助新手从简单的 Q1/Q2 题目入手，逐步提升
+- **不知道刷哪道？** 按难度分挑题，从略高于自己水平的题开始，循序渐进
+- **想系统学一个专题？** 跟着 0x3F 题单，按章节由浅入深
+- **想知道自己学到哪了？** 每道题都能标记进度，题单每一节都有完成统计
 
-- **📚 全题库检索**
-  - 完整的 LeetCode 题库视图
-  - 多维度筛选（难度、标签、是否会员题）
-  - 支持排序和快速搜索
+所有数据都是静态文件，打开即用，无需注册；登录 GitHub 后可选择把进度同步到云端。
 
-- **📖 专题题单系统**
-  - **二分查找** - 掌握高效查找算法
-  - **滑动窗口** - 解决子数组/子串问题
-  - **单调栈** - 处理区间极值问题
-  - **动态规划** - 从入门到精通 DP
-  - **图论算法** - 掌握图的遍历与应用
-  - **贪心算法** - 培养贪心思维
-  - **位运算** - 掌握位操作技巧
-  - **数据结构** - 熟练运用各类数据结构
-  - **字符串算法** - 字符串处理专题
-  - **树和二叉树** - 树形结构必备
-  - **网格图** - DFS/BFS 应用场景
-  - **数学** - 数学思维训练
+## 功能一览
 
-- **🎯 智能难度系统**
-  - 基于 zerotrac 的题目难度评分
-  - 可视化难度分布（未知、1000-1200、1200-1400...）
-  - 帮助选择适合自己水平的题目
+### 🏆 竞赛题目
 
-- **📈 学习进度管理**
-  - 本地存储做题记录
-  - 实时统计完成情况
-  - 激励持续学习
+按场次浏览历届周赛与双周赛的 Q1–Q4，题目颜色和圆环直观展示难度分，🎈 直达 0x3F 题解。每一列都能按难度分区间筛选和排序。
 
-- **🎨 人性化设计**
-  - 🌓 深色/浅色主题切换
-  - 🌏 中文/英文 LeetCode 链接切换
-  - 📱 响应式设计，支持移动端
+### 🔎 题库
 
-## 💡 使用建议（新手必读）
+<img src="docs/screenshots/problemset.png" alt="题库搜索与筛选" width="900" />
 
-1. **从题单入门** - 选择一个感兴趣的专题（如滑动窗口、二分查找），从简单题目开始
-2. **关注难度分级** - 建议新手从 1000-1400 分的题目开始，逐步提升
-3. **记录进度** - 使用进度跟踪功能，坚持每天刷题，养成习惯
-4. **循序渐进** - 不要急于求成，扎实掌握每个知识点后再进阶
-5. **参考题解** - 善用题目关联的题解链接，学习优秀解法
+- **即时搜索**：题号、题目、竞赛、题解、标签都能搜，空格分隔多个关键词；题号精确匹配优先，按 <kbd>/</kbd> 快速聚焦
+- **模糊搜索**：容忍错别字，按相似度排序
+- **组合筛选**：难度分区间、算法标签（任一 / 全部匹配）、完成进度、会员题，结果数量和已选条件一目了然
+- **批量标记**：多选题目一次性设置进度
 
-## 🛠️ 技术栈
+### 📚 算法题单
 
-- **框架**: [Next.js 16](https://nextjs.org/) + [React 19](https://react.dev/)
-- **语言**: [TypeScript](https://www.typescriptlang.org/)
-- **样式**: [Tailwind CSS](https://tailwindcss.com/)
-- **UI 组件**: [shadcn/ui](https://ui.shadcn.com/)
-- **构建工具**: [Turbo](https://turbo.build/)
-- **包管理**: [pnpm](https://pnpm.io/)
-- **数据获取**: [TanStack Query](https://tanstack.com/query/latest)
-- **Python 工具**: 题单数据生成工具
+<img src="docs/screenshots/studyplan.png" alt="题单页（深色模式）" width="900" />
 
-## 🚀 快速开始
+完整收录 0x3F 的 12 个算法题单（共 3600+ 题），与原帖逐条一致，**每周自动同步**：
 
-### 环境要求
+|                  |            |                    |              |
+| ---------------- | ---------- | ------------------ | ------------ |
+| 滑动窗口与双指针 | 二分算法   | 单调栈             | 网格图       |
+| 位运算           | 图论算法   | 动态规划           | 常用数据结构 |
+| 数学算法         | 贪心与思维 | 链表、二叉树与回溯 | 字符串       |
 
-- Node.js >= 18
-- pnpm >= 10.19.0
+- 章节层级与原帖一致，吸顶目录显示每一节的完成进度并跟随滚动高亮
+- 保留原帖的讲解、答疑、思考题与公式（KaTeX 渲染），以及每道题的备注、难度分和会员标记
+- 不知道从哪开始？先读 0x3F 的 [如何科学刷题](https://leetcode.cn/discuss/post/3141566/ru-he-ke-xue-shua-ti-by-endlesscheng-q3yd/)
 
-### 安装依赖
+### ✅ 进度与偏好
+
+- **进度追踪**：每道题可标记进度，进度选项（名称、颜色）可自定义
+- **数据同步**：进度默认保存在浏览器本地；可复制站点数据备份、粘贴导入到其他设备，或登录 GitHub 同步到云端
+- **偏好设置**：题目链接跳转力扣中国站或国际站、标签中英文切换、深色 / 浅色主题
+- **移动端友好**：手机上同样可以浏览题单、筛选题库
+
+## 关于难度分
+
+难度分来自 [zerotrac/leetcode_problem_rating](https://github.com/zerotrac/leetcode_problem_rating)：根据周赛 / 双周赛选手的实际通过情况，基于 Elo 等级分与极大似然估计计算得出，用来衡量题目的相对难度。
+
+| 难度分 | < 1200 | 1200–1400 | 1400–1600 | 1600–1900 | 1900–2100 | 2100–2400 | 2400–3000 | ≥ 3000 |
+| ------ | ------ | --------- | --------- | --------- | --------- | --------- | --------- | ------ |
+| 颜色   | ⚪ 灰  | 🟢 浅绿   | 🟢 绿     | 🟡 黄     | 🟠 橙     | 🟠 橙红   | 🔴 红     | 🟣 紫  |
+
+非周赛题目通常没有难度分；题单中标注「约」的分数为 0x3F 给出的估计值。
+
+**新手建议**：从 1000–1400 分的题目起步，做得比较顺之后再逐步提高；配合题单按专题练习，扎实掌握一个知识点再进阶。
+
+## 本地开发
+
+**环境要求**：Node.js ≥ 18、pnpm ≥ 10
 
 ```bash
-pnpm install
+pnpm install   # 安装依赖
+pnpm dev       # 启动开发服务器 → http://localhost:3001/lc-rating/
+pnpm build     # 构建静态站点
 ```
 
-### 开发模式
+常用检查：
 
 ```bash
-pnpm dev
+pnpm lint                 # ESLint
+pnpm check-types          # 类型检查
+pnpm --filter web test    # 单元测试（题单解析器、题库筛选）
 ```
 
-访问 [http://localhost:3001](http://localhost:3001) 查看应用。
-
-### 构建生产版本
-
-```bash
-pnpm build
-```
-
-## 📁 项目结构
+<details>
+<summary><b>项目结构</b></summary>
 
 ```
 lc-rating/
 ├── apps/
-│   └── web/                  # 主应用
-│       ├── app/              # Next.js App Router
-│       ├── components/       # React 组件
-│       │   ├── Contest/      # 竞赛相关组件
-│       │   ├── ProblemSet/   # 题库相关组件
-│       │   ├── StudyPlan/    # 题单相关组件
-│       │   └── common/       # 通用组件
-│       ├── hooks/            # React Hooks
-│       ├── types/            # TypeScript 类型定义
-│       ├── utils/            # 工具函数
-│       ├── scripts/studyplan/ # 题单数据生成脚本(TypeScript)
-│       └── public/           # 静态资源
-│           ├── problemset/   # 题库数据
-│           └── studyplan/    # 题单数据
-└── packages/                 # 共享包
-    ├── eslint-config/        # ESLint 配置
-    ├── tailwind-config/      # Tailwind 配置
-    ├── typescript-config/    # TypeScript 配置
-    └── ui/                   # UI 组件库
+│   ├── web/                     # 主站（Next.js App Router，静态导出）
+│   │   ├── app/                 # 路由：contest / problemset / studyplan
+│   │   ├── components/          # 按功能划分：Contest、ProblemSet、StudyPlan、common
+│   │   ├── hooks/               # 进度、筛选、设置等状态（zustand + localStorage）
+│   │   ├── scripts/studyplan/   # 题单数据生成脚本
+│   │   └── public/
+│   │       ├── problemset/      # 题目、竞赛、标签、题解数据
+│   │       └── studyplan/       # 12 个题单的 JSON
+│   └── v0/                      # 旧版站点
+└── packages/                    # 共享的 ESLint / Tailwind / TypeScript 配置与 UI 组件
 ```
 
-## 🔧 题单数据生成
+</details>
 
-题单数据来自灵茶山艾府在力扣讨论区发布的题单帖子。脚本通过力扣 GraphQL 接口获取帖子 Markdown 原文，
-确定性地解析出章节层级、题目、难度分与备注，生成 `apps/web/public/studyplan/<key>.json`。
+## 数据来源与更新
+
+| 数据                 | 来源                                                                                                                    | 更新方式                           |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| 竞赛题目、题库、题解 | 力扣 + [0x3F 题解](https://leetcode.cn/u/endlesscheng/)                                                                 | GitHub Actions 每周一自动抓取      |
+| 难度分               | [zerotrac/leetcode_problem_rating](https://github.com/zerotrac/leetcode_problem_rating)                                 | 随题库一起更新                     |
+| 算法题单             | [灵茶山艾府在力扣讨论区的题单帖子](https://leetcode.cn/discuss/post/3141566/ru-he-ke-xue-shua-ti-by-endlesscheng-q3yd/) | `StudyPlan Updater` 每周一自动同步 |
+
+题单脚本通过力扣 GraphQL 接口获取帖子的 Markdown 原文，确定性地解析出章节层级、题目、难度分与备注，生成 `apps/web/public/studyplan/<key>.json`：
 
 ```bash
 cd apps/web
 pnpm studyplan:update                # 更新全部题单
 pnpm studyplan:update dynamic graph  # 只更新指定题单（按 key 前缀匹配）
 pnpm studyplan:update --dry-run      # 只解析并打印统计，不写文件
-pnpm test                            # 解析器单元测试
 ```
 
-- 题单列表（key ↔ 帖子 uuid）在 `apps/web/scripts/studyplan/plans.ts`，新增题单时同时在 `config/constants.ts` 的 `STUDYPLANS` 中添加名称。
-- 若解析出的题目数比现有数据骤减 30% 以上，脚本会拒绝覆盖并以失败退出，提示帖子格式可能有变化。
-- CI：`.github/workflows/studyplan_updater.yml` 每周一自动运行并提交更新，也可在 Actions 页面手动触发。
+- 题单列表（key ↔ 帖子 uuid）在 [`scripts/studyplan/plans.ts`](apps/web/scripts/studyplan/plans.ts)；新增题单时同时在 `config/constants.ts` 的 `STUDYPLANS` 和 `components/common/studyPlanMeta.ts` 中补充名称与图标
+- 若解析出的题目数比现有数据骤减 30% 以上，脚本拒绝覆盖并以失败退出，提示原帖格式可能变化
 
-## 📄 开源协议
+## 参与贡献
 
-本项目采用 MIT 协议开源。
+欢迎提交 [Issue](https://github.com/huxulm/lc-rating/issues) 反馈问题或建议，也欢迎 PR：
 
-## 🙏 致谢
+1. Fork 并基于 `main` 新建分支
+2. 提交前运行 `pnpm lint`、`pnpm check-types` 与 `pnpm --filter web test`
+3. PR 中说明改动内容；涉及界面的改动请附截图
 
-- [zerotrac](https://github.com/zerotrac/leetcode_problem_rating) - 题目难度评分数据
-- [灵茶山艾府(0x3F)](https://space.bilibili.com/206214/) - 算法题单内容
-- [LeetCode](https://leetcode.cn/) - 题目数据来源
-- [lc-rating-backend](https://github.com/wnykuang/lc-rating-backend) - 提供云端数据支持的后端服务（Cloudflare Workers + D1）
-
-## 👥 贡献者
-
-感谢以下所有贡献者对本项目的支持：
+感谢所有贡献者：
 
 <table>
   <tr>
-    <td align="center">
-      <a href="https://github.com/huxulm">
-        <img src="https://github.com/huxulm.png" width="80px;" alt="huxulm"/>
-        <br />
-        <sub><b>Huxulm</b></sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/Autumnal-Joy">
-        <img src="https://github.com/Autumnal-Joy.png" width="80px;" alt="AutJ"/>
-        <br />
-        <sub><b>Autumnal-Joy</b></sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/Yorafa">
-        <img src="https://github.com/Yorafa.png" width="80px;" alt="Yorafa"/>
-        <br />
-        <sub><b>Tianle Wang</b></sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/wnykuang">
-        <img src="https://github.com/wnykuang.png" width="80px;" alt="wnykuang"/>
-        <br />
-        <sub><b>Wenyi Kuang</b></sub>
-      </a>
-    </td>
-    <td align="center">
-      <img src="https://github.com/github.png" width="80px;" alt="Kefei Qian"/>
-      <br />
-      <sub><b>Kefei Qian</b></sub>
-    </td>
+    <td align="center"><a href="https://github.com/huxulm"><img src="https://github.com/huxulm.png" width="64" alt="huxulm" /><br /><sub><b>Huxulm</b></sub></a></td>
+    <td align="center"><a href="https://github.com/Autumnal-Joy"><img src="https://github.com/Autumnal-Joy.png" width="64" alt="Autumnal-Joy" /><br /><sub><b>Autumnal-Joy</b></sub></a></td>
+    <td align="center"><a href="https://github.com/Yorafa"><img src="https://github.com/Yorafa.png" width="64" alt="Yorafa" /><br /><sub><b>Tianle Wang</b></sub></a></td>
+    <td align="center"><a href="https://github.com/wnykuang"><img src="https://github.com/wnykuang.png" width="64" alt="wnykuang" /><br /><sub><b>Wenyi Kuang</b></sub></a></td>
+    <td align="center"><img src="https://github.com/github.png" width="64" alt="Kefei Qian" /><br /><sub><b>Kefei Qian</b></sub></td>
   </tr>
 </table>
 
-## 📈 Star History
+## 致谢
+
+- [灵茶山艾府（0x3F）](https://space.bilibili.com/206214/)：算法题单与题解
+- [zerotrac](https://github.com/zerotrac/leetcode_problem_rating)：题目难度分
+- [lc-rating-backend](https://github.com/wnykuang/lc-rating-backend)：云端进度同步服务（Cloudflare Workers + D1）
+- [力扣（LeetCode）](https://leetcode.cn/)：题目数据
+
+## 许可证
+
+[MIT](LICENSE) © Huxulm and contributors
+
+<div align="center">
 
 <a href="https://star-history.com/#huxulm/lc-rating&Date">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=huxulm/lc-rating&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=huxulm/lc-rating&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=huxulm/lc-rating&type=Date" />
+    <img alt="Star History" src="https://api.star-history.com/svg?repos=huxulm/lc-rating&type=Date" width="600" />
   </picture>
 </a>
 
----
+如果这个项目对你有帮助，欢迎点个 ⭐️
 
-<p align="center">
-  <a href="https://github.com/huxulm/lc-rating/stargazers">
-    如果这个项目对你有帮助，欢迎 ⭐️ Star 支持！
-  </a>
-</p>
+</div>
