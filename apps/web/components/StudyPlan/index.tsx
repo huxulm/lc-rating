@@ -1,6 +1,8 @@
 "use client";
 
 import { PageContainer } from "@/components/common/PageHeader";
+import { STUDY_PLAN_META } from "@/components/common/studyPlanMeta";
+import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui-customized/button";
 import {
   Sheet,
@@ -41,6 +43,7 @@ function StudyPlan({ plan }: StudyPlanProps) {
   const [tocOpen, setTocOpen] = useState(false);
 
   const name = STUDYPLANS[plan as keyof typeof STUDYPLANS] ?? plan;
+  const meta = STUDY_PLAN_META.find((m) => m.key === plan);
   const overall = stats.get("root") ?? { total: 0, done: 0 };
   const percent = overall.total
     ? Math.round((overall.done / overall.total) * 100)
@@ -75,7 +78,14 @@ function StudyPlan({ plan }: StudyPlanProps) {
       {/* 题单头部 */}
       <header className="space-y-4">
         <div className="space-y-2">
-          <div className="text-sm font-medium text-brand">题单 · {name}</div>
+          <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
+            {meta && (
+              <span className={cn("grid size-7 place-items-center rounded-md", meta.tone)}>
+                <meta.icon className="size-4" />
+              </span>
+            )}
+            算法题单 · <span className="text-foreground">{name}</span>
+          </div>
           <h1 className="text-2xl font-semibold tracking-tight md:text-3xl">
             {studyPlan.title}
           </h1>
