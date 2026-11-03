@@ -1,0 +1,51 @@
+name: StudyPlan Updater
+
+on:
+  schedule:
+    - cron: "30 3 * * 1" # 每周一 UTC 03:30 / 北京时间 11:30 执行
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: studyplan-updater
+  cancel-in-progress: false
+
+jobs:
+  studyplan-updater:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --filter web...
+
+      - name: Test parser
+        run: pnpm --filter web test
+
+      - name: Fetch study plans
+        run: pnpm --filter web studyplan:update
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Commit changes
+        run: |
+          git add apps/web/public/studyplan
+          git diff --cached --quiet || git commit -m "Update studyplan🎈"
+
+      - name: Push changes
+        run: git push

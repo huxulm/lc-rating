@@ -153,4 +153,62 @@
   @apply mb-2 last:mb-0;
 }
 
+/* 题单说明 Markdown 排版 */
+.md-content {
+  @apply text-sm leading-relaxed text-foreground/85 break-words;
+}
+.md-content > * + * {
+  @apply mt-3;
+}
+.md-content h1,
+.md-content h2,
+.md-content h3,
+.md-content h4,
+.md-content h5,
+.md-content h6 {
+  @apply mt-5 mb-2 font-semibold text-foreground first:mt-0;
+}
+.md-content h4 {
+  @apply text-sm;
+}
+.md-content a,
+.md-inline a {
+  @apply text-brand underline-offset-4 hover:underline;
+}
+.md-content strong {
+  @apply font-semibold text-foreground;
+}
+.md-content ul {
+  @apply list-disc space-y-1 pl-5;
+}
+.md-content ol {
+  @apply list-decimal space-y-1 pl-5;
+}
+.md-content blockquote {
+  @apply border-l-2 border-brand/50 pl-3 text-muted-foreground;
+}
+.md-content img {
+  @apply my-2 max-h-80 w-auto max-w-full rounded-md border;
+}
+.md-content :not(pre) > code,
+.md-inline code {
+  @apply rounded bg-muted px-1 py-0.5 font-mono text-[0.85em];
+}
+.md-content pre {
+  @apply overflow-x-auto rounded-md border bg-background p-3 text-xs leading-relaxed;
+}
+.md-content table {
+  @apply block w-max max-w-full overflow-x-auto border-collapse text-xs;
+}
+.md-content th,
+.md-content td {
+  @apply border px-3 py-1.5;
+}
+.md-content th {
+  @apply bg-muted font-medium;
+}
+.md-content .katex-display {
+  @apply overflow-x-auto overflow-y-hidden py-1;
+}
+
 @import "./hl.css";

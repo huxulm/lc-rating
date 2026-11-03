@@ -1,26 +1,23 @@
 {
-  "title": "【算法题单】图论算法（DFS/BFS/拓扑排序/基环树/最短路/最小生成树/网络流）",
+  "title": "图论算法（DFS/BFS/拓扑排序/基环树/最短路/最小生成树/网络流）",
   "src": "https://leetcode.cn/circle/discuss/01LUak/",
-  "summary": "本题单系统梳理图论核心算法，涵盖图的遍历（DFS/BFS）、拓扑排序、最短路（Dijkstra/Floyd）、最小生成树（Kruskal/Prim）、欧拉路径、强连通分量、二分图染色、网络流（最大流/最小割/二分图匹配）等主题，并附有高质量模板、典型例题与思维扩展。适用于从入门到进阶的图论学习与刷题规划。",
+  "last_update": "2026-09-10",
   "children": [
     {
+      "id": "s1",
       "title": "一、图的遍历",
-      "src": null,
-      "summary": null,
       "problems": [],
       "children": [
         {
+          "id": "s1-1",
           "title": "§1.1 深度优先搜索（DFS）",
-          "src": null,
-          "summary": "找连通块、判断是否有环（如 207 题）等。部分题目做法不止一种。\n\n模板（计算每个连通块的大小）：\n\n```py\ndef solve(n: int, edges: List[List[int]]) -> List[int]:\n    # 节点编号从 0 到 n-1\n    g = [[] for _ in range(n)]\n    for x, y in edges:\n        g[x].append(y)\n        g[y].append(x)  # 无向图\n\n    vis = [False] * n\n\n    def dfs(x: int) -> int:\n        vis[x] = True  # 避免重复访问节点\n        size = 1\n        for y in g[x]:\n            if not vis[y]:\n                size += dfs(y)\n        return size\n\n    # 计算每个连通块的大小\n    ans = []\n    for i, b in enumerate(vis):\n        if not b:  # i 没有访问过\n            size = dfs(i)\n            ans.append(size)\n    return ans\n```",
           "problems": [
             {
               "id": "547",
               "title": "省份数量",
               "slug": "number-of-provinces",
               "src": "https://leetcode.cn/problems/number-of-provinces/",
-              "solution": null,
-              "score": 1383,
+              "score": null,
               "isPremium": false
             },
             {
@@ -28,8 +25,7 @@
               "title": "寻找图中是否存在路径",
               "slug": "find-if-path-exists-in-graph",
               "src": "https://leetcode.cn/problems/find-if-path-exists-in-graph/",
-              "solution": null,
-              "score": 1397,
+              "score": null,
               "isPremium": false
             },
             {
@@ -37,7 +33,6 @@
               "title": "所有可能的路径",
               "slug": "all-paths-from-source-to-target",
               "src": "https://leetcode.cn/problems/all-paths-from-source-to-target/",
-              "solution": null,
               "score": 1383,
               "isPremium": false
             },
@@ -46,7 +41,6 @@
               "title": "跳跃游戏 III",
               "slug": "jump-game-iii",
               "src": "https://leetcode.cn/problems/jump-game-iii/",
-              "solution": null,
               "score": 1397,
               "isPremium": false
             },
@@ -55,7 +49,6 @@
               "title": "钥匙和房间",
               "slug": "keys-and-rooms",
               "src": "https://leetcode.cn/problems/keys-and-rooms/",
-              "solution": null,
               "score": 1412,
               "isPremium": false
             },
@@ -64,7 +57,6 @@
               "title": "统计无向图中无法互相到达点对数",
               "slug": "count-unreachable-pairs-of-nodes-in-an-undirected-graph",
               "src": "https://leetcode.cn/problems/count-unreachable-pairs-of-nodes-in-an-undirected-graph/",
-              "solution": null,
               "score": 1604,
               "isPremium": false
             },
@@ -73,7 +65,6 @@
               "title": "连通网络的操作次数",
               "slug": "number-of-operations-to-make-network-connected",
               "src": "https://leetcode.cn/problems/number-of-operations-to-make-network-connected/",
-              "solution": null,
               "score": 1633,
               "isPremium": false
             },
@@ -82,7 +73,6 @@
               "title": "两个城市间路径的最小分数",
               "slug": "minimum-score-of-a-path-between-two-cities",
               "src": "https://leetcode.cn/problems/minimum-score-of-a-path-between-two-cities/",
-              "solution": null,
               "score": 1680,
               "isPremium": false
             },
@@ -91,7 +81,6 @@
               "title": "移除可疑的方法",
               "slug": "remove-methods-from-project",
               "src": "https://leetcode.cn/problems/remove-methods-from-project/",
-              "solution": null,
               "score": 1711,
               "isPremium": false
             },
@@ -100,7 +89,6 @@
               "title": "统计完全连通分量的数量",
               "slug": "count-the-number-of-complete-components",
               "src": "https://leetcode.cn/problems/count-the-number-of-complete-components/",
-              "solution": null,
               "score": 1769,
               "isPremium": false
             },
@@ -109,7 +97,6 @@
               "title": "有向无环图中一个节点的所有祖先",
               "slug": "all-ancestors-of-a-node-in-a-directed-acyclic-graph",
               "src": "https://leetcode.cn/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/",
-              "solution": null,
               "score": 1788,
               "isPremium": false
             },
@@ -118,7 +105,6 @@
               "title": "两天自由外汇交易后的最大货币数",
               "slug": "maximize-amount-after-two-days-of-conversions",
               "src": "https://leetcode.cn/problems/maximize-amount-after-two-days-of-conversions/",
-              "solution": null,
               "score": 1788,
               "isPremium": false
             },
@@ -127,16 +113,15 @@
               "title": "尽量减少恶意软件的传播",
               "slug": "minimize-malware-spread",
               "src": "https://leetcode.cn/problems/minimize-malware-spread/",
-              "solution": null,
               "score": 1869,
-              "isPremium": false
+              "isPremium": false,
+              "note": "附思考题"
             },
             {
               "id": "2101",
               "title": "引爆最多的炸弹",
               "slug": "detonate-the-maximum-bombs",
               "src": "https://leetcode.cn/problems/detonate-the-maximum-bombs/",
-              "solution": null,
               "score": 1880,
               "isPremium": false
             },
@@ -145,8 +130,7 @@
               "title": "账户合并",
               "slug": "accounts-merge",
               "src": "https://leetcode.cn/problems/accounts-merge/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": false
             },
             {
@@ -154,16 +138,15 @@
               "title": "课程表",
               "slug": "course-schedule",
               "src": "https://leetcode.cn/problems/course-schedule/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
+              "score": null,
+              "isPremium": false,
+              "note": "三色标记法判环"
             },
             {
               "id": "802",
               "title": "找到最终的安全状态",
               "slug": "find-eventual-safe-states",
               "src": "https://leetcode.cn/problems/find-eventual-safe-states/",
-              "solution": null,
               "score": 1962,
               "isPremium": false
             },
@@ -172,7 +155,6 @@
               "title": "交换元素后的最大交替和",
               "slug": "maximize-alternating-sum-using-swaps",
               "src": "https://leetcode.cn/problems/maximize-alternating-sum-using-swaps/",
-              "solution": null,
               "score": 1984,
               "isPremium": false
             },
@@ -181,7 +163,6 @@
               "title": "尽量减少恶意软件的传播 II",
               "slug": "minimize-malware-spread-ii",
               "src": "https://leetcode.cn/problems/minimize-malware-spread-ii/",
-              "solution": null,
               "score": 1985,
               "isPremium": false
             },
@@ -190,7 +171,6 @@
               "title": "找出知晓秘密的所有专家",
               "slug": "find-all-people-with-secret",
               "src": "https://leetcode.cn/problems/find-all-people-with-secret/",
-              "solution": null,
               "score": 2004,
               "isPremium": false
             },
@@ -199,7 +179,6 @@
               "title": "带权图里旅途的最小代价",
               "slug": "minimum-cost-walk-in-weighted-graph",
               "src": "https://leetcode.cn/problems/minimum-cost-walk-in-weighted-graph/",
-              "solution": null,
               "score": 2109,
               "isPremium": false
             },
@@ -208,8 +187,7 @@
               "title": "传递信息",
               "slug": "chuan-di-xin-xi",
               "src": "https://leetcode.cn/problems/chuan-di-xin-xi/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": false
             },
             {
@@ -217,8 +195,7 @@
               "title": "以图判树",
               "slug": "graph-valid-tree",
               "src": "https://leetcode.cn/problems/graph-valid-tree/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": true
             },
             {
@@ -226,23 +203,31 @@
               "title": "无向图中连通分量的数目",
               "slug": "number-of-connected-components-in-an-undirected-graph",
               "src": "https://leetcode.cn/problems/number-of-connected-components-in-an-undirected-graph/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": true
+            },
+            {
+              "id": "1298",
+              "title": "你能从盒子里获得的最大糖果数",
+              "slug": "maximum-candies-you-can-get-from-boxes",
+              "src": "https://leetcode.cn/problems/maximum-candies-you-can-get-from-boxes/",
+              "score": 1825,
+              "isPremium": false,
+              "group": "思维扩展"
             }
-          ]
+          ],
+          "children": [],
+          "summary": "找连通块、判断是否有环（如 207 题）等。部分题目**做法不止一种**。\n\n模板（计算每个连通块的大小）：\n\n```py [sol-Python3]\ndef solve(n: int, edges: list[list[int]]) -> list[int]:\n    # 节点编号从 0 到 n-1\n    g = [[] for _ in range(n)]\n    for x, y in edges:\n        g[x].append(y)\n        g[y].append(x)  # 无向图\n\n    vis = [False] * n\n\n    def dfs(x: int) -> int:\n        vis[x] = True  # 避免重复访问节点\n        size = 1\n        for y in g[x]:\n            if not vis[y]:\n                size += dfs(y)\n        return size\n\n    # 计算每个连通块的大小\n    ans = []\n    for i, b in enumerate(vis):\n        if not b:  # i 没有访问过\n            size = dfs(i)\n            ans.append(size)\n    return ans\n```\n\n```java [sol-Java]\nclass Solution {\n    public List<Integer> solve(int n, int[][] edges) {\n        // 节点编号从 0 到 n-1\n        List<Integer>[] g = new ArrayList[n];\n        Arrays.setAll(g, _ -> new ArrayList<>());\n        for (int[] e : edges) {\n            int x = e[0];\n            int y = e[1];\n            g[x].add(y);\n            g[y].add(x); // 无向图\n        }\n\n        // 计算每个连通块的大小\n        List<Integer> ans = new ArrayList<>();\n        boolean[] vis = new boolean[n];\n        for (int i = 0; i < n; i++) {\n            if (!vis[i]) { // i 没有访问过\n                int size = dfs(i, vis, g);\n                ans.add(size);\n            }\n        }\n        return ans;\n    }\n\n    private int dfs(int x, boolean[] vis, List<Integer>[] g) {\n        vis[x] = true; // 避免重复访问节点\n        int size = 1;\n        for (int y : g[x]) {\n            if (!vis[y]) {\n                size += dfs(y, vis, g);\n            }\n        }\n        return size;\n    }\n}\n```\n\n```cpp [sol-C++]\nvector<int> solve(int n, vector<vector<int>>& edges) {\n    // 节点编号从 0 到 n-1\n    vector<vector<int>> g(n);\n    for (auto& e : edges) {\n        int x = e[0], y = e[1];\n        g[x].push_back(y);\n        g[y].push_back(x); // 无向图\n    }\n\n    vector<int8_t> vis(n);\n\n    // lambda 递归\n    auto dfs = [&](this auto&& dfs, int x) -> int {\n        vis[x] = true; // 避免重复访问节点\n        int size = 1;\n        for (int y : g[x]) {\n            if (!vis[y]) {\n                size += dfs(y);\n            }\n        }\n        return size;\n    };\n\n    // 计算每个连通块的大小\n    vector<int> ans;\n    for (int i = 0; i < n; i++) {\n        if (!vis[i]) { // i 没有访问过\n            int size = dfs(i);\n            ans.push_back(size);\n        }\n    }\n    return ans;\n}\n```\n\n```go [sol-Go]\nfunc solve(n int, edges [][]int) (ans []int) {\n\t// 节点编号从 0 到 n-1\n\tg := make([][]int, n)\n\tfor _, e := range edges {\n\t\tx, y := e[0], e[1]\n\t\tg[x] = append(g[x], y)\n\t\tg[y] = append(g[y], x) // 无向图\n\t}\n\n\tvis := make([]bool, n)\n\n\tvar dfs func(int) int\n\tdfs = func(x int) int {\n\t\tvis[x] = true // 避免重复访问节点\n\t\tsize := 1\n\t\tfor _, y := range g[x] {\n\t\t\tif !vis[y] {\n\t\t\t\tsize += dfs(y)\n\t\t\t}\n\t\t}\n\t\treturn size\n\t}\n\n\t// 计算每个连通块的大小\n\tfor i, b := range vis {\n\t\tif !b { // i 没有访问过\n\t\t\tsize := dfs(i)\n\t\t\tans = append(ans, size)\n\t\t}\n\t}\n\treturn\n}\n```"
         },
         {
+          "id": "s1-2",
           "title": "§1.2 广度优先搜索（BFS）",
-          "src": null,
-          "summary": "求最短路等。要求边权都是 1（或者说都是同一个正数）。\n\n模板（单源最短路）：\n\n```py\n# 计算从 start 到各个节点的最短路长度\n# 如果节点不可达，则最短路长度为 -1\n# 节点编号从 0 到 n-1，边权均为 1\ndef bfs(n: int, edges: List[List[int]], start: int) -> List[int]:\n    g = [[] for _ in range(n)]\n    for x, y in edges:\n        g[x].append(y)\n        g[y].append(x)  # 无向图\n\n    dis = [-1] * n  # -1 表示尚未访问到\n    dis[start] = 0\n    q = deque([start])\n    while q:\n        x = q.popleft()\n        for y in g[x]:\n            if dis[y] < 0:\n                dis[y] = dis[x] + 1\n                q.append(y)\n    return dis\n```",
           "problems": [
             {
               "id": "3243",
               "title": "新增道路查询后的最短距离 I",
               "slug": "shortest-distance-after-road-addition-queries-i",
               "src": "https://leetcode.cn/problems/shortest-distance-after-road-addition-queries-i/",
-              "solution": null,
               "score": 1568,
               "isPremium": false
             },
@@ -251,7 +236,6 @@
               "title": "获取你好友已观看的视频",
               "slug": "get-watched-videos-by-your-friends",
               "src": "https://leetcode.cn/problems/get-watched-videos-by-your-friends/",
-              "solution": null,
               "score": 1653,
               "isPremium": false
             },
@@ -260,7 +244,6 @@
               "title": "按距离统计房屋对数目 I",
               "slug": "count-the-number-of-houses-at-a-certain-distance-i",
               "src": "https://leetcode.cn/problems/count-the-number-of-houses-at-a-certain-distance-i/",
-              "solution": null,
               "score": 1658,
               "isPremium": false
             },
@@ -269,7 +252,6 @@
               "title": "颜色交替的最短路径",
               "slug": "shortest-path-with-alternating-colors",
               "src": "https://leetcode.cn/problems/shortest-path-with-alternating-colors/",
-              "solution": null,
               "score": 1780,
               "isPremium": false
             },
@@ -278,7 +260,6 @@
               "title": "网络空闲的时刻",
               "slug": "the-time-when-the-network-becomes-idle",
               "src": "https://leetcode.cn/problems/the-time-when-the-network-becomes-idle/",
-              "solution": null,
               "score": 1865,
               "isPremium": false
             },
@@ -287,7 +268,6 @@
               "title": "图中的最短环",
               "slug": "shortest-cycle-in-a-graph",
               "src": "https://leetcode.cn/problems/shortest-cycle-in-a-graph/",
-              "solution": null,
               "score": 1904,
               "isPremium": false
             },
@@ -296,24 +276,55 @@
               "title": "公交路线",
               "slug": "bus-routes",
               "src": "https://leetcode.cn/problems/bus-routes/",
-              "solution": null,
               "score": 1964,
               "isPremium": false
+            },
+            {
+              "id": "3807",
+              "title": "修复边以遍历图的最小成本",
+              "slug": "minimum-cost-to-repair-edges-to-traverse-a-graph",
+              "src": "https://leetcode.cn/problems/minimum-cost-to-repair-edges-to-traverse-a-graph/",
+              "score": null,
+              "isPremium": true
             }
-          ]
+          ],
+          "children": [],
+          "summary": "求最短路等。要求边权都是 $1$（或者说都是同一个正数）。\n\n模板（单源最短路）：\n\n```py [sol-Python3]\n# 计算从 start 到各个节点的最短路长度\n# 如果节点不可达，则最短路长度为 -1\n# 节点编号从 0 到 n-1，边权均为 1\ndef bfs(n: int, edges: list[list[int]], start: int) -> list[int]:\n    g = [[] for _ in range(n)]\n    for x, y in edges:\n        g[x].append(y)\n        g[y].append(x)  # 无向图\n\n    dis = [-1] * n  # -1 表示尚未访问到\n    dis[start] = 0\n    q = deque([start])\n    while q:\n        x = q.popleft()\n        for y in g[x]:\n            if dis[y] < 0:\n                dis[y] = dis[x] + 1\n                q.append(y)\n    return dis\n```\n\n```java [sol-Java]\nclass Solution {\n    // 计算从 start 到各个节点的最短路长度\n    // 如果节点不可达，则最短路长度为 -1\n    // 节点编号从 0 到 n-1，边权均为 1\n    public int[] bfs(int n, int[][] edges, int start) {\n        List<Integer>[] g = new ArrayList[n];\n        Arrays.setAll(g, _ -> new ArrayList<>());\n        for (int[] e : edges) {\n            int x = e[0], y = e[1];\n            g[x].add(y);\n            g[y].add(x); // 无向图\n        }\n\n        int[] dis = new int[n];\n        Arrays.fill(dis, -1); // -1 表示尚未访问到\n        Queue<Integer> q = new ArrayDeque<>();\n        dis[start] = 0;\n        q.offer(start);\n        while (!q.isEmpty()) {\n            int x = q.poll();\n            for (int y : g[x]) {\n                if (dis[y] < 0) {\n                    dis[y] = dis[x] + 1;\n                    q.offer(y);\n                }\n            }\n        }\n        return dis;\n    }\n}\n```\n\n```cpp [sol-C++]\n// 计算从 start 到各个节点的最短路长度\n// 如果节点不可达，则最短路长度为 -1\n// 节点编号从 0 到 n-1，边权均为 1\nvector<int> bfs(int n, vector<vector<int>>& edges, int start) {\n    vector<vector<int>> g(n);\n    for (auto& e : edges) {\n        int x = e[0], y = e[1];\n        g[x].push_back(y);\n        g[y].push_back(x); // 无向图\n    }\n\n    vector<int> dis(n, -1); // -1 表示尚未访问到\n    queue<int> q;\n    dis[start] = 0;\n    q.push(start);\n    while (!q.empty()) {\n        int x = q.front();\n        q.pop();\n        for (int y : g[x]) {\n            if (dis[y] < 0) {\n                dis[y] = dis[x] + 1;\n                q.push(y);\n            }\n        }\n    }\n    return dis;\n}\n```\n\n```go [sol-Go]\n// 计算从 start 到各个节点的最短路长度\n// 如果节点不可达，则最短路长度为 -1\n// 节点编号从 0 到 n-1，边权均为 1\nfunc bfs(n int, edges [][]int, start int) []int {\n\tg := make([][]int, n)\n\tfor _, e := range edges {\n\t\tx, y := e[0], e[1]\n\t\tg[x] = append(g[x], y)\n\t\tg[y] = append(g[y], x) // 无向图\n\t}\n\n\tdis := make([]int, n)\n\tfor i := range dis {\n\t\tdis[i] = -1 // -1 表示尚未访问到\n\t}\n\tdis[start] = 0\n\tq := []int{start}\n\tfor len(q) > 0 {\n\t\tx := q[0]\n\t\tq = q[1:]\n\t\tfor _, y := range g[x] {\n\t\t\tif dis[y] < 0 {\n\t\t\t\tdis[y] = dis[x] + 1\n\t\t\t\tq = append(q, y)\n\t\t\t}\n\t\t}\n\t}\n\treturn dis\n}\n```"
         },
         {
+          "id": "s1-3",
           "title": "§1.3 图论建模 + BFS 最短路",
-          "src": null,
-          "summary": "把状态抽象成图上的点，用 BFS 遍历这张图，计算从初始状态到目标状态的最短路长度。\n\n可以锻炼状态设计能力。",
           "problems": [
+            {
+              "id": "322",
+              "title": "零钱兑换",
+              "slug": "coin-change",
+              "src": "https://leetcode.cn/problems/coin-change/",
+              "score": null,
+              "isPremium": false
+            },
+            {
+              "id": "279",
+              "title": "完全平方数",
+              "slug": "perfect-squares",
+              "src": "https://leetcode.cn/problems/perfect-squares/",
+              "score": null,
+              "isPremium": false
+            },
+            {
+              "id": "3877",
+              "title": "达到目标异或值的最少删除次数",
+              "slug": "minimum-removals-to-achieve-target-xor",
+              "src": "https://leetcode.cn/problems/minimum-removals-to-achieve-target-xor/",
+              "score": 1745,
+              "isPremium": false
+            },
             {
               "id": "433",
               "title": "最小基因变化",
               "slug": "minimum-genetic-mutation",
               "src": "https://leetcode.cn/problems/minimum-genetic-mutation/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": false
             },
             {
@@ -321,7 +332,6 @@
               "title": "转化为全零矩阵的最少反转次数",
               "slug": "minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix",
               "src": "https://leetcode.cn/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix/",
-              "solution": null,
               "score": 1811,
               "isPremium": false
             },
@@ -330,7 +340,6 @@
               "title": "滑动谜题",
               "slug": "sliding-puzzle",
               "src": "https://leetcode.cn/problems/sliding-puzzle/",
-              "solution": null,
               "score": 1815,
               "isPremium": false
             },
@@ -339,7 +348,6 @@
               "title": "打开转盘锁",
               "slug": "open-the-lock",
               "src": "https://leetcode.cn/problems/open-the-lock/",
-              "solution": null,
               "score": 1878,
               "isPremium": false
             },
@@ -348,7 +356,6 @@
               "title": "拆分合并数组",
               "slug": "split-and-merge-array-transformation",
               "src": "https://leetcode.cn/problems/split-and-merge-array-transformation/",
-              "solution": null,
               "score": 1982,
               "isPremium": false
             },
@@ -357,8 +364,7 @@
               "title": "删除无效的括号",
               "slug": "remove-invalid-parentheses",
               "src": "https://leetcode.cn/problems/remove-invalid-parentheses/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": false
             },
             {
@@ -366,8 +372,7 @@
               "title": "自由之路",
               "slug": "freedom-trail",
               "src": "https://leetcode.cn/problems/freedom-trail/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": false
             },
             {
@@ -375,7 +380,6 @@
               "title": "访问所有节点的最短路径",
               "slug": "shortest-path-visiting-all-nodes",
               "src": "https://leetcode.cn/problems/shortest-path-visiting-all-nodes/",
-              "solution": null,
               "score": 2201,
               "isPremium": false
             },
@@ -384,7 +388,6 @@
               "title": "相似度为 K 的字符串",
               "slug": "k-similar-strings",
               "src": "https://leetcode.cn/problems/k-similar-strings/",
-              "solution": null,
               "score": 2377,
               "isPremium": false
             },
@@ -393,26 +396,24 @@
               "title": "单词接龙",
               "slug": "word-ladder",
               "src": "https://leetcode.cn/problems/word-ladder/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
+              "score": null,
+              "isPremium": false,
+              "note": "双向广搜"
             },
             {
               "id": "488",
               "title": "祖玛游戏",
               "slug": "zuma-game",
               "src": "https://leetcode.cn/problems/zuma-game/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": false
             },
             {
-              "id": "1197",
-              "title": "进击的骑士",
-              "slug": "minimum-knight-moves",
-              "src": "https://leetcode.cn/problems/minimum-knight-moves/",
-              "solution": null,
-              "score": 0,
+              "id": "3991",
+              "title": "使用前缀反转对数组进行排序",
+              "slug": "sort-array-using-prefix-reversals",
+              "src": "https://leetcode.cn/problems/sort-array-using-prefix-reversals/",
+              "score": null,
               "isPremium": true
             },
             {
@@ -420,32 +421,84 @@
               "title": "最大汉明距离",
               "slug": "maximum-hamming-distances",
               "src": "https://leetcode.cn/problems/maximum-hamming-distances/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": true
+            },
+            {
+              "id": "2998",
+              "title": "使 X 和 Y 相等的最少操作次数",
+              "slug": "minimum-number-of-operations-to-make-x-and-y-equal",
+              "src": "https://leetcode.cn/problems/minimum-number-of-operations-to-make-x-and-y-equal/",
+              "score": 1795,
+              "isPremium": false,
+              "group": "专题：跳跃游戏"
+            },
+            {
+              "id": "1345",
+              "title": "跳跃游戏 IV",
+              "slug": "jump-game-iv",
+              "src": "https://leetcode.cn/problems/jump-game-iv/",
+              "score": 1810,
+              "isPremium": false,
+              "group": "专题：跳跃游戏"
+            },
+            {
+              "id": "2059",
+              "title": "转化数字的最小运算数",
+              "slug": "minimum-operations-to-convert-number",
+              "src": "https://leetcode.cn/problems/minimum-operations-to-convert-number/",
+              "score": 1850,
+              "isPremium": false,
+              "group": "专题：跳跃游戏"
+            },
+            {
+              "id": "1654",
+              "title": "到家的最少跳跃次数",
+              "slug": "minimum-jumps-to-reach-home",
+              "src": "https://leetcode.cn/problems/minimum-jumps-to-reach-home/",
+              "score": 2124,
+              "isPremium": false,
+              "group": "专题：跳跃游戏"
+            },
+            {
+              "id": "3629",
+              "title": "通过质数传送到达终点的最少跳跃次数",
+              "slug": "minimum-jumps-to-reach-end-via-prime-teleportation",
+              "src": "https://leetcode.cn/problems/minimum-jumps-to-reach-end-via-prime-teleportation/",
+              "score": 2139,
+              "isPremium": false,
+              "group": "专题：跳跃游戏"
+            },
+            {
+              "id": "LCP 09",
+              "title": "最小跳跃次数",
+              "slug": "zui-xiao-tiao-yue-ci-shu",
+              "src": "https://leetcode.cn/problems/zui-xiao-tiao-yue-ci-shu/",
+              "score": null,
+              "isPremium": false,
+              "group": "专题：跳跃游戏"
             }
-          ]
+          ],
+          "children": [],
+          "summary": "把状态抽象成图上的点，用 BFS 遍历这张图，计算从初始状态到目标状态的最短路长度。\n\n可以锻炼状态设计能力。\n\n注：关于**网格图**的 DFS 和 BFS，请看 [网格图题单](https://leetcode.cn/circle/discuss/YiXPXW/)。"
         }
       ]
     },
     {
+      "id": "s2",
       "title": "二、拓扑排序",
-      "src": null,
-      "summary": "![图论题单 图论算法 图论题目 LeetCode 力扣图论 灵茶山艾府](https://pic.leetcode.cn/1738131168-tWFNGZ-006-toposort.png)\n\n把拓扑排序想象成一个黑盒，给它一堆杂乱的先修课约束，它会给你一个井井有条的课程学习安排。\n\n这一种在图上的「排序」，可以把杂乱的点排成一排。前提条件是图中无环，从而保证每条边都是从排在前面的点，指向排在后面的点。即对于任意有向边 x→y，x 一定在 y 之前。",
       "problems": [],
       "children": [
         {
+          "id": "s2-1",
           "title": "§2.1 拓扑排序",
-          "src": null,
-          "summary": "模板：\n\n```py\n# 返回有向无环图（DAG）的其中一个拓扑序\n# 如果图中有环，返回空列表\n# 节点编号从 0 到 n-1\ndef topologicalSort(n: int, edges: List[List[int]]) -> List[int]:\n    g = [[] for _ in range(n)]\n    in_deg = [0] * n\n    for x, y in edges:\n        g[x].append(y)\n        in_deg[y] += 1  # 统计 y 的先修课数量\n\n    topo_order = []\n    q = deque(i for i, d in enumerate(in_deg) if d == 0)  # 没有先修课，可以直接上\n    while q:\n        x = q.popleft()\n        topo_order.append(x)\n        for y in g[x]:\n            in_deg[y] -= 1  # 修完 x 后，y 的先修课数量减一\n            if in_deg[y] == 0:  # y 的先修课全部上完\n                q.append(y)  # 加入学习队列\n\n    if len(topo_order) < n:  # 图中有环\n        return []\n    return topo_order\n```\n\n学习拓扑排序前，请先完成 [1557. 可以到达所有点的最少点数目](https://leetcode.cn/problems/minimum-number-of-vertices-to-reach-all-nodes/)，有助于理解拓扑排序。",
           "problems": [
             {
               "id": "210",
               "title": "课程表 II",
               "slug": "course-schedule-ii",
               "src": "https://leetcode.cn/problems/course-schedule-ii/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": false
             },
             {
@@ -453,7 +506,6 @@
               "title": "从给定原材料中找到所有可以做出的菜",
               "slug": "find-all-possible-recipes-from-given-supplies",
               "src": "https://leetcode.cn/problems/find-all-possible-recipes-from-given-supplies/",
-              "solution": null,
               "score": 1679,
               "isPremium": false
             },
@@ -462,7 +514,6 @@
               "title": "给定条件下构造矩阵",
               "slug": "build-a-matrix-with-conditions",
               "src": "https://leetcode.cn/problems/build-a-matrix-with-conditions/",
-              "solution": null,
               "score": 1961,
               "isPremium": false
             },
@@ -471,7 +522,6 @@
               "title": "找到最终的安全状态",
               "slug": "find-eventual-safe-states",
               "src": "https://leetcode.cn/problems/find-eventual-safe-states/",
-              "solution": null,
               "score": 1962,
               "isPremium": false
             },
@@ -480,7 +530,6 @@
               "title": "奇怪的打印机 II",
               "slug": "strange-printer-ii",
               "src": "https://leetcode.cn/problems/strange-printer-ii/",
-              "solution": null,
               "score": 2291,
               "isPremium": false
             },
@@ -489,8 +538,15 @@
               "title": "项目管理",
               "slug": "sort-items-by-groups-respecting-dependencies",
               "src": "https://leetcode.cn/problems/sort-items-by-groups-respecting-dependencies/",
-              "solution": null,
               "score": 2419,
+              "isPremium": false
+            },
+            {
+              "id": "1632",
+              "title": "矩阵转换后的排名",
+              "slug": "rank-transform-of-a-matrix",
+              "src": "https://leetcode.cn/problems/rank-transform-of-a-matrix/",
+              "score": 2530,
               "isPremium": false
             },
             {
@@ -498,7 +554,6 @@
               "title": "收集树中金币",
               "slug": "collect-coins-in-a-tree",
               "src": "https://leetcode.cn/problems/collect-coins-in-a-tree/",
-              "solution": null,
               "score": 2712,
               "isPremium": false
             },
@@ -507,8 +562,7 @@
               "title": "火星词典",
               "slug": "Jf1JuT",
               "src": "https://leetcode.cn/problems/Jf1JuT/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": false
             },
             {
@@ -516,50 +570,67 @@
               "title": "序列重建",
               "slug": "sequence-reconstruction",
               "src": "https://leetcode.cn/problems/sequence-reconstruction/",
-              "solution": null,
-              "score": 0,
-              "isPremium": true
+              "score": null,
+              "isPremium": true,
+              "note": "拓扑序是否唯一"
             },
             {
               "id": "3481",
               "title": "应用替换",
               "slug": "apply-substitutions",
               "src": "https://leetcode.cn/problems/apply-substitutions/",
-              "solution": null,
-              "score": 0,
-              "isPremium": true
+              "score": null,
+              "isPremium": true,
+              "note": "也可以记忆化搜索"
             },
             {
               "id": "269",
               "title": "火星词典",
               "slug": "alien-dictionary",
               "src": "https://leetcode.cn/problems/alien-dictionary/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": true
             },
             {
-              "id": "1059",
-              "title": "从始点到终点的所有路径",
-              "slug": "all-paths-from-source-lead-to-destination",
-              "src": "https://leetcode.cn/problems/all-paths-from-source-lead-to-destination/",
-              "solution": null,
-              "score": 0,
-              "isPremium": true
+              "id": "2371",
+              "title": "最小化网格中的最大值",
+              "slug": "minimize-maximum-value-in-a-grid",
+              "src": "https://leetcode.cn/problems/minimize-maximum-value-in-a-grid/",
+              "score": null,
+              "isPremium": true,
+              "note": "同 1632 题"
+            },
+            {
+              "id": "310",
+              "title": "最小高度树",
+              "slug": "minimum-height-trees",
+              "src": "https://leetcode.cn/problems/minimum-height-trees/",
+              "score": null,
+              "isPremium": false,
+              "group": "思维扩展"
+            },
+            {
+              "id": "1361",
+              "title": "验证二叉树",
+              "slug": "validate-binary-tree-nodes",
+              "src": "https://leetcode.cn/problems/validate-binary-tree-nodes/",
+              "score": null,
+              "isPremium": false,
+              "group": "思维扩展"
             }
-          ]
+          ],
+          "children": [],
+          "summary": "模板：\n\n```py [sol-Python3]\n# 返回有向无环图（DAG）的其中一个拓扑序\n# 如果图中有环，返回空列表\n# 节点编号从 0 到 n-1\ndef topologicalSort(n: int, edges: list[list[int]]) -> list[int]:\n    g = [[] for _ in range(n)]\n    in_deg = [0] * n\n    for x, y in edges:\n        g[x].append(y)\n        in_deg[y] += 1  # 统计 y 的先修课数量\n\n    topo_order = []\n    q = deque(i for i, d in enumerate(in_deg) if d == 0)  # 没有先修课，可以直接上\n    while q:\n        x = q.popleft()\n        topo_order.append(x)\n        for y in g[x]:\n            in_deg[y] -= 1  # 修完 x 后，y 的先修课数量减一\n            if in_deg[y] == 0:  # y 的先修课全部上完\n                q.append(y)  # 加入学习队列\n\n    if len(topo_order) < n:  # 图中有环\n        return []\n    return topo_order\n```\n\n```java [sol-Java]\nclass Solution {\n    // 返回有向无环图（DAG）的其中一个拓扑序\n    // 如果图中有环，返回空列表\n    // 节点编号从 0 到 n-1\n    public List<Integer> topologicalSort(int n, int[][] edges) {\n        List<Integer>[] g = new ArrayList[n];\n        Arrays.setAll(g, _ -> new ArrayList<>());\n        int[] inDeg = new int[n];\n        for (int[] e : edges) {\n            int x = e[0];\n            int y = e[1];\n            g[x].add(y);\n            inDeg[y]++; // 统计 y 的先修课数量\n        }\n\n        Queue<Integer> q = new ArrayDeque<>();\n        for (int i = 0; i < n; i++) {\n            if (inDeg[i] == 0) { // 没有先修课，可以直接上\n                q.offer(i); // 加入学习队列\n            }\n        }\n\n        List<Integer> topoOrder = new ArrayList<>();\n        while (!q.isEmpty()) {\n            int x = q.poll();\n            topoOrder.add(x);\n            for (int y : g[x]) {\n                inDeg[y]--; // 修完 x 后，y 的先修课数量减一\n                if (inDeg[y] == 0) { // y 的先修课全部上完\n                    q.offer(y); // 加入学习队列\n                }\n            }\n        }\n\n        if (topoOrder.size() < n) { // 图中有环\n            return List.of();\n        }\n        return topoOrder;\n    }\n}\n```\n\n```cpp [sol-C++]\n// 返回有向无环图（DAG）的其中一个拓扑序\n// 如果图中有环，返回空列表\n// 节点编号从 0 到 n-1\nvector<int> topologicalSort(int n, vector<vector<int>>& edges) {\n    vector<vector<int>> g(n);\n    vector<int> in_deg(n);\n    for (auto& e : edges) {\n        int x = e[0], y = e[1];\n        g[x].push_back(y);\n        in_deg[y]++; // 统计 y 的先修课数量\n    }\n\n    queue<int> q;\n    for (int i = 0; i < n; i++) {\n        if (in_deg[i] == 0) { // 没有先修课，可以直接上\n            q.push(i); // 加入学习队列\n        }\n    }\n\n    vector<int> topo_order;\n    while (!q.empty()) {\n        int x = q.front();\n        q.pop();\n        topo_order.push_back(x);\n        for (int y : g[x]) {\n            in_deg[y]--; // 修完 x 后，y 的先修课数量减一\n            if (in_deg[y] == 0) { // y 的先修课全部上完\n                q.push(y); // 加入学习队列\n            }\n        }\n    }\n\n    if (topo_order.size() < n) { // 图中有环\n        return {};\n    }\n    return topo_order;\n}\n```\n\n```go [sol-Go]\n// 返回有向无环图（DAG）的其中一个拓扑序\n// 如果图中有环，返回 nil\n// 节点编号从 0 到 n-1\nfunc topologicalSort(n int, edges [][]int) []int {\n\tg := make([][]int, n)\n\tinDeg := make([]int, n)\n\tfor _, e := range edges {\n\t\tx, y := e[0], e[1]\n\t\tg[x] = append(g[x], y)\n\t\tinDeg[y]++ // 统计 y 的先修课数量\n\t}\n\n\tq := make([]int, 0, n)\n\ttopoOrder := q\n\tfor i, d := range inDeg {\n\t\tif d == 0 { // 没有先修课，可以直接上\n\t\t\tq = append(q, i) // 加入学习队列\n\t\t}\n\t}\n\tfor len(q) > 0 {\n\t\tx := q[0]\n\t\tq = q[1:]\n\t\tfor _, y := range g[x] {\n\t\t\tinDeg[y]-- // 修完 x 后， y 的先修课数量减一\n\t\t\tif inDeg[y] == 0 { // y 的先修课全部上完\n\t\t\t\tq = append(q, y) // 加入学习队列\n\t\t\t}\n\t\t}\n\t}\n\n\tif cap(q) > 0 { // 图中有环\n\t\treturn nil\n\t}\n\treturn topoOrder[:n]\n}\n```\n\n学习拓扑排序前，请先完成 [1557. 可以到达所有点的最少点数目](https://leetcode.cn/problems/minimum-number-of-vertices-to-reach-all-nodes/)，有助于理解拓扑排序。"
         },
         {
+          "id": "s2-2",
           "title": "§2.2 在拓扑序上 DP",
-          "src": null,
-          "summary": "一般是刷表法。",
           "problems": [
             {
               "id": "851",
               "title": "喧闹和富有",
               "slug": "loud-and-rich",
               "src": "https://leetcode.cn/problems/loud-and-rich/",
-              "solution": null,
               "score": 1783,
               "isPremium": false
             },
@@ -568,7 +639,6 @@
               "title": "并行课程 III",
               "slug": "parallel-courses-iii",
               "src": "https://leetcode.cn/problems/parallel-courses-iii/",
-              "solution": null,
               "score": 2084,
               "isPremium": false
             },
@@ -577,8 +647,7 @@
               "title": "恢复网络路径",
               "slug": "network-recovery-pathways",
               "src": "https://leetcode.cn/problems/network-recovery-pathways/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": false
             },
             {
@@ -586,7 +655,6 @@
               "title": "有向图中最大颜色值",
               "slug": "largest-color-value-in-a-directed-graph",
               "src": "https://leetcode.cn/problems/largest-color-value-in-a-directed-graph/",
-              "solution": null,
               "score": 2313,
               "isPremium": false
             },
@@ -595,23 +663,22 @@
               "title": "并行课程",
               "slug": "parallel-courses",
               "src": "https://leetcode.cn/problems/parallel-courses/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": true
             }
-          ]
+          ],
+          "children": [],
+          "summary": "一般是刷表法。"
         },
         {
+          "id": "s2-3",
           "title": "§2.3 基环树",
-          "src": null,
-          "summary": "[基环树介绍](https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/solution/nei-xiang-ji-huan-shu-tuo-bu-pai-xu-fen-c1i1b/)",
           "problems": [
             {
               "id": "2359",
               "title": "找到离给定两个节点最近的节点",
               "slug": "find-closest-node-to-given-two-nodes",
               "src": "https://leetcode.cn/problems/find-closest-node-to-given-two-nodes/",
-              "solution": null,
               "score": 1715,
               "isPremium": false
             },
@@ -620,7 +687,6 @@
               "title": "图中的最长环",
               "slug": "longest-cycle-in-a-graph",
               "src": "https://leetcode.cn/problems/longest-cycle-in-a-graph/",
-              "solution": null,
               "score": 1897,
               "isPremium": false
             },
@@ -629,17 +695,16 @@
               "title": "冗余连接",
               "slug": "redundant-connection",
               "src": "https://leetcode.cn/problems/redundant-connection/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
+              "score": null,
+              "isPremium": false,
+              "note": "做法不止一种"
             },
             {
               "id": "685",
               "title": "冗余连接 II",
               "slug": "redundant-connection-ii",
               "src": "https://leetcode.cn/problems/redundant-connection-ii/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": false
             },
             {
@@ -647,7 +712,6 @@
               "title": "有向图访问计数",
               "slug": "count-visited-nodes-in-a-directed-graph",
               "src": "https://leetcode.cn/problems/count-visited-nodes-in-a-directed-graph/",
-              "solution": null,
               "score": 2210,
               "isPremium": false
             },
@@ -656,7 +720,6 @@
               "title": "参加会议的最多员工数",
               "slug": "maximum-employees-to-be-invited-to-a-meeting",
               "src": "https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/",
-              "solution": null,
               "score": 2449,
               "isPremium": false
             },
@@ -664,18 +727,17 @@
               "id": "2836",
               "title": "在传球游戏中最大化函数值",
               "slug": "maximize-value-of-function-in-a-ball-passing-game",
-              "src": "https://leetcode.cn/problems/maximize-value-of-function-in-a-ball-passing-game",
-              "solution": null,
+              "src": "https://leetcode.cn/problems/maximize-value-of-function-in-a-ball-passing-game/",
               "score": 2769,
-              "isPremium": false
+              "isPremium": false,
+              "note": "做法不止一种"
             },
             {
               "id": "LCP 21",
               "title": "追逐游戏",
               "slug": "Za25hA",
               "src": "https://leetcode.cn/problems/Za25hA/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": false
             },
             {
@@ -683,32 +745,40 @@
               "title": "无向图中到环的距离",
               "slug": "distance-to-a-cycle-in-undirected-graph",
               "src": "https://leetcode.cn/problems/distance-to-a-cycle-in-undirected-graph/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": true
+            },
+            {
+              "id": "287",
+              "title": "寻找重复数",
+              "slug": "find-the-duplicate-number",
+              "src": "https://leetcode.cn/problems/find-the-duplicate-number/",
+              "score": null,
+              "isPremium": false,
+              "group": "思维扩展"
             }
-          ]
+          ],
+          "children": [],
+          "summary": "[基环树介绍](https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/solution/nei-xiang-ji-huan-shu-tuo-bu-pai-xu-fen-c1i1b/)"
         }
-      ]
+      ],
+      "summary": "![图论题单 图论算法 图论题目 LeetCode 力扣图论 灵茶山艾府 灵神 灵神题单](https://pic.leetcode.cn/1738131168-tWFNGZ-006-toposort.png)\n\n把拓扑排序想象成一个黑盒，给它一堆杂乱的先修课约束，它会给你一个井井有条的课程学习安排。\n\n这一种在图上的「排序」，可以把杂乱的点排成一排。前提条件是图中无环，从而保证每条边都是从排在前面的点，指向排在后面的点。即对于任意有向边 $x\\to y$，$x$ 一定在 $y$ 之前。"
     },
     {
+      "id": "s3",
       "title": "三、最短路",
-      "src": null,
-      "summary": null,
       "problems": [],
       "children": [
         {
+          "id": "s3-1",
           "title": "§3.1 单源最短路：Dijkstra 算法",
-          "src": null,
-          "summary": "[Dijkstra 算法介绍](https://leetcode.cn/problems/network-delay-time/solution/liang-chong-dijkstra-xie-fa-fu-ti-dan-py-ooe8/)\n\n模板：\n\n```py\n# 返回从起点 start 到每个点的最短路长度 dis，如果节点 x 不可达，则 dis[x] = math.inf\n# 要求：没有负数边权\n# 时间复杂度 O(n + mlogm)，其中 m 是 edges 的长度。注意堆中有 O(m) 个元素\ndef shortestPathDijkstra(n: int, edges: List[List[int]], start: int) -> List[int]:\n    # 注：如果节点编号从 1 开始（而不是从 0 开始），可以把 n 加一\n    g = [[] for _ in range(n)]  # 邻接表\n    for x, y, wt in edges:\n        g[x].append((y, wt))\n        # g[y].append((x, wt))  # 无向图加上这行\n\n    dis = [inf] * n\n    dis[start] = 0  # 起点到自己的距离是 0\n    h = [(0, start)]  # 堆中保存 (起点到节点 x 的最短路长度，节点 x)\n\n    while h:\n        dis_x, x = heappop(h)\n        if dis_x > dis[x]:  # x 之前出堆过\n            continue\n        for y, wt in g[x]:\n            new_dis_y = dis_x + wt\n            if new_dis_y < dis[y]:\n                dis[y] = new_dis_y  # 更新 x 的邻居的最短路\n                # 懒更新堆：只插入数据，不更新堆中数据\n                # 相同节点可能有多个不同的 new_dis_y，除了最小的 new_dis_y，其余值都会触发上面的 continue\n                heappush(h, (new_dis_y, y))\n\n    return dis\n```",
           "problems": [
             {
               "id": "743",
               "title": "网络延迟时间",
               "slug": "network-delay-time",
               "src": "https://leetcode.cn/problems/network-delay-time/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": false
             },
             {
@@ -716,25 +786,24 @@
               "title": "到达最后一个房间的最少时间 I",
               "slug": "find-minimum-time-to-reach-last-room-i",
               "src": "https://leetcode.cn/problems/find-minimum-time-to-reach-last-room-i/",
-              "solution": null,
               "score": 1721,
-              "isPremium": false
+              "isPremium": false,
+              "note": "网格图"
             },
             {
               "id": "3112",
               "title": "访问消失节点的最少时间",
               "slug": "minimum-time-to-visit-disappearing-nodes",
               "src": "https://leetcode.cn/problems/minimum-time-to-visit-disappearing-nodes/",
-              "solution": null,
               "score": 1757,
-              "isPremium": false
+              "isPremium": false,
+              "note": "理解原理"
             },
             {
               "id": "2642",
               "title": "设计可以求最短路径的图类",
               "slug": "design-graph-with-shortest-path-calculator",
               "src": "https://leetcode.cn/problems/design-graph-with-shortest-path-calculator/",
-              "solution": null,
               "score": 1811,
               "isPremium": false
             },
@@ -743,7 +812,6 @@
               "title": "有向图中到达终点的最少时间",
               "slug": "minimum-time-to-reach-destination-in-directed-graph",
               "src": "https://leetcode.cn/problems/minimum-time-to-reach-destination-in-directed-graph/",
-              "solution": null,
               "score": 1845,
               "isPremium": false
             },
@@ -752,7 +820,6 @@
               "title": "概率最大的路径",
               "slug": "path-with-maximum-probability",
               "src": "https://leetcode.cn/problems/path-with-maximum-probability/",
-              "solution": null,
               "score": 1846,
               "isPremium": false
             },
@@ -761,7 +828,6 @@
               "title": "边反转的最小路径总成本",
               "slug": "minimum-cost-path-with-edge-reversals",
               "src": "https://leetcode.cn/problems/minimum-cost-path-with-edge-reversals/",
-              "solution": null,
               "score": 1854,
               "isPremium": false
             },
@@ -770,34 +836,41 @@
               "title": "到达最后一个房间的最少时间 II",
               "slug": "find-minimum-time-to-reach-last-room-ii",
               "src": "https://leetcode.cn/problems/find-minimum-time-to-reach-last-room-ii/",
-              "solution": null,
               "score": 1862,
-              "isPremium": false
+              "isPremium": false,
+              "note": "网格图"
             },
             {
               "id": "1631",
               "title": "最小体力消耗路径",
               "slug": "path-with-minimum-effort",
               "src": "https://leetcode.cn/problems/path-with-minimum-effort/",
-              "solution": null,
               "score": 1948,
-              "isPremium": false
+              "isPremium": false,
+              "note": "网格图 做法不止一种"
             },
             {
               "id": "1786",
               "title": "从第一个节点出发到最后一个节点的受限路径数",
               "slug": "number-of-restricted-paths-from-first-to-last-node",
               "src": "https://leetcode.cn/problems/number-of-restricted-paths-from-first-to-last-node/",
-              "solution": null,
               "score": 2079,
               "isPremium": false
+            },
+            {
+              "id": "3924",
+              "title": "有限重边的最小阈值路径",
+              "slug": "minimum-threshold-path-with-limited-heavy-edges",
+              "src": "https://leetcode.cn/problems/minimum-threshold-path-with-limited-heavy-edges/",
+              "score": 2080,
+              "isPremium": false,
+              "note": "也可以 0-1 BFS"
             },
             {
               "id": "3123",
               "title": "最短路径中的边",
               "slug": "find-edges-in-shortest-paths",
               "src": "https://leetcode.cn/problems/find-edges-in-shortest-paths/",
-              "solution": null,
               "score": 2093,
               "isPremium": false
             },
@@ -806,7 +879,6 @@
               "title": "到达目的地的方案数",
               "slug": "number-of-ways-to-arrive-at-destination",
               "src": "https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination/",
-              "solution": null,
               "score": 2095,
               "isPremium": false
             },
@@ -815,16 +887,15 @@
               "title": "水位上升的泳池中游泳",
               "slug": "swim-in-rising-water",
               "src": "https://leetcode.cn/problems/swim-in-rising-water/",
-              "solution": null,
               "score": 2097,
-              "isPremium": false
+              "isPremium": false,
+              "note": "网格图 做法不止一种"
             },
             {
               "id": "2662",
               "title": "前往目标的最小代价",
               "slug": "minimum-cost-of-a-path-with-special-roads",
               "src": "https://leetcode.cn/problems/minimum-cost-of-a-path-with-special-roads/",
-              "solution": null,
               "score": 2154,
               "isPremium": false
             },
@@ -833,8 +904,15 @@
               "title": "使两个整数相等的数位操作",
               "slug": "digit-operations-to-make-two-integers-equal",
               "src": "https://leetcode.cn/problems/digit-operations-to-make-two-integers-equal/",
-              "solution": null,
               "score": 2186,
+              "isPremium": false
+            },
+            {
+              "id": "3928",
+              "title": "购买苹果的最低成本 II",
+              "slug": "minimum-cost-to-buy-apples-ii",
+              "src": "https://leetcode.cn/problems/minimum-cost-to-buy-apples-ii/",
+              "score": 2187,
               "isPremium": false
             },
             {
@@ -842,25 +920,24 @@
               "title": "到达目的地的第二短时间",
               "slug": "second-minimum-time-to-reach-destination",
               "src": "https://leetcode.cn/problems/second-minimum-time-to-reach-destination/",
-              "solution": null,
               "score": 2202,
-              "isPremium": false
+              "isPremium": false,
+              "note": "也可以 BFS"
             },
             {
               "id": "3419",
               "title": "图的最大边权的最小值",
               "slug": "minimize-the-maximum-edge-weight-of-graph",
               "src": "https://leetcode.cn/problems/minimize-the-maximum-edge-weight-of-graph/",
-              "solution": null,
               "score": 2243,
-              "isPremium": false
+              "isPremium": false,
+              "note": "做法不止一种"
             },
             {
               "id": "882",
               "title": "细分图中的可到达节点",
               "slug": "reachable-nodes-in-subdivided-graph",
               "src": "https://leetcode.cn/problems/reachable-nodes-in-subdivided-graph/",
-              "solution": null,
               "score": 2328,
               "isPremium": false
             },
@@ -869,7 +946,6 @@
               "title": "得到要求路径的最小带权子图",
               "slug": "minimum-weighted-subgraph-with-the-required-paths",
               "src": "https://leetcode.cn/problems/minimum-weighted-subgraph-with-the-required-paths/",
-              "solution": null,
               "score": 2364,
               "isPremium": false
             },
@@ -878,16 +954,15 @@
               "title": "在网格图中访问一个格子的最少时间",
               "slug": "minimum-time-to-visit-a-cell-in-a-grid",
               "src": "https://leetcode.cn/problems/minimum-time-to-visit-a-cell-in-a-grid/",
-              "solution": null,
               "score": 2382,
-              "isPremium": false
+              "isPremium": false,
+              "note": "网格图"
             },
             {
               "id": "818",
               "title": "赛车",
               "slug": "race-car",
               "src": "https://leetcode.cn/problems/race-car/",
-              "solution": null,
               "score": 2392,
               "isPremium": false
             },
@@ -896,7 +971,6 @@
               "title": "规定时间内到达终点的最小花费",
               "slug": "minimum-cost-to-reach-destination-in-time",
               "src": "https://leetcode.cn/problems/minimum-cost-to-reach-destination-in-time/",
-              "solution": null,
               "score": 2413,
               "isPremium": false
             },
@@ -905,16 +979,15 @@
               "title": "K 站中转内最便宜的航班",
               "slug": "cheapest-flights-within-k-stops",
               "src": "https://leetcode.cn/problems/cheapest-flights-within-k-stops/",
-              "solution": null,
-              "score": 0,
-              "isPremium": false
+              "score": null,
+              "isPremium": false,
+              "note": "类似 1928 题"
             },
             {
               "id": "2699",
               "title": "修改图中的边权",
               "slug": "modify-graph-edge-weights",
               "src": "https://leetcode.cn/problems/modify-graph-edge-weights/",
-              "solution": null,
               "score": 2874,
               "isPremium": false
             },
@@ -923,8 +996,7 @@
               "title": "隐藏网格下的最小消耗路径",
               "slug": "minimum-path-cost-in-a-hidden-grid",
               "src": "https://leetcode.cn/problems/minimum-path-cost-in-a-hidden-grid/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": true
             },
             {
@@ -932,8 +1004,7 @@
               "title": "前往目标城市的最小费用",
               "slug": "minimum-cost-to-reach-city-with-discounts",
               "src": "https://leetcode.cn/problems/minimum-cost-to-reach-city-with-discounts/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": true
             },
             {
@@ -941,8 +1012,7 @@
               "title": "购买苹果的最低成本",
               "slug": "minimum-cost-to-buy-apples",
               "src": "https://leetcode.cn/problems/minimum-cost-to-buy-apples/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": true
             },
             {
@@ -950,32 +1020,105 @@
               "title": "找到最近的标记节点",
               "slug": "find-the-closest-marked-node",
               "src": "https://leetcode.cn/problems/find-the-closest-marked-node/",
-              "solution": null,
-              "score": 0,
+              "score": null,
               "isPremium": true
+            },
+            {
+              "id": "3970",
+              "title": "最多 K 个连续相同字符的最短路径",
+              "slug": "shortest-path-with-at-most-k-consecutive-identical-characters",
+              "src": "https://leetcode.cn/problems/shortest-path-with-at-most-k-consecutive-identical-characters/",
+              "score": 1840,
+              "isPremium": false,
+              "group": "分层图最短路"
+            },
+            {
+              "id": "3977",
+              "title": "有限电量到达目标节点的最少时间",
+              "slug": "minimum-time-to-reach-target-with-limited-power",
+              "src": "https://leetcode.cn/problems/minimum-time-to-reach-target-with-limited-power/",
+              "score": 2103,
+              "isPremium": false,
+              "group": "分层图最短路"
+            },
+            {
+              "id": "LCP 35",
+              "title": "电动车游城市",
+              "slug": "DFPeFJ",
+              "src": "https://leetcode.cn/problems/DFPeFJ/",
+              "score": null,
+              "isPremium": false,
+              "group": "分层图最短路"
+            },
+            {
+              "id": "3599",
+              "title": "划分数组得到最小 XOR",
+              "slug": "partition-array-to-minimize-xor",
+              "src": "https://leetcode.cn/problems/partition-array-to-minimize-xor/",
+              "score": null,
+              "isPremium": false,
+              "note": "做法不止一种",
+              "group": "分层图最短路"
+            },
+            {
+              "id": "3594",
+              "title": "所有人渡河所需的最短时间",
+              "slug": "minimum-time-to-transport-all-individuals",
+              "src": "https://leetcode.cn/problems/minimum-time-to-transport-all-individuals/",
+              "score": 2604,
+              "isPremium": false,
+              "group": "分层图最短路"
+            },
+            {
+              "id": "3778",
+              "title": "排除一个最大权重边的最小距离",
+              "slug": "minimum-distance-excluding-one-maximum-weighted-edge",
+              "src": "https://leetcode.cn/problems/minimum-distance-excluding-one-maximum-weighted-edge/",
+              "score": null,
+              "isPremium": true,
+              "group": "分层图最短路"
+            },
+            {
+              "id": "2714",
+              "title": "找到 K 次跨越的最短路径",
+              "slug": "find-shortest-path-with-k-hops",
+              "src": "https://leetcode.cn/problems/find-shortest-path-with-k-hops/",
+              "score": null,
+              "isPremium": true,
+              "group": "分层图最短路"
+            },
+            {
+              "id": "2589",
+              "title": "完成所有任务的最少时间",
+              "slug": "minimum-time-to-complete-all-tasks",
+              "src": "https://leetcode.cn/problems/minimum-time-to-complete-all-tasks/",
+              "score": 2381,
+              "isPremium": false,
+              "note": "做法不止一种",
+              "group": "分层图最短路"
             }
-          ]
+          ],
+          "children": [],
+          "summary": "[Dijkstra 算法介绍](https://leetcode.cn/problems/network-delay-time/solution/liang-chong-dijkstra-xie-fa-fu-ti-dan-py-ooe8/)\n\n模板：\n\n```py [sol-Python3]\n# 返回从起点 start 到每个点的最短路长度 dis，如果节点 x 不可达，则 dis[x] = math.inf\n# 要求：没有负数边权\n# 时间复杂度 O(n + mlogm)，其中 m 是 edges 的长度。注意堆中有 O(m) 个元素\ndef shortestPathDijkstra(n: int, edges: list[list[int]], start: int) -> list[int]:\n    # 注：如果节点编号从 1 开始（而不是从 0 开始），可以把 n 加一\n    g = [[] for _ in range(n)]  # 邻接表\n    for x, y, wt in edges:\n        g[x].append((y, wt))\n        # g[y].append((x, wt))  # 无向图加上这行\n\n    dis = [math.inf] * n\n    dis[start] = 0  # 起点到自己的距离是 0\n    h = [(0, start)]  # 堆中保存 (起点到节点 x 的最短路长度，节点 x)\n\n    while h:\n        dis_x, x = heappop(h)\n        if dis_x > dis[x]:  # x 之前出堆过\n            continue\n        for y, wt in g[x]:\n            new_dis_y = dis_x + wt\n            if new_dis_y < dis[y]:\n                dis[y] = new_dis_y  # 更新 x 的邻居的最短路\n                # 懒更新堆：只插入数据，不更新堆中数据\n                # 相同节点可能有多个不同的 new_dis_y，除了最小的 new_dis_y，其余值都会触发上面的 continue\n                heappush(h, (new_dis_y, y))\n\n    return dis\n```\n\n```java [sol-Java]\nclass Solution {\n    // 返回从起点 start 到每个点的最短路长度 dis，如果节点 x 不可达，则 dis[x] = Integer.MAX_VALUE\n    // 要求：没有负数边权\n    // 时间复杂度 O(n + mlogm)，注意堆中有 O(m) 个元素\n    private int[] shortestPathDijkstra(int n, int[][] edges, int start) {\n        // 注：如果节点编号从 1 开始（而不是从 0 开始），可以把 n 加一\n        List<int[]>[] g = new ArrayList[n]; // 邻接表\n        Arrays.setAll(g, _ -> new ArrayList<>());\n        for (int[] e : edges) {\n            int x = e[0];\n            int y = e[1];\n            int wt = e[2];\n            g[x].add(new int[]{y, wt});\n            // g[y].add(new int[]{x, wt}); // 无向图加上这行\n        }\n\n        int[] dis = new int[n]; // **如果数据范围大，改成 long[]**\n        Arrays.fill(dis, Integer.MAX_VALUE);\n        // 堆中保存 (起点到节点 x 的最短路长度，节点 x)\n        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));\n        dis[start] = 0; // 起点到自己的距离是 0\n        pq.offer(new int[]{0, start});\n\n        while (!pq.isEmpty()) {\n            int[] top = pq.poll();\n            int disX = top[0];\n            int x = top[1];\n            if (disX > dis[x]) { // x 之前出堆过\n                continue;\n            }\n            for (int[] e : g[x]) {\n                int y = e[0];\n                int wt = e[1];\n                int newDisY = disX + wt;\n                if (newDisY < dis[y]) {\n                    dis[y] = newDisY; // 更新 x 的邻居的最短路\n                    // 懒更新堆：只插入数据，不更新堆中数据\n                    // 相同节点可能有多个不同的 newDisY，除了最小的 newDisY，其余值都会触发上面的 continue\n                    pq.offer(new int[]{newDisY, y});\n                }\n            }\n        }\n\n        return dis;\n    }\n}\n```\n\n```cpp [sol-C++]\n// 返回从起点 start 到每个点的最短路长度 dis，如果节点 x 不可达，则 dis[x] = LLONG_MAX\n// 要求：没有负数边权\n// 时间复杂度 O(n + mlogm)，注意堆中有 O(m) 个元素\nvector<long long> shortestPathDijkstra(int n, vector<vector<int>>& edges, int start) {\n    // 注：如果节点编号从 1 开始（而不是从 0 开始），可以把 n 加一\n    vector<vector<pair<int, int>>> g(n); // 邻接表\n    for (auto& e : edges) {\n        int x = e[0], y = e[1], wt = e[2];\n        g[x].emplace_back(y, wt);\n        // g[y].emplace_back(x, wt); // 无向图加上这行\n    }\n\n    vector<long long> dis(n, LLONG_MAX);\n    // 堆中保存 (起点到节点 x 的最短路长度，节点 x)\n    priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<>> pq;\n    dis[start] = 0; // 起点到自己的距离是 0\n    pq.emplace(0, start);\n\n    while (!pq.empty()) {\n        auto [dis_x, x] = pq.top();\n        pq.pop();\n        if (dis_x > dis[x]) { // x 之前出堆过\n            continue;\n        }\n        for (auto& [y, wt] : g[x]) {\n            auto new_dis_y = dis_x + wt;\n            if (new_dis_y < dis[y]) {\n                dis[y] = new_dis_y; // 更新 x 的邻居的最短路\n                // 懒更新堆：只插入数据，不更新堆中数据\n                // 相同节点可能有多个不同的 new_dis_y，除了最小的 new_dis_y，其余值都会触发上面的 continue\n                pq.emplace(new_dis_y, y);\n            }\n        }\n    }\n\n    return dis;\n}\n```\n\n```go [sol-Go]\n// 返回从起点 start 到每个点的最短路长度 dis，如果节点 x 不可达，则 dis[x] = math.MaxInt\n// 要求：没有负数边权\n// 时间复杂度 O(n + mlogm)，注意堆中有 O(m) 个元素\nfunc shortestPathDijkstra(n int, edges [][]int, start int) []int {\n    // 注：如果节点编号从 1 开始（而不是从 0 开始），可以把 n 加一\n    type edge struct{ to, wt int }\n    g := make([][]edge, n) // 邻接表\n    for _, e := range edges {\n        x, y, wt := e[0], e[1], e[2]\n        g[x] = append(g[x], edge{y, wt})\n        // g[y] = append(g[y], edge{x, wt}) // 无向图加上这行\n    }\n\n    dis := make([]int, n)\n    for i := range dis {\n        dis[i] = math.MaxInt\n    }\n    dis[start] = 0 // 起点到自己的距离是 0\n    // 堆中保存 (起点到节点 x 的最短路长度，节点 x)\n    h := &hp{{0, start}}\n\n    for h.Len() > 0 {\n        p := heap.Pop(h).(pair)\n        disX, x := p.dis, p.x\n        if disX > dis[x] { // x 之前出堆过\n            continue\n        }\n        for _, e := range g[x] {\n            y := e.to\n            newDisY := disX + e.wt\n            if newDisY < dis[y] {\n                dis[y] = newDisY // 更新 x 的邻居的最短路\n                // 懒更新堆：只插入数据，不更新堆中数据\n                // 相同节点可能有多个不同的 newDisY，除了最小的 newDisY，其余值都会触发上面的 continue\n                heap.Push(h, pair{newDisY, y})\n            }\n        }\n    }\n\n    return dis\n}\n\ntype pair struct{ dis, x int }\ntype hp []pair\n\nfunc (h hp) Len() int           { return len(h) }\nfunc (h hp) Less(i, j int) bool { return h[i].dis < h[j].dis }\nfunc (h hp) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }\nfunc (h *hp) Push(v any)        { *h = append(*h, v.(pair)) }\nfunc (h *hp) Pop() (v any)      { a := *h; *h, v = a[:len(a)-1], a[len(a)-1]; return }\n```\n\n**SPFA 与差分约束**：\n\n> 力扣上的 SPFA 题很少。"
         },
         {
+          "id": "s3-2",
           "title": "§3.2 全源最短路：Floyd 算法",
-          "src": null,
-          "summary": "Floyd 算法本质是三维 DP。\n\n[带你发明 Floyd 算法：从记忆化搜索到递推](https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/solution/dai-ni-fa-ming-floyd-suan-fa-cong-ji-yi-m8s51/)\n\n模板：\n\n```py\n# 返回一个二维列表，其中 (i,j) 这一项表示从 i 到 j 的最短路长度\n# 如果无法从 i 到 j，则最短路长度为 math.inf\n# 允许负数边权\n# 如果计算完毕后，存在 i，使得从 i 到 i 的最短路长度小于 0，说明图中有负环\n# 节点编号从 0 到 n-1\n# 时间复杂度 O(n^3 + m)，其中 m 是 edges 的长度\ndef shortestPathFloyd(self, n: int, edges: List[List[int]]) -> List[List[int]]:\n    f = [[inf] * n for _ in range(n)]\n    for i in range(n):\n        f[i][i] = 0\n\n    for x, y, wt in edges:\n        f[x][y] = min(f[x][y], wt)  # 如果有重边，取边权最小值\n        f[y][x] = min(f[y][x], wt)  # 无向图\n\n    for k in range(n):\n        for i in range(n):\n            if f[i][k] == inf:  # 针对稀疏图的优化\n                continue\n            for j in range(n):\n                f[i][j] = min(f[i][j], f[i][k] + f[k][j])\n    return f\n```",
           "problems": [
             {
               "id": "2642",
               "title": "设计可以求最短路径的图类",
               "slug": "design-graph-with-shortest-path-calculator",
               "src": "https://leetcode.cn/problems/design-graph-with-shortest-path-calculator/",
-              "solution": null,
               "score": 1811,
-              "isPremium": false
+              "isPremium": false,
+              "note": "动态加边"
             },
             {
               "id": "1334",
               "title": "阈值距离内邻居最少的城市",
               "slug": "find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance",
               "src": "https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/",
-              "solution": null,
               "score": 1855,
               "isPremium": false
             },
@@ -984,7 +1127,6 @@
               "title": "转换字符串的最小成本 I",
               "slug": "minimum-cost-to-convert-string-i",
               "src": "https://leetcode.cn/problems/minimum-cost-to-convert-string-i/",
-              "solution": null,
               "score": 1882,
               "isPremium": false
             },
@@ -993,7 +1135,6 @@
               "title": "关闭分部的可行集合数目",
               "slug": "number-of-possible-sets-of-closing-branches",
               "src": "https://leetcode.cn/problems/number-of-possible-sets-of-closing-branches/",
-              "solution": null,
               "score": 2077,
               "isPremium": false
             },
@@ -1002,25 +1143,42 @@
               "title": "转换字符串的最小成本 II",
               "slug": "minimum-cost-to-convert-string-ii",
               "src": "https://leetcode.cn/problems/minimum-cost-to-convert-string-ii/",
-              "solution": null,
               "score": 2696,
               "isPremium": false
+            },
+            {
+              "id": "1462",
+              "title": "课程表 IV",
+              "slug": "course-schedule-iv",
+              "src": "https://leetcode.cn/problems/course-schedule-iv/",
+              "score": 1693,
+              "isPremium": false,
+              "group": "Bitset 优化 Floyd"
+            },
+            {
+              "id": "2101",
+              "title": "引爆最多的炸弹",
+              "slug": "detonate-the-maximum-bombs",
+              "src": "https://leetcode.cn/problems/detonate-the-maximum-bombs/",
+              "score": null,
+              "isPremium": false,
+              "group": "Bitset 优化 Floyd"
             }
-          ]
+          ],
+          "children": [],
+          "summary": "Floyd 算法本质是三维 DP。理解 DP 一定要基于空间优化前的写法。\n\n[带你发明 Floyd 算法：从记忆化搜索到递推](https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/solution/dai-ni-fa-ming-floyd-suan-fa-cong-ji-yi-m8s51/)\n\n模板：\n\n```py [sol-Python3]\n# 返回一个二维列表，其中 (i,j) 这一项表示从 i 到 j 的最短路长度\n# 如果无法从 i 到 j，则最短路长度为 math.inf\n# 允许负数边权\n# 如果计算完毕后，存在 i，使得从 i 到 i 的最短路长度小于 0，说明图中有负环\n# 节点编号从 0 到 n-1\n# 时间复杂度 O(n^3 + m)，其中 m 是 edges 的长度\ndef shortestPathFloyd(self, n: int, edges: list[list[int]]) -> list[list[int]]:\n    f = [[math.inf] * n for _ in range(n)]\n    for i in range(n):\n        f[i][i] = 0\n\n    for x, y, wt in edges:\n        f[x][y] = min(f[x][y], wt)  # 如果有重边，取边权最小值\n        f[y][x] = min(f[y][x], wt)  # 无向图\n\n    for k in range(n):\n        for i in range(n):\n            if f[i][k] == math.inf:  # 针对稀疏图的优化\n                continue\n            for j in range(n):\n                f[i][j] = min(f[i][j], f[i][k] + f[k][j])\n    return f\n```\n\n```java [sol-Java]\nclass Solution {\n    // 返回一个二维列表，其中 (i,j) 这一项表示从 i 到 j 的最短路长度\n    // 如果无法从 i 到 j，则最短路长度为 Long.MAX_VALUE / 2\n    // 允许负数边权\n    // 如果计算完毕后，存在 i，使得从 i 到 i 的最短路长度小于 0，说明图中有负环\n    // 节点编号从 0 到 n-1\n    // 时间复杂度 O(n^3 + m)，其中 m 是 edges 的长度\n    public long[][] shortestPathFloyd(int n, int[][] edges) {\n        final long INF = Long.MAX_VALUE / 2; // 防止加法溢出\n        long[][] f = new long[n][n];\n        for (int i = 0; i < n; i++) {\n            Arrays.fill(f[i], INF);\n            f[i][i] = 0;\n        }\n\n        for (int[] e : edges) {\n            int x = e[0];\n            int y = e[1];\n            int wt = e[2];\n            f[x][y] = Math.min(f[x][y], wt); // 如果有重边，取边权最小值\n            f[y][x] = Math.min(f[y][x], wt); // 无向图\n        }\n\n        for (int k = 0; k < n; k++) {\n            for (int i = 0; i < n; i++) {\n                if (f[i][k] == INF) { // 针对稀疏图的优化\n                    continue;\n                }\n                for (int j = 0; j < n; j++) {\n                    f[i][j] = Math.min(f[i][j], f[i][k] + f[k][j]);\n                }\n            }\n        }\n        return f;\n    }\n}\n```\n\n```cpp [sol-C++]\n// 返回一个二维列表，其中 (i,j) 这一项表示从 i 到 j 的最短路长度\n// 如果无法从 i 到 j，则最短路长度为 LLONG_MAX / 2\n// 允许负数边权\n// 如果计算完毕后，存在 i，使得从 i 到 i 的最短路长度小于 0，说明图中有负环\n// 节点编号从 0 到 n-1\n// 时间复杂度 O(n^3 + m)，其中 m 是 edges 的长度\nvector<vector<long long>> shortestPathFloyd(int n, vector<vector<int>>& edges) {\n    const long long INF = LLONG_MAX / 2; // 防止加法溢出\n    vector f(n, vector<long long>(n, INF));\n    for (int i = 0; i < n; i++) {\n        f[i][i] = 0;\n    }\n\n    for (auto& e : edges) {\n        int x = e[0], y = e[1];\n        long long wt = e[2];\n        f[x][y] = min(f[x][y], wt); // 如果有重边，取边权最小值\n        f[y][x] = min(f[y][x], wt); // 无向图\n    }\n\n    for (int k = 0; k < n; k++) {\n        for (int i = 0; i < n; i++) {\n            if (f[i][k] == INF) { // 针对稀疏图的优化\n                continue;\n            }\n            for (int j = 0; j < n; j++) {\n                f[i][j] = min(f[i][j], f[i][k] + f[k][j]);\n            }\n        }\n    }\n    return f;\n}\n```\n\n```go [sol-Go]\n// 返回一个二维列表，其中 (i,j) 这一项表示从 i 到 j 的最短路长度\n// 如果无法从 i 到 j，则最短路长度为 math.MaxInt / 2\n// 允许负数边权\n// 如果计算完毕后，存在 i，使得从 i 到 i 的最短路长度小于 0，说明图中有负环\n// 节点编号从 0 到 n-1\n// 时间复杂度 O(n^3 + m)，其中 m 是 edges 的长度\nfunc shortestPathFloyd(n int, edges [][]int) [][]int {\n\tconst inf = math.MaxInt / 2 // 防止加法溢出\n\tf := make([][]int, n)\n\tfor i := range f {\n\t\tf[i] = make([]int, n)\n\t\tfor j := range f[i] {\n\t\t\tf[i][j] = inf\n\t\t}\n\t\tf[i][i] = 0\n\t}\n\n\tfor _, e := range edges {\n\t\tx, y, wt := e[0], e[1], e[2]\n\t\tf[x][y] = min(f[x][y], wt) // 如果有重边，取边权最小值\n\t\tf[y][x] = min(f[y][x], wt) // 无向图\n\t}\n\n\tfor k := range n {\n\t\tfor i := range n {\n\t\t\tif f[i][k] == inf { // 针对稀疏图的优化\n\t\t\t\tcontinue\n\t\t\t}\n\t\t\tfor j := range n {\n\t\t\t\tf[i][j] = min(f[i][j], f[i][k]+f[k][j])\n\t\t\t}\n\t\t}\n\t}\n\treturn f\n}\n```"
         }
       ]
     },
     {
+      "id": "s4",
       "title": "四、最小生成树",
-      "src": null,
-      "summary": "涉及到 Kruskal 算法和 Prim 算法。前者一般用于稀疏图，后者一般用于稠密图。\n\n> 注：如果要求最大生成树，把边权从大到小排序。\n\nKruskal 算法模板（用到了并查集，完整模板见 [数据结构题单](https://leetcode.cn/circle/discuss/mOr1u6/)）：\n\n```py\nclass UnionFind:\n    def __init__(self, n: int):\n        # 一开始有 n 个集合 {0}, {1}, ..., {n-1}\n        # 集合 i 的代表元是自己\n        self._fa = list(range(n))  # 代表元\n        self.cc = n  # 连通块个数\n\n    # 返回 x 所在集合的代表元\n    # 同时做路径压缩，也就是把 x 所在集合中的所有元素的 fa 都改成代表元\n    def find(self, x: int) -> int:\n        # 如果 fa[x] == x，则表示 x 是代表元\n        if self._fa[x] != x:\n            self._fa[x] = self.find(self._fa[x])  # fa 改成代表元\n        return self._fa[x]\n\n    # 把 from 所在集合合并到 to 所在集合中\n    # 返回是否合并成功\n    def merge(self, from_: int, to: int) -> bool:\n        x, y = self.find(from_), self.find(to)\n        if x == y:  # from 和 to 在同一个集合，不做合并\n            return False\n        self._fa[x] = y  # 合并集合。修改后就可以认为 from 和 to 在同一个集合了\n        self.cc -= 1  # 成功合并，连通块个数减一\n        return True\n\n\n# 计算图的最小生成树的边权之和\n# 如果图不连通，返回 math.inf\n# 节点编号从 0 到 n-1\n# 时间复杂度 O(n + mlogm)，其中 m 是 edges 的长度\ndef mstKruskal(n: int, edges: List[List[int]]) -> int:\n    edges.sort(key=lambda e: e[2])\n\n    uf = UnionFind(n)\n    sum_wt = 0\n    for x, y, wt in edges:\n        if uf.merge(x, y):\n            sum_wt += wt\n\n    if uf.cc > 1:  # 图不连通\n        return inf\n    return sum_wt\n```",
       "problems": [
         {
           "id": "1584",
           "title": "连接所有点的最小费用",
           "slug": "min-cost-to-connect-all-points",
           "src": "https://leetcode.cn/problems/min-cost-to-connect-all-points/",
-          "solution": null,
           "score": 1858,
           "isPremium": false
         },
@@ -1029,16 +1187,15 @@
           "title": "升级后最大生成树稳定性",
           "slug": "maximize-spanning-tree-stability-with-upgrades",
           "src": "https://leetcode.cn/problems/maximize-spanning-tree-stability-with-upgrades/",
-          "solution": null,
           "score": 2301,
-          "isPremium": false
+          "isPremium": false,
+          "note": "做法不止一种"
         },
         {
           "id": "1489",
           "title": "找到最小生成树里的关键边和伪关键边",
           "slug": "find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree",
           "src": "https://leetcode.cn/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/",
-          "solution": null,
           "score": 2572,
           "isPremium": false
         },
@@ -1047,8 +1204,7 @@
           "title": "最低成本连通所有城市",
           "slug": "connecting-cities-with-minimum-cost",
           "src": "https://leetcode.cn/problems/connecting-cities-with-minimum-cost/",
-          "solution": null,
-          "score": 0,
+          "score": null,
           "isPremium": true
         },
         {
@@ -1056,25 +1212,32 @@
           "title": "水资源分配优化",
           "slug": "optimize-water-distribution-in-a-village",
           "src": "https://leetcode.cn/problems/optimize-water-distribution-in-a-village/",
-          "solution": null,
-          "score": 0,
+          "score": null,
           "isPremium": true
+        },
+        {
+          "id": "3219",
+          "title": "切蛋糕的最小总开销 II",
+          "slug": "minimum-cost-for-cutting-cake-ii",
+          "src": "https://leetcode.cn/problems/minimum-cost-for-cutting-cake-ii/",
+          "score": null,
+          "isPremium": false,
+          "group": "思维扩展"
         }
       ],
-      "children": []
+      "children": [],
+      "summary": "涉及到 Kruskal 算法和 Prim 算法。前者一般用于稀疏图，后者一般用于稠密图。\n\n> 注：如果要求最大生成树，把边权从大到小排序。\n\nKruskal 算法模板（用到了并查集，完整模板见 [数据结构题单](https://leetcode.cn/circle/discuss/mOr1u6/)）：\n\n```py [sol-Python3]\nclass UnionFind:\n    def __init__(self, n: int):\n        # 一开始有 n 个集合 {0}, {1}, ..., {n-1}\n        # 集合 i 的代表元是自己\n        self._fa = list(range(n))  # 代表元\n        self.cc = n  # 连通块个数\n\n    # 返回 x 所在集合的代表元\n    # 同时做路径压缩，也就是把 x 所在集合中的所有元素的 fa 都改成代表元\n    def find(self, x: int) -> int:\n        # 如果 fa[x] == x，则表示 x 是代表元\n        if self._fa[x] != x:\n            self._fa[x] = self.find(self._fa[x])  # fa 改成代表元\n        return self._fa[x]\n\n    # 把 from 所在集合合并到 to 所在集合中\n    # 返回是否合并成功\n    def merge(self, from_: int, to: int) -> bool:\n        x, y = self.find(from_), self.find(to)\n        if x == y:  # from 和 to 在同一个集合，不做合并\n            return False\n        self._fa[x] = y  # 合并集合。修改后就可以认为 from 和 to 在同一个集合了\n        self.cc -= 1  # 成功合并，连通块个数减一\n        return True\n\n# 计算图的最小生成树的边权之和\n# 如果图不连通，返回 math.inf\n# 节点编号从 0 到 n-1\n# 时间复杂度 O(n + mlogm)，其中 m 是 edges 的长度\ndef mstKruskal(n: int, edges: list[list[int]]) -> int:\n    edges.sort(key=lambda e: e[2])\n\n    uf = UnionFind(n)\n    sum_wt = 0\n    for x, y, wt in edges:\n        if uf.merge(x, y):\n            sum_wt += wt\n\n    if uf.cc > 1:  # 图不连通\n        return math.inf\n    return sum_wt\n```\n\n```java [sol-Java]\nclass UnionFind {\n    private final int[] fa; // 代表元\n    public int cc; // 连通块个数\n\n    UnionFind(int n) {\n        // 一开始有 n 个集合 {0}, {1}, ..., {n-1}\n        // 集合 i 的代表元是自己\n        fa = new int[n];\n        for (int i = 0; i < n; i++) {\n            fa[i] = i;\n        }\n        cc = n;\n    }\n\n    // 返回 x 所在集合的代表元\n    // 同时做路径压缩，也就是把 x 所在集合中的所有元素的 fa 都改成代表元\n    public int find(int x) {\n        // 如果 fa[x] == x，则表示 x 是代表元\n        if (fa[x] != x) {\n            fa[x] = find(fa[x]); // fa 改成代表元\n        }\n        return fa[x];\n    }\n\n    // 把 from 所在集合合并到 to 所在集合中\n    // 返回是否合并成功\n    public boolean merge(int from, int to) {\n        int x = find(from);\n        int y = find(to);\n        if (x == y) { // from 和 to 在同一个集合，不做合并\n            return false;\n        }\n        fa[x] = y; // 合并集合。修改后就可以认为 from 和 to 在同一个集合了\n        cc--; // 成功合并，连通块个数减一\n        return true;\n    }\n}\n\nclass Solution {\n    // 计算图的最小生成树的边权之和\n    // 如果图不连通，返回 Long.MAX_VALUE\n    // 节点编号从 0 到 n-1\n    // 时间复杂度 O(n + mlogm)，其中 m 是 edges 的长度\n    public long mstKruskal(int n, int[][] edges) {\n        Arrays.sort(edges, Comparator.comparingInt(e -> e[2]));\n\n        UnionFind uf = new UnionFind(n);\n        long sumWt = 0;\n        for (int[] e : edges) {\n            int x = e[0], y = e[1], wt = e[2];\n            if (uf.merge(x, y)) {\n                sumWt += wt;\n            }\n        }\n\n        if (uf.cc > 1) { // 图不连通\n            return Long.MAX_VALUE;\n        }\n        return sumWt;\n    }\n}\n```\n\n```cpp [sol-C++]\nclass UnionFind {\n    vector<int> fa; // 代表元\n\npublic:\n    int cc; // 连通块个数\n\n    UnionFind(int n) : fa(n), cc(n) {\n        // 一开始有 n 个集合 {0}, {1}, ..., {n-1}\n        // 集合 i 的代表元是自己\n        ranges::iota(fa, 0);\n    }\n\n    // 返回 x 所在集合的代表元\n    // 同时做路径压缩，也就是把 x 所在集合中的所有元素的 fa 都改成代表元\n    int find(int x) {\n        // 如果 fa[x] == x，则表示 x 是代表元\n        if (fa[x] != x) {\n            fa[x] = find(fa[x]); // fa 改成代表元\n        }\n        return fa[x];\n    }\n\n    // 把 from 所在集合合并到 to 所在集合中\n    // 返回是否合并成功\n    bool merge(int from, int to) {\n        int x = find(from), y = find(to);\n        if (x == y) { // from 和 to 在同一个集合，不做合并\n            return false;\n        }\n        fa[x] = y; // 合并集合。修改后就可以认为 from 和 to 在同一个集合了\n        cc--; // 成功合并，连通块个数减一\n        return true;\n    }\n};\n\n// 计算图的最小生成树的边权之和\n// 如果图不连通，返回 LLONG_MAX\n// 节点编号从 0 到 n-1\n// 时间复杂度 O(n + mlogm)，其中 m 是 edges 的长度\nlong long mstKruskal(int n, vector<vector<int>>& edges) {\n    ranges::sort(edges, {}, [](const auto& e) { return e[2]; });\n\n    UnionFind uf(n);\n    long long sum_wt = 0;\n    for (auto& e : edges) {\n        int x = e[0], y = e[1], wt = e[2];\n        if (uf.merge(x, y)) {\n            sum_wt += wt;\n        }\n    }\n\n    if (uf.cc > 1) { // 图不连通\n        return LLONG_MAX;\n    }\n    return sum_wt;\n}\n```\n\n```go [sol-Go]\ntype unionFind struct {\n\tfa []int // 代表元\n\tcc int   // 连通块个数\n}\n\nfunc newUnionFind(n int) unionFind {\n\tfa := make([]int, n)\n\t// 一开始有 n 个集合 {0}, {1}, ..., {n-1}\n\t// 集合 i 的代表元是自己\n\tfor i := range fa {\n\t\tfa[i] = i\n\t}\n\treturn unionFind{fa, n}\n}\n\n// 返回 x 所在集合的代表元\n// 同时做路径压缩，也就是把 x 所在集合中的所有元素的 fa 都改成代表元\nfunc (u unionFind) find(x int) int {\n\t// 如果 fa[x] == x，则表示 x 是代表元\n\tif u.fa[x] != x {\n\t\tu.fa[x] = u.find(u.fa[x]) // fa 改成代表元\n\t}\n\treturn u.fa[x]\n}\n\n// 把 from 所在集合合并到 to 所在集合中\n// 返回是否合并成功\nfunc (u *unionFind) merge(from, to int) bool {\n\tx, y := u.find(from), u.find(to)\n\tif x == y { // from 和 to 在同一个集合，不做合并\n\t\treturn false\n\t}\n\tu.fa[x] = y // 合并集合。修改后就可以认为 from 和 to 在同一个集合了\n\tu.cc--      // 成功合并，连通块个数减一\n\treturn true\n}\n\n// 计算图的最小生成树的边权之和\n// 如果图不连通，返回 math.MaxInt\n// 节点编号从 0 到 n-1\n// 时间复杂度 O(n + mlogm)，其中 m 是 edges 的长度\nfunc mstKruskal(n int, edges [][]int) int {\n\tslices.SortFunc(edges, func(a, b []int) int { return a[2] - b[2] })\n\n\tuf := newUnionFind(n)\n\tsumWt := 0\n\tfor _, e := range edges {\n\t\tx, y, wt := e[0], e[1], e[2]\n\t\tif uf.merge(x, y) {\n\t\t\tsumWt += wt\n\t\t}\n\t}\n\n\tif uf.cc > 1 { // 图不连通\n\t\treturn math.MaxInt\n\t}\n\treturn sumWt\n}\n```"
     },
     {
+      "id": "s5",
       "title": "五、欧拉路径/欧拉回路",
-      "src": null,
-      "summary": "涉及到 Hierholzer 算法。",
       "problems": [
         {
           "id": "332",
           "title": "重新安排行程",
           "slug": "reconstruct-itinerary",
           "src": "https://leetcode.cn/problems/reconstruct-itinerary/",
-          "solution": null,
-          "score": 0,
+          "score": null,
           "isPremium": false
         },
         {
@@ -1082,7 +1245,6 @@
           "title": "破解保险箱",
           "slug": "cracking-the-safe",
           "src": "https://leetcode.cn/problems/cracking-the-safe/",
-          "solution": null,
           "score": 2274,
           "isPremium": false
         },
@@ -1091,24 +1253,22 @@
           "title": "合法重新排列数对",
           "slug": "valid-arrangement-of-pairs",
           "src": "https://leetcode.cn/problems/valid-arrangement-of-pairs/",
-          "solution": null,
           "score": 2651,
           "isPremium": false
         }
       ],
-      "children": []
+      "children": [],
+      "summary": "涉及到 Hierholzer 算法。"
     },
     {
+      "id": "s6",
       "title": "六、强连通分量/双连通分量",
-      "src": null,
-      "summary": "涉及到 Tarjan 算法。",
       "problems": [
         {
           "id": "1192",
           "title": "查找集群内的关键连接",
           "slug": "critical-connections-in-a-network",
           "src": "https://leetcode.cn/problems/critical-connections-in-a-network/",
-          "solution": null,
           "score": 2085,
           "isPremium": false
         },
@@ -1117,7 +1277,6 @@
           "title": "使陆地分离的最少天数",
           "slug": "minimum-number-of-days-to-disconnect-island",
           "src": "https://leetcode.cn/problems/minimum-number-of-days-to-disconnect-island/",
-          "solution": null,
           "score": 2209,
           "isPremium": false
         },
@@ -1126,8 +1285,7 @@
           "title": "夺回据点",
           "slug": "s5kipK",
           "src": "https://leetcode.cn/problems/s5kipK/",
-          "solution": null,
-          "score": 0,
+          "score": null,
           "isPremium": false
         },
         {
@@ -1135,24 +1293,22 @@
           "title": "施法所需最低符文数量",
           "slug": "minimum-runes-to-add-to-cast-spell",
           "src": "https://leetcode.cn/problems/minimum-runes-to-add-to-cast-spell/",
-          "solution": null,
-          "score": 0,
+          "score": null,
           "isPremium": true
         }
       ],
-      "children": []
+      "children": [],
+      "summary": "涉及到 Tarjan 算法。"
     },
     {
+      "id": "s7",
       "title": "七、二分图染色",
-      "src": null,
-      "summary": "模板（交替染色法）：\n\n```py\n# 返回图的二染色\n# 如果是二分图，返回每个节点的颜色，用 1 和 2 表示两种颜色\n# 如果不是二分图，返回空列表\n# 时间复杂度 O(n+m)，n 是点数，m 是边数\ndef colorBipartite(n: int, edges: List[List[int]]) -> List[int]:\n    # 建图（节点编号从 0 到 n-1）\n    g = [[] for _ in range(n)]\n    for x, y in edges:\n        g[x].append(y)\n        g[y].append(x)\n\n    # colors[i] = 0 表示未访问节点 i\n    # colors[i] = 1 表示节点 i 为红色\n    # colors[i] = 2 表示节点 i 为蓝色\n    colors = [0] * n\n\n    def dfs(x: int, c: int) -> bool:\n        colors[x] = c  # 节点 x 染成颜色 c\n        for y in g[x]:\n            # 邻居 y 的颜色与 x 的相同，说明不是二分图，返回 False\n            # 或者继续递归，发现不是二分图，返回 False\n            if colors[y] == c or \\\n               colors[y] == 0 and not dfs(y, 3 - c):  # 1 和 2 交替染色\n                return False\n        return True\n\n    # 可能有多个连通块\n    for i, c in enumerate(colors):\n        if c == 0 and not dfs(i, 1):\n            # 从节点 i 开始递归，发现 i 所在连通块不是二分图\n            return []\n    return colors\n```",
       "problems": [
         {
           "id": "785",
           "title": "判断二分图",
           "slug": "is-graph-bipartite",
           "src": "https://leetcode.cn/problems/is-graph-bipartite/",
-          "solution": null,
           "score": 1625,
           "isPremium": false
         },
@@ -1161,7 +1317,6 @@
           "title": "可能的二分法",
           "slug": "possible-bipartition",
           "src": "https://leetcode.cn/problems/possible-bipartition/",
-          "solution": null,
           "score": 1795,
           "isPremium": false
         },
@@ -1170,78 +1325,76 @@
           "title": "最大划分因子",
           "slug": "maximum-partition-factor",
           "src": "https://leetcode.cn/problems/maximum-partition-factor/",
-          "solution": null,
-          "score": 0,
+          "score": 2135,
           "isPremium": false
         }
       ],
-      "children": []
+      "children": [],
+      "summary": "模板（交替染色法）：\n\n```py [sol-Python3]\n# 返回图的二染色\n# 如果是二分图，返回每个节点的颜色，用 1 和 2 表示两种颜色\n# 如果不是二分图，返回空列表\n# 时间复杂度 O(n+m)，n 是点数，m 是边数\ndef colorBipartite(n: int, edges: list[list[int]]) -> list[int]:\n    # 建图（节点编号从 0 到 n-1）\n    g = [[] for _ in range(n)]\n    for x, y in edges:\n        g[x].append(y)\n        g[y].append(x)\n\n    # colors[i] = 0 表示未访问节点 i\n    # colors[i] = 1 表示节点 i 为红色\n    # colors[i] = 2 表示节点 i 为蓝色\n    colors = [0] * n\n\n    def dfs(x: int, c: int) -> bool:\n        colors[x] = c  # 节点 x 染成颜色 c\n        for y in g[x]:\n            # 邻居 y 的颜色与 x 的相同，说明不是二分图，返回 False\n            # 或者继续递归，发现不是二分图，返回 False\n            if colors[y] == c or \\\n               colors[y] == 0 and not dfs(y, 3 - c):  # 1 和 2 交替染色\n                return False\n        return True\n\n    # 可能有多个连通块\n    for i, c in enumerate(colors):\n        if c == 0 and not dfs(i, 1):\n            # 从节点 i 开始递归，发现 i 所在连通块不是二分图\n            return []\n    return colors\n```\n\n```java [sol-Java]\nclass Solution {\n    // 返回图的二染色\n    // 如果是二分图，返回每个节点的颜色，用 1 和 2 表示两种颜色\n    // 如果不是二分图，返回空列表\n    // 时间复杂度 O(n+m)，n 是点数，m 是边数\n    private int[] colorBipartite(int n, int[][] edges) {\n        // 建图（节点编号从 0 到 n-1）\n        List<Integer>[] g = new ArrayList[n];\n        Arrays.setAll(g, _ -> new ArrayList<>());\n        for (int[] e : edges) {\n            int x = e[0], y = e[1];\n            g[x].add(y);\n            g[y].add(x);\n        }\n\n        // colors[i] = 0 表示未访问节点 i\n        // colors[i] = 1 表示节点 i 为红色\n        // colors[i] = 2 表示节点 i 为蓝色\n        int[] colors = new int[n];\n\n        for (int i = 0; i < n; i++) {\n            if (colors[i] == 0 && !dfs(i, 1, g, colors)) {\n                // 从节点 i 开始递归，发现 i 所在连通块不是二分图\n                return new int[]{};\n            }\n        }\n        return colors;\n    }\n\n    private boolean dfs(int x, int c, List<Integer>[] g, int[] colors) {\n        colors[x] = c; // 节点 x 染成颜色 c\n        for (int y : g[x]) {\n            // 邻居 y 的颜色与 x 的相同，说明不是二分图，返回 false\n            // 或者继续递归，发现不是二分图，返回 false\n            if (colors[y] == c || \n                colors[y] == 0 && !dfs(y, 3 - c, g, colors)) { // 1 和 2 交替染色\n                return false;\n            }\n        }\n        return true;\n    }\n}\n```\n\n```cpp [sol-C++]\n// 返回图的二染色\n// 如果是二分图，返回每个节点的颜色，用 1 和 2 表示两种颜色\n// 如果不是二分图，返回空列表\n// 时间复杂度 O(n+m)，n 是点数，m 是边数\nvector<int8_t> colorBipartite(int n, vector<vector<int>>& edges) {\n    // 建图（节点编号从 0 到 n-1）\n    vector<vector<int>> g(n);\n    for (auto& e : edges) {\n        int x = e[0], y = e[1];\n        g[x].push_back(y);\n        g[y].push_back(x);\n    }\n\n    // colors[i] = 0 表示未访问节点 i\n    // colors[i] = 1 表示节点 i 为红色\n    // colors[i] = 2 表示节点 i 为蓝色\n    vector<int8_t> colors(n);\n\n    // lambda 递归\n    auto dfs = [&](this auto&& dfs, int x, int8_t c) -> bool {\n        colors[x] = c; // 节点 x 染成颜色 c\n        for (int y : g[x]) {\n            // 邻居 y 的颜色与 x 的相同，说明不是二分图，返回 false\n            // 或者继续递归，发现不是二分图，返回 false\n            if (colors[y] == c || \n                colors[y] == 0 && !dfs(y, 3 - c)) { // 1 和 2 交替染色\n                return false;\n            }\n        }\n        return true;\n    };\n\n    // 可能有多个连通块\n    for (int i = 0; i < n; i++) {\n        if (colors[i] == 0 && !dfs(i, 1)) {\n            // 从节点 i 开始递归，发现 i 所在连通块不是二分图\n            return {};\n        }\n    }\n    return colors;\n}\n```\n\n```go [sol-Go]\n// 返回图的二染色\n// 如果是二分图，返回每个节点的颜色，用 1 和 2 表示两种颜色\n// 如果不是二分图，返回空列表\n// 时间复杂度 O(n+m)，n 是点数，m 是边数\nfunc colorBipartite(n int, edges [][]int) []int8 {\n    // 建图（节点编号从 0 到 n-1）\n    g := make([][]int, n)\n    for _, e := range edges {\n        x, y := e[0], e[1]\n        g[x] = append(g[x], y)\n        g[y] = append(g[y], x)\n    }\n\n    // colors[i] = 0 表示未访问节点 i\n    // colors[i] = 1 表示节点 i 为红色\n    // colors[i] = 2 表示节点 i 为蓝色\n    colors := make([]int8, n)\n\n    var dfs func(int, int8) bool\n    dfs = func(x int, c int8) bool {\n        colors[x] = c // 节点 x 染成颜色 c\n        for _, y := range g[x] {\n            // 邻居 y 的颜色与 x 的相同，说明不是二分图，返回 false\n            // 或者继续递归，发现不是二分图，返回 false\n            if colors[y] == c ||\n                colors[y] == 0 && !dfs(y, 3-c) { // 1 和 2 交替染色\n                return false\n            }\n        }\n        return true\n    }\n\n    // 可能有多个连通块\n    for i, c := range colors {\n        if c == 0 && !dfs(i, 1) {\n            // 从节点 i 开始递归，发现 i 所在连通块不是二分图\n            return nil\n        }\n    }\n    return colors\n}\n```\n\n关于二分图的最大匹配，见下面网络流的题目。其中标有「一对一」的题目也可以用带权二分图最大匹配做。"
     },
     {
+      "id": "s8",
       "title": "八、网络流",
-      "src": null,
-      "summary": "由于有其他做法（比如状压 DP），难度分仅供参考。",
       "problems": [
         {
           "id": "1947",
           "title": "最大兼容性评分和",
           "slug": "maximum-compatibility-score-sum",
           "src": "https://leetcode.cn/problems/maximum-compatibility-score-sum/",
-          "solution": null,
           "score": 1704,
-          "isPremium": false
+          "isPremium": false,
+          "note": "一对一"
         },
         {
           "id": "3376",
           "title": "破解锁的最少时间 I",
           "slug": "minimum-time-to-break-locks-i",
           "src": "https://leetcode.cn/problems/minimum-time-to-break-locks-i/",
-          "solution": null,
           "score": 1793,
-          "isPremium": false
+          "isPremium": false,
+          "note": "一对一"
         },
         {
           "id": "2850",
           "title": "将石头分散到网格图的最少移动次数",
           "slug": "minimum-moves-to-spread-stones-over-grid",
           "src": "https://leetcode.cn/problems/minimum-moves-to-spread-stones-over-grid/",
-          "solution": null,
           "score": 2001,
-          "isPremium": false
+          "isPremium": false,
+          "note": "一对多"
         },
         {
           "id": "1879",
           "title": "两个数组最小的异或值之和",
           "slug": "minimum-xor-sum-of-two-arrays",
           "src": "https://leetcode.cn/problems/minimum-xor-sum-of-two-arrays/",
-          "solution": null,
           "score": 2145,
-          "isPremium": false
+          "isPremium": false,
+          "note": "一对一"
         },
         {
           "id": "1349",
           "title": "参加考试的最大学生数",
           "slug": "maximum-students-taking-exam",
           "src": "https://leetcode.cn/problems/maximum-students-taking-exam/",
-          "solution": null,
           "score": 2386,
-          "isPremium": false
+          "isPremium": false,
+          "note": "二分图最大独立集"
         },
         {
           "id": "2172",
           "title": "数组的最大与和",
           "slug": "maximum-and-sum-of-array",
           "src": "https://leetcode.cn/problems/maximum-and-sum-of-array/",
-          "solution": null,
           "score": 2392,
-          "isPremium": false
+          "isPremium": false,
+          "note": "多对一"
         },
         {
           "id": "3276",
           "title": "选择矩阵中单元格的最大得分",
           "slug": "select-cells-in-grid-with-maximum-score",
           "src": "https://leetcode.cn/problems/select-cells-in-grid-with-maximum-score/",
-          "solution": null,
           "score": 2403,
           "isPremium": false
         },
@@ -1250,16 +1403,15 @@
           "title": "连通两组点的最小成本",
           "slug": "minimum-cost-to-connect-two-groups-of-points",
           "src": "https://leetcode.cn/problems/minimum-cost-to-connect-two-groups-of-points/",
-          "solution": null,
           "score": 2538,
-          "isPremium": false
+          "isPremium": false,
+          "note": "带权二分图最小边覆盖"
         },
         {
           "id": "3257",
           "title": "放三个车的价值之和最大 II",
           "slug": "maximum-value-sum-by-placing-three-rooks-ii",
           "src": "https://leetcode.cn/problems/maximum-value-sum-by-placing-three-rooks-ii/",
-          "solution": null,
           "score": 2553,
           "isPremium": false
         },
@@ -1268,53 +1420,61 @@
           "title": "覆盖",
           "slug": "broken-board-dominoes",
           "src": "https://leetcode.cn/problems/broken-board-dominoes/",
-          "solution": null,
-          "score": 0,
-          "isPremium": false
+          "score": null,
+          "isPremium": false,
+          "note": "二分图最大匹配·模板题"
         },
         {
           "id": "LCP 38",
           "title": "守卫城堡",
           "slug": "7rLGCR",
           "src": "https://leetcode.cn/problems/7rLGCR/",
-          "solution": null,
-          "score": 0,
-          "isPremium": false
+          "score": null,
+          "isPremium": false,
+          "note": "最小割"
         },
         {
           "id": "1820",
           "title": "最多邀请的个数",
           "slug": "maximum-number-of-accepted-invitations",
           "src": "https://leetcode.cn/problems/maximum-number-of-accepted-invitations/",
-          "solution": null,
-          "score": 0,
-          "isPremium": true
+          "score": null,
+          "isPremium": true,
+          "note": "二分图最大匹配·模板题"
         },
         {
           "id": "2403",
           "title": "杀死所有怪物的最短时间",
           "slug": "minimum-time-to-kill-all-monsters",
           "src": "https://leetcode.cn/problems/minimum-time-to-kill-all-monsters/",
-          "solution": null,
-          "score": 0,
-          "isPremium": true
+          "score": null,
+          "isPremium": true,
+          "note": "同 3376 题"
         },
         {
           "id": "3385",
           "title": "破解锁的最少时间 II",
           "slug": "minimum-time-to-break-locks-ii",
           "src": "https://leetcode.cn/problems/minimum-time-to-break-locks-ii/",
-          "solution": null,
-          "score": 0,
-          "isPremium": true
+          "score": null,
+          "isPremium": true,
+          "note": "同 3376 题"
         },
         {
           "id": "1066",
           "title": "校园自行车分配 II",
           "slug": "campus-bikes-ii",
           "src": "https://leetcode.cn/problems/campus-bikes-ii/",
-          "solution": null,
-          "score": 0,
+          "score": null,
+          "isPremium": true,
+          "note": "一对一，但不是完美匹配"
+        },
+        {
+          "id": "4004",
+          "title": "使循环数组余额非负的最少移动次数 II",
+          "slug": "minimum-moves-to-balance-circular-array-ii",
+          "src": "https://leetcode.cn/problems/minimum-moves-to-balance-circular-array-ii/",
+          "score": null,
           "isPremium": true
         },
         {
@@ -1322,24 +1482,33 @@
           "title": "使矩阵中的 1 互不相邻的最小操作数",
           "slug": "minimum-operations-to-remove-adjacent-ones-in-matrix",
           "src": "https://leetcode.cn/problems/minimum-operations-to-remove-adjacent-ones-in-matrix/",
-          "solution": null,
-          "score": 0,
-          "isPremium": true
+          "score": null,
+          "isPremium": true,
+          "note": "二分图最大独立集"
+        },
+        {
+          "id": "2463",
+          "title": "最小移动总距离",
+          "slug": "minimum-total-distance-traveled",
+          "src": "https://leetcode.cn/problems/minimum-total-distance-traveled/",
+          "score": null,
+          "isPremium": false,
+          "note": "做到 $\\mathcal{O}((n+m)\\log(n+m))$",
+          "group": "模拟费用流"
         }
       ],
-      "children": []
+      "children": [],
+      "summary": "由于有其他做法（比如状压 DP），难度分仅供参考。"
     },
     {
+      "id": "s9",
       "title": "九、其他",
-      "src": null,
-      "summary": null,
       "problems": [
         {
           "id": "1042",
           "title": "不邻接植花",
           "slug": "flower-planting-with-no-adjacent",
           "src": "https://leetcode.cn/problems/flower-planting-with-no-adjacent/",
-          "solution": null,
           "score": 1712,
           "isPremium": false
         },
@@ -1348,7 +1517,6 @@
           "title": "一个图中连通三元组的最小度数",
           "slug": "minimum-degree-of-a-connected-trio-in-a-graph",
           "src": "https://leetcode.cn/problems/minimum-degree-of-a-connected-trio-in-a-graph/",
-          "solution": null,
           "score": 2005,
           "isPremium": false
         },
@@ -1357,7 +1525,6 @@
           "title": "添加边使所有节点度数都为偶数",
           "slug": "add-edges-to-make-degrees-of-all-nodes-even",
           "src": "https://leetcode.cn/problems/add-edges-to-make-degrees-of-all-nodes-even/",
-          "solution": null,
           "score": 2060,
           "isPremium": false
         },
@@ -1366,7 +1533,6 @@
           "title": "保证图可完全遍历",
           "slug": "remove-max-number-of-edges-to-keep-graph-fully-traversable",
           "src": "https://leetcode.cn/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable/",
-          "solution": null,
           "score": 2132,
           "isPremium": false
         },
@@ -1375,7 +1541,6 @@
           "title": "最大化一张图中的路径价值",
           "slug": "maximum-path-quality-of-a-graph",
           "src": "https://leetcode.cn/problems/maximum-path-quality-of-a-graph/",
-          "solution": null,
           "score": 2178,
           "isPremium": false
         },
@@ -1384,7 +1549,6 @@
           "title": "检查边长度限制的路径是否存在",
           "slug": "checking-existence-of-edge-length-limited-paths",
           "src": "https://leetcode.cn/problems/checking-existence-of-edge-length-limited-paths/",
-          "solution": null,
           "score": 2300,
           "isPremium": false
         },
@@ -1393,7 +1557,6 @@
           "title": "节点序列的最大得分",
           "slug": "maximum-score-of-a-node-sequence",
           "src": "https://leetcode.cn/problems/maximum-score-of-a-node-sequence/",
-          "solution": null,
           "score": 2304,
           "isPremium": false
         },
@@ -1402,16 +1565,15 @@
           "title": "将节点分成尽可能多的组",
           "slug": "divide-nodes-into-the-maximum-number-of-groups",
           "src": "https://leetcode.cn/problems/divide-nodes-into-the-maximum-number-of-groups/",
-          "solution": null,
           "score": 2415,
-          "isPremium": false
+          "isPremium": false,
+          "note": "**推荐**"
         },
         {
           "id": "1782",
           "title": "统计点对的数目",
           "slug": "count-pairs-of-nodes",
           "src": "https://leetcode.cn/problems/count-pairs-of-nodes/",
-          "solution": null,
           "score": 2457,
           "isPremium": false
         },
@@ -1420,25 +1582,24 @@
           "title": "使二进制字符串全为 1 的最少操作次数",
           "slug": "minimum-operations-to-equalize-binary-string",
           "src": "https://leetcode.cn/problems/minimum-operations-to-equalize-binary-string/",
-          "solution": null,
           "score": 2477,
-          "isPremium": false
+          "isPremium": false,
+          "note": "进阶 BFS / Gale-Ryser 定理"
         },
         {
           "id": "2612",
           "title": "最少翻转操作数",
           "slug": "minimum-reverse-operations",
           "src": "https://leetcode.cn/problems/minimum-reverse-operations/",
-          "solution": null,
           "score": 2824,
-          "isPremium": false
+          "isPremium": false,
+          "note": "进阶 BFS"
         },
         {
           "id": "3435",
           "title": "最短公共超序列的字母出现频率",
           "slug": "frequencies-of-shortest-supersequences",
           "src": "https://leetcode.cn/problems/frequencies-of-shortest-supersequences/",
-          "solution": null,
           "score": 3028,
           "isPremium": false
         },
@@ -1447,17 +1608,16 @@
           "title": "统计重复个数",
           "slug": "count-the-repetitions",
           "src": "https://leetcode.cn/problems/count-the-repetitions/",
-          "solution": null,
-          "score": 0,
-          "isPremium": false
+          "score": null,
+          "isPremium": false,
+          "note": "做到 $\\mathcal{O}(|s_1| + |s_2|)$"
         },
         {
           "id": "LCP 16",
           "title": "游乐园的游览计划",
           "slug": "you-le-yuan-de-you-lan-ji-hua",
           "src": "https://leetcode.cn/problems/you-le-yuan-de-you-lan-ji-hua/",
-          "solution": null,
-          "score": 0,
+          "score": null,
           "isPremium": false
         },
         {
@@ -1465,8 +1625,7 @@
           "title": "搜寻名人",
           "slug": "find-the-celebrity",
           "src": "https://leetcode.cn/problems/find-the-celebrity/",
-          "solution": null,
-          "score": 0,
+          "score": null,
           "isPremium": true
         },
         {
@@ -1474,8 +1633,7 @@
           "title": "检查边长度限制的路径是否存在 II",
           "slug": "checking-existence-of-edge-length-limited-paths-ii",
           "src": "https://leetcode.cn/problems/checking-existence-of-edge-length-limited-paths-ii/",
-          "solution": null,
-          "score": 0,
+          "score": null,
           "isPremium": true
         },
         {
@@ -1483,28 +1641,28 @@
           "title": "殊途同归",
           "slug": "paths-in-maze-that-lead-to-same-room",
           "src": "https://leetcode.cn/problems/paths-in-maze-that-lead-to-same-room/",
-          "solution": null,
-          "score": 0,
-          "isPremium": true
+          "score": null,
+          "isPremium": true,
+          "note": "三元环计数"
         },
         {
           "id": "3656",
           "title": "判断是否存在简单图",
           "slug": "determine-if-a-simple-graph-exists",
           "src": "https://leetcode.cn/problems/determine-if-a-simple-graph-exists/",
-          "solution": null,
-          "score": 0,
-          "isPremium": true
+          "score": null,
+          "isPremium": true,
+          "note": "Erdős–Gallai 定理"
         }
       ],
       "children": []
     },
     {
+      "id": "s10",
       "title": "十、树上算法",
-      "src": null,
-      "summary": "见 [链表、树、回溯](https://leetcode.cn/circle/discuss/K0n2gO/) 题单的第三章节。",
       "problems": [],
-      "children": []
+      "children": [],
+      "summary": "见 [链表、树、回溯](https://leetcode.cn/circle/discuss/K0n2gO/) 题单的第三章节。"
     }
   ]
 }

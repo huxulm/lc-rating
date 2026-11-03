@@ -1,26 +1,6 @@
-export interface Item {
-  id?: string;
-  title: string;
-  slug: string;
-  src: string;
-  solution: string | null;
-  score: number | null;
-  difficulty: number | null;
-  isPremium: boolean;
-}
-
-export interface Section {
-  title: string;
-  summary: string;
-  content?: string;
-  isLeaf: boolean;
-  children?: Section[];
-  problems: Item[];
-}
-
-export interface Root {
-  title: string;
-  src: string;
-  last_update: string;
-  children: Section[];
-}
+// 题单数据结构由生成脚本定义，前端直接复用，保证两端一致。
+export type {
+  StudyPlanProblem as Item,
+  StudyPlanRoot as Root,
+  StudyPlanSection as Section,
+} from "../scripts/studyplan/parse";

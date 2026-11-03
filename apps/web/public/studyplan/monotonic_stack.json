@@ -1,469 +1,585 @@
 {
-    "title": "分享丨【算法题单】单调栈（矩形面积/贡献法/最小字典序）",
-    "src": "https://leetcode.cn/circle/discuss/9oZFK9/",
-    "last_update": "2025-11-07T23:47:26.098808+00:00",
-    "summary": "![单调栈题单单调栈入门单调栈题目单调栈教程单调栈视频leetcode单调栈 灵茶山艾府 灵神 灵神题单](https://pic.leetcode.cn/1711714526-rMdiIh-t3-c.png)\n\n> 他向远方望去，无法看到高山背后的矮山，只看到一座座更高的山峰。\n\n推荐先做做 [数据结构题单](https://leetcode.cn/circle/discuss/mOr1u6/) 中的「枚举右，维护左」以及第三章「栈」的基础题目后，再来刷本题单。",
-    "children": [
+  "title": "单调栈（矩形面积/贡献法/最小字典序）",
+  "src": "https://leetcode.cn/circle/discuss/9oZFK9/",
+  "last_update": "2026-09-06",
+  "children": [
+    {
+      "id": "s1",
+      "title": "一、单调栈",
+      "problems": [],
+      "children": [
         {
-            "title": "一、单调栈",
-            "summary": "",
-            "children": [
-                {
-                    "title": "§1.1 基础",
-                    "summary": "原理讲解：<a href=\"https://www.bilibili.com/video/BV1VN411J7S7/\">单调栈【基础算法精讲 26】</a><br><br>模板：<br><pre><code class=\"language-py\">def nearestGreater(nums: List[int]) -> Tuple[List[int], List[int]]:\n    n = len(nums)\n    # left[i] 是 nums[i] 左侧最近的严格大于 nums[i] 的数的下标，若不存在则为 -1\n    left = [-1] * n\n    st = []\n    for i, x in enumerate(nums):\n        while st and nums[st[-1]] <= x:  # 如果求严格小于，改成 >=\n            st.pop()\n        if st:\n            left[i] = st[-1]\n        st.append(i)\n\n    # right[i] 是 nums[i] 右侧最近的严格大于 nums[i] 的数的下标，若不存在则为 n\n    right = [n] * n\n    st = []\n    for i in range(n - 1, -1, -1):\n        x = nums[i]\n        while st and nums[st[-1]] <= x:\n            st.pop()\n        if st:\n            right[i] = st[-1]\n        st.append(i)\n\n    return left, right</code></pre>",
-                    "isLeaf": true,
-                    "problems": [
-                        {
-                            "id": 739,
-                            "title": "739. 每日温度",
-                            "slug": "/daily-temperatures/",
-                            "src": "https://leetcode.cn/problems/daily-temperatures/",
-                            "solution": null,
-                            "score": 1700,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 1475,
-                            "title": "1475. 商品折扣后的最终价格",
-                            "slug": "/final-prices-with-a-special-discount-in-a-shop/",
-                            "src": "https://leetcode.cn/problems/final-prices-with-a-special-discount-in-a-shop/",
-                            "solution": null,
-                            "score": 1300,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 496,
-                            "title": "496. 下一个更大元素 I",
-                            "slug": "/next-greater-element-i/",
-                            "src": "https://leetcode.cn/problems/next-greater-element-i/",
-                            "solution": null,
-                            "score": 1400,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 503,
-                            "title": "503. 下一个更大元素 II",
-                            "slug": "/next-greater-element-ii/",
-                            "src": "https://leetcode.cn/problems/next-greater-element-ii/",
-                            "solution": null,
-                            "score": 1500,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 901,
-                            "title": "901. 股票价格跨度",
-                            "slug": "/online-stock-span/",
-                            "src": "https://leetcode.cn/problems/online-stock-span/",
-                            "solution": null,
-                            "score": 1709,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 853,
-                            "title": "853. 车队",
-                            "slug": "/car-fleet/",
-                            "src": "https://leetcode.cn/problems/car-fleet/",
-                            "solution": null,
-                            "score": 1600,
-                            "isPremium": false
-                        }
-                    ]
-                },
-                {
-                    "title": "§1.2 进阶（选做）",
-                    "summary": "<strong>思维扩展</strong>：<ul><li><a href=\"https://leetcode.cn/problems/maximum-width-ramp/\">962. 最大宽度坡</a> 1608</li><li><a href=\"https://leetcode.cn/problems/minimum-operations-to-convert-all-elements-to-zero/\">3542. 将所有元素变为 0 的最少操作次数</a> 1890</li><li><a href=\"https://leetcode.cn/problems/longest-well-performing-interval/\">1124. 表现良好的最长时间段</a> 1908</li></ul>",
-                    "isLeaf": true,
-                    "problems": [
-                        {
-                            "id": 1019,
-                            "title": "1019. 链表中的下一个更大节点",
-                            "slug": "/next-greater-node-in-linked-list/",
-                            "src": "https://leetcode.cn/problems/next-greater-node-in-linked-list/",
-                            "solution": null,
-                            "score": 1571,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 768,
-                            "title": "768. 最多能完成排序的块 II",
-                            "slug": "/max-chunks-to-make-sorted-ii/",
-                            "src": "https://leetcode.cn/problems/max-chunks-to-make-sorted-ii/",
-                            "solution": null,
-                            "score": 1788,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 654,
-                            "title": "654. 最大二叉树",
-                            "slug": "/maximum-binary-tree/",
-                            "src": "https://leetcode.cn/problems/maximum-binary-tree/",
-                            "solution": null,
-                            "score": 1600,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 456,
-                            "title": "456. 132 模式",
-                            "slug": "/132-pattern/",
-                            "src": "https://leetcode.cn/problems/132-pattern/",
-                            "solution": null,
-                            "score": 2000,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 3113,
-                            "title": "3113. 边界元素是最大值的子数组数目",
-                            "slug": "/find-the-number-of-subarrays-where-boundary-elements-are-maximum/",
-                            "src": "https://leetcode.cn/problems/find-the-number-of-subarrays-where-boundary-elements-are-maximum/",
-                            "solution": null,
-                            "score": 2046,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 2866,
-                            "title": "2866. 美丽塔 II",
-                            "slug": "/beautiful-towers-ii/",
-                            "src": "https://leetcode.cn/problems/beautiful-towers-ii/",
-                            "solution": null,
-                            "score": 2072,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 1944,
-                            "title": "1944. 队列中可以看到的人数",
-                            "slug": "/number-of-visible-people-in-a-queue/",
-                            "src": "https://leetcode.cn/problems/number-of-visible-people-in-a-queue/",
-                            "solution": null,
-                            "score": 2105,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 2454,
-                            "title": "2454. 下一个更大元素 IV",
-                            "slug": "/next-greater-element-iv/",
-                            "src": "https://leetcode.cn/problems/next-greater-element-iv/",
-                            "solution": null,
-                            "score": 2175,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 1130,
-                            "title": "1130. 叶值的最小代价生成树",
-                            "slug": "/minimum-cost-tree-from-leaf-values/",
-                            "src": "https://leetcode.cn/problems/minimum-cost-tree-from-leaf-values/",
-                            "solution": null,
-                            "score": 1800,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 2289,
-                            "title": "2289. 使数组按非递减顺序排列",
-                            "slug": "/steps-to-make-array-non-decreasing/",
-                            "src": "https://leetcode.cn/problems/steps-to-make-array-non-decreasing/",
-                            "solution": null,
-                            "score": 2482,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 1776,
-                            "title": "1776. 车队 II",
-                            "slug": "/car-fleet-ii/",
-                            "src": "https://leetcode.cn/problems/car-fleet-ii/",
-                            "solution": null,
-                            "score": 2531,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 2736,
-                            "title": "2736. 最大和查询",
-                            "slug": "/maximum-sum-queries/",
-                            "src": "https://leetcode.cn/problems/maximum-sum-queries/",
-                            "solution": null,
-                            "score": 2533,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 3420,
-                            "title": "3420. 统计 K 次操作以内得到非递减子数组的数目",
-                            "slug": "/count-non-decreasing-subarrays-after-k-operations/",
-                            "src": "https://leetcode.cn/problems/count-non-decreasing-subarrays-after-k-operations/",
-                            "solution": null,
-                            "score": 2855,
-                            "isPremium": true
-                        },
-                        {
-                            "id": 3221,
-                            "title": "3221. 最大数组跳跃得分 II",
-                            "slug": "/maximum-array-hopping-score-ii/",
-                            "src": "https://leetcode.cn/problems/maximum-array-hopping-score-ii/",
-                            "solution": null,
-                            "score": 2700,
-                            "isPremium": true
-                        },
-                        {
-                            "id": 1966,
-                            "title": "1966. 未排序数组中的可被二分搜索的数",
-                            "slug": "/binary-searchable-numbers-in-an-unsorted-array/",
-                            "src": "https://leetcode.cn/problems/binary-searchable-numbers-in-an-unsorted-array/",
-                            "solution": null,
-                            "score": 2300,
-                            "isPremium": true
-                        },
-                        {
-                            "id": 2832,
-                            "title": "2832. 每个元素为最大值的最大范围",
-                            "slug": "/maximal-range-that-each-element-is-maximum-in-it/",
-                            "src": "https://leetcode.cn/problems/maximal-range-that-each-element-is-maximum-in-it/",
-                            "solution": null,
-                            "score": 2600,
-                            "isPremium": true
-                        },
-                        {
-                            "id": 2282,
-                            "title": "2282. 在一个网格中可以看到的人数",
-                            "slug": "/number-of-people-that-can-be-seen-in-a-grid/",
-                            "src": "https://leetcode.cn/problems/number-of-people-that-can-be-seen-in-a-grid/",
-                            "solution": null,
-                            "score": 2500,
-                            "isPremium": true
-                        },
-                        {
-                            "id": 3555,
-                            "title": "3555. 排序每个滑动窗口中最小的子数组",
-                            "slug": "/smallest-subarray-to-sort-in-every-sliding-window/",
-                            "src": "https://leetcode.cn/problems/smallest-subarray-to-sort-in-every-sliding-window/",
-                            "solution": null,
-                            "score": 2750,
-                            "isPremium": true
-                        }
-                    ]
-                }
-            ]
+          "id": "s1-1",
+          "title": "§1.1 基础",
+          "problems": [
+            {
+              "id": "739",
+              "title": "每日温度",
+              "slug": "daily-temperatures",
+              "src": "https://leetcode.cn/problems/daily-temperatures/",
+              "score": null,
+              "isPremium": false
+            },
+            {
+              "id": "1475",
+              "title": "商品折扣后的最终价格",
+              "slug": "final-prices-with-a-special-discount-in-a-shop",
+              "src": "https://leetcode.cn/problems/final-prices-with-a-special-discount-in-a-shop/",
+              "score": null,
+              "isPremium": false,
+              "note": "非暴力做法"
+            },
+            {
+              "id": "496",
+              "title": "下一个更大元素 I",
+              "slug": "next-greater-element-i",
+              "src": "https://leetcode.cn/problems/next-greater-element-i/",
+              "score": null,
+              "isPremium": false
+            },
+            {
+              "id": "503",
+              "title": "下一个更大元素 II",
+              "slug": "next-greater-element-ii",
+              "src": "https://leetcode.cn/problems/next-greater-element-ii/",
+              "score": null,
+              "isPremium": false
+            },
+            {
+              "id": "901",
+              "title": "股票价格跨度",
+              "slug": "online-stock-span",
+              "src": "https://leetcode.cn/problems/online-stock-span/",
+              "score": 1709,
+              "isPremium": false
+            }
+          ],
+          "children": [],
+          "summary": "原理讲解：[单调栈【基础算法精讲 26】](https://www.bilibili.com/video/BV1VN411J7S7/)\n\n模板：\n\n```py [sol-Python3]\n# 返回 left，其中 left[i] 是 nums[i] 左侧最近的严格大于 nums[i] 的数的下标，若不存在则为 -1\n# 时间复杂度 O(len(nums))\ndef left_greater(nums: list[int]) -> list[int]:\n    n = len(nums)\n    left = [-1] * n\n    st = []\n    for i, x in enumerate(nums):\n        while st and nums[st[-1]] <= x:  # 如果求严格小于，改成 >=\n            st.pop()\n        if st:\n            left[i] = st[-1]\n        st.append(i)\n    return left\n\n# 返回 right，其中 right[i] 是 nums[i] 右侧最近的严格大于 nums[i] 的数的下标，若不存在则为 len(nums)\n# 时间复杂度 O(len(nums))\ndef right_greater(nums: list[int]) -> list[int]:\n    n = len(nums)\n    right = [n] * n\n    st = []\n    for i in range(n - 1, -1, -1):\n        x = nums[i]\n        while st and nums[st[-1]] <= x:  # 如果求严格小于，改成 >=\n            st.pop()\n        if st:\n            right[i] = st[-1]\n        st.append(i)\n    return right\n```\n\n```java [sol-Java]\nclass Solution {\n    // 返回 left，其中 left[i] 是 nums[i] 左侧最近的严格大于 nums[i] 的数的下标，若不存在则为 -1\n    // 时间复杂度 O(nums.length)\n    private int[] leftGreater(int[] nums) {\n        int n = nums.length;\n        int[] left = new int[n];\n        Deque<Integer> st = new ArrayDeque<>();\n        st.push(-1); // 哨兵\n        for (int i = 0; i < n; i++) {\n            int x = nums[i];\n            while (st.size() > 1 && nums[st.peek()] <= x) { // 如果求严格小于，改成 >=\n                st.pop();\n            }\n            left[i] = st.peek();\n            st.push(i);\n        }\n        return left;\n    }\n\n    // 返回 right，其中 right[i] 是 nums[i] 右侧最近的严格大于 nums[i] 的数的下标，若不存在则为 nums.length\n    // 时间复杂度 O(nums.length)\n    private int[] rightGreater(int[] nums) {\n        int n = nums.length;\n        int[] right = new int[n];\n        Deque<Integer> st = new ArrayDeque<>();\n        st.push(n); // 哨兵\n        for (int i = n - 1; i >= 0; i--) {\n            int x = nums[i];\n            while (st.size() > 1 && nums[st.peek()] <= x) { // 如果求严格小于，改成 >=\n                st.pop();\n            }\n            right[i] = st.peek();\n            st.push(i);\n        }\n        return right;\n    }\n}\n```\n\n```cpp [sol-C++]\n// 返回 left，其中 left[i] 是 nums[i] 左侧最近的严格大于 nums[i] 的数的下标，若不存在则为 -1\n// 时间复杂度 O(nums.size())\nvector<int> left_greater(vector<int>& nums) {\n    int n = nums.size();\n    vector<int> left(n);\n    stack<int> st;\n    st.push(-1); // 哨兵\n    for (int i = 0; i < n; i++) {\n        int x = nums[i];\n        while (st.size() > 1 && nums[st.top()] <= x) { // 如果求严格小于，改成 >=\n            st.pop();\n        }\n        left[i] = st.top();\n        st.push(i);\n    }\n    return left;\n}\n\n// 返回 right，其中 right[i] 是 nums[i] 右侧最近的严格大于 nums[i] 的数的下标，若不存在则为 nums.size()\n// 时间复杂度 O(nums.size())\nvector<int> right_greater(vector<int>& nums) {\n    int n = nums.size();\n    vector<int> right(n);\n    stack<int> st;\n    st.push(n); // 哨兵\n    for (int i = n - 1; i >= 0; i--) {\n        int x = nums[i];\n        while (st.size() > 1 && nums[st.top()] <= x) { // 如果求严格小于，改成 >=\n            st.pop();\n        }\n        right[i] = st.top();\n        st.push(i);\n    }\n    return right;\n}\n```\n\n```go [sol-Go]\n// 返回 left，其中 left[i] 是 nums[i] 左侧最近的严格大于 nums[i] 的数的下标，若不存在则为 -1\n// 时间复杂度 O(len(nums))\nfunc leftGreater(nums []int) []int {\n\tn := len(nums)\n\tleft := make([]int, n)\n\tst := []int{-1} // 哨兵\n\tfor i, x := range nums {\n\t\tfor len(st) > 1 && nums[st[len(st)-1]] <= x { // 如果求严格小于，改成 >=\n\t\t\tst = st[:len(st)-1]\n\t\t}\n\t\tleft[i] = st[len(st)-1]\n\t\tst = append(st, i)\n\t}\n\treturn left\n}\n\n// 返回 right，其中 right[i] 是 nums[i] 右侧最近的严格大于 nums[i] 的数的下标，若不存在则为 len(nums)\n// 时间复杂度 O(len(nums))\nfunc rightGreater(nums []int) []int {\n\tn := len(nums)\n\tright := make([]int, n)\n\tst := []int{n} // 哨兵\n\tfor i := n - 1; i >= 0; i-- {\n\t\tx := nums[i]\n\t\tfor len(st) > 1 && nums[st[len(st)-1]] <= x { // 如果求严格小于，改成 >=\n\t\t\tst = st[:len(st)-1]\n\t\t}\n\t\tright[i] = st[len(st)-1]\n\t\tst = append(st, i)\n\t}\n\treturn right\n}\n```"
         },
         {
-            "title": "二、矩形",
-            "summary": "",
-            "children": [
-                {
-                    "title": "二、矩形",
-                    "summary": "",
-                    "isLeafParent": true,
-                    "problems": [
-                        {
-                            "id": 84,
-                            "title": "84. 柱状图中最大的矩形",
-                            "slug": "/largest-rectangle-in-histogram/",
-                            "src": "https://leetcode.cn/problems/largest-rectangle-in-histogram/",
-                            "solution": null,
-                            "score": 1900,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 1793,
-                            "title": "1793. 好子数组的最大分数",
-                            "slug": "/maximum-score-of-a-good-subarray/",
-                            "src": "https://leetcode.cn/problems/maximum-score-of-a-good-subarray/",
-                            "solution": null,
-                            "score": 1946,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 85,
-                            "title": "85. 最大矩形",
-                            "slug": "/maximal-rectangle/",
-                            "src": "https://leetcode.cn/problems/maximal-rectangle/",
-                            "solution": null,
-                            "score": 2100,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 221,
-                            "title": "221. 最大正方形",
-                            "slug": "/maximal-square/",
-                            "src": "https://leetcode.cn/problems/maximal-square/",
-                            "solution": null,
-                            "score": 1800,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 42,
-                            "title": "42. 接雨水",
-                            "slug": "/trapping-rain-water/",
-                            "src": "https://leetcode.cn/problems/trapping-rain-water/",
-                            "solution": null,
-                            "score": 1950,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 1504,
-                            "title": "1504. 统计全 1 子矩形",
-                            "slug": "/count-submatrices-with-all-ones/",
-                            "src": "https://leetcode.cn/problems/count-submatrices-with-all-ones/",
-                            "solution": null,
-                            "score": 1700,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 1277,
-                            "title": "1277. 统计全为 1 的正方形子矩阵",
-                            "slug": "/count-square-submatrices-with-all-ones/",
-                            "src": "https://leetcode.cn/problems/count-square-submatrices-with-all-ones/",
-                            "solution": null,
-                            "score": 1600,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 755,
-                            "title": "755. 倒水",
-                            "slug": "/pour-water/",
-                            "src": "https://leetcode.cn/problems/pour-water/",
-                            "solution": null,
-                            "score": 2100,
-                            "isPremium": true
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "三、贡献法",
-            "summary": "<strong>思维扩展</strong>：<ul><li><a href=\"https://leetcode.cn/problems/subarray-with-elements-greater-than-varying-threshold/\">2334. 元素值大于变化阈值的子数组</a> 2381</li><li><a href=\"https://leetcode.cn/problems/count-subarrays-where-max-element-appears-at-least-k-times/solutions/2560940/hua-dong-chuang-kou-fu-ti-dan-pythonjava-xvwg/\">2962. 统计最大元素出现至少 K 次的子数组·我的题解</a> 中的思考题（解答见评论）</li></ul>",
-            "children": [
-                {
-                    "title": "",
-                    "summary": "",
-                    "isLeafParent": true,
-                    "problems": [
-                        {
-                            "id": 907,
-                            "title": "907. 子数组的最小值之和",
-                            "slug": "/sum-of-subarray-minimums/",
-                            "src": "https://leetcode.cn/problems/sum-of-subarray-minimums/",
-                            "solution": null,
-                            "score": 1976,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 2104,
-                            "title": "2104. 子数组范围和（最大值-最小值）",
-                            "slug": "/sum-of-subarray-ranges/",
-                            "src": "https://leetcode.cn/problems/sum-of-subarray-ranges/",
-                            "solution": null,
-                            "score": 2000,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 1856,
-                            "title": "1856. 子数组最小乘积的最大值",
-                            "slug": "/maximum-subarray-min-product/",
-                            "src": "https://leetcode.cn/problems/maximum-subarray-min-product/",
-                            "solution": null,
-                            "score": 2051,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 2818,
-                            "title": "2818. 操作使得分最大",
-                            "slug": "/apply-operations-to-maximize-score/",
-                            "src": "https://leetcode.cn/problems/apply-operations-to-maximize-score/",
-                            "solution": null,
-                            "score": 2397,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 2281,
-                            "title": "2281. 巫师的总力量和（最小值×和）",
-                            "slug": "/sum-of-total-strength-of-wizards/",
-                            "src": "https://leetcode.cn/problems/sum-of-total-strength-of-wizards/",
-                            "solution": null,
-                            "score": 2621,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 3430,
-                            "title": "3430. 最多 K 个元素的子数组的最值之和",
-                            "slug": "/maximum-and-minimum-sums-of-at-most-size-k-subarrays/",
-                            "src": "https://leetcode.cn/problems/maximum-and-minimum-sums-of-at-most-size-k-subarrays/",
-                            "solution": null,
-                            "score": 2645,
-                            "isPremium": false
-                        },
-                        {
-                            "id": 3359,
-                            "title": "3359. 查找最大元素不超过 K 的有序子矩阵",
-                            "slug": "/find-sorted-submatrices-with-maximum-element-at-most-k/",
-                            "src": "https://leetcode.cn/problems/find-sorted-submatrices-with-maximum-element-at-most-k/",
-                            "solution": null,
-                            "score": 2700,
-                            "isPremium": true
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "四、最小字典序",
-            "summary": "",
-            "problems": [
-                {
-                    "id": 402,
-                    "title": "402. 移掉 K 位数字",
-                    "slug": "/remove-k-digits/",
-                    "src": "https://leetcode.cn/problems/remove-k-digits/",
-                    "solution": null,
-                    "score": 1800,
-                    "isPremium": false
-                },
-                {
-                    "id": 1673,
-                    "title": "1673. 找出最具竞争力的子序列",
-                    "slug": "/find-the-most-competitive-subsequence/",
-                    "src": "https://leetcode.cn/problems/find-the-most-competitive-subsequence/",
-                    "solution": null,
-                    "score": 1802,
-                    "isPremium": false
-                },
-                {
-                    "id": 316,
-                    "title": "316. 去除重复字母",
-                    "slug": "/remove-duplicate-letters/",
-                    "src": "https://leetcode.cn/problems/remove-duplicate-letters/",
-                    "solution": null,
-                    "score": 2185,
-                    "isPremium": false
-                },
-                {
-                    "id": 1081,
-                    "title": "1081. 不同字符的最小子序列",
-                    "slug": "/smallest-subsequence-of-distinct-characters/",
-                    "src": "https://leetcode.cn/problems/smallest-subsequence-of-distinct-characters/",
-                    "solution": null,
-                    "score": 2185,
-                    "isPremium": false
-                },
-                {
-                    "id": 321,
-                    "title": "321. 拼接最大数",
-                    "slug": "/create-maximum-number/",
-                    "src": "https://leetcode.cn/problems/create-maximum-number/",
-                    "solution": null,
-                    "score": 2300,
-                    "isPremium": false
-                },
-                {
-                    "id": 2030,
-                    "title": "2030. 含特定字母的最小子序列",
-                    "slug": "/smallest-k-length-subsequence-with-occurrences-of-a-letter/",
-                    "src": "https://leetcode.cn/problems/smallest-k-length-subsequence-with-occurrences-of-a-letter/",
-                    "solution": null,
-                    "score": 2562,
-                    "isPremium": false
-                }
-            ]
-        },
-        {
-            "title": "关联题单",
-            "summary": "<ul><li><strong>单调栈优化 DP</strong>：见 <a href=\"https://leetcode.cn/circle/discuss/tXLS3i/\">动态规划题单</a> 中的「§11.2 单调栈优化 DP」。</li><li><strong>单调队列</strong>：见 <a href=\"https://leetcode.cn/circle/discuss/mOr1u6/\">数据结构题单</a> 中的「§4.3 单调队列」。</li></ul><br><a href=\"https://leetcode.cn/circle/discuss/RvFUtj/\">如何科学刷题？</a><br><ol><li><a href=\"https://leetcode.cn/circle/discuss/0viNMK/\">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a></li><li><a href=\"https://leetcode.cn/circle/discuss/SqopEo/\">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a></li><li><a href=\"https://leetcode.cn/circle/discuss/9oZFK9/\">单调栈（基础/矩形面积/贡献法/最小字典序）</a></li><li><a href=\"https://leetcode.cn/circle/discuss/YiXPXW/\">网格图（DFS/BFS/综合应用）</a></li><li><a href=\"https://leetcode.cn/circle/discuss/dHn9Vk/\">位运算（基础/性质/拆位/试填/恒等式/思维）</a></li><li><a href=\"https://leetcode.cn/circle/discuss/01LUak/\">图论算法（DFS/BFS/拓扑排序/基环树/最短路/最小生成树/网络流）</a></li><li><a href=\"https://leetcode.cn/circle/discuss/tXLS3i/\">动态规划（入门/背包/划分/状态机/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a></li><li><a href=\"https://leetcode.cn/circle/discuss/mOr1u6/\">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a></li><li><a href=\"https://leetcode.cn/circle/discuss/IYT3ss/\">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a></li><li><a href=\"https://leetcode.cn/circle/discuss/g6KTKL/\">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a></li><li><a href=\"https://leetcode.cn/circle/discuss/K0n2gO/\">链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）</a></li><li><a href=\"https://leetcode.cn/circle/discuss/SJFwQI/\">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a></li></ol><br><a href=\"https://github.com/EndlessCheng/codeforces-go/blob/master/leetcode/SOLUTIONS.md\">我的题解精选（已分类）</a><br><br>欢迎关注 <a href=\"https://space.bilibili.com/206214\">B站@灵茶山艾府</a><br><br>如果你发现有题目可以补充进来，欢迎评论反馈。"
+          "id": "s1-2",
+          "title": "§1.2 进阶",
+          "problems": [
+            {
+              "id": "3676",
+              "title": "碗子数组的数目",
+              "slug": "count-bowl-subarrays",
+              "src": "https://leetcode.cn/problems/count-bowl-subarrays/",
+              "score": 1848,
+              "isPremium": false
+            },
+            {
+              "id": "456",
+              "title": "132 模式",
+              "slug": "132-pattern",
+              "src": "https://leetcode.cn/problems/132-pattern/",
+              "score": 2000,
+              "isPremium": false,
+              "scoreApprox": true
+            },
+            {
+              "id": "3113",
+              "title": "边界元素是最大值的子数组数目",
+              "slug": "find-the-number-of-subarrays-where-boundary-elements-are-maximum",
+              "src": "https://leetcode.cn/problems/find-the-number-of-subarrays-where-boundary-elements-are-maximum/",
+              "score": 2046,
+              "isPremium": false
+            },
+            {
+              "id": "2866",
+              "title": "美丽塔 II",
+              "slug": "beautiful-towers-ii",
+              "src": "https://leetcode.cn/problems/beautiful-towers-ii/",
+              "score": 2072,
+              "isPremium": false
+            },
+            {
+              "id": "975",
+              "title": "奇偶跳",
+              "slug": "odd-even-jump",
+              "src": "https://leetcode.cn/problems/odd-even-jump/",
+              "score": 2079,
+              "isPremium": false
+            },
+            {
+              "id": "1944",
+              "title": "队列中可以看到的人数",
+              "slug": "number-of-visible-people-in-a-queue",
+              "src": "https://leetcode.cn/problems/number-of-visible-people-in-a-queue/",
+              "score": 2105,
+              "isPremium": false
+            },
+            {
+              "id": "2454",
+              "title": "下一个更大元素 IV",
+              "slug": "next-greater-element-iv",
+              "src": "https://leetcode.cn/problems/next-greater-element-iv/",
+              "score": 2175,
+              "isPremium": false
+            },
+            {
+              "id": "654",
+              "title": "最大二叉树",
+              "slug": "maximum-binary-tree",
+              "src": "https://leetcode.cn/problems/maximum-binary-tree/",
+              "score": null,
+              "isPremium": false,
+              "note": "做到 $\\mathcal{O}(n)$"
+            },
+            {
+              "id": "1130",
+              "title": "叶值的最小代价生成树",
+              "slug": "minimum-cost-tree-from-leaf-values",
+              "src": "https://leetcode.cn/problems/minimum-cost-tree-from-leaf-values/",
+              "score": null,
+              "isPremium": false,
+              "note": "做到 $\\mathcal{O}(n)$"
+            },
+            {
+              "id": "2289",
+              "title": "使数组按非递减顺序排列",
+              "slug": "steps-to-make-array-non-decreasing",
+              "src": "https://leetcode.cn/problems/steps-to-make-array-non-decreasing/",
+              "score": 2482,
+              "isPremium": false
+            },
+            {
+              "id": "2736",
+              "title": "最大和查询",
+              "slug": "maximum-sum-queries",
+              "src": "https://leetcode.cn/problems/maximum-sum-queries/",
+              "score": 2533,
+              "isPremium": false
+            },
+            {
+              "id": "3420",
+              "title": "统计 K 次操作以内得到非递减子数组的数目",
+              "slug": "count-non-decreasing-subarrays-after-k-operations",
+              "src": "https://leetcode.cn/problems/count-non-decreasing-subarrays-after-k-operations/",
+              "score": 2855,
+              "isPremium": false,
+              "note": "树形结构"
+            },
+            {
+              "id": "3221",
+              "title": "最大数组跳跃得分 II",
+              "slug": "maximum-array-hopping-score-ii",
+              "src": "https://leetcode.cn/problems/maximum-array-hopping-score-ii/",
+              "score": null,
+              "isPremium": true
+            },
+            {
+              "id": "1966",
+              "title": "未排序数组中的可被二分搜索的数",
+              "slug": "binary-searchable-numbers-in-an-unsorted-array",
+              "src": "https://leetcode.cn/problems/binary-searchable-numbers-in-an-unsorted-array/",
+              "score": null,
+              "isPremium": true
+            },
+            {
+              "id": "2832",
+              "title": "每个元素为最大值的最大范围",
+              "slug": "maximal-range-that-each-element-is-maximum-in-it",
+              "src": "https://leetcode.cn/problems/maximal-range-that-each-element-is-maximum-in-it/",
+              "score": null,
+              "isPremium": true
+            },
+            {
+              "id": "1063",
+              "title": "有效子数组的数目",
+              "slug": "number-of-valid-subarrays",
+              "src": "https://leetcode.cn/problems/number-of-valid-subarrays/",
+              "score": null,
+              "isPremium": true
+            },
+            {
+              "id": "1950",
+              "title": "所有子数组最小值中的最大值",
+              "slug": "maximum-of-minimum-values-in-all-subarrays",
+              "src": "https://leetcode.cn/problems/maximum-of-minimum-values-in-all-subarrays/",
+              "score": null,
+              "isPremium": true
+            },
+            {
+              "id": "2282",
+              "title": "在一个网格中可以看到的人数",
+              "slug": "number-of-people-that-can-be-seen-in-a-grid",
+              "src": "https://leetcode.cn/problems/number-of-people-that-can-be-seen-in-a-grid/",
+              "score": null,
+              "isPremium": true
+            },
+            {
+              "id": "3555",
+              "title": "排序每个滑动窗口中最小的子数组",
+              "slug": "smallest-subarray-to-sort-in-every-sliding-window",
+              "src": "https://leetcode.cn/problems/smallest-subarray-to-sort-in-every-sliding-window/",
+              "score": null,
+              "isPremium": true,
+              "note": "做到 $\\mathcal{O}(n)$"
+            },
+            {
+              "id": "1019",
+              "title": "链表中的下一个更大节点",
+              "slug": "next-greater-node-in-linked-list",
+              "src": "https://leetcode.cn/problems/next-greater-node-in-linked-list/",
+              "score": 1571,
+              "isPremium": false,
+              "group": "思维扩展"
+            },
+            {
+              "id": "962",
+              "title": "最大宽度坡",
+              "slug": "maximum-width-ramp",
+              "src": "https://leetcode.cn/problems/maximum-width-ramp/",
+              "score": 1608,
+              "isPremium": false,
+              "group": "思维扩展"
+            },
+            {
+              "id": "853",
+              "title": "车队",
+              "slug": "car-fleet",
+              "src": "https://leetcode.cn/problems/car-fleet/",
+              "score": 1678,
+              "isPremium": false,
+              "group": "思维扩展"
+            },
+            {
+              "id": "768",
+              "title": "最多能完成排序的块 II",
+              "slug": "max-chunks-to-make-sorted-ii",
+              "src": "https://leetcode.cn/problems/max-chunks-to-make-sorted-ii/",
+              "score": 1788,
+              "isPremium": false,
+              "group": "思维扩展"
+            },
+            {
+              "id": "3814",
+              "title": "预算下的最大总容量",
+              "slug": "maximum-capacity-within-budget",
+              "src": "https://leetcode.cn/problems/maximum-capacity-within-budget/",
+              "score": 1796,
+              "isPremium": false,
+              "group": "思维扩展"
+            },
+            {
+              "id": "2054",
+              "title": "两个最好的不重叠活动",
+              "slug": "two-best-non-overlapping-events",
+              "src": "https://leetcode.cn/problems/two-best-non-overlapping-events/",
+              "score": 1883,
+              "isPremium": false,
+              "group": "思维扩展"
+            },
+            {
+              "id": "3542",
+              "title": "将所有元素变为 0 的最少操作次数",
+              "slug": "minimum-operations-to-convert-all-elements-to-zero",
+              "src": "https://leetcode.cn/problems/minimum-operations-to-convert-all-elements-to-zero/",
+              "score": 1890,
+              "isPremium": false,
+              "group": "思维扩展"
+            },
+            {
+              "id": "1124",
+              "title": "表现良好的最长时间段",
+              "slug": "longest-well-performing-interval",
+              "src": "https://leetcode.cn/problems/longest-well-performing-interval/",
+              "score": 1908,
+              "isPremium": false,
+              "group": "思维扩展"
+            },
+            {
+              "id": "1340",
+              "title": "跳跃游戏 V",
+              "slug": "jump-game-v",
+              "src": "https://leetcode.cn/problems/jump-game-v/",
+              "score": null,
+              "isPremium": false,
+              "note": "做到 $\\mathcal{O}(n)$",
+              "group": "思维扩展"
+            },
+            {
+              "id": "1776",
+              "title": "车队 II",
+              "slug": "car-fleet-ii",
+              "src": "https://leetcode.cn/problems/car-fleet-ii/",
+              "score": 2531,
+              "isPremium": false,
+              "group": "思维扩展"
+            },
+            {
+              "id": "2863",
+              "title": "最长半递减子数组的长度",
+              "slug": "maximum-length-of-semi-decreasing-subarrays",
+              "src": "https://leetcode.cn/problems/maximum-length-of-semi-decreasing-subarrays/",
+              "score": null,
+              "isPremium": true,
+              "group": "思维扩展"
+            },
+            {
+              "id": "2355",
+              "title": "你能拿走的最大图书数量",
+              "slug": "maximum-number-of-books-you-can-take",
+              "src": "https://leetcode.cn/problems/maximum-number-of-books-you-can-take/",
+              "score": null,
+              "isPremium": true,
+              "group": "思维扩展"
+            }
+          ],
+          "children": []
         }
-    ]
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "二、矩形",
+      "problems": [
+        {
+          "id": "84",
+          "title": "柱状图中最大的矩形",
+          "slug": "largest-rectangle-in-histogram",
+          "src": "https://leetcode.cn/problems/largest-rectangle-in-histogram/",
+          "score": null,
+          "isPremium": false
+        },
+        {
+          "id": "1793",
+          "title": "好子数组的最大分数",
+          "slug": "maximum-score-of-a-good-subarray",
+          "src": "https://leetcode.cn/problems/maximum-score-of-a-good-subarray/",
+          "score": 1946,
+          "isPremium": false
+        },
+        {
+          "id": "85",
+          "title": "最大矩形",
+          "slug": "maximal-rectangle",
+          "src": "https://leetcode.cn/problems/maximal-rectangle/",
+          "score": null,
+          "isPremium": false
+        },
+        {
+          "id": "221",
+          "title": "最大正方形",
+          "slug": "maximal-square",
+          "src": "https://leetcode.cn/problems/maximal-square/",
+          "score": null,
+          "isPremium": false
+        },
+        {
+          "id": "4016",
+          "title": "两个不重叠子正方形的最大面积",
+          "slug": "maximum-area-of-two-non-overlapping-square-submatrices",
+          "src": "https://leetcode.cn/problems/maximum-area-of-two-non-overlapping-square-submatrices/",
+          "score": 1959,
+          "isPremium": false
+        },
+        {
+          "id": "42",
+          "title": "接雨水",
+          "slug": "trapping-rain-water",
+          "src": "https://leetcode.cn/problems/trapping-rain-water/",
+          "score": null,
+          "isPremium": false,
+          "note": "做法不止一种"
+        },
+        {
+          "id": "1504",
+          "title": "统计全 1 子矩形",
+          "slug": "count-submatrices-with-all-ones",
+          "src": "https://leetcode.cn/problems/count-submatrices-with-all-ones/",
+          "score": null,
+          "isPremium": false
+        },
+        {
+          "id": "1277",
+          "title": "统计全为 1 的正方形子矩阵",
+          "slug": "count-square-submatrices-with-all-ones",
+          "src": "https://leetcode.cn/problems/count-square-submatrices-with-all-ones/",
+          "score": null,
+          "isPremium": false
+        },
+        {
+          "id": "755",
+          "title": "倒水",
+          "slug": "pour-water",
+          "src": "https://leetcode.cn/problems/pour-water/",
+          "score": null,
+          "isPremium": true
+        },
+        {
+          "id": "1727",
+          "title": "重新排列后的最大子矩阵",
+          "slug": "largest-submatrix-with-rearrangements",
+          "src": "https://leetcode.cn/problems/largest-submatrix-with-rearrangements/",
+          "score": 1927,
+          "isPremium": false,
+          "note": "注：不是单调栈，但有一些共同的思路",
+          "group": "思维扩展"
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "s3",
+      "title": "三、贡献法",
+      "problems": [
+        {
+          "id": "907",
+          "title": "子数组的最小值之和",
+          "slug": "sum-of-subarray-minimums",
+          "src": "https://leetcode.cn/problems/sum-of-subarray-minimums/",
+          "score": 1976,
+          "isPremium": false
+        },
+        {
+          "id": "2104",
+          "title": "子数组范围和（最大值-最小值）",
+          "slug": "sum-of-subarray-ranges",
+          "src": "https://leetcode.cn/problems/sum-of-subarray-ranges/",
+          "score": null,
+          "isPremium": false,
+          "note": "$\\mathcal{O}(n)$ 做法难度大约 2000"
+        },
+        {
+          "id": "1856",
+          "title": "子数组最小乘积的最大值",
+          "slug": "maximum-subarray-min-product",
+          "src": "https://leetcode.cn/problems/maximum-subarray-min-product/",
+          "score": 2051,
+          "isPremium": false
+        },
+        {
+          "id": "3878",
+          "title": "统计好子数组",
+          "slug": "count-good-subarrays",
+          "src": "https://leetcode.cn/problems/count-good-subarrays/",
+          "score": 2230,
+          "isPremium": false
+        },
+        {
+          "id": "2818",
+          "title": "操作使得分最大",
+          "slug": "apply-operations-to-maximize-score",
+          "src": "https://leetcode.cn/problems/apply-operations-to-maximize-score/",
+          "score": 2397,
+          "isPremium": false
+        },
+        {
+          "id": "2281",
+          "title": "巫师的总力量和（最小值×和）",
+          "slug": "sum-of-total-strength-of-wizards",
+          "src": "https://leetcode.cn/problems/sum-of-total-strength-of-wizards/",
+          "score": 2621,
+          "isPremium": false
+        },
+        {
+          "id": "3430",
+          "title": "最多 K 个元素的子数组的最值之和",
+          "slug": "maximum-and-minimum-sums-of-at-most-size-k-subarrays",
+          "src": "https://leetcode.cn/problems/maximum-and-minimum-sums-of-at-most-size-k-subarrays/",
+          "score": 2645,
+          "isPremium": false
+        },
+        {
+          "id": "3359",
+          "title": "查找最大元素不超过 K 的有序子矩阵",
+          "slug": "find-sorted-submatrices-with-maximum-element-at-most-k",
+          "src": "https://leetcode.cn/problems/find-sorted-submatrices-with-maximum-element-at-most-k/",
+          "score": null,
+          "isPremium": true,
+          "note": "矩形"
+        },
+        {
+          "id": "2334",
+          "title": "元素值大于变化阈值的子数组",
+          "slug": "subarray-with-elements-greater-than-varying-threshold",
+          "src": "https://leetcode.cn/problems/subarray-with-elements-greater-than-varying-threshold/",
+          "score": 2381,
+          "isPremium": false,
+          "group": "思维扩展"
+        },
+        {
+          "id": "2962",
+          "title": "统计最大元素出现至少 K 次的子数组·我的题解",
+          "slug": "count-subarrays-where-max-element-appears-at-least-k-times",
+          "src": "https://leetcode.cn/problems/count-subarrays-where-max-element-appears-at-least-k-times/",
+          "score": null,
+          "isPremium": false,
+          "note": "中的思考题（解答见评论）",
+          "group": "思维扩展"
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "s4",
+      "title": "四、最小字典序",
+      "problems": [
+        {
+          "id": "402",
+          "title": "移掉 K 位数字",
+          "slug": "remove-k-digits",
+          "src": "https://leetcode.cn/problems/remove-k-digits/",
+          "score": 1800,
+          "isPremium": false,
+          "scoreApprox": true
+        },
+        {
+          "id": "1673",
+          "title": "找出最具竞争力的子序列",
+          "slug": "find-the-most-competitive-subsequence",
+          "src": "https://leetcode.cn/problems/find-the-most-competitive-subsequence/",
+          "score": 1802,
+          "isPremium": false
+        },
+        {
+          "id": "316",
+          "title": "去除重复字母",
+          "slug": "remove-duplicate-letters",
+          "src": "https://leetcode.cn/problems/remove-duplicate-letters/",
+          "score": 2185,
+          "isPremium": false
+        },
+        {
+          "id": "1081",
+          "title": "不同字符的最小子序列",
+          "slug": "smallest-subsequence-of-distinct-characters",
+          "src": "https://leetcode.cn/problems/smallest-subsequence-of-distinct-characters/",
+          "score": null,
+          "isPremium": false,
+          "note": "同 316 题"
+        },
+        {
+          "id": "3816",
+          "title": "删除重复字符后的字典序最小字符串",
+          "slug": "lexicographically-smallest-string-after-deleting-duplicate-characters",
+          "src": "https://leetcode.cn/problems/lexicographically-smallest-string-after-deleting-duplicate-characters/",
+          "score": 2377,
+          "isPremium": false
+        },
+        {
+          "id": "321",
+          "title": "拼接最大数",
+          "slug": "create-maximum-number",
+          "src": "https://leetcode.cn/problems/create-maximum-number/",
+          "score": null,
+          "isPremium": false
+        },
+        {
+          "id": "2030",
+          "title": "含特定字母的最小子序列",
+          "slug": "smallest-k-length-subsequence-with-occurrences-of-a-letter",
+          "src": "https://leetcode.cn/problems/smallest-k-length-subsequence-with-occurrences-of-a-letter/",
+          "score": 2562,
+          "isPremium": false
+        }
+      ],
+      "children": [],
+      "summary": "- [316 扩展：重复个数不超过 limit](https://leetcode.cn/contest/tianchi2022/problems/ev2bru/)"
+    }
+  ],
+  "summary": "![单调栈题单 单调栈入门 单调栈题目 单调栈教程 leetcode单调栈 灵茶山艾府 灵神 灵神题单](https://pic.leetcode.cn/1711714526-rMdiIh-t3-c.png)\n\n> 他向远方望去，无法看到高山背后的矮山，只看到一座座更高的山峰。\n\n推荐先做做 [数据结构题单](https://leetcode.cn/circle/discuss/mOr1u6/) 中的「枚举右，维护左」以及第三章「栈」的基础题目后，再来刷本题单。"
 }

@@ -128,7 +128,7 @@ lc-rating/
 │       ├── hooks/            # React Hooks
 │       ├── types/            # TypeScript 类型定义
 │       ├── utils/            # 工具函数
-│       ├── lc-maker/         # 题单数据生成工具(Python)
+│       ├── scripts/studyplan/ # 题单数据生成脚本(TypeScript)
 │       └── public/           # 静态资源
 │           ├── problemset/   # 题库数据
 │           └── studyplan/    # 题单数据
@@ -141,22 +141,20 @@ lc-rating/
 
 ## 🔧 题单数据生成
 
-本项目包含 Python 工具用于从 LeetCode 讨论区生成题单数据。
-
-### 安装 Python 依赖
-
-```bash
-cd apps/web/lc-maker
-pip install -r requirements.txt
-```
-
-### 生成题单
+题单数据来自灵茶山艾府在力扣讨论区发布的题单帖子。脚本通过力扣 GraphQL 接口获取帖子 Markdown 原文，
+确定性地解析出章节层级、题目、难度分与备注，生成 `apps/web/public/studyplan/<key>.json`。
 
 ```bash
-python 0x3f_discuss.py --uuid <讨论UUID> --o <输出路径>
+cd apps/web
+pnpm studyplan:update                # 更新全部题单
+pnpm studyplan:update dynamic graph  # 只更新指定题单（按 key 前缀匹配）
+pnpm studyplan:update --dry-run      # 只解析并打印统计，不写文件
+pnpm test                            # 解析器单元测试
 ```
 
-详见 [lc-maker/README.md](apps/web/lc-maker/README.md)
+- 题单列表（key ↔ 帖子 uuid）在 `apps/web/scripts/studyplan/plans.ts`，新增题单时同时在 `config/constants.ts` 的 `STUDYPLANS` 中添加名称。
+- 若解析出的题目数比现有数据骤减 30% 以上，脚本会拒绝覆盖并以失败退出，提示帖子格式可能有变化。
+- CI：`.github/workflows/studyplan_updater.yml` 每周一自动运行并提交更新，也可在 Actions 页面手动触发。
 
 ## 📄 开源协议
 
