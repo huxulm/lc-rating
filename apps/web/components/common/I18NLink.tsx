@@ -11,10 +11,11 @@ interface I18NLinkProps {
   title: string;
   className?: string;
   style?: React.CSSProperties;
+  tooltip?: string;
 }
 
 const I18NLink = React.memo(
-  ({ link, title, className, style }: I18NLinkProps) => {
+  ({ link, title, className, style, tooltip }: I18NLinkProps) => {
     const linkLanguage = useGlobalSettingsStore((s) => s.linkLanguage);
     const linkLocal = linkLanguage === "zh" ? link.zh : link.en;
 
@@ -24,6 +25,7 @@ const I18NLink = React.memo(
         target="_blank"
         className={cn("text-left hover:underline", className)}
         style={style}
+        title={tooltip}
       >
         {title}
       </Link>

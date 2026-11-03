@@ -48,9 +48,10 @@ const PageJumper = React.memo(
           value={localPage}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
-          className="w-1/3"
+          className="h-9 w-16 text-center [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none"
         />
         <Button
+          variant="outline"
           onClick={jump}
           disabled={parsedPage < 1 || parsedPage > pageCount}
         >

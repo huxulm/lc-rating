@@ -1,4 +1,5 @@
 "use client";
+import { PageContainer, PageHeader } from "@/components/common/PageHeader";
 import { LC_HOST_EN, LC_HOST_ZH } from "@/config/constants";
 import { useContests } from "@/hooks/useContests";
 import { useProblems } from "@/hooks/useProblems";
@@ -133,14 +134,20 @@ function ProblemSet() {
   }, [tableData, similarties]);
 
   return (
-    <div className="p-8 flex flex-col gap-4">
-      <div className="w-4/5 xl:w-3/4 2xl:w-2/3 m-auto">
+    <PageContainer>
+      <PageHeader
+        title="题库"
+        description={
+          isPending
+            ? "按难度分、算法标签和完成进度筛选题目。"
+            : `共 ${tableData.length} 道题目，按难度分、算法标签和完成进度筛选。`
+        }
+      />
+      <div className="rounded-xl border bg-card p-4 shadow-xs">
         <Search data={tableData} onSearch={handleSearch}></Search>
       </div>
-      <div className="w-full 2xl:w-2/3  m-auto">
-        <ProblemsTable tableData={searchedData} isPending={isPending} />
-      </div>
-    </div>
+      <ProblemsTable tableData={searchedData} isPending={isPending} />
+    </PageContainer>
   );
 }
 

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Settings } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -26,7 +27,14 @@ export function SettingsPanel({ show, onOpenChange }: SettingsPanelProps) {
   return (
     <Dialog open={show} onOpenChange={onOpenChange}>
       <DialogTrigger asChild>
-        <Button variant="outline">站点设置</Button>
+        <Button
+          variant="ghost"
+          size="sm"
+          className="h-9 gap-1.5 text-muted-foreground hover:text-foreground"
+        >
+          <Settings className="size-4" />
+          <span className="hidden lg:inline">站点设置</span>
+        </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-3xl w-full sm:w-24/30 md:w-20/30 lg:15/30">
         <DialogHeader>

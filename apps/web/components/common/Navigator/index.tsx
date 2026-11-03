@@ -2,108 +2,171 @@
 
 import { Button } from "@/components/ui-customized/button";
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui-customized/navigation-menu";
-import { BILIBILI_0X3F_SPACE, ROUTERS } from "@/config/constants";
-import { Moon, Sun } from "lucide-react";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { ROUTERS } from "@/config/constants";
+import { cn } from "@/lib/utils";
+import { ChevronDown, Menu, Moon, Sun, Trophy } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 import { GithubBadge } from "./GithubBadge";
 import SettingsPanel from "./SettingsPanel";
 
-const Navigator = React.memo(() => {
+const isActive = (pathname: string, href: string) =>
+  pathname === href || pathname.startsWith(`${href}/`);
+
+const navLinkClass = (active: boolean) =>
+  cn(
+    "relative inline-flex h-9 items-center gap-1 rounded-md px-3 text-sm font-medium transition-colors",
+    "text-muted-foreground hover:bg-accent hover:text-foreground",
+    active && "text-foreground after:absolute after:inset-x-3 after:-bottom-[11px] after:h-0.5 after:rounded-full after:bg-brand"
+  );
+
+const Brand = ({ alwaysShowName = false }: { alwaysShowName?: boolean }) => (
+  <Link
+    href={ROUTERS.contest.href}
+    className="flex shrink-0 items-center gap-2 font-semibold tracking-tight"
+  >
+    <span className="grid size-8 place-items-center rounded-lg bg-brand text-brand-foreground">
+      <Trophy className="size-4" />
+    </span>
+    <span className={alwaysShowName ? "" : "hidden sm:inline"}>LC-Rating</span>
+  </Link>
+);
+
+const ThemeToggle = () => {
   const { setTheme } = useTheme();
-  const [show, setShow] = React.useState(false);
+  return (
+    <Button
+      size="icon"
+      variant="ghost"
+      className="relative"
+      onClick={() => setTheme((prev) => (prev === "dark" ? "light" : "dark"))}
+    >
+      <Sun className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+      <Moon className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+      <span className="sr-only">切换主题</span>
+    </Button>
+  );
+};
+
+const StudyPlanMenu = ({ active }: { active: boolean }) => (
+  <DropdownMenu>
+    <DropdownMenuTrigger className={cn(navLinkClass(active), "outline-none")}>
+      {ROUTERS.studyPlans.title}
+      <ChevronDown className="size-3.5 opacity-60" />
+    </DropdownMenuTrigger>
+    <DropdownMenuContent
+      align="start"
+      sideOffset={10}
+      className="grid w-[360px] grid-cols-3 gap-1 p-2"
+    >
+      {ROUTERS.studyPlans.children.map((plan) => (
+        <DropdownMenuItem key={plan.href} asChild className="justify-center">
+          <Link href={plan.href}>{plan.title}</Link>
+        </DropdownMenuItem>
+      ))}
+    </DropdownMenuContent>
+  </DropdownMenu>
+);
+
+const MobileMenu = ({ pathname }: { pathname: string }) => {
+  const [open, setOpen] = React.useState(false);
+  const close = () => setOpen(false);
+  const item = (href: string, title: string) => (
+    <Link
+      key={href}
+      href={href}
+      onClick={close}
+      className={cn(
+        "rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent",
+        isActive(pathname, href)
+          ? "bg-accent font-medium text-foreground"
+          : "text-muted-foreground"
+      )}
+    >
+      {title}
+    </Link>
+  );
 
   return (
-    <NavigationMenu className="px-4 py-3 ring-1 ring-gray-900/10 backdrop-blur-sm dark:shadow-2xl dark:bg-gray-700/15 dark:text-gray-200 dark:ring-black/10 fixed w-full z-10 top-0 max-w-full flex justify-between items-center h-[var(--navbar-height)] md:h-[var(--navbar-height)]">
-      <div className="font-bold text-lg hidden md:block">力扣竞赛题目</div>
-      <div>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <Button
-              variant="ghost"
-              className="cursor-pointer text-center text-base font-semibold"
-            >
-              <Link href={ROUTERS.contest.href}>{ROUTERS.contest.title}</Link>
-            </Button>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Button
-              variant="ghost"
-              className="cursor-pointer text-center text-base font-semibold"
-            >
-              <Link href={ROUTERS.problemset.href}>
-                {ROUTERS.problemset.title}
-              </Link>
-            </Button>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger className="cursor-pointer text-center text-base font-semibold w-fit select-none bg-transparent">
-              {ROUTERS.studyPlans.title}
-            </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 grid-cols-3">
-                {ROUTERS.studyPlans.children.map((plan) => (
-                  <Button
-                    key={plan.title}
-                    variant="secondary"
-                    className="cursor-pointer text-center text-base font-medium"
-                  >
-                    <Link href={plan.href}>{plan.title}</Link>
-                  </Button>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-            <NavigationMenuViewport />
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
-            <SettingsPanel show={show} onOpenChange={setShow} />
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
-            <Button
-              variant="ghost"
-              className="cursor-pointer text-center text-base text-red-500 font-light"
-            >
-              <Link href={ROUTERS.v2.href}>{ROUTERS.v2.title}</Link>
-            </Button>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </div>
-      <div className="font-bold md:flex gap-1 hidden">
-        <div>本页面所有题解来自</div>
-        <Link href={BILIBILI_0X3F_SPACE.url} className="underline text-red-700">
-          {BILIBILI_0X3F_SPACE.title}
-        </Link>
-        <div>感谢！</div>
-      </div>
-      <div className="flex gap-4">
-        <Button
-          size="icon"
-          variant="outline"
-          className="rounded-full"
-          onClick={() =>
-            setTheme((prev) => (prev === "dark" ? "light" : "dark"))
-          }
-        >
-          <Sun className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          <span className="sr-only">Toggle theme</span>
+    <Sheet open={open} onOpenChange={setOpen}>
+      <SheetTrigger asChild>
+        <Button size="icon" variant="ghost" className="md:hidden">
+          <Menu />
+          <span className="sr-only">打开菜单</span>
         </Button>
-        <GithubBadge />
+      </SheetTrigger>
+      <SheetContent side="left" className="w-72 overflow-y-auto">
+        <SheetHeader>
+          <SheetTitle>
+            <Brand alwaysShowName />
+          </SheetTitle>
+        </SheetHeader>
+        <nav className="flex flex-col gap-1 px-4 pb-6">
+          {item(ROUTERS.contest.href, ROUTERS.contest.title)}
+          {item(ROUTERS.problemset.href, ROUTERS.problemset.title)}
+          <div className="mt-4 mb-1 px-3 text-xs font-medium uppercase tracking-wider text-muted-foreground/70">
+            {ROUTERS.studyPlans.title}
+          </div>
+          {ROUTERS.studyPlans.children.map((plan) =>
+            item(plan.href, plan.title)
+          )}
+        </nav>
+      </SheetContent>
+    </Sheet>
+  );
+};
+
+const Navigator = React.memo(() => {
+  const pathname = usePathname() ?? "";
+  const [showSettings, setShowSettings] = React.useState(false);
+
+  return (
+    <header className="fixed inset-x-0 top-0 z-40 h-[var(--navbar-height)] border-b bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/70">
+      <div className="mx-auto flex h-full max-w-[var(--content-max-width)] items-center gap-2 px-4 md:gap-6 md:px-6">
+        <MobileMenu pathname={pathname} />
+        <Brand />
+
+        <nav className="hidden items-center gap-1 md:flex">
+          <Link
+            href={ROUTERS.contest.href}
+            className={navLinkClass(isActive(pathname, ROUTERS.contest.href))}
+          >
+            {ROUTERS.contest.title}
+          </Link>
+          <Link
+            href={ROUTERS.problemset.href}
+            className={navLinkClass(
+              isActive(pathname, ROUTERS.problemset.href)
+            )}
+          >
+            {ROUTERS.problemset.title}
+          </Link>
+          <StudyPlanMenu active={pathname.startsWith("/studyplan")} />
+        </nav>
+
+        <div className="ml-auto flex items-center gap-1">
+          <SettingsPanel show={showSettings} onOpenChange={setShowSettings} />
+          <ThemeToggle />
+          <GithubBadge />
+        </div>
       </div>
-    </NavigationMenu>
+    </header>
   );
 });
 
 Navigator.displayName = "Navigator";
 export { Navigator };
-

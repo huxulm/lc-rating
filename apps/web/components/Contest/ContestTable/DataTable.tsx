@@ -1,5 +1,4 @@
 import { PageControl } from "@/components/common/PageControl";
-import { Separator } from "@/components/ui/separator";
 import {
   Table,
   TableBody,
@@ -58,7 +57,7 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
 
   return (
     <div>
-      <div className="flex items-center justify-center p-2">
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b bg-muted/30 px-3 py-2">
         <PageControl
           pageSize={tableState.pagination.pageSize}
           onPageSizeChange={table.setPageSize}
@@ -73,14 +72,13 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
         <VisibilityControl table={table} />
       </div>
 
-      <Separator />
 
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map((header) => (
-                <TableHead key={header.id} className="border border-muted-foreground">
+                <TableHead key={header.id} className="h-11 border-r bg-muted/50 text-xs font-medium text-muted-foreground last:border-r-0">
                   <div
                     className={cn(
                       "flex items-center justify-center font-extrabold",
@@ -107,7 +105,7 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
             table.getRowModel().rows.map((row) => (
               <TableRow key={row.id} data-state={row.getIsSelected() && "selected"}>
                 {row.getVisibleCells().map((cell) => (
-                  <TableCell key={cell.id} className="border border-muted-foreground/50">
+                  <TableCell key={cell.id} className="border-r border-border/60 py-2.5 last:border-r-0">
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </TableCell>
                 ))}
@@ -123,9 +121,8 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
         </TableBody>
       </Table>
 
-      <Separator />
 
-      <div className="flex items-center justify-center p-2">
+      <div className="flex flex-wrap items-center justify-center gap-2 border-t bg-muted/30 px-3 py-2">
         <PageControl
           pageSize={tableState.pagination.pageSize}
           onPageSizeChange={table.setPageSize}
@@ -137,7 +134,6 @@ export const DataTable = genericMemo(function <TData extends TableCol>({
           previousPage={table.previousPage}
           nextPage={table.nextPage}
         />
-        <VisibilityControl table={table} />
       </div>
     </div>
   );
