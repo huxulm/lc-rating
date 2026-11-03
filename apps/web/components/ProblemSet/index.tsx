@@ -6,10 +6,13 @@ import { useProblems } from "@/hooks/useProblems";
 import { useSolutions } from "@/hooks/useSolutions";
 import { useTags } from "@/hooks/useTags";
 import { isTruthy } from "@/types/common";
-import { useCallback, useMemo, useState } from "react";
+import { useOptions } from "@/hooks/useOptions";
+import { useProblemFilters } from "@/hooks/useProblemFilters";
+import { useProgress } from "@/hooks/useProgress";
+import { useMemo } from "react";
 import { ProblemsTable } from "./ProblemTable";
 import { TableCol } from "./ProblemTable/types";
-import { Search } from "./Search";
+import { Search, applyProblemFilters } from "./Search";
 
 function ProblemSet() {
   const {
@@ -111,40 +114,39 @@ function ProblemSet() {
     });
   }, [isPending]);
 
-  const [similarties, setSimilarties] = useState<number[] | undefined>();
+  // 筛选条件实时生效（两千多题的过滤只需几毫秒，无需防抖）
+  const filters = useProblemFilters();
+  const keyword = filters.keyword;
+  const { progress } = useProgress();
+  const todoKey = useOptions().getOption().key;
 
-  const handleSearch = useCallback(
-    (similarties: number[]) => {
-      setSimilarties(similarties);
-    },
-    []
+  const searchedData = useMemo(
+    () =>
+      applyProblemFilters(tableData, { ...filters, keyword }, progress, todoKey),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [
+      tableData,
+      keyword,
+      filters.fuzzy,
+      filters.rating,
+      filters.includeUnrated,
+      filters.tags,
+      filters.tagMode,
+      filters.progress,
+      filters.premium,
+      progress,
+      todoKey,
+    ]
   );
-
-  const searchedData = useMemo(() => {
-    if (similarties === undefined) {
-      return tableData;
-    }
-    const indices = tableData
-      .map((_, idx) => idx)
-      .filter((idx) => similarties[idx] && similarties[idx] > 0.5);
-    indices.sort((a, b) => Number(similarties[b]) - Number(similarties[a]));
-    const filtData = indices.map((idx) => tableData[idx] as TableCol);
-
-    return filtData;
-  }, [tableData, similarties]);
 
   return (
     <PageContainer>
       <PageHeader
         title="题库"
-        description={
-          isPending
-            ? "按难度分、算法标签和完成进度筛选题目。"
-            : `共 ${tableData.length} 道题目，按难度分、算法标签和完成进度筛选。`
-        }
+        description="按题号、标题、难度分、算法标签和完成进度查找题目。"
       />
       <div className="rounded-xl border bg-card p-4 shadow-xs">
-        <Search data={tableData} onSearch={handleSearch}></Search>
+        <Search data={tableData} resultCount={searchedData.length} />
       </div>
       <ProblemsTable tableData={searchedData} isPending={isPending} />
     </PageContainer>

@@ -10,7 +10,7 @@
     "lint": "eslint --max-warnings 0",
     "check-types": "next typegen && tsc --noEmit",
     "studyplan:update": "tsx ./scripts/studyplan/update.ts",
-    "test": "tsx --test ./scripts/studyplan/*.test.ts"
+    "test": "tsx --test ./scripts/studyplan/*.test.ts ./components/ProblemSet/Search/*.test.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^4.1.3",

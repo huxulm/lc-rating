@@ -1,151 +1,134 @@
-import { Button } from "@/components/ui-customized/button";
+"use client";
+
+import { useOptions } from "@/hooks/useOptions";
 import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-import { Separator } from "@/components/ui/separator";
-import { ChevronsDownUp, ChevronsUpDown } from "lucide-react";
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import { TableCol } from "../ProblemTable/types";
-import { RatingFilter } from "./RatingFilter";
-import { ProgressFilter } from "./ProgressFilter";
-import { TagFilter } from "./TagFilter";
-import { WordFilter } from "./WordFilter";
+  RATING_MAX,
+  RATING_MIN,
+  countActiveFilters,
+  useProblemFilters,
+} from "@/hooks/useProblemFilters";
+import { X } from "lucide-react";
+import React, { type ReactNode } from "react";
+import type { TableCol } from "../ProblemTable/types";
+import { PremiumFilterSwitch, ProgressFilter } from "./ProgressFilter";
+import { RatingFilter, formatRating } from "./RatingFilter";
+import { SearchInput } from "./SearchInput";
+import { TagFilter, useTagLabel } from "./TagFilter";
+
+export { applyProblemFilters } from "./filter";
 
 interface SearchProps {
+  /** 全部题目（用于统计各标签、进度的题量） */
   data: TableCol[];
-  onSearch: (similarties: number[]) => void;
+  /** 筛选后的题目数 */
+  resultCount: number;
 }
 
-const Search = React.memo(({ data, onSearch }: SearchProps) => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const [similartiesMap, setSimilartiesMap] = useState<
-    Record<string, number[]>
-  >({});
-  const [resets, setResets] = useState<Record<string, () => void>>({});
-  const handleConfirmRef = useRef<(() => void) | null>(null);
-
-  const updateIndices = useCallback(
-    (name: string, newSimilarties: number[]) => {
-      setSimilartiesMap((prev) => {
-        const next = { ...prev };
-        next[name] = newSimilarties;
-        return next;
-      });
-    },
-    []
+function Chip({ children, onRemove }: { children: ReactNode; onRemove: () => void }) {
+  return (
+    <span className="inline-flex h-6 items-center gap-1 rounded-full border bg-muted/50 pr-1 pl-2.5 text-xs">
+      {children}
+      <button
+        type="button"
+        onClick={onRemove}
+        className="rounded-full p-0.5 text-muted-foreground hover:bg-background hover:text-foreground"
+        aria-label="移除该条件"
+      >
+        <X className="size-3" />
+      </button>
+    </span>
   );
+}
 
-  const updateReset = useCallback((idx: string, newReset: () => void) => {
-    setResets((prev) => {
-      const next = { ...prev };
-      next[idx] = newReset;
-      return next;
-    });
-  }, []);
+function ActiveFilters() {
+  const f = useProblemFilters();
+  const label = useTagLabel();
+  const { getOption } = useOptions();
 
-  const handleConfirm = useCallback(() => {
-    const results = Object.values(similartiesMap).reduce(
-      (total, arr) => {
-        arr.forEach((val, idx) => {
-          if (total[idx]) {
-            total[idx] *= val;
-          }
-        });
-        return total;
-      },
-      Array.from({ length: data.length }, () => 1)
+  const chips: ReactNode[] = [];
+  const ranged = f.rating[0] !== RATING_MIN || f.rating[1] !== RATING_MAX;
+  if (ranged)
+    chips.push(
+      <Chip key="rating" onRemove={() => f.set({ rating: [RATING_MIN, RATING_MAX] })}>
+        难度 {formatRating(f.rating)}
+      </Chip>
+    );
+  if (!f.includeUnrated)
+    chips.push(
+      <Chip key="unrated" onRemove={() => f.set({ includeUnrated: true })}>
+        排除无难度分
+      </Chip>
+    );
+  f.tags.forEach((id, i) =>
+    chips.push(
+      <Chip key={`tag-${id}`} onRemove={() => f.set({ tags: f.tags.filter((t) => t !== id) })}>
+        {i > 0 && (
+          <span className="text-muted-foreground">
+            {f.tagMode === "all" ? "且" : "或"}
+          </span>
+        )}
+        {label(id)}
+      </Chip>
+    )
+  );
+  f.progress.forEach((key) => {
+    const o = getOption(key);
+    chips.push(
+      <Chip key={`p-${key}`} onRemove={() => f.set({ progress: f.progress.filter((k) => k !== key) })}>
+        <span className="size-2 rounded-full" style={{ backgroundColor: o.color }} />
+        {o.label || "未开始"}
+      </Chip>
+    );
+  });
+  if (f.premium !== "all")
+    chips.push(
+      <Chip key="premium" onRemove={() => f.set({ premium: "all" })}>
+        {f.premium === "free" ? "仅免费题" : "仅会员题"}
+      </Chip>
     );
 
-    onSearch(results);
-  }, [similartiesMap, data.length, onSearch]);
+  if (!chips.length) return null;
+  return (
+    <div className="flex flex-wrap items-center gap-1.5">
+      {chips}
+      <button
+        type="button"
+        onClick={() => f.reset()}
+        className="ml-1 text-xs text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+      >
+        清除全部
+      </button>
+    </div>
+  );
+}
 
-  useEffect(() => {
-    handleConfirmRef.current = handleConfirm;
-  }, [handleConfirm]);
-
-  const debouncedConfirm = useCallback(() => {
-    if (handleConfirmRef.current) {
-      handleConfirmRef.current();
-    }
-  }, []);
-
-  const handleReset = useCallback(() => {
-    Object.values(resets).forEach((fn) => fn?.());
-    setSimilartiesMap({});
-    onSearch(data.map((_, idx) => idx));
-  }, [resets, onSearch, data]);
+const Search = React.memo(({ data, resultCount }: SearchProps) => {
+  const activeCount = useProblemFilters(countActiveFilters);
+  const hasKeyword = useProblemFilters((s) => s.keyword.trim().length > 0);
+  const filtered = activeCount > 0 || hasKeyword;
 
   return (
-    <Collapsible
-      open={isOpen}
-      onOpenChange={setIsOpen}
-      className="space-y-2 m-auto"
-    >
-      <div className="flex flex-col gap-3 md:flex-row md:items-start">
-        <div className="min-w-0 flex-1">
-          <WordFilter
-            name={"WordFilter"}
-            data={data}
-            registerReset={updateReset}
-            onChange={updateIndices}
-          />
-        </div>
-        <div className="flex shrink-0 items-center gap-2">
-          <CollapsibleTrigger asChild>
-            <Button variant="ghost" className="text-muted-foreground">
-              {isOpen ? (
-                <ChevronsDownUp className="h-4 w-4" />
-              ) : (
-                <ChevronsUpDown className="h-4 w-4" />
-              )}
-              <span>{isOpen ? "收起筛选" : "更多筛选"}</span>
-            </Button>
-          </CollapsibleTrigger>
-          <Button
-            onClick={handleReset}
-            variant="outline"
-            className="cursor-pointer"
-          >
-            重置
-          </Button>
-          <Button
-            onClick={handleConfirm}
-            variant="default"
-            className="cursor-pointer"
-          >
-            确认
-          </Button>
+    <div className="space-y-3">
+      <SearchInput />
+      <div className="flex flex-wrap items-center gap-2">
+        <RatingFilter />
+        <TagFilter data={data} />
+        <ProgressFilter data={data} />
+        <PremiumFilterSwitch />
+        <div className="ml-auto text-sm text-muted-foreground tabular-nums">
+          {filtered ? (
+            <>
+              筛选出 <span className="font-medium text-foreground">{resultCount}</span>
+              {" / "}
+              {data.length} 题
+            </>
+          ) : (
+            <>共 {data.length} 题</>
+          )}
         </div>
       </div>
-      <CollapsibleContent className="space-y-2">
-        <div className="flex flex-col items-start gap-4 pt-2">
-          <Separator />
-          <RatingFilter
-            name={"RatingFilter"}
-            data={data}
-            registerReset={updateReset}
-            onChange={updateIndices}
-            onDebouncedConfirm={debouncedConfirm}
-          />
-          <Separator />
-          <ProgressFilter
-            name={"ProgressFilter"}
-            data={data}
-            registerReset={updateReset}
-            onChange={updateIndices}
-          />
-          <Separator />
-          <TagFilter
-            name={"TagFilter"}
-            data={data}
-            registerReset={updateReset}
-            onChange={updateIndices}
-          />
-        </div>
-      </CollapsibleContent>
-    </Collapsible>
+      <ActiveFilters />
+    </div>
   );
 });
 
