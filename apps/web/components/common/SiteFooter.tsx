@@ -1,5 +1,6 @@
 import { BILIBILI_0X3F_SPACE, ROUTERS } from "@/config/constants";
 import Link from "next/link";
+import { GithubLink } from "./GithubLink";
 
 export function SiteFooter() {
   return (
@@ -24,14 +25,7 @@ export function SiteFooter() {
           >
             返回旧版
           </Link>
-          <a
-            href="https://github.com/huxulm/lc-rating"
-            target="_blank"
-            rel="noreferrer"
-            className="underline-offset-4 hover:text-foreground hover:underline"
-          >
-            GitHub
-          </a>
+          <GithubLink />
         </div>
       </div>
     </footer>

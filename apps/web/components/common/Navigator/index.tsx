@@ -22,7 +22,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { STUDY_PLAN_META, type StudyPlanMeta } from "../studyPlanMeta";
-import { GithubBadge } from "./GithubBadge";
 import SettingsPanel from "./SettingsPanel";
 
 const isActive = (pathname: string, href: string) =>
@@ -284,7 +283,6 @@ const Navigator = React.memo(() => {
         <div className="ml-auto flex items-center gap-1">
           <SettingsPanel show={showSettings} onOpenChange={setShowSettings} />
           <ThemeToggle />
-          <GithubBadge />
         </div>
       </div>
     </header>
