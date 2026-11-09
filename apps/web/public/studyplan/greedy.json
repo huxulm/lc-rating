@@ -1,7 +1,7 @@
 {
   "title": "贪心算法（基本贪心策略/反悔/区间/字典序/数学/思维/构造）",
   "src": "https://leetcode.cn/circle/discuss/g6KTKL/",
-  "last_update": "2026-08-19",
+  "last_update": "2026-11-06",
   "children": [
     {
       "id": "s1",
@@ -195,6 +195,22 @@
               "slug": "minimum-increment-to-make-array-unique",
               "src": "https://leetcode.cn/problems/minimum-increment-to-make-array-unique/",
               "score": 1448,
+              "isPremium": false
+            },
+            {
+              "id": "4093",
+              "title": "至多 K 次数字重排后的最大和",
+              "slug": "maximize-sum-after-at-most-k-digit-rearrangements",
+              "src": "https://leetcode.cn/problems/maximize-sum-after-at-most-k-digit-rearrangements/",
+              "score": 1452,
+              "isPremium": false
+            },
+            {
+              "id": "4079",
+              "title": "选择质数子集 I",
+              "slug": "prime-subset-selection-i",
+              "src": "https://leetcode.cn/problems/prime-subset-selection-i/",
+              "score": 1468,
               "isPremium": false
             },
             {
@@ -943,6 +959,14 @@
               "isPremium": false
             },
             {
+              "id": "2472",
+              "title": "不重叠回文子字符串的最大数目",
+              "slug": "maximum-number-of-non-overlapping-palindrome-substrings",
+              "src": "https://leetcode.cn/problems/maximum-number-of-non-overlapping-palindrome-substrings/",
+              "score": 2013,
+              "isPremium": false
+            },
+            {
               "id": "2436",
               "title": "使子数组最大公约数大于一的最小分割数",
               "slug": "minimum-split-into-subarrays-with-gcd-greater-than-one",
@@ -1005,6 +1029,14 @@
               "slug": "minimum-number-of-groups-to-create-a-valid-assignment",
               "src": "https://leetcode.cn/problems/minimum-number-of-groups-to-create-a-valid-assignment/",
               "score": 2132,
+              "isPremium": false
+            },
+            {
+              "id": "3664",
+              "title": "两个字母卡牌游戏",
+              "slug": "two-letter-card-game",
+              "src": "https://leetcode.cn/problems/two-letter-card-game/",
+              "score": 2158,
               "isPremium": false
             },
             {
@@ -1357,46 +1389,45 @@
       "children": [
         {
           "id": "s2-1",
-          "title": "§2.1 不相交区间",
+          "title": "§2.1 区间覆盖",
           "problems": [
             {
-              "id": "435",
-              "title": "无重叠区间",
-              "slug": "non-overlapping-intervals",
-              "src": "https://leetcode.cn/problems/non-overlapping-intervals/",
+              "id": "45",
+              "title": "跳跃游戏 II",
+              "slug": "jump-game-ii",
+              "src": "https://leetcode.cn/problems/jump-game-ii/",
               "score": 1700,
               "isPremium": false,
               "scoreApprox": true
             },
             {
-              "id": "646",
-              "title": "最长数对链",
-              "slug": "maximum-length-of-pair-chain",
-              "src": "https://leetcode.cn/problems/maximum-length-of-pair-chain/",
-              "score": null,
-              "isPremium": false,
-              "note": "同 435 题"
-            },
-            {
-              "id": "1520",
-              "title": "最多的不重叠子字符串",
-              "slug": "maximum-number-of-non-overlapping-substrings",
-              "src": "https://leetcode.cn/problems/maximum-number-of-non-overlapping-substrings/",
-              "score": 2363,
+              "id": "1024",
+              "title": "视频拼接",
+              "slug": "video-stitching",
+              "src": "https://leetcode.cn/problems/video-stitching/",
+              "score": 1746,
               "isPremium": false
             },
             {
-              "id": "3458",
-              "title": "选择 K 个互不重叠的特殊子字符串",
-              "slug": "select-k-disjoint-special-substrings",
-              "src": "https://leetcode.cn/problems/select-k-disjoint-special-substrings/",
-              "score": null,
+              "id": "1326",
+              "title": "灌溉花园的最少水龙头数目",
+              "slug": "minimum-number-of-taps-to-open-to-water-a-garden",
+              "src": "https://leetcode.cn/problems/minimum-number-of-taps-to-open-to-water-a-garden/",
+              "score": 1885,
+              "isPremium": false
+            },
+            {
+              "id": "4086",
+              "title": "覆盖目标区间的最少区间",
+              "slug": "minimum-interval-selection-to-cover-target-intervals",
+              "src": "https://leetcode.cn/problems/minimum-interval-selection-to-cover-target-intervals/",
+              "score": 2203,
               "isPremium": false,
-              "note": "同 1520 题"
+              "note": "覆盖多条线段"
             }
           ],
           "children": [],
-          "summary": "**变形**：每个区间有各自的分数，从中选一些两两互不相交的区间，最大化得分之和。详见 [动态规划题单](https://leetcode.cn/circle/discuss/tXLS3i/) 的「**§7.2 不相交区间**」。"
+          "summary": "[图解](https://leetcode.cn/problems/jump-game-ii/solutions/2926993/tu-jie-yi-zhang-tu-miao-dong-tiao-yue-yo-h2d4/)"
         },
         {
           "id": "s2-2",
@@ -1459,41 +1490,59 @@
               "isPremium": false
             }
           ],
-          "children": [],
-          "summary": "本质上和不相交区间是一样的。"
+          "children": []
         },
         {
           "id": "s2-4",
-          "title": "§2.4 区间覆盖",
+          "title": "§2.4 不相交区间",
           "problems": [
             {
-              "id": "45",
-              "title": "跳跃游戏 II",
-              "slug": "jump-game-ii",
-              "src": "https://leetcode.cn/problems/jump-game-ii/",
+              "id": "435",
+              "title": "无重叠区间",
+              "slug": "non-overlapping-intervals",
+              "src": "https://leetcode.cn/problems/non-overlapping-intervals/",
               "score": 1700,
               "isPremium": false,
               "scoreApprox": true
             },
             {
-              "id": "1024",
-              "title": "视频拼接",
-              "slug": "video-stitching",
-              "src": "https://leetcode.cn/problems/video-stitching/",
-              "score": 1746,
+              "id": "646",
+              "title": "最长数对链",
+              "slug": "maximum-length-of-pair-chain",
+              "src": "https://leetcode.cn/problems/maximum-length-of-pair-chain/",
+              "score": null,
+              "isPremium": false,
+              "note": "同 435 题"
+            },
+            {
+              "id": "1520",
+              "title": "最多的不重叠子字符串",
+              "slug": "maximum-number-of-non-overlapping-substrings",
+              "src": "https://leetcode.cn/problems/maximum-number-of-non-overlapping-substrings/",
+              "score": 2363,
               "isPremium": false
             },
             {
-              "id": "1326",
-              "title": "灌溉花园的最少水龙头数目",
-              "slug": "minimum-number-of-taps-to-open-to-water-a-garden",
-              "src": "https://leetcode.cn/problems/minimum-number-of-taps-to-open-to-water-a-garden/",
-              "score": 1885,
-              "isPremium": false
+              "id": "3458",
+              "title": "选择 K 个互不重叠的特殊子字符串",
+              "slug": "select-k-disjoint-special-substrings",
+              "src": "https://leetcode.cn/problems/select-k-disjoint-special-substrings/",
+              "score": null,
+              "isPremium": false,
+              "note": "同 1520 题"
+            },
+            {
+              "id": "4057",
+              "title": "统计相交区间对 II",
+              "slug": "number-of-intersecting-interval-pairs-ii",
+              "src": "https://leetcode.cn/problems/number-of-intersecting-interval-pairs-ii/",
+              "score": 1483,
+              "isPremium": false,
+              "group": "思维扩展"
             }
           ],
           "children": [],
-          "summary": "[图解](https://leetcode.cn/problems/jump-game-ii/solutions/2926993/tu-jie-yi-zhang-tu-miao-dong-tiao-yue-yo-h2d4/)"
+          "summary": "**变形**：每个区间有各自的分数，从中选一些两两互不相交的区间，最大化得分之和。详见 [动态规划题单](https://leetcode.cn/circle/discuss/tXLS3i/) 的「**§7.2 不相交区间**」。"
         },
         {
           "id": "s2-5",
@@ -1646,7 +1695,7 @@
             }
           ],
           "children": [],
-          "summary": "> 可能算不上贪心，但为了题单的完整性，也放到这个分类中。"
+          "summary": "> 可能算不上贪心，但做法相似上面的题目，所以也放到本章。"
         },
         {
           "id": "s2-6",
@@ -1689,7 +1738,7 @@
           "children": []
         }
       ],
-      "summary": "区间贪心有如下经典问题：\n\n- **不相交区间**（单机器调度/活动安排）：给定一些区间，从中选出尽量多的两两互不相交的区间。\n- **区间分组**（任务调度/会议室）：给定一些区间，把这些区间分成最少的组，使得每组内的区间互不相交。\n- **区间选点**（射气球，Interval Stabbing）：给定一些区间，在数轴上放置最少的点，使得每个区间都包含至少一个点。最少要放置多少个点？\n- **区间覆盖**（灌溉花园）：给定一些区间，从中选出尽量少的区间，覆盖一条指定线段 $[s,t]$。\n\n一般来说，区间合并问题（2.5 节）是按左端点排序，其余大多数区间贪心是按右端点排序。请读者在做题后，仔细体会为什么要这样排序。"
+      "summary": "区间贪心有如下经典问题：\n\n- **区间覆盖**（跳跃游戏 II）：给定一些区间，从中选出尽量少的区间，覆盖一条指定线段 $[s,t]$。\n- **区间分组**（会议室）：给定一些区间，把这些区间分成最少的组，使得每组内的区间互不相交。\n- **区间选点**（射气球）：给定一些区间，在数轴上放置最少的点，使得每个区间都包含至少一个点。\n- **不相交区间**（时间管理大师）：给定一些区间，从中选出尽量多的两两互不相交的区间。\n\n完成题目后，请思考并总结：什么时候要按照左端点排序，什么时候要按照右端点排序？"
     },
     {
       "id": "s3",
@@ -1863,6 +1912,14 @@
               "score": 1700,
               "isPremium": false,
               "scoreApprox": true
+            },
+            {
+              "id": "4036",
+              "title": "字符对转换后字典序最大的字符串",
+              "slug": "lexicographically-largest-string-after-pair-transformations",
+              "src": "https://leetcode.cn/problems/lexicographically-largest-string-after-pair-transformations/",
+              "score": 1704,
+              "isPremium": false
             },
             {
               "id": "3403",
@@ -2386,7 +2443,7 @@
             }
           ],
           "children": [],
-          "summary": "给定两个长度均为 $n$ 的数组 $a$ 和 $b$，可以交换同一数组内的元素，最小化/最大化\n\n$$\na[0]\\cdot b[0] + a[1]\\cdot b[1] +\\cdots+ a[n-1]\\cdot b[n-1]\n$$\n\n把 $a$ 和 $b$ 都从小到大排序，可以最大化上式。\n\n把 $a$ 从小到大排序，$b$ 从大到小排序，可以最小化上式。"
+          "summary": "给定两个长度均为 $n$ 的数组 $a$ 和 $b$，可以交换同一数组内的元素，最小化/最大化\n\n$$\na[0]\\cdot b[0] + a[1]\\cdot b[1] +\\cdots+ a[n-1]\\cdot b[n-1]\n$$\n\n把 $a$ 和 $b$ 都从小到大排序，可以最大化上式。\n\n把 $a$ 从小到大排序，$b$ 从大到小排序，可以最小化上式。\n\n该结论与元素的正负无关。"
         },
         {
           "id": "s4-4",
@@ -2793,6 +2850,22 @@
               "isPremium": false
             },
             {
+              "id": "4034",
+              "title": "象到达目标格子的最少移动步数",
+              "slug": "minimum-bishop-moves-to-reach-target",
+              "src": "https://leetcode.cn/problems/minimum-bishop-moves-to-reach-target/",
+              "score": 1244,
+              "isPremium": false
+            },
+            {
+              "id": "4061",
+              "title": "皇后到达目标格子的最少移动步数",
+              "slug": "minimum-queen-moves-to-reach-target",
+              "src": "https://leetcode.cn/problems/minimum-queen-moves-to-reach-target/",
+              "score": null,
+              "isPremium": false
+            },
+            {
               "id": "1903",
               "title": "字符串中的最大奇数",
               "slug": "largest-odd-number-in-string",
@@ -2900,11 +2973,28 @@
               "isPremium": false
             },
             {
+              "id": "4062",
+              "title": "成对操作转化数组",
+              "slug": "transform-array-using-pair-operations",
+              "src": "https://leetcode.cn/problems/transform-array-using-pair-operations/",
+              "score": 1438,
+              "isPremium": false,
+              "note": "不变量"
+            },
+            {
               "id": "3227",
               "title": "字符串元音游戏",
               "slug": "vowels-game-in-a-string",
               "src": "https://leetcode.cn/problems/vowels-game-in-a-string/",
               "score": 1452,
+              "isPremium": false
+            },
+            {
+              "id": "4025",
+              "title": "交通灯的最大等待时间",
+              "slug": "minimize-the-maximum-waiting-time-at-synchronized-traffic-lights",
+              "src": "https://leetcode.cn/problems/minimize-the-maximum-waiting-time-at-synchronized-traffic-lights/",
+              "score": 1457,
               "isPremium": false
             },
             {
@@ -3117,6 +3207,14 @@
               "isPremium": false
             },
             {
+              "id": "4080",
+              "title": "设计公交车座位预订系统",
+              "slug": "design-bus-seat-booking-system",
+              "src": "https://leetcode.cn/problems/design-bus-seat-booking-system/",
+              "score": 1778,
+              "isPremium": false
+            },
+            {
               "id": "2712",
               "title": "使所有字符相等的最小成本",
               "slug": "minimum-cost-to-make-all-characters-equal",
@@ -3228,6 +3326,14 @@
               "src": "https://leetcode.cn/problems/count-pairs-of-equal-substrings-with-minimum-difference/",
               "score": null,
               "isPremium": true
+            },
+            {
+              "id": "4060",
+              "title": "计算偶好数",
+              "slug": "count-evenly-good-integers",
+              "src": "https://leetcode.cn/problems/count-evenly-good-integers/",
+              "score": null,
+              "isPremium": true
             }
           ],
           "children": [],
@@ -3237,6 +3343,15 @@
           "id": "s5-3",
           "title": "§5.3 等价转化",
           "problems": [
+            {
+              "id": "2089",
+              "title": "找出数组排序后的目标下标",
+              "slug": "find-target-indices-after-sorting-array",
+              "src": "https://leetcode.cn/problems/find-target-indices-after-sorting-array/",
+              "score": null,
+              "isPremium": false,
+              "note": "做到 $\\mathcal{O}(n)$"
+            },
             {
               "id": "453",
               "title": "最小操作次数使数组元素相等",
@@ -3622,6 +3737,15 @@
               "src": "https://leetcode.cn/problems/count-commas-in-range-ii/",
               "score": 1381,
               "isPremium": false
+            },
+            {
+              "id": "856",
+              "title": "括号的分数",
+              "slug": "score-of-parentheses",
+              "src": "https://leetcode.cn/problems/score-of-parentheses/",
+              "score": 1563,
+              "isPremium": false,
+              "note": "做到 $\\mathcal{O}(n)$"
             },
             {
               "id": "2063",
@@ -4010,6 +4134,14 @@
               "slug": "minimum-operations-to-sort-a-string",
               "src": "https://leetcode.cn/problems/minimum-operations-to-sort-a-string/",
               "score": 1860,
+              "isPremium": false
+            },
+            {
+              "id": "4085",
+              "title": "找到颜色树的根",
+              "slug": "find-root-of-a-colored-tree",
+              "src": "https://leetcode.cn/problems/find-root-of-a-colored-tree/",
+              "score": 1879,
               "isPremium": false
             },
             {
@@ -4694,6 +4826,14 @@
           "isPremium": false
         },
         {
+          "id": "4066",
+          "title": "至多一次替换后的最大相邻相等元素对数",
+          "slug": "maximum-equal-adjacent-pairs-after-at-most-one-replacement",
+          "src": "https://leetcode.cn/problems/maximum-equal-adjacent-pairs-after-at-most-one-replacement/",
+          "score": 1571,
+          "isPremium": false
+        },
+        {
           "id": "1864",
           "title": "构成交替字符串需要的最小交换次数",
           "slug": "minimum-number-of-swaps-to-make-the-binary-string-alternating",
@@ -4841,7 +4981,7 @@
       "title": "答疑",
       "problems": [],
       "children": [],
-      "summary": "**问**：贪心和 DP 的区别是什么？\n\n**答**：DP 可以视为带记忆化的暴力搜索，只要不遗漏任何分支，答案一定是对的。贪心可以视为带剪枝的搜索，如果贪心策略不对，就容易贪过头，把正确的分支给剪掉。\n\n**问**：有没有万能方法，判断一道题是贪心还是 DP？\n\n**答**：很难。如果不知道题目类型，把 DP 想成贪心的大有人在。我的建议是**先思考 DP 能不能做，再思考贪心**。如果 DP 的时间复杂度足以通过题目，就不用思考贪心策略了。\n\n此外，这也说明按照题单刷题的缺点：提前知道题目类型，跳过了一些思考步骤。如何弥补这个缺点？请看 [如何科学刷题](https://leetcode.cn/circle/discuss/RvFUtj/)。"
+      "summary": "**问**：贪心和 DP 的区别是什么？\n\n**答**：DP 可以视为带记忆化的暴力搜索，只要不遗漏任何分支，答案一定是对的。贪心可以视为带剪枝的搜索，如果贪心策略不对，就容易贪过头，把正确的分支给剪掉。\n\n**问**：有没有万能方法，判断一道题是贪心还是 DP？\n\n**答**：如果不知道题目类型，把 DP 想成贪心的大有人在。我的建议是**先思考 DP 能不能做，再思考贪心**。如果 DP 的时间复杂度足以通过题目，就不用思考贪心策略了。\n\n此外，这也说明按照题单刷题的缺点：提前知道题目类型，跳过了一些思考步骤。如何弥补这个缺点？请看 [如何科学刷题](https://leetcode.cn/circle/discuss/RvFUtj/)。"
     }
   ],
   "summary": "![贪心题单 贪心题目 力扣贪心题单 leetcode贪心 greedy 灵茶山艾府 灵神 灵神题单](https://pic.leetcode.cn/1719584528-kEceMX-greedy-vs-dp-c.jpg)\n\n> 有时候，很难一眼看出一道题是贪心还是 DP。\n\n为方便大家练习，我把比较套路的贪心题目放在前面，更灵活的思维题和构造题放在后面。每个小节的题目均按照从易到难的顺序排列。\n\n**如果做题时没有思路，推荐看看本文第五章的「思考清单」。**"
