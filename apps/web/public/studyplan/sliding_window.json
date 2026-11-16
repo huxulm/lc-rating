@@ -1,7 +1,7 @@
 {
   "title": "滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）",
   "src": "https://leetcode.cn/circle/discuss/0viNMK/",
-  "last_update": "2026-09-12",
+  "last_update": "2026-11-15",
   "children": [
     {
       "id": "s1",
@@ -472,6 +472,14 @@
                   "isPremium": false
                 },
                 {
+                  "id": "4067",
+                  "title": "数对和受限的最长子数组",
+                  "slug": "longest-subarray-with-restricted-pair-sums",
+                  "src": "https://leetcode.cn/problems/longest-subarray-with-restricted-pair-sums/",
+                  "score": 1918,
+                  "isPremium": false
+                },
+                {
                   "id": "2516",
                   "title": "每种字符至少取 K 个",
                   "slug": "take-k-of-each-character-from-left-and-right",
@@ -855,6 +863,15 @@
                   "src": "https://leetcode.cn/problems/count-number-of-nice-subarrays/",
                   "score": 1624,
                   "isPremium": false
+                },
+                {
+                  "id": "4091",
+                  "title": "统计神奇子字符串对 II",
+                  "slug": "count-magical-substring-pairs-ii",
+                  "src": "https://leetcode.cn/problems/count-magical-substring-pairs-ii/",
+                  "score": 2155,
+                  "isPremium": false,
+                  "note": "做法不止一种"
                 },
                 {
                   "id": "3306",
@@ -1621,6 +1638,42 @@
               "isPremium": false
             },
             {
+              "id": "189",
+              "title": "轮转数组",
+              "slug": "rotate-array",
+              "src": "https://leetcode.cn/problems/rotate-array/",
+              "score": null,
+              "isPremium": false,
+              "group": "专题：轮转数组"
+            },
+            {
+              "id": "4052",
+              "title": "行列循环移位",
+              "slug": "cyclically-shift-rows-and-columns",
+              "src": "https://leetcode.cn/problems/cyclically-shift-rows-and-columns/",
+              "score": null,
+              "isPremium": false,
+              "group": "专题：轮转数组"
+            },
+            {
+              "id": "1260",
+              "title": "二维网格迁移",
+              "slug": "shift-2d-grid",
+              "src": "https://leetcode.cn/problems/shift-2d-grid/",
+              "score": null,
+              "isPremium": false,
+              "group": "专题：轮转数组"
+            },
+            {
+              "id": "1914",
+              "title": "循环轮转矩阵",
+              "slug": "cyclically-rotating-a-grid",
+              "src": "https://leetcode.cn/problems/cyclically-rotating-a-grid/",
+              "score": null,
+              "isPremium": false,
+              "group": "专题：轮转数组"
+            },
+            {
               "id": "2784",
               "title": "检查数组是否是好的",
               "slug": "check-if-array-is-good",
@@ -2079,6 +2132,14 @@
           "isPremium": false
         },
         {
+          "id": "2747",
+          "title": "统计没有收到请求的服务器数目",
+          "slug": "count-zero-request-servers",
+          "src": "https://leetcode.cn/problems/count-zero-request-servers/",
+          "score": 2295,
+          "isPremium": false
+        },
+        {
           "id": "1213",
           "title": "三个有序数组的交集",
           "slug": "intersection-of-three-sorted-arrays",
@@ -2185,6 +2246,14 @@
           "isPremium": false
         },
         {
+          "id": "4106",
+          "title": "找出两个字符串的不匹配片段",
+          "slug": "find-mismatched-segments-between-two-strings",
+          "src": "https://leetcode.cn/problems/find-mismatched-segments-between-two-strings/",
+          "score": 1333,
+          "isPremium": false
+        },
+        {
           "id": "1513",
           "title": "仅含 1 的子串数",
           "slug": "number-of-substrings-with-only-1s",
@@ -2216,6 +2285,15 @@
           "score": 1381,
           "isPremium": false,
           "note": "做到 $\\mathcal{O}(n)$"
+        },
+        {
+          "id": "4089",
+          "title": "统计宽界子数组的数目",
+          "slug": "count-subarrays-with-loose-bounds",
+          "src": "https://leetcode.cn/problems/count-subarrays-with-loose-bounds/",
+          "score": 1382,
+          "isPremium": false,
+          "note": "做法不止一种"
         },
         {
           "id": "696",
@@ -2287,6 +2365,14 @@
           "slug": "longest-unequal-adjacent-groups-subsequence-i",
           "src": "https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-i/",
           "score": 1469,
+          "isPremium": false
+        },
+        {
+          "id": "2765",
+          "title": "最长交替子数组",
+          "slug": "longest-alternating-subarray",
+          "src": "https://leetcode.cn/problems/longest-alternating-subarray/",
+          "score": 1483,
           "isPremium": false
         },
         {
@@ -2533,7 +2619,7 @@
         }
       ],
       "children": [],
-      "summary": "**适用场景**：按照题目要求，数组会被分割成若干组，每一组的判断/处理逻辑是相同的。\n\n**核心思想**：\n\n- 外层循环负责遍历组之前的准备工作（记录开始位置），和遍历组之后的统计工作（更新答案最大值）。\n- 内层循环负责遍历组，找出这一组最远在哪结束。\n\n这个写法的好处是，各个逻辑块分工明确，也不需要特判最后一组（易错点）。以我的经验，这个写法是所有写法中最不容易出 bug 的，推荐大家记住。\n\n[例题讲解](https://leetcode.cn/problems/longest-even-odd-subarray-with-threshold/solutions/2528771/jiao-ni-yi-ci-xing-ba-dai-ma-xie-dui-on-zuspx/)"
+      "summary": "**适用场景**：按照题目要求，数组会被分割成若干组，每一组的判断/处理逻辑是相同的。\n\n**核心思想**：\n\n- 外层循环负责遍历组之前的准备工作（记录开始位置），和遍历组之后的统计工作（更新答案）。\n- 内层循环负责遍历组，找出这一组最远在哪结束。\n\n这个写法的好处是，各个逻辑块分工明确，也不需要特判最后一组（易错点）。以我的经验，这个写法是所有写法中最不容易出 bug 的，推荐大家记住。\n\n[例题讲解](https://leetcode.cn/problems/longest-even-odd-subarray-with-threshold/solutions/2528771/jiao-ni-yi-ci-xing-ba-dai-ma-xie-dui-on-zuspx/)"
     },
     {
       "id": "s7",

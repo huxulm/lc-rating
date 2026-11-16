@@ -1,7 +1,7 @@
 {
   "title": "贪心算法（基本贪心策略/反悔/区间/字典序/数学/思维/构造）",
   "src": "https://leetcode.cn/circle/discuss/g6KTKL/",
-  "last_update": "2026-11-06",
+  "last_update": "2026-11-14",
   "children": [
     {
       "id": "s1",
@@ -2707,7 +2707,7 @@
               "title": "构造最长的新字符串",
               "slug": "construct-the-longest-new-string",
               "src": "https://leetcode.cn/problems/construct-the-longest-new-string/",
-              "score": 1607,
+              "score": 1578,
               "isPremium": false,
               "note": "想一想 $z=0$ 怎么做，$z=1$ 怎么做，$z=2$ 怎么做"
             },
@@ -2847,6 +2847,14 @@
               "slug": "construct-uniform-parity-array-i",
               "src": "https://leetcode.cn/problems/construct-uniform-parity-array-i/",
               "score": 1200,
+              "isPremium": false
+            },
+            {
+              "id": "2124",
+              "title": "检查是否所有 A 都在 B 之前",
+              "slug": "check-if-all-as-appears-before-all-bs",
+              "src": "https://leetcode.cn/problems/check-if-all-as-appears-before-all-bs/",
+              "score": 1202,
               "isPremium": false
             },
             {
@@ -3003,6 +3011,14 @@
               "slug": "maximum-balanced-shipments",
               "src": "https://leetcode.cn/problems/maximum-balanced-shipments/",
               "score": 1463,
+              "isPremium": false
+            },
+            {
+              "id": "2914",
+              "title": "使二进制字符串变美丽的最少修改次数",
+              "slug": "minimum-number-of-changes-to-make-binary-string-beautiful",
+              "src": "https://leetcode.cn/problems/minimum-number-of-changes-to-make-binary-string-beautiful/",
+              "score": 1480,
               "isPremium": false
             },
             {
@@ -3272,6 +3288,14 @@
               "note": "联系 1503 题"
             },
             {
+              "id": "4100",
+              "title": "平衡异或路径的最小开销",
+              "slug": "minimum-cost-path-with-even-xor-parity",
+              "src": "https://leetcode.cn/problems/minimum-cost-path-with-even-xor-parity/",
+              "score": 2282,
+              "isPremium": false
+            },
+            {
               "id": "2556",
               "title": "二进制矩阵中翻转最多一次使路径不连通",
               "slug": "disconnect-path-in-a-binary-matrix-by-at-most-one-flip",
@@ -3374,14 +3398,6 @@
               "slug": "check-if-strings-can-be-made-equal-with-operations-ii",
               "src": "https://leetcode.cn/problems/check-if-strings-can-be-made-equal-with-operations-ii/",
               "score": 1486,
-              "isPremium": false
-            },
-            {
-              "id": "2914",
-              "title": "使二进制字符串变美丽的最少修改次数",
-              "slug": "minimum-number-of-changes-to-make-binary-string-beautiful",
-              "src": "https://leetcode.cn/problems/minimum-number-of-changes-to-make-binary-string-beautiful/",
-              "score": 1480,
               "isPremium": false
             },
             {
@@ -4436,6 +4452,14 @@
           "slug": "inverse-coin-change",
           "src": "https://leetcode.cn/problems/inverse-coin-change/",
           "score": 1701,
+          "isPremium": false
+        },
+        {
+          "id": "4098",
+          "title": "最小化 GCD 连通数组的最大值",
+          "slug": "minimize-the-maximum-value-of-gcd-connected-array",
+          "src": "https://leetcode.cn/problems/minimize-the-maximum-value-of-gcd-connected-array/",
+          "score": 1729,
           "isPremium": false
         },
         {

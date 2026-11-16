@@ -1,7 +1,7 @@
 {
   "title": "常用数据结构（前缀和/栈/队列/堆/字典树/并查集/树状数组/线段树）",
   "src": "https://leetcode.cn/circle/discuss/mOr1u6/",
-  "last_update": "2026-10-28",
+  "last_update": "2026-11-14",
   "children": [
     {
       "id": "s1",
@@ -776,6 +776,15 @@
               "slug": "count-good-cyclic-rotations",
               "src": "https://leetcode.cn/problems/count-good-cyclic-rotations/",
               "score": 1418,
+              "isPremium": false,
+              "group": "思维扩展"
+            },
+            {
+              "id": "1352",
+              "title": "最后 K 个数的乘积",
+              "slug": "product-of-the-last-k-numbers",
+              "src": "https://leetcode.cn/problems/product-of-the-last-k-numbers/",
+              "score": 1474,
               "isPremium": false,
               "group": "思维扩展"
             }
@@ -2189,6 +2198,14 @@
               "slug": "remove-all-adjacent-duplicates-in-string-ii",
               "src": "https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string-ii/",
               "score": 1542,
+              "isPremium": false
+            },
+            {
+              "id": "4103",
+              "title": "按类型和颜色删除元素",
+              "slug": "remove-elements-by-type-and-color",
+              "src": "https://leetcode.cn/problems/remove-elements-by-type-and-color/",
+              "score": 1763,
               "isPremium": false
             },
             {
@@ -5076,6 +5093,15 @@
               "isPremium": false
             },
             {
+              "id": "4099",
+              "title": "将锁定数组排序的最少操作次数",
+              "slug": "minimum-operations-to-sort-with-locked-indices",
+              "src": "https://leetcode.cn/problems/minimum-operations-to-sort-with-locked-indices/",
+              "score": null,
+              "isPremium": false,
+              "note": "做到 $\\mathcal{O}(n\\log n)$"
+            },
+            {
               "id": "4051",
               "title": "统计遥远子数组的数目",
               "slug": "count-subarrays-with-distant-sums",
@@ -5609,6 +5635,14 @@
           "title": "§9.4 其他",
           "problems": [
             {
+              "id": "4095",
+              "title": "统计频次阶梯子数组的数目 II",
+              "slug": "count-frequency-staircase-subarrays-ii",
+              "src": "https://leetcode.cn/problems/count-frequency-staircase-subarrays-ii/",
+              "score": 2343,
+              "isPremium": false
+            },
+            {
               "id": "3234",
               "title": "统计 1 显著的字符串的数量",
               "slug": "count-the-number-of-substrings-with-dominant-ones",
@@ -5743,6 +5777,14 @@
           "isPremium": false
         },
         {
+          "id": "2747",
+          "title": "统计没有收到请求的服务器数目",
+          "slug": "count-zero-request-servers",
+          "src": "https://leetcode.cn/problems/count-zero-request-servers/",
+          "score": 2295,
+          "isPremium": false
+        },
+        {
           "id": "1697",
           "title": "检查边长度限制的路径是否存在",
           "slug": "checking-existence-of-edge-length-limited-paths",
@@ -5764,14 +5806,6 @@
           "slug": "find-building-where-alice-and-bob-can-meet",
           "src": "https://leetcode.cn/problems/find-building-where-alice-and-bob-can-meet/",
           "score": 2327,
-          "isPremium": false
-        },
-        {
-          "id": "2747",
-          "title": "统计没有收到请求的服务器数目",
-          "slug": "count-zero-request-servers",
-          "src": "https://leetcode.cn/problems/count-zero-request-servers/",
-          "score": 2405,
           "isPremium": false
         },
         {

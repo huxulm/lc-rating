@@ -1,7 +1,7 @@
 {
   "title": "动态规划（入门/背包/划分/状态机/区间/状压/数位/树形/优化）",
   "src": "https://leetcode.cn/circle/discuss/tXLS3i/",
-  "last_update": "2026-08-17",
+  "last_update": "2026-11-14",
   "children": [
     {
       "id": "s1",
@@ -36,7 +36,7 @@
               "src": "https://leetcode.cn/problems/climbing-stairs-ii/",
               "score": 1560,
               "isPremium": false,
-              "note": "注意：虽然题目说下标从 $1$ 开始，但实际输入的数组还是从 $0$ 开始的"
+              "note": "注意：虽然题目说下标从 $1$ 开始，但输入的数组还是从 $0$ 开始的"
             },
             {
               "id": "377",
@@ -211,6 +211,15 @@
               "slug": "maximum-subarray-sum-with-one-deletion",
               "src": "https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/",
               "score": 1799,
+              "isPremium": false,
+              "group": "思维扩展"
+            },
+            {
+              "id": "4058",
+              "title": "一个子数组循环移动后的最大脉冲值",
+              "slug": "maximum-pulse-value-after-one-subarray-rotation",
+              "src": "https://leetcode.cn/problems/maximum-pulse-value-after-one-subarray-rotation/",
+              "score": 1899,
               "isPremium": false,
               "group": "思维扩展"
             },
@@ -412,14 +421,6 @@
               "isPremium": false
             },
             {
-              "id": "174",
-              "title": "地下城游戏",
-              "slug": "dungeon-game",
-              "src": "https://leetcode.cn/problems/dungeon-game/",
-              "score": null,
-              "isPremium": false
-            },
-            {
               "id": "329",
               "title": "矩阵中的最长递增路径",
               "slug": "longest-increasing-path-in-a-matrix",
@@ -436,11 +437,19 @@
               "isPremium": false
             },
             {
-              "id": "2267",
-              "title": "检查是否有合法括号字符串路径",
-              "slug": "check-if-there-is-a-valid-parentheses-string-path",
-              "src": "https://leetcode.cn/problems/check-if-there-is-a-valid-parentheses-string-path/",
-              "score": 2085,
+              "id": "4046",
+              "title": "至多 K 次转向的最小路径代价",
+              "slug": "minimum-cost-path-with-at-most-k-turns",
+              "src": "https://leetcode.cn/problems/minimum-cost-path-with-at-most-k-turns/",
+              "score": 2045,
+              "isPremium": false
+            },
+            {
+              "id": "174",
+              "title": "地下城游戏",
+              "slug": "dungeon-game",
+              "src": "https://leetcode.cn/problems/dungeon-game/",
+              "score": null,
               "isPremium": false
             },
             {
@@ -538,7 +547,8 @@
               "slug": "minimum-removals-to-achieve-target-xor",
               "src": "https://leetcode.cn/problems/minimum-removals-to-achieve-target-xor/",
               "score": 1745,
-              "isPremium": false
+              "isPremium": false,
+              "note": "做法不止一种"
             },
             {
               "id": "2787",
@@ -610,6 +620,15 @@
               "slug": "last-stone-weight-ii",
               "src": "https://leetcode.cn/problems/last-stone-weight-ii/",
               "score": 2092,
+              "isPremium": false,
+              "group": "进阶"
+            },
+            {
+              "id": "4081",
+              "title": "选择质数子集 II",
+              "slug": "prime-subset-selection-ii",
+              "src": "https://leetcode.cn/problems/prime-subset-selection-ii/",
+              "score": 2104,
               "isPremium": false,
               "group": "进阶"
             },
@@ -723,6 +742,15 @@
               "score": null,
               "isPremium": true,
               "group": "进阶"
+            },
+            {
+              "id": "4047",
+              "title": "使所有元素的异或为零所需的最小操作次数",
+              "slug": "minimum-operations-to-make-xor-of-all-elements-zero",
+              "src": "https://leetcode.cn/problems/minimum-operations-to-make-xor-of-all-elements-zero/",
+              "score": null,
+              "isPremium": true,
+              "group": "进阶"
             }
           ],
           "children": [],
@@ -754,6 +782,14 @@
               "slug": "perfect-squares",
               "src": "https://leetcode.cn/problems/perfect-squares/",
               "score": null,
+              "isPremium": false
+            },
+            {
+              "id": "4050",
+              "title": "得到恰好 N 分的最少天数",
+              "slug": "minimum-days-to-score-exactly-n-points",
+              "src": "https://leetcode.cn/problems/minimum-days-to-score-exactly-n-points/",
+              "score": 1696,
               "isPremium": false
             },
             {
@@ -849,11 +885,27 @@
               "isPremium": false
             },
             {
+              "id": "4040",
+              "title": "构造子集和的最少操作次数 I",
+              "slug": "minimum-operations-to-form-subset-sum-i",
+              "src": "https://leetcode.cn/problems/minimum-operations-to-form-subset-sum-i/",
+              "score": 1870,
+              "isPremium": false
+            },
+            {
               "id": "1981",
               "title": "最小化目标值与所选元素的差",
               "slug": "minimize-the-difference-between-target-and-chosen-elements",
               "src": "https://leetcode.cn/problems/minimize-the-difference-between-target-and-chosen-elements/",
               "score": 2010,
+              "isPremium": false
+            },
+            {
+              "id": "4041",
+              "title": "构造子集和的最少操作次数 II",
+              "slug": "minimum-operations-to-form-subset-sum-ii",
+              "src": "https://leetcode.cn/problems/minimum-operations-to-form-subset-sum-ii/",
+              "score": 2100,
               "isPremium": false
             },
             {
@@ -866,7 +918,7 @@
             }
           ],
           "children": [],
-          "summary": "同一组内的物品至多/恰好选一个。"
+          "summary": "同一组内的物品至多选一个（或者恰好选一个）。\n\n只需在 0-1 背包的基础上，把「选或不选」改成「**枚举选这一组内的哪个物品，或者一个都不选**」。"
         },
         {
           "id": "s3-5",
@@ -1302,6 +1354,14 @@
               "isPremium": false
             },
             {
+              "id": "2767",
+              "title": "将字符串分割为最少的美丽子字符串",
+              "slug": "partition-string-into-minimum-beautiful-substrings",
+              "src": "https://leetcode.cn/problems/partition-string-into-minimum-beautiful-substrings/",
+              "score": 1769,
+              "isPremium": false
+            },
+            {
               "id": "3196",
               "title": "最大化子数组的总成本",
               "slug": "maximize-total-cost-of-alternating-subarrays",
@@ -1309,14 +1369,6 @@
               "score": 1847,
               "isPremium": false,
               "note": "也有状态机 DP 做法"
-            },
-            {
-              "id": "2767",
-              "title": "将字符串分割为最少的美丽子字符串",
-              "slug": "partition-string-into-minimum-beautiful-substrings",
-              "src": "https://leetcode.cn/problems/partition-string-into-minimum-beautiful-substrings/",
-              "score": 1865,
-              "isPremium": false
             },
             {
               "id": "91",
@@ -1467,7 +1519,7 @@
             }
           ],
           "children": [],
-          "summary": "计算最少（最多）可以划分出多少段、最优划分得分等。\n\n一般定义 $f[i]$ 表示长为 $i$ 的前缀 $a[:i]$ 在题目约束下，分割出的最少（最多）子数组个数（或者定义成分割方案数）。\n\n枚举最后一个子数组的左端点 $L$，从 $f[L]$ 转移到 $f[i]$，并考虑 $a[L:i]$ 对最优解的影响。"
+          "summary": "计算最多（最少）可以划分出多少段、最优划分得分等。\n\n一般定义 $f[i]$ 表示前缀 $a[0,i-1]$ 在题目约束下，分割出的最多（最少）子数组个数。有些题目 $f[i]$ 表示 $a[0,i-1]$ 的分割方案数。\n\n枚举最后一个子数组的左端点 $L$，问题变成前缀 $a[0,L-1]$ 的最优划分，即 $f[L]$。"
         },
         {
           "id": "s5-3",
@@ -1862,6 +1914,14 @@
               "isPremium": false
             },
             {
+              "id": "4072",
+              "title": "一次删除后的最大交替子数组和",
+              "slug": "maximum-alternating-subarray-sum-with-one-deletion",
+              "src": "https://leetcode.cn/problems/maximum-alternating-subarray-sum-with-one-deletion/",
+              "score": 1946,
+              "isPremium": false
+            },
+            {
               "id": "3891",
               "title": "最大化特殊下标数目的最少增加次数",
               "slug": "minimum-increase-to-maximize-special-indices",
@@ -2207,6 +2267,15 @@
               "note": "有 $\\mathcal{O}(n)$ 做法"
             },
             {
+              "id": "4069",
+              "title": "买卖股票的最佳时机含冷冻期 II",
+              "slug": "best-time-to-buy-and-sell-stock-with-cooldown-ii",
+              "src": "https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown-ii/",
+              "score": null,
+              "isPremium": true,
+              "note": "注：本质是 $\\max +$ 卷积，目前不存在 $\\mathcal{O}(n^{2-\\epsilon})$ 的确定性算法。"
+            },
+            {
               "id": "1259",
               "title": "不相交的握手",
               "slug": "handshakes-that-dont-cross",
@@ -2291,6 +2360,14 @@
               "isPremium": false
             },
             {
+              "id": "4068",
+              "title": "考虑空闲时间的会议最大收益",
+              "slug": "maximize-meeting-earnings-with-idle-gaps",
+              "src": "https://leetcode.cn/problems/maximize-meeting-earnings-with-idle-gaps/",
+              "score": 2190,
+              "isPremium": false
+            },
+            {
               "id": "3414",
               "title": "不重叠区间的最大得分",
               "slug": "maximum-score-of-non-overlapping-intervals",
@@ -2335,6 +2412,14 @@
               "slug": "longest-non-decreasing-subarray-after-replacing-at-most-one-element",
               "src": "https://leetcode.cn/problems/longest-non-decreasing-subarray-after-replacing-at-most-one-element/",
               "score": 1811,
+              "isPremium": false
+            },
+            {
+              "id": "4072",
+              "title": "一次删除后的最大交替子数组和",
+              "slug": "maximum-alternating-subarray-sum-with-one-deletion",
+              "src": "https://leetcode.cn/problems/maximum-alternating-subarray-sum-with-one-deletion/",
+              "score": 1946,
               "isPremium": false
             },
             {
@@ -2530,6 +2615,14 @@
               "score": null,
               "isPremium": false,
               "note": "做到线性复杂度"
+            },
+            {
+              "id": "4110",
+              "title": "找出有效子序列的最大长度 III",
+              "slug": "find-the-maximum-length-of-valid-subsequence-iii",
+              "src": "https://leetcode.cn/problems/find-the-maximum-length-of-valid-subsequence-iii/",
+              "score": null,
+              "isPremium": true
             },
             {
               "id": "3299",
@@ -2813,6 +2906,14 @@
               "isPremium": false
             },
             {
+              "id": "2746",
+              "title": "字符串连接删减字母",
+              "slug": "decremental-string-concatenation",
+              "src": "https://leetcode.cn/problems/decremental-string-concatenation/",
+              "score": 2102,
+              "isPremium": false
+            },
+            {
               "id": "3469",
               "title": "移除所有数组元素的最小代价",
               "slug": "find-minimum-cost-to-remove-array-elements",
@@ -2820,14 +2921,6 @@
               "score": 2112,
               "isPremium": false,
               "note": "状态设计"
-            },
-            {
-              "id": "2746",
-              "title": "字符串连接删减字母",
-              "slug": "decremental-string-concatenation",
-              "src": "https://leetcode.cn/problems/decremental-string-concatenation/",
-              "score": 2126,
-              "isPremium": false
             },
             {
               "id": "1444",
@@ -3369,12 +3462,29 @@
               "isPremium": false
             },
             {
+              "id": "4023",
+              "title": "电梯请求 II",
+              "slug": "elevator-requests-ii",
+              "src": "https://leetcode.cn/problems/elevator-requests-ii/",
+              "score": 2280,
+              "isPremium": false
+            },
+            {
               "id": "1000",
               "title": "合并石头的最低成本",
               "slug": "minimum-cost-to-merge-stones",
               "src": "https://leetcode.cn/problems/minimum-cost-to-merge-stones/",
               "score": 2423,
               "isPremium": false
+            },
+            {
+              "id": "4027",
+              "title": "电梯请求 III",
+              "slug": "elevator-requests-iii",
+              "src": "https://leetcode.cn/problems/elevator-requests-iii/",
+              "score": null,
+              "isPremium": false,
+              "note": "做到 $\\mathcal{O}(m^2)$"
             },
             {
               "id": "2019",
@@ -3548,6 +3658,14 @@
               "isPremium": false
             },
             {
+              "id": "4077",
+              "title": "前缀树中的最小逆序对数目",
+              "slug": "minimize-inversions-in-a-prefix-tree",
+              "src": "https://leetcode.cn/problems/minimize-inversions-in-a-prefix-tree/",
+              "score": 2486,
+              "isPremium": false
+            },
+            {
               "id": "2992",
               "title": "自整除排列的数量",
               "slug": "number-of-self-divisible-permutations",
@@ -3595,6 +3713,15 @@
               "src": "https://leetcode.cn/problems/number-of-squareful-arrays/",
               "score": null,
               "isPremium": false
+            },
+            {
+              "id": "4027",
+              "title": "电梯请求 III",
+              "slug": "elevator-requests-iii",
+              "src": "https://leetcode.cn/problems/elevator-requests-iii/",
+              "score": 2201,
+              "isPremium": false,
+              "note": "有更快的做法"
             },
             {
               "id": "1681",
@@ -4297,6 +4424,14 @@
               "isPremium": true
             },
             {
+              "id": "4060",
+              "title": "计算偶好数",
+              "slug": "count-evenly-good-integers",
+              "src": "https://leetcode.cn/problems/count-evenly-good-integers/",
+              "score": null,
+              "isPremium": true
+            },
+            {
               "id": "3032",
               "title": "统计各位数字都不同的数字个数 II",
               "slug": "count-numbers-with-unique-digits-ii",
@@ -4453,6 +4588,15 @@
               "src": "https://leetcode.cn/problems/count-non-decreasing-arrays-with-given-digit-sums/",
               "score": 2172,
               "isPremium": false
+            },
+            {
+              "id": "1621",
+              "title": "大小为 K 的不重叠线段的数目",
+              "slug": "number-of-sets-of-k-non-overlapping-line-segments",
+              "src": "https://leetcode.cn/problems/number-of-sets-of-k-non-overlapping-line-segments/",
+              "score": 2198,
+              "isPremium": false,
+              "note": "做法不止一种"
             },
             {
               "id": "1997",
@@ -4843,18 +4987,18 @@
           "title": "§11.6 矩阵快速幂优化 DP",
           "problems": [
             {
-              "id": "70",
-              "title": "爬楼梯",
-              "slug": "climbing-stairs",
-              "src": "https://leetcode.cn/problems/climbing-stairs/",
-              "score": null,
-              "isPremium": false
-            },
-            {
               "id": "509",
               "title": "斐波那契数",
               "slug": "fibonacci-number",
               "src": "https://leetcode.cn/problems/fibonacci-number/",
+              "score": null,
+              "isPremium": false
+            },
+            {
+              "id": "70",
+              "title": "爬楼梯",
+              "slug": "climbing-stairs",
+              "src": "https://leetcode.cn/problems/climbing-stairs/",
               "score": null,
               "isPremium": false
             },
@@ -4864,6 +5008,14 @@
               "slug": "n-th-tribonacci-number",
               "src": "https://leetcode.cn/problems/n-th-tribonacci-number/",
               "score": null,
+              "isPremium": false
+            },
+            {
+              "id": "4073",
+              "title": "统计好字符串数目",
+              "slug": "count-good-strings",
+              "src": "https://leetcode.cn/problems/count-good-strings/",
+              "score": 2126,
               "isPremium": false
             },
             {
@@ -4948,7 +5100,7 @@
             }
           ],
           "children": [],
-          "summary": "有两种类型的矩阵快速幂优化 DP：\n\n1. 线性 DP（常系数齐次线性递推），转移系数写在第一行，其余行 $m_{i+1,i} = 1$，例如 [70](https://leetcode.cn/problems/climbing-stairs/)，[1137](https://leetcode.cn/problems/n-th-tribonacci-number/)。[讲解（含模板代码）](https://leetcode.cn/problems/climbing-stairs/solutions/2560716/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-7zm1/)。\n2. 多维 DP 或者状态机 DP，转移系数可表示为一个 $k\\times k$ 大小的矩阵，例如 [935](https://leetcode.cn/problems/knight-dialer/)。[讲解（含模板代码）](https://leetcode.cn/problems/knight-dialer/solutions/3004116/jiao-ni-yi-bu-bu-si-kao-dpcong-ji-yi-hua-x06l/)。\n\n时间复杂度一般为 $\\mathcal{O}(k^3\\log n)$。\n\n**进阶做法**：先用 **Berlekamp-Massey 算法**找规律，得到线性递推式，然后用 **Kitamasa 算法**（或者 Bostan-Mori 算法）优化。\n\n请看我的知乎科普文章：\n\n- [Berlekamp-Massey 算法：如何预测数列的下一项？](https://zhuanlan.zhihu.com/p/1966417899825665440)\n- [Kitamasa 算法：更快地计算线性递推的第 n 项](https://zhuanlan.zhihu.com/p/1964051212304364939)\n\n具体例子见 3700 题 [我的题解的方法二](https://leetcode.cn/problems/number-of-zigzag-arrays-ii/solutions/3794101/ju-zhen-kuai-su-mi-you-hua-dppythonnumpy-77e7/)。\n\n时间复杂度一般为 $\\mathcal{O}(k^2\\log n)$。"
+          "summary": "有两种类型的矩阵快速幂优化 DP：\n\n1. 线性 DP（常系数齐次线性递推），转移系数写在第一行，其余行 $m_{i+1,i} = 1$，[讲解](https://leetcode.cn/problems/fibonacci-number/solutions/3811875/san-chong-xie-fa-shu-zu-di-tui-kong-jian-3lwj/)。\n2. 多维 DP 或者状态机 DP，转移系数可表示为一个 $k\\times k$ 大小的矩阵，[讲解](https://leetcode.cn/problems/knight-dialer/solutions/3004116/jiao-ni-yi-bu-bu-si-kao-dpcong-ji-yi-hua-x06l/)。\n\n时间复杂度一般为 $\\mathcal{O}(k^3\\log n)$，其中 $k$ 是系数矩阵的行数和列数。\n\n**模板**：\n\n```py [sol-Python3]\nMOD = 1_000_000_007\n\n# a @ b，其中 @ 是矩阵乘法\n# 更快的写法见另一份代码【NumPy】\ndef mul(a: list[list[int]], b: list[list[int]]) -> list[list[int]]:\n    return [[sum(x * y for x, y in zip(row, col)) % MOD for col in zip(*b)]\n            for row in a]\n\n# a^n @ f\ndef pow_mul(a: list[list[int]], n: int, f: list[list[int]]) -> list[list[int]]:\n    res = f\n    while n:\n        if n & 1:\n            res = mul(a, res)\n        a = mul(a, a)\n        n >>= 1\n    return res\n\nclass Solution:\n    # 模板一：线性 DP\n    # 以 509. 斐波那契数 为例\n    def fib(self, n: int) -> int:\n        F0 = 0  # 初始值 F(0) = 0\n        F1 = 1  # 初始值 F(1) = 1\n        a = b = 1  # 线性递推式 F(n) = a * F(n - 1) + b * F(n - 2) 中的系数\n\n        if n == 0:\n            return F0\n        m = [[a, b], [1, 0]]\n        f1 = [[F1], [F0]]\n        fn = pow_mul(m, n - 1, f1)\n        return fn[0][0]  # F(n)\n\n    # 模板二：多维 DP / 状态机 DP\n    # 以 935. 骑士拨号器 为例\n    def knightDialer(self, n: int) -> int:\n        if n == 1:\n            return 10\n        # 把转移方程 f[i][j] += m[j][k] * f[i-1][k] 中的系数 m[j][k] 放到一个矩阵中\n        m = [[0, 1, 1, 0], [2, 0, 0, 0], [2, 0, 0, 1], [0, 0, 2, 0]]\n        # 初始值 f[0][j] = 1\n        f0 = [[1], [1], [1], [1]]\n        fn = pow_mul(m, n - 1, f0)\n        # fn[j][0] 就是 f[n][j]\n        return (fn[0][0] * 4 + fn[1][0] * 2 + fn[2][0] * 2 + fn[3][0]) % MOD\n```\n\n```py [sol-NumPy]\nimport numpy as np\n\nMOD = 1_000_000_007\n\n# a^n @ f\ndef pow_mul(a: np.ndarray, n: int, f: np.ndarray) -> np.ndarray:\n    res = f\n    while n:\n        if n & 1:\n            res = a @ res % MOD\n        a = a @ a % MOD\n        n >>= 1\n    return res\n\nclass Solution:\n    # 模板一：线性 DP\n    def fib(self, n: int) -> int:\n        if n == 0:\n            return 0\n        m = np.array([[1, 1], [1, 0]], dtype=object)\n        f1 = np.array([1, 0], dtype=object)\n        fn = pow_mul(m, n - 1, f1)\n        return fn[0]\n\n    # 模板二：多维 DP / 状态机 DP\n    def knightDialer(self, n: int) -> int:\n        if n == 1:\n            return 10\n        m = np.array([[0, 1, 1, 0], [2, 0, 0, 0], [2, 0, 0, 1], [0, 0, 2, 0]], dtype=object)\n        f0 = np.ones((4,), dtype=object)\n        fn = pow_mul(m, n - 1, f0)\n        return (fn[0] * 4 + fn[1] * 2 + fn[2] * 2 + fn[3]) % MOD\n```\n\n```java [sol-Java]\nclass Solution {\n    private static final int MOD = 1_000_000_007;\n\n    // 模板一：线性 DP\n    // 以 509. 斐波那契数 为例\n    public int fib(int n) {\n        int F0 = 0; // 初始值 F(0) = 0\n        int F1 = 1; // 初始值 F(1) = 1\n        int a = 1;\n        int b = 1; // 线性递推式 F(n) = a * F(n - 1) + b * F(n - 2) 中的系数\n\n        if (n == 0) {\n            return F0;\n        }\n        long[][] m = {\n            {a, b},\n            {1, 0},\n        };\n        long[][] f1 = {{F1}, {F0}};\n        long[][] fn = powMul(m, n - 1, f1);\n        return (int) fn[0][0]; // F(n)\n    }\n\n    // 模板二：多维 DP / 状态机 DP\n    // 以 935. 骑士拨号器 为例\n    public int knightDialer(int n) {\n        if (n == 1) {\n            return 10;\n        }\n        // 把转移方程 f[i][j] += m[j][k] * f[i-1][k] 中的系数 m[j][k] 放到一个矩阵中\n        long[][] m = {\n            {0, 1, 1, 0},\n            {2, 0, 0, 0},\n            {2, 0, 0, 1},\n            {0, 0, 2, 0},\n        };\n        // 初始值 f[0][j] = 1\n        long[][] f0 = {{1}, {1}, {1}, {1}};\n        long[][] fn = powMul(m, n - 1, f0);\n        // fn[j][0] 就是 f[n][j]\n        return (int) ((fn[0][0] * 4 + fn[1][0] * 2 +\n                       fn[2][0] * 2 + fn[3][0]) % MOD);\n    }\n\n    // a^n * f\n    private long[][] powMul(long[][] a, long n, long[][] f) {\n        long[][] res = f;\n        while (n > 0) {\n            if ((n & 1) > 0) {\n                res = mul(a, res);\n            }\n            a = mul(a, a);\n            n >>= 1;\n        }\n        return res;\n    }\n\n    // 返回矩阵 a 和矩阵 b 相乘的结果\n    private long[][] mul(long[][] a, long[][] b) {\n        long[][] c = new long[a.length][b[0].length];\n        for (int i = 0; i < a.length; i++) {\n            for (int k = 0; k < a[i].length; k++) {\n                if (a[i][k] == 0) {\n                    continue; // 优化\n                }\n                for (int j = 0; j < b[k].length; j++) {\n                    c[i][j] = (c[i][j] + a[i][k] * b[k][j]) % MOD;\n                }\n            }\n        }\n        return c;\n    }\n}\n```\n\n```cpp [sol-C++]\nconstexpr int MOD = 1'000'000'007;\n\nusing matrix = vector<vector<long long>>;\n\n// 返回矩阵 a 和矩阵 b 相乘的结果\nmatrix mul(const matrix& a, const matrix& b) {\n    int n = a.size(), m = b[0].size();\n    matrix c = matrix(n, vector<long long>(m));\n    for (int i = 0; i < n; i++) {\n        for (int k = 0; k < a[i].size(); k++) {\n            if (a[i][k] == 0) {\n                continue; // 优化\n            }\n            for (int j = 0; j < m; j++) {\n                c[i][j] = (c[i][j] + a[i][k] * b[k][j]) % MOD;\n            }\n        }\n    }\n    return c;\n}\n\n// a^n * f\nmatrix pow_mul(matrix a, long long n, const matrix& f) {\n    matrix res = f;\n    while (n) {\n        if (n & 1) {\n            res = mul(a, res);\n        }\n        a = mul(a, a);\n        n >>= 1;\n    }\n    return res;\n}\n\nclass Solution {\npublic:\n    // 模板一：线性 DP\n    // 以 509. 斐波那契数 为例\n    int fib(int n) {\n        int F0 = 0; // 初始值 F(0) = 0\n        int F1 = 1; // 初始值 F(1) = 1\n        int a = 1;\n        int b = 1; // 线性递推式 F(n) = a * F(n - 1) + b * F(n - 2) 中的系数\n\n        if (n == 0) {\n            return F0;\n        }\n        matrix m = {\n            {a, b},\n            {1, 0},\n        };\n        matrix f1 = {{F1}, {F0}};\n        matrix fn = pow_mul(m, n - 1, f1);\n        return fn[0][0]; // F(n)\n    }\n\n    // 模板二：多维 DP / 状态机 DP\n    // 以 935. 骑士拨号器 为例\n    int knightDialer(int n) {\n        if (n == 1) {\n            return 10;\n        }\n        // 把转移方程 f[i][j] += m[j][k] * f[i-1][k] 中的系数 m[j][k] 放到一个矩阵中\n        matrix m = {\n            {0, 1, 1, 0},\n            {2, 0, 0, 0},\n            {2, 0, 0, 1},\n            {0, 0, 2, 0},\n        };\n        // 初始值 f[0][j] = 1\n        matrix f0 = {{1}, {1}, {1}, {1}};\n        matrix fn = pow_mul(m, n - 1, f0);\n        // fn[j][0] 就是 f[n][j]\n        return (fn[0][0] * 4 + fn[1][0] * 2 + fn[2][0] * 2 + fn[3][0]) % MOD;\n    }\n};\n```\n\n```go [sol-Go]\nconst mod = 1_000_000_007\n\ntype matrix [][]int\n\nfunc newMatrix(n, m int) matrix {\n\ta := make(matrix, n)\n\tfor i := range a {\n\t\ta[i] = make([]int, m)\n\t}\n\treturn a\n}\n\n// 返回矩阵 a 和矩阵 b 相乘的结果\nfunc (a matrix) mul(b matrix) matrix {\n\tc := newMatrix(len(a), len(b[0]))\n\tfor i, row := range a {\n\t\tfor k, x := range row {\n\t\t\tif x == 0 {\n\t\t\t\tcontinue // 优化\n\t\t\t}\n\t\t\tfor j, y := range b[k] {\n\t\t\t\tc[i][j] = (c[i][j] + x*y) % mod\n\t\t\t}\n\t\t}\n\t}\n\treturn c\n}\n\n// a^n * f\nfunc (a matrix) powMul(n int, f matrix) matrix {\n\tres := f\n\tfor ; n > 0; n /= 2 {\n\t\tif n%2 > 0 {\n\t\t\tres = a.mul(res)\n\t\t}\n\t\ta = a.mul(a)\n\t}\n\treturn res\n}\n\n// 模板一：线性 DP\n// 以 509. 斐波那契数 为例\nfunc fib(n int) (ans int) {\n\tF0 := 0 // 初始值 F(0) = 0\n\tF1 := 1 // 初始值 F(1) = 1\n\ta := 1\n\tb := 1 // 线性递推式 F(n) = a * F(n - 1) + b * F(n - 2) 中的系数\n\n\tif n == 0 {\n\t\treturn F0\n\t}\n\tm := matrix{\n\t\t{a, b},\n\t\t{1, 0},\n\t}\n\tf1 := matrix{{F1}, {F0}}\n\tfn := m.powMul(n-1, f1)\n\treturn fn[0][0] // F(n)\n}\n\n// 模板二：多维 DP / 状态机 DP\n// 以 935. 骑士拨号器 为例\nfunc knightDialer(n int) int {\n\tif n == 1 {\n\t\treturn 10\n\t}\n\t// 把转移方程 f[i][j] += m[j][k] * f[i-1][k] 中的系数 m[j][k] 放到一个矩阵中\n\tm := matrix{\n\t\t{0, 1, 1, 0},\n\t\t{2, 0, 0, 0},\n\t\t{2, 0, 0, 1},\n\t\t{0, 0, 2, 0},\n\t}\n\t// 初始值 f[0][j] = 1\n\tf0 := matrix{{1}, {1}, {1}, {1}}\n\tfn := m.powMul(n-1, f0)\n\t// fn[j][0] 即为 f[n][j]\n\treturn (fn[0][0]*4 + fn[1][0]*2 + fn[2][0]*2 + fn[3][0]) % mod\n}\n```\n\n**进阶做法**：先用 **Berlekamp-Massey 算法**找规律，得到线性递推式，然后用 **Kitamasa 算法**（或者 Bostan-Mori 算法）优化。\n\n请看我的知乎科普文章：\n\n- [Berlekamp-Massey 算法：如何预测数列的下一项？](https://zhuanlan.zhihu.com/p/1966417899825665440)\n- [Kitamasa 算法：更快地计算线性递推的第 n 项](https://zhuanlan.zhihu.com/p/1964051212304364939)\n\n具体例子见 3700 题 [我的题解的方法二](https://leetcode.cn/problems/number-of-zigzag-arrays-ii/solutions/3794101/ju-zhen-kuai-su-mi-you-hua-dppythonnumpy-77e7/)。\n\n时间复杂度一般为 $\\mathcal{O}(k^2\\log n)$。"
         },
         {
           "id": "s11-7",
@@ -4986,6 +5138,14 @@
               "score": null,
               "isPremium": false,
               "note": "与 $K=3$ 无关的做法"
+            },
+            {
+              "id": "4082",
+              "title": "稳定二叉树的最小操作次数",
+              "slug": "minimum-operations-to-stabilize-a-binary-tree",
+              "src": "https://leetcode.cn/problems/minimum-operations-to-stabilize-a-binary-tree/",
+              "score": null,
+              "isPremium": true
             }
           ],
           "children": [],
@@ -5254,6 +5414,14 @@
               "isPremium": false
             },
             {
+              "id": "4100",
+              "title": "平衡异或路径的最小开销",
+              "slug": "minimum-cost-path-with-even-xor-parity",
+              "src": "https://leetcode.cn/problems/minimum-cost-path-with-even-xor-parity/",
+              "score": 2282,
+              "isPremium": false
+            },
+            {
               "id": "1617",
               "title": "统计子树中城市之间最大距离",
               "slug": "count-subtrees-with-max-distance-between-cities",
@@ -5456,6 +5624,14 @@
               "slug": "maximum-score-after-applying-operations-on-a-tree",
               "src": "https://leetcode.cn/problems/maximum-score-after-applying-operations-on-a-tree/",
               "score": 1940,
+              "isPremium": false
+            },
+            {
+              "id": "4108",
+              "title": "使红色节点连通的最小代价",
+              "slug": "minimum-cost-to-make-red-nodes-connected",
+              "src": "https://leetcode.cn/problems/minimum-cost-to-make-red-nodes-connected/",
+              "score": 2016,
               "isPremium": false
             },
             {
@@ -5784,7 +5960,7 @@
     },
     {
       "id": "s15",
-      "title": "十五、概率 DP、期望 DP",
+      "title": "十五、概率 DP 与期望 DP",
       "problems": [
         {
           "id": "688",
@@ -5874,6 +6050,14 @@
           "slug": "shortest-common-supersequence",
           "src": "https://leetcode.cn/problems/shortest-common-supersequence/",
           "score": 1977,
+          "isPremium": false
+        },
+        {
+          "id": "4081",
+          "title": "选择质数子集 II",
+          "slug": "prime-subset-selection-ii",
+          "src": "https://leetcode.cn/problems/prime-subset-selection-ii/",
+          "score": 2104,
           "isPremium": false
         },
         {
@@ -6144,6 +6328,14 @@
           "isPremium": false
         },
         {
+          "id": "4071",
+          "title": "拨号的最少旋转次数 II",
+          "slug": "minimum-rotations-to-dial-a-number-ii",
+          "src": "https://leetcode.cn/problems/minimum-rotations-to-dial-a-number-ii/",
+          "score": 1579,
+          "isPremium": false
+        },
+        {
           "id": "2874",
           "title": "有序三元组中的最大值 II",
           "slug": "maximum-value-of-an-ordered-triplet-ii",
@@ -6190,6 +6382,23 @@
           "src": "https://leetcode.cn/problems/number-of-ways-to-select-buildings/",
           "score": 1657,
           "isPremium": false
+        },
+        {
+          "id": "4035",
+          "title": "最多有效分割位置 I",
+          "slug": "maximum-valid-split-positions-i",
+          "src": "https://leetcode.cn/problems/maximum-valid-split-positions-i/",
+          "score": 1664,
+          "isPremium": false
+        },
+        {
+          "id": "4026",
+          "title": "工位的最大间隔",
+          "slug": "maximum-gap-between-stations",
+          "src": "https://leetcode.cn/problems/maximum-gap-between-stations/",
+          "score": 1675,
+          "isPremium": false,
+          "note": "子序列匹配"
         },
         {
           "id": "1031",
@@ -6248,6 +6457,14 @@
           "score": 1755,
           "isPremium": false,
           "note": "子序列匹配"
+        },
+        {
+          "id": "768",
+          "title": "最多能完成排序的块 II",
+          "slug": "max-chunks-to-make-sorted-ii",
+          "src": "https://leetcode.cn/problems/max-chunks-to-make-sorted-ii/",
+          "score": 1788,
+          "isPremium": false
         },
         {
           "id": "1653",
@@ -6316,6 +6533,14 @@
           "isPremium": false
         },
         {
+          "id": "4072",
+          "title": "一次删除后的最大交替子数组和",
+          "slug": "maximum-alternating-subarray-sum-with-one-deletion",
+          "src": "https://leetcode.cn/problems/maximum-alternating-subarray-sum-with-one-deletion/",
+          "score": 1946,
+          "isPremium": false
+        },
+        {
           "id": "3891",
           "title": "最大化特殊下标数目的最少增加次数",
           "slug": "minimum-increase-to-maximize-special-indices",
@@ -6349,6 +6574,14 @@
           "note": "非暴力做法"
         },
         {
+          "id": "4091",
+          "title": "统计神奇子字符串对 II",
+          "slug": "count-magical-substring-pairs-ii",
+          "src": "https://leetcode.cn/problems/count-magical-substring-pairs-ii/",
+          "score": 2155,
+          "isPremium": false
+        },
+        {
           "id": "3830",
           "title": "移除至多一个元素后的最长交替子数组",
           "slug": "longest-alternating-subarray-after-removing-at-most-one-element",
@@ -6378,6 +6611,14 @@
           "slug": "minimum-difference-in-sums-after-removal-of-elements",
           "src": "https://leetcode.cn/problems/minimum-difference-in-sums-after-removal-of-elements/",
           "score": 2225,
+          "isPremium": false
+        },
+        {
+          "id": "4037",
+          "title": "最多有效分割位置 II",
+          "slug": "maximum-valid-split-positions-ii",
+          "src": "https://leetcode.cn/problems/maximum-valid-split-positions-ii/",
+          "score": 2372,
           "isPremium": false
         },
         {
